@@ -1,0 +1,28 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "checkJs": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "lib": [
+      "es2019",
+      "dom",
+      "dom.iterable"
+    ],
+    "types": [
+      "svelte",
+      "node"
+    ]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "__sapper__/*",
+    "public/*"
+  ]
+}
