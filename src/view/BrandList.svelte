@@ -6,10 +6,10 @@
    let brands = [];
    let error: Error = null;
 
-   onMount(brandsStore.loadList);
+   onMount(brandsStore.load);
    onDestroy(
       brandsStore.state.subscribe((state) => {
-         brands = Object.values(state.list);
+         brands = state.list;
          error = state.error;
       })
    );
@@ -17,7 +17,7 @@
 
 <ul>
    {#if error}
-      {$_(`error.${error}`)}
+      {$_(`error.LOAD_ERROR`)}
    {/if}
    {#each brands as brand}
       <li>{brand}</li>

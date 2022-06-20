@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { dictionary,locale } from 'svelte-i18n';
 	import { dictionaries } from './i18n';
-	import BrandList from './view/BrandList.svelte';
-	import Search from './view/search.svelte';
+	import Container from './view/Container.svelte';
 	
 	dictionary.set(dictionaries);
 	Promise.resolve(locale.set('en')).then(console.log, console.error);
@@ -18,22 +17,5 @@
 		crossorigin="anonymous"
 	/>
 </svelte:head>
-<main>
-	<Search />
-	<BrandList />
-</main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<Container />

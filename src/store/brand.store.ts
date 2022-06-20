@@ -3,6 +3,7 @@ import { writable } from 'svelte/store';
 
 const DEFAULT_STATE: IState = {
    list: [],
+   map: {},
    error: null
 };
 
@@ -13,13 +14,15 @@ export const createBrandStore = (api) => {
       state.set(Object.assign({}, DEFAULT_STATE, values));
    };
 
-   const loadList = () => {
+   const load = () => {
       api.getBrandList().then(({ data, status }) => {
          if (status != 200) {
-            debugger
             throw new Error(LOAD_ERROR);
          }
-         setState({ list: data });
+         setState({
+            list: Object.values(data),
+            map: Object.fromEntries(Object.entries(data)) as Record<BrandID, BrandName>
+         });
       }).catch((error) => {
          setState({ error });
       });
@@ -27,12 +30,14 @@ export const createBrandStore = (api) => {
 
    return {
       state,
-      loadList
+      load
    };
 };
 
 interface IState {
-   list: Record<BrandID, string>;
+   list: BrandName[],
+   map: Record<BrandID, BrandName>;
    error: Error | null;
 }
 type BrandID = number;
+type BrandName = string;

@@ -19,7 +19,7 @@
   },
   "include": [
     "src"
-  ],
+, "global.d.ts"  ],
   "exclude": [
     "node_modules",
     "__sapper__/*",

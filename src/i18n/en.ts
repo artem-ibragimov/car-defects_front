@@ -3,6 +3,7 @@ export const en = {
       "LOAD_ERROR": "Load error"
    },
    "label": {
+      "add_data":"Add Data",
       "search": "Search"
    }
 };
