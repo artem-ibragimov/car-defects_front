@@ -1,23 +1,22 @@
 <script lang="ts">
    import { ROUTES } from 'src/routes';
-   import { brandsStore } from 'src/store/main.store';
-   import { currentRouteName } from 'src/store/route.store';
+   import { init, brandsStore, nav } from 'src/store/main.store';
    import { onDestroy, onMount } from 'svelte';
    import Search from './search.svelte';
 
-   let brands = [];
-   onMount(brandsStore.load);
-   onDestroy(
-      brandsStore.state.subscribe((state) => {
-         brands = state.list;
-      })
-   );
+   onMount(init);
+
+   let { currentRouteName } = nav;
+   $: route = ROUTES[$currentRouteName];
+
+   let { state } = brandsStore;
+   let { list } = $state;
 </script>
 
 <main>
-   <Search suggestions={brands} />
-   {#if ROUTES[$currentRouteName]}
-      <svelte:component this={ROUTES[$currentRouteName].component} />
+   <Search suggestions={list} on:add_data={nav.displayAddDataForm} />
+   {#if route}
+      <svelte:component this={route.component} />
    {/if}
 </main>
 

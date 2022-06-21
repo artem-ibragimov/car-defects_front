@@ -16,7 +16,7 @@
     };
 </script>
 
-<form class="pure-form">
+<div class="pure-form">
     <fieldset>
         <legend>Search for models</legend>
         <input type="search" bind:value="{query}" list="suggestions" placeholder="Toyota Camry xv70" autocomplete="on" />
@@ -28,4 +28,4 @@
         <Button variant="primary" on:click={onSearch}>{$_(`label.search`)}</Button>
         <Button variant="secondary" on:click={onAddData}>{$_('label.add_data')}</Button>
     </fieldset>
-</form>
+</div>

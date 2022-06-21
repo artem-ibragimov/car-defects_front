@@ -1,4 +1,4 @@
-<form class="pure-form pure-form-stacked">
+<div class="pure-form pure-form-stacked">
    <fieldset>
       <legend>Legend</legend>
       <label for="checkbox-radio-option-one" class="pure-checkbox">
@@ -8,6 +8,8 @@
          <input type="radio" id="checkbox-radio-option-two" name="optionsRadios" value="option1" checked="" /> Here&#x27;s
          a radio button. You can choose this one..
       </label>
+   </fieldset>
+   <fieldset>
       <label for="checkbox-radio-option-three" class="pure-radio">
          <input type="radio" id="checkbox-radio-option-three" name="optionsRadios" value="option2" /> ..Or this one!
       </label>
@@ -42,4 +44,12 @@
       </label>
       <button type="submit" class="pure-button pure-button-primary">Submit</button>
    </fieldset>
-</form>
+</div>
+
+<style scoped>
+   .pure-form {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+   }
+</style>
