@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createBrandAPI } from './brand.api';
+import { createSearchAPI } from './search.api';
 
 // !FIXME
 const baseURL = 'http://localhost:8081';
@@ -28,5 +29,6 @@ const http = axios.create({
 // });
 
 export const API = {
-   brand: createBrandAPI(http)
+   brand: createBrandAPI(http),
+   search: createSearchAPI(http)
 };

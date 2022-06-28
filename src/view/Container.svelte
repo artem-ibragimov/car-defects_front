@@ -1,7 +1,7 @@
 <script lang="ts">
    import { ROUTES } from 'src/routes';
-   import { init, brandsStore, nav } from 'src/store/main.store';
-   import { onDestroy, onMount } from 'svelte';
+   import { brandsStore,init,nav } from 'src/store/main.store';
+   import { onMount } from 'svelte';
    import Search from './search.svelte';
 
    onMount(init);
@@ -14,7 +14,7 @@
 </script>
 
 <main>
-   <Search suggestions={list} on:add_data={nav.displayAddDataForm} />
+   <Search on:add_data={nav.displayAddDataForm} />
    {#if route}
       <svelte:component this={route.component} />
    {/if}

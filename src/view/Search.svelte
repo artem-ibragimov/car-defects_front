@@ -1,15 +1,42 @@
 <script lang="ts">
+    import Search from '../components/Search.svelte';
+    import { searchStore } from 'src/store/main.store';
+
     import { createEventDispatcher } from 'svelte';
     import { _ } from 'svelte-i18n';
     import Button from '../components/Button.svelte';
-    
-    export let suggestions: string[] = [];
+
+    let suggestions: { brand_id?: number; model_id?: number; gen_id?: number; title: string; label: string }[] = [];
+    $: {
+        let { brands, models, generations, error } = $state;
+        if (error) {
+            suggestions = [];
+        }
+        suggestions = [].concat(
+            Object.entries(brands).map(([brand_id, title]) => ({
+                title,
+                brand_id: Number(brand_id),
+                label: $_('label.brand'),
+            })),
+            Object.entries(models).map(([model_id, title]) => ({
+                title,
+                model_id: Number(model_id),
+                label: $_('label.model'),
+            })),
+            Object.entries(generations).map(([gen_id, title]) => ({
+                title,
+                gen_id: Number(gen_id),
+                label: $_('label.generation'),
+            }))
+        );
+    }
 
     const dispatch = createEventDispatcher();
 
-    let query = '';
-    const onSearch = () => {
-        dispatch('search', query)
+    $: ({ state } = searchStore);
+
+    const onSearch = ({ detail }) => {
+        searchStore.search(detail);
     };
     const onAddData = () => {
         dispatch('add_data');
@@ -18,14 +45,7 @@
 
 <div class="pure-form">
     <fieldset>
-        <legend>Search for models</legend>
-        <input type="search" bind:value="{query}" list="suggestions" placeholder="Toyota Camry xv70" autocomplete="on" />
-        <datalist id="suggestions">
-            {#each suggestions as s}
-                <option value={s} />
-            {/each}
-        </datalist>
-        <Button variant="primary" on:click={onSearch}>{$_(`label.search`)}</Button>
+        <Search {suggestions} on:type={onSearch} />
         <Button variant="secondary" on:click={onAddData}>{$_('label.add_data')}</Button>
     </fieldset>
 </div>
