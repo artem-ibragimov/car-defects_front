@@ -45,7 +45,7 @@
 
 <div class="pure-form">
     <fieldset>
-        <Search {suggestions} on:type={onSearch} />
+        <Search {suggestions} on:change={onSearch} />
         <Button variant="secondary" on:click={onAddData}>{$_('label.add_data')}</Button>
     </fieldset>
 </div>
