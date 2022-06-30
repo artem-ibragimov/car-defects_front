@@ -12,7 +12,7 @@ export interface ISearchAPI {
       data: {
          brands: Record<number, string>,
          models: Record<number, string>;
-         generations: Record<number, string>;
+         gens: Record<number, string>;
       },
       status: number;
    }>;

@@ -8,6 +8,6 @@ export const en = {
       search: "Search",
       model:"Model",
       brand:"Brand",
-      generation:"Generation"
+      gen:"Generation"
    }
 };

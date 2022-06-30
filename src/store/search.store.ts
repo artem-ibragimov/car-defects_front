@@ -5,7 +5,7 @@ import { writable } from 'svelte/store';
 const DEFAULT_STATE: IState = {
    brands: {},
    models: {},
-   generations: {},
+   gens: {},
    error: null
 };
 
@@ -35,6 +35,6 @@ export const createSearchStore = (api: ISearchAPI) => {
 interface IState {
    brands: Record<number, string>,
    models: Record<number, string>;
-   generations: Record<number, string>;
+   gens: Record<number, string>;
    error: Error | null;
 }

@@ -40,7 +40,6 @@
 <style scoped>
    .Search {
       display: flex;
-      gap: 5px;
       justify-content: center;
       align-items: center;
    }

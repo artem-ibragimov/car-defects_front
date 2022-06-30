@@ -1,31 +1,25 @@
 <script lang="ts">
-   import Input from '../components/Input.svelte';
-   import { brandsStore } from '../store/main.store';
-   import { onMount } from 'svelte';
-   import { _ } from 'svelte-i18n';
+   import type { IGenData } from 'src/api/gen.api';
+   import BrandName from './AddData/BrandName.svelte';
+   import Gen from './AddData/Gen.svelte';
+   import ModelName from './AddData/ModelName.svelte';
 
-   $: ({ state: brandState } = brandsStore);
-   $: ({ list } = $brandState);
-   $: brandNames = list.filter((name) => name.includes(value));
+   let brandID: number;
+   let modelID: number;
+   let genData: IGenData;
 
-   export let value = '';
-
-   onMount(() => {
-      brandsStore.load();
-   });
+   $: console.debug('brand', brandID, 'model', modelID);
 </script>
 
 <div class="pure-form">
-   <fieldset>
-      <legend>{$_('label.brand')}</legend>
-      <Input type="text" bind:value placeholder={$_('label.brand')} suggestions={brandNames} />
-   </fieldset>
+   <BrandName bind:brandID />
+   <ModelName bind:modelID {brandID} />
+   <Gen bind:data={genData} {modelID} />
 </div>
 
 <style scoped>
    .pure-form {
       display: flex;
       flex-direction: row;
-      margin: auto;
    }
 </style>

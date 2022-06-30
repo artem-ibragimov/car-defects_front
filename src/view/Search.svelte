@@ -8,7 +8,7 @@
 
     let suggestions: { brand_id?: number; model_id?: number; gen_id?: number; title: string; label: string }[] = [];
     $: {
-        let { brands, models, generations, error } = $state;
+        let { brands, models, gens, error } = $state;
         if (error) {
             suggestions = [];
         }
@@ -23,10 +23,10 @@
                 model_id: Number(model_id),
                 label: $_('label.model'),
             })),
-            Object.entries(generations).map(([gen_id, title]) => ({
+            Object.entries(gens).map(([gen_id, title]) => ({
                 title,
                 gen_id: Number(gen_id),
-                label: $_('label.generation'),
+                label: $_('label.gen'),
             }))
         );
     }
@@ -44,8 +44,13 @@
 </script>
 
 <div class="pure-form">
-    <fieldset>
         <Search {suggestions} on:change={onSearch} />
         <Button variant="secondary" on:click={onAddData}>{$_('label.add_data')}</Button>
-    </fieldset>
 </div>
+
+<style scoped>
+    .pure-form{
+        display: flex;
+        justify-content: center;
+    }
+</style>

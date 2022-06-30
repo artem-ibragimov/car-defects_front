@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createBrandAPI } from './brand.api';
+import { createGenAPI } from './gen.api';
 import { createModelAPI } from './model.api';
 import { createSearchAPI } from './search.api';
 
@@ -32,5 +33,6 @@ const http = axios.create({
 export const API = {
    brand: createBrandAPI(http),
    model: createModelAPI(http),
+   gen: createGenAPI(http),
    search: createSearchAPI(http)
 };

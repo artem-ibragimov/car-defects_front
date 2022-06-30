@@ -4,6 +4,8 @@
 
    export let value: string = '';
    export let type: string = 'text';
+   export let min: string = '0';
+   export let max: string = '10000';
    export let placeholder: string = '';
    export let suggestions: any[] = [];
 
@@ -12,7 +14,7 @@
    let root: HTMLDivElement = null;
    let field: HTMLDivElement = null;
 
-   $: isOpen = suggestions.length !== 0;
+   $: isOpen = false;
    const show = () => {
       isOpen = suggestions.length !== 0;
    };
@@ -33,21 +35,14 @@
 
    let dropdown_style = { width: '100%', left: '', top: '' };
 
-   const setDropDownPosition = (rect = { width: 0, left: 0, top: 0, height: 0 }) => {
+   const setDropDownPosition = () => {
+      if (!field) {
+         return;
+      }
+      const rect = field.getBoundingClientRect();
       dropdown_style.width = `${Math.round(rect.width)}px`;
       dropdown_style.left = `${Math.round(rect.left)}px`;
       dropdown_style.top = `${Math.round(rect.top + rect.height)}px`;
-   };
-
-   const resize = (node) => {
-      const rect = node.getBoundingClientRect();
-      setDropDownPosition(rect);
-      return {
-         update() {
-            debugger;
-            setDropDownPosition(rect);
-         },
-      };
    };
 
    const onDocumentClick = (e) => {
@@ -57,6 +52,7 @@
    };
    onMount(() => {
       document.body.addEventListener('click', onDocumentClick);
+      setDropDownPosition();
    });
    onDestroy(() => {
       document.body.removeEventListener('click', onDocumentClick);
@@ -64,8 +60,19 @@
 </script>
 
 <div class="Input" bind:this={root}>
-   <div bind:this={field} class="Input__field" use:resize>
-      <input {type} {value} {placeholder} on:focus={show} on:input={handleInput} on:change />
+   <div bind:this={field} class="Input__field">
+      <input
+         {type}
+         {value}
+         {placeholder}
+         {min}
+         {max}
+         on:focus={() => {
+            Promise.resolve(setDropDownPosition()).then(show);
+         }}
+         on:input={handleInput}
+         on:change
+      />
    </div>
    <div
       class="Input__dropdown"
@@ -104,6 +111,7 @@
    .Input__field input {
       flex: 1;
       text-transform: capitalize;
+      box-sizing: border-box;
    }
    .Input__dropdown {
       flex-direction: column;
