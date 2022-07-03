@@ -1,7 +1,7 @@
 <div class="left-block">
     <div class="add">
-        <p>Добавить</p>
-        <button>+</button>
+        <span class="add__text">Добавить</span>
+        <span class="plus">+</span>
     </div>
     
         <div class="brand">
@@ -23,8 +23,7 @@
     }
 .add{
     display: flex;
-    width: 269px;
-    height: 51px;
+    max-width: 270px;
     background: white;
     border-radius: 7px;
     box-shadow: 8px 4px 20px 1px #094e9439;
@@ -32,9 +31,7 @@
     font-size: 17px;
     align-items:center
 }
-.add button{
-    background: none;
-    border: none;
+.plus{
     font-size: 30px;
     font-weight: 400;
     color: #094F94;
@@ -45,18 +42,19 @@
     margin-top: 25px;
     margin-bottom: 30px;
     gap: 30px;
-
 }
 .brand{
     display: flex;
     flex-direction: column;
-    width: 269px;
+    max-width: 270px;
     border-radius: 10px;
     box-shadow: 8px 4px 20px 1px #094e9439;
     background: rgb(255, 255, 255);
     justify-content: center;
     align-items:center;
     margin-top: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
 }
 
 .entity{
