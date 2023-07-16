@@ -1,0 +1,35 @@
+import { LOAD_ERROR } from '$lib/api/error';
+import { writable } from 'svelte/store';
+
+const DEFAULT_STATE: IState = {
+	id: '0',
+	error: null
+};
+
+export const createAuthorStore = (api: { postAuthor(name: string): Promise<string> }) => {
+	const state = writable<IState>({ ...DEFAULT_STATE });
+
+	const setState = (values: Partial<IState>) => {
+		state.update((s) => ({ ...s, ...values }));
+	};
+
+	return {
+		state,
+		postAuthor(name: string) {
+			return api
+				.postAuthor(name)
+				.then((data) => {
+					setState({ id: data });
+				})
+				.catch((error) => {
+					console.error(error);
+					setState({ error: LOAD_ERROR });
+				});
+		}
+	};
+};
+
+interface IState {
+	id: string;
+	error: Error | null;
+}

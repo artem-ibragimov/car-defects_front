@@ -1,0 +1,107 @@
+{
+	"error": {
+		"LOAD_ERROR": "Load error"
+	},
+	"warn": {
+		"NO_DATA": "We are sorry, but we don't have enougth data for "
+	},
+	"defect_category": {
+		"safety": "Safety",
+		"electronics": "Electronics",
+		"light": "Light",
+		"transmission": "Transmission",
+		"other": "Other",
+		"equipment": "Equipment",
+		"engine": "Engine",
+		"brake": "Brake",
+		"suspension": "Suspension"
+	},
+	"label": {
+		"detail": {
+			"age": "Defect age",
+			"mileage": "Mileage"
+		},
+		"defect": {
+			"header": "Defect Description",
+			"description": "Please, provide defect details",
+			"cost": "Repair Cost, $",
+			"year": "Year, when defect occured",
+			"age": "Car Age, when defect occured",
+			"mileage": "Car Mileage, when defect occured",
+			"rating": "Rating: how serious is the defect?"
+		},
+		"cancel": "Cancel",
+		"main_header": "A Car Service Calls Statistics",
+		"norm": "Normalized",
+		"total": "Total",
+		"by_age": "by Age",
+		"by_mileage": "by Mileage",
+		"chart": {
+			"by_age": {
+				"total": {
+					"title": "All Defects by Age",
+					"tooltip": "Total defects"
+				},
+				"norm": {
+					"title": "Defects by Age Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Age of Defect"
+			},
+			"by_mileage": {
+				"total": {
+					"title": "All Defects by Mileage",
+					"tooltip": "Total defects"
+				},
+				"norm": {
+					"title": "Defects by Mileage Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Car Mileage"
+			}
+		},
+		"add_data": "Add Data",
+		"update": "Update",
+		"load_details": "Load Details",
+		"apply": "Apply",
+		"applied": "Applied",
+		"reset": "Reset",
+		"post": "Post",
+		"posted": "Posted!",
+		"more": "More",
+		"search_by": "Search for defects by ",
+		"model": "Model",
+		"brand": "Brand",
+		"gen": "Generation",
+		"gen_start": "Release start",
+		"gen_finish": "Release end",
+		"version": "Version",
+		"engine": {
+			"name": "Engine",
+			"displacement": "Displacement",
+			"cylinders": "Cylinders",
+			"valves": "Valves",
+			"fuel_type": "Fuel type",
+			"power_hp": "Power (hp)",
+			"torque": "Torque"
+		},
+		"trans": {
+			"name": "Transmission",
+			"acceleration": "Acceleration",
+			"consumtion": "Consumtion",
+			"gears": "Gears"
+		}
+	},
+	"text": {
+		"about": {
+			"header": "About this site",
+			"why": "If you have ever chosen a car for yourself, you have probably watched a lot of car reviews, where bloggers of different competence told you about the pros and cons of every car and recommended what to buy. The problem is that all of these reviews are subjective, and if you are a rational mature person, and reliability of a car in the long term is important for you, you may be interested in analysis of call statistics service.",
+			"concurrents": " There are awesome sites such as carcomplaints.com, carproblemzoo.com, nhtsa.gov, where people describe problems encountered during the period of their car exploitation. But unfortunately there are no charts on these sites, so you can't visually compare different models and figure out which is more problematic.",
+			"website": "That's why I’ve created my own website ",
+			"website_details": " collecting all the information from these useful resources and presenting it as graphs. Here you can compare car models, model generations and versions, visualize by age or mileage, and, for objectivity, consider normalized data i.e. the number of crashes per 10,000 cars sold. The site has information about <b>4 million crashes</b>, and you can also contribute to the project by sharing your own experience.",
+			"project": "It's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
+		}
+	}
+}
