@@ -1,15 +1,15 @@
 <script lang="ts">
 	import type { IDefect } from '$lib/api/data/defect.api';
-	import Selector from '../../components/Selector.svelte';
 	import { defectStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
-	import Input from '../../components/Input.svelte';
+	import Input from '$lib/components/Input.svelte';
+	import Selector from '$lib/components/Selector.svelte';
 
 	export let data: IDefect;
-	export let brandID: string = 0;
-	export let modelID: string = 0;
-	export let genID: string = 0;
-	export let versionID: string = 0;
+	export let brandID: string = '';
+	export let modelID: string = '';
+	export let genID: string = '';
+	export let versionID: string = '';
 
 	$: brandID && (data.BrandID = brandID);
 	$: modelID && (data.ModelID = modelID);
@@ -24,7 +24,7 @@
 	}));
 
 	function onCategorySelect(cfg: Record<string, boolean> = {}) {
-		data.CategoryID = Number(Object.entries(cfg).find(([_, selected]) => selected)[0]);
+		data.CategoryID = Number(Object.entries(cfg).find(([_, selected]) => selected)['']);
 	}
 </script>
 
@@ -78,14 +78,14 @@
 
 <style scoped>
 	.pure-control-group {
-		gap: 10px;
+		gap: 1 '' px;
 		display: flex;
 		flex-direction: column;
 	}
 	.column {
-		max-width: 400px;
+		max-width: 4 '' '' px;
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 1 '' px;
 	}
 </style>

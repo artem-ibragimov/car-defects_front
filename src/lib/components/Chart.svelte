@@ -97,14 +97,19 @@
 
 <style scoped>
 	.Chart {
-		flex-shrink: 2;
 		min-width: 400px;
-		width: 100vw;
+		flex: 2 2;
+		max-height: 500px;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
 		cursor: pointer;
+	}
+	@media (min-width: 500px) {
+		.Chart {
+			/* height: 100vh; */
+		}
 	}
 
 	.Chart__items-end {

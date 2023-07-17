@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { defectStore, nav } from '$lib/store/main.store';
-	import { _ } from 'svelte-i18n';
-	import Button from '../components/Button.svelte';
+	import { defectStore } from '$lib/store/main.store';
+	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import About from './About.svelte';
 	import AgeMileageRadio from './AgeMileageSelector.svelte';
 	import Header from './Header.svelte';
@@ -10,7 +9,6 @@
 	import DefectCategorySelector from './chart/DefectCategorySelector.svelte';
 	import DefectsChart from './chart/DefectsChart.svelte';
 	import EntitySelector from './chart/EntitySelector.svelte';
-	import { ROUTE_NAMES } from '$lib/store/route.store';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	function onSearch(
@@ -58,9 +56,9 @@
 		<!-- <div class="MainContainer_row ">
             <DefectDetails />
         </div> -->
-		<div class="MainContainer_row MainContainer_items-start MainContainer_space-between">
+		<div class="MainContainer_column MainContainer_items-start MainContainer_space-between">
 			<About />
-			<Button variant="secondary" on:click={nav.displayAddDataForm}>{$_('label.add_data')}</Button>
+			<!-- <Button variant="secondary" on:click={nav.displayAddDataForm}>{$_('label.add_data')}</Button> -->
 		</div>
 	</div>
 </div>
@@ -75,8 +73,13 @@
 		justify-content: center;
 		align-items: stretch;
 		margin: auto;
-		padding: 0 30px;
-		gap: 30px;
+		padding: 0 10px;
+		gap: 10px;
+	}
+	@media (min-width: 500px) {
+		.MainContainer_column {
+			padding: 0 30px;
+		}
 	}
 	.MainContainer_items-start {
 		align-items: flex-start;
@@ -85,6 +88,7 @@
 		display: flex;
 		flex-direction: row;
 		gap: 8px;
+		align-items: stretch;
 	}
 	.MainContainer_wrap {
 		flex-wrap: wrap;
@@ -95,7 +99,7 @@
 	.MainContainer_space-between {
 		justify-content: space-between;
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 700px) {
 		.MainContainer_mobile_column {
 			flex-direction: column;
 		}

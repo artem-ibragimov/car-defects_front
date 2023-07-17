@@ -1,5 +1,5 @@
 <script>
-	import Spinner from '../components/Spinner.svelte';
+	import Spinner from '$lib/components/Spinner.svelte';
 	export let hidden = false;
 </script>
 

@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { DATA_PARAMS } from '$lib/store/defectFilter/dataParams.store';
 	import { defectStore } from '$lib/store/main.store';
-	import { _ } from 'svelte-i18n';
-	import Selector from '../components/Selector.svelte';
+	import Selector from '$lib/components/Selector.svelte';
 
 	$: ({ params } = defectStore.filter.dataParams);
 	$: variants = [

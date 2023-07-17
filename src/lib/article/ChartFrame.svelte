@@ -1,20 +1,12 @@
-<script>
+<script lang="ts">
 	import { _ } from 'svelte-i18n';
 
-	export let title;
-	export let src;
-	export let lg;
+	export let title: string;
+	export let src: string;
+	export let lg: boolean;
 </script>
 
-<iframe
-	{title}
-	{src}
-	class="ChartFrame"
-	class:lg
-	on:click={() => {
-		debugger;
-	}}
-/>
+<iframe {title} {src} class="ChartFrame" class:lg />
 
 <style scoped>
 	.ChartFrame {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
-	import Input from '../../components/Input.svelte';
+	import Input from '$lib/components/Input.svelte';
 	import { brandsStore } from '../../store/main.store';
 
 	export let brandID: string;

@@ -2,7 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import { _ } from 'svelte-i18n';
 
-	import Button from '../../components/Button.svelte';
+	import Button from '$lib/components/Button.svelte';
 	export let displayUpdate = false;
 	export let updateText: string = '';
 	export let displayCreate = false;

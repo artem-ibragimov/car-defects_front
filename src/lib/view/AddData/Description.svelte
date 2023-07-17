@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 
 	import { _ } from 'svelte-i18n';
-	import Input from '../../components/Input.svelte';
+	import Input from '$lib/components/Input.svelte';
 	import Actions from './Actions.svelte';
 
 	export let data: ITransData = {

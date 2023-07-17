@@ -1,20 +1,19 @@
 <script lang="ts">
 	import type { ITransData } from '$lib/api/data/trans.api';
 	import { transStore } from '$lib/store/main.store';
-
 	import { _ } from 'svelte-i18n';
-	import Input from '../../components/Input.svelte';
+	import Input from '$lib/components/Input.svelte';
 	import Actions from './Actions.svelte';
 
 	export let data: ITransData = {
 		Name: '',
-		Acceleration: 0,
-		Consumtion: 0,
-		Gears: 0
+		Acceleration: '',
+		Consumtion: '',
+		Gears: ''
 	};
-	export let brandID: string = 0;
-	export let transID: string = 0;
-	export let versionID: string = 0;
+	export let brandID: string = '';
+	export let transID: string = '';
+	export let versionID: string = '';
 
 	$: disabled = !versionID;
 	$: {
@@ -23,7 +22,7 @@
 		}
 		clear();
 	}
-	let prevId = 0;
+	let prevId = '';
 	$: {
 		if (prevId != transID) {
 			clear();
@@ -38,7 +37,7 @@
 	$: !transID && clear();
 	$: ({ state } = transStore);
 	$: ({ map, selected } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [string, string][]).sort(
+	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [number, string][]).sort(
 		(e1, e2) => e1[1].localeCompare(e2[1])
 	);
 	$: names = entries.filter(([_, name]) => name.includes(data.Name));
@@ -47,9 +46,9 @@
 	function clear() {
 		data = {
 			Name: '',
-			Acceleration: 0,
-			Consumtion: 0,
-			Gears: 0
+			Acceleration: '',
+			Consumtion: '',
+			Gears: ''
 		};
 	}
 

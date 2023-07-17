@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { defectStore, localeStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
-	import Selector from '../components/Selector.svelte';
+	import Selector from '$lib/components/Selector.svelte';
 
 	let { entities } = defectStore.filter.entityParams;
 	let { selectedDetails, selectedDetailEntity, state } = defectStore;

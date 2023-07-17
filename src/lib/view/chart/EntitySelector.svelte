@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { defectStore } from '$lib/store/main.store';
-	import Selector from '../../components/Selector.svelte';
+	import Selector from '$lib/components/Selector.svelte';
 
 	let { colors, entities, selectedEntities } = defectStore.filter.entityParams;
 

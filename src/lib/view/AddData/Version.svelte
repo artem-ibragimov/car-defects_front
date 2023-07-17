@@ -1,15 +1,12 @@
 <script lang="ts">
 	import type { IVersionData } from '$lib/api/data/version.api';
 	import { versionStore } from '$lib/store/main.store';
-	import Button from '../../components/Button.svelte';
-
 	import { _ } from 'svelte-i18n';
-	import Input from '../../components/Input.svelte';
-	import Actions from './Actions.svelte';
+	import Input from '$lib/components/Input.svelte';
 
-	export let genID: string = 0;
-	export let data: IVersionData = { Name: '', GenID: genID, TransID: 0, EngineID: 0 };
-	export let versionID: string = 0;
+	export let genID: string = '';
+	export let data: IVersionData = { Name: '', GenID: genID, TransID: '', EngineID: '' };
+	export let versionID: string = '';
 
 	$: disabled = !genID;
 	$: {
@@ -20,21 +17,21 @@
 	}
 	$: ({ state } = versionStore);
 	$: ({ map, selected } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [string, string][]).sort(
+	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [number, string][]).sort(
 		(e1, e2) => e1[1].localeCompare(e2[1])
 	);
 	$: suggestions = entries.filter(([_, name]) => name.includes(data.Name));
 
 	$: if (selected && data.Name !== selected.Name) {
 		selected = null;
-		data.TransID = 0;
-		data.EngineID = 0;
+		data.TransID = '';
+		data.EngineID = '';
 	}
 
 	function clear() {
 		selected = null;
-		versionID = 0;
-		data = { Name: '', GenID: genID, TransID: 0, EngineID: 0 };
+		versionID = '';
+		data = { Name: '', GenID: genID, TransID: '', EngineID: '' };
 	}
 
 	function onSuggestionClick([id, name]: [string, string]) {
@@ -45,17 +42,17 @@
 		versionID = id;
 	}
 
-	function update() {
-		versionStore.patchData(genID, data).then(() => {
-			versionStore.loadNames(genID);
-		});
-	}
-	function create() {
-		versionStore.postData(data).then(({ data }) => {
-			versionID = data;
-			versionStore.loadNames(genID);
-		});
-	}
+	// function update() {
+	// 	versionStore.patchData(genID, data).then(() => {
+	// 		versionStore.loadNames(genID);
+	// 	});
+	// }
+	// function create() {
+	// 	versionStore.postData(data).then(({ data }) => {
+	// 		versionID = data;
+	// 		versionStore.loadNames(genID);
+	// 	});
+	// }
 </script>
 
 <fieldset class="column">

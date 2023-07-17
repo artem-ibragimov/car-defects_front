@@ -3,9 +3,9 @@
 	import { genStore } from '$lib/store/main.store';
 	// import { convertFileToBase64 } from '$lib/util/file';
 	import { _ } from 'svelte-i18n';
-	import Input from '../../components/Input.svelte';
+	import Input from '$lib/components/Input.svelte';
 
-	export let modelID: string = 0;
+	export let modelID: string = '';
 	$: disabled = !modelID;
 	export let data: IGenData = {
 		Name: '',
@@ -14,7 +14,7 @@
 		Finish: '',
 		ModelID: modelID
 	};
-	export let genID: string = 0;
+	export let genID: string = '';
 
 	$: {
 		if (modelID) {
@@ -44,7 +44,7 @@
 			Finish: '',
 			ModelID: modelID
 		};
-		genID = 0;
+		genID = '';
 		selected = null;
 	}
 
@@ -58,10 +58,10 @@
 
 	// function onImgChoose(e: Event) {
 	//    const files = (e.target as HTMLInputElement).files;
-	//    if (files.length === 0) {
+	//    if (files.length === '') {
 	//       return;
 	//    }
-	//    convertFileToBase64(files[0])
+	//    convertFileToBase64(files[''])
 	//       .then((img) => {
 	//          data.Img = img;
 	//       })
@@ -124,6 +124,6 @@
 		display: flex;
 	}
 	/* .Gen__img {
-      width: 100%;
+      width: 1''''%;
    } */
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { defectStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
-	import BaseChart from '../../components/Chart.svelte';
+	import BaseChart from '$lib/components/Chart.svelte';
 
 	export let displayLegend = true;
 
