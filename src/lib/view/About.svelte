@@ -5,17 +5,17 @@
 <div class="About">
 	<h4>{$_('text.about.header')}</h4>
 	<p>
-		{@html $_('text.about.why')}
+		{$_('text.about.why')}
 	</p>
 	<p>
-		{@html $_('text.about.concurrents')}
+		{$_('text.about.concurrents')}
 	</p>
 	<p>
-		{@html $_('text.about.website')}<a href="http://car-defects.com/">car-defects.com</a>, {@html $_(
+		{$_('text.about.website')}<a href="http://car-defects.com/">car-defects.com</a>, {$_(
 			'text.about.website_details'
 		)}
 	</p>
-	<p>{@html $_('text.about.project')}</p>
+	<p>{$_('text.about.project')}</p>
 </div>
 
 <style scoped>
