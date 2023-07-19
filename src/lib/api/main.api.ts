@@ -11,8 +11,10 @@ import { createTransAPI } from '$lib/api/data/trans.api';
 import { createVersionAPI } from '$lib/api/data/version.api';
 
 const http = {
-	get: <T = void>(path: string, params: Record<string, string | boolean> = {}): Promise<T> =>
-		fetch(`${PUBLIC_ORIGIN}${path}?${new URLSearchParams(params)}`).then((res) => res.json()),
+	get: <T = void>(path: string, params: Record<string, string> = {}): Promise<T> => {
+		const query = `${new URLSearchParams(params)}`;
+		return fetch(`${PUBLIC_ORIGIN}${path}${query ? `?${query}` : ''}`).then((res) => res.json());
+	},
 
 	post: <T = void>(
 		path: string,

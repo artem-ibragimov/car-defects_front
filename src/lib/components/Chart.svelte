@@ -98,6 +98,7 @@
 <style scoped>
 	.Chart {
 		min-width: 400px;
+		min-height: 200px;
 		flex: 2 2;
 		max-height: 500px;
 		height: 100vh;
