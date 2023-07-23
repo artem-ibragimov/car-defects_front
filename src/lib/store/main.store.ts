@@ -10,7 +10,6 @@ import { createModelStore } from '$lib/store/model.store';
 import { createSearchStore } from '$lib/store/search.store';
 import { createTransStore } from '$lib/store/trans.store';
 import { createVersionStore } from '$lib/store/version.store';
-import { createNav } from '$lib/store/route.store';
 
 export const brandsStore = createBrandStore(API.brand);
 export const modelStore = createModelStore(API.model);
@@ -20,7 +19,6 @@ export const engineStore = createEngineStore(API.engine);
 export const transStore = createTransStore(API.trans);
 export const defectStore = createDefectStore(API.defect);
 export const searchStore = createSearchStore(API.search);
-export const nav = createNav();
 export const localeStore = creatLocaleStore();
 export const authorStore = createAuthorStore(API.author);
 export const countryStore = createCountryStore(API.country);

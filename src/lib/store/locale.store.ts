@@ -1,4 +1,4 @@
-import { restore, store } from '$lib/util/hashStore';
+// import { restore, store } from '$lib/util/hashStore';
 import { dictionary, locale } from 'svelte-i18n';
 import { derived, type Writable, writable } from 'svelte/store';
 import { AVAILABLE_LOCALES, DICTIONARIES } from '../i18n';
@@ -9,7 +9,7 @@ const DEFAUL_LOCALE =
 			AVAILABLE_LOCALES.find((l) => navigator.languages.includes(l)))) ||
 	AVAILABLE_LOCALES[0];
 
-const LOCALE_HASH_KEY = 'locale';
+// const LOCALE_HASH_KEY = 'locale';
 
 export const creatLocaleStore = () => {
 	const locales: Writable<{ icon: string; selected?: boolean; value: string }[]> = writable([
@@ -26,13 +26,14 @@ export const creatLocaleStore = () => {
 	]);
 
 	dictionary.set(DICTIONARIES);
-	locale.set(restore(LOCALE_HASH_KEY) || DEFAUL_LOCALE);
+	// locale.set(restore(LOCALE_HASH_KEY) || DEFAUL_LOCALE);
+	locale.set(DEFAUL_LOCALE);
 	locale.subscribe((v) => {
 		locales.update((ls) => ls.map((l) => ({ ...l, selected: l.value === v })));
-		store(LOCALE_HASH_KEY, v || DEFAUL_LOCALE);
+		// store(LOCALE_HASH_KEY, v || DEFAUL_LOCALE);
 	});
 
-	const selected = derived(locales, (ls) => ls.find((l) => l.selected).value);
+	const selected = derived(locales, (ls) => ls.find((l) => !!l.selected)?.value);
 
 	return {
 		locales,

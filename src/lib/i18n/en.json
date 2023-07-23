@@ -102,6 +102,14 @@
 			"website": "That's why I’ve created my own website ",
 			"website_details": " collecting all the information from these useful resources and presenting it as graphs. Here you can compare car models, model generations and versions, visualize by age or mileage, and, for objectivity, consider normalized data i.e. the number of crashes per 10,000 cars sold. The site has information about 4 million crashes, and you can also contribute to the project by sharing your own experience.",
 			"project": "It's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
+		},
+		"article": {
+			"MostReliableSUVs": {
+				"title": "Most reliable SUVs"
+			},
+			"MostReliableSmallFamilyCars": {
+				"title": "Most reliable Small family cars"
+			}
 		}
 	}
 }

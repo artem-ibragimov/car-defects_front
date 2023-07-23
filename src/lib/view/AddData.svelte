@@ -69,8 +69,7 @@
 
 	let posted = false;
 	function cancel() {
-		brandID = 0;
-		nav.displayMainPage();
+		brandID = '';
 	}
 	function create() {
 		authorStore.postAuthor(JWT).then(() => {

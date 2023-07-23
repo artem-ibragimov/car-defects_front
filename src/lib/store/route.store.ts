@@ -10,25 +10,3 @@ export const ROUTE_NAMES = {
 		MostReliableSUVs: '/article/MostReliableSUVs'
 	}
 };
-
-export const createNav = () => {
-	const currentRouteName = writable(
-		(typeof window !== 'undefined' && window.location.pathname) || ROUTE_NAMES.MAIN
-	);
-
-	currentRouteName.subscribe((v) => {
-		if (typeof window !== 'undefined' && window.location.pathname !== v) {
-			window.location.assign(v);
-		}
-	});
-
-	return {
-		displayAddDataForm() {
-			currentRouteName.set(ROUTE_NAMES.ADD_DATA);
-		},
-		displayMainPage() {
-			currentRouteName.set(ROUTE_NAMES.MAIN);
-		},
-		currentRouteName
-	};
-};

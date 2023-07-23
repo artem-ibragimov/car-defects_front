@@ -5,7 +5,7 @@
 </script>
 
 <div class="Header" on:click={() => window.location.assign(ROUTE_NAMES.MAIN)}>
-	<img src="/assets/logo.webp" alt="logo" width="50" height="50"/>
+	<img src="/assets/logo.webp" alt="logo" width="50" height="50" />
 	<h1>
 		{$_('label.main_header')}
 	</h1>

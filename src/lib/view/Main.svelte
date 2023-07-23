@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { defectStore } from '$lib/store/main.store';
+	import { defectStore, localeStore } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
+	import { _ } from 'svelte-i18n';
 	import About from './About.svelte';
 	import AgeMileageRadio from './AgeMileageSelector.svelte';
 	import Header from './Header.svelte';
@@ -9,6 +10,8 @@
 	import DefectCategorySelector from './chart/DefectCategorySelector.svelte';
 	import DefectsChart from './chart/DefectsChart.svelte';
 	import EntitySelector from './chart/EntitySelector.svelte';
+
+	$: ({ selected } = localeStore);
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	function onSearch(
@@ -48,9 +51,11 @@
 			<DefectCategorySelector />
 		</div>
 		<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-			<a href={ROUTE_NAMES.ARTICLE.MostReliableSUVs} target="_blank">Most reliable SUVs</a>
-			<a href={ROUTE_NAMES.ARTICLE.MostReliableSmallFamilyCars} target="_blank"
-				>Most reliable Small family cars</a
+			<a href={`${$selected}${ROUTE_NAMES.ARTICLE.MostReliableSUVs}`} target="_blank"
+				>{$_('text.article.MostReliableSUVs.title')}</a
+			>
+			<a href={`${$selected}${ROUTE_NAMES.ARTICLE.MostReliableSmallFamilyCars}`} target="_blank"
+				>{$_('text.article.MostReliableSmallFamilyCars.title')}</a
 			>
 		</div>
 		<!-- <div class="MainContainer_row ">
