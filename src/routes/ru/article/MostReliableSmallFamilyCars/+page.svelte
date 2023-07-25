@@ -1,10 +1,18 @@
 <script>
 	import Article from '$lib/article/Article.svelte';
 	import Charts from '$lib/article/Charts.svelte';
+
+	const title = 'Наиболее надежные небольшие семейные автомобили (по статистике)';
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={title} />
+	<meta name="og:title" property="og:title" content={title} />
+</svelte:head>
+
 <Article>
-	<h1>Наиболее надежные небольшие семейные автомобили (по статистике)</h1>
+	<h1>{title}</h1>
 	<p>
 		Небольшие семейные автомобили - самые популярные автомобили на рынке сегодня. Они предлагают
 		идеальную смесь практичности, доступности и безопасности. С ростом транспортных средств

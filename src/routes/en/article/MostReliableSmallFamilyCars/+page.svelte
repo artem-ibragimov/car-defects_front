@@ -1,10 +1,18 @@
 <script>
 	import Article from '$lib/article/Article.svelte';
 	import Charts from '$lib/article/Charts.svelte';
+
+	const title = 'Most reliable Small Family Cars (by Statistics)';
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={title} />
+	<meta name="og:title" property="og:title" content={title} />
+</svelte:head>
+
 <Article>
-	<h1>Most reliable Small Family Cars (by Statistics)</h1>
+	<h1>{title}</h1>
 	<p>
 		Small family cars are the most popular vehicles in the market today. They offer a perfect blend
 		of practicality, affordability, and safety. With the rise of the SUV and crossover vehicles,
