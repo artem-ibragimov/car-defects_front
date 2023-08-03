@@ -7,6 +7,7 @@ export const ROUTE_NAMES = {
 	CHART_ONLY: '/chart_only',
 	ARTICLE: {
 		MostReliableSmallFamilyCars: '/article/MostReliableSmallFamilyCars',
-		MostReliableSUVs: '/article/MostReliableSUVs'
+		MostReliableSUVs: '/article/MostReliableSUVs',
+		MostReliableHondaModels: '/article/MostReliableHondaModels'
 	}
 };

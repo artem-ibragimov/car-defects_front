@@ -25,6 +25,7 @@ export function createEntityParams() {
 			Object.fromEntries(Object.keys(v).map((k) => [k, prev[k] !== false]))
 		);
 		store(ENTITY_HASH_KEY, JSON.stringify(v));
+		console.info(JSON.stringify(v));
 	});
 
 	const colors = derived(selectedEntities, (s) => {

@@ -109,6 +109,9 @@
 			},
 			"MostReliableSmallFamilyCars": {
 				"title": "Самые надежные малоразмерные авто"
+			},
+			"MostReliableHondaModels": {
+				"title": "Самые надежные модели Honda"
 			}
 		}
 	}

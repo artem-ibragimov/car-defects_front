@@ -10,7 +10,7 @@ import { LOAD_ERROR } from '$lib/api/error';
 import { createCacheStore } from '$lib/util/cacheStore';
 import { filterNullable } from '$lib/util/tools';
 import { derived, get, writable } from 'svelte/store';
-import { createDefectFilterStore } from './defectFilter/filter.store';
+import { createDefectFilterStore } from '$lib/store/defectFilter/filter.store';
 
 const DEFAULT_STATE: IState = {
 	error: null,
@@ -149,7 +149,6 @@ export const createDefectStore = (api: {
 				})
 				.then((res) => {
 					console.warn(res);
-					debugger;
 					detailsLoadOffset.update((prev) => prev + DETAILS_LIMIT);
 					details.update((prev) => {
 						if (!prev[entityName]) {

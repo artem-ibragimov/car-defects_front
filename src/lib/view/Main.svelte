@@ -10,8 +10,7 @@
 	import DefectCategorySelector from './chart/DefectCategorySelector.svelte';
 	import DefectsChart from './chart/DefectsChart.svelte';
 	import EntitySelector from './chart/EntitySelector.svelte';
-
-	$: ({ selected } = localeStore);
+	import ArticleLinks from './ArticleLinks.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	function onSearch(
@@ -51,12 +50,7 @@
 			<DefectCategorySelector />
 		</div>
 		<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-			<a href={`${$selected}${ROUTE_NAMES.ARTICLE.MostReliableSUVs}`} target="_blank"
-				>{$_('text.article.MostReliableSUVs.title')}</a
-			>
-			<a href={`${$selected}${ROUTE_NAMES.ARTICLE.MostReliableSmallFamilyCars}`} target="_blank"
-				>{$_('text.article.MostReliableSmallFamilyCars.title')}</a
-			>
+			<ArticleLinks />
 		</div>
 		<!-- <div class="MainContainer_row ">
             <DefectDetails />

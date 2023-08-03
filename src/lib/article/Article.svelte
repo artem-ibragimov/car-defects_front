@@ -1,9 +1,10 @@
 <script>
-	import Header from '../view/Header.svelte';
+	import { ROUTE_NAMES } from '$lib/store/route.store';
+	import Logo from '$lib/view/Logo.svelte';
 </script>
 
 <div class="Article">
-	<Header />
+	<Logo on:click={() => window.location.assign(ROUTE_NAMES.MAIN)} />
 	<slot />
 </div>
 

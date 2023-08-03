@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import { _ } from 'svelte-i18n';
-	import Main from './Main.svelte';
+	import Logo from './Logo.svelte';
 </script>
 
 <div class="Header" on:click={() => window.location.assign(ROUTE_NAMES.MAIN)}>
-	<img src="/assets/logo.webp" alt="logo" width="50" height="50" />
+	<Logo />
 	<h1>
 		{$_('label.main_header')}
 	</h1>
