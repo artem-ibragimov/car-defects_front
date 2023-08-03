@@ -19,7 +19,9 @@
 
 <style scoped>
 	article {
+		flex: 1;
 		flex-basis: 400px;
+		min-width: 400px;
 		--img-scale: 1.001;
 		--title-color: black;
 		--link-icon-translate: -20px;
@@ -48,7 +50,6 @@
 		margin: 0;
 		padding: 0;
 		aspect-ratio: 16 / 9;
-		overflow: hidden;
 	}
 
 	article img {
@@ -68,19 +69,22 @@
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 	}
 
+	.article-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
 	@media screen and (max-width: 960px) {
 		article {
 			container: card/inline-size;
-		}
-		.article-body p {
-			display: none;
 		}
 	}
 
 	@container card (min-width: 380px) {
 		.article-wrapper {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			gap: 16px;
 		}
 		.article-body {
@@ -92,7 +96,6 @@
 		}
 		figure img {
 			height: 100%;
-			aspect-ratio: 1;
 			object-fit: cover;
 		}
 	}
