@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { defectStore, localeStore } from '$lib/store/main.store';
+	import { appInit, defectStore, localeStore } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import { _ } from 'svelte-i18n';
 	import About from './About.svelte';
@@ -13,6 +13,9 @@
 	import ArticleLinks from './ArticleLinks.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
+
+	appInit();
+
 	function onSearch(
 		e: CustomEvent<
 			{ title: string } & Partial<{

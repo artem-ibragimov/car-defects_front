@@ -10,20 +10,21 @@ export function createCategoriesParams(
 	const SEPARATOR = ',';
 	const categories = writable<ICategory[]>([]);
 
-	api
-		.getDefectsCategories()
-		.then((res) => {
-			const selected = restore(CATEGORIES_HASH_KEY).split(SEPARATOR) as string[];
-			categories.set(
-				Object.entries(res).map(([value, label]) => ({
-					value,
-					label,
-					selected: selected.includes(value)
-				}))
-			);
-		})
-		.catch(onerror);
-
+	function init() {
+		api
+			.getDefectsCategories()
+			.then((res) => {
+				const selected = restore(CATEGORIES_HASH_KEY).split(SEPARATOR) as string[];
+				categories.set(
+					Object.entries(res).map(([value, label]) => ({
+						value,
+						label,
+						selected: selected.includes(value)
+					}))
+				);
+			})
+			.catch(onerror);
+	}
 	function getCategoriesSerialized(): string {
 		const cats = get(categories);
 		const selected = cats.filter((c) => c.selected).map((c) => c.value);
@@ -31,6 +32,7 @@ export function createCategoriesParams(
 	}
 
 	return {
+		init,
 		categories,
 		setCategories(v: Record<string, boolean>) {
 			if (Object.keys(v).length === 0) {

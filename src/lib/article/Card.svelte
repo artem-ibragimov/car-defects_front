@@ -4,7 +4,7 @@
 </script>
 
 <div class="Card">
-	<img class="Card__banner" src={`/assets/img/${imgSrc}.png`} alt={title} />
+	<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} />
 	<div class="Card__content">
 		<h2>{title}</h2>
 		<p>
@@ -27,7 +27,6 @@
 		transition: all 0.4s ease-in-out;
 	}
 	.Card:has(:hover, :focus) {
-		cursor: pointer;
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 	}
 
@@ -36,6 +35,6 @@
 	}
 
 	.Card__content {
-		padding: 10px;
+		padding: 16px;
 	}
 </style>

@@ -5,7 +5,7 @@ import { createDataParams } from './dataParams.store';
 import { createEntityParams } from './entityParams.store';
 
 export const createDefectFilterStore = (
-	api: { getDefectsCategories(): Promise<IDefectData> },
+	api: { getDefectsCategories(): Promise<IDefectData>; },
 	onerror: () => void
 ) => {
 	const entityParams = createEntityParams();
@@ -24,6 +24,9 @@ export const createDefectFilterStore = (
 	);
 
 	return {
+		init() {
+			categoryParams.init();
+		},
 		selector,
 		entityParams,
 		categoryParams,

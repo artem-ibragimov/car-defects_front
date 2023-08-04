@@ -14,10 +14,10 @@
 	.Cards {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
-		row-gap: 10px;
-		justify-content: space-around;
-		padding: 16px;
+		gap: 16px;
+		row-gap: 16px;
+		justify-content: space-between;
+		padding: 16px 0;
 	}
 
 	@media screen and (min-width: 500px) {

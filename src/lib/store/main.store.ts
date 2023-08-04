@@ -22,3 +22,8 @@ export const searchStore = createSearchStore(API.search);
 export const localeStore = creatLocaleStore();
 export const authorStore = createAuthorStore(API.author);
 export const countryStore = createCountryStore(API.country);
+
+export const appInit = () => {
+   console.info('appInit')
+   defectStore.init();
+};

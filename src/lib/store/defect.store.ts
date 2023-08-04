@@ -118,6 +118,9 @@ export const createDefectStore = (api: {
 		selectedDetails.set(cfg);
 	}
 	return {
+		init(){
+			filter.init()
+		},
 		state,
 		selectedChartData,
 		filter,
