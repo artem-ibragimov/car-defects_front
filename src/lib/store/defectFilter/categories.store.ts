@@ -3,18 +3,12 @@ import { restore, store } from '$lib/util/hashStore';
 import { get, writable } from 'svelte/store';
 
 export function createCategoriesParams(
-	api: { getDefectsCategories(): Promise<IDefectData> },
+	api: { getDefectsCategories(): Promise<IDefectData>; },
 	onerror: () => void
 ) {
 	const CATEGORIES_HASH_KEY = 'defect_categories';
 	const SEPARATOR = ',';
 	const categories = writable<ICategory[]>([]);
-	categories.subscribe(() => {
-		const cats = getCategoriesSerialized();
-		if (cats) {
-			store(CATEGORIES_HASH_KEY, getCategoriesSerialized());
-		}
-	});
 
 	api
 		.getDefectsCategories()
@@ -43,6 +37,10 @@ export function createCategoriesParams(
 				return;
 			}
 			categories.update((cats) => cats.map((c) => ({ ...c, selected: v[c.value] })));
+			const cats = getCategoriesSerialized();
+			if (cats) {
+				store(CATEGORIES_HASH_KEY, cats);
+			}
 		},
 		getCategories: getCategoriesSerialized
 	};
