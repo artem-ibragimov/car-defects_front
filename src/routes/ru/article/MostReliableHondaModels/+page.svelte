@@ -28,14 +28,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={title} />
-	<meta name="og:title" property="og:title" content={title} />
-</svelte:head>
-
-<Article>
-	<h1>{title}</h1>
+<Article {title} {cards}>
 	<p>
 		Honda Civic, Honda Accord, Honda CR-V, Honda Fit и Honda HR-V - популярные модели автомобилей.
 		автомобилей, выпускаемых компанией Honda, известным японским автопроизводителем. Каждая из этих

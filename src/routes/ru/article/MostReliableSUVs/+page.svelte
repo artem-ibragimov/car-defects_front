@@ -38,14 +38,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={title} />
-	<meta name="og:title" property="og:title" content={title} />
-</svelte:head>
-
-<Article>
-	<h1>{title}</h1>
+<Article {title} {cards}>
 	<p>
 		Внедорожники становятся все более популярными благодаря их универсальности, просторности и
 		долговечности. С таким количеством вариантов на рынке может быть трудно определить, какой из них

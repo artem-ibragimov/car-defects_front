@@ -8,14 +8,19 @@ export function createDataParams() {
 		[DATA_PARAMS.NORMALIZE]: true,
 		[DATA_PARAMS.BY_AGE]: true
 	};
+
 	try {
 		initValue = JSON.parse(restore(PARAMS_HASH_KEY));
-	} catch {
-		store(PARAMS_HASH_KEY, JSON.stringify(initValue));
-	}
+	} catch {}
+
+	const initValueSerilized = JSON.stringify(initValue);
 	const params = writable<Partial<IDataParams>>(initValue);
 
 	params.subscribe((v) => {
+		const params = JSON.stringify(v);
+		if (params === initValueSerilized) {
+			return;
+		}
 		v && store(PARAMS_HASH_KEY, JSON.stringify(v));
 	});
 

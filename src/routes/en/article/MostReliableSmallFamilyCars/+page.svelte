@@ -38,14 +38,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={title} />
-	<meta name="og:title" property="og:title" content={title} />
-</svelte:head>
-
-<Article>
-	<h1>{title}</h1>
+<Article {title} {cards}>
 	<p>
 		Small family cars are the most popular vehicles in the market today. They offer a perfect blend
 		of practicality, affordability, and safety. With the rise of the SUV and crossover vehicles,

@@ -41,14 +41,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={title} />
-	<meta name="og:title" property="og:title" content={title} />
-</svelte:head>
-
-<Article>
-	<h1>{title}</h1>
+<Article {title} {cards}>
 	<p>
 		Небольшие семейные автомобили - самые популярные автомобили на рынке сегодня. Они предлагают
 		идеальную смесь практичности, доступности и безопасности. С ростом транспортных средств

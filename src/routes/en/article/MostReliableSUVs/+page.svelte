@@ -36,14 +36,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={title} />
-	<meta name="og:title" property="og:title" content={title} />
-</svelte:head>
-
-<Article>
-	<h1>{title}</h1>
+<Article {title} {cards}>
 	<p>
 		SUVs have become increasingly popular due to their versatility, spaciousness, and durability.
 		With so many options on the market, it can be difficult to determine which one is the most

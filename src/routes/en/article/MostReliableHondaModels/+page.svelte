@@ -28,14 +28,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={title} />
-	<meta name="og:title" property="og:title" content={title} />
-</svelte:head>
-
-<Article>
-	<h1>{title}</h1>
+<Article {title} {cards}>
 	<p>
 		The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of
 		cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters
