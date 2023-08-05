@@ -40,9 +40,10 @@ export const createDefectStore = (api: {
 	const filter = createDefectFilterStore(api, onerror);
 
 	filter.selector.subscribe((selector) => {
-		if (selector.categories.length === 0) {
-			return;
-		}
+		// if (selector.categories.length === 0) {
+		// 	// debugger
+		// 	// return;
+		// }
 		setState({ loading: true });
 		Promise.all(filter.entityParams.getEntities().map(([name, p]) => reqChartData(name, p)))
 			.then((results) => {

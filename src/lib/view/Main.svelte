@@ -1,16 +1,14 @@
 <script lang="ts">
-	import { appInit, defectStore, localeStore } from '$lib/store/main.store';
-	import { ROUTE_NAMES } from '$lib/store/route.store';
-	import { _ } from 'svelte-i18n';
-	import About from './About.svelte';
-	import AgeMileageRadio from './AgeMileageSelector.svelte';
-	import Header from './Header.svelte';
-	import Search from './Search.svelte';
-	import TotalNormRadio from './TotalNormSelector.svelte';
-	import DefectCategorySelector from './chart/DefectCategorySelector.svelte';
-	import DefectsChart from './chart/DefectsChart.svelte';
-	import EntitySelector from './chart/EntitySelector.svelte';
-	import ArticleLinks from './ArticleLinks.svelte';
+	import { appInit, defectStore } from '$lib/store/main.store';
+	import About from '$lib/view/About.svelte';
+	import AgeMileageRadio from '$lib/view/AgeMileageSelector.svelte';
+	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
+	import Header from '$lib/view/Header.svelte';
+	import Search from '$lib/view/Search.svelte';
+	import TotalNormRadio from '$lib/view/TotalNormSelector.svelte';
+	import DefectCategorySelector from '$lib/view/chart/DefectCategorySelector.svelte';
+	import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
+	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 

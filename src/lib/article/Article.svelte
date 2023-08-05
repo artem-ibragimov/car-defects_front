@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ROUTE_NAMES } from '$lib/store/route.store';
+	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 	import Logo from '$lib/view/Logo.svelte';
 
 	export let title: string;
@@ -24,6 +25,8 @@
 	<Logo on:click={() => window.location.assign(ROUTE_NAMES.MAIN)} />
 
 	<slot />
+
+	<ArticleLinks />
 </div>
 
 <style scoped>
