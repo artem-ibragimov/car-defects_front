@@ -11,6 +11,7 @@
 	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
+	$: ({ noChartData } = defectStore);
 
 	appInit();
 
@@ -39,20 +40,38 @@
 		<div class="MainContainer_row MainContainer_wrap">
 			<Search on:input={onSearch} />
 		</div>
+		{#if !$noChartData}
+			<div class="MainContainer_row MainContainer_space-between">
+				<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
+				<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
+				<!-- <LocaleSelector /> -->
+			</div>
+		{/if}
 
-		<div class="MainContainer_row MainContainer_space-between">
-			<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
-			<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
-			<!-- <LocaleSelector /> -->
-		</div>
-		<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-			<EntitySelector />
-			<DefectsChart displayLegend={false} />
-			<DefectCategorySelector />
-		</div>
+		{#if !$noChartData}
+			<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
+				<EntitySelector />
+				<DefectsChart displayLegend={false} />
+				<DefectCategorySelector />
+			</div>
+		{/if}
 		<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
 			<ArticleLinks />
 		</div>
+		{#if $noChartData}
+			<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
+				<iframe
+					class="MainContainer__videoframe"
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/km0wsB0xBV4?controls=0"
+					title="About Car-Defects Project"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				/>
+			</div>
+		{/if}
 		<!-- <div class="MainContainer_row ">
             <DefectDetails />
         </div> -->
@@ -65,14 +84,18 @@
 
 <style scoped>
 	.MainContainer {
+		height: 100%;
+		display: flex;
+		justify-content: center;
 	}
 
 	.MainContainer_column {
+		max-width: 1280px;
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: stretch;
-		margin: auto;
 		padding: 0 10px;
 		gap: 10px;
 	}
@@ -84,11 +107,18 @@
 	.MainContainer_items-start {
 		align-items: flex-start;
 	}
+	.MainContainer__videoframe{
+		max-width: 100%;
+		max-height: 100%;
+	}
 	.MainContainer_row {
 		display: flex;
 		flex-direction: row;
 		gap: 8px;
 		align-items: stretch;
+	}
+	.MainContainer_grow {
+		flex-grow: 2;
 	}
 	.MainContainer_wrap {
 		flex-wrap: wrap;

@@ -28,7 +28,7 @@ export const createDefectStore = (api: {
 	getDefectsByAge(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsByMileage(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsDetails(
-		params: IEntity & IMeta & { locale: string; categories: string }
+		params: IEntity & IMeta & { locale: string; categories: string; }
 	): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {
@@ -54,6 +54,8 @@ export const createDefectStore = (api: {
 				setState({ loading: false });
 			});
 	});
+
+	const noChartData = derived([chartData], ([data]) => Object.keys(data).length === 0);
 
 	const selectedChartData = derived([chartData, filter.selector], ([d, f]) => {
 		return Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k]));
@@ -119,9 +121,10 @@ export const createDefectStore = (api: {
 		selectedDetails.set(cfg);
 	}
 	return {
-		init(){
-			filter.init()
+		init() {
+			filter.init();
 		},
+		noChartData,
 		state,
 		selectedChartData,
 		filter,

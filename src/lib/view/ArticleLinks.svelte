@@ -12,6 +12,19 @@
 	}
 </script>
 
-{#each articles as [name, path]}
-	<a href={`/${$selected}${path}`} target="_blank">{$_(`text.article.${name}.title`)}</a>
-{/each}
+<div class="ArticleLinks">
+	{#each articles as [name, path]}
+		<a href={`/${$selected}${path}`} target="_blank">{$_(`text.article.${name}.title`)}</a>
+	{/each}
+</div>
+
+<style scoped>
+	.ArticleLinks {
+		flex:1;
+		display: flex;
+		flex-wrap: wrap;
+		gap:8px;
+		padding: 16px 0;
+		justify-content: space-between;
+	}
+</style>
