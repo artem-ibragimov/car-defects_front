@@ -20,13 +20,29 @@
 	}
 </script>
 
-<div class="DefectDetails DefectDetails__column">
-	<div class="DefectDetails__column-flex DefectDetails__gap" class:loadingDetails>
+<div class="DefectDetails">
+	<div class="DefectDetails__bar DefectDetails__bottom-fixed">
+		<Selector
+			column
+			{variants}
+			on:select={onDetailsSelect}
+			needApplyButton
+			appendLabel={$_('label.load_details')}
+		/>
+	</div>
+	<div class="DefectDetails__content" class:loadingDetails>
 		{#if !!$selectedDetailEntity}
 			{#each $details[$selectedDetailEntity] || [] as detail}
 				<div class="DefectDetail">
 					<div class="DefectDetails__space-between DefectDetails__bold">
-						<span>{detail.brand} {detail.model} {detail.gen} {detail.version}</span>
+						<span
+							>{detail.country}
+							{detail.brand}
+							{detail.model}
+							{detail.gen}
+							{detail.version}
+							{detail.year}</span
+						>
 						{#if detail.age !== '0'}
 							<span>{$_('label.detail.age')}: {detail.age}</span>
 						{/if}
@@ -39,19 +55,22 @@
 			{/each}
 		{/if}
 	</div>
-	<div class="DefectDetails__bar DefectDetails__bottom-fixed">
-		<Selector
-			{variants}
-			on:select={onDetailsSelect}
-			needApplyButton
-			appendLabel={$_('label.load_details')}
-		/>
-	</div>
 </div>
 
 <style scoped>
 	.DefectDetails {
 		display: flex;
+		flex-direction: row;
+		gap: 16px;
+	}
+	.DefectDetails__content {
+		flex-grow: 5;
+		justify-content: space-around;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: 16px;
+		row-gap: 16px;
 		flex: 1;
 		opacity: 1;
 		transition: all;
@@ -71,7 +90,6 @@
 	}
 	.DefectDetails__column-flex {
 		display: flex;
-		flex-direction: column;
 	}
 	.DefectDetails__gap {
 		gap: 30px;
@@ -84,13 +102,10 @@
 		text-transform: capitalize;
 		font-weight: 500;
 	}
-	.DefectDetails__column {
-		flex-direction: column;
-		flex: 1;
-	}
 
 	.DefectDetail {
-		padding: 10px;
-		border: 2px solid #ccc;
+		padding: 16px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
 	}
 </style>

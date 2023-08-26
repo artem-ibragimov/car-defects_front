@@ -9,6 +9,7 @@
 	import DefectCategorySelector from '$lib/view/chart/DefectCategorySelector.svelte';
 	import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
 	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
+	import DefectDetails from './DefectDetails.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	$: ({ noChartData } = defectStore);
@@ -72,9 +73,9 @@
 				/>
 			</div>
 		{/if}
-		<!-- <div class="MainContainer_row ">
-            <DefectDetails />
-        </div> -->
+		<div class="MainContainer_row DefectDetails">
+			<DefectDetails />
+		</div>
 		<div class="MainContainer_column MainContainer_items-start MainContainer_space-between">
 			<About />
 			<!-- <Button variant="secondary" on:click={nav.displayAddDataForm}>{$_('label.add_data')}</Button> -->
@@ -107,7 +108,7 @@
 	.MainContainer_items-start {
 		align-items: flex-start;
 	}
-	.MainContainer__videoframe{
+	.MainContainer__videoframe {
 		max-width: 100%;
 		max-height: 100%;
 	}

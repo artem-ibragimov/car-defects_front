@@ -28,7 +28,7 @@ export const createDefectStore = (api: {
 	getDefectsByAge(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsByMileage(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsDetails(
-		params: IEntity & IMeta & { locale: string; categories: string; }
+		params: IEntity & IMeta & { locale: string; categories: string }
 	): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {

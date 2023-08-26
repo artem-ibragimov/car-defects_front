@@ -13,6 +13,7 @@
 	.pure-button {
 		border-radius: 2px;
 		padding: 0.4em 2em;
+		white-space: break-spaces;
 	}
 
 	.stretch_desktop {

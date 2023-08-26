@@ -109,8 +109,10 @@
 	.pure-menu-horizontal {
 		white-space: normal;
 		width: auto;
+		max-width: none;
 	}
 	.pure-menu {
+		max-width: 250px;
 		cursor: pointer;
 	}
 	.pure-menu-link {
@@ -126,6 +128,7 @@
 		text-transform: capitalize;
 		box-sizing: border-box;
 		user-select: none;
+		text-align: center;
 	}
 	.pure-menu-item-colorful {
 		border: 4px solid;

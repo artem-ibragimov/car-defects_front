@@ -20,10 +20,10 @@
 
 <style scoped>
 	.ArticleLinks {
-		flex:1;
+		flex: 1;
 		display: flex;
 		flex-wrap: wrap;
-		gap:8px;
+		gap: 8px;
 		padding: 16px 0;
 		justify-content: space-between;
 	}

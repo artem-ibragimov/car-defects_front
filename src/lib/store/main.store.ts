@@ -24,6 +24,5 @@ export const authorStore = createAuthorStore(API.author);
 export const countryStore = createCountryStore(API.country);
 
 export const appInit = () => {
-   console.info('appInit')
-   defectStore.init();
+	defectStore.init();
 };

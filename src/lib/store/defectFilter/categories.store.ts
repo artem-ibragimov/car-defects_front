@@ -3,7 +3,7 @@ import { restore, store } from '$lib/util/hashStore';
 import { get, writable } from 'svelte/store';
 
 export function createCategoriesParams(
-	api: { getDefectsCategories(): Promise<IDefectData>; },
+	api: { getDefectsCategories(): Promise<IDefectData> },
 	onerror: () => void
 ) {
 	const CATEGORIES_HASH_KEY = 'defect_categories';
