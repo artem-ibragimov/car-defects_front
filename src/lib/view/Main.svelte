@@ -41,45 +41,49 @@
 		<div class="MainContainer_row MainContainer_wrap">
 			<Search on:input={onSearch} />
 		</div>
-		{#if !$noChartData}
-			<div class="MainContainer_row MainContainer_space-between">
-				<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
-				<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
-				<!-- <LocaleSelector /> -->
+		<div class="MainContainer_row MainContainer_mobile_column-reverse">
+			<div class="MainContainer_column">
+				{#if !$noChartData}
+					<div class="MainContainer_row MainContainer_space-between">
+						<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
+						<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
+						<!-- <LocaleSelector /> -->
+					</div>
+					<div class="MainContainer_grow">
+						<DefectsChart displayLegend={false} />
+					</div>
+					<EntitySelector />
+				{/if}
+				{#if $noChartData}
+					<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
+						<ArticleLinks />
+					</div>
+				{/if}
+				{#if $noChartData}
+					<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
+						<iframe
+							class="MainContainer__videoframe"
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/km0wsB0xBV4?controls=0"
+							title="About Car-Defects Project"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+						/>
+					</div>
+				{/if}
+				<DefectDetails />
 			</div>
-		{/if}
+			{#if !$noChartData}
+				<div class="MainContainer_sidebar">
+					<DefectCategorySelector />
+				</div>
+			{/if}
+		</div>
 
-		{#if !$noChartData}
-			<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-				<EntitySelector />
-				<DefectsChart displayLegend={false} />
-				<DefectCategorySelector />
-			</div>
-		{/if}
-		<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-			<ArticleLinks />
-		</div>
-		{#if $noChartData}
-			<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
-				<iframe
-					class="MainContainer__videoframe"
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/km0wsB0xBV4?controls=0"
-					title="About Car-Defects Project"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowfullscreen
-				/>
-			</div>
-		{/if}
-		<div class="MainContainer_row DefectDetails">
-			<DefectDetails />
-		</div>
-		<div class="MainContainer_column MainContainer_items-start MainContainer_space-between">
-			<About />
-			<!-- <Button variant="secondary" on:click={nav.displayAddDataForm}>{$_('label.add_data')}</Button> -->
-		</div>
+		<About />
+		<!-- <Button variant="secondary" on:click={nav.displayAddDataForm}>{$_('label.add_data')}</Button> -->
 	</div>
 </div>
 
@@ -97,13 +101,9 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: stretch;
-		padding: 0 10px;
 		gap: 10px;
 	}
 	@media (min-width: 500px) {
-		.MainContainer_column {
-			padding: 0 30px;
-		}
 	}
 	.MainContainer_items-start {
 		align-items: flex-start;
@@ -130,9 +130,12 @@
 	.MainContainer_space-between {
 		justify-content: space-between;
 	}
-	@media (max-width: 700px) {
+	@media (max-width: 500px) {
 		.MainContainer_mobile_column {
 			flex-direction: column;
+		}
+		.MainContainer_mobile_column-reverse {
+			flex-direction: column-reverse;
 		}
 	}
 </style>

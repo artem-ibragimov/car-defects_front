@@ -106,14 +106,14 @@
 </div>
 
 <style scoped>
+	.pure-menu {
+		max-width: 250px;
+		cursor: pointer;
+	}
 	.pure-menu-horizontal {
 		white-space: normal;
 		width: auto;
 		max-width: none;
-	}
-	.pure-menu {
-		max-width: 250px;
-		cursor: pointer;
 	}
 	.pure-menu-link {
 		box-sizing: border-box;
@@ -151,6 +151,9 @@
 		}
 		.pure-menu-horizontal .pure-menu-item {
 			display: block;
+		}
+		.pure-menu {
+			max-width: none;
 		}
 	}
 </style>

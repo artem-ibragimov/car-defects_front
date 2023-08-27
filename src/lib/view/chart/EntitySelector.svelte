@@ -12,7 +12,6 @@
 </script>
 
 <Selector
-	column
 	multiselect
 	{variants}
 	on:select={({ detail }) => {

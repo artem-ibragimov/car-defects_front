@@ -101,15 +101,15 @@
 		min-height: 200px;
 		flex: 2 2;
 		max-height: 500px;
-		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
 		cursor: pointer;
+		resize: both;
 	}
 	@media (min-width: 500px) {
 		.Chart {
-			/* height: 100vh; */
+			height: 100vh;
 		}
 	}
 

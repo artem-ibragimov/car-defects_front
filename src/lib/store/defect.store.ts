@@ -27,9 +27,7 @@ export const createDefectStore = (api: {
 	getDefectsCategories(): Promise<IDefectData>;
 	getDefectsByAge(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsByMileage(params: IEntity & IDataParams): Promise<IDefectData>;
-	getDefectsDetails(
-		params: IEntity & IMeta & { locale: string; categories: string }
-	): Promise<IDefectDetails[]>;
+	getDefectsDetails(params: IEntity & IMeta & { categories: string }): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {
 	const onerror = () => {
@@ -135,7 +133,7 @@ export const createDefectStore = (api: {
 		},
 		selectedDetails,
 		selectedDetailEntity,
-		loadDetails(selected: Record<string, boolean>, locale: string) {
+		loadDetails(selected: Record<string, boolean>) {
 			const entityName = (Object.entries(selected).find(([_, v]) => v) || [])[0];
 			if (!entityName) {
 				return;
@@ -151,8 +149,7 @@ export const createDefectStore = (api: {
 					...entity,
 					limit: DETAILS_LIMIT,
 					offset: get(detailsLoadOffset),
-					categories: filter.categoryParams.getCategories(),
-					locale
+					categories: filter.categoryParams.getCategories()
 				})
 				.then((res) => {
 					console.warn(res);

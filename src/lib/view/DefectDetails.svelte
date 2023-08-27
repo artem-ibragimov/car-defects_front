@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { defectStore, localeStore } from '$lib/store/main.store';
-	import { _ } from 'svelte-i18n';
 	import Selector from '$lib/components/Selector.svelte';
+	import { defectStore } from '$lib/store/main.store';
+	import { _ } from 'svelte-i18n';
 
 	let { entities } = defectStore.filter.entityParams;
 	let { selectedDetails, selectedDetailEntity, state } = defectStore;
@@ -13,55 +13,64 @@
 
 	let { loadDetails, details } = defectStore;
 
-	$: ({ selected } = localeStore);
-
 	function onDetailsSelect({ detail }) {
-		loadDetails(detail, $selected);
+		loadDetails(detail);
 	}
 </script>
 
 <div class="DefectDetails">
-	<div class="DefectDetails__bar DefectDetails__bottom-fixed">
-		<Selector
-			column
-			{variants}
-			on:select={onDetailsSelect}
-			needApplyButton
-			appendLabel={$_('label.load_details')}
-		/>
-	</div>
 	<div class="DefectDetails__content" class:loadingDetails>
 		{#if !!$selectedDetailEntity}
 			{#each $details[$selectedDetailEntity] || [] as detail}
 				<div class="DefectDetail">
 					<div class="DefectDetails__space-between DefectDetails__bold">
-						<span
-							>{detail.country}
+						<span>
+							{detail.country}
 							{detail.brand}
 							{detail.model}
 							{detail.gen}
 							{detail.version}
-							{detail.year}</span
-						>
-						{#if detail.age !== '0'}
-							<span>{$_('label.detail.age')}: {detail.age}</span>
-						{/if}
-						{#if detail.mileage !== '0'}
-							<span>{$_('label.detail.mileage')}: {detail.mileage}</span>
-						{/if}
+							{detail.year}
+						</span>
+
+						<span>
+							{#if detail.age !== '0'}
+								{$_('label.detail.age')}: {detail.age}
+							{/if}
+							{#if detail.mileage !== '0'}
+								{$_('label.detail.mileage')}: {detail.mileage}
+							{/if}
+						</span>
+
+						<span>{$_(`defect_category.${detail.category}`)}</span>
 					</div>
 					<p>{detail.description}</p>
 				</div>
 			{/each}
 		{/if}
 	</div>
+	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntity}>
+		<Selector
+			column={!!$selectedDetailEntity}
+			{variants}
+			on:select={onDetailsSelect}
+			needApplyButton
+			appendLabel={$_('label.load_details')}
+		/>
+	</div>
 </div>
 
 <style scoped>
 	.DefectDetails {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		gap: 16px;
+	}
+	@media (min-width: 500px) {
+		.DefectDetails {
+			align-items: flex-start;
+			flex-direction: row;
+		}
 	}
 	.DefectDetails__content {
 		flex-grow: 5;
@@ -83,10 +92,15 @@
 		display: flex;
 		justify-content: flex-end;
 		background: #f4faff;
-		position: sticky;
 	}
-	.DefectDetails__bottom-fixed {
-		bottom: 0;
+	.DefectDetails__bar-sticky {
+		position: sticky;
+		top: 0;
+	}
+	@media (min-width: 500px) {
+		.DefectDetails__bar-sticky {
+			top: 50px;
+		}
 	}
 	.DefectDetails__column-flex {
 		display: flex;

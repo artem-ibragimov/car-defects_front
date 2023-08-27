@@ -6,10 +6,19 @@
 	$: variants = $categories.map((c) => ({ ...c, label: `defect_category.${c.label}` }));
 </script>
 
-<Selector
-	column
-	multiselect
-	{variants}
-	on:select={({ detail }) => setCategories(detail)}
-	needApplyButton
-/>
+<div class="DefectCategorySelector">
+	<Selector
+		column
+		multiselect
+		{variants}
+		on:select={({ detail }) => setCategories(detail)}
+		needApplyButton
+	/>
+</div>
+
+<style scoped>
+	.DefectCategorySelector {
+		position: sticky;
+		top: 50px;
+	}
+</style>
