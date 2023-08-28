@@ -11,14 +11,17 @@ const DEFAULT_STATE: IState = {
 
 export const createSearchStore = (api: ISearchAPI) => {
 	const state = writable<IState>({ ...DEFAULT_STATE });
+	const DELAY_MS = 1000;
+	let isWaitingForReq = false;
+	let query = '';
 
 	const setState = (values: Partial<IState>) => {
 		state.update((prev) => Object.assign(prev, DEFAULT_STATE, values));
 	};
 
-	const search = (params: { query: string }) => {
-		api
-			.search(transpile(params.query))
+	const search = () => {
+		return api
+			.search(transpile(query))
 			.then((data) => {
 				setState(data);
 			})
@@ -28,7 +31,18 @@ export const createSearchStore = (api: ISearchAPI) => {
 	};
 
 	return {
-		search,
+		search(params: { query: string }) {
+			query = params.query;
+			if (isWaitingForReq) {
+				return;
+			}
+			isWaitingForReq = true;
+			setTimeout(() => {
+				search().then(() => {
+					isWaitingForReq = false;
+				});
+			}, DELAY_MS);
+		},
 		state
 	};
 };

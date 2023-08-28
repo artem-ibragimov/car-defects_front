@@ -12,6 +12,7 @@
 		title: string;
 		label: string;
 	};
+
 	export let value: string = '';
 	export let suggestions: Item[] = [];
 
