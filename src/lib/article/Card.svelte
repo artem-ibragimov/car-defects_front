@@ -1,16 +1,19 @@
 <script lang="ts">
 	export let title: string = '';
 	export let imgSrc: string = '';
+	export let href: string | undefined;
 </script>
 
 <div class="Card">
-	<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} />
-	<div class="Card__content">
-		<h2>{title}</h2>
-		<p>
-			<slot />
-		</p>
-	</div>
+	<a class="Card__a" {href} target="_blank">
+		<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} />
+		<div class="Card__content">
+			<h2>{title}</h2>
+			<p>
+				<slot />
+			</p>
+		</div>
+	</a>
 </div>
 
 <style scoped>
@@ -21,6 +24,7 @@
 		flex: 1;
 		flex-basis: 400px;
 		min-width: 400px;
+		max-width: 450px;
 		border-radius: 8px;
 		box-shadow: none;
 		border: 1px solid #ccc;
@@ -30,6 +34,10 @@
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 	}
 
+	.Card__a {
+		text-decoration: none;
+		color: inherit;
+	}
 	.Card__banner {
 		width: 100%;
 	}

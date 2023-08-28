@@ -131,6 +131,10 @@ export const createDefectStore = (api: {
 			setState({ loading: true });
 			filter.entityParams.addEntity(name, entity);
 		},
+		clear() {
+			filter.entityParams.resetEntities();
+			chartData.set({});
+		},
 		selectedDetails,
 		selectedDetailEntity,
 		loadDetails(selected: Record<string, boolean>) {

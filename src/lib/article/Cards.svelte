@@ -1,12 +1,14 @@
 <script lang="ts">
 	import Card from '$lib/article/Card.svelte';
 
-	export let cards: { title: string; text: string }[] = [];
+	export let cards: { title: string; text?: string; imgSrc?: string; href?: string }[] = [];
 </script>
 
 <div class="Cards">
 	{#each cards as card}
-		<Card title={card.title} imgSrc={card.title}>{card.text}</Card>
+		<Card title={card.title} imgSrc={card.imgSrc || card.title} href={card.href}
+			>{card.text || ''}</Card
+		>
 	{/each}
 </div>
 

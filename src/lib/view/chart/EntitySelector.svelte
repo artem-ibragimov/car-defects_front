@@ -18,5 +18,5 @@
 		defectStore.filter.entityParams.selectEntities(detail);
 	}}
 	needResetButton
-	on:reset={defectStore.filter.entityParams.resetEntities}
+	on:reset={defectStore.clear}
 />

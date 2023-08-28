@@ -25,9 +25,6 @@ export function createEntityParams() {
 			Object.fromEntries(Object.keys(v).map((k) => [k, prev[k] !== false]))
 		);
 		const entities = JSON.stringify(v);
-		if (entities === '{}') {
-			return;
-		}
 		store(ENTITY_HASH_KEY, entities);
 		console.info(entities);
 	});
