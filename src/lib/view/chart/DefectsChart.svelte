@@ -4,6 +4,7 @@
 	import { _ } from 'svelte-i18n';
 
 	export let displayLegend = true;
+	export let isFrameChart = false;
 
 	$: ({ state: defectState, filter, selectedChartData } = defectStore);
 	$: ({ loading } = $defectState);
@@ -20,4 +21,12 @@
 	};
 </script>
 
-<BaseChart {title} data={$selectedChartData} {axes} {tooltip} {loading} {displayLegend} />
+<BaseChart
+	{title}
+	data={$selectedChartData}
+	{axes}
+	{tooltip}
+	{loading}
+	{displayLegend}
+	{isFrameChart}
+/>

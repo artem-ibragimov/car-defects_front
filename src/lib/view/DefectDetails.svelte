@@ -80,7 +80,6 @@
 		align-items: stretch;
 		gap: 16px;
 		row-gap: 16px;
-		flex: 1;
 		opacity: 1;
 		transition: all;
 	}

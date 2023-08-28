@@ -19,10 +19,6 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content="/assets/img/car.png" />
 
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (m, e, t, r, i, k, a) {
 			m[i] =

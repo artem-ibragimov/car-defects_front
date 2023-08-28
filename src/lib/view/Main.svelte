@@ -55,16 +55,11 @@
 					<EntitySelector />
 				{/if}
 				{#if $noChartData}
-					<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-						<ArticleLinks />
-					</div>
-				{/if}
-				{#if $noChartData}
 					<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
 						<iframe
 							class="MainContainer__videoframe"
-							width="560"
-							height="315"
+							width="100%"
+							height="400"
 							src="https://www.youtube.com/embed/km0wsB0xBV4?controls=0"
 							title="About Car-Defects Project"
 							frameborder="0"
@@ -73,6 +68,9 @@
 						/>
 					</div>
 				{/if}
+				<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
+					<ArticleLinks />
+				</div>
 				<DefectDetails />
 			</div>
 			{#if !$noChartData}
@@ -95,7 +93,6 @@
 	}
 
 	.MainContainer_column {
-		max-width: 1280px;
 		flex: 1;
 		display: flex;
 		flex-direction: column;
@@ -104,9 +101,9 @@
 		gap: 10px;
 	}
 	@media (min-width: 500px) {
-	}
-	.MainContainer_items-start {
-		align-items: flex-start;
+		.MainContainer_column {
+			max-width: 900px;
+		}
 	}
 	.MainContainer__videoframe {
 		max-width: 100%;

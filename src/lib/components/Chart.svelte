@@ -21,6 +21,7 @@
 	export let data: Record<string, Record<string, string>> = {};
 	export let loading: boolean = true;
 	export let displayLegend = false;
+	export let isFrameChart = false;
 
 	let chartEl: HTMLCanvasElement;
 	let chart: Chart;
@@ -90,7 +91,7 @@
 	});
 </script>
 
-<div class="Chart">
+<div class="Chart" class:Chart-frame={isFrameChart}>
 	<Loading hidden={!loading} />
 	<canvas bind:this={chartEl} hidden={loading} />
 </div>
@@ -99,7 +100,7 @@
 	.Chart {
 		min-width: 400px;
 		min-height: 200px;
-		flex: 2 2;
+		flex-grow: 2;
 		max-height: 500px;
 		display: flex;
 		flex-direction: column;
@@ -108,16 +109,8 @@
 		resize: both;
 	}
 	@media (min-width: 500px) {
-		.Chart {
+		.Chart-frame {
 			height: 100vh;
 		}
-	}
-
-	.Chart__items-end {
-		display: flex;
-		justify-content: flex-end;
-	}
-	.Chart__padding-y {
-		padding: 0 10px;
 	}
 </style>

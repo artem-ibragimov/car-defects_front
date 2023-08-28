@@ -6,9 +6,7 @@
 
 <div class="Cards">
 	{#each cards as card}
-		<Card title={card.title} imgSrc={card.imgSrc || card.title} href={card.href}
-			>{card.text || ''}</Card
-		>
+		<Card title={card.title} imgSrc={card.imgSrc || card.title} href={card.href} text={card.text} />
 	{/each}
 </div>
 

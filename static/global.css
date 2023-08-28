@@ -74,3 +74,7 @@ button:focus {
 p {
 	line-height: 1.4em;
 }
+
+h4 {
+	margin: 0;
+}
