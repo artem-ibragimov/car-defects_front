@@ -10,6 +10,7 @@
 	import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
 	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
 	import DefectDetails from './DefectDetails.svelte';
+	import Trailer from './Trailer.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	$: ({ noChartData } = defectStore);
@@ -56,16 +57,7 @@
 				{/if}
 				{#if $noChartData}
 					<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
-						<iframe
-							class="MainContainer__videoframe"
-							width="100%"
-							height="400"
-							src="https://www.youtube.com/embed/km0wsB0xBV4?controls=0"
-							title="About Car-Defects Project"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							allowfullscreen
-						/>
+						<Trailer />
 					</div>
 				{/if}
 				<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
@@ -104,10 +96,6 @@
 		.MainContainer_column {
 			max-width: 900px;
 		}
-	}
-	.MainContainer__videoframe {
-		max-width: 100%;
-		max-height: 100%;
 	}
 	.MainContainer_row {
 		display: flex;
