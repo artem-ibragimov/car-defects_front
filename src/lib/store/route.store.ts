@@ -4,8 +4,9 @@ export const ROUTE_NAMES = {
 	LOADING: '/loading',
 	CHART_ONLY: '/chart_only',
 	ARTICLE: {
-		MostReliableSmallFamilyCars: '/article/MostReliableSmallFamilyCars',
-		MostReliableSUVs: '/article/MostReliableSUVs',
-		MostReliableHondaModels: '/article/MostReliableHondaModels'
+		most_reliable_small_family_cars: '/article/most_reliable_small_family_cars',
+		most_reliable_suvs: '/article/most_reliable_suvs',
+		most_reliable_honda_models: '/article/most_reliable_honda_models',
+		honda_accord_vs_toyota_camry: '/article/honda_accord_vs_toyota_camry'
 	}
 };

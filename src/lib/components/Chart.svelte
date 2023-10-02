@@ -99,7 +99,7 @@
 <style scoped>
 	.Chart {
 		min-width: 400px;
-		min-height: 200px;
+		min-height: 360px;
 		flex-grow: 2;
 		max-height: 500px;
 		display: flex;

@@ -104,14 +104,17 @@
 			"project": "Сайт некоммерческий, он создан на добровольных началах и пока находится в alpha версии."
 		},
 		"article": {
-			"MostReliableSUVs": {
+			"most_reliable_suvs": {
 				"title": "Самые надежные кроссоверы"
 			},
-			"MostReliableSmallFamilyCars": {
+			"most_reliable_small_family_cars": {
 				"title": "Самые надежные малоразмерные авто"
 			},
-			"MostReliableHondaModels": {
+			"most_reliable_honda_models": {
 				"title": "Самые надежные модели Honda"
+			},
+			"honda_accord_vs_toyota_camry": {
+				"title": "Toyota Camry или Honda Accord"
 			}
 		}
 	}

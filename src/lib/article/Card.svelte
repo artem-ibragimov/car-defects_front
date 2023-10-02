@@ -42,7 +42,10 @@
 		color: inherit;
 	}
 	.Card__banner {
-		width: 100%;
+		object-fit: cover;
+		max-height: 220px;
+		aspect-ratio: 1;
+		min-width: 100%;
 	}
 
 	.Card__content {

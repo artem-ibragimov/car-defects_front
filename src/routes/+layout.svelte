@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Notification from '$lib/components/Notification.svelte';
 	import { defectStore } from '$lib/store/main.store';
-	import { isDebug } from '$lib/util/debug';
 
 	$: ({ state } = defectStore);
 	$: ({ warn, error, lastRequest } = $state);

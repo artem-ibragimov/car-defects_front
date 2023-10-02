@@ -104,14 +104,17 @@
 			"project": "It's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
 		},
 		"article": {
-			"MostReliableSUVs": {
+			"most_reliable_suvs": {
 				"title": "Most reliable SUVs"
 			},
-			"MostReliableSmallFamilyCars": {
+			"most_reliable_small_family_cars": {
 				"title": "Most reliable Small family cars"
 			},
-			"MostReliableHondaModels": {
+			"most_reliable_honda_models": {
 				"title": "Most reliable Honda models"
+			},
+			"honda_accord_vs_toyota_camry": {
+				"title": "Toyota Camry vs Honda Accord"
 			}
 		}
 	}
