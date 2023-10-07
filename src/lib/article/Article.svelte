@@ -23,6 +23,7 @@
 
 <div class="Article">
 	<Logo on:click={() => window.location.assign(ROUTE_NAMES.MAIN)} />
+	<h2>{title}</h2>
 
 	<slot />
 

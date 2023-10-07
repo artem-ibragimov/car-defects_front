@@ -8,7 +8,7 @@
 
 {#if error || warn}
 	<div class="Notification" class:warn={!!warn} class:error={!!error}>
-		{$_((error && error.message) || warn)}<span>{request}</span>
+		{$_((error && error.message) || warn)}: <span>{request}</span>
 	</div>
 {/if}
 
