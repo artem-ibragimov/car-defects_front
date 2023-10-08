@@ -1,5 +1,7 @@
 <script lang="ts">
+	import Button from '$lib/components/Button.svelte';
 	import { appInit, defectStore } from '$lib/store/main.store';
+	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import About from '$lib/view/About.svelte';
 	import AgeMileageRadio from '$lib/view/AgeMileageSelector.svelte';
 	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
@@ -9,12 +11,12 @@
 	import DefectCategorySelector from '$lib/view/chart/DefectCategorySelector.svelte';
 	import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
 	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
+	import { _ } from 'svelte-i18n';
 	import DefectDetails from './DefectDetails.svelte';
 	import Trailer from './Trailer.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	$: ({ noChartData } = defectStore);
-
 	appInit();
 
 	function onSearch(
@@ -55,6 +57,10 @@
 					</div>
 					<EntitySelector />
 				{/if}
+				<a href={ROUTE_NAMES.ADD_DATA} target="_blank"
+					><Button variant="primary">{$_('label.add_data')}</Button></a
+				>
+
 				{#if $noChartData}
 					<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
 						<Trailer />
@@ -73,7 +79,6 @@
 		</div>
 
 		<About />
-		<!-- <Button variant="secondary" on:click={nav.displayAddDataForm}>{$_('label.add_data')}</Button> -->
 	</div>
 </div>
 

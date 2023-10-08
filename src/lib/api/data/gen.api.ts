@@ -20,10 +20,10 @@ export const createGenAPI = (http: {
 	};
 };
 
-export interface IGenData extends Record<string, string> {
+export interface IGenData extends Record<string, string | number> {
 	Name: string;
 	Img: string;
 	Start: string;
 	Finish: string;
-	ModelID: string;
+	ModelID: number;
 }

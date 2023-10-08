@@ -9,7 +9,7 @@ const DEFAULT_STATE: IState = {
 };
 
 export const createGenlStore = (api: {
-	genGenNamesByModelID(modelID: string): Promise<Record<GenID, GenName>>;
+	genGenNamesByModelID(modelID: number): Promise<Record<GenID, GenName>>;
 	getGen(genID: GenID): Promise<IGenData>;
 	postGen(data: IGenData): Promise<string>;
 	patchGen(id: GenID, data: IGenData): Promise<void>;
@@ -20,7 +20,7 @@ export const createGenlStore = (api: {
 		state.update((s) => ({ ...s, ...values }));
 	};
 
-	const loadNames = (modelID: string) => {
+	const loadNames = (modelID: number) => {
 		api
 			.genGenNamesByModelID(modelID)
 			.then((data) => {
@@ -60,5 +60,5 @@ interface IState {
 	map: Record<GenID, GenName>;
 	error: Error | null;
 }
-type GenID = string;
+type GenID = number;
 type GenName = string;

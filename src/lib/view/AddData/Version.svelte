@@ -4,9 +4,9 @@
 	import { _ } from 'svelte-i18n';
 	import Input from '$lib/components/Input.svelte';
 
-	export let genID: string = '';
-	export let data: IVersionData = { Name: '', GenID: genID, TransID: '', EngineID: '' };
-	export let versionID: string = '';
+	export let genID: number = 0;
+	export let data: IVersionData = { Name: '', GenID: genID, TransID: 0, EngineID: 0 };
+	export let versionID: number = 0;
 
 	$: disabled = !genID;
 	$: {
@@ -17,15 +17,13 @@
 	}
 	$: ({ state } = versionStore);
 	$: ({ map, selected } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [number, string][]).sort(
-		(e1, e2) => e1[1].localeCompare(e2[1])
-	);
+	$: entries = Object.entries(map).sort((e1, e2) => e1[1].localeCompare(e2[1]));
 	$: suggestions = entries.filter(([_, name]) => name.includes(data.Name));
 
 	$: if (selected && data.Name !== selected.Name) {
 		selected = null;
-		data.TransID = '';
-		data.EngineID = '';
+		data.TransID = 0;
+		data.EngineID = 0;
 	}
 
 	function clear() {
@@ -39,7 +37,7 @@
 		versionStore.getData(id).then(() => {
 			data = { ...selected };
 		});
-		versionID = id;
+		versionID = Number(id);
 	}
 
 	// function update() {

@@ -20,9 +20,9 @@ export const createVersionAPI = (http: {
 	};
 };
 
-export interface IVersionData extends Record<string, string> {
+export interface IVersionData extends Record<string, string | number> {
 	Name: string;
-	GenID: string;
-	TransID: string;
-	EngineID: string;
+	GenID: number;
+	TransID: number;
+	EngineID: number;
 }

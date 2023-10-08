@@ -68,19 +68,19 @@ export interface IDefectDetails {
 }
 
 export type IDefect = {
-	AuthorID: string;
-	BrandID: string;
-	ModelID: string;
-	GenID: string;
-	VersionID: string;
-	CountryID: string;
-	CategoryID: string;
-	Age: string;
-	Year: string;
-	Cost: string;
-	Rating: string;
-	Mileage: string;
-	Freq: string;
+	AuthorID: number;
+	BrandID: number;
+	ModelID: number;
+	GenID: number;
+	VersionID: number;
+	CountryID: number;
+	CategoryID: number;
+	Age: number;
+	Year: number;
+	Cost: number;
+	Rating: number;
+	Mileage: number;
+	Freq: number;
 	Desc: string;
 	Locale: string;
 };

@@ -5,7 +5,7 @@
 	import { _ } from 'svelte-i18n';
 	import Input from '$lib/components/Input.svelte';
 
-	export let modelID: string = '';
+	export let modelID: number;
 	$: disabled = !modelID;
 	export let data: IGenData = {
 		Name: '',
@@ -14,7 +14,7 @@
 		Finish: '',
 		ModelID: modelID
 	};
-	export let genID: string = '';
+	export let genID: number;
 
 	$: {
 		if (modelID) {
@@ -26,9 +26,7 @@
 
 	$: ({ state } = genStore);
 	$: ({ map, selected } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [string, string][]).sort(
-		(e1, e2) => e1[1].localeCompare(e2[1])
-	);
+	$: entries = Object.entries(map).sort((e1, e2) => e1[1].localeCompare(e2[1]));
 	$: suggestions = entries.filter(([_, name]) => name.includes(data.Name));
 
 	$: if (selected && data.Name !== selected.Name) {
@@ -44,13 +42,13 @@
 			Finish: '',
 			ModelID: modelID
 		};
-		genID = '';
+		genID = 0;
 		selected = null;
 	}
 
 	function onSuggestionClick([id, name]: [string, string]) {
 		data.Name = name;
-		genID = id;
+		genID = Number(id);
 		genStore.getData(id).then(() => {
 			data = { ...data, ...selected };
 		});

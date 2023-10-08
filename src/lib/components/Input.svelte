@@ -7,8 +7,8 @@
 	export let type: string = 'text';
 	export let value: string | number = type.match(/^(number|range)$/) ? 0 : '';
 	export let label: string = '';
-	export let min: string = '0';
-	export let max: string = '10000';
+	export let min: number | undefined;
+	export let max: number | undefined;
 	export let placeholder: string = '';
 	export let suggestions: any[] = [];
 	export let hidden = false;

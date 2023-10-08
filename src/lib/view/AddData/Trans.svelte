@@ -37,9 +37,7 @@
 	$: !transID && clear();
 	$: ({ state } = transStore);
 	$: ({ map, selected } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [number, string][]).sort(
-		(e1, e2) => e1[1].localeCompare(e2[1])
-	);
+	$: entries = Object.entries(map).sort((e1, e2) => e1[1].localeCompare(e2[1]));
 	$: names = entries.filter(([_, name]) => name.includes(data.Name));
 	$: !data.Name && clear();
 

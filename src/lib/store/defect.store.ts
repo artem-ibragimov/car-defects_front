@@ -167,10 +167,11 @@ export const createDefectStore = (api: {
 					});
 					selectDetails(selected);
 					setState({ loadingDetails: false });
-				});
+				})
+				.catch(onerror);
 		},
 		postDefect(defect: IDefect) {
-			return api.postDefect(defect);
+			return api.postDefect(defect).catch(onerror);
 		}
 	};
 };

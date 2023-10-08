@@ -4,19 +4,17 @@
 	import Input from '$lib/components/Input.svelte';
 	import { brandsStore } from '../../store/main.store';
 
-	export let brandID: string;
+	export let brandID: number;
 	export let brandName = '';
 
 	$: ({ state } = brandsStore);
 	$: ({ map } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [string, string][]).sort(
-		(e1, e2) => e1[1].localeCompare(e2[1])
-	);
+	$: entries = Object.entries(map).sort((e1, e2) => e1[1].localeCompare(e2[1]));
 	$: suggestions = entries.filter(([_, name]) => name.includes(brandName));
 
-	function onSuggestionClick([id, name]: [string, string]) {
+	function onSuggestionClick([id, name]: [number, string]) {
 		brandName = name;
-		brandID = id;
+		brandID = Number(id);
 	}
 
 	onMount(brandsStore.loadNames);

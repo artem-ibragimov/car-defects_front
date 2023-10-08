@@ -9,12 +9,12 @@
 
 	export let data: ITransData = {
 		Name: '',
-		Acceleration: 0,
-		Consumtion: 0,
-		Gears: 0
+		Acceleration: '',
+		Consumtion: '',
+		Gears: ''
 	};
-	export let brandID: string = 0;
-	export let transID: string = 0;
+	export let brandID: string = '0';
+	export let transID: string = '0';
 
 	$: {
 		if (brandID) {
@@ -37,18 +37,16 @@
 	$: !transID && clear();
 	$: ({ state } = transStore);
 	$: ({ map, selected } = $state);
-	$: entries = (Object.entries(map).map(([k, v]) => [Number(k), v]) as [string, string][]).sort(
-		(e1, e2) => e1[1].localeCompare(e2[1])
-	);
+	$: entries = Object.entries(map).sort((e1, e2) => e1[1].localeCompare(e2[1]));
 	$: names = entries.filter(([_, name]) => name.includes(data.Name));
 	$: !data.Name && clear();
 
 	function clear() {
 		data = {
 			Name: '',
-			Acceleration: 0,
-			Consumtion: 0,
-			Gears: 0
+			Acceleration: '',
+			Consumtion: '',
+			Gears: ''
 		};
 	}
 

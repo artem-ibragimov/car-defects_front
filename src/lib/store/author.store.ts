@@ -2,11 +2,11 @@ import { LOAD_ERROR } from '$lib/api/error';
 import { writable } from 'svelte/store';
 
 const DEFAULT_STATE: IState = {
-	id: '0',
+	id: 0,
 	error: null
 };
 
-export const createAuthorStore = (api: { postAuthor(name: string): Promise<string> }) => {
+export const createAuthorStore = (api: { postAuthor(name: string): Promise<number> }) => {
 	const state = writable<IState>({ ...DEFAULT_STATE });
 
 	const setState = (values: Partial<IState>) => {
@@ -18,8 +18,8 @@ export const createAuthorStore = (api: { postAuthor(name: string): Promise<strin
 		postAuthor(name: string) {
 			return api
 				.postAuthor(name)
-				.then((data) => {
-					setState({ id: data });
+				.then((id) => {
+					setState({ id });
 				})
 				.catch((error) => {
 					console.error(error);
@@ -30,6 +30,6 @@ export const createAuthorStore = (api: { postAuthor(name: string): Promise<strin
 };
 
 interface IState {
-	id: string;
+	id: number;
 	error: Error | null;
 }

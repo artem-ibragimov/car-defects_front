@@ -6,10 +6,10 @@
 	import Selector from '$lib/components/Selector.svelte';
 
 	export let data: IDefect;
-	export let brandID: string = '';
-	export let modelID: string = '';
-	export let genID: string = '';
-	export let versionID: string = '';
+	export let brandID: number = 0;
+	export let modelID: number = 0;
+	export let genID: number = 0;
+	export let versionID: number = 0;
 
 	$: brandID && (data.BrandID = brandID);
 	$: modelID && (data.ModelID = modelID);
@@ -23,8 +23,10 @@
 		selected: false
 	}));
 
-	function onCategorySelect(cfg: Record<string, boolean> = {}) {
-		data.CategoryID = Number(Object.entries(cfg).find(([_, selected]) => selected)['']);
+	$: console.debug('variants', variants);
+
+	function onCategorySelect(cfg: Record<number, boolean> = {}) {
+		data.CategoryID = Number(Object.entries(cfg).find(([_, selected]) => selected)[0]);
 	}
 </script>
 
@@ -53,6 +55,7 @@
 			disabled={disabled || !data.Desc}
 			type="number"
 			bind:value={data.Year}
+			max={new Date().getFullYear()}
 			label={$_('label.defect.year')}
 		/>
 		<Input
@@ -71,6 +74,7 @@
 			disabled={disabled || !data.Desc}
 			type="number"
 			bind:value={data.Rating}
+			max="10"
 			label={$_('label.defect.rating')}
 		/>
 	</div>
