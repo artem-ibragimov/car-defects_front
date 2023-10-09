@@ -65,7 +65,7 @@
 
 	$: ({ state: authorState } = authorStore);
 	$: ({ id: AuthorID } = $authorState);
-	$: AuthorID && (defectData.AuthorID = AuthorID);
+	$: AuthorID && (defectData.AuthorID = AuthorID || 1);
 
 	$: ({ state: countryState } = countryStore);
 	$: ({ id: CountryID } = $countryState);
