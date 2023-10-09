@@ -127,8 +127,8 @@
 </script>
 
 <div class="pure-form">
-	<Header />
 	<div class="column">
+		<Header />
 		<Brand bind:brandID bind:brandName />
 		<Model bind:modelID {brandID} bind:modelName />
 		<Gen bind:data={genData} {modelID} bind:genID />
@@ -158,7 +158,7 @@
 		gap: 20px;
 	}
 	.column {
-		flex-basis: 500px;
+		flex-basis: 600px;
 		display: flex;
 		flex-direction: column;
 	}
