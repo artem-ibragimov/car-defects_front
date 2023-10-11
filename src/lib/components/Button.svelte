@@ -1,15 +1,27 @@
 <script lang="ts">
 	export let disabled = false;
 	export let stretch_desktop = false;
+	export let href: string;
 	export let variant: 'primary' | 'default' | 'success' | 'error' | 'warning' | 'secondary' =
 		'default';
 </script>
 
-<button {disabled} class={`pure-button pure-button-${variant}`} class:stretch_desktop on:click
-	><slot /></button
->
+<button {disabled} class={`pure-button pure-button-${variant}`} class:stretch_desktop on:click>
+	{#if href}
+		<a {href} target="_blank"><slot /> </a>
+	{/if}
+	{#if !href}
+		<slot />
+	{/if}
+</button>
 
 <style scoped>
+	a:hover {
+		text-decoration: none;
+	}
+	a:visited {
+		color: inherit;
+	}
 	.pure-button {
 		border-radius: 2px;
 		padding: 0.4em 2em;

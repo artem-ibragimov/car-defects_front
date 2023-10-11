@@ -15,10 +15,3 @@
 		needApplyButton
 	/>
 </div>
-
-<style scoped>
-	.DefectCategorySelector {
-		position: sticky;
-		top: 50px;
-	}
-</style>

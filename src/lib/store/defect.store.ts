@@ -53,8 +53,6 @@ export const createDefectStore = (api: {
 			});
 	});
 
-	const noChartData = derived([chartData], ([data]) => Object.keys(data).length === 0);
-
 	const selectedChartData = derived([chartData, filter.selector], ([d, f]) => {
 		return Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k]));
 	});
@@ -122,7 +120,6 @@ export const createDefectStore = (api: {
 		init() {
 			filter.init();
 		},
-		noChartData,
 		state,
 		selectedChartData,
 		filter,
@@ -134,6 +131,7 @@ export const createDefectStore = (api: {
 		clear() {
 			filter.entityParams.resetEntities();
 			chartData.set({});
+			selectedDetails.set({});
 		},
 		selectedDetails,
 		selectedDetailEntity,

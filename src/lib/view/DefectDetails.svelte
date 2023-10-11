@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Selector from '$lib/components/Selector.svelte';
 	import { defectStore } from '$lib/store/main.store';
+	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
 
 	let { entities } = defectStore.filter.entityParams;
@@ -11,9 +12,13 @@
 		selected: $selectedDetails[value]
 	}));
 
+	$: appendLabel = $_('label.load_details');
+
 	let { loadDetails, details } = defectStore;
 
-	function onDetailsSelect({ detail }) {
+	$: variants.length >= 1 && !$selectedDetailEntity && loadDetails({ [variants[0].value]: true });
+
+	function onDetailsSelect({ detail }: Record<string, boolean>) {
 		loadDetails(detail);
 	}
 </script>
@@ -50,18 +55,13 @@
 		{/if}
 	</div>
 	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntity}>
-		<Selector
-			column={!!$selectedDetailEntity}
-			{variants}
-			on:select={onDetailsSelect}
-			needApplyButton
-			appendLabel={$_('label.load_details')}
-		/>
+		<Selector column {variants} on:select={onDetailsSelect} needApplyButton {appendLabel} />
 	</div>
 </div>
 
 <style scoped>
 	.DefectDetails {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
@@ -74,9 +74,9 @@
 	}
 	.DefectDetails__content {
 		flex-grow: 5;
-		justify-content: space-around;
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: column;
 		align-items: stretch;
 		gap: 16px;
 		row-gap: 16px;
@@ -117,6 +117,7 @@
 	}
 
 	.DefectDetail {
+		flex: 1;
 		padding: 16px;
 		border: 1px solid #ccc;
 		border-radius: 8px;

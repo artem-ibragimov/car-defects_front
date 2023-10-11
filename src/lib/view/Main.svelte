@@ -16,7 +16,7 @@
 	import Trailer from './Trailer.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
-	$: ({ noChartData } = defectStore);
+	$: ({ noChartData } = defectStore.filter.entityParams);
 	appInit();
 
 	function onSearch(
@@ -46,37 +46,33 @@
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
-				{#if !$noChartData}
-					<div class="MainContainer_row MainContainer_space-between">
-						<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
-						<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
-						<!-- <LocaleSelector /> -->
-					</div>
-					<div class="MainContainer_grow">
-						<DefectsChart displayLegend={false} />
-					</div>
-					<EntitySelector />
-				{/if}
-				<a href={ROUTE_NAMES.ADD_DATA} target="_blank"
-					><Button variant="primary">{$_('label.add_data')}</Button></a
-				>
-
-				{#if $noChartData}
-					<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
-						<Trailer />
-					</div>
-				{/if}
-				<div class="MainContainer_row MainContainer_space-around MainContainer_mobile_column">
-					<ArticleLinks />
+				<div class="MainContainer_row MainContainer_space-between">
+					<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
+					<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
+					<!-- <LocaleSelector /> -->
 				</div>
-				<DefectDetails />
+				<div class="MainContainer_grow">
+					<DefectsChart displayLegend={false} />
+					{#if $noChartData}
+						<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
+							<Trailer />
+						</div>
+					{/if}
+				</div>
+				<EntitySelector />
+
+				<div class="MainContainer_row MainContainer_mobile_column">
+					<DefectDetails />
+				</div>
 			</div>
-			{#if !$noChartData}
+			<div>
 				<div class="MainContainer_sidebar">
 					<DefectCategorySelector />
+					<Button variant="primary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 				</div>
-			{/if}
+			</div>
 		</div>
+		<ArticleLinks />
 
 		<About />
 	</div>
@@ -127,5 +123,13 @@
 		.MainContainer_mobile_column-reverse {
 			flex-direction: column-reverse;
 		}
+	}
+	.MainContainer_sidebar {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		position: sticky;
+		gap: 16px;
+		top: 50px;
 	}
 </style>

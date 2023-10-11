@@ -20,6 +20,8 @@ export function createEntityParams() {
 	const entities = writable<Record<string, IEntity>>(JSON.parse(restore(ENTITY_HASH_KEY) || '{}'));
 	const selectedEntities = writable<Record<string, boolean>>({});
 
+	const noChartData = derived([entities], ([data]) => Object.keys(data).length === 0);
+
 	entities.subscribe((v) => {
 		selectedEntities.update((prev) =>
 			Object.fromEntries(Object.keys(v).map((k) => [k, prev[k] !== false]))
@@ -46,6 +48,7 @@ export function createEntityParams() {
 	}
 
 	return {
+		noChartData,
 		selectedEntities,
 		entities,
 		colors,

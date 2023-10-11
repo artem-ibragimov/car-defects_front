@@ -8,6 +8,7 @@
 
 	$: ({ state: defectState, filter, selectedChartData } = defectStore);
 	$: ({ loading } = $defectState);
+	$: ({ noChartData } = defectStore.filter.entityParams);
 
 	$: ({ params: selectedData } = filter.dataParams);
 	$: ({ by_age, by_mileage, norm, total } = $selectedData);
@@ -21,12 +22,14 @@
 	};
 </script>
 
-<BaseChart
-	{title}
-	data={$selectedChartData}
-	{axes}
-	{tooltip}
-	{loading}
-	{displayLegend}
-	{isFrameChart}
-/>
+{#if !$noChartData}
+	<BaseChart
+		{title}
+		data={$selectedChartData}
+		{axes}
+		{tooltip}
+		{loading}
+		{displayLegend}
+		{isFrameChart}
+	/>
+{/if}
