@@ -6,7 +6,9 @@ const DEFAULT_STATE: IState = {
 	brands: {},
 	models: {},
 	gens: {},
-	error: null
+	error: null,
+	warn: '',
+	lastRequest: ''
 };
 
 export const createSearchStore = (api: ISearchAPI) => {
@@ -16,7 +18,7 @@ export const createSearchStore = (api: ISearchAPI) => {
 	let query = '';
 
 	const setState = (values: Partial<IState>) => {
-		state.update((prev) => Object.assign(prev, DEFAULT_STATE, values));
+		state.update((prev) => Object.assign(DEFAULT_STATE, prev, values));
 	};
 
 	const search = () => {
@@ -24,6 +26,11 @@ export const createSearchStore = (api: ISearchAPI) => {
 			.search(transpile(query))
 			.then((data) => {
 				setState(data);
+				const noResults =
+					Object.keys(data.brands).length === 0 &&
+					Object.keys(data.models).length === 0 &&
+					Object.keys(data.gens).length === 0;
+				setState({ warn: noResults ? 'warn.NO_DATA' : '', lastRequest: query });
 			})
 			.catch((e: Error) => {
 				setState({ error: new Error(e.message) });
@@ -52,4 +59,6 @@ interface IState {
 	models: Record<string, string>;
 	gens: Record<string, string>;
 	error: Error | null;
+	warn: string;
+	lastRequest: string;
 }

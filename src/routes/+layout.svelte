@@ -1,10 +1,29 @@
 <script lang="ts">
 	import Notification from '$lib/components/Notification.svelte';
-	import { defectStore } from '$lib/store/main.store';
+	import { defectStore, searchStore } from '$lib/store/main.store';
 
-	$: ({ state } = defectStore);
-	$: ({ warn, error, lastRequest } = $state);
+	$: ({ state: defectState } = defectStore);
+	$: ({ warn: defectWarn, error: defectError, lastRequest: defectLastRequest } = $defectState);
 
+	$: ({ state: searchState } = searchStore);
+	$: ({ warn: searchWarn, error: searchError, lastRequest: searchLastRequest } = $searchState);
+	// TODO вынести в notification store
+	let warn: string, error: Error | null, lastRequest: string;
+	$: {
+		warn = '';
+		error = null;
+		lastRequest = '';
+		if (searchWarn || searchError) {
+			warn = searchWarn;
+			error = searchError;
+			lastRequest = searchLastRequest;
+		}
+		if (defectError || defectWarn) {
+			warn = defectWarn;
+			error = defectError;
+			lastRequest = defectLastRequest;
+		}
+	}
 	const title = 'Car-Defects - A Car Service Calls Statistics';
 	const description =
 		'Car-Defects.com - A Car Service Calls Statistics: Statistics of Defects by Age and Car Mileage';
