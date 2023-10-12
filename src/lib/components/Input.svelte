@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { createEventDispatcher, onDestroy, onMount } from 'svelte';
-	import { _ } from 'svelte-i18n';
+	import { createEventDispatcher, onMount } from 'svelte';
 
 	export let lower = false;
 	export let disabled = false;
@@ -12,7 +11,6 @@
 	export let placeholder: string = '';
 	export let suggestions: any[] = [];
 	export let hidden = false;
-	export let focused = false;
 	export let hideOnSuggestionClick = true;
 
 	let input_id = `input_${Math.random()}`;
@@ -28,7 +26,6 @@
 		isOpen = suggestions.length !== 0;
 	};
 	const hide = () => {
-		focused = false;
 		isOpen = false;
 	};
 	$: hidden && hide();
@@ -87,9 +84,6 @@
 			{placeholder}
 			{min}
 			{max}
-			on:blur={() => {
-				focused && input.focus();
-			}}
 			on:focus={() => {
 				!isOpen && Promise.resolve(setDropDownPosition()).then(show);
 			}}

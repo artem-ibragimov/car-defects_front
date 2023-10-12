@@ -68,7 +68,7 @@
 			<div>
 				<div class="MainContainer_sidebar">
 					<DefectCategorySelector />
-					<Button variant="primary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
+					<Button variant="secondary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 				</div>
 			</div>
 		</div>

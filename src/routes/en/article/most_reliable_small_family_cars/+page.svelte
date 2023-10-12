@@ -6,13 +6,8 @@
 	const title = 'Most reliable Small Family Cars (by Statistics)';
 	const cards = [
 		{
-			title: 'Honda Fit',
-			text: `According to recent statistics, the Honda Fit is one of the most reliable small family cars
-		available. The Honda Fit has consistently received high marks for its practicality, fuel
-		efficiency, and reliability. It has a spacious interior with room for five passengers, a
-		comfortable ride, and a low starting price of around $16,190. It’s also one of the most
-		fuel-efficient vehicles in its class, making it an excellent choice for families who want to
-		save money on gas.`
+			title: 'Honda Civic',
+			text: 'The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features'
 		},
 		{
 			title: 'Toyota Corolla',
@@ -51,13 +46,13 @@
 	<Charts
 		lg
 		title="Summary"
-		entity_params={`%7B"honda+fit"%3A%7B"modelID"%3A983%7D%2C"toyota+corolla"%3A%7B"modelID"%3A731%7D%2C"mazda+3"%3A%7B"modelID"%3A347%7D%2C"subaru+impreza"%3A%7B"modelID"%3A645%7D%7D`}
+		entity_params={`{"honda civic":{"modelID":"956"},"toyota corolla":{"modelID":731},"mazda 3":{"modelID":347},"subaru impreza":{"modelID":645}}`}
 	/>
 	<p>
 		In conclusion, there are several small family cars that are considered the most reliable by
 		statistics. Whether you’re looking for a practical, affordable, and reliable car, or one that’s
 		packed with advanced safety features, there’s a small family car that’s right for you. Whether
-		it’s the Honda Fit, Toyota Corolla, Mazda3, or the Subaru Impreza, these vehicles are sure to
+		it’s the Honda Civic, Toyota Corolla, Mazda3, or the Subaru Impreza, these vehicles are sure to
 		provide you and your family with years of reliable and enjoyable driving.
 	</p>
 </Article>

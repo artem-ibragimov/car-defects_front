@@ -17,7 +17,6 @@
 	export let suggestions: Item[] = [];
 
 	let hidden = false;
-	let focused = false;
 	let selectedSuggestion: Item;
 
 	$: selectedSuggestionLabel = selectedSuggestion
@@ -51,7 +50,6 @@
 	const onChange = () => {
 		value && dispatcher('change', value);
 		hidden = false;
-		focused = true;
 	};
 </script>
 
@@ -63,7 +61,6 @@
 		on:input={onChange}
 		{suggestions}
 		{hidden}
-		{focused}
 		hideOnSuggestionClick={false}
 		lower
 	>
