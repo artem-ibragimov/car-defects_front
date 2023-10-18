@@ -17,7 +17,11 @@
 	export let suggestions: Item[] = [];
 
 	let hidden = false;
-	let selectedSuggestion: Item;
+	let selectedSuggestion: Item | undefined;
+
+	$: if (suggestions.length === 0) {
+		selectedSuggestion = void 0;
+	}
 
 	$: selectedSuggestionLabel = selectedSuggestion
 		? selectedSuggestion.title.replace(
@@ -39,6 +43,7 @@
 		}
 		dispatcher('input', selectedSuggestion);
 		value = '';
+		selectedSuggestion = void 0;
 		hidden = true;
 	};
 	const onSuggestionClick = (item: Item) => {

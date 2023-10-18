@@ -46,7 +46,10 @@
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
-				<div class="MainContainer_row MainContainer_space-between">
+				<div
+					class="MainContainer_row MainContainer_space-between"
+					class:MainContainer_mobile_invisible={$noChartData}
+				>
 					<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
 					<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
 					<!-- <LocaleSelector /> -->
@@ -61,12 +64,18 @@
 				</div>
 				<EntitySelector />
 
-				<div class="MainContainer_row MainContainer_mobile_column">
+				<div
+					class="MainContainer_row MainContainer_mobile_column"
+					class:MainContainer_mobile_invisible={$noChartData}
+				>
 					<DefectDetails />
 				</div>
 			</div>
 			<div>
-				<div class="MainContainer_sidebar">
+				<div
+					class="MainContainer_sidebar MainContainer_mobile_column-reverse"
+					class:MainContainer_mobile_invisible={$noChartData}
+				>
 					<DefectCategorySelector />
 					<Button variant="secondary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 				</div>
@@ -116,14 +125,6 @@
 	.MainContainer_space-between {
 		justify-content: space-between;
 	}
-	@media (max-width: 500px) {
-		.MainContainer_mobile_column {
-			flex-direction: column;
-		}
-		.MainContainer_mobile_column-reverse {
-			flex-direction: column-reverse;
-		}
-	}
 	.MainContainer_sidebar {
 		display: flex;
 		flex-direction: column;
@@ -131,5 +132,16 @@
 		position: sticky;
 		gap: 16px;
 		top: 50px;
+	}
+	@media (max-width: 500px) {
+		.MainContainer_mobile_invisible {
+			display: none;
+		}
+		.MainContainer_mobile_column {
+			flex-direction: column;
+		}
+		.MainContainer_mobile_column-reverse {
+			flex-direction: column-reverse;
+		}
 	}
 </style>

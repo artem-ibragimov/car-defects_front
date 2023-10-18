@@ -9,7 +9,8 @@
 	// 		: 'https://www.youtube.com/embed/km0wsB0xBV4?controls=0';
 </script>
 
-<img width="755" src={`/assets/img/${$selected}/poster.webp`} alt="Poster" />
+<img class="Trailer" width="100%" src={`/assets/img/${$selected}/poster.webp`} alt="Poster" />
+
 <!-- <iframe
 	class="Trailer"
 	width="100%"
@@ -21,9 +22,13 @@
 	allowfullscreen
 /> -->
 
-<!-- <style scoped>
+<style scoped>
 	.Trailer {
-		max-width: 100%;
-		max-height: 100%;
+		display: none;
 	}
-</style> -->
+	@media screen and (min-width: 500px) {
+		.Trailer {
+			display: block;
+		}
+	}
+</style>

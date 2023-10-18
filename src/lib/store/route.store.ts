@@ -8,6 +8,6 @@ export const ROUTE_NAMES = {
 		japanese_top_selling_compact_suvs: '/article/japanese_top_selling_compact_suvs/',
 		most_reliable_honda_models: '/article/most_reliable_honda_models/',
 		honda_accord_vs_toyota_camry: '/article/honda_accord_vs_toyota_camry/',
-		audi_a4_last_3_generation: '/article/audi_a4_last_3_generation/',
+		audi_a4_last_3_generation: '/article/audi_a4_last_3_generation/'
 	}
 };

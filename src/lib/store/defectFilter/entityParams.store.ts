@@ -28,7 +28,7 @@ export function createEntityParams() {
 		);
 		const entities = JSON.stringify(v);
 		console.info(entities);
-		if (Object.keys(v).length!==0){
+		if (Object.keys(v).length !== 0) {
 			store(ENTITY_HASH_KEY, entities);
 		}
 	});

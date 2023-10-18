@@ -27,9 +27,9 @@
 	<p>
 		The potential buyers might be wondering: how reliable is this kind of transmission? There are
 		thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely
-		objective here the statistics of car service calls aren't pretty:
-		Compared with concurrents, Honda owners have problems with CVT two times more often than others
-		in the first three years of use.
+		objective here the statistics of car service calls aren't pretty: Compared with concurrents,
+		Honda owners have problems with CVT two times more often than others in the first three years of
+		use.
 	</p>
 	<p>
 		Of course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to
