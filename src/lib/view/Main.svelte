@@ -39,7 +39,7 @@
 </script>
 
 <div class="MainContainer">
-	<div class="MainContainer_column">
+	<div class="MainContainer_column MainContainer_content">
 		<Header />
 		<div class="MainContainer_row MainContainer_wrap">
 			<Search on:input={onSearch} />
@@ -89,9 +89,14 @@
 
 <style scoped>
 	.MainContainer {
+		padding: 0 8px;
 		height: 100%;
 		display: flex;
 		justify-content: center;
+	}
+
+	.MainContainer_content {
+		max-width: 100%;
 	}
 
 	.MainContainer_column {

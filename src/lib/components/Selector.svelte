@@ -72,38 +72,40 @@
 	};
 </script>
 
-<div class="pure-menu" class:pure-menu-horizontal={!column} {hidden}>
-	<ul class="pure-menu-list">
-		{#each variants as v}
-			<li
-				class="pure-menu-item"
-				class:pure-menu-disabled={disabled}
-				class:pure-menu-selected={v.selected && !v.color}
-				class:pure-menu-item-colorful={!!v.color}
-				style={`${v.selected && v.color ? 'border-color:' + v.color : ''}`}
-				on:click={disabled ? null : () => onclick(v.value)}
-			>
-				<span class="pure-menu-link">
-					{#if v.icon}
-						<img src={v.icon} alt={v.label || v.value} width="24" height="16" />
-					{:else}
-						{$_(v.label || v.value)}{/if}
-				</span>
-			</li>
-		{/each}
-		{#if needApplyButton && variants.length !== 0}
-			<Button
-				stretch_desktop={column}
-				variant={isApplied ? 'secondary' : 'success'}
-				on:click={() => apply()}
-				>{appendLabel ? appendLabel : isApplied ? $_('label.applied') : $_('label.apply')}
-			</Button>
-		{/if}
-		{#if needResetButton && variants.length !== 0}
-			<Button on:click={reset}>{$_('label.reset')}</Button>
-		{/if}
-	</ul>
-</div>
+{#if variants.length !== 0}
+	<div class="pure-menu" class:pure-menu-horizontal={!column} {hidden}>
+		<ul class="pure-menu-list">
+			{#each variants as v}
+				<li
+					class="pure-menu-item"
+					class:pure-menu-disabled={disabled}
+					class:pure-menu-selected={v.selected && !v.color}
+					class:pure-menu-item-colorful={!!v.color}
+					style={`${v.selected && v.color ? 'border-color:' + v.color : ''}`}
+					on:click={disabled ? null : () => onclick(v.value)}
+				>
+					<span class="pure-menu-link">
+						{#if v.icon}
+							<img src={v.icon} alt={v.label || v.value} width="24" height="16" />
+						{:else}
+							{$_(v.label || v.value)}{/if}
+					</span>
+				</li>
+			{/each}
+			{#if needApplyButton && variants.length !== 0}
+				<Button
+					stretch_desktop={column}
+					variant={isApplied ? 'secondary' : 'success'}
+					on:click={() => apply()}
+					>{appendLabel ? appendLabel : isApplied ? $_('label.applied') : $_('label.apply')}
+				</Button>
+			{/if}
+			{#if needResetButton && variants.length !== 0}
+				<Button on:click={reset}>{$_('label.reset')}</Button>
+			{/if}
+		</ul>
+	</div>
+{/if}
 
 <style scoped>
 	.pure-menu {

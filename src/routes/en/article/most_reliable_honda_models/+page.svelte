@@ -39,7 +39,7 @@
 	<Charts
 		lg
 		title="Summary"
-		entity_params={`{"honda civic":{"modelID":"956"},"honda accord":{"modelID":"903"},"honda cr-v":{"modelID":"944"},"honda civic":{"modelID":"956"},,"honda hr-v":{"modelID":"988"}}`}
+		entity_params={`{"honda civic":{"modelID":"956"},"honda accord":{"modelID":"903"},"honda cr-v":{"modelID":"944"},"honda civic":{"modelID":"956"},"honda hr-v":{"modelID":"988"}}`}
 	/>
 
 	<p>

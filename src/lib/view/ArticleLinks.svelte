@@ -29,7 +29,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 8px;
-		padding: 16px 0;
 		justify-content: center;
 	}
 </style>
