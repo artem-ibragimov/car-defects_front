@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from '$lib/article/Card.svelte';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import Cards from '$lib/article/Cards.svelte';
 	import { localeStore } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
@@ -8,16 +8,36 @@
 	$: ({ selected } = localeStore);
 	const pagePath = typeof location !== 'undefined' ? location.pathname : '';
 
-	$: cards = Object.entries(ROUTE_NAMES.ARTICLE).map(([name, path]) => ({
-		title: $_(`text.article.${name}.title`),
-		imgSrc: name,
-		href: `/${$selected}${path}`,
-		path
-	}));
+	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
+		.map(([name, path]) => ({
+			title: $_(`text.article.${name}.title`),
+			imgSrc: name,
+			href: `/${$selected}${path}`,
+			path
+		}))
+		.sort(() => Math.random() - 0.5);
 	$: if (pagePath) {
 		cards = cards.filter((card) => !pagePath.includes(card.path));
 	}
+
+	$: itemListElement = cards.map((c, i) => ({
+		'@type': 'ListItem',
+		position: i + 1,
+		name: c.title,
+		item: `${PUBLIC_ORIGIN}${c.href}`,
+		image: `${PUBLIC_ORIGIN}${c.imgSrc}`
+	}));
+
+	$: schema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement
+	});
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json"> ${schema} </script>`}
+</svelte:head>
 
 <div class="ArticleLinks">
 	<Cards {cards} />

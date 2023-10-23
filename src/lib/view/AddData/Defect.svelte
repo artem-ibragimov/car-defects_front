@@ -23,8 +23,6 @@
 		selected: false
 	}));
 
-	$: console.debug('variants', variants);
-
 	function onCategorySelect(cfg: Record<number, boolean> = {}) {
 		data.CategoryID = Number(Object.entries(cfg).find(([_, selected]) => selected)[0]);
 	}

@@ -6,8 +6,8 @@
 </script>
 
 <div class="Card" class:Card__text={!!text}>
-	<a class="Card__a" {href} target="_blank">
-		<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} />
+	<a class="Card__a" {href}>
+		<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} {title} />
 		<div class="Card__content">
 			<h4>{title}</h4>
 			{#if text}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 	import Logo from '$lib/view/Logo.svelte';
@@ -6,6 +7,17 @@
 	export let title: string;
 	export let cards: { title: string }[] = [];
 
+	const date = new Date().toISOString();
+
+	$: images = cards.map((c) => `${PUBLIC_ORIGIN}/assets/img/${c.title}.webp`);
+	$: schema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'NewsArticle',
+		headline: title,
+		images,
+		datePublished: date,
+		dateModified: date
+	});
 	$: description = `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
 	$: keywords = `car,defects,${cards.map((c) => c.title).join(',')}`;
 </script>
@@ -19,16 +31,18 @@
 	<meta name="description" content={description} />
 	<meta property="og:description" content={description} />
 	<meta name="keywords" content={keywords} />
+
+	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>
 
-<div class="Article">
+<article class="Article">
 	<Logo on:click={() => window.location.assign(ROUTE_NAMES.MAIN)} />
-	<h2>{title}</h2>
+	<h1>{title}</h1>
 
 	<slot />
 
 	<ArticleLinks />
-</div>
+</article>
 
 <style scoped>
 	.Article {
