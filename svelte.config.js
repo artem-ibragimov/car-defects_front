@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { sitemapWrapAdapter } from 'sveltekit-static-sitemap';
+
 import { readFileSync } from 'fs';
 const loadJSON = (path) => JSON.parse(readFileSync(path));
 
@@ -8,8 +10,8 @@ export const ARTICLES = Object.keys(en.text.article);
 export const AVAILABLE_LOCALES = ['en', 'ru'];
 
 const entries = AVAILABLE_LOCALES.map((locale) =>
-	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`))
-	.reduce((acc, cur) => acc.concat(cur));
+	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
+).reduce((acc, cur) => acc.concat(cur));
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -19,21 +21,36 @@ const config = {
 
 	kit: {
 		prerender: {
+			concurrency: 1,
+			crawl: false,
+			handleHttpError: (details) => {
+				console.warn(details);
+			},
+			origin: 'https://car-defects.com',
 			handleMissingId: (details) => {
 				console.warn(details);
 			},
-			entries: ['*', ...entries,],
+			entries: ['/add_data', ...entries],
 			handleEntryGeneratorMismatch: (details) => {
 				console.warn(details);
-			},
+			}
 		},
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			// fallback: 'index.html',
-			precompress: false,
-			strict: true
-		}),
+		adapter: sitemapWrapAdapter(
+			adapter({
+				pages: 'build',
+				assets: 'build',
+				fallback: 'index.html',
+				precompress: false,
+				strict: true
+			}),
+			{
+				defaults: {
+					changefreq: 'weekly',
+					lastmod: new Date().toISOString(),
+					priority: 0.8
+				}
+			}
+		),
 		alias: {
 			$lib: 'src/lib'
 		}

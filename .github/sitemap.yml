@@ -2,7 +2,7 @@ name: Ping Google about updated sitemap
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   ping:

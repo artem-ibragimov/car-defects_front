@@ -12,7 +12,7 @@
 		.map(([name, path]) => ({
 			title: $_(`text.article.${name}.title`),
 			imgSrc: name,
-			href: `/${$selected}${path}`,
+			href: `/articles/${$selected}${path}`,
 			path
 		}))
 		.sort(() => Math.random() - 0.5);

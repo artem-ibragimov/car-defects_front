@@ -21,4 +21,3 @@
 </script>
 
 <Article {title} {name} content={$_(`${i18nPath}.text`)} {i18nPath} />
-

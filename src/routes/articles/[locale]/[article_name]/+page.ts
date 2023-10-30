@@ -4,5 +4,5 @@ export const ssr = true;
 export const trailingSlash = 'always';
 
 export const load: PageLoad = (e) => {
-   return e.params;
+	return e.params;
 };
