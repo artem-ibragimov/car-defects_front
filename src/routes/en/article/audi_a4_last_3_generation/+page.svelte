@@ -1,7 +1,6 @@
 <script>
 	import Article from '$lib/article/Article.svelte';
 	import Charts from '$lib/article/Charts.svelte';
-	import Cards from '$lib/article/Cards.svelte';
 
 	const title = 'Reliability of the Audi A4 over the last 3 generations';
 </script>

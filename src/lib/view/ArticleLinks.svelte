@@ -25,7 +25,7 @@
 		position: i + 1,
 		name: c.title,
 		item: `${PUBLIC_ORIGIN}${c.href}`,
-		image: `${PUBLIC_ORIGIN}${c.imgSrc}`
+		image: `${PUBLIC_ORIGIN}${c.imgSrc}.webp`
 	}));
 
 	$: schema = JSON.stringify({

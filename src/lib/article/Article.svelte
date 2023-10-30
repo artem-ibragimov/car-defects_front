@@ -10,16 +10,20 @@
 	const date = new Date().toISOString();
 
 	$: images = cards.map((c) => `${PUBLIC_ORIGIN}/assets/img/${c.title}.webp`);
-	$: schema = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'NewsArticle',
-		headline: title,
-		images,
-		datePublished: date,
-		dateModified: date
-	});
 	$: description = `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
 	$: keywords = `car,defects,${cards.map((c) => c.title).join(',')}`;
+	$: schema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'BlogPosting',
+		headline: title,
+		// image: `${PUBLIC_ORIGIN}${location.pathname.split('/').pop()}.webp`,
+		images,
+		datePublished: date,
+		dateModified: date,
+		articleBody: description,
+		about: description
+	});
+	
 </script>
 
 <svelte:head>

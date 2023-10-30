@@ -7,6 +7,7 @@ export const DICTIONARIES = {
 	ru: flatten<ILocale, ILocale>(ru)
 };
 
+export const ARTICLES = Object.keys(en.text.article);
 export const AVAILABLE_LOCALES = Object.keys(DICTIONARIES);
 
 type ILocale = Record<string, object>;
