@@ -4,11 +4,18 @@
 	export let cards: { title: string; text?: string; imgSrc?: string; href?: string }[] = [];
 </script>
 
-<div class="Cards">
-	{#each cards as card}
-		<Card title={card.title} imgSrc={card.imgSrc || card.title} href={card.href} text={card.text} />
-	{/each}
-</div>
+{#if cards.length > 0}
+	<div class="Cards">
+		{#each cards as card}
+			<Card
+				title={card.title}
+				imgSrc={card.imgSrc || card.title}
+				href={card.href}
+				text={card.text}
+			/>
+		{/each}
+	</div>
+{/if}
 
 <style scoped>
 	.Cards {
