@@ -30,7 +30,7 @@
 		images,
 		datePublished: date,
 		dateModified: date,
-		articleBody: description,
+		articleBody: content,
 		about: description
 	});
 </script>
