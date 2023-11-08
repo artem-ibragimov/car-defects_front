@@ -154,7 +154,6 @@ export const createDefectStore = (api: {
 					categories: filter.categoryParams.getCategories()
 				})
 				.then((res) => {
-					console.warn(res);
 					detailsLoadOffset.update((prev) => prev + DETAILS_LIMIT);
 					details.update((prev) => {
 						if (!prev[entityName]) {

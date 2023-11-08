@@ -11,7 +11,9 @@
 	$: ({ noChartData } = defectStore.filter.entityParams);
 
 	$: ({ params: selectedData } = filter.dataParams);
-	$: ({ by_age, by_mileage, norm, total } = $selectedData);
+	$: ({ by_age, by_mileage, norm, total } = isFrameChart
+		? filter.dataParams.getDataParams()
+		: $selectedData);
 	$: type = (by_age && 'by_age') || (by_mileage && 'by_mileage');
 	$: normal = (norm && 'norm') || (total && 'total');
 	$: tooltip = $_(`label.chart.${type}.${normal}.tooltip`);

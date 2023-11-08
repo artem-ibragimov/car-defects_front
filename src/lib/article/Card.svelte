@@ -5,13 +5,13 @@
 	export let href: string | undefined;
 </script>
 
-<div class="Card" class:Card__text={!!text}>
+<div class="Card" class:Card__text={!!text} class:Card-href={href}>
 	<a class="Card__a" {href}>
 		<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} {title} />
 		<div class="Card__content">
 			<h4>{title}</h4>
 			{#if text}
-				<p>{text}</p>
+				<span> {text}</span>
 			{/if}
 		</div>
 	</a>
@@ -19,16 +19,20 @@
 
 <style scoped>
 	.Card {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		flex: 1 1 30%;
+		flex: 1 1 45%;
 		min-width: 200px;
 		max-width: 450px;
 		border-radius: 8px;
-		box-shadow: none;
-		border: 1px solid #ccc;
+		box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+		/* border: 1px solid black; */
 		transition: all 0.4s ease-in-out;
+	}
+	.Card-href {
+		cursor: pointer;
 	}
 	.Card__text {
 		flex: 1 1 45%;
@@ -40,6 +44,8 @@
 	.Card__a {
 		text-decoration: none;
 		color: inherit;
+		display: flex;
+		flex-direction: column;
 	}
 	.Card__banner {
 		object-fit: cover;

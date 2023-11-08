@@ -21,7 +21,7 @@
 	$: description = `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
 	$: keywords = `car,defects,${cards.map((c) => c.title).join(',')}`;
 	$: cards = JSON.parse($_(`${i18nPath}.cards`));
-	$: entity_params = $_(`${i18nPath}.entity_params`);
+	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
@@ -54,8 +54,7 @@
 	<h1>{title}</h1>
 	<Cards {cards} />
 	<Content data={content} />
-	<Charts lg {title} {entity_params} />
-
+	<Charts lg {title} {url} />
 	<ArticleLinks />
 </article>
 

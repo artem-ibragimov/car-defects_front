@@ -15,6 +15,7 @@ export const createDefectFilterStore = (
 	const selector = derived(
 		[entityParams.selectedEntities, dataParams.params, categoryParams.categories],
 		([selectedEntities, selectedData, categories]) => {
+			console.info(location.hash)
 			return {
 				selectedEntities,
 				selectedData,

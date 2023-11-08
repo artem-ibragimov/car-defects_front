@@ -7,11 +7,5 @@
 </script>
 
 <div class="DefectCategorySelector">
-	<Selector
-		column
-		multiselect
-		{variants}
-		on:select={({ detail }) => setCategories(detail)}
-		needApplyButton
-	/>
+	<Selector column multiselect {variants} on:select={({ detail }) => setCategories(detail)} />
 </div>
