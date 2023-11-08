@@ -5,7 +5,7 @@ import { createDataParams } from './dataParams.store';
 import { createEntityParams } from './entityParams.store';
 
 export const createDefectFilterStore = (
-	api: { getDefectsCategories(): Promise<IDefectData> },
+	api: { getDefectsCategories(): Promise<IDefectData>; },
 	onerror: () => void
 ) => {
 	const entityParams = createEntityParams();
@@ -15,7 +15,7 @@ export const createDefectFilterStore = (
 	const selector = derived(
 		[entityParams.selectedEntities, dataParams.params, categoryParams.categories],
 		([selectedEntities, selectedData, categories]) => {
-			console.info(location.hash)
+			typeof location !== 'undefined' && console.info(location.hash);
 			return {
 				selectedEntities,
 				selectedData,
