@@ -13,7 +13,6 @@ export const AVAILABLE_LOCALES = ['en', 'ru'];
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 ).reduce((acc, cur) => acc.concat(cur));
-console.log('entries', entries)
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors

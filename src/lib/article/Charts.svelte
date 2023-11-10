@@ -5,7 +5,7 @@
 	import ChartFrame from './ChartFrame.svelte';
 
 	export let title: string;
-	export let url:string
+	export let url: string;
 	export let lg = false;
 
 	const src = `${ROUTE_NAMES.CHART_ONLY}${url}`;
