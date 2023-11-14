@@ -5,12 +5,24 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "Generator",
+			"program": "${workspaceFolder}/generator",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"type": "node",
+			"console": "integratedTerminal"
+		},
+		{
 			"name": "Chrome",
 			"request": "launch",
 			"type": "chrome",
 			"url": "http://localhost:5173/",
 			"webRoot": "${workspaceFolder}",
-			"runtimeArgs": ["--disable-web-security"]
+			"runtimeArgs": [
+				"--disable-web-security"
+			]
 		}
 	]
 }
