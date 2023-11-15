@@ -6,7 +6,6 @@
 	import { _ } from 'svelte-i18n';
 
 	$: ({ selected } = localeStore);
-	$: console.log('selected',$selected)
 	const pagePath = typeof location !== 'undefined' ? location.pathname : '';
 
 	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
