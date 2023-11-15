@@ -9,7 +9,7 @@
 	<a class="Card__a" {href}>
 		<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} {title} />
 		<div class="Card__content">
-			<h4>{title}</h4>
+			<h4 class="Card__title">{title}</h4>
 			{#if text}
 				<span> {text}</span>
 			{/if}
@@ -56,5 +56,8 @@
 
 	.Card__content {
 		padding: 16px;
+	}
+	.Card__title {
+		text-transform: capitalize;
 	}
 </style>

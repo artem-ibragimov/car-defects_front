@@ -8,9 +8,7 @@
 			"name": "Generator",
 			"program": "${workspaceFolder}/generator",
 			"request": "launch",
-			"skipFiles": [
-				"<node_internals>/**"
-			],
+			"skipFiles": ["<node_internals>/**"],
 			"type": "node",
 			"console": "integratedTerminal"
 		},
@@ -20,9 +18,7 @@
 			"type": "chrome",
 			"url": "http://localhost:5173/",
 			"webRoot": "${workspaceFolder}",
-			"runtimeArgs": [
-				"--disable-web-security"
-			]
+			"runtimeArgs": ["--disable-web-security"]
 		}
 	]
 }

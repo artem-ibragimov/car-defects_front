@@ -5,7 +5,12 @@
 
 <div class="Content">
 	{#each content as p}
-		<p>{p}</p>
+		{#if p.length < 100}
+			<h3>{p}</h3>
+		{/if}
+		{#if p.length > 100}
+			<p>{p}</p>
+		{/if}
 	{/each}
 </div>
 

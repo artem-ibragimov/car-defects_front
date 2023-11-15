@@ -9,6 +9,7 @@
 
 	export let data: PageData;
 	localeStore.select(data.locale);
+	console.log('data.locale', data.locale)
 
 	export const entries: EntryGenerator = () =>
 		AVAILABLE_LOCALES.map((locale) =>

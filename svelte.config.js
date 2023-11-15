@@ -7,11 +7,13 @@ const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/en.json');
 export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en', 'ru'];
+export const AVAILABLE_LOCALES = ['de', 'en', 'es', 'fr', 'jp', 'pt', 'ru', 'zh'];
 
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 ).reduce((acc, cur) => acc.concat(cur));
+
+// console.log(entries)
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
