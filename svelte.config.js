@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import { sitemapWrapAdapter } from 'sveltekit-static-sitemap';
 
 import { readFileSync } from 'fs';
 const loadJSON = (path) => JSON.parse(readFileSync(path));
@@ -13,7 +12,7 @@ const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 ).reduce((acc, cur) => acc.concat(cur));
 
-// console.log(entries)
+console.log(entries);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
@@ -36,22 +35,13 @@ const config = {
 				console.warn(details);
 			}
 		},
-		adapter: sitemapWrapAdapter(
-			adapter({
-				pages: 'build',
-				assets: 'build',
-				fallback: 'index.html',
-				precompress: false,
-				strict: true
-			}),
-			{
-				defaults: {
-					changefreq: 'always',
-					lastmod: new Date().toISOString(),
-					priority: 0.9
-				}
-			}
-		),
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: 'index.html',
+			precompress: false,
+			strict: true
+		}),
 		alias: {
 			$lib: 'src/lib'
 		}

@@ -44,14 +44,14 @@ function generate(url) {
 		imgs.push(poster);
 	}
 	const queries = Object.entries({
-		'en': `Write an article for the website: Reliability Comparison of ${query} based on statistics.`,
-		'ru': `Напиши статью для сайта: Сравнение надежности ${query} на основе статистики.`,
-		'de': `Schreiben Sie einen Artikel für die Website: Zuverlässigkeit Vergleich von ${query} anhand von Statistiken.`,
-		'es': `Escribe un artículo para el sitio web: Fiabilidad Comparación de ${query} basada en estadísticas.`,
-		'fr': `Rédigez un article pour le site web : Comparaison de la fiabilité de ${query} sur la base de statistiques.`,
-		'pt': `Escrever um artigo para o sítio Web: Comparação da fiabilidade de ${query} com base em estatísticas.`,
-		'jp': `ウェブサイトに記事を書く 統計に基づく${query} の信頼性比較。`,
-		'zh': `为网站撰写一篇文章： 根据统计数据比较 ${query} 的可靠性。`
+		en: `Write an article for the website: Reliability Comparison of ${query} based on statistics.`,
+		ru: `Напиши статью для сайта: Сравнение надежности ${query} на основе статистики.`,
+		de: `Schreiben Sie einen Artikel für die Website: Zuverlässigkeit Vergleich von ${query} anhand von Statistiken.`,
+		es: `Escribe un artículo para el sitio web: Fiabilidad Comparación de ${query} basada en estadísticas.`,
+		fr: `Rédigez un article pour le site web : Comparaison de la fiabilité de ${query} sur la base de statistiques.`,
+		pt: `Escrever um artigo para o sítio Web: Comparação da fiabilidade de ${query} com base em estatísticas.`,
+		jp: `ウェブサイトに記事を書く 統計に基づく${query} の信頼性比較。`,
+		zh: `为网站撰写一篇文章： 根据统计数据比较 ${query} 的可靠性。`
 	});
 	warn(`Need images:\n ${imgs.join('\n')}`);
 	// info(`Wait for ChatGPT images generation: ${imgs}`);

@@ -13,6 +13,14 @@
 			"console": "integratedTerminal"
 		},
 		{
+			"name": "Generate Sitemap",
+			"program": "${workspaceFolder}/sitemap",
+			"request": "launch",
+			"skipFiles": ["<node_internals>/**"],
+			"type": "node",
+			"console": "integratedTerminal"
+		},
+		{
 			"name": "Chrome",
 			"request": "launch",
 			"type": "chrome",
