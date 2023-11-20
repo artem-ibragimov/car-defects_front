@@ -32,41 +32,40 @@ function createSiteMap(dir, options) {
 	);
 	writeFileSync(
 		path.resolve(dir, 'sitemap.xml'),
-		`
-	<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-	xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-	xmlns:xhtml="https://www.w3.org/1999/xhtml"
->
- ${non_articles_paths
-		.map(
-			(p) =>
-				`<url>
-	<loc>${options.origin}${p}</loc>
-	<lastmod>${options.lastmod}</lastmod>
-	<changefreq>${options.changefreq}</changefreq>
-	<priority>${options.priority}</priority>
-</url>`
-		)
-		.join('\n')}
+		`<?xml version="1.0" encoding="UTF-8"?>
+	<urlset
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+		http://www.w3.org/1999/xhtml http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
+		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"   
+	>
+${non_articles_paths
+			.map((p) => `	\t<url>
+		\t<loc>${options.origin}${p}</loc>
+		\t<lastmod>${options.lastmod}</lastmod>
+		\t<changefreq>${options.changefreq}</changefreq>
+		\t<priority>${options.priority}</priority>
+	\t</url>`)
+			.join('\n')}
 	${articles_paths
-		.map(
-			(locales) =>
-				`<url>
-	<loc>${options.origin}${locales.find(([lang, _]) => lang === 'en')[1]}</loc>
-	<lastmod>${options.lastmod}</lastmod>
-	<changefreq>${options.changefreq}</changefreq>
-	<priority>${options.priority}</priority>
-	${locales
-		.map(
-			([lang, path]) =>
-				`<xhtml:link rel="alternate" hreflang="${lang}" href="${options.origin}${path}"/>`
-		)
-		.join('\n')}
-</url>`
-		)
-		.join('\n')}
-	</urlset>`
+			.map(
+				(locales) =>
+					`\t<url>
+	\t<loc>${options.origin}${locales.find(([lang, _]) => lang === 'en')[1]}</loc>
+	\t<lastmod>${options.lastmod}</lastmod>
+	\t<changefreq>${options.changefreq}</changefreq>
+	\t<priority>${options.priority}</priority>
+${locales
+						.map(
+							([lang, path]) =>
+								`	\t<xhtml:link rel="alternate" hreflang="${lang}" href="${options.origin}${path}"/>`
+						)
+						.join('\n')}
+	</url>`
+			)
+			.join('\n')}
+</urlset>`
 	);
 }
 
