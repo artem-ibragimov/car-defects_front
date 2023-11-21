@@ -16,7 +16,6 @@
 
 	const date = new Date().toISOString();
 
-	$: images = cards.map((c) => `${PUBLIC_ORIGIN}/assets/img/${c.title}.webp`);
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.webp`;
 	$: description = `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
 	$: keywords = `car,defects,${cards.map((c) => c.title).join(',')}`;
@@ -27,7 +26,6 @@
 		'@type': 'BlogPosting',
 		headline: title,
 		image: poster,
-		images,
 		datePublished: date,
 		dateModified: date,
 		articleBody: content,

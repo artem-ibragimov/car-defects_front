@@ -43,7 +43,7 @@
 		flex-direction: column;
 		gap: 16px;
 		row-gap: 16px;
-		justify-content: space-between;
+		justify-content: space-around;
 		padding: 16px 0;
 	}
 

@@ -7,7 +7,7 @@
 
 <div class="Card" class:Card__text={!!text} class:Card-href={href}>
 	<a class="Card__a" {href}>
-		<img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} alt={title} {title} />
+		<amp-img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} height="220" layout="fixed-height" alt={title} {title}  />
 		<div class="Card__content">
 			<h4 class="Card__title">{title}</h4>
 			{#if text}
@@ -23,13 +23,17 @@
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		flex: 1 1 45%;
 		min-width: 200px;
-		max-width: 450px;
+		max-width: 400px;
 		border-radius: 8px;
 		box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 		/* border: 1px solid black; */
 		transition: all 0.4s ease-in-out;
+	}
+	@media screen and (min-width: 500px) {
+		.Card {
+			flex: 1 400px;
+		}
 	}
 	.Card-href {
 		cursor: pointer;
