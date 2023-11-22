@@ -3,11 +3,20 @@
 	export let text: string = '';
 	export let imgSrc: string = '';
 	export let href: string | undefined;
+	const widths = [320, 480, 640, 720, 1280, 1600];
+	$: srcset = imgSrc ? widths.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
 <div class="Card" class:Card__text={!!text} class:Card-href={href}>
 	<a class="Card__a" {href}>
-		<amp-img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} width="400" height="220" layout="fixed" alt={title} {title}  />
+		<img
+			class="Card__banner"
+			src={`/assets/img/${imgSrc}.webp`}
+			alt={title}
+			{title}
+			{srcset}
+			sizes="400px"
+		/>
 		<div class="Card__content">
 			<h4 class="Card__title">{title}</h4>
 			{#if text}

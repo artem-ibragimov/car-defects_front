@@ -13,8 +13,8 @@
 			"console": "integratedTerminal"
 		},
 		{
-			"name": "Generate Sitemap",
-			"program": "${workspaceFolder}/sitemap",
+			"name": "Resize Images",
+			"program": "${workspaceFolder}/resize_images",
 			"request": "launch",
 			"skipFiles": ["<node_internals>/**"],
 			"type": "node",

@@ -106,40 +106,40 @@ readline.question('Enter car defects URL: ', (url) => {
 	generate(url);
 });
 
-function generateImg(name) {
-	return openai.images
-		.generate({
-			model: 'dall-e-3',
-			prompt: `${name.replaceAll('_', ' ')}, realistic, high-quality photos, UHD`,
-			quality: 'hd',
-			style: 'natural',
-			n: 1,
-			size: `1792x1024`
-		})
-		.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.webp`))
-		.then(() => {
-			info(`ChatGPT has generated the ${name} image`);
-		})
-		.catch(error);
-}
+// function generateImg(name) {
+// 	return openai.images
+// 		.generate({
+// 			model: 'dall-e-3',
+// 			prompt: `${name.replaceAll('_', ' ')}, realistic, high-quality photos, UHD`,
+// 			quality: 'hd',
+// 			style: 'natural',
+// 			n: 1,
+// 			size: `1792x1024`
+// 		})
+// 		.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.webp`))
+// 		.then(() => {
+// 			info(`ChatGPT has generated the ${name} image`);
+// 		})
+// 		.catch(error);
+// }
 
-function downloadImage(url, filename) {
-	return new Promise((resolve, reject) => {
-		get(url, (res) => {
-			res
-				.pipe(createWriteStream(filename))
-				.on('error', reject)
-				.once('close', () => resolve(filename));
-		});
-	});
-}
+// function downloadImage(url, filename) {
+// 	return new Promise((resolve, reject) => {
+// 		get(url, (res) => {
+// 			res
+// 				.pipe(createWriteStream(filename))
+// 				.on('error', reject)
+// 				.once('close', () => resolve(filename));
+// 		});
+// 	});
+// }
 
 function generateArticle(locale, query, content, poster, url, cards) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-4',
 			messages: [{ role: 'user', content }],
-			temperature: 0,
+			temperature: 1,
 			max_tokens: 7500
 		})
 		.then((v) => {
