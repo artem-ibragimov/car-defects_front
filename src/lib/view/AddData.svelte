@@ -126,6 +126,10 @@
 	}
 </script>
 
+<svelte:head>
+	<script src="https://accounts.google.com/gsi/client" defer></script>
+</svelte:head>
+
 <div class="pure-form">
 	<div class="column">
 		<Header />
