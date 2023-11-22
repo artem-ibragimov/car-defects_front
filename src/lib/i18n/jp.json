@@ -1,159 +1,159 @@
 {
-	"error": {
-		"LOAD_ERROR": "Load error"
-	},
-	"warn": {
-		"NO_DATA": "We are sorry, but we do not have enougth data for "
-	},
-	"defect_category": {
-		"safety": "Safety",
-		"electronics": "Electronics",
-		"light": "Light",
-		"transmission": "transmission",
-		"other": "Other",
-		"equipment": "Equipment",
-		"engine": "Engine",
-		"brake": "Brake",
-		"suspension": "Suspension"
-	},
-	"label": {
-		"tips": {
-			"norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
-			"search": "Search over 4 million crashes",
-			"age_mileage": "Compare defects by age or mileage",
-			"category": "Select specific defect category"
-		},
-		"detail": {
-			"age": "Defect age",
-			"mileage": "Mileage"
-		},
-		"defect": {
-			"header": "Defect Description",
-			"description": "Please, provide defect details",
-			"cost": "Repair Cost, $",
-			"year": "Year, when defect occured",
-			"age": "Car Age, when defect occured",
-			"mileage": "Car Mileage, when defect occured",
-			"rating": "Rating: how serious is the defect?"
-		},
-		"cancel": "Cancel",
-		"main_header": "A Car Service Calls Statistics",
-		"norm": "Normalized",
-		"total": "total",
-		"by_age": "by Age",
-		"by_mileage": "by Mileage",
-		"chart": {
-			"by_age": {
-				"total": {
-					"title": "All Defects by Age",
-					"tooltip": "total defects"
-				},
-				"norm": {
-					"title": "Defects by Age Normalized",
-					"tooltip": "Average defects per 10,000 sales"
-				},
-				"y": "Number of Defects",
-				"x": "Age of Defect"
-			},
-			"by_mileage": {
-				"total": {
-					"title": "All Defects by Mileage",
-					"tooltip": "total defects"
-				},
-				"norm": {
-					"title": "Defects by Mileage Normalized",
-					"tooltip": "Average defects per 10,000 sales"
-				},
-				"y": "Number of Defects",
-				"x": "Car Mileage"
-			}
-		},
-		"add_data": "Add Data",
-		"update": "Update",
-		"load_details": "Load more details",
-		"apply": "Apply",
-		"applied": "Applied",
-		"reset": "Reset",
-		"post": "Post",
-		"posted": "Posted!",
-		"more": "More",
-		"search_by": "Search for defects by ",
-		"model": "Model",
-		"brand": "Brand",
-		"gen": "Generation",
-		"gen_start": "Release start",
-		"gen_finish": "Release end",
-		"version": "Version",
-		"engine": {
-			"name": "Engine",
-			"displacement": "Displacement",
-			"cylinders": "Cylinders",
-			"valves": "Valves",
-			"fuel_type": "Fuel type",
-			"power_hp": "Power (hp)",
-			"torque": "torque"
-		},
-		"trans": {
-			"name": "transmission",
-			"acceleration": "Acceleration",
-			"consumtion": "Consumtion",
-			"gears": "Gears"
-		}
-	},
-	"text": {
-		"about": {
-			"header": "About this site",
-			"text": "If you have ever chosen a car for yourself, you have probably watched a lot of car reviews, where bloggers of different competence told you about the pros and cons of every car and recommended what to buy. The problem is that all of these reviews are subjective, and if you are a rational mature person, and reliability of a car in the long term is important for you, you may be interested in analysis of call statistics service.\n\nThere are awesome sites such as carcomplaints.com, carproblemzoo.com, nhtsa.gov, where people describe problems encountered during the period of their car exploitation. But unfortunately there are no charts on these sites, so you can't visually compare different models and figure out which is more problematic.\n\nthat's why I’ve created my own website car-defects.com, collecting all the information from these useful resources and presenting it as graphs. Here you can compare car models, model generations and versions, visualize by age or mileage, and, for objectivity, consider normalized data i.e. the number of crashes per 10,000 cars sold. The site has information about 4 million crashes, and you can also contribute to the project by sharing your own experience.\n\nIt's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
-		},
-		"article": {
-			"japanese_top_selling_compact_suvs": {
-				"title": "Japanese top-selling compact SUVs",
-				"cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
-				"url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
-				"text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
-			},
-			"most_reliable_honda_models": {
-				"title": "Most reliable Honda cars",
-				"text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
-				"url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
-				"cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"Honda Accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
-			},
-			"reliability_of_toyota_camry_and_honda_accord_engines": {
-				"title": "Reliability of Toyota Camry and Honda Accord engines",
-				"text": "There are two ways to make a five-meter-long Japanese sedan dynamic: \n\nthe conservative way is to use an old large displacement atmosphere engine, relying on simplicity of construction.\n \nThe innovative way is to use a low displacement turbocharged engine, relying on technologies. \n\nThere is no magic and technologically Honda engineers achieved one-and-a-half times more fuel-efficient engine.\n\nBut...  Is atmospheric engine voracity worth it?\nIs the Toyota Camry so reliable compared to the Honda Accord, that makes you abandon innovations, modern design, and driving pleasure?\n\nLet's check the statistics and figure it out!\n\nAs we can see, by statistics of car service calls, the Honda Accord even is more reliable in the first 3 years of use! \nBy the way, the Camry wins in the long-term perspective but by a small margin.",
-				"url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
-				"cards": "[{\"title\":\"Toyota Camry Engine\",\"text\":\"The Toyota Camry also offers a variety of engine choices\\n A base engine is often a 2.5-liter inline-4 engine\\n There's also a more powerful 3.5-liter V6 engine available in some trims\\n The Camry Hybrid uses a 2.5-liter 4-cylinder engine combined with an electric motor.\"},{\"title\":\"Honda Accord Engine\",\"text\":\"The Honda Accord typically offers a range of engine options, with variations depending on the trim level and model year\\n A common engine found in the Accord is the 1.5-liter turbocharged inline-4 engine\\n The more powerful option is usually a 2.0-liter turbocharged inline-4 engine\\n The Accord Hybrid features a 2.0-liter Atkinson-cycle inline-4 engine combined with an electric motor.\"}]"
-			},
-			"audi_a4_last_3_generation": {
-				"title": "Reliability of the Audi A4 over the last 3 generations",
-				"url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
-				"cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
-				"text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
-			},
-			"how_repair_costs_change_as_subaru_models_age": {
-				"title": "How Repair Costs Change As Subaru Models Age",
-				"text": "Subaru has earned a reputation for reliability, but even their vehicles require repairs as the odometer accumulates miles. Tracking service costs by mileage provides insight into which models remain affordable to maintain.\n\nThe Subaru Ascent midsize SUV averages around $350 yearly in repairs during the first 50,000 miles. From 50,000 to 100,000 miles, this rises to $400 annually, and beyond 100,000 miles costs reach about $475.\n\nThe B9 Tribeca midsize SUV follows a similar pattern. In the first 50,000 miles, owners report spending roughly $300 per year on unscheduled repairs. From 50,000 to 100,000 miles this increases to $375, and after 100,000 miles jumps to $450. \n\nOur car service call statistics data show that Ascent had more defects than Tribeca (almost double)\n\nOn the other hand, the Baja compact pickup displays a relatively comparable trend. For the first 50,000 miles, drivers pay approximately $250 yearly for repairs. Baja has the lowest number of service calls of the pack within the first 25,000 miles (refer to the car service call statistics data provided below).\n\nThis climbs to $325 for 50,000 to 100,000 miles and hits $400 beyond 100,000 miles.\n\nWhile maintenance costs rise as mileage increases in Subarus, they remain relatively affordable compared to other brands. Baja has the lowest average repair bills across its lifespan. The Ascent is most expensive to maintain long-term compared to the three. But even higher-maintenance Subarus remains cost-effective.\n\nProper maintenance and repair of small issues early help minimize major repair costs down the road. But Subarus' reputation for reliability and longevity shines through in the data, no matter the mileage. ",
-				"url": "#entity_params=%7B%22subaru+ascent%22%3A%7B%22modelID%22%3A%22633%22%7D%2C%22subaru+b9%22%3A%7B%22modelID%22%3A%22634%22%7D%2C%22subaru+baja%22%3A%7B%22modelID%22%3A%22635%22%7D%7D&data_params=%7B%22total%22%3Atrue%2C%22by_mileage%22%3Atrue%7D",
-				"cards": "[{\"title\":\"Subaru Ascent\"},{\"title\":\"Subaru B9\"},{\"title\":\"Subaru Baja\"}]"
-			},
-			"who_wins_on_reliability_toyota_or_lexus": {
-				"title": "Crunching the Numbers: Who Wins on Reliability - Toyota or Lexus?",
-				"text": "We all want our rides to be reliable and affordable to maintain. \n\nAmong the brands with  an unbeatable reputation for reliability are Toyota and Lexus. But just how reliable are these Japanese brands compared to each other? \n\nLet's crunch the numbers.\n\nAnalysis of car service call statistics reveals that Lexus edges out Toyota slightly when it comes to long-term reliability per mile driven. The average Toyota have over 27,000 defects reported by 25,000 miles. Lexus models have far less at around 2000 reported defects within the same mileage. \n\nFrom the brand model generation search bar:\n\nChoose Toyota and then click “Search for defects by Toyota” on the far right. A graph will come up with the generated data, pulled from useful resources such as nhtsa.gov. \n\n Next, click on the brand model generation search bar and choose Lexus (for the comparison), and then click  “Search for defects by Lexus.” This includes a Lexus bar chart, beside the Toyota in orange. \n\nYou can click “By age” or “Mileage” to get the visual comparison data. \n\nFor our case, we used “Total” defects by “Mileage” to get the below bar chart.\n\n\n\n\nSo, what makes Lexus the king of reliability mile after mile? It comes down to higher-grade components, more stringent quality control, and fewer standard features to break.\n\nOf course, Toyota still tops all non-luxury brands for longevity. But for that extra dose of bulletproof dependability, Lexus takes the crown. Its ultra-durable build and upscale parts ensure it outlasts its parent company by tens of thousands of miles before repairs are needed.",
-				"url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D&data_params=%7B%22by_mileage%22%3Atrue%2C%22total%22%3Atrue%7D",
-				"cards": "[]"
-			},
-			"toyota_camry_vs_honda_accord_vs_mazda_6": {
-				"title": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較",
-				"text": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較\n\nイントロダクション：\n自動車市場での競争は激化しており、トヨタカムリ、ホンダアコード、マツダ6は中型セダンの分野で人気のあるモデルです。この記事では、統計データに基づいて、これらの車の信頼性を比較します。信頼性は、所有者の満足度、故障率、メンテナンスコストなどの要素によって評価されます。\n\n1. 所有者の満足度：\nまず、所有者の満足度を比較します。J.D. PowerやConsumer Reportsなどの信頼性調査結果に基づいて、各車の所有者がどれだけ満足しているかを評価します。これにより、車の品質や信頼性についての一般的な見解を得ることができます。\n\n2. 故障率：\n次に、各車の故障率を比較します。信頼性の高い車は、故障が少なく、所有者が安心して乗ることができる車です。信頼性調査や保険会社の統計データを参考に、各車の故障率を評価します。\n\n3. メンテナンスコスト：\n車の信頼性を評価する際には、メンテナンスコストも重要な要素です。車のメンテナンスや修理にかかる費用は、所有者にとっての負担となります。統計データやオーナーレビューを参考に、各車のメンテナンスコストを比較します。\n\n4. 保証：\n最後に、各車の保証についても比較します。信頼性の高い車は、メーカーが自信を持って保証を提供している場合があります。保証期間や内容を調査し、各車の保証の信頼性を評価します。\n\n結論：\n以上の要素を総合的に考慮し、Toyota Camry、Honda Accord、Mazda 6の信頼性を比較しました。統計に基づくデータを参考にすることで、購入者が信頼性の高い車を選ぶ際に役立つ情報を提供しました。ただし、個々の所有者の経験や好みによっても評価は異なるため、最終的な選択は個人の判断に委ねられます。",
-				"url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
-				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
-			},
-			"volkswagen_golf_vs_mazda_3": {
-				"title": "タイトル：Volkswagen GolfとMazda3：統計に基づく信頼性の比較",
-				"text": "タイトル：Volkswagen GolfとMazda3：統計に基づく信頼性の比較\n\n自動車の信頼性は、潜在的な消費者にとって重要な要素の一つです。そして今日は、2つの非常に人気のある自動車、Volkswagen GolfとMazda3の信頼性を比較します。この比較は統計データに基づいており、各自動車の信頼性を徹底的に評価します。\n\n1. 所有者からの報告：\n\nまずは所有者からの報告を見てみましょう。この部分では、汽車が発売されてから現在までの期間にわたる所有者からの評価に基づいています。JD Powerのデータによると、Volkswagen Golfは5つ星中3.5つ星を獲得しているのに対し、Mazda3は同じ指標で4つ星を獲得しています。この結果から、所有者からの信頼性評価ではMazda3が上回っていることが明らかです。\n\n2. 修理の頻度とコスト：\n\nConsumer Reportsのデータによると、Volkswagen Golfの平均修理コストは年間約$600で、Mazda3は約$475となっています。また、Golfの修理頻度は年間平均で約0.3回、Mazda3では0.2回とされています。この点から、Mazda3は修理の頻度及びコスト両方でGolfを下回っています。\n\n3. リコール回数：\n\n自動車のリコールは、製品の安全性や製造上の問題を示す重要な指標です。過去5年間でVolkswagen Golfは9回のリコールがありましたが、Mazda3は5回でした。この点においてもMazda3が上回っています。\n\n4. 長期耐久性：\n\nConsumer Reportsのデータによると、Volkswagen Golfは平均して150,000マイル以上走行すると信頼性が急速に落ちる傾向にあります。一方、Mazda3は200,000マイル以上走行するまで信頼性を維持し続けることが示されています。これにより、長期的な耐久性においてもMazda3が優れています。\n\n総合的に見ると、所有者からの評価、修理の頻度とコスト、リコール回数、長期耐久性の全ての指標においてMazda3がVolkswagen Golfを上回っています。統計に基づいた信頼性の比較によれば、Mazda3はVolkswagen Golfよりも高い信頼性を持つと言えます。しかし、自動車選びは信頼性だけでなく、乗り心地やデザイン、価格などの要素も重要であるため、購入を考える際にはこれらの要素も考慮に入れることをお勧めします。",
-				"url": "https://car-defects.com/#entity_params={\"volkswagen+golf\":{\"modelID\":\"844\"},\"mazda+3\":{\"modelID\":\"347\"}}",
-				"cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
-			}
-		}
-	}
+  "error": {
+    "LOAD_ERROR": "Load error"
+  },
+  "warn": {
+    "NO_DATA": "We are sorry, but we do not have enougth data for "
+  },
+  "defect_category": {
+    "safety": "Safety",
+    "electronics": "Electronics",
+    "light": "Light",
+    "transmission": "transmission",
+    "other": "Other",
+    "equipment": "Equipment",
+    "engine": "Engine",
+    "brake": "Brake",
+    "suspension": "Suspension"
+  },
+  "label": {
+    "tips": {
+      "norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
+      "search": "Search over 4 million crashes",
+      "age_mileage": "Compare defects by age or mileage",
+      "category": "Select specific defect category"
+    },
+    "detail": {
+      "age": "Defect age",
+      "mileage": "Mileage"
+    },
+    "defect": {
+      "header": "Defect Description",
+      "description": "Please, provide defect details",
+      "cost": "Repair Cost, $",
+      "year": "Year, when defect occured",
+      "age": "Car Age, when defect occured",
+      "mileage": "Car Mileage, when defect occured",
+      "rating": "Rating: how serious is the defect?"
+    },
+    "cancel": "Cancel",
+    "main_header": "A Car Service Calls Statistics",
+    "norm": "Normalized",
+    "total": "total",
+    "by_age": "by Age",
+    "by_mileage": "by Mileage",
+    "chart": {
+      "by_age": {
+        "total": {
+          "title": "All Defects by Age",
+          "tooltip": "total defects"
+        },
+        "norm": {
+          "title": "Defects by Age Normalized",
+          "tooltip": "Average defects per 10,000 sales"
+        },
+        "y": "Number of Defects",
+        "x": "Age of Defect"
+      },
+      "by_mileage": {
+        "total": {
+          "title": "All Defects by Mileage",
+          "tooltip": "total defects"
+        },
+        "norm": {
+          "title": "Defects by Mileage Normalized",
+          "tooltip": "Average defects per 10,000 sales"
+        },
+        "y": "Number of Defects",
+        "x": "Car Mileage"
+      }
+    },
+    "add_data": "Add Data",
+    "update": "Update",
+    "load_details": "Load more details",
+    "apply": "Apply",
+    "applied": "Applied",
+    "reset": "Reset",
+    "post": "Post",
+    "posted": "Posted!",
+    "more": "More",
+    "search_by": "Search for defects by ",
+    "model": "Model",
+    "brand": "Brand",
+    "gen": "Generation",
+    "gen_start": "Release start",
+    "gen_finish": "Release end",
+    "version": "Version",
+    "engine": {
+      "name": "Engine",
+      "displacement": "Displacement",
+      "cylinders": "Cylinders",
+      "valves": "Valves",
+      "fuel_type": "Fuel type",
+      "power_hp": "Power (hp)",
+      "torque": "torque"
+    },
+    "trans": {
+      "name": "transmission",
+      "acceleration": "Acceleration",
+      "consumtion": "Consumtion",
+      "gears": "Gears"
+    }
+  },
+  "text": {
+    "about": {
+      "header": "About this site",
+      "text": "If you have ever chosen a car for yourself, you have probably watched a lot of car reviews, where bloggers of different competence told you about the pros and cons of every car and recommended what to buy. The problem is that all of these reviews are subjective, and if you are a rational mature person, and reliability of a car in the long term is important for you, you may be interested in analysis of call statistics service.\n\nThere are awesome sites such as carcomplaints.com, carproblemzoo.com, nhtsa.gov, where people describe problems encountered during the period of their car exploitation. But unfortunately there are no charts on these sites, so you can't visually compare different models and figure out which is more problematic.\n\nthat's why I’ve created my own website car-defects.com, collecting all the information from these useful resources and presenting it as graphs. Here you can compare car models, model generations and versions, visualize by age or mileage, and, for objectivity, consider normalized data i.e. the number of crashes per 10,000 cars sold. The site has information about 4 million crashes, and you can also contribute to the project by sharing your own experience.\n\nIt's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
+    },
+    "article": {
+      "japanese_top_selling_compact_suvs": {
+        "title": "Japanese top-selling compact SUVs",
+        "cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
+        "url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
+        "text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
+      },
+      "most_reliable_honda_models": {
+        "title": "Most reliable Honda cars",
+        "text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
+        "url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
+        "cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"Honda Accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
+      },
+      "reliability_of_toyota_camry_and_honda_accord_engines": {
+        "title": "Reliability of Toyota Camry and Honda Accord engines",
+        "text": "There are two ways to make a five-meter-long Japanese sedan dynamic: \n\nthe conservative way is to use an old large displacement atmosphere engine, relying on simplicity of construction.\n \nThe innovative way is to use a low displacement turbocharged engine, relying on technologies. \n\nThere is no magic and technologically Honda engineers achieved one-and-a-half times more fuel-efficient engine.\n\nBut...  Is atmospheric engine voracity worth it?\nIs the Toyota Camry so reliable compared to the Honda Accord, that makes you abandon innovations, modern design, and driving pleasure?\n\nLet's check the statistics and figure it out!\n\nAs we can see, by statistics of car service calls, the Honda Accord even is more reliable in the first 3 years of use! \nBy the way, the Camry wins in the long-term perspective but by a small margin.",
+        "url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
+        "cards": "[{\"title\":\"Toyota Camry Engine\",\"text\":\"The Toyota Camry also offers a variety of engine choices\\n A base engine is often a 2.5-liter inline-4 engine\\n There's also a more powerful 3.5-liter V6 engine available in some trims\\n The Camry Hybrid uses a 2.5-liter 4-cylinder engine combined with an electric motor.\"},{\"title\":\"Honda Accord Engine\",\"text\":\"The Honda Accord typically offers a range of engine options, with variations depending on the trim level and model year\\n A common engine found in the Accord is the 1.5-liter turbocharged inline-4 engine\\n The more powerful option is usually a 2.0-liter turbocharged inline-4 engine\\n The Accord Hybrid features a 2.0-liter Atkinson-cycle inline-4 engine combined with an electric motor.\"}]"
+      },
+      "audi_a4_last_3_generation": {
+        "title": "Reliability of the Audi A4 over the last 3 generations",
+        "url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
+        "cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
+        "text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
+      },
+      "how_repair_costs_change_as_subaru_models_age": {
+        "title": "How Repair Costs Change As Subaru Models Age",
+        "text": "Subaru has earned a reputation for reliability, but even their vehicles require repairs as the odometer accumulates miles. Tracking service costs by mileage provides insight into which models remain affordable to maintain.\n\nThe Subaru Ascent midsize SUV averages around $350 yearly in repairs during the first 50,000 miles. From 50,000 to 100,000 miles, this rises to $400 annually, and beyond 100,000 miles costs reach about $475.\n\nThe B9 Tribeca midsize SUV follows a similar pattern. In the first 50,000 miles, owners report spending roughly $300 per year on unscheduled repairs. From 50,000 to 100,000 miles this increases to $375, and after 100,000 miles jumps to $450. \n\nOur car service call statistics data show that Ascent had more defects than Tribeca (almost double)\n\nOn the other hand, the Baja compact pickup displays a relatively comparable trend. For the first 50,000 miles, drivers pay approximately $250 yearly for repairs. Baja has the lowest number of service calls of the pack within the first 25,000 miles (refer to the car service call statistics data provided below).\n\nThis climbs to $325 for 50,000 to 100,000 miles and hits $400 beyond 100,000 miles.\n\nWhile maintenance costs rise as mileage increases in Subarus, they remain relatively affordable compared to other brands. Baja has the lowest average repair bills across its lifespan. The Ascent is most expensive to maintain long-term compared to the three. But even higher-maintenance Subarus remains cost-effective.\n\nProper maintenance and repair of small issues early help minimize major repair costs down the road. But Subarus' reputation for reliability and longevity shines through in the data, no matter the mileage. ",
+        "url": "#entity_params=%7B%22subaru+ascent%22%3A%7B%22modelID%22%3A%22633%22%7D%2C%22subaru+b9%22%3A%7B%22modelID%22%3A%22634%22%7D%2C%22subaru+baja%22%3A%7B%22modelID%22%3A%22635%22%7D%7D&data_params=%7B%22total%22%3Atrue%2C%22by_mileage%22%3Atrue%7D",
+        "cards": "[{\"title\":\"Subaru Ascent\"},{\"title\":\"Subaru B9\"},{\"title\":\"Subaru Baja\"}]"
+      },
+      "who_wins_on_reliability_toyota_or_lexus": {
+        "title": "Crunching the Numbers: Who Wins on Reliability - Toyota or Lexus?",
+        "text": "We all want our rides to be reliable and affordable to maintain. \n\nAmong the brands with  an unbeatable reputation for reliability are Toyota and Lexus. But just how reliable are these Japanese brands compared to each other? \n\nLet's crunch the numbers.\n\nAnalysis of car service call statistics reveals that Lexus edges out Toyota slightly when it comes to long-term reliability per mile driven. The average Toyota have over 27,000 defects reported by 25,000 miles. Lexus models have far less at around 2000 reported defects within the same mileage. \n\nFrom the brand model generation search bar:\n\nChoose Toyota and then click “Search for defects by Toyota” on the far right. A graph will come up with the generated data, pulled from useful resources such as nhtsa.gov. \n\n Next, click on the brand model generation search bar and choose Lexus (for the comparison), and then click  “Search for defects by Lexus.” This includes a Lexus bar chart, beside the Toyota in orange. \n\nYou can click “By age” or “Mileage” to get the visual comparison data. \n\nFor our case, we used “Total” defects by “Mileage” to get the below bar chart.\n\n\n\n\nSo, what makes Lexus the king of reliability mile after mile? It comes down to higher-grade components, more stringent quality control, and fewer standard features to break.\n\nOf course, Toyota still tops all non-luxury brands for longevity. But for that extra dose of bulletproof dependability, Lexus takes the crown. Its ultra-durable build and upscale parts ensure it outlasts its parent company by tens of thousands of miles before repairs are needed.",
+        "url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D&data_params=%7B%22by_mileage%22%3Atrue%2C%22total%22%3Atrue%7D",
+        "cards": "[]"
+      },
+      "toyota_camry_vs_honda_accord_vs_mazda_6": {
+        "title": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較",
+        "text": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較\n\nイントロダクション：\n自動車市場での競争は激化しており、トヨタカムリ、ホンダアコード、マツダ6は中型セダンの分野で人気のあるモデルです。この記事では、統計データに基づいて、これらの車の信頼性を比較します。信頼性は、所有者の満足度、故障率、メンテナンスコストなどの要素によって評価されます。\n\n1. 所有者の満足度：\nまず、所有者の満足度を比較します。J.D. PowerやConsumer Reportsなどの信頼性調査結果に基づいて、各車の所有者がどれだけ満足しているかを評価します。これにより、車の品質や信頼性についての一般的な見解を得ることができます。\n\n2. 故障率：\n次に、各車の故障率を比較します。信頼性の高い車は、故障が少なく、所有者が安心して乗ることができる車です。信頼性調査や保険会社の統計データを参考に、各車の故障率を評価します。\n\n3. メンテナンスコスト：\n車の信頼性を評価する際には、メンテナンスコストも重要な要素です。車のメンテナンスや修理にかかる費用は、所有者にとっての負担となります。統計データやオーナーレビューを参考に、各車のメンテナンスコストを比較します。\n\n4. 保証：\n最後に、各車の保証についても比較します。信頼性の高い車は、メーカーが自信を持って保証を提供している場合があります。保証期間や内容を調査し、各車の保証の信頼性を評価します。\n\n結論：\n以上の要素を総合的に考慮し、Toyota Camry、Honda Accord、Mazda 6の信頼性を比較しました。統計に基づくデータを参考にすることで、購入者が信頼性の高い車を選ぶ際に役立つ情報を提供しました。ただし、個々の所有者の経験や好みによっても評価は異なるため、最終的な選択は個人の判断に委ねられます。",
+        "url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
+        "cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
+      },
+      "volkswagen_golf_vs_mazda_3": {
+        "title": "【統計に基づく信頼性比較】フォルクスワーゲン・ゴルフVSマツダ3 - どちらが優れているのか？",
+        "text": "【統計に基づく信頼性比較】フォルクスワーゲン・ゴルフVSマツダ3 - どちらが優れているのか？\n\n自動車の信頼性は、その所有者にとって非常に重要な要素です。それは、車がどれだけ長く、そしてどれだけ問題なく走行できるかを示しています。今回は、統計データに基づいて、フォルクスワーゲン・ゴルフとマツダ3の信頼性を比較します。この記事では、それぞれの車がどれだけ信頼できるのか、またその理由を詳しく解説します。\n\nまず、信頼性の高さを決定する主要な要素は、車の欠陥の数とその重大性です。これらの要素は、車の信頼性を大きく左右します。また、車の信頼性は、その技術的な詳細にも大きく依存します。それぞれの車がどのような技術を採用しているのか、その詳細を深堀りしていきましょう。\n\nフォルクスワーゲン・ゴルフは、その堅牢な構造と高品質な部品で知られています。一方、マツダ3は、その独自のSKYACTIV技術と優れた燃費性能で評価されています。これらの技術は、それぞれの車がどれだけ信頼性が高いのかを示しています。\n\nしかし、これらの情報だけでは十分ではありません。それぞれの車の信頼性を正確に比較するためには、具体的な統計データが必要です。そのため、この記事の最後には、それぞれの車の信頼性を比較するための統計チャートを掲載しています。\n\n自動車の信頼性は、その所有者にとって非常に重要な要素です。それは、車がどれだけ長く、そしてどれだけ問題なく走行できるかを示しています。今回は、統計データに基づいて、フォルクスワーゲン・ゴルフとマツダ3の信頼性を比較します。この記事では、それぞれの車がどれだけ信頼できるのか、またその理由を詳しく解説します。\n\n自動車の信頼性、欠陥、比較、統計といったキーワードを用いて、詳細な分析を行います。車の専門家として、私たちはあなたに最も信頼できる情報を提供します。それでは、一緒に統計チャートを見ていきましょう。",
+        "url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
+        "cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
+      }
+    }
+  }
 }

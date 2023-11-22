@@ -43,15 +43,26 @@ function generate(url) {
 	} catch (e) {
 		imgs.push(poster);
 	}
+	// todo https://car-defects.com/#entity_params={\"volkswagen+golf\":{\"modelID\":\"844\"},\"mazda+3\":{\"modelID\":\"347\"}}
+	const prompt = `
+	catchy article post with higher CTR for analytics website about "Reliability Comparison of ${query} based on statistics."
+	explain why cars are reliable or not, 
+	describe key technologies in details,
+	Add a benefit-focused intro,
+	get deep in car technical details
+	be  car expert,
+	invite to research statistics chart at the end of the article,
+	use SEO keywords: car,defects,reliability,comparison,statistics,
+	`;
 	const queries = Object.entries({
-		en: `Write an article for the website: Reliability Comparison of ${query} based on statistics.`,
-		ru: `Напиши статью для сайта: Сравнение надежности ${query} на основе статистики.`,
-		de: `Schreiben Sie einen Artikel für die Website: Zuverlässigkeit Vergleich von ${query} anhand von Statistiken.`,
-		es: `Escribe un artículo para el sitio web: Fiabilidad Comparación de ${query} basada en estadísticas.`,
-		fr: `Rédigez un article pour le site web : Comparaison de la fiabilité de ${query} sur la base de statistiques.`,
-		pt: `Escrever um artigo para o sítio Web: Comparação da fiabilidade de ${query} com base em estatísticas.`,
-		jp: `ウェブサイトに記事を書く 統計に基づく${query} の信頼性比較。`,
-		zh: `为网站撰写一篇文章： 根据统计数据比较 ${query} 的可靠性。`
+		en: `Write ${prompt}`,
+		ru: `Write in Russian ${prompt}`,
+		de: `Write in German ${prompt}`,
+		es: `Write in Spanish ${prompt}`,
+		fr: `Write in French ${prompt}`,
+		pt: `Write in Portuguese ${prompt}`,
+		jp: `Write in Japanese ${prompt}`,
+		zh: `Write in Chinese ${prompt}`,
 	});
 	warn(`Need images:\n ${imgs.join('\n')}`);
 	// info(`Wait for ChatGPT images generation: ${imgs}`);
@@ -69,13 +80,20 @@ function generate(url) {
 	// );
 
 	info('Wait for ChatGPT articles generation ....');
-	Promise.all(
-		queries.map(([locale, content]) => generateArticle(locale, content, poster, url, cards))
-	)
-		.then(() => {
-			info('Articles are done!');
-		})
+	queries.reduce(
+		(chain, [locale, content]) =>
+			chain
+				.then(() => new Promise((r) => { setTimeout(r, 60000); }))
+				.then(() => generateArticle(locale, query, content, poster, url, cards)),
+		Promise.resolve())
 		.catch(error);
+	// Promise.all(
+	// 	queries.map(([locale, content]) => generateArticle(locale,query, content, poster, url, cards))
+	// )
+	// 	.then(() => {
+	// 		info('Articles are done!');
+	// 	})
+	// 	.catch(error);
 }
 
 const readline = createInterface({
@@ -116,13 +134,13 @@ function downloadImage(url, filename) {
 	});
 }
 
-function generateArticle(locale, content, poster, url, cards) {
+function generateArticle(locale, query, content, poster, url, cards) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-4',
 			messages: [{ role: 'user', content }],
-			temperature: 1,
-			max_tokens: 1024
+			temperature: 0,
+			max_tokens: 7500
 		})
 		.then((v) => {
 			const filename = `src/lib/i18n/${locale}.json`;
@@ -136,9 +154,9 @@ function generateArticle(locale, content, poster, url, cards) {
 				}
 				const json = JSON.parse(data);
 				json.text.article[poster] = {
-					title: v.choices[0].message.content.slice(0, v.choices[0].message.content.indexOf('\n')),
+					title: /".*"/.exec(v.choices[0].message.content)?.[0] || v.choices[0].message.content.split('\n\n')[0],
 					text: v.choices[0].message.content,
-					url: decodeURIComponent(url),
+					url: new URL(url).hash,
 					cards
 				};
 				writeFile(filename, JSON.stringify(json, null, 2), (err) => {

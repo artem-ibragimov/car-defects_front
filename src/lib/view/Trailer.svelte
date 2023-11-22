@@ -9,7 +9,7 @@
 	// 		: 'https://www.youtube.com/embed/km0wsB0xBV4?controls=0';
 </script>
 
-<img class="Trailer" width="100%" src={`/assets/img/${$selected}/poster.webp`} alt="Poster" />
+<img class="Trailer" width="100%" src={`/assets/img/en/poster.webp`} alt="Poster" />
 
 <!-- <iframe
 	class="Trailer"

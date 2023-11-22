@@ -7,7 +7,7 @@
 
 <div class="Card" class:Card__text={!!text} class:Card-href={href}>
 	<a class="Card__a" {href}>
-		<amp-img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} height="220" layout="fixed-height" alt={title} {title}  />
+		<amp-img class="Card__banner" src={`/assets/img/${imgSrc}.webp`} width="400" height="220" layout="fixed" alt={title} {title}  />
 		<div class="Card__content">
 			<h4 class="Card__title">{title}</h4>
 			{#if text}

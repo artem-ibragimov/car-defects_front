@@ -18,7 +18,9 @@
 
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.webp`;
 	$: description = `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
-	$: keywords = `car,defects,${cards.map((c) => c.title).join(',')}`;
+	$: keywords = `car,defects,${cards
+		.map((c) => c.title)
+		.join(',')},reliability,comparison,statistics`;
 	$: cards = JSON.parse($_(`${i18nPath}.cards`));
 	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({

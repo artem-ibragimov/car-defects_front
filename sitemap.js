@@ -77,7 +77,7 @@ function collectPaths(root) {
 	const paths = readdirSync(root).map((entity_name) => path.join(root, entity_name));
 	const dir_paths = paths.filter((p) => !p.includes('.'));
 	return paths
-		.filter((p) => p.includes('index.html'))
+		.filter((p) => p.endsWith('index.html'))
 		.map((p) => p.replace(/build|index\.html/gi, ''))
 		.concat(...dir_paths.map(collectPaths));
 }

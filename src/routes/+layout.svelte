@@ -27,6 +27,7 @@
 	const title = 'Car-Defects - A Car Service Calls Statistics';
 	const description =
 		'Car-Defects.com - A Car Service Calls Statistics: Statistics of Defects by Age and Car Mileage';
+	const keywords = `car,defects,reliability,comparison,statistics`;
 </script>
 
 <svelte:head>
@@ -36,6 +37,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content="/assets/img/car.png" />
+	<meta name="keywords" content={keywords} />
 </svelte:head>
 
 <Notification {warn} {error} request={lastRequest} />
