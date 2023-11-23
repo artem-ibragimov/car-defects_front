@@ -22,36 +22,34 @@ const openai = new OpenAI(configuration);
  * @param {string} url
  */
 function generate(url) {
-	const decoded = decodeURIComponent(
-		new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
-	);
-	const cars = Object.keys(JSON.parse(decoded));
+	// const decoded = decodeURIComponent(
+	// 	new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
+	// );
+	// const cars = Object.keys(JSON.parse(decoded));
 	const imgs = [];
-	cars.forEach((car) => {
-		try {
-			readFileSync(`./static/assets/img/${car}.webp`);
-		} catch (e) {
-			imgs.push(car);
-			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
-		}
-	});
-	const cards = JSON.stringify(cars.map((title) => ({ title })));
-	const query = cars.join(' vs ');
-	const poster = `${query}`.replaceAll(' ', '_').toLowerCase();
+	// cars.forEach((car) => {
+	// 	try {
+	// 		readFileSync(`./static/assets/img/${car}.webp`);
+	// 	} catch (e) {
+	// 		imgs.push(car);
+	// 		// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
+	// 	}
+	// });
+	const cards = "[{\"title\":\"Toyota Camry Engine\",},{\"title\":\"Honda Accord Engine\",}]";// JSON.stringify(cars.map((title) => ({ title })));
+	// const query = cars.join(' vs ');
+	const poster = 'reliability_of_toyota_camry_and_honda_accord_engines';// `${query}`.replaceAll(' ', '_').toLowerCase();
 	try {
 		readFileSync(`./static/assets/img/${poster}.webp`);
 	} catch (e) {
 		imgs.push(poster);
 	}
-	// todo https://car-defects.com/#entity_params={\"volkswagen+golf\":{\"modelID\":\"844\"},\"mazda+3\":{\"modelID\":\"347\"}}
 	const prompt = `
-	catchy article post with higher CTR for analytics website about "Reliability Comparison of ${query} based on statistics."
+	catchy article with higher CTR for analytics website about "Reliability of Toyota Camry and Honda Accord engines"
 	explain why cars are reliable or not, 
 	describe key technologies in details,
 	Add a benefit-focused intro,
 	get deep in car technical details
-	be  car expert,
-	invite to research statistics chart at the end of the article,
+	be car expert,
 	use SEO keywords: car,defects,reliability,comparison,statistics,
 	`;
 	const queries = Object.entries({
@@ -90,7 +88,7 @@ function generate(url) {
 								setTimeout(r, 60000);
 							})
 					)
-					.then(() => generateArticle(locale, query, content, poster, url, cards)),
+					.then(() => generateArticle(locale, content, poster, url, cards)),
 			Promise.resolve()
 		)
 		.catch(error);
@@ -141,13 +139,13 @@ readline.question('Enter car defects URL: ', (url) => {
 // 	});
 // }
 
-function generateArticle(locale, query, content, poster, url, cards) {
+function generateArticle(locale, content, poster, url, cards) {
 	return openai.chat.completions
 		.create({
-			model: 'gpt-4',
+			model: 'gpt-4-1106-preview',
 			messages: [{ role: 'user', content }],
 			temperature: 1,
-			max_tokens: 7500
+			max_tokens: 4000
 		})
 		.then((v) => {
 			const filename = `src/lib/i18n/${locale}.json`;
@@ -155,16 +153,15 @@ function generateArticle(locale, query, content, poster, url, cards) {
 				if (err) {
 					return error(chalk.red(err));
 				}
-				if (!v.choices[0].message.content) {
+				const text = v.choices[0].message.content;
+				if (!text) {
 					warn(v.choices[0].message);
 					return;
 				}
 				const json = JSON.parse(data);
 				json.text.article[poster] = {
-					title:
-						/".*"/.exec(v.choices[0].message.content)?.[0] ||
-						v.choices[0].message.content.split('\n\n')[0],
-					text: v.choices[0].message.content,
+					title:text.split('\n\n')[0],
+					text: text.replace(/\w+:/gi, ''),
 					url: new URL(url).hash,
 					cards
 				};
