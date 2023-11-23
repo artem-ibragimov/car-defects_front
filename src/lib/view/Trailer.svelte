@@ -16,7 +16,6 @@
 
 <img
 	class="Trailer"
-	width="100%"
 	src={`/assets/img/en/${imgSrc}.webp`}
 	alt="Poster"
 	{srcset}
@@ -41,6 +40,14 @@
 	@media screen and (min-width: 500px) {
 		.Trailer {
 			display: block;
+			width: 100%;
+			height: 380px;
+		}
+	}
+	@media screen and (min-width: 900px) {
+		.Trailer {
+			display: block;
+			width: 757px;
 		}
 	}
 </style>

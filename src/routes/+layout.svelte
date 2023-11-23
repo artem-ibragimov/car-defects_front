@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import Notification from '$lib/components/Notification.svelte';
 	import { defectStore, searchStore } from '$lib/store/main.store';
+	import type { LayoutData } from './$types';
 
+	export let data: LayoutData;
 	$: ({ state: defectState } = defectStore);
 	$: ({ warn: defectWarn, error: defectError, lastRequest: defectLastRequest } = $defectState);
 
@@ -38,6 +41,19 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content="/assets/img/car.png" />
 	<meta name="keywords" content={keywords} />
+	<link rel="canonical" href={data.url.toString()} />
+	<!-- Google tag (gtag.js) -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3Z9TXBZ2M"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-D3Z9TXBZ2M');
+	</script>
 </svelte:head>
 
 <Notification {warn} {error} request={lastRequest} />

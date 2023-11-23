@@ -1,165 +1,165 @@
 {
-  "error": {
-    "LOAD_ERROR": "Load error"
-  },
-  "warn": {
-    "NO_DATA": "We are sorry, but we do not have enougth data for "
-  },
-  "defect_category": {
-    "safety": "Safety",
-    "electronics": "Electronics",
-    "light": "Light",
-    "transmission": "transmission",
-    "other": "Other",
-    "equipment": "Equipment",
-    "engine": "Engine",
-    "brake": "Brake",
-    "suspension": "Suspension"
-  },
-  "label": {
-    "tips": {
-      "norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
-      "search": "Search over 4 million crashes",
-      "age_mileage": "Compare defects by age or mileage",
-      "category": "Select specific defect category"
-    },
-    "detail": {
-      "age": "Defect age",
-      "mileage": "Mileage"
-    },
-    "defect": {
-      "header": "Defect Description",
-      "description": "Please, provide defect details",
-      "cost": "Repair Cost, $",
-      "year": "Year, when defect occured",
-      "age": "Car Age, when defect occured",
-      "mileage": "Car Mileage, when defect occured",
-      "rating": "Rating: how serious is the defect?"
-    },
-    "cancel": "Cancel",
-    "main_header": "A Car Service Calls Statistics",
-    "norm": "Normalized",
-    "total": "total",
-    "by_age": "by Age",
-    "by_mileage": "by Mileage",
-    "chart": {
-      "by_age": {
-        "total": {
-          "title": "All Defects by Age",
-          "tooltip": "total defects"
-        },
-        "norm": {
-          "title": "Defects by Age Normalized",
-          "tooltip": "Average defects per 10,000 sales"
-        },
-        "y": "Number of Defects",
-        "x": "Age of Defect"
-      },
-      "by_mileage": {
-        "total": {
-          "title": "All Defects by Mileage",
-          "tooltip": "total defects"
-        },
-        "norm": {
-          "title": "Defects by Mileage Normalized",
-          "tooltip": "Average defects per 10,000 sales"
-        },
-        "y": "Number of Defects",
-        "x": "Car Mileage"
-      }
-    },
-    "add_data": "Add Data",
-    "update": "Update",
-    "load_details": "Load more details",
-    "apply": "Apply",
-    "applied": "Applied",
-    "reset": "Reset",
-    "post": "Post",
-    "posted": "Posted!",
-    "more": "More",
-    "search_by": "Search for defects by ",
-    "model": "Model",
-    "brand": "Brand",
-    "gen": "Generation",
-    "gen_start": "Release start",
-    "gen_finish": "Release end",
-    "version": "Version",
-    "engine": {
-      "name": "Engine",
-      "displacement": "Displacement",
-      "cylinders": "Cylinders",
-      "valves": "Valves",
-      "fuel_type": "Fuel type",
-      "power_hp": "Power (hp)",
-      "torque": "torque"
-    },
-    "trans": {
-      "name": "transmission",
-      "acceleration": "Acceleration",
-      "consumtion": "Consumtion",
-      "gears": "Gears"
-    }
-  },
-  "text": {
-    "about": {
-      "header": "About this site",
-      "text": "If you have ever chosen a car for yourself, you have probably watched a lot of car reviews, where bloggers of different competence told you about the pros and cons of every car and recommended what to buy. The problem is that all of these reviews are subjective, and if you are a rational mature person, and reliability of a car in the long term is important for you, you may be interested in analysis of call statistics service.\n\nThere are awesome sites such as carcomplaints.com, carproblemzoo.com, nhtsa.gov, where people describe problems encountered during the period of their car exploitation. But unfortunately there are no charts on these sites, so you can't visually compare different models and figure out which is more problematic.\n\nthat's why I’ve created my own website car-defects.com, collecting all the information from these useful resources and presenting it as graphs. Here you can compare car models, model generations and versions, visualize by age or mileage, and, for objectivity, consider normalized data i.e. the number of crashes per 10,000 cars sold. The site has information about 4 million crashes, and you can also contribute to the project by sharing your own experience.\n\nIt's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
-    },
-    "article": {
-      "japanese_top_selling_compact_suvs": {
-        "title": "Japanese top-selling compact SUVs",
-        "cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
-        "url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
-        "text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
-      },
-      "most_reliable_honda_models": {
-        "title": "Most reliable Honda cars",
-        "text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
-        "url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
-        "cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"honda accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
-      },
-      "reliability_of_toyota_camry_and_honda_accord_engines": {
-        "title": "\"Fiabilité des moteurs Toyota Camry vs Honda Accord: Une Analyse Technique Décisive\"",
-        "text": " \"Fiabilité des moteurs Toyota Camry vs Honda  Une Analyse Technique Décisive\"\n\n\nLa quête de la voiture parfaite mène inéluctablement à la question de la fiabilité. Une composante déterminante pour tous les passionnés de l'automobile, elle reste l'objectif ultime lors de l'acquisition d'un nouveau véhicule. La Toyota Camry et la Honda Accord, deux géants de l'industrie, se distinguent par leur réputation de durabilité et de performances fiables. Dans cet article, nous plongeons au cœur de leurs moteurs, pour décrypter les secrets de cette fiabilité tant convoitée. Attachez votre ceinture, nous allons explorer en détail les technologies clés qui propulsent ces modèles vers les sommets des statistiques de fiabilité.\n\nFiabilité  La Constance de Toyota\nToyota s'est taillée une réputation de robustesse légendaire grâce à son approche méticuleuse de la conception de moteurs. Ces derniers, testés dans les conditions les plus exigeantes, démontrent une endurance impressionnante. La Camry, en particulier, bénéficie du moteur 'Dynamic Force', qui allie économie de carburant et réponse instantanée à l'accélérateur. Ce moteur 4 cylindres 2.5L, doté de l'injection directe D-4S, optimise la combustion, réduit les déperditions d'énergie et minimise les défauts, factoïds clés de la longévité du véhicule.\n\nL'Ingénierie Moteur Innovante de Honda Accord\nDe son côté, Honda a toujours été synonyme de technologie de pointe et de performances fiables. Le moteur de l'Accord, avec son célèbre i-VTEC, combine à merveille la puissance à haut régime et l'efficacité énergétique. Les ingénieurs de Honda ont réussi à conjuguer la variabilité du contrôle des soupapes avec le système de gestion du calage pour adapter le comportement du moteur aux diverses conditions de conduite. En conséquence, les statistiques de fiabilité sont exceptionnelles, traduisant un nombre réduit de problèmes à long terme.\n\nComparaison  Mesure de la Durabilité\nD'après les données collectées et les rapports d'utilisateurs, les moteurs de la Toyota Camry et de la Honda Accord sont au coude à coude en termes de défauts rapportés. Tandis que la Camry brille par sa construction traditionnelle qui a fait ses preuves, l'Accord se révèle robuste avec une tendance à l'innovation technique. Cependant, à travers des tests indépendants et des enquêtes de fiabilité, il ressort que ces deux voitures jouissent de taux de satisfaction élevés relatifs au peu de visites imprévues chez le mécanicien. Cette réputée fiabilité a un impact direct sur les coûts de maintenance, faisant de ces modèles des choix économiquement avisés.\n\nAvancées  Au Cœur de la Performance\nLe monde de la voiture est en constante évolution et la détermination de la fiabilité d'un moteur passe incontestablement par les avancées technologiques déployées. À cet égard, Camry et Accord ne déçoivent pas. La Camry, avec son système de calage variable intelligent des soupapes (VVT-i) et le refroidissement EGR, assure une combustion optimale et contribue ainsi à une meilleure fiabilité. Pendant ce temps, l’Accord, avec sa technologie Earth Dreams, intègre intelligemment un turbo qui permet de maximiser la puissance sans compromettre la durabilité.\n\nConclusion \nFinalement, Toyota Camry et Honda Accord offrent des moteurs à la fiabilité épiquée, grâce à des technologies maîtrisées et une conception sans compromis. La voiture ne se résume pas à son allure, mais également à ce qui l'anime, ce cœur battant sous le capot qui inspire confiance et fidélité. Que vous préfériez la constance efficace de la Camry ou l'audace technologique de la Honda Accord, ces modèles illustrent parfaitement que haute performance et fiabilité ne sont pas antinomiques – ce sont les véritables champions de la route en termes de qualité et d'endurance. Prenez le volant de la fiabilité avec ces véhicules exemplaires, et roulez avec la certitude d'avoir fait le choix de l'excellence en matière de motorisation.",
-        "url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
-        "cards": "[{\"title\":\"Toyota Camry Engine\",},{\"title\":\"Honda Accord Engine\",}]"
-      },
-      "audi_a4_last_3_generation": {
-        "title": "Reliability of the Audi A4 over the last 3 generations",
-        "url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
-        "cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
-        "text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
-      },
-      "how_repair_costs_change_as_subaru_models_age": {
-        "title": "How Repair Costs Change As Subaru Models Age",
-        "text": "Subaru has earned a reputation for reliability, but even their vehicles require repairs as the odometer accumulates miles. Tracking service costs by mileage provides insight into which models remain affordable to maintain.\n\nThe Subaru Ascent midsize SUV averages around $350 yearly in repairs during the first 50,000 miles. From 50,000 to 100,000 miles, this rises to $400 annually, and beyond 100,000 miles costs reach about $475.\n\nThe B9 Tribeca midsize SUV follows a similar pattern. In the first 50,000 miles, owners report spending roughly $300 per year on unscheduled repairs. From 50,000 to 100,000 miles this increases to $375, and after 100,000 miles jumps to $450. \n\nOur car service call statistics data show that Ascent had more defects than Tribeca (almost double)\n\nOn the other hand, the Baja compact pickup displays a relatively comparable trend. For the first 50,000 miles, drivers pay approximately $250 yearly for repairs. Baja has the lowest number of service calls of the pack within the first 25,000 miles (refer to the car service call statistics data provided below).\n\nThis climbs to $325 for 50,000 to 100,000 miles and hits $400 beyond 100,000 miles.\n\nWhile maintenance costs rise as mileage increases in Subarus, they remain relatively affordable compared to other brands. Baja has the lowest average repair bills across its lifespan. The Ascent is most expensive to maintain long-term compared to the three. But even higher-maintenance Subarus remains cost-effective.\n\nProper maintenance and repair of small issues early help minimize major repair costs down the road. But Subarus' reputation for reliability and longevity shines through in the data, no matter the mileage. ",
-        "url": "#entity_params=%7B%22subaru+ascent%22%3A%7B%22modelID%22%3A%22633%22%7D%2C%22subaru+b9%22%3A%7B%22modelID%22%3A%22634%22%7D%2C%22subaru+baja%22%3A%7B%22modelID%22%3A%22635%22%7D%7D&data_params=%7B%22total%22%3Atrue%2C%22by_mileage%22%3Atrue%7D",
-        "cards": "[{\"title\":\"Subaru Ascent\"},{\"title\":\"Subaru B9\"},{\"title\":\"Subaru Baja\"}]"
-      },
-      "who_wins_on_reliability_toyota_or_lexus": {
-        "cards": "[]",
-        "title": "Crunching the Numbers: Who Wins on Reliability - Toyota or Lexus?",
-        "text": "We all want our rides to be reliable and affordable to maintain. \n\nAmong the brands with  an unbeatable reputation for reliability are Toyota and Lexus. But just how reliable are these Japanese brands compared to each other? \n\nLet's crunch the numbers.\n\nAnalysis of car service call statistics reveals that Lexus edges out Toyota slightly when it comes to long-term reliability per mile driven. The average Toyota have over 27,000 defects reported by 25,000 miles. Lexus models have far less at around 2000 reported defects within the same mileage. \n\nFrom the brand model generation search bar:\n\nChoose Toyota and then click “Search for defects by Toyota” on the far right. A graph will come up with the generated data, pulled from useful resources such as nhtsa.gov. \n\n Next, click on the brand model generation search bar and choose Lexus (for the comparison), and then click  “Search for defects by Lexus.” This includes a Lexus bar chart, beside the Toyota in orange. \n\nYou can click “By age” or “Mileage” to get the visual comparison data. \n\nFor our case, we used “Total” defects by “Mileage” to get the below bar chart.\n\n\n\n\nSo, what makes Lexus the king of reliability mile after mile? It comes down to higher-grade components, more stringent quality control, and fewer standard features to break. Lexus also offers things like stainless steel exhausts that Toyota doesn't.\n\nOf course, Toyota still tops all non-luxury brands for longevity. But for that extra dose of bulletproof dependability, Lexus takes the crown. Its ultra-durable build and upscale parts ensure it outlasts its parent company by tens of thousands of miles before repairs are needed.",
-        "url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D&data_params=%7B%22by_mileage%22%3Atrue%2C%22total%22%3Atrue%7D"
-      },
-      "toyota_camry_vs_honda_accord_vs_mazda_6_reliability_comparison": {
-        "title": "Reliability Comparison of Toyota Camry vs Honda Accord vs Mazda 6 Based on Statistics",
-        "text": "Reliability Comparison of Toyota Camry vs Honda Accord vs Mazda 6 Based on Statistics\n\nWhen it comes to purchasing a new car, reliability is often one of the top concerns for buyers. After all, no one wants to invest their hard-earned money in a vehicle that will constantly break down or require expensive repairs. In this article, we will compare the reliability of three popular midsize sedans: the Toyota Camry, Honda Accord, and Mazda 6, based on statistics.\n\nToyota Camry:\nThe Toyota Camry has long been known for its reliability and durability. According to various reliability studies and consumer reports, the Camry consistently ranks high in terms of reliability. For example, the J.D. Power Vehicle Dependability Study consistently rates the Camry as one of the most reliable vehicles in its class. Additionally, the Camry has received high scores in the Consumer Reports reliability ratings, with above-average reliability scores for most model years.\n\nHonda Accord:\nThe Honda Accord is another midsize sedan that has built a reputation for reliability over the years. Like the Camry, the Accord consistently receives high marks in reliability studies. The J.D. Power Vehicle Dependability Study has consistently ranked the Accord as one of the most reliable vehicles in its class. Consumer Reports also rates the Accord highly in terms of reliability, with above-average scores for most model years.\n\nMazda 6:\nWhile the Mazda 6 may not have the same longstanding reputation for reliability as the Camry and Accord, it has made significant strides in recent years. According to various reliability studies, the Mazda 6 has shown improvement in terms of reliability. For example, the J.D. Power Vehicle Dependability Study has seen the Mazda 6's reliability scores improve over time. However, it is worth noting that the Mazda 6 may still have slightly lower reliability scores compared to the Camry and Accord.\n\nIn terms of specific reliability issues, all three vehicles have their own strengths and weaknesses. However, it is important to note that these issues can vary depending on the model year and specific trim level. It is always recommended to research the reliability of a specific model year and trim level before making a purchase.\n\nIn conclusion, when comparing the reliability of the Toyota Camry, Honda Accord, and Mazda 6, all three vehicles have a strong reputation for reliability. The Camry and Accord have consistently ranked high in reliability studies and consumer reports, while the Mazda 6 has shown improvement in recent years. Ultimately, the choice between these three vehicles may come down to personal preference, budget, and specific needs.",
-        "url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
-        "cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
-      },
-      "toyota_camry_vs_honda_accord_vs_mazda_6": {
-        "title": "La fiabilité est un facteur essentiel à prendre en compte lors de l'achat d'une voiture. Il est important de choisir un véhicule qui offre une performance constante et qui ne nécessite pas de réparations fréquentes. Trois marques japonaises populaires, Toyota, Honda et Mazda, sont souvent considérées comme fiables. Dans cet article, nous allons comparer la fiabilité de trois modèles spécifiques : la Toyota Camry, la Honda Accord et la Mazda 6, en nous basant sur des statistiques fiables.",
-        "text": "La fiabilité est un facteur essentiel à prendre en compte lors de l'achat d'une voiture. Il est important de choisir un véhicule qui offre une performance constante et qui ne nécessite pas de réparations fréquentes. Trois marques japonaises populaires, Toyota, Honda et Mazda, sont souvent considérées comme fiables. Dans cet article, nous allons comparer la fiabilité de trois modèles spécifiques : la Toyota Camry, la Honda Accord et la Mazda 6, en nous basant sur des statistiques fiables.\n\nSelon les données recueillies par des organismes de recherche automobile tels que J.D. Power et Consumer Reports, la Toyota Camry est souvent considérée comme l'une des voitures les plus fiables sur le marché. Elle a obtenu de nombreux prix pour sa fiabilité exceptionnelle au fil des ans. La Camry est réputée pour sa durabilité et sa faible probabilité de rencontrer des problèmes mécaniques. Les propriétaires de Camry ont souvent rapporté une satisfaction élevée en termes de fiabilité.\n\nLa Honda Accord est également bien classée en termes de fiabilité. Elle est souvent considérée comme une concurrente directe de la Camry. Selon les statistiques, la fiabilité de l'Accord est généralement excellente, bien qu'elle puisse être légèrement inférieure à celle de la Camry. Cependant, la différence est minime et la plupart des propriétaires d'Accord sont satisfaits de la performance et de la fiabilité de leur véhicule.\n\nEn ce qui concerne la Mazda 6, elle est également considérée comme une voiture fiable, bien qu'elle puisse être légèrement en deçà de la Camry et de l'Accord en termes de fiabilité. Cependant, il est important de noter que la Mazda 6 a connu des améliorations significatives au fil des ans et est devenue de plus en plus fiable. Les propriétaires de Mazda 6 ont souvent rapporté une satisfaction élevée en termes de performances et de durabilité.\n\nIl est important de noter que la fiabilité d'une voiture peut varier en fonction de plusieurs facteurs, tels que l'entretien régulier, les conditions de conduite et le style de conduite du propriétaire. Cependant, les statistiques générales fournissent une indication solide de la fiabilité d'un modèle spécifique.\n\nEn conclusion, la Toyota Camry est souvent considérée comme la voiture la plus fiable parmi les trois modèles mentionnés. Cependant, la Honda Accord et la Mazda 6 sont également des choix fiables et populaires. Il est recommandé de prendre en compte d'autres facteurs tels que le prix, les caractéristiques et les préférences personnelles lors de la prise de décision finale.",
-        "url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
-        "cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
-      },
-      "volkswagen_golf_vs_mazda_3": {
-        "title": "Comparaison de la fiabilité de la Volkswagen Golf vs Mazda 3 basée sur les statistiques : Un regard détaillé",
-        "text": "Titre de l'article : \"Comparaison de la fiabilité de la Volkswagen Golf vs Mazda 3 basée sur les statistiques : Un regard détaillé\"\n\nIntroduction : Vous êtes à la recherche d'une voiture fiable, performante et technologiquement avancée ? Vous hésitez entre la Volkswagen Golf et la Mazda 3 ? Ne cherchez plus, nous avons analysé pour vous les statistiques de fiabilité de ces deux modèles phares. Découvrez dans cet article une comparaison détaillée qui vous aidera à faire le meilleur choix.\n\nLa fiabilité d'une voiture est un critère essentiel lors de l'achat. Elle dépend de nombreux facteurs tels que la qualité de fabrication, la technologie embarquée, la fréquence et la gravité des défauts. Une voiture fiable est une voiture qui nécessite peu de réparations, qui offre une conduite confortable et sécurisée, et dont la valeur de revente reste élevée.\n\nLa Volkswagen Golf et la Mazda 3 sont deux voitures qui se distinguent par leur technologie de pointe. Elles sont équipées de systèmes d'assistance à la conduite avancés, de moteurs performants et économiques, et d'intérieurs confortables et bien conçus. Cependant, leur fiabilité diffère selon les statistiques.\n\nLa Volkswagen Golf est reconnue pour sa qualité de fabrication allemande. Elle est équipée d'un moteur TSI puissant et économique, d'un système d'infodivertissement intuitif et d'une multitude de systèmes d'assistance à la conduite. Cependant, certaines statistiques indiquent une fréquence de défauts plus élevée que la moyenne, notamment en ce qui concerne l'électronique embarquée.\n\nLa Mazda 3, quant à elle, est réputée pour sa fiabilité exceptionnelle. Elle est équipée d'un moteur Skyactiv-G performant et économe en carburant, d'un système d'infodivertissement facile à utiliser et d'une multitude de technologies de sécurité. Les statistiques montrent une fréquence de défauts inférieure à la moyenne, ce qui en fait une voiture particulièrement fiable.\n\nEn conclusion, bien que la Volkswagen Golf et la Mazda 3 soient deux voitures technologiquement avancées, la Mazda 3 semble être plus fiable selon les statistiques. Cependant, chaque voiture a ses propres forces et faiblesses, et le choix dépendra de vos besoins et préférences personnels.\n\nNous vous invitons à consulter notre tableau de statistiques détaillé à la fin de cet article pour une comparaison plus approfondie. N'oubliez pas, une voiture fiable est un investissement qui vous apportera tranquillité d'esprit et satisfaction à long terme.\n\nMots-clés : voiture, défauts, fiabilité, comparaison, statistiques.",
-        "url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
-        "cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
-      }
-    }
-  }
+	"error": {
+		"LOAD_ERROR": "Load error"
+	},
+	"warn": {
+		"NO_DATA": "We are sorry, but we do not have enougth data for "
+	},
+	"defect_category": {
+		"safety": "Safety",
+		"electronics": "Electronics",
+		"light": "Light",
+		"transmission": "transmission",
+		"other": "Other",
+		"equipment": "Equipment",
+		"engine": "Engine",
+		"brake": "Brake",
+		"suspension": "Suspension"
+	},
+	"label": {
+		"tips": {
+			"norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
+			"search": "Search over 4 million crashes",
+			"age_mileage": "Compare defects by age or mileage",
+			"category": "Select specific defect category"
+		},
+		"detail": {
+			"age": "Defect age",
+			"mileage": "Mileage"
+		},
+		"defect": {
+			"header": "Defect Description",
+			"description": "Please, provide defect details",
+			"cost": "Repair Cost, $",
+			"year": "Year, when defect occured",
+			"age": "Car Age, when defect occured",
+			"mileage": "Car Mileage, when defect occured",
+			"rating": "Rating: how serious is the defect?"
+		},
+		"cancel": "Cancel",
+		"main_header": "A Car Service Calls Statistics",
+		"norm": "Normalized",
+		"total": "total",
+		"by_age": "by Age",
+		"by_mileage": "by Mileage",
+		"chart": {
+			"by_age": {
+				"total": {
+					"title": "All Defects by Age",
+					"tooltip": "total defects"
+				},
+				"norm": {
+					"title": "Defects by Age Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Age of Defect"
+			},
+			"by_mileage": {
+				"total": {
+					"title": "All Defects by Mileage",
+					"tooltip": "total defects"
+				},
+				"norm": {
+					"title": "Defects by Mileage Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Car Mileage"
+			}
+		},
+		"add_data": "Add Data",
+		"update": "Update",
+		"load_details": "Load more details",
+		"apply": "Apply",
+		"applied": "Applied",
+		"reset": "Reset",
+		"post": "Post",
+		"posted": "Posted!",
+		"more": "More",
+		"search_by": "Search for defects by ",
+		"model": "Model",
+		"brand": "Brand",
+		"gen": "Generation",
+		"gen_start": "Release start",
+		"gen_finish": "Release end",
+		"version": "Version",
+		"engine": {
+			"name": "Engine",
+			"displacement": "Displacement",
+			"cylinders": "Cylinders",
+			"valves": "Valves",
+			"fuel_type": "Fuel type",
+			"power_hp": "Power (hp)",
+			"torque": "torque"
+		},
+		"trans": {
+			"name": "transmission",
+			"acceleration": "Acceleration",
+			"consumtion": "Consumtion",
+			"gears": "Gears"
+		}
+	},
+	"text": {
+		"about": {
+			"header": "About this site",
+			"text": "If you have ever chosen a car for yourself, you have probably watched a lot of car reviews, where bloggers of different competence told you about the pros and cons of every car and recommended what to buy. The problem is that all of these reviews are subjective, and if you are a rational mature person, and reliability of a car in the long term is important for you, you may be interested in analysis of call statistics service.\n\nThere are awesome sites such as carcomplaints.com, carproblemzoo.com, nhtsa.gov, where people describe problems encountered during the period of their car exploitation. But unfortunately there are no charts on these sites, so you can't visually compare different models and figure out which is more problematic.\n\nthat's why I’ve created my own website car-defects.com, collecting all the information from these useful resources and presenting it as graphs. Here you can compare car models, model generations and versions, visualize by age or mileage, and, for objectivity, consider normalized data i.e. the number of crashes per 10,000 cars sold. The site has information about 4 million crashes, and you can also contribute to the project by sharing your own experience.\n\nIt's a non-commercial project, created on a voluntary basis, and it is still on alpha release."
+		},
+		"article": {
+			"japanese_top_selling_compact_suvs": {
+				"title": "Japanese top-selling compact SUVs",
+				"cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
+				"url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
+				"text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
+			},
+			"most_reliable_honda_models": {
+				"title": "Most reliable Honda cars",
+				"text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
+				"url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
+				"cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"honda accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
+			},
+			"reliability_of_toyota_camry_and_honda_accord_engines": {
+				"title": "\"Fiabilité des moteurs Toyota Camry vs Honda Accord: Une Analyse Technique Décisive\"",
+				"text": " \"Fiabilité des moteurs Toyota Camry vs Honda  Une Analyse Technique Décisive\"\n\n\nLa quête de la voiture parfaite mène inéluctablement à la question de la fiabilité. Une composante déterminante pour tous les passionnés de l'automobile, elle reste l'objectif ultime lors de l'acquisition d'un nouveau véhicule. La Toyota Camry et la Honda Accord, deux géants de l'industrie, se distinguent par leur réputation de durabilité et de performances fiables. Dans cet article, nous plongeons au cœur de leurs moteurs, pour décrypter les secrets de cette fiabilité tant convoitée. Attachez votre ceinture, nous allons explorer en détail les technologies clés qui propulsent ces modèles vers les sommets des statistiques de fiabilité.\n\nFiabilité  La Constance de Toyota\nToyota s'est taillée une réputation de robustesse légendaire grâce à son approche méticuleuse de la conception de moteurs. Ces derniers, testés dans les conditions les plus exigeantes, démontrent une endurance impressionnante. La Camry, en particulier, bénéficie du moteur 'Dynamic Force', qui allie économie de carburant et réponse instantanée à l'accélérateur. Ce moteur 4 cylindres 2.5L, doté de l'injection directe D-4S, optimise la combustion, réduit les déperditions d'énergie et minimise les défauts, factoïds clés de la longévité du véhicule.\n\nL'Ingénierie Moteur Innovante de Honda Accord\nDe son côté, Honda a toujours été synonyme de technologie de pointe et de performances fiables. Le moteur de l'Accord, avec son célèbre i-VTEC, combine à merveille la puissance à haut régime et l'efficacité énergétique. Les ingénieurs de Honda ont réussi à conjuguer la variabilité du contrôle des soupapes avec le système de gestion du calage pour adapter le comportement du moteur aux diverses conditions de conduite. En conséquence, les statistiques de fiabilité sont exceptionnelles, traduisant un nombre réduit de problèmes à long terme.\n\nComparaison  Mesure de la Durabilité\nD'après les données collectées et les rapports d'utilisateurs, les moteurs de la Toyota Camry et de la Honda Accord sont au coude à coude en termes de défauts rapportés. Tandis que la Camry brille par sa construction traditionnelle qui a fait ses preuves, l'Accord se révèle robuste avec une tendance à l'innovation technique. Cependant, à travers des tests indépendants et des enquêtes de fiabilité, il ressort que ces deux voitures jouissent de taux de satisfaction élevés relatifs au peu de visites imprévues chez le mécanicien. Cette réputée fiabilité a un impact direct sur les coûts de maintenance, faisant de ces modèles des choix économiquement avisés.\n\nAvancées  Au Cœur de la Performance\nLe monde de la voiture est en constante évolution et la détermination de la fiabilité d'un moteur passe incontestablement par les avancées technologiques déployées. À cet égard, Camry et Accord ne déçoivent pas. La Camry, avec son système de calage variable intelligent des soupapes (VVT-i) et le refroidissement EGR, assure une combustion optimale et contribue ainsi à une meilleure fiabilité. Pendant ce temps, l’Accord, avec sa technologie Earth Dreams, intègre intelligemment un turbo qui permet de maximiser la puissance sans compromettre la durabilité.\n\nConclusion \nFinalement, Toyota Camry et Honda Accord offrent des moteurs à la fiabilité épiquée, grâce à des technologies maîtrisées et une conception sans compromis. La voiture ne se résume pas à son allure, mais également à ce qui l'anime, ce cœur battant sous le capot qui inspire confiance et fidélité. Que vous préfériez la constance efficace de la Camry ou l'audace technologique de la Honda Accord, ces modèles illustrent parfaitement que haute performance et fiabilité ne sont pas antinomiques – ce sont les véritables champions de la route en termes de qualité et d'endurance. Prenez le volant de la fiabilité avec ces véhicules exemplaires, et roulez avec la certitude d'avoir fait le choix de l'excellence en matière de motorisation.",
+				"url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
+				"cards": "[{\"title\":\"Toyota Camry Engine\",},{\"title\":\"Honda Accord Engine\",}]"
+			},
+			"audi_a4_last_3_generation": {
+				"title": "Reliability of the Audi A4 over the last 3 generations",
+				"url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
+				"cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
+				"text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
+			},
+			"how_repair_costs_change_as_subaru_models_age": {
+				"title": "How Repair Costs Change As Subaru Models Age",
+				"text": "Subaru has earned a reputation for reliability, but even their vehicles require repairs as the odometer accumulates miles. Tracking service costs by mileage provides insight into which models remain affordable to maintain.\n\nThe Subaru Ascent midsize SUV averages around $350 yearly in repairs during the first 50,000 miles. From 50,000 to 100,000 miles, this rises to $400 annually, and beyond 100,000 miles costs reach about $475.\n\nThe B9 Tribeca midsize SUV follows a similar pattern. In the first 50,000 miles, owners report spending roughly $300 per year on unscheduled repairs. From 50,000 to 100,000 miles this increases to $375, and after 100,000 miles jumps to $450. \n\nOur car service call statistics data show that Ascent had more defects than Tribeca (almost double)\n\nOn the other hand, the Baja compact pickup displays a relatively comparable trend. For the first 50,000 miles, drivers pay approximately $250 yearly for repairs. Baja has the lowest number of service calls of the pack within the first 25,000 miles (refer to the car service call statistics data provided below).\n\nThis climbs to $325 for 50,000 to 100,000 miles and hits $400 beyond 100,000 miles.\n\nWhile maintenance costs rise as mileage increases in Subarus, they remain relatively affordable compared to other brands. Baja has the lowest average repair bills across its lifespan. The Ascent is most expensive to maintain long-term compared to the three. But even higher-maintenance Subarus remains cost-effective.\n\nProper maintenance and repair of small issues early help minimize major repair costs down the road. But Subarus' reputation for reliability and longevity shines through in the data, no matter the mileage. ",
+				"url": "#entity_params=%7B%22subaru+ascent%22%3A%7B%22modelID%22%3A%22633%22%7D%2C%22subaru+b9%22%3A%7B%22modelID%22%3A%22634%22%7D%2C%22subaru+baja%22%3A%7B%22modelID%22%3A%22635%22%7D%7D&data_params=%7B%22total%22%3Atrue%2C%22by_mileage%22%3Atrue%7D",
+				"cards": "[{\"title\":\"Subaru Ascent\"},{\"title\":\"Subaru B9\"},{\"title\":\"Subaru Baja\"}]"
+			},
+			"who_wins_on_reliability_toyota_or_lexus": {
+				"cards": "[]",
+				"title": "Crunching the Numbers: Who Wins on Reliability - Toyota or Lexus?",
+				"text": "We all want our rides to be reliable and affordable to maintain. \n\nAmong the brands with  an unbeatable reputation for reliability are Toyota and Lexus. But just how reliable are these Japanese brands compared to each other? \n\nLet's crunch the numbers.\n\nAnalysis of car service call statistics reveals that Lexus edges out Toyota slightly when it comes to long-term reliability per mile driven. The average Toyota have over 27,000 defects reported by 25,000 miles. Lexus models have far less at around 2000 reported defects within the same mileage. \n\nFrom the brand model generation search bar:\n\nChoose Toyota and then click “Search for defects by Toyota” on the far right. A graph will come up with the generated data, pulled from useful resources such as nhtsa.gov. \n\n Next, click on the brand model generation search bar and choose Lexus (for the comparison), and then click  “Search for defects by Lexus.” This includes a Lexus bar chart, beside the Toyota in orange. \n\nYou can click “By age” or “Mileage” to get the visual comparison data. \n\nFor our case, we used “Total” defects by “Mileage” to get the below bar chart.\n\n\n\n\nSo, what makes Lexus the king of reliability mile after mile? It comes down to higher-grade components, more stringent quality control, and fewer standard features to break. Lexus also offers things like stainless steel exhausts that Toyota doesn't.\n\nOf course, Toyota still tops all non-luxury brands for longevity. But for that extra dose of bulletproof dependability, Lexus takes the crown. Its ultra-durable build and upscale parts ensure it outlasts its parent company by tens of thousands of miles before repairs are needed.",
+				"url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D&data_params=%7B%22by_mileage%22%3Atrue%2C%22total%22%3Atrue%7D"
+			},
+			"toyota_camry_vs_honda_accord_vs_mazda_6_reliability_comparison": {
+				"title": "Reliability Comparison of Toyota Camry vs Honda Accord vs Mazda 6 Based on Statistics",
+				"text": "Reliability Comparison of Toyota Camry vs Honda Accord vs Mazda 6 Based on Statistics\n\nWhen it comes to purchasing a new car, reliability is often one of the top concerns for buyers. After all, no one wants to invest their hard-earned money in a vehicle that will constantly break down or require expensive repairs. In this article, we will compare the reliability of three popular midsize sedans: the Toyota Camry, Honda Accord, and Mazda 6, based on statistics.\n\nToyota Camry:\nThe Toyota Camry has long been known for its reliability and durability. According to various reliability studies and consumer reports, the Camry consistently ranks high in terms of reliability. For example, the J.D. Power Vehicle Dependability Study consistently rates the Camry as one of the most reliable vehicles in its class. Additionally, the Camry has received high scores in the Consumer Reports reliability ratings, with above-average reliability scores for most model years.\n\nHonda Accord:\nThe Honda Accord is another midsize sedan that has built a reputation for reliability over the years. Like the Camry, the Accord consistently receives high marks in reliability studies. The J.D. Power Vehicle Dependability Study has consistently ranked the Accord as one of the most reliable vehicles in its class. Consumer Reports also rates the Accord highly in terms of reliability, with above-average scores for most model years.\n\nMazda 6:\nWhile the Mazda 6 may not have the same longstanding reputation for reliability as the Camry and Accord, it has made significant strides in recent years. According to various reliability studies, the Mazda 6 has shown improvement in terms of reliability. For example, the J.D. Power Vehicle Dependability Study has seen the Mazda 6's reliability scores improve over time. However, it is worth noting that the Mazda 6 may still have slightly lower reliability scores compared to the Camry and Accord.\n\nIn terms of specific reliability issues, all three vehicles have their own strengths and weaknesses. However, it is important to note that these issues can vary depending on the model year and specific trim level. It is always recommended to research the reliability of a specific model year and trim level before making a purchase.\n\nIn conclusion, when comparing the reliability of the Toyota Camry, Honda Accord, and Mazda 6, all three vehicles have a strong reputation for reliability. The Camry and Accord have consistently ranked high in reliability studies and consumer reports, while the Mazda 6 has shown improvement in recent years. Ultimately, the choice between these three vehicles may come down to personal preference, budget, and specific needs.",
+				"url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
+				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
+			},
+			"toyota_camry_vs_honda_accord_vs_mazda_6": {
+				"title": "La fiabilité est un facteur essentiel à prendre en compte lors de l'achat d'une voiture. Il est important de choisir un véhicule qui offre une performance constante et qui ne nécessite pas de réparations fréquentes. Trois marques japonaises populaires, Toyota, Honda et Mazda, sont souvent considérées comme fiables. Dans cet article, nous allons comparer la fiabilité de trois modèles spécifiques : la Toyota Camry, la Honda Accord et la Mazda 6, en nous basant sur des statistiques fiables.",
+				"text": "La fiabilité est un facteur essentiel à prendre en compte lors de l'achat d'une voiture. Il est important de choisir un véhicule qui offre une performance constante et qui ne nécessite pas de réparations fréquentes. Trois marques japonaises populaires, Toyota, Honda et Mazda, sont souvent considérées comme fiables. Dans cet article, nous allons comparer la fiabilité de trois modèles spécifiques : la Toyota Camry, la Honda Accord et la Mazda 6, en nous basant sur des statistiques fiables.\n\nSelon les données recueillies par des organismes de recherche automobile tels que J.D. Power et Consumer Reports, la Toyota Camry est souvent considérée comme l'une des voitures les plus fiables sur le marché. Elle a obtenu de nombreux prix pour sa fiabilité exceptionnelle au fil des ans. La Camry est réputée pour sa durabilité et sa faible probabilité de rencontrer des problèmes mécaniques. Les propriétaires de Camry ont souvent rapporté une satisfaction élevée en termes de fiabilité.\n\nLa Honda Accord est également bien classée en termes de fiabilité. Elle est souvent considérée comme une concurrente directe de la Camry. Selon les statistiques, la fiabilité de l'Accord est généralement excellente, bien qu'elle puisse être légèrement inférieure à celle de la Camry. Cependant, la différence est minime et la plupart des propriétaires d'Accord sont satisfaits de la performance et de la fiabilité de leur véhicule.\n\nEn ce qui concerne la Mazda 6, elle est également considérée comme une voiture fiable, bien qu'elle puisse être légèrement en deçà de la Camry et de l'Accord en termes de fiabilité. Cependant, il est important de noter que la Mazda 6 a connu des améliorations significatives au fil des ans et est devenue de plus en plus fiable. Les propriétaires de Mazda 6 ont souvent rapporté une satisfaction élevée en termes de performances et de durabilité.\n\nIl est important de noter que la fiabilité d'une voiture peut varier en fonction de plusieurs facteurs, tels que l'entretien régulier, les conditions de conduite et le style de conduite du propriétaire. Cependant, les statistiques générales fournissent une indication solide de la fiabilité d'un modèle spécifique.\n\nEn conclusion, la Toyota Camry est souvent considérée comme la voiture la plus fiable parmi les trois modèles mentionnés. Cependant, la Honda Accord et la Mazda 6 sont également des choix fiables et populaires. Il est recommandé de prendre en compte d'autres facteurs tels que le prix, les caractéristiques et les préférences personnelles lors de la prise de décision finale.",
+				"url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
+				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
+			},
+			"volkswagen_golf_vs_mazda_3": {
+				"title": "Comparaison de la fiabilité de la Volkswagen Golf vs Mazda 3 basée sur les statistiques : Un regard détaillé",
+				"text": "Titre de l'article : \"Comparaison de la fiabilité de la Volkswagen Golf vs Mazda 3 basée sur les statistiques : Un regard détaillé\"\n\nIntroduction : Vous êtes à la recherche d'une voiture fiable, performante et technologiquement avancée ? Vous hésitez entre la Volkswagen Golf et la Mazda 3 ? Ne cherchez plus, nous avons analysé pour vous les statistiques de fiabilité de ces deux modèles phares. Découvrez dans cet article une comparaison détaillée qui vous aidera à faire le meilleur choix.\n\nLa fiabilité d'une voiture est un critère essentiel lors de l'achat. Elle dépend de nombreux facteurs tels que la qualité de fabrication, la technologie embarquée, la fréquence et la gravité des défauts. Une voiture fiable est une voiture qui nécessite peu de réparations, qui offre une conduite confortable et sécurisée, et dont la valeur de revente reste élevée.\n\nLa Volkswagen Golf et la Mazda 3 sont deux voitures qui se distinguent par leur technologie de pointe. Elles sont équipées de systèmes d'assistance à la conduite avancés, de moteurs performants et économiques, et d'intérieurs confortables et bien conçus. Cependant, leur fiabilité diffère selon les statistiques.\n\nLa Volkswagen Golf est reconnue pour sa qualité de fabrication allemande. Elle est équipée d'un moteur TSI puissant et économique, d'un système d'infodivertissement intuitif et d'une multitude de systèmes d'assistance à la conduite. Cependant, certaines statistiques indiquent une fréquence de défauts plus élevée que la moyenne, notamment en ce qui concerne l'électronique embarquée.\n\nLa Mazda 3, quant à elle, est réputée pour sa fiabilité exceptionnelle. Elle est équipée d'un moteur Skyactiv-G performant et économe en carburant, d'un système d'infodivertissement facile à utiliser et d'une multitude de technologies de sécurité. Les statistiques montrent une fréquence de défauts inférieure à la moyenne, ce qui en fait une voiture particulièrement fiable.\n\nEn conclusion, bien que la Volkswagen Golf et la Mazda 3 soient deux voitures technologiquement avancées, la Mazda 3 semble être plus fiable selon les statistiques. Cependant, chaque voiture a ses propres forces et faiblesses, et le choix dépendra de vos besoins et préférences personnels.\n\nNous vous invitons à consulter notre tableau de statistiques détaillé à la fin de cet article pour une comparaison plus approfondie. N'oubliez pas, une voiture fiable est un investissement qui vous apportera tranquillité d'esprit et satisfaction à long terme.\n\nMots-clés : voiture, défauts, fiabilité, comparaison, statistiques.",
+				"url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
+				"cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
+			}
+		}
+	}
 }

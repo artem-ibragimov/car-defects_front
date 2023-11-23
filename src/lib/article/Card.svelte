@@ -10,6 +10,7 @@
 <div class="Card" class:Card__text={!!text} class:Card-href={href}>
 	<a class="Card__a" {href}>
 		<img
+			loading="lazy"
 			class="Card__banner"
 			src={`/assets/img/${imgSrc}.webp`}
 			alt={title}

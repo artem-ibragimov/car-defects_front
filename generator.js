@@ -35,9 +35,9 @@ function generate(url) {
 	// 		// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
 	// 	}
 	// });
-	const cards = "[{\"title\":\"Toyota Camry Engine\",},{\"title\":\"Honda Accord Engine\",}]";// JSON.stringify(cars.map((title) => ({ title })));
+	const cards = '[{"title":"Toyota Camry Engine",},{"title":"Honda Accord Engine",}]'; // JSON.stringify(cars.map((title) => ({ title })));
 	// const query = cars.join(' vs ');
-	const poster = 'reliability_of_toyota_camry_and_honda_accord_engines';// `${query}`.replaceAll(' ', '_').toLowerCase();
+	const poster = 'reliability_of_toyota_camry_and_honda_accord_engines'; // `${query}`.replaceAll(' ', '_').toLowerCase();
 	try {
 		readFileSync(`./static/assets/img/${poster}.webp`);
 	} catch (e) {
@@ -160,7 +160,7 @@ function generateArticle(locale, content, poster, url, cards) {
 				}
 				const json = JSON.parse(data);
 				json.text.article[poster] = {
-					title:text.split('\n\n')[0],
+					title: text.split('\n\n')[0],
 					text: text.replace(/\w+:/gi, ''),
 					url: new URL(url).hash,
 					cards
