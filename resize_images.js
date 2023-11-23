@@ -13,17 +13,21 @@ try {
 }
 
 /**
- * 
- * @param {string} dir 
- * @param {number[]} widths 
+ *
+ * @param {string} dir
+ * @param {number[]} widths
  */
 function resize_images(dir, widths) {
 	const paths = collectPaths(dir);
 	const size_prefix = '--';
 	paths.forEach((p) => {
 		sizeOf(p, (err, dimensions) => {
-			if (err) { return error(err); }
-			if (!dimensions || !dimensions.width || !dimensions.height) { return; }
+			if (err) {
+				return error(err);
+			}
+			if (!dimensions || !dimensions.width || !dimensions.height) {
+				return;
+			}
 			const aspect_ratio = dimensions.width / dimensions.height;
 			const [fullpath, extension] = p.split('.');
 			const [img_path, size] = fullpath.split(size_prefix);
@@ -46,7 +50,5 @@ function resize_images(dir, widths) {
 function collectPaths(root) {
 	const paths = readdirSync(root).map((entity_name) => path.join(root, entity_name));
 	const dir_paths = paths.filter((p) => !p.includes('.'));
-	return paths
-		.filter((p) => p.endsWith('.webp'))
-		.concat(...dir_paths.map(collectPaths));
+	return paths.filter((p) => p.endsWith('.webp')).concat(...dir_paths.map(collectPaths));
 }

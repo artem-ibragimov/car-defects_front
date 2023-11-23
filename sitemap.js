@@ -41,30 +41,32 @@ function createSiteMap(dir, options) {
 		xmlns:xhtml="http://www.w3.org/1999/xhtml"   
 	>
 ${non_articles_paths
-			.map((p) => `	\t<url>
+	.map(
+		(p) => `	\t<url>
 		\t<loc>${options.origin}${p}</loc>
 		\t<lastmod>${options.lastmod}</lastmod>
 		\t<changefreq>${options.changefreq}</changefreq>
 		\t<priority>${options.priority}</priority>
-	\t</url>`)
-			.join('\n')}
+	\t</url>`
+	)
+	.join('\n')}
 	${articles_paths
-			.map(
-				(locales) =>
-					`\t<url>
+		.map(
+			(locales) =>
+				`\t<url>
 	\t<loc>${options.origin}${locales.find(([lang, _]) => lang === 'en')[1]}</loc>
 	\t<lastmod>${options.lastmod}</lastmod>
 	\t<changefreq>${options.changefreq}</changefreq>
 	\t<priority>${options.priority}</priority>
 ${locales
-						.map(
-							([lang, path]) =>
-								`	\t<xhtml:link rel="alternate" hreflang="${lang}" href="${options.origin}${path}"/>`
-						)
-						.join('\n')}
+	.map(
+		([lang, path]) =>
+			`	\t<xhtml:link rel="alternate" hreflang="${lang}" href="${options.origin}${path}"/>`
+	)
+	.join('\n')}
 	</url>`
-			)
-			.join('\n')}
+		)
+		.join('\n')}
 </urlset>`
 	);
 }

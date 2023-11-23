@@ -62,7 +62,7 @@ function generate(url) {
 		fr: `Write in French ${prompt}`,
 		pt: `Write in Portuguese ${prompt}`,
 		jp: `Write in Japanese ${prompt}`,
-		zh: `Write in Chinese ${prompt}`,
+		zh: `Write in Chinese ${prompt}`
 	});
 	warn(`Need images:\n ${imgs.join('\n')}`);
 	// info(`Wait for ChatGPT images generation: ${imgs}`);
@@ -80,12 +80,19 @@ function generate(url) {
 	// );
 
 	info('Wait for ChatGPT articles generation ....');
-	queries.reduce(
-		(chain, [locale, content]) =>
-			chain
-				.then(() => new Promise((r) => { setTimeout(r, 60000); }))
-				.then(() => generateArticle(locale, query, content, poster, url, cards)),
-		Promise.resolve())
+	queries
+		.reduce(
+			(chain, [locale, content]) =>
+				chain
+					.then(
+						() =>
+							new Promise((r) => {
+								setTimeout(r, 60000);
+							})
+					)
+					.then(() => generateArticle(locale, query, content, poster, url, cards)),
+			Promise.resolve()
+		)
 		.catch(error);
 	// Promise.all(
 	// 	queries.map(([locale, content]) => generateArticle(locale,query, content, poster, url, cards))
@@ -154,7 +161,9 @@ function generateArticle(locale, query, content, poster, url, cards) {
 				}
 				const json = JSON.parse(data);
 				json.text.article[poster] = {
-					title: /".*"/.exec(v.choices[0].message.content)?.[0] || v.choices[0].message.content.split('\n\n')[0],
+					title:
+						/".*"/.exec(v.choices[0].message.content)?.[0] ||
+						v.choices[0].message.content.split('\n\n')[0],
 					text: v.choices[0].message.content,
 					url: new URL(url).hash,
 					cards

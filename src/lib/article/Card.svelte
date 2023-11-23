@@ -15,7 +15,8 @@
 			alt={title}
 			{title}
 			{srcset}
-			width="400" height="220"
+			width="400"
+			height="220"
 			sizes="400px"
 		/>
 		<div class="Card__content">

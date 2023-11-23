@@ -7,12 +7,21 @@
 	// 	$selected === 'ru'
 	// 		? 'https://www.youtube.com/embed/72VB1F1sX7s?si=05z6te_SDblAJoi1&amp;controls=0'
 	// 		: 'https://www.youtube.com/embed/km0wsB0xBV4?controls=0';
-	const imgSrc = `poster`
+	const imgSrc = `poster`;
 	const widths = [320, 480, 640, 720, 1280, 1600];
-	$: srcset = imgSrc ? widths.map((w) => `/assets/img/en/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
+	$: srcset = imgSrc
+		? widths.map((w) => `/assets/img/en/${imgSrc}--${w}.webp ${w}w`).join(', ')
+		: '';
 </script>
 
-<img class="Trailer" width="100%" src={ `/assets/img/en/${imgSrc}.webp`} alt="Poster" {srcset} sizes="(max-width: 500px) 66vw, 750px" />
+<img
+	class="Trailer"
+	width="100%"
+	src={`/assets/img/en/${imgSrc}.webp`}
+	alt="Poster"
+	{srcset}
+	sizes="(max-width: 500px) 66vw, 750px"
+/>
 
 <!-- <iframe
 	class="Trailer"
