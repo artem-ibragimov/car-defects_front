@@ -1,16 +1,18 @@
 <script lang="ts">
+	export let lazy: boolean = false;
 	export let title: string = '';
 	export let text: string = '';
 	export let imgSrc: string = '';
 	export let href: string | undefined;
 	const widths = [320, 480, 640, 720, 1280, 1600];
 	$: srcset = imgSrc ? widths.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
+	$: loading = lazy ? 'lazy' : 'eager';
 </script>
 
 <div class="Card" class:Card__text={!!text} class:Card-href={href}>
 	<a class="Card__a" {href}>
 		<img
-			loading="lazy"
+			{loading}
 			class="Card__banner"
 			src={`/assets/img/${imgSrc}.webp`}
 			alt={title}

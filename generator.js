@@ -37,7 +37,7 @@ function generate(url) {
 	// });
 	const cards = '[{"title":"Toyota Camry Engine",},{"title":"Honda Accord Engine",}]'; // JSON.stringify(cars.map((title) => ({ title })));
 	// const query = cars.join(' vs ');
-	const poster = 'reliability_of_toyota_camry_and_honda_accord_engines'; // `${query}`.replaceAll(' ', '_').toLowerCase();
+	const poster = 'reliability_of_toyota_camry_and_honda_accord_engines'; // `${query}`.replaceAll(' ', '-').toLowerCase();
 	try {
 		readFileSync(`./static/assets/img/${poster}.webp`);
 	} catch (e) {
@@ -115,7 +115,7 @@ readline.question('Enter car defects URL: ', (url) => {
 // 	return openai.images
 // 		.generate({
 // 			model: 'dall-e-3',
-// 			prompt: `${name.replaceAll('_', ' ')}, realistic, high-quality photos, UHD`,
+// 			prompt: `${name.replaceAll('-', ' ')}, realistic, high-quality photos, UHD`,
 // 			quality: 'hd',
 // 			style: 'natural',
 // 			n: 1,

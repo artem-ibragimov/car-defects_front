@@ -26,8 +26,9 @@
 
 {#if cards.length > 0}
 	<div class="Cards">
-		{#each cards as card}
+		{#each cards as card, i}
 			<Card
+				lazy={i !== 0}
 				title={card.title}
 				imgSrc={card.imgSrc || card.title}
 				href={card.href}
