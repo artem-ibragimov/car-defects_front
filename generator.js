@@ -1,6 +1,5 @@
 import chalk from 'chalk';
-import { createWriteStream, readFile, readFileSync, writeFile } from 'fs';
-import { get } from 'https';
+import { readFile, readFileSync, writeFile } from 'fs';
 import { OpenAI } from 'openai';
 import { createInterface } from 'readline';
 
@@ -22,34 +21,32 @@ const openai = new OpenAI(configuration);
  * @param {string} url
  */
 function generate(url) {
-	// const decoded = decodeURIComponent(
-	// 	new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
-	// );
-	// const cars = Object.keys(JSON.parse(decoded));
+	const decoded = decodeURIComponent(
+		new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
+	);
+	const cars = Object.keys(JSON.parse(decoded));
 	const imgs = [];
-	// cars.forEach((car) => {
-	// 	try {
-	// 		readFileSync(`./static/assets/img/${car}.webp`);
-	// 	} catch (e) {
-	// 		imgs.push(car);
-	// 		// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
-	// 	}
-	// });
-	const cards = '[{"title":"Toyota Camry Engine",},{"title":"Honda Accord Engine",}]'; // JSON.stringify(cars.map((title) => ({ title })));
-	// const query = cars.join(' vs ');
-	const poster = 'reliability_of_toyota_camry_and_honda_accord_engines'; // `${query}`.replaceAll(' ', '-').toLowerCase();
+	cars.forEach((car) => {
+		try {
+			readFileSync(`./static/assets/img/${car}.webp`);
+		} catch (e) {
+			imgs.push(car);
+			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
+		}
+	});
+	const cards = JSON.stringify(cars.map((title) => ({ title })));
+	const query = cars.join(' vs ');
+	const poster = `${query}`.replaceAll(' ', '-').toLowerCase();
 	try {
 		readFileSync(`./static/assets/img/${poster}.webp`);
 	} catch (e) {
 		imgs.push(poster);
 	}
 	const prompt = `
-	catchy article with higher CTR for analytics website about "Reliability of Toyota Camry and Honda Accord engines"
+	catchy article with higher CTR for analytics website about "Reliability Comparison of ${query} Based on Statistics"
 	explain why cars are reliable or not, 
 	describe key technologies in details,
 	Add a benefit-focused intro,
-	get deep in car technical details
-	be car expert,
 	use SEO keywords: car,defects,reliability,comparison,statistics,
 	`;
 	const queries = Object.entries({
@@ -142,10 +139,9 @@ readline.question('Enter car defects URL: ', (url) => {
 function generateArticle(locale, content, poster, url, cards) {
 	return openai.chat.completions
 		.create({
-			model: 'gpt-4-1106-preview',
+			model: 'gpt-3.5-turbo-1106',
 			messages: [{ role: 'user', content }],
-			temperature: 1,
-			max_tokens: 4000
+			temperature: 1
 		})
 		.then((v) => {
 			const filename = `src/lib/i18n/${locale}.json`;
@@ -153,14 +149,14 @@ function generateArticle(locale, content, poster, url, cards) {
 				if (err) {
 					return error(chalk.red(err));
 				}
-				const text = v.choices[0].message.content;
+				const text = v.choices[0].message.content?.replace('"', '');
 				if (!text) {
 					warn(v.choices[0].message);
 					return;
 				}
 				const json = JSON.parse(data);
 				json.text.article[poster] = {
-					title: text.split('\n\n')[0],
+					title: `${text.slice(0, 100)}...`,
 					text: text.replace(/\w+:/gi, ''),
 					url: new URL(url).hash,
 					cards

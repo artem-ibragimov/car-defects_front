@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { DATA_PARAMS } from '$lib/store/defectFilter/dataParams.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import { _ } from 'svelte-i18n';
 	import ChartFrame from './ChartFrame.svelte';

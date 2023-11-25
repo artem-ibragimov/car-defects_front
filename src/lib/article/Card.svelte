@@ -20,7 +20,7 @@
 			{srcset}
 			width="400"
 			height="220"
-			sizes="400px"
+			sizes="(max-width: 500px) 100vw, 30vw"
 		/>
 		<div class="Card__content">
 			<h4 class="Card__title">{title}</h4>
