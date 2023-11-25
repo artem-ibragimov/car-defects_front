@@ -34,16 +34,17 @@ function generate(url) {
 			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
 		}
 	});
-	const cards = JSON.stringify(cars.map((title) => ({ title })));
+	const cards = "[]" //JSON.stringify(cars.map((title) => ({ title })));
 	const query = cars.join(' vs ');
-	const poster = `${query}`.replaceAll(' ', '-').toLowerCase();
+	// const poster = `${query}`.replaceAll(' ', '-').toLowerCase();
+	const poster = 'who-wins-on-reliability-toyota-or-lexus';
 	try {
 		readFileSync(`./static/assets/img/${poster}.webp`);
 	} catch (e) {
 		imgs.push(poster);
 	}
 	const prompt = `
-	catchy article with higher CTR for analytics website about "Reliability Comparison of ${query} Based on Statistics"
+	catchy article with higher CTR for analytics website about "Reliability Comparison of Toyota vs Lexus based on Statistics"
 	explain why cars are reliable or not, 
 	describe key technologies in details,
 	Add a benefit-focused intro,
@@ -141,7 +142,7 @@ function generateArticle(locale, content, poster, url, cards) {
 		.create({
 			model: 'gpt-3.5-turbo-1106',
 			messages: [{ role: 'user', content }],
-			temperature: 1
+			temperature: .9
 		})
 		.then((v) => {
 			const filename = `src/lib/i18n/${locale}.json`;
@@ -156,8 +157,8 @@ function generateArticle(locale, content, poster, url, cards) {
 				}
 				const json = JSON.parse(data);
 				json.text.article[poster] = {
-					title: `${text.slice(0, 100)}...`,
-					text: text.replace(/\w+:/gi, ''),
+					title: `${text.slice(0, 75)}...`,
+					text,
 					url: new URL(url).hash,
 					cards
 				};
