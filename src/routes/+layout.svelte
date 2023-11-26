@@ -37,15 +37,13 @@
 	<title>{title}</title>
 	<meta name="description" content={description} />
 	<meta name="og:title" property="og:title" content={title} />
+	<meta property="og:url" content={data.url.toString()} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content="/assets/img/car.png" />
 	<meta name="keywords" content={keywords} />
 	<link rel="canonical" href={data.url.toString()} />
-	<!-- Google tag (gtag.js) -->
-	<!-- Google tag (gtag.js) -->
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3Z9TXBZ2M"></script>
+	<meta property="twitter:url" content={data.url.toString()} />
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {

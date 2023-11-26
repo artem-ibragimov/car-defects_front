@@ -7,6 +7,7 @@
 	import Content from './Content.svelte';
 	import Charts from './Charts.svelte';
 	import Cards from './Cards.svelte';
+	import { AVAILABLE_LOCALES } from '$lib/i18n';
 
 	export let i18nPath: string;
 	export let title: string;
@@ -37,14 +38,23 @@
 
 <svelte:head>
 	<title>{title}</title>
+	<meta name="title" content={title} />
+	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
+
 	<meta name="og:title" property="og:title" content={title} />
-	<meta name="og:image" property="og:image" content={poster} />
+	<meta property="og:image" content={poster} />
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="en" />
-	<meta property="og:locale:alternate" content="ru" />
-	<meta name="description" content={description} />
+	{#each AVAILABLE_LOCALES as locale}
+		<meta property="og:locale:alternate" content={locale} />
+	{/each}
 	<meta property="og:description" content={description} />
-	<meta name="keywords" content={keywords} />
+
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:title" content={title} />
+	<meta property="twitter:description" content={description} />
+	<meta property="twitter:image" content={poster} />
 
 	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>

@@ -12,7 +12,6 @@
 	import Model from './AddData/Model.svelte';
 	import Version from './AddData/Version.svelte';
 	import Header from './Header.svelte';
-	import { ROUTE_NAMES } from '$lib/store/route.store';
 
 	const CLIENT_ID = '191231991212-et6ncfu3oht9lal9omnvvl6dmg06op4a.apps.googleusercontent.com';
 
