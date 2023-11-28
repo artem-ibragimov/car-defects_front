@@ -3,11 +3,15 @@ import { existsSync, readdirSync } from 'fs';
 import sizeOf from 'image-size';
 import path from 'path';
 import sharp from 'sharp';
+import imagemin from 'imagemin-keep-folder';
+import imageminWebp from 'imagemin-webp';
 
 const error = (e) => console.error(chalk.red(e));
-
+const FOLDER = './static/assets/img';
 try {
-	resize_images('./static/assets/img', [320, 480, 640, 720, 1280, 1600]);
+	resize_images(FOLDER, [320, 480, 640, 720,]);
+	imagemin([`${FOLDER}/**/*.{png,webp}`], { use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })] })
+		.then(console.log);
 } catch (e) {
 	error(e);
 }

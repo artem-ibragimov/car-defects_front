@@ -6,7 +6,15 @@
 	"configurations": [
 		{
 			"name": "Generator",
-			"program": "${workspaceFolder}/generator",
+			"program": "${workspaceFolder}/content/generator",
+			"request": "launch",
+			"skipFiles": ["<node_internals>/**"],
+			"type": "node",
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Poster",
+			"program": "${workspaceFolder}/content/poster",
 			"request": "launch",
 			"skipFiles": ["<node_internals>/**"],
 			"type": "node",

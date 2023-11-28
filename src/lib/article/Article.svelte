@@ -61,9 +61,10 @@
 
 <article class="Article">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
+	<img src={poster} alt={title}/>
 	<h1>{title}</h1>
-	<Cards {cards} />
 	<Content data={content} />
+	<Cards {cards} />
 	<Charts lg {title} {url} />
 	<ArticleLinks />
 </article>
