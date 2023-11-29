@@ -19,7 +19,7 @@
 	src={`/assets/img/en/${imgSrc}.webp`}
 	alt="Poster"
 	{srcset}
-	sizes="(max-width: 500px) 66vw, 750px"
+	sizes="(max-width: 500px) 0vw, 750px"
 />
 
 <!-- <iframe

@@ -7,8 +7,7 @@ c.on('ready', function () {
 	collectPaths('./build').forEach((p) => {
 		const filename = path.relative('./build', p);
 		c.size(filename, (e, size) => {
-			if (e) throw e;
-			if (fs.statSync(p).size == size) {
+			if (!e && fs.statSync(p).size == size) {
 				console.log('Skip', p);
 				return;
 			}
