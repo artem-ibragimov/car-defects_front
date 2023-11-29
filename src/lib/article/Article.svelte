@@ -12,16 +12,21 @@
 	export let i18nPath: string;
 	export let title: string;
 	export let content: string;
-	export let name: keyof typeof ROUTE_NAMES.ARTICLE;
+	export let name: string;
 	export let cards: { title: string }[] = [];
 
 	const date = new Date().toISOString();
 
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.webp`;
-	$: description = `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
-	$: keywords = `car,defects,${cards
-		.map((c) => c.title)
-		.join(',')},reliability,comparison,statistics`;
+	$: description =
+		cards.length === 0
+			? name.replace(/-/g, ' ')
+			: `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
+	$: keywords =
+		cards.length === 0
+			? name.replace(/-/g, ',')
+			: `car,defects,${cards.map((c) => c.title).join(',')},reliability,comparison,statistics`;
+
 	$: cards = JSON.parse($_(`${i18nPath}.cards`));
 	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({
@@ -61,7 +66,7 @@
 
 <article class="Article">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
-	<img src={poster} alt={title}/>
+	<img src={poster} alt={title} />
 	<h1>{title}</h1>
 	<Content data={content} />
 	<Cards {cards} />

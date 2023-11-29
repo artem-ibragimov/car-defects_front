@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build && npm run sitemap",
 		"sitemap": "node sitemap.js",
-		"generate": "node generator.js",
+		"generate": "node ./content/generator.js",
 		"resize_images": "node resize_images.js",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

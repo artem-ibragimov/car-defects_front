@@ -21,10 +21,10 @@ const openai = new OpenAI(configuration);
 try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split("\n");
-	const unposted = topics.filter((t) => !t.includes(":posted"))[0];
+	const unposted = topics.filter((t) => !t.includes(":generated"))[0];
 	generateByTopic(unposted).then(() => {
 		const unpostedIndex = topics.findIndex((t) => t == unposted);
-		topics[unpostedIndex] = `${topics[unpostedIndex]}:posted`;
+		topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 		writeFileSync(file, topics.join('\n'));
 	}).catch(console.error);
 } catch (error) {
@@ -118,7 +118,8 @@ function generateImg(name) {
 	return openai.images
 		.generate({
 			model: 'dall-e-3',
-			prompt: `minimalistic poster for article "${name.replaceAll('-', ' ')}",  the Car Toy Model,  `,
+			prompt: ` poster for article "${name.replaceAll('-', ' ')}, real car toy, photorealistic
+			, close-up,  –ar 2:1"`,
 			quality: 'standard',
 			style: 'vivid',
 			n: 1,
