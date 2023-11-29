@@ -5,15 +5,19 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run sitemap",
-		"sitemap": "node sitemap.js",
+		"sitemap": "node ./tools/sitemap.js",
 		"generate": "node ./content/generator.js",
-		"resize_images": "node resize_images.js",
+		"posting": "node ./content/poster.js",
+		"resize_images": "node ./tools/resize_images.js",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"upload": "node ./tools/ftp.js",
+		"git": "git add . && git commit -m 'Auto-commit' && git push",
+		"just_do_it_all": "npm run generate && npm run resize_images && npm run format && npm run build && npm run upload && npm run git && npm run posting"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -28,6 +32,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"flat": "^5.0.2",
+		"ftp": "^0.3.10",
 		"imagemin-keep-folder": "^5.3.2",
 		"imagemin-webp": "^8.0.0",
 		"prettier": "^2.8.0",

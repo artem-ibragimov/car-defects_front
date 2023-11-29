@@ -1,159 +1,159 @@
 {
-  "error": {
-    "LOAD_ERROR": "Load error"
-  },
-  "warn": {
-    "NO_DATA": "We are sorry, but we do not have enougth data for "
-  },
-  "defect_category": {
-    "safety": "Safety",
-    "electronics": "Electronics",
-    "light": "Light",
-    "transmission": "transmission",
-    "other": "Other",
-    "equipment": "Equipment",
-    "engine": "Engine",
-    "brake": "Brake",
-    "suspension": "Suspension"
-  },
-  "label": {
-    "tips": {
-      "norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
-      "search": "Search over 4 million crashes",
-      "age_mileage": "Compare defects by age or mileage",
-      "category": "Select specific defect category"
-    },
-    "detail": {
-      "age": "Defect age",
-      "mileage": "Mileage"
-    },
-    "defect": {
-      "header": "Defect Description",
-      "description": "Please, provide defect details",
-      "cost": "Repair Cost, $",
-      "year": "Year, when defect occured",
-      "age": "Car Age, when defect occured",
-      "mileage": "Car Mileage, when defect occured",
-      "rating": "Rating: how serious is the defect?"
-    },
-    "cancel": "Cancel",
-    "main_header": "A Car Service Calls Statistics",
-    "norm": "Normalized",
-    "total": "total",
-    "by_age": "by Age",
-    "by_mileage": "by Mileage",
-    "chart": {
-      "by_age": {
-        "total": {
-          "title": "All Defects by Age",
-          "tooltip": "total defects"
-        },
-        "norm": {
-          "title": "Defects by Age Normalized",
-          "tooltip": "Average defects per 10,000 sales"
-        },
-        "y": "Number of Defects",
-        "x": "Age of Defect"
-      },
-      "by_mileage": {
-        "total": {
-          "title": "All Defects by Mileage",
-          "tooltip": "total defects"
-        },
-        "norm": {
-          "title": "Defects by Mileage Normalized",
-          "tooltip": "Average defects per 10,000 sales"
-        },
-        "y": "Number of Defects",
-        "x": "Car Mileage"
-      }
-    },
-    "add_data": "Add Data",
-    "update": "Update",
-    "load_details": "Load more details",
-    "apply": "Apply",
-    "applied": "Applied",
-    "reset": "Reset",
-    "post": "Post",
-    "posted": "Posted!",
-    "more": "More",
-    "search_by": "Search for defects by ",
-    "model": "Model",
-    "brand": "Brand",
-    "gen": "Generation",
-    "gen_start": "Release start",
-    "gen_finish": "Release end",
-    "version": "Version",
-    "engine": {
-      "name": "Engine",
-      "displacement": "Displacement",
-      "cylinders": "Cylinders",
-      "valves": "Valves",
-      "fuel_type": "Fuel type",
-      "power_hp": "Power (hp)",
-      "torque": "torque"
-    },
-    "trans": {
-      "name": "transmission",
-      "acceleration": "Acceleration",
-      "consumtion": "Consumtion",
-      "gears": "Gears"
-    }
-  },
-  "text": {
-    "about": {
-      "header": "About this site",
-      "text": "欢迎来到Car-Defects.com！我们是一个专注于汽车服务通话统计的网站，为您提供关于汽车年龄和里程数缺陷统计的数据。想要了解汽车可靠性、对比以及统计数据？您来对地方了！\n\n我们的网站将为您提供最全面的汽车缺陷统计数据，助您更好地了解汽车的质量和可靠性。通过使用我们的SEO关键词，我们将帮助您快速找到关于汽车、缺陷、可靠性和对比的最新统计数据。快来点击进入，了解更多有关汽车缺陷的信息吧！"
-    },
-    "article": {
-      "japanese-top-selling-compact-suvs": {
-        "title": "Japanese top-selling compact SUVs",
-        "cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
-        "url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
-        "text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
-      },
-      "most-reliable-honda-models": {
-        "title": "Most reliable Honda cars",
-        "text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
-        "url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
-        "cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"honda accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
-      },
-      "reliability-of-toyota-camry-and-honda-accord-engines": {
-        "title": "丰田凯美瑞与本田雅阁引擎可靠性深度剖析：车辆之锋芒",
-        "text": "丰田凯美瑞与本田雅阁引擎可靠性深度剖析：车辆之锋芒\n\n在汽车界，可靠性是金，永远占据着消费者选择的制高点。而丰田凯美瑞与本田雅阁，作为市场上的两款长青车型，它们的引擎可靠性更是被无数驾驶者和专家所称道。本文将透彻比较这两款车的可靠性，深入探讨其背后的关键技术，并揭示那些影响着它们故障率的重要因素。无论您是车辆迷、专业人士，还是准备入手一款性能优越的汽车，本文都将为您提供最实用的参考信息。\n\n首先我们来解答一个问题：为什么丰田凯美瑞和本田雅阁能成为代表着可靠性的典范？答案在于它们引擎技术的不懈创新和精确定义的品质管理。\n\n丰田凯美瑞引擎的可靠性归功于其领先的技术-双顶置凸轮轴（DOHC）和智能可变气门正时技术（VVT-i）。DOHC技术提高了发动机的效率和功率输出，而VVT-i则能根据驾驶条件调整气门开启的时机，从而实现了燃油经济性和动力性的完美平衡，这既降低了故障率，也提升了引擎的寿命。\n\n另一方面，本田雅阁的引擎也不遑多让，其i-VTEC技术（智能可变气门正时与电子升程控制系统）提高了发动机的响应速度和燃油效率。加之其地球梦科技（Earth Dreams Technology），更将动力性、燃油效率和环保性能推至新高度，使得雅阁的引擎成为市场上的佼佼者。\n\n通过统计数据与对比研究，我们得知丰田凯美瑞和本田雅阁的故障率远低于行业平均水平。这得益于它们在设计上的严谨与对细节的关注，比如它们对耐用材料的选择以及对制造过程的精细控制。\n\n经过数年的迭代，这些车辆的技术已经趋于成熟，使得它们在引擎可靠性领域中设置了新的标准。例如，减少了零部件的移动和磨损，优化了润滑系统以维护引擎内部的清洁，还有对电子控制系统的精密调校确保了油气混合比的最优化。\n\n结合以上分析，我们可以看到，不仅仅是技术上的差异化，同样关键的还有制造过程中的精度与质量控制。而对于消费者而言，拥有一款运转可靠、维修成本低的汽车，就意味着在日常出行中获得了更高的性价比和安心感。\n\n无论您是车辆爱好者，还是想要对您的下一辆车进行全面了解的潜在购买者，本文都为您提供了深入且实用的可靠性比较分析。选择一辆质量可靠的车辆，开启一段无忧的驾驶旅程，正是每一个智慧消费者的明智之选！\n\n关键词：汽车, 故障, 可靠性, 对比, 统计数据",
-        "url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
-        "cards": "[{\"title\":\"Toyota Camry Engine\"},{\"title\":\"Honda Accord Engine\"}]"
-      },
-      "audi-a4-last-3-generation": {
-        "title": "Reliability of the Audi A4 over the last 3 generations",
-        "url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
-        "cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
-        "text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
-      },
-      "who-wins-on-reliability-toyota-or-lexus": {
-        "title": "可靠性比较：基于统计数据的丰田和雷克萨斯\n您是否正在寻找可靠性比较的最新数据？那么您来对地方了！我们将通过统计数据来比较丰田和雷克萨斯的可靠性，让您了...",
-        "text": "可靠性比较：基于统计数据的丰田和雷克萨斯\n您是否正在寻找可靠性比较的最新数据？那么您来对地方了！我们将通过统计数据来比较丰田和雷克萨斯的可靠性，让您了解哪一款车型更值得信赖。\n\n为什么汽车的可靠性如此重要？首先，汽车的可靠性直接影响到我们的出行安全和舒适度。如果汽车经常出现故障，不仅会增加维修成本，还可能带来安全隐患。因此，了解汽车的可靠性数据非常重要。\n\n现在让我们深入了解丰田和雷克萨斯在可靠性方面的关键技术。首先，丰田以其出色的工程设计和高质量的零部件而闻名。他们的汽车几乎没有制造缺陷，从而保证了可靠性。而雷克萨斯则以其创新的技术和高性能而著称，比如他们的高效发动机和先进的车辆控制系统，确保了汽车的可靠性。\n\n在进行可靠性比较时，我们使用了最新的统计数据，包括汽车的故障率、零部件质量和维修成本等方面。我们发现，丰田在大多数关键指标上都表现出色，但雷克萨斯在某些方面也有着自己的优势。\n\n总的来说，无论您选择的是丰田还是雷克萨斯，您都可以放心，因为它们都是可靠的汽车品牌。但是在做出决定之前，请务必仔细比较统计数据，以确保您选择的汽车符合您的需求。\n\n如果您对汽车的可靠性比较感兴趣，欢迎经常访问我们的网站，我们将为您提供更多相关信息。",
-        "url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D",
-        "cards": "[]"
-      },
-      "toyota-camry-vs-honda-accord-vs-mazda-6": {
-        "title": "根据最新的统计数据，我们将比较三款主流中型轿车的可靠性：Toyota Camry，Honda Accord和Mazda 6。这三款车型都在市场上享有很高的声誉，但在可靠性方面是否存在差异呢？让我们来看看数据。",
-        "text": "根据最新的统计数据，我们将比较三款主流中型轿车的可靠性：Toyota Camry，Honda Accord和Mazda 6。这三款车型都在市场上享有很高的声誉，但在可靠性方面是否存在差异呢？让我们来看看数据。\n\n根据J.D. Power的可靠性调查报告，Toyota Camry在过去几年一直表现出色。它被评为最可靠的中型轿车之一，并且在各项指标中得分较高。Camry的发动机和传动系统被认为是非常可靠的，而且车辆的整体质量也很高。此外，Camry的维修和保养成本相对较低，这也是它备受消费者青睐的原因之一。\n\nHonda Accord也是一款备受推崇的中型轿车，它在可靠性方面也表现出色。Accord的发动机和传动系统同样被认为是非常可靠的，并且车辆的整体质量也很高。然而，与Camry相比，Accord的维修和保养成本可能稍高一些。尽管如此，Accord仍然是一款可靠的选择。\n\nMazda 6在可靠性方面也表现不错，但相对于Camry和Accord来说，它可能稍逊一筹。根据一些消费者报告，Mazda 6的发动机和传动系统在可靠性方面可能存在一些问题。然而，这并不意味着Mazda 6是一款不可靠的车型，它仍然在市场上有很高的口碑。\n\n综上所述，根据统计数据，Toyota Camry和Honda Accord在可靠性方面表现出色，而Mazda 6稍逊一些。然而，这并不意味着Mazda 6是一款不可靠的车型，它仍然是一款备受消费者喜爱的车型之一。最终的选择应该根据个人偏好和需求来决定。无论选择哪款车型，定期的维护和保养仍然是保持车辆可靠性的关键。",
-        "url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
-        "cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
-      },
-      "volkswagen-golf-vs-mazda-3": {
-        "title": "标题：基于统计数据的大众高尔夫与马自达3的可靠性比较——哪款车更值得信赖？",
-        "text": "标题：基于统计数据的大众高尔夫与马自达3的可靠性比较——哪款车更值得信赖？\n\n引言：作为汽车专家，我们深知汽车的可靠性对于消费者来说是至关重要的。今天，我们将深入探讨大众高尔夫和马自达3的关键技术，并通过详细的统计数据，为您揭示这两款车的可靠性对比。让我们一起来看看，哪款车更能满足您的需求。\n\n汽车的可靠性主要取决于其设计、制造质量以及使用的技术。一辆可靠的汽车不仅能提供持久的性能，而且在维修方面也更为经济。因此，我们将从车辆的缺陷、可靠性、比较和统计等方面进行深入分析。\n\n大众高尔夫和马自达3都是市场上的热门车型，它们各自都有一套独特的技术。例如，大众高尔夫采用了先进的TSI发动机和DSG双离合器，这些技术使其在动力和燃油经济性方面表现出色。而马自达3则采用了创新的SkyActiv技术，这种技术在提高燃油效率的同时，还能提供强大的驾驶性能。\n\n然而，无论技术多么先进，汽车的可靠性都离不开统计数据的支持。因此，我们邀请您查看我们的统计图表，这些图表详细列出了大众高尔夫和马自达3的各项性能数据，包括缺陷率、维修成本等。\n\n总的来说，大众高尔夫和马自达3都是值得信赖的车型，但是哪款车更适合您，还需要您根据自身的需求和预算来决定。我们希望通过这篇文章，能帮助您做出更明智的选择。",
-        "url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
-        "cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
-      },
-      "best-car-reliability-comparison-2023": {
-        "title": "2023年最佳汽车可靠性比较...",
-        "text": "2023年最佳汽车可靠性比较\n\n在如今这个充满技术和数据的时代，选择一辆可靠的汽车变得比以往更加重要。因此，我们在这篇文章中将要讨论2023年最佳汽车可靠性比较的技术细节，我们将用一种讽刺的口吻来描述这些细节。不要担心，我们将尽可能地让您感到愉快。\n\n首先，让我们谈谈汽车的缺陷。如果您和我们一样，对汽车的缺陷感到头疼，那么您一定会喜欢我们所提供的信息。在car-defects.com网站上，您可以找到关于不同汽车型号的详细信息，这不仅有助于您了解汽车的缺陷，同时也可以有效地帮助您在购车时做出明智的决定。\n\n接下来让我们来看看一些技术细节。2023年最佳汽车可靠性比较将涵盖汽车的发动机性能、车辆安全性能、燃油经济性、以及整体车辆质量等方面的技术细节。我们将以一种充满讽刺意味的语气来展示这些细节，相信我们的读者一定会喜欢。\n\n最后，让我们来谈谈一些好处。通过阅读我们的文章，您将能够更加全面地了解不同汽车型号的可靠性表现，这将有助于您在购车时作出更理性的选择。另外，我们的文章将会非常吸引人，因此您可以期待更高的点击率，这将有助于提升您的网站数据分析和流量。\n\n总的来说，这篇文章将为您带来有趣的信息，同时也将帮助您做出更好的决定。我们相信您一定会喜欢我们对2023年最佳汽车可靠性比较所做出的努力。",
-        "url": "",
-        "cards": "[]"
-      }
-    }
-  }
+	"error": {
+		"LOAD_ERROR": "Load error"
+	},
+	"warn": {
+		"NO_DATA": "We are sorry, but we do not have enougth data for "
+	},
+	"defect_category": {
+		"safety": "Safety",
+		"electronics": "Electronics",
+		"light": "Light",
+		"transmission": "transmission",
+		"other": "Other",
+		"equipment": "Equipment",
+		"engine": "Engine",
+		"brake": "Brake",
+		"suspension": "Suspension"
+	},
+	"label": {
+		"tips": {
+			"norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
+			"search": "Search over 4 million crashes",
+			"age_mileage": "Compare defects by age or mileage",
+			"category": "Select specific defect category"
+		},
+		"detail": {
+			"age": "Defect age",
+			"mileage": "Mileage"
+		},
+		"defect": {
+			"header": "Defect Description",
+			"description": "Please, provide defect details",
+			"cost": "Repair Cost, $",
+			"year": "Year, when defect occured",
+			"age": "Car Age, when defect occured",
+			"mileage": "Car Mileage, when defect occured",
+			"rating": "Rating: how serious is the defect?"
+		},
+		"cancel": "Cancel",
+		"main_header": "A Car Service Calls Statistics",
+		"norm": "Normalized",
+		"total": "total",
+		"by_age": "by Age",
+		"by_mileage": "by Mileage",
+		"chart": {
+			"by_age": {
+				"total": {
+					"title": "All Defects by Age",
+					"tooltip": "total defects"
+				},
+				"norm": {
+					"title": "Defects by Age Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Age of Defect"
+			},
+			"by_mileage": {
+				"total": {
+					"title": "All Defects by Mileage",
+					"tooltip": "total defects"
+				},
+				"norm": {
+					"title": "Defects by Mileage Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Car Mileage"
+			}
+		},
+		"add_data": "Add Data",
+		"update": "Update",
+		"load_details": "Load more details",
+		"apply": "Apply",
+		"applied": "Applied",
+		"reset": "Reset",
+		"post": "Post",
+		"posted": "Posted!",
+		"more": "More",
+		"search_by": "Search for defects by ",
+		"model": "Model",
+		"brand": "Brand",
+		"gen": "Generation",
+		"gen_start": "Release start",
+		"gen_finish": "Release end",
+		"version": "Version",
+		"engine": {
+			"name": "Engine",
+			"displacement": "Displacement",
+			"cylinders": "Cylinders",
+			"valves": "Valves",
+			"fuel_type": "Fuel type",
+			"power_hp": "Power (hp)",
+			"torque": "torque"
+		},
+		"trans": {
+			"name": "transmission",
+			"acceleration": "Acceleration",
+			"consumtion": "Consumtion",
+			"gears": "Gears"
+		}
+	},
+	"text": {
+		"about": {
+			"header": "About this site",
+			"text": "欢迎来到Car-Defects.com！我们是一个专注于汽车服务通话统计的网站，为您提供关于汽车年龄和里程数缺陷统计的数据。想要了解汽车可靠性、对比以及统计数据？您来对地方了！\n\n我们的网站将为您提供最全面的汽车缺陷统计数据，助您更好地了解汽车的质量和可靠性。通过使用我们的SEO关键词，我们将帮助您快速找到关于汽车、缺陷、可靠性和对比的最新统计数据。快来点击进入，了解更多有关汽车缺陷的信息吧！"
+		},
+		"article": {
+			"japanese-top-selling-compact-suvs": {
+				"title": "Japanese top-selling compact SUVs",
+				"cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
+				"url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
+				"text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
+			},
+			"most-reliable-honda-models": {
+				"title": "Most reliable Honda cars",
+				"text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
+				"url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
+				"cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"honda accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
+			},
+			"reliability-of-toyota-camry-and-honda-accord-engines": {
+				"title": "丰田凯美瑞与本田雅阁引擎可靠性深度剖析：车辆之锋芒",
+				"text": "丰田凯美瑞与本田雅阁引擎可靠性深度剖析：车辆之锋芒\n\n在汽车界，可靠性是金，永远占据着消费者选择的制高点。而丰田凯美瑞与本田雅阁，作为市场上的两款长青车型，它们的引擎可靠性更是被无数驾驶者和专家所称道。本文将透彻比较这两款车的可靠性，深入探讨其背后的关键技术，并揭示那些影响着它们故障率的重要因素。无论您是车辆迷、专业人士，还是准备入手一款性能优越的汽车，本文都将为您提供最实用的参考信息。\n\n首先我们来解答一个问题：为什么丰田凯美瑞和本田雅阁能成为代表着可靠性的典范？答案在于它们引擎技术的不懈创新和精确定义的品质管理。\n\n丰田凯美瑞引擎的可靠性归功于其领先的技术-双顶置凸轮轴（DOHC）和智能可变气门正时技术（VVT-i）。DOHC技术提高了发动机的效率和功率输出，而VVT-i则能根据驾驶条件调整气门开启的时机，从而实现了燃油经济性和动力性的完美平衡，这既降低了故障率，也提升了引擎的寿命。\n\n另一方面，本田雅阁的引擎也不遑多让，其i-VTEC技术（智能可变气门正时与电子升程控制系统）提高了发动机的响应速度和燃油效率。加之其地球梦科技（Earth Dreams Technology），更将动力性、燃油效率和环保性能推至新高度，使得雅阁的引擎成为市场上的佼佼者。\n\n通过统计数据与对比研究，我们得知丰田凯美瑞和本田雅阁的故障率远低于行业平均水平。这得益于它们在设计上的严谨与对细节的关注，比如它们对耐用材料的选择以及对制造过程的精细控制。\n\n经过数年的迭代，这些车辆的技术已经趋于成熟，使得它们在引擎可靠性领域中设置了新的标准。例如，减少了零部件的移动和磨损，优化了润滑系统以维护引擎内部的清洁，还有对电子控制系统的精密调校确保了油气混合比的最优化。\n\n结合以上分析，我们可以看到，不仅仅是技术上的差异化，同样关键的还有制造过程中的精度与质量控制。而对于消费者而言，拥有一款运转可靠、维修成本低的汽车，就意味着在日常出行中获得了更高的性价比和安心感。\n\n无论您是车辆爱好者，还是想要对您的下一辆车进行全面了解的潜在购买者，本文都为您提供了深入且实用的可靠性比较分析。选择一辆质量可靠的车辆，开启一段无忧的驾驶旅程，正是每一个智慧消费者的明智之选！\n\n关键词：汽车, 故障, 可靠性, 对比, 统计数据",
+				"url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
+				"cards": "[{\"title\":\"Toyota Camry Engine\"},{\"title\":\"Honda Accord Engine\"}]"
+			},
+			"audi-a4-last-3-generation": {
+				"title": "Reliability of the Audi A4 over the last 3 generations",
+				"url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
+				"cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
+				"text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
+			},
+			"who-wins-on-reliability-toyota-or-lexus": {
+				"title": "可靠性比较：基于统计数据的丰田和雷克萨斯\n您是否正在寻找可靠性比较的最新数据？那么您来对地方了！我们将通过统计数据来比较丰田和雷克萨斯的可靠性，让您了...",
+				"text": "可靠性比较：基于统计数据的丰田和雷克萨斯\n您是否正在寻找可靠性比较的最新数据？那么您来对地方了！我们将通过统计数据来比较丰田和雷克萨斯的可靠性，让您了解哪一款车型更值得信赖。\n\n为什么汽车的可靠性如此重要？首先，汽车的可靠性直接影响到我们的出行安全和舒适度。如果汽车经常出现故障，不仅会增加维修成本，还可能带来安全隐患。因此，了解汽车的可靠性数据非常重要。\n\n现在让我们深入了解丰田和雷克萨斯在可靠性方面的关键技术。首先，丰田以其出色的工程设计和高质量的零部件而闻名。他们的汽车几乎没有制造缺陷，从而保证了可靠性。而雷克萨斯则以其创新的技术和高性能而著称，比如他们的高效发动机和先进的车辆控制系统，确保了汽车的可靠性。\n\n在进行可靠性比较时，我们使用了最新的统计数据，包括汽车的故障率、零部件质量和维修成本等方面。我们发现，丰田在大多数关键指标上都表现出色，但雷克萨斯在某些方面也有着自己的优势。\n\n总的来说，无论您选择的是丰田还是雷克萨斯，您都可以放心，因为它们都是可靠的汽车品牌。但是在做出决定之前，请务必仔细比较统计数据，以确保您选择的汽车符合您的需求。\n\n如果您对汽车的可靠性比较感兴趣，欢迎经常访问我们的网站，我们将为您提供更多相关信息。",
+				"url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D",
+				"cards": "[]"
+			},
+			"toyota-camry-vs-honda-accord-vs-mazda-6": {
+				"title": "根据最新的统计数据，我们将比较三款主流中型轿车的可靠性：Toyota Camry，Honda Accord和Mazda 6。这三款车型都在市场上享有很高的声誉，但在可靠性方面是否存在差异呢？让我们来看看数据。",
+				"text": "根据最新的统计数据，我们将比较三款主流中型轿车的可靠性：Toyota Camry，Honda Accord和Mazda 6。这三款车型都在市场上享有很高的声誉，但在可靠性方面是否存在差异呢？让我们来看看数据。\n\n根据J.D. Power的可靠性调查报告，Toyota Camry在过去几年一直表现出色。它被评为最可靠的中型轿车之一，并且在各项指标中得分较高。Camry的发动机和传动系统被认为是非常可靠的，而且车辆的整体质量也很高。此外，Camry的维修和保养成本相对较低，这也是它备受消费者青睐的原因之一。\n\nHonda Accord也是一款备受推崇的中型轿车，它在可靠性方面也表现出色。Accord的发动机和传动系统同样被认为是非常可靠的，并且车辆的整体质量也很高。然而，与Camry相比，Accord的维修和保养成本可能稍高一些。尽管如此，Accord仍然是一款可靠的选择。\n\nMazda 6在可靠性方面也表现不错，但相对于Camry和Accord来说，它可能稍逊一筹。根据一些消费者报告，Mazda 6的发动机和传动系统在可靠性方面可能存在一些问题。然而，这并不意味着Mazda 6是一款不可靠的车型，它仍然在市场上有很高的口碑。\n\n综上所述，根据统计数据，Toyota Camry和Honda Accord在可靠性方面表现出色，而Mazda 6稍逊一些。然而，这并不意味着Mazda 6是一款不可靠的车型，它仍然是一款备受消费者喜爱的车型之一。最终的选择应该根据个人偏好和需求来决定。无论选择哪款车型，定期的维护和保养仍然是保持车辆可靠性的关键。",
+				"url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
+				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
+			},
+			"volkswagen-golf-vs-mazda-3": {
+				"title": "标题：基于统计数据的大众高尔夫与马自达3的可靠性比较——哪款车更值得信赖？",
+				"text": "标题：基于统计数据的大众高尔夫与马自达3的可靠性比较——哪款车更值得信赖？\n\n引言：作为汽车专家，我们深知汽车的可靠性对于消费者来说是至关重要的。今天，我们将深入探讨大众高尔夫和马自达3的关键技术，并通过详细的统计数据，为您揭示这两款车的可靠性对比。让我们一起来看看，哪款车更能满足您的需求。\n\n汽车的可靠性主要取决于其设计、制造质量以及使用的技术。一辆可靠的汽车不仅能提供持久的性能，而且在维修方面也更为经济。因此，我们将从车辆的缺陷、可靠性、比较和统计等方面进行深入分析。\n\n大众高尔夫和马自达3都是市场上的热门车型，它们各自都有一套独特的技术。例如，大众高尔夫采用了先进的TSI发动机和DSG双离合器，这些技术使其在动力和燃油经济性方面表现出色。而马自达3则采用了创新的SkyActiv技术，这种技术在提高燃油效率的同时，还能提供强大的驾驶性能。\n\n然而，无论技术多么先进，汽车的可靠性都离不开统计数据的支持。因此，我们邀请您查看我们的统计图表，这些图表详细列出了大众高尔夫和马自达3的各项性能数据，包括缺陷率、维修成本等。\n\n总的来说，大众高尔夫和马自达3都是值得信赖的车型，但是哪款车更适合您，还需要您根据自身的需求和预算来决定。我们希望通过这篇文章，能帮助您做出更明智的选择。",
+				"url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
+				"cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
+			},
+			"best-car-reliability-comparison-2023": {
+				"title": "2023年最佳汽车可靠性比较...",
+				"text": "2023年最佳汽车可靠性比较\n\n在如今这个充满技术和数据的时代，选择一辆可靠的汽车变得比以往更加重要。因此，我们在这篇文章中将要讨论2023年最佳汽车可靠性比较的技术细节，我们将用一种讽刺的口吻来描述这些细节。不要担心，我们将尽可能地让您感到愉快。\n\n首先，让我们谈谈汽车的缺陷。如果您和我们一样，对汽车的缺陷感到头疼，那么您一定会喜欢我们所提供的信息。在car-defects.com网站上，您可以找到关于不同汽车型号的详细信息，这不仅有助于您了解汽车的缺陷，同时也可以有效地帮助您在购车时做出明智的决定。\n\n接下来让我们来看看一些技术细节。2023年最佳汽车可靠性比较将涵盖汽车的发动机性能、车辆安全性能、燃油经济性、以及整体车辆质量等方面的技术细节。我们将以一种充满讽刺意味的语气来展示这些细节，相信我们的读者一定会喜欢。\n\n最后，让我们来谈谈一些好处。通过阅读我们的文章，您将能够更加全面地了解不同汽车型号的可靠性表现，这将有助于您在购车时作出更理性的选择。另外，我们的文章将会非常吸引人，因此您可以期待更高的点击率，这将有助于提升您的网站数据分析和流量。\n\n总的来说，这篇文章将为您带来有趣的信息，同时也将帮助您做出更好的决定。我们相信您一定会喜欢我们对2023年最佳汽车可靠性比较所做出的努力。",
+				"url": "",
+				"cards": "[]"
+			}
+		}
+	}
 }

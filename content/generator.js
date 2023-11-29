@@ -20,19 +20,21 @@ const openai = new OpenAI(configuration);
 
 try {
 	const file = './content/topics.txt';
-	const topics = readFileSync(file).toString().split("\n");
-	const unposted = topics.filter((t) => !t.includes(":generated"))[0];
-	generateByTopic(unposted).then(() => {
-		const unpostedIndex = topics.findIndex((t) => t == unposted);
-		topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
-		writeFileSync(file, topics.join('\n'));
-	}).catch(console.error);
+	const topics = readFileSync(file).toString().split('\n');
+	const unposted = topics.filter((t) => !t.includes(':generated'))[0];
+	generateByTopic(unposted)
+		.then(() => {
+			const unpostedIndex = topics.findIndex((t) => t == unposted);
+			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
+			writeFileSync(file, topics.join('\n'));
+		})
+		.catch(console.error);
 } catch (error) {
 	console.error(error);
 }
 
 function generateByTopic(topic) {
-	return generate(topic,);
+	return generate(topic);
 }
 
 function generateByUrl(url) {
@@ -49,7 +51,11 @@ function generateByUrl(url) {
 			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
 		}
 	});
-	return generate(`Reliability Comparison of ${cars.join(' vs ')} based on Statistics`, imgs, cars.map((title) => ({ title })));
+	return generate(
+		`Reliability Comparison of ${cars.join(' vs ')} based on Statistics`,
+		imgs,
+		cars.map((title) => ({ title }))
+	);
 }
 
 function generate(query, imgs = [], cars = [], url = '') {
@@ -77,10 +83,16 @@ function generate(query, imgs = [], cars = [], url = '') {
 	});
 	warn(`Need images:\n ${imgs.join('\n')}`);
 	info(`Wait for ChatGPT images generation: ${imgs}`);
-	const image_generation = imgs.reduce((chain, name) =>
-		chain
-			.then(() => new Promise((r) => { setTimeout(r, 60000); }))
-			.then(() => generateImg(name)),
+	const image_generation = imgs.reduce(
+		(chain, name) =>
+			chain
+				.then(
+					() =>
+						new Promise((r) => {
+							setTimeout(r, 60000);
+						})
+				)
+				.then(() => generateImg(name)),
 		Promise.resolve()
 	);
 
@@ -148,7 +160,7 @@ function generateArticle(locale, content, poster, url, cards) {
 		.create({
 			model: 'gpt-3.5-turbo-1106',
 			messages: [{ role: 'user', content }],
-			temperature: .9
+			temperature: 0.9
 		})
 		.then((v) => {
 			const filename = `src/lib/i18n/${locale}.json`;

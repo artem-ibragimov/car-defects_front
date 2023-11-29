@@ -1,159 +1,159 @@
 {
-  "error": {
-    "LOAD_ERROR": "Load error"
-  },
-  "warn": {
-    "NO_DATA": "We are sorry, but we do not have enougth data for "
-  },
-  "defect_category": {
-    "safety": "Safety",
-    "electronics": "Electronics",
-    "light": "Light",
-    "transmission": "transmission",
-    "other": "Other",
-    "equipment": "Equipment",
-    "engine": "Engine",
-    "brake": "Brake",
-    "suspension": "Suspension"
-  },
-  "label": {
-    "tips": {
-      "norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
-      "search": "Search over 4 million crashes",
-      "age_mileage": "Compare defects by age or mileage",
-      "category": "Select specific defect category"
-    },
-    "detail": {
-      "age": "Defect age",
-      "mileage": "Mileage"
-    },
-    "defect": {
-      "header": "Defect Description",
-      "description": "Please, provide defect details",
-      "cost": "Repair Cost, $",
-      "year": "Year, when defect occured",
-      "age": "Car Age, when defect occured",
-      "mileage": "Car Mileage, when defect occured",
-      "rating": "Rating: how serious is the defect?"
-    },
-    "cancel": "Cancel",
-    "main_header": "A Car Service Calls Statistics",
-    "norm": "Normalized",
-    "total": "total",
-    "by_age": "by Age",
-    "by_mileage": "by Mileage",
-    "chart": {
-      "by_age": {
-        "total": {
-          "title": "All Defects by Age",
-          "tooltip": "total defects"
-        },
-        "norm": {
-          "title": "Defects by Age Normalized",
-          "tooltip": "Average defects per 10,000 sales"
-        },
-        "y": "Number of Defects",
-        "x": "Age of Defect"
-      },
-      "by_mileage": {
-        "total": {
-          "title": "All Defects by Mileage",
-          "tooltip": "total defects"
-        },
-        "norm": {
-          "title": "Defects by Mileage Normalized",
-          "tooltip": "Average defects per 10,000 sales"
-        },
-        "y": "Number of Defects",
-        "x": "Car Mileage"
-      }
-    },
-    "add_data": "Add Data",
-    "update": "Update",
-    "load_details": "Load more details",
-    "apply": "Apply",
-    "applied": "Applied",
-    "reset": "Reset",
-    "post": "Post",
-    "posted": "Posted!",
-    "more": "More",
-    "search_by": "Search for defects by ",
-    "model": "Model",
-    "brand": "Brand",
-    "gen": "Generation",
-    "gen_start": "Release start",
-    "gen_finish": "Release end",
-    "version": "Version",
-    "engine": {
-      "name": "Engine",
-      "displacement": "Displacement",
-      "cylinders": "Cylinders",
-      "valves": "Valves",
-      "fuel_type": "Fuel type",
-      "power_hp": "Power (hp)",
-      "torque": "torque"
-    },
-    "trans": {
-      "name": "transmission",
-      "acceleration": "Acceleration",
-      "consumtion": "Consumtion",
-      "gears": "Gears"
-    }
-  },
-  "text": {
-    "about": {
-      "header": "About this site",
-      "text": "「Car-Defects.com」へようこそ！車の欠陥に関する統計データを提供する専門サイトです。車の年式や走行距離による欠陥の統計を比較分析し、信頼性を向上させます。車の欠陥や信頼性に関する統計情報をお探しの方は、ぜひ当サイトをご利用ください。"
-    },
-    "article": {
-      "japanese-top-selling-compact-suvs": {
-        "title": "Japanese top-selling compact SUVs",
-        "cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
-        "url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
-        "text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
-      },
-      "most-reliable-honda-models": {
-        "title": "Most reliable Honda cars",
-        "text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
-        "url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
-        "cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"honda accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
-      },
-      "reliability-of-toyota-camry-and-honda-accord-engines": {
-        "title": "タイトル:\n信頼性の比較対象：トヨタ・カムリVSホンダ・アコードのエンジン性能徹底検証",
-        "text": "タイトル:\n信頼性の比較対象：トヨタ・カムリVSホンダ・アコードのエンジン性能徹底検証！\n\n序文:\n自動車愛好家の皆さん、ご存知ですか？日々の生活に欠かせない\"カー\"のパートナーとして、信頼性というのは何にも代えがたい価値です。特にエンジンは車の心臓部であり、そこに缺陷があれば全てが水の泡。統計データやユーザーの体験を基に、トヨタ・カムリとホンダ・アコードという二大巨頭の信頼性を比較し、実際に何が彼らを頼れる相棒にしているのかを解明します。頻繁に耳にする\"走行距離数十万キロ故障知らず\"の秘密を紐解きましょう。\n\n本文:\nまず、トヨタ・カムリのエンジンは世界でも高い評価を受けています。トヨタ自体が持つ品質管理の徹底や、エンジンに採用されているVDVテクノロジーやデュアルVVT-iなどの高度な技術が、寿命を大幅に延ばす要因となっています。ホンダ・アコードも例外ではありません。アースドリームテクノロジーをはじめとする革新的エンジン設計は、効率とパフォーマンスの向上に寄与しながら信頼性を高めています。\n\nトヨタ・カムリとホンダ・アコードのエンジンは、共に類稀なる耐久性を誇ります。しかし、\"リライアビリティ\"を左右する要素はエンジンだけに留まりません。両車種ともに、優れたエンジンだけでなく、運行安全性を高める様々な支援システムや乗員保護構造にもこだわり、安心して長く乗り続けることが可能です。トヨタとホンダは、緻密な比較研究に基づく部品の選定や実践的な故障テストを行っており、市場に出た後の長期にわたる品質維持を実現しているのです。\n\nさらに、これらの車種は定期的なメンテナンスがしやすい設計になっており、「比較」検討時にも維持費の低さが打ち出されます。エンジンの構造には、故障が起きにくい仕組みが組み込まれているため、致命的な「ディフェクト」に見舞われることも少ないのです。\n\n結論:\n結局のところ、トヨタ・カムリとホンダ・アコード、両者のエンジンは驚異的な\"リライアビリティ\"で知られています。それぞれのブランドが長年にわたって築き上げた技術と経験は、単なる統計の数字を超える信頼を生み出しています。賢い選択をし、信頼できる車を選ぶことが、長期的な満足と経済性の確保につながります。今後も、トヨタ・カムリとホンダ・アコードは、品質にこだわるドライバーの期待に応え続けることでしょう。",
-        "url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
-        "cards": "[{\"title\":\"Toyota Camry Engine\"},{\"title\":\"Honda Accord Engine\"}]"
-      },
-      "audi-a4-last-3-generation": {
-        "title": "Reliability of the Audi A4 over the last 3 generations",
-        "url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
-        "cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
-        "text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
-      },
-      "who-wins-on-reliability-toyota-or-lexus": {
-        "title": "信頼性の比較：統計に基づいたトヨタとレクサスの信頼性比較\n\n自動車は、私たちの日常生活に不可欠な存在です。信頼性のある自動車を選ぶことは、安全や経済的...",
-        "text": "信頼性の比較：統計に基づいたトヨタとレクサスの信頼性比較\n\n自動車は、私たちの日常生活に不可欠な存在です。信頼性のある自動車を選ぶことは、安全や経済的な観点からも重要です。この記事では、トヨタとレクサスの信頼性を統計に基づいて比較し、それぞれの信頼性の要因について説明します。\n\n自動車の信頼性は、製造工程や部品の品質、テクノロジーの活用など、さまざまな要素によって左右されます。トヨタとレクサスは、両ブランドとも高い信頼性を誇ることで知られていますが、その背後にはどのような技術があるのでしょうか。\n\n両ブランドが信頼性を担保するために採用している主要なテクノロジーには、耐久性の高い部品の使用、先進的なエンジン技術、そして安全装備の充実などがあります。また、自動車の信頼性を高めるために行われる品質管理やテストの取り組みについても詳細に取り上げます。\n\nこうした要素を踏まえた上で、トヨタとレクサスの信頼性を統計に基づいて比較してみましょう。使用する車に関する欠陥や信頼性についての情報は、信頼できる統計データを用いて客観的に議論します。\n\n自動車を選ぶ際には、信頼性も大きな要素の一つです。トヨタとレクサスの信頼性を比較することで、あなたの次の自動車購入の参考になる情報を提供します。信頼性と統計に基づいた比較を通じて、信頼性の高い自動車を見つける手助けとなることでしょう。",
-        "url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D",
-        "cards": "[]"
-      },
-      "toyota-camry-vs-honda-accord-vs-mazda-6": {
-        "title": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較",
-        "text": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較\n\nイントロダクション：\n自動車市場での競争は激化しており、トヨタカムリ、ホンダアコード、マツダ6は中型セダンの分野で人気のあるモデルです。この記事では、統計データに基づいて、これらの車の信頼性を比較します。信頼性は、所有者の満足度、故障率、メンテナンスコストなどの要素によって評価されます。\n\n1. 所有者の満足度：\nまず、所有者の満足度を比較します。J.D. PowerやConsumer Reportsなどの信頼性調査結果に基づいて、各車の所有者がどれだけ満足しているかを評価します。これにより、車の品質や信頼性についての一般的な見解を得ることができます。\n\n2. 故障率：\n次に、各車の故障率を比較します。信頼性の高い車は、故障が少なく、所有者が安心して乗ることができる車です。信頼性調査や保険会社の統計データを参考に、各車の故障率を評価します。\n\n3. メンテナンスコスト：\n車の信頼性を評価する際には、メンテナンスコストも重要な要素です。車のメンテナンスや修理にかかる費用は、所有者にとっての負担となります。統計データやオーナーレビューを参考に、各車のメンテナンスコストを比較します。\n\n4. 保証：\n最後に、各車の保証についても比較します。信頼性の高い車は、メーカーが自信を持って保証を提供している場合があります。保証期間や内容を調査し、各車の保証の信頼性を評価します。\n\n結論：\n以上の要素を総合的に考慮し、Toyota Camry、Honda Accord、Mazda 6の信頼性を比較しました。統計に基づくデータを参考にすることで、購入者が信頼性の高い車を選ぶ際に役立つ情報を提供しました。ただし、個々の所有者の経験や好みによっても評価は異なるため、最終的な選択は個人の判断に委ねられます。",
-        "url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
-        "cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
-      },
-      "volkswagen-golf-vs-mazda-3": {
-        "title": "【統計に基づく信頼性比較】フォルクスワーゲン・ゴルフVSマツダ3 - どちらが優れているのか？",
-        "text": "【統計に基づく信頼性比較】フォルクスワーゲン・ゴルフVSマツダ3 - どちらが優れているのか？\n\n自動車の信頼性は、その所有者にとって非常に重要な要素です。それは、車がどれだけ長く、そしてどれだけ問題なく走行できるかを示しています。今回は、統計データに基づいて、フォルクスワーゲン・ゴルフとマツダ3の信頼性を比較します。この記事では、それぞれの車がどれだけ信頼できるのか、またその理由を詳しく解説します。\n\nまず、信頼性の高さを決定する主要な要素は、車の欠陥の数とその重大性です。これらの要素は、車の信頼性を大きく左右します。また、車の信頼性は、その技術的な詳細にも大きく依存します。それぞれの車がどのような技術を採用しているのか、その詳細を深堀りしていきましょう。\n\nフォルクスワーゲン・ゴルフは、その堅牢な構造と高品質な部品で知られています。一方、マツダ3は、その独自のSKYACTIV技術と優れた燃費性能で評価されています。これらの技術は、それぞれの車がどれだけ信頼性が高いのかを示しています。\n\nしかし、これらの情報だけでは十分ではありません。それぞれの車の信頼性を正確に比較するためには、具体的な統計データが必要です。そのため、この記事の最後には、それぞれの車の信頼性を比較するための統計チャートを掲載しています。\n\n自動車の信頼性は、その所有者にとって非常に重要な要素です。それは、車がどれだけ長く、そしてどれだけ問題なく走行できるかを示しています。今回は、統計データに基づいて、フォルクスワーゲン・ゴルフとマツダ3の信頼性を比較します。この記事では、それぞれの車がどれだけ信頼できるのか、またその理由を詳しく解説します。\n\n自動車の信頼性、欠陥、比較、統計といったキーワードを用いて、詳細な分析を行います。車の専門家として、私たちはあなたに最も信頼できる情報を提供します。それでは、一緒に統計チャートを見ていきましょう。",
-        "url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
-        "cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
-      },
-      "best-car-reliability-comparison-2023": {
-        "title": "2023年のベストカーリアビリティ比較について\nこんにちは皆さん、車の信頼性に関する最新情報をお届けします。あなたが新しい車を購入する際に、信頼性は最も重要な要素の一つです。車の欠陥は毎年多くの人々にとって大きな問題となっていますが、私たちは幸運なことに、それらの問題を解決するための最新のデータを持っています。...",
-        "text": "2023年のベストカーリアビリティ比較について\nこんにちは皆さん、車の信頼性に関する最新情報をお届けします。あなたが新しい車を購入する際に、信頼性は最も重要な要素の一つです。車の欠陥は毎年多くの人々にとって大きな問題となっていますが、私たちは幸運なことに、それらの問題を解決するための最新のデータを持っています。\n\n今回は、技術的な詳細について説明しますが、その前に、私たちのサイトを訪れてくれたことであなたが受けることができる恩恵についてお話ししましょう。car-defects.comは、信頼できる情報源として数多くの人々に利用されています。私たちのサイトを利用することで、あなたは信頼性の高い情報にアクセスすることができ、安心して車を購入することができるでしょう。\n\nそれでは、技術的な詳細について少し調べてみましょう。たくさんの車種が登場しており、どれが信頼性に優れているのかを知ることは非常に重要です。しかし、これを皮肉な口調で語ります。どの車が壊れやすいのか、とても興味深いですね。そもそも、信頼性が問題になるくらいの車があるということ自体が、私たちにとってはちょっとした驚きです。\n\n最新のデータを元に、私たちの比較記事はあなたの次の車購入に役立つことでしょう。そして、その選択が最高の信頼性を持つ車を見つける手助けになることを願っています。では、引き続き私たちのサイトをチェックしてくださいね。",
-        "url": "",
-        "cards": "[]"
-      }
-    }
-  }
+	"error": {
+		"LOAD_ERROR": "Load error"
+	},
+	"warn": {
+		"NO_DATA": "We are sorry, but we do not have enougth data for "
+	},
+	"defect_category": {
+		"safety": "Safety",
+		"electronics": "Electronics",
+		"light": "Light",
+		"transmission": "transmission",
+		"other": "Other",
+		"equipment": "Equipment",
+		"engine": "Engine",
+		"brake": "Brake",
+		"suspension": "Suspension"
+	},
+	"label": {
+		"tips": {
+			"norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
+			"search": "Search over 4 million crashes",
+			"age_mileage": "Compare defects by age or mileage",
+			"category": "Select specific defect category"
+		},
+		"detail": {
+			"age": "Defect age",
+			"mileage": "Mileage"
+		},
+		"defect": {
+			"header": "Defect Description",
+			"description": "Please, provide defect details",
+			"cost": "Repair Cost, $",
+			"year": "Year, when defect occured",
+			"age": "Car Age, when defect occured",
+			"mileage": "Car Mileage, when defect occured",
+			"rating": "Rating: how serious is the defect?"
+		},
+		"cancel": "Cancel",
+		"main_header": "A Car Service Calls Statistics",
+		"norm": "Normalized",
+		"total": "total",
+		"by_age": "by Age",
+		"by_mileage": "by Mileage",
+		"chart": {
+			"by_age": {
+				"total": {
+					"title": "All Defects by Age",
+					"tooltip": "total defects"
+				},
+				"norm": {
+					"title": "Defects by Age Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Age of Defect"
+			},
+			"by_mileage": {
+				"total": {
+					"title": "All Defects by Mileage",
+					"tooltip": "total defects"
+				},
+				"norm": {
+					"title": "Defects by Mileage Normalized",
+					"tooltip": "Average defects per 10,000 sales"
+				},
+				"y": "Number of Defects",
+				"x": "Car Mileage"
+			}
+		},
+		"add_data": "Add Data",
+		"update": "Update",
+		"load_details": "Load more details",
+		"apply": "Apply",
+		"applied": "Applied",
+		"reset": "Reset",
+		"post": "Post",
+		"posted": "Posted!",
+		"more": "More",
+		"search_by": "Search for defects by ",
+		"model": "Model",
+		"brand": "Brand",
+		"gen": "Generation",
+		"gen_start": "Release start",
+		"gen_finish": "Release end",
+		"version": "Version",
+		"engine": {
+			"name": "Engine",
+			"displacement": "Displacement",
+			"cylinders": "Cylinders",
+			"valves": "Valves",
+			"fuel_type": "Fuel type",
+			"power_hp": "Power (hp)",
+			"torque": "torque"
+		},
+		"trans": {
+			"name": "transmission",
+			"acceleration": "Acceleration",
+			"consumtion": "Consumtion",
+			"gears": "Gears"
+		}
+	},
+	"text": {
+		"about": {
+			"header": "About this site",
+			"text": "「Car-Defects.com」へようこそ！車の欠陥に関する統計データを提供する専門サイトです。車の年式や走行距離による欠陥の統計を比較分析し、信頼性を向上させます。車の欠陥や信頼性に関する統計情報をお探しの方は、ぜひ当サイトをご利用ください。"
+		},
+		"article": {
+			"japanese-top-selling-compact-suvs": {
+				"title": "Japanese top-selling compact SUVs",
+				"cards": "[{\"title\":\"Toyota RAV4\"},{\"title\":\"Honda CR-V\"},{\"title\":\"Mazda CX-5\"}]",
+				"url": "#entity_params=%7B%22mazda+cx-5%22%3A%7B%22modelID%22%3A%22330%22%7D%2C%22toyota+rav4%22%3A%7B%22modelID%22%3A%22791%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%7D&defect_categories=1%2C3%2C4%2C5%2C6%2C7%2C8%2C9",
+				"text": "Were you aware, that in Japanese top-selling compact SUVs - Toyota Rav4, Honda CR-V, and Mazda CX-5 the only Honda CR-V has CVT - continuously variable transmission?\n\nThe potential buyers might be wondering: how reliable is this kind of transmission? There are thousands of questions, answers, and polar opinions in car forums. But let’s be absolutely objective here the statistics of car service calls aren't pretty: Compared with concurrents, Honda owners have problems with CVT two times more often than others in the first three years of use.\n\nOf course, a CVT car is more dynamic and fuel-efficient, but if car reliability is important to you, You'd be better off taking a classic automatic transmission."
+			},
+			"most-reliable-honda-models": {
+				"title": "Most reliable Honda cars",
+				"text": "The Honda Civic, Honda Accord, Honda CR-V, Honda Fit, and Honda HR-V are all popular models of cars produced by Honda, a renowned Japanese automotive manufacturer. Each of these models caters to different market segments and offers various features and specifications.\n The Honda HR-V has the best reliability rating of all the Honda models in this CarDefects dataset. The studies show the severity and frequency of repairs experienced by HR-V owners are much less than others. The HR-V’s average costs are even more impressive than all subcompact SUVs, estimated at $466. And HR-V’s repairs cost less than half the average $652 that all vehicle owners spend annually.",
+				"url": "#entity_params=%7B%22honda+civic%22%3A%7B%22modelID%22%3A%22956%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%2C%22honda+fit%22%3A%7B%22modelID%22%3A%22983%22%7D%2C%22honda+cr-v%22%3A%7B%22modelID%22%3A%22944%22%7D%2C%22honda+hr-v%22%3A%7B%22modelID%22%3A%22988%22%7D%7D",
+				"cards": "[{\"title\":\"Honda Civic\",\"text\":\"The Honda Civic is a compact car known for its reliability, fuel efficiency, and practicality. It comes in various body styles, including sedan, coupe, and hatchback, making it a versatile choice for a wide range of customers. The Civic is often favored for its comfortable interior, smooth ride, and advanced safety features\"},{\"title\":\"honda accord\",\"text\":\"The Honda Accord is a mid-size sedan (and previously available as a coupe) that offers a comfortable and spacious cabin with a well-balanced combination of performance and fuel efficiency. It is renowned for its strong resale value, dependable reputation, and a range of available features, making it a popular choice among families and commuters\"},{\"title\":\"Honda CR-V\",\"text\":\"The Honda CR-V is a compact crossover SUV, known for its practicality and versatility. It offers ample cargo space, a comfortable ride, and excellent fuel efficiency. The CR-V is a favorite among those seeking a reliable and spacious vehicle for daily commuting or family outings\"},{\"title\":\"Honda Fit\",\"text\":\"The Honda Fit, also known as the Honda Jazz in some markets, is a subcompact hatchback designed to maximize interior space and versatility despite its small size. The Fit's \\\"Magic Seat\\\" allows for various configurations to accommodate different cargo and passenger needs, making it a practical choice for city driving and urban lifestyles\"},{\"title\":\"Honda HR-V\",\"text\":\"The Honda HR-V is a subcompact crossover SUV that sits below the CR-V in Honda's lineup. It provides a similar blend of versatility and fuel efficiency in a more compact package. The HR-V is a suitable option for those seeking an SUV-like vehicle with better maneuverability and city-friendly dimensions\"}]"
+			},
+			"reliability-of-toyota-camry-and-honda-accord-engines": {
+				"title": "タイトル:\n信頼性の比較対象：トヨタ・カムリVSホンダ・アコードのエンジン性能徹底検証",
+				"text": "タイトル:\n信頼性の比較対象：トヨタ・カムリVSホンダ・アコードのエンジン性能徹底検証！\n\n序文:\n自動車愛好家の皆さん、ご存知ですか？日々の生活に欠かせない\"カー\"のパートナーとして、信頼性というのは何にも代えがたい価値です。特にエンジンは車の心臓部であり、そこに缺陷があれば全てが水の泡。統計データやユーザーの体験を基に、トヨタ・カムリとホンダ・アコードという二大巨頭の信頼性を比較し、実際に何が彼らを頼れる相棒にしているのかを解明します。頻繁に耳にする\"走行距離数十万キロ故障知らず\"の秘密を紐解きましょう。\n\n本文:\nまず、トヨタ・カムリのエンジンは世界でも高い評価を受けています。トヨタ自体が持つ品質管理の徹底や、エンジンに採用されているVDVテクノロジーやデュアルVVT-iなどの高度な技術が、寿命を大幅に延ばす要因となっています。ホンダ・アコードも例外ではありません。アースドリームテクノロジーをはじめとする革新的エンジン設計は、効率とパフォーマンスの向上に寄与しながら信頼性を高めています。\n\nトヨタ・カムリとホンダ・アコードのエンジンは、共に類稀なる耐久性を誇ります。しかし、\"リライアビリティ\"を左右する要素はエンジンだけに留まりません。両車種ともに、優れたエンジンだけでなく、運行安全性を高める様々な支援システムや乗員保護構造にもこだわり、安心して長く乗り続けることが可能です。トヨタとホンダは、緻密な比較研究に基づく部品の選定や実践的な故障テストを行っており、市場に出た後の長期にわたる品質維持を実現しているのです。\n\nさらに、これらの車種は定期的なメンテナンスがしやすい設計になっており、「比較」検討時にも維持費の低さが打ち出されます。エンジンの構造には、故障が起きにくい仕組みが組み込まれているため、致命的な「ディフェクト」に見舞われることも少ないのです。\n\n結論:\n結局のところ、トヨタ・カムリとホンダ・アコード、両者のエンジンは驚異的な\"リライアビリティ\"で知られています。それぞれのブランドが長年にわたって築き上げた技術と経験は、単なる統計の数字を超える信頼を生み出しています。賢い選択をし、信頼できる車を選ぶことが、長期的な満足と経済性の確保につながります。今後も、トヨタ・カムリとホンダ・アコードは、品質にこだわるドライバーの期待に応え続けることでしょう。",
+				"url": "#entity_params=%7B%22toyota+camry%22%3A%7B%22modelID%22%3A%22722%22%7D%2C%22honda+accord%22%3A%7B%22modelID%22%3A%22903%22%7D%7D&defect_categories=4",
+				"cards": "[{\"title\":\"Toyota Camry Engine\"},{\"title\":\"Honda Accord Engine\"}]"
+			},
+			"audi-a4-last-3-generation": {
+				"title": "Reliability of the Audi A4 over the last 3 generations",
+				"url": "#entity_params=%7B%22audi+a4+b7%22%3A%7B%22genID%22%3A%228%22%7D%2C%22audi+a4+b8%22%3A%7B%22genID%22%3A%227%22%7D%2C%22audi+a4+b9%22%3A%7B%22genID%22%3A%226%22%7D%7D",
+				"cards": "[{\"title\":\"Audi A4 B7\"},{\"title\":\"Audi A4 B8\"},{\"title\":\"Audi A4 B9\"}]",
+				"text": "For the last 3 generations, Audi A4 has become more stylish. But… has it become more reliable?\n\nWell, statistically, the answer is yes: within each generation, the amount of service calls has decreased 3-4 times!\n\nFurthermore, the number of engine crashes in the last generation was reduced by 15 times compared with the previous B8 generation! The new A4 has achieved great results thanks to its engines, which are sourced from the Volkswagen Audi Group.\n\nAlmost the same positive results about transmission: In the B8 generation, A4 was equipped with old-school Multitronic CVT, S tronic, and Tiptronic automatics as well as manual transmissions, but the sharper, quicker S-tronic twin-clutch arrangement is now the sole self-shifting option."
+			},
+			"who-wins-on-reliability-toyota-or-lexus": {
+				"title": "信頼性の比較：統計に基づいたトヨタとレクサスの信頼性比較\n\n自動車は、私たちの日常生活に不可欠な存在です。信頼性のある自動車を選ぶことは、安全や経済的...",
+				"text": "信頼性の比較：統計に基づいたトヨタとレクサスの信頼性比較\n\n自動車は、私たちの日常生活に不可欠な存在です。信頼性のある自動車を選ぶことは、安全や経済的な観点からも重要です。この記事では、トヨタとレクサスの信頼性を統計に基づいて比較し、それぞれの信頼性の要因について説明します。\n\n自動車の信頼性は、製造工程や部品の品質、テクノロジーの活用など、さまざまな要素によって左右されます。トヨタとレクサスは、両ブランドとも高い信頼性を誇ることで知られていますが、その背後にはどのような技術があるのでしょうか。\n\n両ブランドが信頼性を担保するために採用している主要なテクノロジーには、耐久性の高い部品の使用、先進的なエンジン技術、そして安全装備の充実などがあります。また、自動車の信頼性を高めるために行われる品質管理やテストの取り組みについても詳細に取り上げます。\n\nこうした要素を踏まえた上で、トヨタとレクサスの信頼性を統計に基づいて比較してみましょう。使用する車に関する欠陥や信頼性についての情報は、信頼できる統計データを用いて客観的に議論します。\n\n自動車を選ぶ際には、信頼性も大きな要素の一つです。トヨタとレクサスの信頼性を比較することで、あなたの次の自動車購入の参考になる情報を提供します。信頼性と統計に基づいた比較を通じて、信頼性の高い自動車を見つける手助けとなることでしょう。",
+				"url": "#entity_params=%7B%22toyota%22%3A%7B%22brandID%22%3A%2217%22%7D%2C%22lexus%22%3A%7B%22brandID%22%3A%228%22%7D%7D",
+				"cards": "[]"
+			},
+			"toyota-camry-vs-honda-accord-vs-mazda-6": {
+				"title": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較",
+				"text": "タイトル：Toyota Camry vs Honda Accord vs Mazda 6：統計に基づく信頼性比較\n\nイントロダクション：\n自動車市場での競争は激化しており、トヨタカムリ、ホンダアコード、マツダ6は中型セダンの分野で人気のあるモデルです。この記事では、統計データに基づいて、これらの車の信頼性を比較します。信頼性は、所有者の満足度、故障率、メンテナンスコストなどの要素によって評価されます。\n\n1. 所有者の満足度：\nまず、所有者の満足度を比較します。J.D. PowerやConsumer Reportsなどの信頼性調査結果に基づいて、各車の所有者がどれだけ満足しているかを評価します。これにより、車の品質や信頼性についての一般的な見解を得ることができます。\n\n2. 故障率：\n次に、各車の故障率を比較します。信頼性の高い車は、故障が少なく、所有者が安心して乗ることができる車です。信頼性調査や保険会社の統計データを参考に、各車の故障率を評価します。\n\n3. メンテナンスコスト：\n車の信頼性を評価する際には、メンテナンスコストも重要な要素です。車のメンテナンスや修理にかかる費用は、所有者にとっての負担となります。統計データやオーナーレビューを参考に、各車のメンテナンスコストを比較します。\n\n4. 保証：\n最後に、各車の保証についても比較します。信頼性の高い車は、メーカーが自信を持って保証を提供している場合があります。保証期間や内容を調査し、各車の保証の信頼性を評価します。\n\n結論：\n以上の要素を総合的に考慮し、Toyota Camry、Honda Accord、Mazda 6の信頼性を比較しました。統計に基づくデータを参考にすることで、購入者が信頼性の高い車を選ぶ際に役立つ情報を提供しました。ただし、個々の所有者の経験や好みによっても評価は異なるため、最終的な選択は個人の判断に委ねられます。",
+				"url": "#entity_params={\"toyota+camry\":{\"modelID\":\"722\"},\"honda+accord\":{\"modelID\":\"903\"},\"mazda+6\":{\"modelID\":\"349\"}}",
+				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"mazda 6\"}]"
+			},
+			"volkswagen-golf-vs-mazda-3": {
+				"title": "【統計に基づく信頼性比較】フォルクスワーゲン・ゴルフVSマツダ3 - どちらが優れているのか？",
+				"text": "【統計に基づく信頼性比較】フォルクスワーゲン・ゴルフVSマツダ3 - どちらが優れているのか？\n\n自動車の信頼性は、その所有者にとって非常に重要な要素です。それは、車がどれだけ長く、そしてどれだけ問題なく走行できるかを示しています。今回は、統計データに基づいて、フォルクスワーゲン・ゴルフとマツダ3の信頼性を比較します。この記事では、それぞれの車がどれだけ信頼できるのか、またその理由を詳しく解説します。\n\nまず、信頼性の高さを決定する主要な要素は、車の欠陥の数とその重大性です。これらの要素は、車の信頼性を大きく左右します。また、車の信頼性は、その技術的な詳細にも大きく依存します。それぞれの車がどのような技術を採用しているのか、その詳細を深堀りしていきましょう。\n\nフォルクスワーゲン・ゴルフは、その堅牢な構造と高品質な部品で知られています。一方、マツダ3は、その独自のSKYACTIV技術と優れた燃費性能で評価されています。これらの技術は、それぞれの車がどれだけ信頼性が高いのかを示しています。\n\nしかし、これらの情報だけでは十分ではありません。それぞれの車の信頼性を正確に比較するためには、具体的な統計データが必要です。そのため、この記事の最後には、それぞれの車の信頼性を比較するための統計チャートを掲載しています。\n\n自動車の信頼性は、その所有者にとって非常に重要な要素です。それは、車がどれだけ長く、そしてどれだけ問題なく走行できるかを示しています。今回は、統計データに基づいて、フォルクスワーゲン・ゴルフとマツダ3の信頼性を比較します。この記事では、それぞれの車がどれだけ信頼できるのか、またその理由を詳しく解説します。\n\n自動車の信頼性、欠陥、比較、統計といったキーワードを用いて、詳細な分析を行います。車の専門家として、私たちはあなたに最も信頼できる情報を提供します。それでは、一緒に統計チャートを見ていきましょう。",
+				"url": "#entity_params=%7B%22volkswagen+golf%22%3A%7B%22modelID%22%3A%22844%22%7D%2C%22mazda+3%22%3A%7B%22modelID%22%3A%22347%22%7D%7D",
+				"cards": "[{\"title\":\"volkswagen golf\"},{\"title\":\"mazda 3\"}]"
+			},
+			"best-car-reliability-comparison-2023": {
+				"title": "2023年のベストカーリアビリティ比較について\nこんにちは皆さん、車の信頼性に関する最新情報をお届けします。あなたが新しい車を購入する際に、信頼性は最も重要な要素の一つです。車の欠陥は毎年多くの人々にとって大きな問題となっていますが、私たちは幸運なことに、それらの問題を解決するための最新のデータを持っています。...",
+				"text": "2023年のベストカーリアビリティ比較について\nこんにちは皆さん、車の信頼性に関する最新情報をお届けします。あなたが新しい車を購入する際に、信頼性は最も重要な要素の一つです。車の欠陥は毎年多くの人々にとって大きな問題となっていますが、私たちは幸運なことに、それらの問題を解決するための最新のデータを持っています。\n\n今回は、技術的な詳細について説明しますが、その前に、私たちのサイトを訪れてくれたことであなたが受けることができる恩恵についてお話ししましょう。car-defects.comは、信頼できる情報源として数多くの人々に利用されています。私たちのサイトを利用することで、あなたは信頼性の高い情報にアクセスすることができ、安心して車を購入することができるでしょう。\n\nそれでは、技術的な詳細について少し調べてみましょう。たくさんの車種が登場しており、どれが信頼性に優れているのかを知ることは非常に重要です。しかし、これを皮肉な口調で語ります。どの車が壊れやすいのか、とても興味深いですね。そもそも、信頼性が問題になるくらいの車があるということ自体が、私たちにとってはちょっとした驚きです。\n\n最新のデータを元に、私たちの比較記事はあなたの次の車購入に役立つことでしょう。そして、その選択が最高の信頼性を持つ車を見つける手助けになることを願っています。では、引き続き私たちのサイトをチェックしてくださいね。",
+				"url": "",
+				"cards": "[]"
+			}
+		}
+	}
 }
