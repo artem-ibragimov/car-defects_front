@@ -130,8 +130,10 @@ function generateImg(name) {
 	return openai.images
 		.generate({
 			model: 'dall-e-3',
-			prompt: `real car toy, photorealistic, poster for article "${name.replaceAll('-', ' ')}, 
-			, close-up,  –ar 2:1"`,
+			prompt: `photorealistic  poster for article "${name.replaceAll(
+				'-',
+				' '
+			)}, close-up,  –ar 2:1"`,
 			quality: 'standard',
 			style: 'vivid',
 			n: 1,
@@ -160,7 +162,7 @@ function generateArticle(locale, content, poster, url, cards) {
 		.create({
 			model: 'gpt-3.5-turbo-1106',
 			messages: [{ role: 'user', content }],
-			temperature: 0.9
+			temperature: 1
 		})
 		.then((v) => {
 			const filename = `src/lib/i18n/${locale}.json`;
@@ -174,13 +176,14 @@ function generateArticle(locale, content, poster, url, cards) {
 					return;
 				}
 				const json = JSON.parse(data);
-				const title = text.includes('\n\n') && text.split('\n\n')[0].length < 60
-					? text.split('\n\n')[0]
-					: text.slice(0, /\?|\.|\!/.exec(text.slice(0, 50))?.index || text.lastIndexOf(' ', 50));
+				const title =
+					text.includes('\n\n') && text.split('\n\n')[0].length < 60
+						? text.split('\n\n')[0]
+						: text.slice(0, /\?|\.|\!/.exec(text.slice(0, 50))?.index || text.lastIndexOf(' ', 50));
 				json.text.article[poster] = {
 					title: `${title}...`,
 					text,
-					url: url ? new URL(url).hash : '',
+					url: url ? new URL(url).hash : '-',
 					cards
 				};
 				writeFile(filename, JSON.stringify(json, null, 2), (err) => {

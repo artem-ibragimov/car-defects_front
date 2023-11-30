@@ -70,7 +70,7 @@
 	<h1>{title}</h1>
 	<Content data={content} />
 	<Cards {cards} />
-	{#if url}
+	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
 	<ArticleLinks />
