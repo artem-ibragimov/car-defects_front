@@ -33,7 +33,9 @@ function post({ title, post, link, mediaUrls }) {
 			post,
 			shortenLinks: false,
 			// mediaUrls,
-			platforms: ['facebook', 'twitter', 'reddit' /* "pinterest"*/],
+			platforms: ['facebook', 'twitter', /* 'reddit' "pinterest"*/],
+			max: 3,           // optional, range 1-5
+			position: "auto",  // optional, "auto" or "end"
 			pinterestOptions: { title, link },
 			redditOptions: { title, link }
 		})

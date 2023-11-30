@@ -10,10 +10,12 @@
 	const src = `${ROUTE_NAMES.CHART_ONLY}${url}`;
 </script>
 
-<div class="Charts" class:lg>
-	<ChartFrame {title} {lg} {src} />
-</div>
-<a href={url} target="_blank">{$_('label.more')}</a>
+{#if url}
+	<div class="Charts" class:lg>
+		<ChartFrame {title} {lg} {src} />
+	</div>
+	<a href={url} target="_blank">{$_('label.more')}</a>
+{/if}
 
 <style scoped>
 	.Charts {
