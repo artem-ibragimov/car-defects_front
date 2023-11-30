@@ -130,7 +130,7 @@ function generateImg(name) {
 	return openai.images
 		.generate({
 			model: 'dall-e-3',
-			prompt: ` poster for article "${name.replaceAll('-', ' ')}, real car toy, photorealistic
+			prompt: `real car toy, photorealistic, poster for article "${name.replaceAll('-', ' ')}, 
 			, close-up,  –ar 2:1"`,
 			quality: 'standard',
 			style: 'vivid',
@@ -174,7 +174,9 @@ function generateArticle(locale, content, poster, url, cards) {
 					return;
 				}
 				const json = JSON.parse(data);
-				const title = text.includes('\n\n') ? text.split('\n\n')[0] : text.slice(0, 60);
+				const title = text.includes('\n\n') && text.split('\n\n')[0].length < 60
+					? text.split('\n\n')[0]
+					: text.slice(0, /\?|\.|\!/.exec(text.slice(0, 50))?.index || text.lastIndexOf(' ', 50));
 				json.text.article[poster] = {
 					title: `${title}...`,
 					text,

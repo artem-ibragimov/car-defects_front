@@ -33,9 +33,9 @@ function post({ title, post, link, mediaUrls }) {
 			post,
 			shortenLinks: false,
 			// mediaUrls,
-			platforms: ['facebook', 'twitter', 'reddit' /*"pinterest"*/],
+			platforms: ['facebook', 'twitter', 'reddit' /* "pinterest"*/],
 			pinterestOptions: { title, link },
-			redditOptions: { title, subreddit: 'car_defects_website', link }
+			redditOptions: { title, link }
 		})
 		.then((res) => {
 			if (res.status === 'error') {
