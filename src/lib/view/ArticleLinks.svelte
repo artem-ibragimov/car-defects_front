@@ -9,13 +9,14 @@
 	const pagePath = typeof location !== 'undefined' ? location.pathname : '';
 
 	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
+		.sort(() => Math.random() - 0.5)
+		.slice(0, 8)
 		.map(([name, path]) => ({
 			title: $_(`text.article.${name}.title`),
 			imgSrc: name,
 			href: `/articles/${$selected}${path}`,
 			path
-		}))
-		.sort(() => Math.random() - 0.5);
+		}));
 	$: if (pagePath) {
 		cards = cards.filter((card) => !pagePath.includes(card.path));
 	}

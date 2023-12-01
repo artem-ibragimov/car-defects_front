@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import { createWriteStream, readFile, readFileSync, writeFile, writeFileSync } from 'fs';
 import { get } from 'https';
 import { OpenAI } from 'openai';
-import { createInterface } from 'readline';
+import { URL } from 'url';
 
 const error = (e) => console.error(chalk.red(e));
 const warn = (w) => console.warn(chalk.yellow(w));
@@ -34,40 +34,93 @@ try {
 }
 
 function generateByTopic(topic) {
-	return generate(topic);
+	return getCars(topic)
+		.then((cars = []) => {
+			const fetching = cars
+				.map((car_name) => car_name.toLowerCase())
+				.map((car_name) => {
+					const query = `https://car-defects.com/data/search/?query=${car_name}`;
+					return fetch(query)
+						.then((res) => res.json())
+						.then((data) => {
+							const genID = Object.keys(data.gens || {}).find((id) =>
+								car_name.includes(data.gens[id])
+							);
+							if (genID) {
+								return { [car_name]: { genID } };
+							}
+							const modelID = Object.keys(data.models || {}).find((id) =>
+								car_name.includes(data.models[id])
+							);
+							if (modelID) {
+								return { [car_name]: { modelID } };
+							}
+							const brandID = Object.keys(data.brands || {}).find((id) =>
+								car_name.includes(data.brands[id])
+							);
+							if (brandID) {
+								return { [car_name]: { brandID } };
+							}
+							throw new Error('no data');
+						});
+				});
+			return Promise.all(fetching)
+				.then((results) => {
+					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
+					return {
+						imgs: cars.map((name) => ({
+							prompt: `hyper realistic photo of ${name} on road, the car plate text ["car-defects.com"], –ar 2:1`,
+							name
+						})),
+						cars: cars.map((title) => ({ title: title.toLowerCase() })),
+						url: `https://car-defects.com/#entity_params=${encodeURI(
+							JSON.stringify(entity_params)
+						)}&data_params=${encodeURI(JSON.stringify({ total: true }))}`
+					};
+				})
+				.catch(() => {
+					return {
+						imgs: [],
+						cars: [],
+						url: `https://car-defects.com/#entity_params=${encodeURI(
+							JSON.stringify({})
+						)}&data_params=${encodeURI(JSON.stringify({}))}`
+					};
+				});
+		})
+		.then(({ cars, url, imgs }) => generate(topic, imgs, cars, url));
 }
 
-function generateByUrl(url) {
-	const decoded = decodeURIComponent(
-		new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
-	);
-	const cars = Object.keys(JSON.parse(decoded));
-	const imgs = [];
-	cars.forEach((car) => {
-		try {
-			readFileSync(`./static/assets/img/${car}.webp`);
-		} catch (e) {
-			imgs.push(car);
-			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
-		}
-	});
-	return generate(
-		`Reliability Comparison of ${cars.join(' vs ')} based on Statistics`,
-		imgs,
-		cars.map((title) => ({ title }))
-	);
-}
+// function generateByUrl(url) {
+// 	const decoded = decodeURIComponent(
+// 		new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
+// 	);
+// 	const cars = Object.keys(JSON.parse(decoded));
+// 	const imgs = [];
+// 	cars.forEach((car) => {
+// 		try {
+// 			readFileSync(`./static/assets/img/${car}.webp`);
+// 		} catch (e) {
+// 			imgs.push(car);
+// 			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
+// 		}
+// 	});
+// 	return generate(
+// 		`Reliability Comparison of ${cars.join(' vs ')} based on Statistics`,
+// 		imgs,
+// 		cars.map((title) => ({ title }))
+// 	);
+// }
 
-function generate(query, imgs = [], cars = [], url = '') {
+function generate(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(cars);
-	const poster = `${query}`.replaceAll(' ', '-').toLowerCase();
-	try {
-		readFileSync(`./static/assets/img/${poster}.webp`);
-	} catch (e) {
-		imgs.push(poster);
-	}
+	const poster = `${topic}`.replaceAll(' ', '-').toLowerCase();
+	imgs.push({
+		prompt: `hyper realistic poster for article "${topic}", the text ["${topic}"] fullscreen –ar 2:1`,
+		name: poster
+	});
 	const prompt = `
-	catchy professional article with higher CTR for analytics website about "${query} "
+	catchy professional article with higher CTR for analytics website about "${topic} "
 	describe technical details, use sarcastic tone, 
 	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
@@ -81,22 +134,24 @@ function generate(query, imgs = [], cars = [], url = '') {
 		jp: `Write in Japanese ${prompt}`,
 		zh: `Write in Chinese ${prompt}`
 	});
-	warn(`Need images:\n ${imgs.join('\n')}`);
-	info(`Wait for ChatGPT images generation: ${imgs}`);
+	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(
-		(chain, name) =>
+		(chain, img_data, i, arr) =>
 			chain
-				.then(
-					() =>
-						new Promise((r) => {
-							setTimeout(r, 60000);
-						})
-				)
-				.then(() => generateImg(name)),
+
+				.then(() => generateImg(img_data))
+				.then(() =>
+					i !== arr.length - 1
+						? new Promise((r) => {
+								setTimeout(r, 60000);
+						  })
+						: Promise.resolve()
+				),
 		Promise.resolve()
 	);
 
 	info('Wait for ChatGPT articles generation ....');
+
 	// const articles_generation = Promise.resolve()
 	const articles_generation = queries
 		.reduce(
@@ -108,7 +163,7 @@ function generate(query, imgs = [], cars = [], url = '') {
 								setTimeout(r, 60000);
 							})
 					)
-					.then(() => generateArticle(locale, content, poster, url, cards)),
+					.then(() => generateArticle(locale, topic, content, poster, url, cards)),
 			Promise.resolve()
 		)
 		.catch(error);
@@ -116,34 +171,26 @@ function generate(query, imgs = [], cars = [], url = '') {
 	return Promise.all([image_generation, articles_generation]);
 }
 
-// const readline = createInterface({
-// 	input: process.stdin,
-// 	output: process.stdout
-// });
-
-// readline.question('Enter car defects URL: ', (url) => {
-// 	readline.close();
-// 	generateByUrl(url);
-// });
-
-function generateImg(name) {
-	return openai.images
-		.generate({
-			model: 'dall-e-3',
-			prompt: `photorealistic  poster for article "${name.replaceAll(
-				'-',
-				' '
-			)}, close-up,  –ar 2:1"`,
-			quality: 'standard',
-			style: 'vivid',
-			n: 1,
-			size: `1792x1024`
-		})
-		.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.webp`))
-		.then(() => {
-			info(`ChatGPT has generated the ${name} image`);
-		})
-		.catch(error);
+function generateImg({ prompt, name }) {
+	try {
+		readFileSync(`./static/assets/img/${name}.webp`);
+		return Promise.resolve();
+	} catch (e) {
+		return openai.images
+			.generate({
+				model: 'dall-e-3',
+				prompt,
+				quality: 'standard',
+				style: 'vivid',
+				n: 1,
+				size: `1792x1024`
+			})
+			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.webp`))
+			.then(() => {
+				info(`ChatGPT has generated the ${name} image`);
+			})
+			.catch(error);
+	}
 }
 
 function downloadImage(url, filename) {
@@ -157,7 +204,7 @@ function downloadImage(url, filename) {
 	});
 }
 
-function generateArticle(locale, content, poster, url, cards) {
+function generateArticle(locale, topic, content, poster, url, cards) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
@@ -177,9 +224,11 @@ function generateArticle(locale, content, poster, url, cards) {
 				}
 				const json = JSON.parse(data);
 				const title =
-					text.includes('\n\n') && text.split('\n\n')[0].length < 60
+					locale == 'en'
+						? topic
+						: text.includes('\n\n') && text.split('\n\n')[0].length < 70
 						? text.split('\n\n')[0]
-						: text.slice(0, /\?|\.|\!/.exec(text.slice(0, 50))?.index || text.lastIndexOf(' ', 50));
+						: text.slice(0, /\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 70));
 				json.text.article[poster] = {
 					title: `${title}...`,
 					text,
@@ -191,5 +240,16 @@ function generateArticle(locale, content, poster, url, cards) {
 				});
 			});
 		})
+		.catch(error);
+}
+
+function getCars(topic) {
+	return openai.chat.completions
+		.create({
+			model: 'gpt-3.5-turbo-1106',
+			messages: [{ role: 'user', content: `what are top 3 car model name of "${topic}"?` }],
+			temperature: 1
+		})
+		.then((v) => v.choices[0].message.content?.split('\n').map((c) => c.replace(/\d+\.\s*/, '')))
 		.catch(error);
 }

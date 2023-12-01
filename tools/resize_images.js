@@ -8,44 +8,45 @@ import imageminWebp from 'imagemin-webp';
 
 const error = (e) => console.error(chalk.red(e));
 const FOLDER = './static/assets/img';
+const SIZES = [320, 480, 640, 720];
+const SIZE_PREFIX = '--';
+
 try {
-	resize_images(FOLDER, [320, 480, 640, 720]);
-	imagemin([`${FOLDER}/**/*.{png,webp}`], {
+	resize_images(FOLDER, SIZES);
+	imagemin([`${FOLDER}/**/*.webp`], {
 		use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
 	}).then(console.log);
 } catch (e) {
 	error(e);
 }
 
-/**
- *
- * @param {string} dir
- * @param {number[]} widths
- */
 function resize_images(dir, widths) {
 	const paths = collectPaths(dir);
-	const size_prefix = '--';
-	paths.forEach((p) => {
-		sizeOf(p, (err, dimensions) => {
-			if (err) {
-				return error(err);
-			}
-			if (!dimensions || !dimensions.width || !dimensions.height) {
-				return;
-			}
-			const aspect_ratio = dimensions.width / dimensions.height;
-			const [fullpath, extension] = p.split('.');
-			const [img_path, size] = fullpath.split(size_prefix);
-			const shrp = sharp(p);
+	const resizing = paths.map((p) => {
+		const dimensions = sizeOf(p);
+		if (!dimensions || !dimensions.width || !dimensions.height) {
+			return Promise.resolve();
+		}
+		const aspect_ratio = dimensions.width / dimensions.height;
+		const [fullpath, extension] = p.split('.');
+		const [img_path] = fullpath.split(SIZE_PREFIX);
+		const shrp = sharp(p);
+		return Promise.all(
 			widths
-				.filter((w) => !existsSync(`${img_path}${size_prefix}${w}.${extension}`))
-				.forEach((w) => {
+				.filter(
+					(w) =>
+						dimensions.width &&
+						w <= dimensions.width &&
+						!existsSync(`${img_path}${SIZE_PREFIX}${w}.${extension}`)
+				)
+				.map((w) =>
 					shrp
 						.resize(w, parseInt((w / aspect_ratio).toFixed(), 10))
-						.toFile(`${img_path}${size_prefix}${w}.${extension}`);
-				});
-		});
+						.toFile(`${img_path}${SIZE_PREFIX}${w}.${extension}`)
+				)
+		);
 	});
+	return Promise.all(resizing);
 }
 
 /**
