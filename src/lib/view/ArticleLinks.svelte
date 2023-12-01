@@ -10,7 +10,7 @@
 
 	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
 		.sort(() => Math.random() - 0.5)
-		.slice(0, 8)
+		.slice(0, 4)
 		.map(([name, path]) => ({
 			title: $_(`text.article.${name}.title`),
 			imgSrc: name,

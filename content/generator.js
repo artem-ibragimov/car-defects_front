@@ -247,7 +247,7 @@ function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
-			messages: [{ role: 'user', content: `what are top 3 car model name of "${topic}"?` }],
+			messages: [{ role: 'user', content: `what are top 4 car model name of "${topic}"?` }],
 			temperature: 1
 		})
 		.then((v) => v.choices[0].message.content?.split('\n').map((c) => c.replace(/\d+\.\s*/, '')))
