@@ -69,7 +69,7 @@ function generateByTopic(topic) {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						imgs: cars.map((name) => ({
-							prompt: `hyper realistic ${name} car toy on table, no finger, close-up, article illustration, the car plate text ["car-defects.com"], –ar 2:1`,
+							prompt: `promo shot of ${name}, shot on a Sony DSLR, 50mm lens f/ 2. 8, ultra detailed, the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
 							name: name.toLowerCase()
 						})),
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
@@ -120,7 +120,7 @@ function generate(topic, imgs = [], cars = [], url = '') {
 			.map((c) => c.title)
 			.join(
 				', '
-			)} hyper realistic car toys for article "${topic}", the text ["${topic}"], fullscreen –ar 2:1`,
+			)} minimalistic poster for article "${topic}", the text ["${topic}"], fullscreen –ar 2:1`,
 		name: poster
 	});
 	const prompt = `
@@ -129,14 +129,14 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
 	const queries = Object.entries({
-		en: `Write ${prompt}`,
-		ru: `Write in Russian ${prompt}`,
-		de: `Write in German ${prompt}`,
-		es: `Write in Spanish ${prompt}`,
-		fr: `Write in French ${prompt}`,
-		pt: `Write in Portuguese ${prompt}`,
-		jp: `Write in Japanese ${prompt}`,
-		zh: `Write in Chinese ${prompt}`
+		// en: `Write ${prompt}`,
+		// ru: `Write in Russian ${prompt}`,
+		// de: `Write in German ${prompt}`,
+		// es: `Write in Spanish ${prompt}`,
+		// fr: `Write in French ${prompt}`,
+		// pt: `Write in Portuguese ${prompt}`,
+		// jp: `Write in Japanese ${prompt}`,
+		// zh: `Write in Chinese ${prompt}`
 	});
 	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(
@@ -184,7 +184,7 @@ function generateImg({ prompt, name }) {
 			.generate({
 				model: 'dall-e-3',
 				prompt,
-				quality: 'standard',
+				quality: 'hd',
 				style: 'vivid',
 				n: 1,
 				size: `1792x1024`
