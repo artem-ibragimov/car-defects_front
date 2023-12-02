@@ -69,7 +69,7 @@ function generateByTopic(topic) {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						imgs: cars.map((name) => ({
-							prompt: `promo shot of ${name}, shot on a Sony DSLR, 50mm lens f/ 2. 8, ultra detailed, the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+							prompt: ` ${name}, minimalistic detailed realistic, shot on a Sony DSLR, 50mm lens f/ 2. 8, ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
 							name: name.toLowerCase()
 						})),
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
