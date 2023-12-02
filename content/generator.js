@@ -69,7 +69,7 @@ function generateByTopic(topic) {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						imgs: cars.map((name) => ({
-							prompt: `hyper realistic ${name} car toy is moving on table, close-up, article illustration, the car plate text ["car-defects.com"], –ar 2:1`,
+							prompt: `hyper realistic ${name} car toy on table, no finger, close-up, article illustration, the car plate text ["car-defects.com"], –ar 2:1`,
 							name: name.toLowerCase()
 						})),
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
@@ -116,7 +116,11 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replaceAll(' ', '-').toLowerCase();
 	imgs.push({
-		prompt: `hyper realistic poster for article "${topic}", the text ["${topic}"], ${cars.map((c)=>c.title).join(', ')} fullscreen –ar 2:1`,
+		prompt: `${cars
+			.map((c) => c.title)
+			.join(
+				', '
+			)} hyper realistic car toys for article "${topic}", the text ["${topic}"], fullscreen –ar 2:1`,
 		name: poster
 	});
 	const prompt = `
@@ -125,14 +129,14 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
 	const queries = Object.entries({
-		// en: `Write ${prompt}`,
-		// ru: `Write in Russian ${prompt}`,
-		// de: `Write in German ${prompt}`,
-		// es: `Write in Spanish ${prompt}`,
-		// fr: `Write in French ${prompt}`,
-		// pt: `Write in Portuguese ${prompt}`,
-		// jp: `Write in Japanese ${prompt}`,
-		// zh: `Write in Chinese ${prompt}`
+		en: `Write ${prompt}`,
+		ru: `Write in Russian ${prompt}`,
+		de: `Write in German ${prompt}`,
+		es: `Write in Spanish ${prompt}`,
+		fr: `Write in French ${prompt}`,
+		pt: `Write in Portuguese ${prompt}`,
+		jp: `Write in Japanese ${prompt}`,
+		zh: `Write in Chinese ${prompt}`
 	});
 	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(

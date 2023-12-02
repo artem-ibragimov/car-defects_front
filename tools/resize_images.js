@@ -54,10 +54,7 @@ function resize_images(dir, widths) {
 
 		return Promise.all(
 			widths
-				.filter(
-					(w) =>
-						!existsSync(`${img_path}${SIZE_PREFIX}${w}.${extension}`)
-				)
+				.filter((w) => !existsSync(`${img_path}${SIZE_PREFIX}${w}.${extension}`))
 				.map((w) =>
 					shrp
 						.resize(w, parseInt((w / aspect_ratio).toFixed(), 10))
