@@ -14,7 +14,7 @@
 		<img
 			{loading}
 			class="Card__banner"
-			src={`/assets/img/${imgSrc}.webp`}
+			src={`/assets/img/${imgSrc.toLowerCase()}.webp`}
 			alt={title}
 			{title}
 			{srcset}

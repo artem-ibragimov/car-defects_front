@@ -56,8 +56,6 @@ function resize_images(dir, widths) {
 			widths
 				.filter(
 					(w) =>
-						dimensions.width &&
-						w <= dimensions.width &&
 						!existsSync(`${img_path}${SIZE_PREFIX}${w}.${extension}`)
 				)
 				.map((w) =>
