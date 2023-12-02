@@ -1,10 +1,11 @@
 import chalk from 'chalk';
-import { existsSync, readdirSync } from 'fs';
+import { existsSync, readdirSync, rename, renameSync, unlinkSync } from 'fs';
 import sizeOf from 'image-size';
 import path from 'path';
 import sharp from 'sharp';
 import imagemin from 'imagemin-keep-folder';
 import imageminWebp from 'imagemin-webp';
+import child_process from 'child_process';
 
 const error = (e) => console.error(chalk.red(e));
 const FOLDER = './static/assets/img';
@@ -23,14 +24,34 @@ try {
 function resize_images(dir, widths) {
 	const paths = collectPaths(dir);
 	const resizing = paths.map((p) => {
-		const dimensions = sizeOf(p);
+		let dimensions = { width: 0, height: 0 };
+		try {
+			dimensions = sizeOf(p);
+		} catch (e) {
+			unlinkSync(p);
+			throw e;
+		}
 		if (!dimensions || !dimensions.width || !dimensions.height) {
 			return Promise.resolve();
 		}
 		const aspect_ratio = dimensions.width / dimensions.height;
-		const [fullpath, extension] = p.split('.');
+
+		const lowerCasePath = p.toLowerCase();
+		if (lowerCasePath !== p) {
+			renameSync(p, lowerCasePath);
+			child_process.exec(`git mv "${p}" "${lowerCasePath}"`, (error, stdout, stderr) => {
+				if (error) {
+					console.error(`exec error: ${error}`);
+					return;
+				}
+				console.log(`stdout: ${stdout}`);
+				console.error(`stderr: ${stderr}`);
+			});
+		}
+		const [fullpath, extension] = lowerCasePath.split('.');
 		const [img_path] = fullpath.split(SIZE_PREFIX);
-		const shrp = sharp(p);
+		const shrp = sharp(lowerCasePath);
+
 		return Promise.all(
 			widths
 				.filter(
@@ -43,6 +64,7 @@ function resize_images(dir, widths) {
 					shrp
 						.resize(w, parseInt((w / aspect_ratio).toFixed(), 10))
 						.toFile(`${img_path}${SIZE_PREFIX}${w}.${extension}`)
+						.catch(error)
 				)
 		);
 	});

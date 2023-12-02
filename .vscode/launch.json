@@ -30,7 +30,7 @@
 		},
 		{
 			"name": "Resize Images",
-			"program": "${workspaceFolder}/resize_images",
+			"program": "${workspaceFolder}/tools/resize_images",
 			"request": "launch",
 			"skipFiles": ["<node_internals>/**"],
 			"type": "node",

@@ -69,13 +69,13 @@ function generateByTopic(topic) {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						imgs: cars.map((name) => ({
-							prompt: `hyper realistic photo of ${name} on road, the car plate text ["car-defects.com"], –ar 2:1`,
-							name
+							prompt: `hyper realistic ${name} car toy, close-up, article illustration, the car plate text ["car-defects.com"], –ar 2:1`,
+							name: name.toLowerCase()
 						})),
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
 						url: `https://car-defects.com/#entity_params=${encodeURI(
 							JSON.stringify(entity_params)
-						)}&data_params=${encodeURI(JSON.stringify({ total: true }))}`
+						)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
 					};
 				})
 				.catch(() => {
@@ -125,14 +125,14 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
 	const queries = Object.entries({
-		en: `Write ${prompt}`,
-		ru: `Write in Russian ${prompt}`,
-		de: `Write in German ${prompt}`,
-		es: `Write in Spanish ${prompt}`,
-		fr: `Write in French ${prompt}`,
-		pt: `Write in Portuguese ${prompt}`,
-		jp: `Write in Japanese ${prompt}`,
-		zh: `Write in Chinese ${prompt}`
+		// en: `Write ${prompt}`,
+		// ru: `Write in Russian ${prompt}`,
+		// de: `Write in German ${prompt}`,
+		// es: `Write in Spanish ${prompt}`,
+		// fr: `Write in French ${prompt}`,
+		// pt: `Write in Portuguese ${prompt}`,
+		// jp: `Write in Japanese ${prompt}`,
+		// zh: `Write in Chinese ${prompt}`
 	});
 	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(
