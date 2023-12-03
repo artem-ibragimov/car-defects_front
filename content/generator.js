@@ -129,14 +129,14 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
 	const queries = Object.entries({
-		// en: `Write ${prompt}`,
-		// ru: `Write in Russian ${prompt}`,
-		// de: `Write in German ${prompt}`,
-		// es: `Write in Spanish ${prompt}`,
-		// fr: `Write in French ${prompt}`,
-		// pt: `Write in Portuguese ${prompt}`,
-		// jp: `Write in Japanese ${prompt}`,
-		// zh: `Write in Chinese ${prompt}`
+		en: `Write ${prompt}`,
+		ru: `Write in Russian ${prompt}`,
+		de: `Write in German ${prompt}`,
+		es: `Write in Spanish ${prompt}`,
+		fr: `Write in French ${prompt}`,
+		pt: `Write in Portuguese ${prompt}`,
+		jp: `Write in Japanese ${prompt}`,
+		zh: `Write in Chinese ${prompt}`
 	});
 	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(
