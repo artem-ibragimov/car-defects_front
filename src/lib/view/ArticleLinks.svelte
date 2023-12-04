@@ -5,11 +5,13 @@
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import { _ } from 'svelte-i18n';
 
+	export let random = false;
+
 	$: ({ selected } = localeStore);
 	const pagePath = typeof location !== 'undefined' ? location.pathname : '';
 
 	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
-		.sort(() => Math.random() - 0.5)
+		.sort(() => (random ? Math.random() - 0.5 : -1))
 		.slice(0, 4)
 		.map(([name, path]) => ({
 			title: $_(`text.article.${name}.title`),

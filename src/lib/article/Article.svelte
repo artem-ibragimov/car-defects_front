@@ -39,6 +39,8 @@
 		articleBody: content,
 		about: description
 	});
+	const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
+	$: srcset = name ? SIZES.map((w) => `/assets/img/${name}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
 <svelte:head>
@@ -66,14 +68,14 @@
 
 <article class="Article">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
-	<img src={poster} alt={title} />
+	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
 	<h1>{title}</h1>
 	<Content data={content} />
 	<Cards {cards} />
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
-	<ArticleLinks />
+	<ArticleLinks random />
 </article>
 
 <style scoped>

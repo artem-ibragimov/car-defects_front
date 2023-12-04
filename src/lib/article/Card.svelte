@@ -5,12 +5,12 @@
 	export let imgSrc: string = '';
 	export let href: string | undefined;
 	const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
+	const loading: 'lazy' | 'eager' = lazy ? 'lazy' : 'eager';
 	$: srcset = imgSrc ? SIZES.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
-	$: loading = lazy ? 'lazy' : 'eager';
 </script>
 
 <div class="Card" class:Card__text={!!text} class:Card-href={href}>
-	<a class="Card__a" {href}>
+	<a class="Card__a" {href} target="_self">
 		<img
 			{loading}
 			class="Card__banner"
