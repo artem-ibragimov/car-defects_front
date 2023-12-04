@@ -4,8 +4,8 @@
 	export let text: string = '';
 	export let imgSrc: string = '';
 	export let href: string | undefined;
-	const widths = [320, 480, 640, 720, 1280, 1600];
-	$: srcset = imgSrc ? widths.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
+	const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
+	$: srcset = imgSrc ? SIZES.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
 	$: loading = lazy ? 'lazy' : 'eager';
 </script>
 

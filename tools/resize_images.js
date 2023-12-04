@@ -9,7 +9,7 @@ import child_process from 'child_process';
 
 const error = (e) => console.error(chalk.red(e));
 const FOLDER = './static/assets/img';
-const SIZES = [320, 480, 640, 720];
+const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
 const SIZE_PREFIX = '--';
 
 try {
