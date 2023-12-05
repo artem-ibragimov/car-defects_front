@@ -91,27 +91,6 @@ function generateByTopic(topic) {
 		.then(({ cars, url, imgs }) => generate(topic, imgs, cars, url));
 }
 
-// function generateByUrl(url) {
-// 	const decoded = decodeURIComponent(
-// 		new URL(url).hash.replaceAll('#entity_params=', '').replaceAll('+', ' ')
-// 	);
-// 	const cars = Object.keys(JSON.parse(decoded));
-// 	const imgs = [];
-// 	cars.forEach((car) => {
-// 		try {
-// 			readFileSync(`./static/assets/img/${car}.webp`);
-// 		} catch (e) {
-// 			imgs.push(car);
-// 			// warn(chalk.yellow(`Do not forget to add '${car}.webp' image!`));
-// 		}
-// 	});
-// 	return generate(
-// 		`Reliability Comparison of ${cars.join(' vs ')} based on Statistics`,
-// 		imgs,
-// 		cars.map((title) => ({ title }))
-// 	);
-// }
-
 function generate(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replaceAll(' ', '-').toLowerCase();
@@ -131,12 +110,12 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	const queries = Object.entries({
 		en: `Write ${prompt}`,
 		ru: `Write in Russian ${prompt}`,
-		de: `Write in German ${prompt}`,
-		es: `Write in Spanish ${prompt}`,
-		fr: `Write in French ${prompt}`,
-		pt: `Write in Portuguese ${prompt}`,
-		jp: `Write in Japanese ${prompt}`,
-		zh: `Write in Chinese ${prompt}`
+		de: `Write in German ${prompt}`
+		// es: `Write in Spanish ${prompt}`,
+		// fr: `Write in French ${prompt}`,
+		// pt: `Write in Portuguese ${prompt}`,
+		// jp: `Write in Japanese ${prompt}`,
+		// zh: `Write in Chinese ${prompt}`
 	});
 	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(
@@ -147,8 +126,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 				.then(() =>
 					i !== arr.length - 1
 						? new Promise((r) => {
-								setTimeout(r, 60000);
-						  })
+							setTimeout(r, 60000);
+						})
 						: Promise.resolve()
 				),
 		Promise.resolve()
@@ -228,14 +207,15 @@ function generateArticle(locale, topic, content, poster, url, cards) {
 				}
 				const json = JSON.parse(data);
 				const title =
-					locale == 'en'
-						? topic
-						: text.includes('\n\n') && text.split('\n\n')[0].length < 70
+					text.includes('\n\n') && text.split('\n\n')[0].length < 100
 						? text.split('\n\n')[0]
-						: text.slice(0, /\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 70));
+						: `${text.slice(
+							0,
+							/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
+						)}...`;
 				json.text.article[poster] = {
-					title: `${title}...`,
-					text,
+					title: title.replace(/^\w+: /, ''),
+					text: text.replace(/^\w+: /, ''),
 					url: url ? new URL(url).hash : '-',
 					cards
 				};

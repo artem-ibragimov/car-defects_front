@@ -12,11 +12,11 @@ export const DICTIONARIES = {
 	en: flatten<ILocale, ILocale>(en),
 	de: flatten<ILocale, ILocale>(de),
 	es: flatten<ILocale, ILocale>(es),
-	fr: flatten<ILocale, ILocale>(fr),
-	jp: flatten<ILocale, ILocale>(jp),
-	pt: flatten<ILocale, ILocale>(pt),
-	ru: flatten<ILocale, ILocale>(ru),
-	zh: flatten<ILocale, ILocale>(zh)
+	// fr: flatten<ILocale, ILocale>(fr),
+	// jp: flatten<ILocale, ILocale>(jp),
+	// pt: flatten<ILocale, ILocale>(pt),
+	ru: flatten<ILocale, ILocale>(ru)
+	// zh: flatten<ILocale, ILocale>(zh)
 };
 
 export const ARTICLES = Object.keys(en.text.article);

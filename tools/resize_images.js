@@ -14,7 +14,7 @@ const SIZE_PREFIX = '--';
 
 try {
 	resize_images(FOLDER, SIZES);
-	imagemin([`${FOLDER}/**/*.webp`], {
+	imagemin([`${FOLDER}/**/*.webp`, ...SIZES.map((s)=>`!${FOLDER}/**/*--{${s}}.webp`)], {
 		use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
 	}).then(console.log);
 } catch (e) {
