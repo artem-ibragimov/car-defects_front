@@ -1,5 +1,7 @@
 import chalk from 'chalk';
-import { createWriteStream, readFile, readFileSync, writeFile, writeFileSync } from 'fs';
+import { createWriteStream, readFileSync, writeFileSync } from 'fs';
+import { readFile, writeFile } from 'node:fs/promises';
+
 import { get } from 'https';
 import { OpenAI } from 'openai';
 import { URL } from 'url';
@@ -69,7 +71,7 @@ function generateByTopic(topic) {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						imgs: cars.map((name) => ({
-							prompt: ` ${name}, minimalistic detailed realistic, shot on a Sony DSLR, 50mm lens f/ 2. 8, ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+							prompt: ` ${name}, minimalistic detailed realistic, ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
 							name: name.toLowerCase()
 						})),
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
@@ -126,8 +128,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 				.then(() =>
 					i !== arr.length - 1
 						? new Promise((r) => {
-							setTimeout(r, 60000);
-						})
+								setTimeout(r, 60000);
+						  })
 						: Promise.resolve()
 				),
 		Promise.resolve()
@@ -138,15 +140,16 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	// const articles_generation = Promise.resolve()
 	const articles_generation = queries
 		.reduce(
-			(chain, [locale, content]) =>
+			(chain, [locale, content], i, arr) =>
 				chain
-					.then(
-						() =>
-							new Promise((r) => {
-								setTimeout(r, 60000);
-							})
-					)
-					.then(() => generateArticle(locale, topic, content, poster, url, cards)),
+					.then(() => generateArticle(locale, content, poster, url, cards))
+					.then(() =>
+						i === arr.length - 1
+							? Promise.resolve()
+							: new Promise((r) => {
+									setTimeout(r, 60000);
+							  })
+					),
 			Promise.resolve()
 		)
 		.catch(error);
@@ -168,7 +171,7 @@ function generateImg({ prompt, name }) {
 				n: 1,
 				size: `1792x1024`
 			})
-			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.webp`))
+			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
 			.then(() => {
 				info(`ChatGPT has generated the ${name} image`);
 			})
@@ -187,42 +190,42 @@ function downloadImage(url, filename) {
 	});
 }
 
-function generateArticle(locale, topic, content, poster, url, cards) {
-	return openai.chat.completions
-		.create({
-			model: 'gpt-4',
-			messages: [{ role: 'user', content }],
-			temperature: 1
-		})
-		.then((v) => {
-			const filename = `src/lib/i18n/${locale}.json`;
-			readFile(filename, 'utf8', (err, data) => {
-				if (err) {
-					return error(chalk.red(err));
-				}
-				const text = v.choices[0].message.content?.replace('"', '');
-				if (!text) {
-					warn(v.choices[0].message);
-					return;
-				}
-				const json = JSON.parse(data);
-				const title =
-					text.includes('\n\n') && text.split('\n\n')[0].length < 100
-						? text.split('\n\n')[0]
-						: `${text.slice(
-							0,
-							/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
-						)}...`;
-				json.text.article[poster] = {
-					title: title.replace(/^\w+: /, ''),
-					text: text.replace(/^\w+: /, ''),
-					url: url ? new URL(url).hash : '-',
-					cards
-				};
-				writeFile(filename, JSON.stringify(json, null, 2), (err) => {
-					err && error(chalk.red(err));
+function generateArticle(locale, content, poster, url, cards) {
+	const filename = `src/lib/i18n/${locale}.json`;
+	return readFile(filename, 'utf8')
+		.then((data) => {
+			const json = JSON.parse(data);
+			if (json.text.article[poster]) {
+				return;
+			}
+			return openai.chat.completions
+				.create({
+					model: 'gpt-4',
+					messages: [{ role: 'user', content }],
+					temperature: 0.3
+				})
+				.then((v) => {
+					const text = v.choices[0].message.content?.replace('"', '');
+					if (!text) {
+						warn(v.choices[0].message);
+						return;
+					}
+
+					const title =
+						text.includes('\n\n') && text.split('\n\n')[0].length < 100
+							? text.split('\n\n')[0]
+							: `${text.slice(
+									0,
+									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
+							  )}...`;
+					json.text.article[poster] = {
+						title: title.replace(/^[\w|\*]+: /, ''),
+						text: text.replace(title, '').replace(/^[\w|\*]+: /, ''),
+						url: url ? new URL(url).hash : '-',
+						cards
+					};
+					return writeFile(filename, JSON.stringify(json, null, 2));
 				});
-			});
 		})
 		.catch(error);
 }

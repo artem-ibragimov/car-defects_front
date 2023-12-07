@@ -12,14 +12,9 @@ const FOLDER = './static/assets/img';
 const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
 const SIZE_PREFIX = '--';
 
-try {
-	resize_images(FOLDER, SIZES);
-	imagemin([`${FOLDER}/**/*.webp`, ...SIZES.map((s)=>`!${FOLDER}/**/*--{${s}}.webp`)], {
-		use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
-	}).then(console.log);
-} catch (e) {
-	error(e);
-}
+imagemin([`${FOLDER}/**/*.png`], { use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })] })
+	.then(() => resize_images(FOLDER, SIZES))
+	.catch(error);
 
 function resize_images(dir, widths) {
 	const paths = collectPaths(dir);
