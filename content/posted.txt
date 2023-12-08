@@ -9,3 +9,4 @@ best-car-reliability-comparison-2023
 top-reliable-cars-ranked
 car-reliability-ratings-side-by-side
 compare-car-reliability-by-brand
+most-reliable-cars-of-the-year
