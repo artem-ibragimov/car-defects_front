@@ -5,8 +5,8 @@ Car reliability ratings side by side:generated
 Compare car reliability by brand:generated
 Most reliable cars of the year:generated
 Car dependability studies latest:generated
-Vehicle reliability head to head
-Which cars are most reliable?
+Vehicle reliability head to head:generated
+Which cars are most reliable?:generated
 Car brand reliability rankings
 Reliability scores for popular cars
 Auto reliability comparison chart

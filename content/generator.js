@@ -101,7 +101,7 @@ function generate(topic, imgs = [], cars = [], url = '') {
 			.map((c) => c.title)
 			.join(
 				', '
-			)} minimalistic poster for article "${topic}", the text ["${topic}"], fullscreen –ar 2:1`,
+			)}  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"], fullscreen –ar 2:1`,
 		name: poster
 	});
 	const prompt = `
@@ -219,8 +219,8 @@ function generateArticle(locale, content, poster, url, cards) {
 									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
 							  )}...`;
 					json.text.article[poster] = {
-						title: title.replace(/^[\w|\*]+: /, ''),
-						text: text.replace(title, '').replace(/^[\w|\*]+: /, ''),
+						title: title.split(':').pop(),
+						text: (text.split(':').pop() || text).replace(title, ''),
 						url: url ? new URL(url).hash : '-',
 						cards
 					};
