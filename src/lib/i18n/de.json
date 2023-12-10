@@ -195,6 +195,12 @@
 				"text": " \"Es gibt kein perfektes Auto. Aber es gibt Autos, die besser sind als andere. Und mit den richtigen Informationen können Sie ein Auto wählen, das nicht nur gut aussieht, sondern auch zuverlässig ist. Besuchen Sie car-defects.com für mehr Informationen und bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in der Autoindustrie. Denn Wissen ist Macht - und in diesem Fall auch die Macht, ein zuverlässiges Auto zu wählen.\"",
 				"url": "#entity_params=%7B%22toyota%20prius%22:%7B%22modelID%22:%22783%22%7D,%22honda%20accord%22:%7B%22modelID%22:%22903%22%7D,%22lexus%20rx%22:%7B%22brandID%22:%228%22%7D,%22subaru%20outback%22:%7B%22modelID%22:%22651%22%7D%7D&data_params=%7B%22total%22:true,%22by_age%22:true%7D",
 				"cards": "[{\"title\":\"toyota prius\"},{\"title\":\"honda accord\"},{\"title\":\"lexus rx\"},{\"title\":\"subaru outback\"}]"
+			},
+			"car-brand-reliability-rankings": {
+				"title": " Auto-Marken Zuverlässigkeits-Rangliste\"",
+				"text": "\nZuverlässigkeit ist kein Luxus, sondern eine Notwendigkeit. Und diese Rangliste zeigt, dass nicht immer der höchste Preis auch die beste Qualität garantiert. Also, bevor Sie das nächste Mal in ein glänzendes Autohaus gehen und sich von Hochglanzprospekten blenden lassen, werfen Sie doch einen Blick auf car-defects.com. Es könnte die beste Entscheidung sein, die Sie je getroffen haben. Denn wer will schon ein teures Auto, das ständig in der Werkstatt steht?\n\nAlso, liebe Autofreunde, lassen Sie sich nicht von glänzenden Karosserien und PS-strotzenden Motoren blenden. Schauen Sie hinter die Fassade und treffen Sie eine informierte Entscheidung. Denn am Ende des Tages zählt nicht, wie das Auto aussieht, sondern wie es fährt. Und das erfahren Sie am besten auf car-defects.com.",
+				"url": "#entity_params=%7B%7D&data_params=%7B%7D",
+				"cards": "[]"
 			}
 		}
 	}
