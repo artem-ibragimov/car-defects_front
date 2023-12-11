@@ -22,8 +22,8 @@ const openai = new OpenAI(configuration);
 
 try {
 	const file = './content/topics.txt';
-	const topics = readFileSync(file).toString().split('\n');
-	const unposted = topics.filter((t) => !t.includes(':generated'))[0];
+	const topics = readFileSync(file).toString().split('\n').sort();
+	const unposted = topics.find((t) => !t.includes(':generated'));
 	generateByTopic(unposted)
 		.then(() => {
 			const unpostedIndex = topics.findIndex((t) => t == unposted);
@@ -98,7 +98,7 @@ function generate(topic, imgs = [], cars = [], url = '') {
 		return Promise.resolve();
 	}
 	const cards = JSON.stringify(cars);
-	const poster = `${topic}`.replaceAll(' ', '-').toLowerCase();
+	const poster = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
 		prompt: `realistic ${cars
 			.map((c) => c.title)

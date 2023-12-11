@@ -11,3 +11,4 @@ car-reliability-ratings-side-by-side
 compare-car-reliability-by-brand
 most-reliable-cars-of-the-year
 car-dependability-studies-latest
+vehicle-reliability-head-to-head

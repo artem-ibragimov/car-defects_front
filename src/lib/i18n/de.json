@@ -166,7 +166,7 @@
 				"url": "#entity_params=%7B%22toyota%20camry%22:%7B%22modelID%22:%22722%22%7D,%22honda%20accord%22:%7B%22modelID%22:%22903%22%7D,%22subaru%20forester%22:%7B%22modelID%22:%22644%22%7D,%22lexus%20rx%22:%7B%22brandID%22:%228%22%7D%7D&data_params=%7B%22total%22:true,%22by_age%22:true%7D",
 				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"subaru forester\"},{\"title\":\"lexus rx\"}]"
 			},
-			"which-cars-are-most-reliable?": {
+			"which-cars-are-most-reliable": {
 				"title": " Welche Autos sind am zuverlässigsten? Ein Blick hinter die Kulissen der Technik\"",
 				"text": " \"Es gibt kein perfektes Auto. Aber es gibt Autos, die besser sind als andere. Und mit den richtigen Informationen können Sie ein Auto wählen, das nicht nur gut aussieht, sondern auch zuverlässig ist. Besuchen Sie car-defects.com für mehr Informationen und bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in der Autoindustrie. Denn Wissen ist Macht - und in diesem Fall auch die Macht, ein zuverlässiges Auto zu wählen.\"",
 				"url": "#entity_params=%7B%22toyota%20prius%22:%7B%22modelID%22:%22783%22%7D,%22honda%20accord%22:%7B%22modelID%22:%22903%22%7D,%22lexus%20rx%22:%7B%22brandID%22:%228%22%7D,%22subaru%20outback%22:%7B%22modelID%22:%22651%22%7D%7D&data_params=%7B%22total%22:true,%22by_age%22:true%7D",

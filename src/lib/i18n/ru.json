@@ -166,7 +166,7 @@
 				"url": "#entity_params=%7B%22toyota%20camry%22:%7B%22modelID%22:%22722%22%7D,%22honda%20accord%22:%7B%22modelID%22:%22903%22%7D,%22subaru%20forester%22:%7B%22modelID%22:%22644%22%7D,%22lexus%20rx%22:%7B%22brandID%22:%228%22%7D%7D&data_params=%7B%22total%22:true,%22by_age%22:true%7D",
 				"cards": "[{\"title\":\"toyota camry\"},{\"title\":\"honda accord\"},{\"title\":\"subaru forester\"},{\"title\":\"lexus rx\"}]"
 			},
-			"which-cars-are-most-reliable?": {
+			"which-cars-are-most-reliable": {
 				"title": " Какие автомобили самые надежные? Или как не стать заложником своего же выбора\"",
 				"text": " Итак, мы разобрались, что надежность автомобиля - это не только его цена, но и множество других факторов. И помните, выбор автомобиля - это всегда компромисс между комфортом, безопасностью и надежностью. Но благодаря нашей статье и сайту car-defects.com вы теперь знаете, как сделать этот выбор правильно.",
 				"url": "#entity_params=%7B%22toyota%20prius%22:%7B%22modelID%22:%22783%22%7D,%22honda%20accord%22:%7B%22modelID%22:%22903%22%7D,%22lexus%20rx%22:%7B%22brandID%22:%228%22%7D,%22subaru%20outback%22:%7B%22modelID%22:%22651%22%7D%7D&data_params=%7B%22total%22:true,%22by_age%22:true%7D",
