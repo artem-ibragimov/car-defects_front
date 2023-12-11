@@ -94,14 +94,17 @@ function generateByTopic(topic) {
 }
 
 function generate(topic, imgs = [], cars = [], url = '') {
+	if (cars.length === 0) {
+		return Promise.resolve();
+	}
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replaceAll(' ', '-').toLowerCase();
 	imgs.push({
-		prompt: `${cars
+		prompt: `realistic ${cars
 			.map((c) => c.title)
 			.join(
 				', '
-			)}  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"], fullscreen –ar 2:1`,
+			)},  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"], fullscreen –ar 2:1`,
 		name: poster
 	});
 	const prompt = `
@@ -219,8 +222,8 @@ function generateArticle(locale, content, poster, url, cards) {
 									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
 							  )}...`;
 					json.text.article[poster] = {
-						title: title.split(':').pop(),
-						text: (text.split(':').pop() || text).replace(title, ''),
+						title: title,
+						text: text.replace(title, ''),
 						url: url ? new URL(url).hash : '-',
 						cards
 					};
