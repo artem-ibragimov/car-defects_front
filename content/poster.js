@@ -11,7 +11,7 @@ try {
 	const link = `https://car-defects.com/articles/en/${poster}/`;
 	const read_more = `...\n\nRead more: ${link}`;
 	post({
-		mediaUrls: [`https://car-defects.com/assets/img/${poster}--640.webp`],
+		mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
 		title: json.text.article[poster].title,
 		post: `${json.text.article[poster].text.slice(
 			0,
@@ -32,8 +32,8 @@ function post({ title, post, link, mediaUrls }) {
 		.post({
 			post,
 			shortenLinks: false,
-			// mediaUrls,
-			platforms: ['facebook', 'twitter' /* 'reddit' "pinterest"*/],
+			mediaUrls,
+			platforms: ['facebook', 'twitter' , "pinterest"],
 			max: 3, // optional, range 1-5
 			position: 'auto', // optional, "auto" or "end"
 			pinterestOptions: { title, link },

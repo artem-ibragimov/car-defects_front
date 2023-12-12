@@ -23,16 +23,25 @@ const openai = new OpenAI(configuration);
 try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split('\n').sort();
-	const unposted = topics.find((t) => !t.includes(':generated'));
-	generateByTopic(unposted)
-		.then(() => {
-			const unpostedIndex = topics.findIndex((t) => t == unposted);
-			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
+	generateTopics(topics)
+		.then((topics) => {
 			writeFileSync(file, topics.join('\n'));
 		})
 		.catch(console.error);
 } catch (error) {
 	console.error(error);
+}
+
+function generateTopics(topics) {
+	const unposted = topics.find((t) => !t.includes(':generated'));
+	const unpostedIndex = topics.findIndex((t) => t == unposted);
+	topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
+	return generateByTopic(unposted)
+		.catch((e) => {
+			console.error(e);
+			return generateTopics(topics);
+		})
+		.then(() => topics);
 }
 
 function generateByTopic(topic) {
@@ -90,13 +99,16 @@ function generateByTopic(topic) {
 					};
 				});
 		})
+		.then((data) => {
+			if (data.cars.length === 0) {
+				throw new Error('no cars');
+			}
+			return data;
+		})
 		.then(({ cars, url, imgs }) => generate(topic, imgs, cars, url));
 }
 
 function generate(topic, imgs = [], cars = [], url = '') {
-	if (cars.length === 0) {
-		return Promise.resolve();
-	}
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
@@ -203,17 +215,22 @@ function generateArticle(locale, content, poster, url, cards) {
 			}
 			return openai.chat.completions
 				.create({
-					model: 'gpt-4',
+					model: 'gpt-3.5-turbo',
 					messages: [{ role: 'user', content }],
 					temperature: 0.3
 				})
 				.then((v) => {
-					const text = v.choices[0].message.content?.replace('"', '');
+					let text = v.choices[0].message.content
 					if (!text) {
 						warn(v.choices[0].message);
 						return;
 					}
 
+					text = text
+					.replace('Title:', '').replace('Introduction:', '')
+					.replace('Titel:', '').replace('Einleitung:', '')
+					.replace('Заголовок:', '').replace('Вступление:', '')
+					.trim()
 					const title =
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
 							? text.split('\n\n')[0]
