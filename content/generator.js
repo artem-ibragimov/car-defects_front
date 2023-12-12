@@ -80,8 +80,8 @@ function generateByTopic(topic) {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						// imgs: cars.map((name) => ({
-						// 	prompt: ` ${name}, minimalistic detailed realistic, ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
-						// 	name: name.toLowerCase()
+						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+						// 	name: name.toLowerCase(),
 						// })),
 						imgs: [],
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
@@ -113,16 +113,18 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `realistic ${cars
+		prompt: `${cars
 			.map((c) => c.title)
 			.join(
 				', '
-			)},  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"], fullscreen –ar 2:1`,
+			)},  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"],  –ar 2:1`,
 		name: poster
 	});
 	const prompt = `
 	catchy professional article with higher CTR for analytics website about "${topic} "
-	describe technical details, use sarcastic tone, 
+	describe technical details,
+	Add Personal Experience
+	Don’t Use Repetitive Sentences,
 	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
 	const queries = Object.entries({
@@ -173,19 +175,19 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	return Promise.all([image_generation, articles_generation]);
 }
 
-function generateImg({ prompt, name }) {
+function generateImg({ prompt, name, cfg }) {
 	try {
-		readFileSync(`./static/assets/img/${name}.webp`);
+		readFileSync(`./static/assets/img/${name}.png`);
 		return Promise.resolve();
 	} catch (e) {
 		return openai.images
 			.generate({
 				model: 'dall-e-3',
 				prompt,
+				size: '1792x1024',
 				quality: 'hd',
 				style: 'vivid',
-				n: 1,
-				size: `1792x1024`
+				n: 1
 			})
 			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
 			.then(() => {
@@ -216,9 +218,9 @@ function generateArticle(locale, content, poster, url, cards) {
 			}
 			return openai.chat.completions
 				.create({
-					model: 'gpt-3.5-turbo',
+					model: 'gpt-4-1106-preview',
 					messages: [{ role: 'user', content }],
-					temperature: 0.3
+					temperature: 1
 				})
 				.then((v) => {
 					let text = v.choices[0].message.content;
