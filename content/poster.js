@@ -28,20 +28,38 @@ try {
 }
 
 function post({ title, post, link, mediaUrls }) {
-	return social
-		.post({
-			post,
-			shortenLinks: false,
-			mediaUrls,
-			platforms: ['facebook', 'twitter' , "pinterest"],
-			max: 3, // optional, range 1-5
-			position: 'auto', // optional, "auto" or "end"
-			pinterestOptions: { title, link },
-			redditOptions: { title, link }
-		})
-		.then((res) => {
-			if (res.status === 'error') {
-				throw res;
-			}
-		});
+	const cfg = {
+		post,
+		shortenLinks: false,
+		max: 3, // optional, range 1-5
+		position: 'auto' // optional, "auto" or "end"
+	};
+	return Promise.all([
+		social
+			.post({
+				...cfg,
+				platforms: [
+					// 'facebook',
+					'twitter'
+				]
+			})
+			.then((res) => {
+				if (res.status === 'error') {
+					throw res;
+				}
+			}),
+
+		social
+			.post({
+				...cfg,
+				mediaUrls,
+				platforms: ['pinterest'],
+				pinterestOptions: { title, link, mediaUrls }
+			})
+			.then((res) => {
+				if (res.status === 'error') {
+					throw res;
+				}
+			})
+	]);
 }

@@ -79,10 +79,11 @@ function generateByTopic(topic) {
 				.then((results) => {
 					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
-						imgs: cars.map((name) => ({
-							prompt: ` ${name}, minimalistic detailed realistic, ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
-							name: name.toLowerCase()
-						})),
+						// imgs: cars.map((name) => ({
+						// 	prompt: ` ${name}, minimalistic detailed realistic, ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+						// 	name: name.toLowerCase()
+						// })),
+						imgs: [],
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
 						url: `https://car-defects.com/#entity_params=${encodeURI(
 							JSON.stringify(entity_params)
@@ -220,17 +221,20 @@ function generateArticle(locale, content, poster, url, cards) {
 					temperature: 0.3
 				})
 				.then((v) => {
-					let text = v.choices[0].message.content
+					let text = v.choices[0].message.content;
 					if (!text) {
 						warn(v.choices[0].message);
 						return;
 					}
 
 					text = text
-					.replace('Title:', '').replace('Introduction:', '')
-					.replace('Titel:', '').replace('Einleitung:', '')
-					.replace('Заголовок:', '').replace('Вступление:', '')
-					.trim()
+						.replace('Title:', '')
+						.replace('Introduction:', '')
+						.replace('Titel:', '')
+						.replace('Einleitung:', '')
+						.replace('Заголовок:', '')
+						.replace('Вступление:', '')
+						.trim();
 					const title =
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
 							? text.split('\n\n')[0]
