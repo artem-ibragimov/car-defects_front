@@ -19,10 +19,10 @@ try {
 		)}${read_more}`,
 		link
 	})
+		.catch(console.error)
 		.then(() => {
 			writeFileSync(file, posted.concat(poster).join('\n'));
-		})
-		.catch(console.error);
+		});
 } catch (error) {
 	console.error(error);
 }
