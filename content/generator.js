@@ -117,7 +117,7 @@ function generate(topic, imgs = [], cars = [], url = '') {
 			.map((c) => c.title)
 			.join(
 				', '
-			)},  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"],  –ar 2:1`,
+			)},  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"], no free space, no outline, no background, use all width, –ar 2:1`,
 		name: poster
 	});
 	const prompt = `
