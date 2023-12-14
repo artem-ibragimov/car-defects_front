@@ -22,6 +22,7 @@ const config = {
 	}),
 
 	kit: {
+		inlineStyleThreshold: 4096,
 		prerender: {
 			concurrency: 1,
 			crawl: false,

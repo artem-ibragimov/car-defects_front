@@ -43,11 +43,11 @@
 						? {
 								...v,
 								selected: v.value === value && !v.selected
-						  }
+							}
 						: v
 				);
 				!needApplyButton && apply();
-		  }
+			}
 		: selectOne;
 
 	const onclick = (v: string) => {

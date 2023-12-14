@@ -33,8 +33,8 @@
 		value = type.match(/^(number|range)$/)
 			? +e.target.value
 			: lower
-			? e.target.value.toLowerCase()
-			: e.target.value;
+				? e.target.value.toLowerCase()
+				: e.target.value;
 		show();
 		dispatcher('input', value);
 	};
