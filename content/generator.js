@@ -115,9 +115,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	imgs.push({
 		prompt: `${cars
 			.map((c) => c.title)
-			.join(
-				', '
-			)},  poster for article "${topic}", the text ["${topic}"], add label ["car-defects.com"], use all width, –ar 2:1`,
+			.join(', ')},   the text ["${topic}"], add label ["car-defects.com"], use all width, –ar 2:1`,
+		// poster for article "${topic}",
 		name: poster
 	});
 	const prompt = `
@@ -220,7 +219,7 @@ function generateArticle(locale, content, poster, url, cards) {
 				.create({
 					model: 'gpt-4-1106-preview',
 					messages: [{ role: 'user', content }],
-					temperature: 1
+					temperature: 0.4
 				})
 				.then((v) => {
 					let text = v.choices[0].message.content;
@@ -236,6 +235,7 @@ function generateArticle(locale, content, poster, url, cards) {
 						.replace('Einleitung:', '')
 						.replace('Заголовок:', '')
 						.replace('Вступление:', '')
+						.replace('Вступительный абзац:', '')
 						.trim();
 					const title =
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
