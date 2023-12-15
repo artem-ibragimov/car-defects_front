@@ -18,7 +18,7 @@
 			href: `/articles/${$selected}${path}`,
 			path
 		}))
-		.filter((card) => !card.path.includes(pagePath))
+		.filter((card) => (pagePath ? !card.path.includes(pagePath) : true))
 		.slice(0, 4);
 
 	$: itemListElement = cards.map((c, i) => ({
