@@ -6,22 +6,20 @@
 	import { _ } from 'svelte-i18n';
 
 	export let random = false;
+	export let pagePath: string = '';
 
 	$: ({ selected } = localeStore);
-	const pagePath = typeof location !== 'undefined' ? location.pathname : '';
 
 	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
 		.sort(() => (random ? Math.random() - 0.5 : -1))
-		.slice(0, 4)
 		.map(([name, path]) => ({
 			title: $_(`text.article.${name}.title`),
 			imgSrc: name,
 			href: `/articles/${$selected}${path}`,
 			path
-		}));
-	$: if (pagePath) {
-		cards = cards.filter((card) => !pagePath.includes(card.path));
-	}
+		}))
+		.filter((card) => !card.path.includes(pagePath))
+		.slice(0, 4);
 
 	$: itemListElement = cards.map((c, i) => ({
 		'@type': 'ListItem',

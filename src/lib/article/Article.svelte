@@ -75,7 +75,7 @@
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
-	<ArticleLinks random />
+	<ArticleLinks random pagePath={name} />
 </article>
 
 <style scoped>
