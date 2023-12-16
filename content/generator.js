@@ -113,9 +113,9 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `${cars
+		prompt: ` photorealistic ${cars
 			.map((c) => c.title)
-			.join(', ')},   the text ["${topic}"], add label ["car-defects.com"], use all width, –ar 2:1`,
+			.join(', ')}, the text "${topic}", add label ["car-defects.com"], use all width, –ar 2:1`,
 		// poster for article "${topic}",
 		name: poster
 	});
@@ -257,11 +257,13 @@ function generateArticle(locale, content, poster, url, cards) {
 }
 
 function getCars(topic) {
-	const number_of_cars = topic.includes('vs')
-		? 2
-		: (topic.match(/[A-Z]/g) || []).length > 1
-			? 1
-			: 3;
+	const number_of_cars = topic.includes('competitors')
+		? 3
+		: topic.includes('vs')
+			? 2
+			: (topic.match(/[A-Z]/g) || []).length > 1
+				? 1
+				: 3;
 	info(`Select ${number_of_cars} cars for "${topic}"`);
 	return openai.chat.completions
 		.create({
@@ -269,7 +271,7 @@ function getCars(topic) {
 			messages: [
 				{ role: 'user', content: `what are top ${number_of_cars} car model name of "${topic}"?` }
 			],
-			temperature: 1
+			temperature: 0.1
 		})
 		.then((v) => v.choices[0].message.content?.split('\n').map((c) => c.replace(/\d+\.\s*/, '')))
 		.catch(error);

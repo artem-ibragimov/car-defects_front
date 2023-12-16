@@ -24,7 +24,7 @@ const config = {
 	kit: {
 		inlineStyleThreshold: 4096,
 		prerender: {
-			concurrency: 1,
+			concurrency: 3,
 			crawl: false,
 			handleHttpError: (details) => {
 				console.warn(details);
@@ -42,7 +42,7 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			// fallback: 'index.html',
-			precompress: true,
+			precompress: false,
 			strict: true
 		}),
 		alias: {
