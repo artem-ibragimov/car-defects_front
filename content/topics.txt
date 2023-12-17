@@ -14,32 +14,32 @@ Honda HR-V vs Mazda CX-3 reliability:generated
 Honda Odyssey minivan reliability:generated
 Honda Pilot vs Toyota Highlander reliability:generated
 Hybrid car reliability comparison:generated
-Hyundai Elantra vs Kia Forte reliability
-Hyundai Kona compact SUV reliability
-Hyundai Sonata reliability review
-Hyundai Tucson vs Kia Sportage reliability
-Infiniti Q50 reliability review
-Infiniti QX60 vs Acura MDX reliability
-Italian car reliability comparison
-Jaguar F-Pace reliability score
-Jaguar XE luxury sedan reliability
-Japanese top-selling compact SUVs
-Japanese top-selling compact SUVs
-Jeep Grand Cherokee reliability review
-Jeep Wrangler off-road reliability
-Kia Optima vs Honda Accord reliability
-Kia Rio vs Hyundai Accent reliability
-Kia Sorento reliability assessment
-Kia Stinger sports sedan reliability
-Kia Telluride vs Hyundai Palisade reliability
-Korean car reliability comparison
-Land Rover Discovery reliability report
-Land Rover Range Rover Evoque reliability
-Lexus ES 350 reliability compared to Acura TLX
-Lexus IS vs BMW 3 Series reliability
-Lexus LS luxury car reliability
-Lexus RX 350 reliability vs competition
-Long-term reliability of cars
+Hyundai Elantra vs Kia Forte reliability:generated
+Hyundai Kona compact SUV reliability:generated
+Hyundai Sonata reliability review:generated
+Hyundai Tucson vs Kia Sportage reliability:generated
+Infiniti Q50 reliability review:generated
+Infiniti QX60 vs Acura MDX reliability:generated
+Italian car reliability comparison:generated
+Jaguar F-Pace reliability score:generated
+Jaguar XE luxury sedan reliability:generated
+Japanese top-selling compact SUVs:generated
+Japanese top-selling compact SUVs:generated
+Jeep Grand Cherokee reliability review:generated
+Jeep Wrangler off-road reliability:generated
+Kia Optima vs Honda Accord reliability:generated
+Kia Rio vs Hyundai Accent reliability:generated
+Kia Sorento reliability assessment:generated
+Kia Stinger sports sedan reliability:generated
+Kia Telluride vs Hyundai Palisade reliability:generated
+Korean car reliability comparison:generated
+Land Rover Discovery reliability report:generated
+Land Rover Range Rover Evoque reliability:generated
+Lexus ES 350 reliability compared to Acura TLX:generated
+Lexus IS vs BMW 3 Series reliability:generated
+Lexus LS luxury car reliability:generated
+Lexus RX 350 reliability vs competition:generated
+Long-term reliability of cars:generated
 Low maintenance car reliability
 Luxury car reliability rankings
 Mazda CX-5 reliability score
