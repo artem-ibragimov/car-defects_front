@@ -1,56 +1,11 @@
-Fiat 500 reliability and maintenance costs:generated
-Ford Escape reliability and dependability:generated
-Ford Explorer reliability comparison:generated
-Ford Focus reliability over years:generated
-Ford Mustang reliability and dependability:generated
-Ford Ranger vs Toyota Tacoma reliability:generated
-Four-cylinder car reliability comparison:generated
-French car reliability comparison:generated
-Fuel-efficient car reliability comparison:generated
-Full-size SUV reliability comparison:generated
-Honda Civic reliability over years:generated
-Honda Fit vs Toyota Yaris reliability comparison:generated
-Honda HR-V vs Mazda CX-3 reliability:generated
-Honda Odyssey minivan reliability:generated
-Honda Pilot vs Toyota Highlander reliability:generated
-Hybrid car reliability comparison:generated
-Hyundai Elantra vs Kia Forte reliability:generated
-Hyundai Kona compact SUV reliability:generated
-Hyundai Sonata reliability review:generated
-Hyundai Tucson vs Kia Sportage reliability:generated
-Infiniti Q50 reliability review:generated
-Infiniti QX60 vs Acura MDX reliability:generated
-Italian car reliability comparison:generated
-Jaguar F-Pace reliability score:generated
-Jaguar XE luxury sedan reliability:generated
-Japanese top-selling compact SUVs:generated
-Japanese top-selling compact SUVs:generated
-Jeep Grand Cherokee reliability review:generated
-Jeep Wrangler off-road reliability:generated
-Kia Optima vs Honda Accord reliability:generated
-Kia Rio vs Hyundai Accent reliability:generated
-Kia Sorento reliability assessment:generated
-Kia Stinger sports sedan reliability:generated
-Kia Telluride vs Hyundai Palisade reliability:generated
-Korean car reliability comparison:generated
-Land Rover Discovery reliability report:generated
-Land Rover Range Rover Evoque reliability:generated
-Lexus ES 350 reliability compared to Acura TLX:generated
-Lexus IS vs BMW 3 Series reliability:generated
-Lexus LS luxury car reliability:generated
-Lexus RX 350 reliability vs competition:generated
-Long-term reliability of cars:generated
-Low maintenance car reliability
-Luxury car reliability rankings
+Luxury car reliability rankings:generated
+Mazda 3 reliability compared to Honda Civic
 Mazda CX-5 reliability score
 Mazda MX-5 Miata reliability in sports cars
-Mazda3 reliability compared to Honda Civic
 Mercedes GLC vs Audi Q5 reliability
 Mercedes GLE vs BMW X5 SUV reliability
 Mercedes-Benz CLA reliability assessment
 Mercedes-Benz E-Class reliability rating
-Midsize SUV reliability comparison
-Midsize car reliability comparison
 Mini Cooper reliability over time
 Mitsubishi Outlander reliability comparison
 Most and least reliable cars
