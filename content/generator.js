@@ -47,6 +47,7 @@ function generateTopics(topics) {
 function generateByTopic(topic) {
 	return getCars(topic)
 		.then((cars = []) => {
+			info(`Select ${cars}`);
 			const fetching = cars
 				.map((car_name) => car_name.toLowerCase())
 				.map((car_name) => {
@@ -72,12 +73,14 @@ function generateByTopic(topic) {
 							if (brandID) {
 								return { [car_name]: { brandID } };
 							}
-							throw new Error('no data');
+							return null;
 						});
 				});
 			return Promise.all(fetching)
 				.then((results) => {
-					const entity_params = results.reduce((acc, cur) => Object.assign(acc, cur), {});
+					const entity_params = results
+						.filter(Boolean)
+						.reduce((acc, cur) => Object.assign(acc, cur), {});
 					return {
 						// imgs: cars.map((name) => ({
 						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
@@ -90,7 +93,8 @@ function generateByTopic(topic) {
 						)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
 					};
 				})
-				.catch(() => {
+				.catch((e) => {
+					console.error(e);
 					return {
 						imgs: [],
 						cars: [],
@@ -115,7 +119,9 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	imgs.push({
 		prompt: ` photorealistic ${cars
 			.map((c) => c.title)
-			.join(', ')}, the text "${topic}", add label ["car-defects.com"], use all width, –ar 2:1`,
+			.join(
+				' and '
+			)}, the text ["${topic}"], add label ["car-defects.com"], use all width, –ar 2:1`,
 		// poster for article "${topic}",
 		name: poster
 	});
@@ -257,22 +263,17 @@ function generateArticle(locale, content, poster, url, cards) {
 }
 
 function getCars(topic) {
-	const number_of_cars = topic.includes('competitors')
-		? 3
-		: topic.includes('vs')
-			? 2
-			: (topic.match(/[A-Z]/g) || []).length > 1
-				? 1
-				: 3;
-	info(`Select ${number_of_cars} cars for "${topic}"`);
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
-			messages: [
-				{ role: 'user', content: `what are top ${number_of_cars} car model name of "${topic}"?` }
-			],
+			messages: [{ role: 'user', content: `what is top car model names of "${topic}"?` }],
 			temperature: 0.1
 		})
-		.then((v) => v.choices[0].message.content?.split('\n').map((c) => c.replace(/\d+\.\s*/, '')))
+		.then((v) =>
+			v.choices[0].message.content
+				?.split('\n')
+				.map((c) => c.replace(/\d+\.\s*/, '').trim())
+				.filter(Boolean)
+		)
 		.catch(error);
 }
