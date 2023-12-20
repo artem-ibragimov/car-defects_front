@@ -121,7 +121,7 @@ function generate(topic, imgs = [], cars = [], url = '') {
 			.map((c) => c.title)
 			.join(
 				' and '
-			)}, the text ["${topic}"], add label ["car-defects.com"], use all width, –ar 2:1`,
+			)}, the text ["${topic}"], add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
 		name: poster
 	});
@@ -151,8 +151,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 				.then(() =>
 					i !== arr.length - 1
 						? new Promise((r) => {
-								setTimeout(r, 60000);
-							})
+							setTimeout(r, 60000);
+						})
 						: Promise.resolve()
 				),
 		Promise.resolve()
@@ -170,8 +170,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 						i === arr.length - 1
 							? Promise.resolve()
 							: new Promise((r) => {
-									setTimeout(r, 60000);
-								})
+								setTimeout(r, 60000);
+							})
 					),
 			Promise.resolve()
 		)
@@ -228,7 +228,7 @@ function generateArticle(locale, content, poster, url, cards) {
 					temperature: 0.4
 				})
 				.then((v) => {
-					let text = v.choices[0].message.content;
+					let text = v.choices[0].message.content?.replaceAll('"', '');
 					if (!text) {
 						warn(v.choices[0].message);
 						return;
@@ -247,9 +247,9 @@ function generateArticle(locale, content, poster, url, cards) {
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
 							? text.split('\n\n')[0]
 							: `${text.slice(
-									0,
-									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
-								)}...`;
+								0,
+								/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
+							)}...`;
 					json.text.article[poster] = {
 						title: title,
 						text: text.replace(title, ''),
@@ -272,6 +272,7 @@ function getCars(topic) {
 		.then((v) =>
 			v.choices[0].message.content
 				?.split('\n')
+				.filter((line) => /\d+\.\s*/.test(line))
 				.map((c) => c.replace(/\d+\.\s*/, '').trim())
 				.filter(Boolean)
 		)
