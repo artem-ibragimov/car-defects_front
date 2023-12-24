@@ -1,12 +1,12 @@
 Luxury car reliability rankings:generated
 Mazda 3 reliability compared to Honda Civic:generated
 Mazda CX-5 reliability score:generated
-Mazda MX-5 Miata reliability in sports cars
-Mercedes GLC vs Audi Q5 reliability
-Mercedes GLE vs BMW X5 SUV reliability
-Mercedes-Benz CLA reliability assessment
-Mercedes-Benz E-Class reliability rating
-Mini Cooper reliability over time
+Mazda MX-5 Miata reliability in sports cars:generated
+Mercedes GLC vs Audi Q5 reliability:generated
+Mercedes GLE vs BMW X5 SUV reliability:generated
+Mercedes-Benz CLA reliability assessment:generated
+Mercedes-Benz E-Class reliability rating:generated
+Mini Cooper reliability over time:generated
 Mitsubishi Outlander reliability comparison
 Most and least reliable cars
 Most reliable cars of the year:generated

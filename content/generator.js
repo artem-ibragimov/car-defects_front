@@ -151,8 +151,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 				.then(() =>
 					i !== arr.length - 1
 						? new Promise((r) => {
-							setTimeout(r, 60000);
-						})
+								setTimeout(r, 60000);
+							})
 						: Promise.resolve()
 				),
 		Promise.resolve()
@@ -170,8 +170,8 @@ function generate(topic, imgs = [], cars = [], url = '') {
 						i === arr.length - 1
 							? Promise.resolve()
 							: new Promise((r) => {
-								setTimeout(r, 60000);
-							})
+									setTimeout(r, 60000);
+								})
 					),
 			Promise.resolve()
 		)
@@ -247,9 +247,9 @@ function generateArticle(locale, content, poster, url, cards) {
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
 							? text.split('\n\n')[0]
 							: `${text.slice(
-								0,
-								/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
-							)}...`;
+									0,
+									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
+								)}...`;
 					json.text.article[poster] = {
 						title: title,
 						text: text.replace(title, ''),
