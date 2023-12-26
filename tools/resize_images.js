@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import { existsSync, readdirSync, rename, renameSync, unlinkSync } from 'fs';
+import { unlink } from 'node:fs/promises';
 import sizeOf from 'image-size';
 import path from 'path';
 import sharp from 'sharp';
@@ -9,13 +10,22 @@ import child_process from 'child_process';
 
 const error = (e) => console.error(chalk.red(e));
 const FOLDER = './static/assets/img';
-const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
+const SIZES = [320, 640, 1280];
 const SIZE_PREFIX = '--';
 
-imagemin([`${FOLDER}/**/*.png`], { use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })] })
+remove_resized(FOLDER)
+	.then(() =>
+		imagemin([`${FOLDER}/**/*.png`], {
+			use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
+		})
+	)
 	.then(() => resize_images(FOLDER, SIZES))
 	.catch(error);
 
+function remove_resized(dir) {
+	const paths = collectPaths(dir);
+	return Promise.all(paths.map((p) => unlink(p).catch(error)));
+}
 function resize_images(dir, widths) {
 	const paths = collectPaths(dir);
 	const resizing = paths.map((p) => {

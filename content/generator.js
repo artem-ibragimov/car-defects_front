@@ -81,6 +81,16 @@ function generateByTopic(topic) {
 					const entity_params = results
 						.filter(Boolean)
 						.reduce((acc, cur) => Object.assign(acc, cur), {});
+
+					const params_reversed = Object.fromEntries(
+						Object.entries(entity_params).map(([title, params]) => [JSON.stringify(params), title])
+					);
+					const params = Object.fromEntries(
+						Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
+					);
+					if (Object.keys(params).length < 2) {
+						throw new Error('no original cars');
+					}
 					return {
 						// imgs: cars.map((name) => ({
 						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
@@ -89,7 +99,7 @@ function generateByTopic(topic) {
 						imgs: [],
 						cars: cars.map((title) => ({ title: title.toLowerCase() })),
 						url: `https://car-defects.com/#entity_params=${encodeURI(
-							JSON.stringify(entity_params)
+							JSON.stringify(params)
 						)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
 					};
 				})

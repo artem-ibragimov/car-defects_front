@@ -4,7 +4,7 @@
 	export let text: string = '';
 	export let imgSrc: string = '';
 	export let href: string | undefined;
-	const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
+	const SIZES = [320, 640, 1280];
 	const loading: 'lazy' | 'eager' = lazy ? 'lazy' : 'eager';
 	$: srcset = imgSrc ? SIZES.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
 </script>

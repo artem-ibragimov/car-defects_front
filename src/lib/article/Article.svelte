@@ -39,7 +39,7 @@
 		articleBody: content,
 		about: description
 	});
-	const SIZES = [320, 480, 640, 720, 960, 1024, 1280];
+	const SIZES = [320, 640, 1280];
 	$: srcset = name ? SIZES.map((w) => `/assets/img/${name}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
