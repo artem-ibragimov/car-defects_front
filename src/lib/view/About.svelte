@@ -4,7 +4,7 @@
 </script>
 
 <div class="About">
-	<h4>{$_('text.about.header')}</h4>
+	<h2>{$_('text.about.header')}</h2>
 	<Content data={$_('text.about.text')} />
 </div>
 

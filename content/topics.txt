@@ -13,7 +13,7 @@ Most reliable cars of the year:generated
 Most reliable luxury sedans:generated
 New car reliability ratings:generated
 Nissan Altima vs Toyota Camry reliability:generated
-Nissan Juke vs Mazda CX-30 reliability
+Nissan Juke vs Mazda CX-30 reliability:generated
 Nissan Pathfinder vs Ford Explorer reliability
 Nissan Rogue reliability comparison
 Nissan Sentra vs Toyota Corolla reliability

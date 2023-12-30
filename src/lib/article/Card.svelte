@@ -23,7 +23,7 @@
 			sizes="(max-width: 500px) 100vw, 30vw"
 		/>
 		<div class="Card__content">
-			<h4 class="Card__title">{title}</h4>
+			<h3 class="Card__title">{title}</h3>
 			{#if text}
 				<span> {text}</span>
 			{/if}

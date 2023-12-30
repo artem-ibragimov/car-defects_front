@@ -47,7 +47,7 @@ function generateTopics(topics) {
 function generateByTopic(topic) {
 	return getCars(topic)
 		.then((cars = []) => {
-			info(`Select ${cars}`);
+			info(`Select ${cars} for topic ${topic}`);
 			const fetching = cars
 				.map((car_name) => car_name.toLowerCase())
 				.map((car_name) => {
@@ -74,51 +74,36 @@ function generateByTopic(topic) {
 								return { [car_name]: { brandID } };
 							}
 							return null;
-						});
+						})
+						.catch(error);
 				});
-			return Promise.all(fetching)
-				.then((results) => {
-					const entity_params = results
-						.filter(Boolean)
-						.reduce((acc, cur) => Object.assign(acc, cur), {});
+			return Promise.all(fetching).then((results) => {
+				const entity_params = results
+					.filter(Boolean)
+					.slice(0, 3)
+					.reduce((acc, cur) => Object.assign(acc, cur), {});
 
-					const params_reversed = Object.fromEntries(
-						Object.entries(entity_params).map(([title, params]) => [JSON.stringify(params), title])
-					);
-					const params = Object.fromEntries(
-						Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
-					);
-					if (Object.keys(params).length < 2) {
-						throw new Error('no original cars');
-					}
-					return {
-						// imgs: cars.map((name) => ({
-						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
-						// 	name: name.toLowerCase(),
-						// })),
-						imgs: [],
-						cars: cars.map((title) => ({ title: title.toLowerCase() })),
-						url: `https://car-defects.com/#entity_params=${encodeURI(
-							JSON.stringify(params)
-						)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
-					};
-				})
-				.catch((e) => {
-					console.error(e);
-					return {
-						imgs: [],
-						cars: [],
-						url: `https://car-defects.com/#entity_params=${encodeURI(
-							JSON.stringify({})
-						)}&data_params=${encodeURI(JSON.stringify({}))}`
-					};
-				});
-		})
-		.then((data) => {
-			if (data.cars.length === 0) {
-				throw new Error('no cars');
-			}
-			return data;
+				const params_reversed = Object.fromEntries(
+					Object.entries(entity_params).map(([title, params]) => [JSON.stringify(params), title])
+				);
+				const params = Object.fromEntries(
+					Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
+				);
+				if (Object.keys(params).length < 2) {
+					throw new Error('no original cars');
+				}
+				return {
+					// imgs: cars.map((name) => ({
+					// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+					// 	name: name.toLowerCase(),
+					// })),
+					imgs: [],
+					cars: [], // cars.map((title) => ({ title: title.toLowerCase() })),
+					url: `https://car-defects.com/#entity_params=${encodeURI(
+						JSON.stringify(params)
+					)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
+				};
+			});
 		})
 		.then(({ cars, url, imgs }) => generate(topic, imgs, cars, url));
 }
@@ -136,7 +121,7 @@ function generate(topic, imgs = [], cars = [], url = '') {
 		name: poster
 	});
 	const prompt = `
-	catchy professional article with higher CTR for analytics website about "${topic} "
+	catchy professional article for analytics website about "${topic}"
 	describe technical details,
 	Add Personal Experience
 	Don’t Use Repetitive Sentences,
@@ -171,6 +156,9 @@ function generate(topic, imgs = [], cars = [], url = '') {
 	info('Wait for ChatGPT articles generation ....');
 
 	// const articles_generation = Promise.resolve()
+	// generateTableContentArticle(topic).then((content) => {
+	// 	debugger;
+	// });
 	const articles_generation = queries
 		.reduce(
 			(chain, [locale, content], i, arr) =>
@@ -233,7 +221,7 @@ function generateArticle(locale, content, poster, url, cards) {
 			}
 			return openai.chat.completions
 				.create({
-					model: 'gpt-4-1106-preview',
+					model: 'gpt-3.5-turbo-16k-0613',
 					messages: [{ role: 'user', content }],
 					temperature: 0.4
 				})
@@ -272,11 +260,32 @@ function generateArticle(locale, content, poster, url, cards) {
 		.catch(error);
 }
 
+function generateTableContentArticle(topic) {
+	return openai.chat.completions
+		.create({
+			model: 'gpt-3.5-turbo-16k-0613',
+			messages: [
+				{
+					role: 'user',
+					content: `create a table of contents for a comprehensive article "${topic}"`
+				}
+			],
+			temperature: 0.4
+		})
+		.then((v) =>
+			v.choices[0].message.content
+				?.split('\n')
+				.filter((line) => /\d+\.\s*/.test(line))
+				.filter(Boolean)
+		)
+		.catch(error);
+}
+
 function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
-			messages: [{ role: 'user', content: `what is top car model names of "${topic}"?` }],
+			messages: [{ role: 'user', content: `what is top 3 car model names of "${topic}"?` }],
 			temperature: 0.1
 		})
 		.then((v) =>
