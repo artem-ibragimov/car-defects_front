@@ -2,7 +2,7 @@
 	import { PUBLIC_ORIGIN } from '$env/static/public';
 
 	const widths = [320, 640, 1280];
-	$: srcset = widths.map((w) => `/assets/img/logo--${w}.webp ${w}w`).join(', ');
+	$: srcset = widths.map((w) => `/assets/img/logo-mini--${w}.webp ${w}w`).join(', ');
 </script>
 
 <div class="Logo" on:click>

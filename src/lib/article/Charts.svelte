@@ -14,7 +14,7 @@
 	<div class="Charts" class:lg>
 		<ChartFrame {title} {lg} {src} />
 	</div>
-	<a href={url} target="_blank">{$_('label.more')}</a>
+	<a href={`/${url}`} target="_blank">{$_('label.more')}</a>
 {/if}
 
 <style scoped>
