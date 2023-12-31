@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { PUBLIC_ORIGIN } from '$env/static/public';
 
-	const widths = [320, 480, 640, 720, 1280, 1600];
+	const widths = [320, 640, 1280];
 	$: srcset = widths.map((w) => `/assets/img/logo--${w}.webp ${w}w`).join(', ');
 </script>
 
