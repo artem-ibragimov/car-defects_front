@@ -105,10 +105,10 @@ function generateByTopic(topic) {
 				};
 			});
 		})
-		.then(({ cars, url, imgs }) => generate(topic, imgs, cars, url));
+		.then(({ cars, url, imgs }) => generateContent(topic, imgs, cars, url));
 }
 
-function generate(topic, imgs = [], cars = [], url = '') {
+function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(cars);
 	const poster = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
@@ -260,7 +260,7 @@ function generateArticle(locale, content, poster, url, cards) {
 		.catch(error);
 }
 
-function generateTableContentArticle(topic) {
+function getTableContentArticle(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-16k-0613',
