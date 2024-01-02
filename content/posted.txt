@@ -21,3 +21,4 @@ auto-reliability-comparison-chart
 best-cars-for-highway-reliability
 best-cars-for-long-term-reliability
 best-cars-for-reliability-and-comfort
+four-cylinder-car-reliability-comparison

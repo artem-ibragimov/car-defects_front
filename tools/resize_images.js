@@ -23,7 +23,6 @@ remove_resized(FOLDER)
 	.catch(error);
 
 function remove_resized(dir) {
-	return Promise.resolve();
 	const paths = collectPaths(dir);
 	return Promise.all(paths.map((p) => unlink(p).catch(error)));
 }
