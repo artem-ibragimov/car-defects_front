@@ -98,7 +98,7 @@ function generateByTopic(topic) {
 					// 	name: name.toLowerCase(),
 					// })),
 					imgs: [],
-					cars: [], // cars.map((title) => ({ title: title.toLowerCase() })),
+					cars,
 					url: `https://car-defects.com/#entity_params=${encodeURI(
 						JSON.stringify(params)
 					)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
@@ -109,23 +109,21 @@ function generateByTopic(topic) {
 }
 
 function generateContent(topic, imgs = [], cars = [], url = '') {
-	const cards = JSON.stringify(cars);
-	const poster = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
+	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
+	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
 		prompt: ` photorealistic ${cars
-			.map((c) => c.title)
 			.join(
 				' and '
 			)}, the text ["${topic}"], add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
-		name: poster
+		name: article_name
 	});
 	const prompt = `
 	catchy professional article for analytics website about "${topic}"
 	describe technical details,
 	Add Personal Experience
 	Don’t Use Repetitive Sentences,
-	Add a benefit-focused intro, refer on car-defects.com website,
 	`;
 	const queries = Object.entries({
 		en: `Write ${prompt}`,
@@ -146,8 +144,8 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 				.then(() =>
 					i !== arr.length - 1
 						? new Promise((r) => {
-								setTimeout(r, 60000);
-							})
+							setTimeout(r, 60000);
+						})
 						: Promise.resolve()
 				),
 		Promise.resolve()
@@ -163,13 +161,13 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 		.reduce(
 			(chain, [locale, content], i, arr) =>
 				chain
-					.then(() => generateArticle(locale, content, poster, url, cards))
+					.then(() => generateArticle(locale, content, article_name, url, cards))
 					.then(() =>
 						i === arr.length - 1
 							? Promise.resolve()
 							: new Promise((r) => {
-									setTimeout(r, 60000);
-								})
+								setTimeout(r, 60000);
+							})
 					),
 			Promise.resolve()
 		)
@@ -211,18 +209,18 @@ function downloadImage(url, filename) {
 	});
 }
 
-function generateArticle(locale, content, poster, url, cards) {
+function generateArticle(locale, query, article_name, url, cards) {
 	const filename = `src/lib/i18n/${locale}.json`;
 	return readFile(filename, 'utf8')
 		.then((data) => {
 			const json = JSON.parse(data);
-			if (json.text.article[poster]) {
+			if (json.text.article[article_name]) {
 				return;
 			}
 			return openai.chat.completions
 				.create({
 					model: 'gpt-3.5-turbo-16k-0613',
-					messages: [{ role: 'user', content }],
+					messages: [{ role: 'user', content: query }],
 					temperature: 0.4
 				})
 				.then((v) => {
@@ -245,10 +243,10 @@ function generateArticle(locale, content, poster, url, cards) {
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
 							? text.split('\n\n')[0]
 							: `${text.slice(
-									0,
-									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
-								)}...`;
-					json.text.article[poster] = {
+								0,
+								/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
+							)}...`;
+					json.text.article[article_name] = {
 						title: title,
 						text: text.replace(title, ''),
 						url: url ? new URL(url).hash : '-',
