@@ -112,15 +112,38 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: ` photorealistic ${cars
-			.join(
-				' and '
-			)}, the text ["${topic}"], add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
+		prompt: ` photorealistic ${cars.join(
+			' and '
+		)}, the text ["${topic}"], add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
 		name: article_name
 	});
+
+	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
+	const image_generation = imgs.reduce(
+		(chain, img_data, i, arr) =>
+			chain
+
+				.then(() => generateImg(img_data))
+				.then(() =>
+					i !== arr.length - 1
+						? new Promise((r) => {
+								setTimeout(r, 60000);
+							})
+						: Promise.resolve()
+				),
+		Promise.resolve()
+	);
+
+	info('Wait for ChatGPT articles generation ....');
+
+	// const articles_generation = Promise.resolve()
+	// generateTableContentArticle(topic).then((content) => {
+	// 	debugger;
+	// });
 	const prompt = `
-	catchy professional article for analytics website about "${topic}"
+	catchy professional article for analytics website about "${topic}",
+	compare cars by service call statistics,
 	describe technical details,
 	Add Personal Experience
 	Don’t Use Repetitive Sentences,
@@ -135,28 +158,6 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 		// jp: `Write in Japanese ${prompt}`,
 		// zh: `Write in Chinese ${prompt}`
 	});
-	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
-	const image_generation = imgs.reduce(
-		(chain, img_data, i, arr) =>
-			chain
-
-				.then(() => generateImg(img_data))
-				.then(() =>
-					i !== arr.length - 1
-						? new Promise((r) => {
-							setTimeout(r, 60000);
-						})
-						: Promise.resolve()
-				),
-		Promise.resolve()
-	);
-
-	info('Wait for ChatGPT articles generation ....');
-
-	// const articles_generation = Promise.resolve()
-	// generateTableContentArticle(topic).then((content) => {
-	// 	debugger;
-	// });
 	const articles_generation = queries
 		.reduce(
 			(chain, [locale, content], i, arr) =>
@@ -166,8 +167,8 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 						i === arr.length - 1
 							? Promise.resolve()
 							: new Promise((r) => {
-								setTimeout(r, 60000);
-							})
+									setTimeout(r, 60000);
+								})
 					),
 			Promise.resolve()
 		)
@@ -243,9 +244,9 @@ function generateArticle(locale, query, article_name, url, cards) {
 						text.includes('\n\n') && text.split('\n\n')[0].length < 100
 							? text.split('\n\n')[0]
 							: `${text.slice(
-								0,
-								/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
-							)}...`;
+									0,
+									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
+								)}...`;
 					json.text.article[article_name] = {
 						title: title,
 						text: text.replace(title, ''),

@@ -40,9 +40,9 @@
 	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>
 
-<div class="ArticleLinks">
+<nav class="ArticleLinks">
 	<Cards {cards} />
-</div>
+</nav>
 
 <style scoped>
 	.ArticleLinks {

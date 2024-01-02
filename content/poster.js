@@ -13,13 +13,12 @@ try {
 	post({
 		mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
 		title: json.text.article[poster].title,
-		post: `${json.text.article[poster].text.slice(
-			0,
-			280 - read_more.length - `[Sent with Free Plan] `.length
-		)}${read_more}`,
+		post: `${json.text.article[poster].text
+			.replaceAll('\n', '')
+			.slice(0, 280 - read_more.length - `[Sent with Free Plan] `.length)}${read_more}`,
 		link
 	})
-		.catch(console.error)
+		.then(console.log, console.error)
 		.then(() => {
 			writeFileSync(file, posted.concat(poster).join('\n'));
 		});
@@ -38,16 +37,14 @@ function post({ title, post, link, mediaUrls }) {
 		social
 			.post({
 				...cfg,
-				platforms: [
-					// 'facebook',
-					'twitter'
-				]
+				platforms: ['facebook', 'twitter']
 			})
 			.then((res) => {
 				if (res.status === 'error') {
 					throw res;
 				}
-			}),
+			})
+			.then(console.log, console.error),
 
 		social
 			.post({
@@ -61,5 +58,6 @@ function post({ title, post, link, mediaUrls }) {
 					throw res;
 				}
 			})
+			.then(console.log, console.error)
 	]);
 }

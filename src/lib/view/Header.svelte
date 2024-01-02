@@ -4,12 +4,12 @@
 	import Logo from './Logo.svelte';
 </script>
 
-<div class="Header" on:click={() => window.location.assign(ROUTE_NAMES.MAIN)}>
+<header class="Header" on:click={() => window.location.assign(ROUTE_NAMES.MAIN)}>
 	<Logo />
 	<h1>
 		{$_('label.main_header')}
 	</h1>
-</div>
+</header>
 
 <style scoped>
 	.Header {

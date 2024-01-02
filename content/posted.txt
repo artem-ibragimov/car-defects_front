@@ -18,3 +18,6 @@ audi-a6-vs-bmw-5-series-reliability
 audi-q5-vs-bmw-x3-reliability
 audi-q8-vs-bmw-x6-reliability
 auto-reliability-comparison-chart
+best-cars-for-highway-reliability
+best-cars-for-long-term-reliability
+best-cars-for-reliability-and-comfort
