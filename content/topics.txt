@@ -22,10 +22,10 @@ Off-road vehicle reliability comparison:generated
 Performance car reliability ratings:generated
 Pickup truck reliability comparison:generated
 Plug-in hybrid car reliability:generated
-Porsche 911 reliability and maintenance
-Porsche Cayenne reliability and cost
-Porsche Panamera reliability and maintenance
-Premium car reliability comparison
+Porsche 911 reliability and maintenance:generated
+Porsche Cayenne reliability and cost:generated
+Porsche Panamera reliability and maintenance:generated
+Premium car reliability comparison:generated
 RWD car reliability comparison
 Range Rover Sport luxury SUV reliability
 Reliability index for cars

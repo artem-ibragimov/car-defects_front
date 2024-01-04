@@ -114,7 +114,7 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	imgs.push({
 		prompt: ` photorealistic ${cars.join(
 			' and '
-		)}, the text ["${topic}"], add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
+		)}, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
 		name: article_name
 	});
