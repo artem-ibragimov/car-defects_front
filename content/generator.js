@@ -10,7 +10,7 @@ const error = (e) => console.error(chalk.red(e));
 const warn = (w) => console.warn(chalk.yellow(w));
 const info = (i) => console.log(chalk.green(i));
 
-const PUBLIC_CHAT_GPT_API_KEY = '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';
+const PUBLIC_CHAT_GPT_API_KEY = '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';
 const PUBLIC_CHAT_GPT_ORG_ID = 'org-0tXr3nALnhu8yFaZg68mwWcN';
 
 const configuration = {
