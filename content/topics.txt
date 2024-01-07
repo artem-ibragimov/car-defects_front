@@ -29,7 +29,7 @@ Premium car reliability comparison:generated
 RWD car reliability comparison:generated
 Range Rover Sport luxury SUV reliability:generated
 Reliability index for cars:generated
-Reliability of American cars
+Reliability of American cars:generated
 Reliability of Asian cars
 Reliability of European cars
 Reliability of Ford F-150 vs Chevrolet Silverado
