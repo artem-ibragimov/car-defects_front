@@ -27,3 +27,4 @@ hybrid-car-reliability-comparison
 long-term-reliability-of-cars
 luxury-car-reliability-rankings
 mazda-3-reliability-compared-to-honda-civic
+mazda-cx-5-reliability-score
