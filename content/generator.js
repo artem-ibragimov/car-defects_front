@@ -112,7 +112,7 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: ` photorealistic ${cars.join(
+		prompt: `poster for article "${topic}", photorealistic ${cars.join(
 			' and '
 		)}, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
@@ -284,7 +284,7 @@ function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
-			messages: [{ role: 'user', content: `what is top 3 car model names of "${topic}"?` }],
+			messages: [{ role: 'user', content: `what is top  car model names of "${topic}"?` }],
 			temperature: 0.1
 		})
 		.then((v) =>
