@@ -34,7 +34,7 @@ Reliability of Asian cars:generated
 Reliability of European cars:generated
 Reliability of Ford F-150 vs Chevrolet Silverado:generated
 Reliability of V8 cars:generated
-Reliability of cars with manual transmission
+Reliability of cars with manual transmission:generated
 Reliability of eco-friendly cars
 Reliability of entry-level cars
 Reliability of popular sedans
