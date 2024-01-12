@@ -22,7 +22,7 @@ const openai = new OpenAI(configuration);
 
 try {
 	const file = './content/topics.txt';
-	const topics = readFileSync(file).toString().split('\n').sort();
+	const topics = readFileSync(file).toString().split('\n');
 	generateTopics(topics)
 		.then((topics) => {
 			writeFileSync(file, topics.join('\n'));
@@ -34,6 +34,9 @@ try {
 
 function generateTopics(topics) {
 	const unposted = topics.find((t) => !t.includes(':generated'));
+	if (!unposted) {
+		return Promise.resolve(topics);
+	}
 	const unpostedIndex = topics.findIndex((t) => t == unposted);
 	topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 	return generateByTopic(unposted)
@@ -80,7 +83,6 @@ function generateByTopic(topic) {
 			return Promise.all(fetching).then((results) => {
 				const entity_params = results
 					.filter(Boolean)
-					.slice(0, 3)
 					.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 				const params_reversed = Object.fromEntries(
@@ -89,7 +91,9 @@ function generateByTopic(topic) {
 				const params = Object.fromEntries(
 					Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
 				);
-				if (Object.keys(params).length < 2) {
+
+				const params_limited = Object.fromEntries(Object.entries(params).slice(0, 3));
+				if (Object.keys(params_limited).length < 2) {
 					throw new Error('no original cars');
 				}
 				return {
@@ -100,7 +104,7 @@ function generateByTopic(topic) {
 					imgs: [],
 					cars,
 					url: `https://car-defects.com/#entity_params=${encodeURI(
-						JSON.stringify(params)
+						JSON.stringify(params_limited)
 					)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
 				};
 			});
@@ -112,7 +116,7 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `poster for article "${topic}", photorealistic ${cars.join(
+		prompt: ` photorealistic ${cars.join(
 			' and '
 		)}, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
@@ -151,8 +155,8 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	const queries = Object.entries({
 		en: `Write ${prompt}`,
 		ru: `Write in Russian ${prompt}`,
-		de: `Write in German ${prompt}`
-		// es: `Write in Spanish ${prompt}`,
+		de: `Write in German ${prompt}`,
+		es: `Write in Spanish ${prompt}`
 		// fr: `Write in French ${prompt}`,
 		// pt: `Write in Portuguese ${prompt}`,
 		// jp: `Write in Japanese ${prompt}`,

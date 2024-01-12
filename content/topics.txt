@@ -35,7 +35,8 @@ Reliability of European cars:generated
 Reliability of Ford F-150 vs Chevrolet Silverado:generated
 Reliability of V8 cars:generated
 Reliability of cars with manual transmission:generated
-Reliability of eco-friendly cars
+volkswagen golf vs mazda 3:generated
+Reliability of eco-friendly cars:generated
 Reliability of entry-level cars
 Reliability of popular sedans
 Reliability of the Audi A4 over the last 3 generations
