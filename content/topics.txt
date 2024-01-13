@@ -37,7 +37,7 @@ Reliability of V8 cars:generated
 Reliability of cars with manual transmission:generated
 volkswagen golf vs mazda 3:generated
 Reliability of eco-friendly cars:generated
-Reliability of entry-level cars
+Reliability of entry-level cars:generated
 Reliability of popular sedans
 Reliability of the Audi A4 over the last 3 generations
 Reliability of turbocharged cars
