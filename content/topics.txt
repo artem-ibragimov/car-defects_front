@@ -39,7 +39,7 @@ volkswagen golf vs mazda 3:generated
 Reliability of eco-friendly cars:generated
 Reliability of entry-level cars:generated
 Reliability of popular sedans:generated
-Reliability of the Audi A4 over the last 3 generations
+Reliability of the Audi A4 over the last 3 generations:generated
 Reliability of turbocharged cars
 Reliability scores for popular cars:generated
 Reliable cars for new drivers
