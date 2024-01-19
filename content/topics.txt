@@ -43,8 +43,8 @@ Reliability of the Audi A4 over the last 3 generations:generated
 Reliability of turbocharged cars:generated
 Reliability scores for popular cars:generated
 Reliable cars for new drivers:generated
-Reliable family SUVs compared
-Reliable minivans for families
+Reliable family SUVs compared:generated
+Reliable minivans for families:generated
 SUV reliability comparison
 Sports car reliability rankings
 Sports sedan reliability comparison
