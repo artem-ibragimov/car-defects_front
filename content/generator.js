@@ -117,7 +117,7 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
 		prompt: ` photorealistic ${cars.join(
-			' and '
+			','
 		)}, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// poster for article "${topic}",
 		name: article_name

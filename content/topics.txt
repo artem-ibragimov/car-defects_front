@@ -45,7 +45,7 @@ Reliability scores for popular cars:generated
 Reliable cars for new drivers:generated
 Reliable family SUVs compared:generated
 Reliable minivans for families:generated
-SUV reliability comparison
+SUV reliability comparison:generated
 Sports car reliability rankings
 Sports sedan reliability comparison
 Subaru BRZ vs Toyota 86 reliability
