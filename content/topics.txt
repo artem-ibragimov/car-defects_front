@@ -49,7 +49,7 @@ SUV reliability comparison:generated
 Sports car reliability rankings:generated
 Sports sedan reliability comparison:generated
 Subaru BRZ vs Toyota 86 reliability:generated
-Subaru Forester vs Toyota RAV4 reliability
+Subaru Forester vs Toyota RAV4 reliability:generated
 Subaru Impreza reliability ratings
 Subaru Outback reliability ratings
 Swedish car reliability comparison
