@@ -52,8 +52,8 @@ Subaru BRZ vs Toyota 86 reliability:generated
 Subaru Forester vs Toyota RAV4 reliability:generated
 Subaru Impreza reliability ratings:generated
 Subaru Outback reliability ratings:generated
-Swedish car reliability comparison
-Tesla Model 3 reliability analysis
+Swedish car reliability comparison:generated
+Tesla Model 3 reliability analysis:generated
 Tesla Model S reliability rating
 Tesla Model X reliability evaluation
 Tesla Model Y reliability forecast
