@@ -54,10 +54,10 @@ Subaru Impreza reliability ratings:generated
 Subaru Outback reliability ratings:generated
 Swedish car reliability comparison:generated
 Tesla Model 3 reliability analysis:generated
-Tesla Model S reliability rating
-Tesla Model X reliability evaluation
-Tesla Model Y reliability forecast
-Top reliable cars for seniors
+Tesla Model S reliability rating:generated
+Tesla Model X reliability evaluation:generated
+Tesla Model Y reliability forecast:generated
+Top reliable cars for seniors:generated
 Top reliable cars ranked:generated
 Toyota Camry vs Honda Accord reliability comparison
 Toyota Corolla vs Honda Civic reliability
