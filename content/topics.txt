@@ -64,7 +64,7 @@ Toyota Corolla vs Honda Civic reliability:generated
 Toyota Prius hybrid reliability comparison:generated
 Toyota RAV4 vs Honda CR-V reliability:generated
 Toyota Tundra vs Nissan Titan reliability:generated
-Truck reliability comparison
+Truck reliability comparison:generated
 Used car reliability comparison
 V6 car reliability comparison
 Vehicle reliability head to head:generated
