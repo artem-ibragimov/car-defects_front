@@ -68,7 +68,7 @@ Truck reliability comparison:generated
 Used car reliability comparison:generated
 V6 car reliability comparison:generated
 Vehicle reliability head to head:generated
-Volkswagen Beetle classic car reliability
+Volkswagen Beetle classic car reliability:generated
 Volkswagen Golf reliability comparison
 Volkswagen Passat vs Honda Accord reliability
 Volkswagen Tiguan reliability analysis
