@@ -116,7 +116,9 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `minimalistic simple poster for "${topic}" article, no text, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
+		prompt: `${cars.join(
+			','
+		)}, no text, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 		// prompt: ` photorealistic ${cars.join(
 		// 	','
 		// )}, add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
