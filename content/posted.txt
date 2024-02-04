@@ -30,3 +30,4 @@ mazda-3-reliability-compared-to-honda-civic
 mazda-cx-5-reliability-score
 mazda-mx-5-miata-reliability-in-sports-cars
 mercedes-glc-vs-audi-q5-reliability
+mercedes-gle-vs-bmw-x5-suv-reliability
