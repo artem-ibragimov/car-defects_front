@@ -35,3 +35,4 @@ mercedes-benz-cla-reliability-assessment
 mercedes-benz-e-class-reliability-rating
 mini-cooper-reliability-over-time
 most-and-least-reliable-cars
+most-reliable-luxury-sedans
