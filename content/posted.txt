@@ -37,3 +37,4 @@ mini-cooper-reliability-over-time
 most-and-least-reliable-cars
 most-reliable-luxury-sedans
 new-car-reliability-ratings
+nissan-altima-vs-toyota-camry-reliability
