@@ -38,3 +38,4 @@ most-and-least-reliable-cars
 most-reliable-luxury-sedans
 new-car-reliability-ratings
 nissan-altima-vs-toyota-camry-reliability
+nissan-juke-vs-mazda-cx-30-reliability
