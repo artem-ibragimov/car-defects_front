@@ -88,7 +88,7 @@ How does car age affect reliability?:generated
 Are German cars more reliable than Japanese cars?:generated
 What are the top-rated car models for reliability in 2024?:generated
 Are electric cars as reliable as gasoline cars?:generated
-What are the most reliable luxury car brands?
+What are the most reliable luxury car brands?:generated
 How does climate affect car reliability?
 What are the most reliable SUVs for families?
 Are older cars more reliable than newer cars?
