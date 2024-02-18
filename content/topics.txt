@@ -91,7 +91,7 @@ Are electric cars as reliable as gasoline cars?:generated
 What are the most reliable luxury car brands?:generated
 How does climate affect car reliability?:generated
 What are the most reliable SUVs for families?:generated
-Are older cars more reliable than newer cars?
+Are older cars more reliable than newer cars?:generated
 How does mileage affect car reliability?
 What are the most reliable pickup trucks for towing?
 Are there any reliable sports car models?
