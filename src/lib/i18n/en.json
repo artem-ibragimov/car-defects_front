@@ -9,7 +9,7 @@
 		"safety": "Safety",
 		"electronics": "Electronics",
 		"light": "Light",
-		"transmission": "transmission",
+		"transmission": "Transmission",
 		"other": "Other",
 		"equipment": "Equipment",
 		"engine": "Engine",
@@ -39,7 +39,12 @@
 		"cancel": "Cancel",
 		"main_header": "A Car Service Calls Statistics",
 		"norm": "Normalized",
-		"total": "total",
+		"total": "Total",
+		"search-placeholder": "Start by searching for statistics about the brand, model or special version ",
+		"total-defects": "Total Defects",
+		"analyzed-brands": "Analyzed Car Brands",
+		"analyzed-versions": "Analyzed Car Versions",
+		"of-total-car": "% of the world's total cars",
 		"by_age": "by Age",
 		"by_mileage": "by Mileage",
 		"chart": {
@@ -94,7 +99,7 @@
 			"torque": "torque"
 		},
 		"trans": {
-			"name": "transmission",
+			"name": "Transmission",
 			"acceleration": "Acceleration",
 			"consumtion": "Consumtion",
 			"gears": "Gears"

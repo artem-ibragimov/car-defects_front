@@ -76,6 +76,7 @@
 			<label for={input_id}>{label}</label>
 		{/if}
 		<input
+			class="input input-bordered w-full  input-lg "
 			bind:this={input}
 			{disabled}
 			id={input_id}
@@ -92,8 +93,8 @@
 			on:change
 		/>
 	</div>
-	<div
-		class="Input__dropdown"
+	<ul tabindex="0"
+		class="Input__dropdown shadow dropdown-content  z-[1] bg-base-100 rounded-box"
 		class:Input__dropdown-opened={isOpen}
 		on:click={hideOnSuggestionClick ? hide : null}
 		style={`
@@ -107,17 +108,17 @@
 				<slot name="suggestion_item" {item} class="Input__dropdown__item" />
 			{/if}
 			{#if !$$slots['suggestion_item']}
-				<div
+				<li
 					class="Input__dropdown__item"
 					on:click={() => {
 						onSuggestionClick(item);
 					}}
 				>
 					{item}
-				</div>
+				</li>
 			{/if}
 		{/each}
-	</div>
+			</ul>
 </div>
 
 <style scoped>
@@ -146,7 +147,7 @@
 		display: none;
 		cursor: pointer;
 		text-transform: capitalize;
-		background: #fff;
+		/* background: #fff; */
 	}
 	.Input__dropdown-opened {
 		display: flex;
@@ -156,8 +157,8 @@
 		display: inline-flex;
 		justify-content: space-between;
 		padding: 0.5em 0.6em;
-		border: 1px solid #ccc;
-		border-radius: 4px;
+		/* border: 1px solid #ccc; */
+		/* border-radius: 4px; */
 		vertical-align: middle;
 		box-sizing: border-box;
 		-webkit-appearance: textfield;
@@ -165,7 +166,7 @@
 	}
 	:global([slot='suggestion_item']) :hover,
 	.Input__dropdown__item:hover {
-		-webkit-box-shadow: inset 0 1px 3px #ddd;
-		box-shadow: inset 0 1px 3px #ddd;
+		/* -webkit-box-shadow: inset 0 1px 3px #ddd;
+		box-shadow: inset 0 1px 3px #ddd; */
 	}
 </style>

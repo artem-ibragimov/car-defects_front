@@ -2,11 +2,11 @@
 	export let disabled = false;
 	export let stretch_desktop = false;
 	export let href: string;
-	export let variant: 'primary' | 'default' | 'success' | 'error' | 'warning' | 'secondary' =
-		'default';
+	export let variant: 'primary' | 'neutral' | 'link' | 'accent' | 'ghost' | 'secondary' =
+		'neutral';
 </script>
 
-<button {disabled} class={`pure-button pure-button-${variant}`} class:stretch_desktop on:click>
+<button {disabled} class={`btn btn-${variant}`} class:stretch_desktop on:click>
 	{#if href}
 		<a {href} target="_blank"><slot /> </a>
 	{/if}
