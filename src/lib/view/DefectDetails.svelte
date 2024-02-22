@@ -24,28 +24,28 @@
 	<div class="DefectDetails__content" class:loadingDetails>
 		{#if !!$selectedDetailEntity}
 			{#each $details[$selectedDetailEntity] || [] as detail}
-			{#if detail}
-				<div class="card w-full bg-base-100 shadow-xl">
-					<div class="card-body">
-						<h2 class="card-title">
-							{detail.country}
-							{detail.brand}
-							{detail.model}
-							{detail.gen}
-							{detail.version}
-							{detail.year}
-							{#if detail.age !== '0'}
-								{$_('label.detail.age')}: {detail.age}
-							{/if}
-							{#if detail.mileage !== '0'}
-								{$_('label.detail.mileage')}: {detail.mileage}
-							{/if}
+				{#if detail}
+					<div class="card w-full bg-base-100 shadow-xl">
+						<div class="card-body">
+							<h2 class="card-title">
+								{detail.country}
+								{detail.brand}
+								{detail.model}
+								{detail.gen}
+								{detail.version}
+								{detail.year}
+								{#if detail.age !== '0'}
+									{$_('label.detail.age')}: {detail.age}
+								{/if}
+								{#if detail.mileage !== '0'}
+									{$_('label.detail.mileage')}: {detail.mileage}
+								{/if}
 
-							{$_(`defect_category.${detail.category}`)}
-						</h2>
-						<p>{detail.description}</p>
+								{$_(`defect_category.${detail.category}`)}
+							</h2>
+							<p>{detail.description}</p>
+						</div>
 					</div>
-				</div>
 				{/if}
 			{/each}
 		{/if}

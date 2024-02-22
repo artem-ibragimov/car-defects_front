@@ -34,7 +34,7 @@
 				label: $_('label.gen')
 			}))
 		);
-		console.warn('suggestions',suggestions)
+		console.warn('suggestions', suggestions);
 	}
 
 	function onSearch({ detail }: CustomEvent<string>) {

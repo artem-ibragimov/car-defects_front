@@ -50,7 +50,7 @@
 		selectedSuggestion = item;
 		value = `${item.title} `;
 		onInput();
-		return
+		return;
 		// пока максиммум поиск по поколениеям
 		item.genID ? onInput() : onChange();
 	};

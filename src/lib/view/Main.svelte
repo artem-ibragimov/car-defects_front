@@ -84,7 +84,7 @@
 			</div>
 		</div>
 		{#if $noChartData}
-		<About />
+			<About />
 		{/if}
 	</div>
 </div>

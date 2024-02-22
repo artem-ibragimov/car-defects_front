@@ -11,23 +11,24 @@
 
 <div class="card card-compact w-96 bg-base-100 shadow-xl">
 	<a class="Card__a" {href} target="_self">
-		<figure>	<img
-			{loading}
-			class="Card__banner"
-			src={`/assets/img/${imgSrc.toLowerCase()}.webp`}
-			alt={title}
-			{title}
-			{srcset}
-			width="400"
-			height="220"
-			sizes="(max-width: 500px) 100vw, 30vw"
-		/></figure>
+		<figure>
+			<img
+				{loading}
+				class="Card__banner"
+				src={`/assets/img/${imgSrc.toLowerCase()}.webp`}
+				alt={title}
+				{title}
+				{srcset}
+				width="400"
+				height="220"
+				sizes="(max-width: 500px) 100vw, 30vw"
+			/>
+		</figure>
 		<div class="card-body">
 			<h2 class="card-title">{title}</h2>
 			{#if text}
-				<p> {text}</p>
+				<p>{text}</p>
 			{/if}
 		</div>
 	</a>
 </div>
-

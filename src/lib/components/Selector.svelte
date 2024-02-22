@@ -77,9 +77,7 @@
 	<div class="join" class:join-vertical={column} class:join-horizontal={!column} {hidden}>
 		{#each variants as v}
 			<label class="label gap-4 cursor-pointer join-item">
-				<span class="label-text" 
-					>{$_(v.label || v.value)}</span
-				>
+				<span class="label-text">{$_(v.label || v.value)}</span>
 				<input
 					style={v.color && v.selected ? `background: ${v.color}` : ''}
 					{type}

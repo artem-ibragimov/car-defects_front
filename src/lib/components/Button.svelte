@@ -2,8 +2,7 @@
 	export let disabled = false;
 	export let stretch_desktop = false;
 	export let href: string;
-	export let variant: 'primary' | 'neutral' | 'link' | 'accent' | 'ghost' | 'secondary' =
-		'neutral';
+	export let variant: 'primary' | 'neutral' | 'link' | 'accent' | 'ghost' | 'secondary' = 'neutral';
 </script>
 
 <button {disabled} class={`btn btn-${variant}`} class:stretch_desktop on:click>

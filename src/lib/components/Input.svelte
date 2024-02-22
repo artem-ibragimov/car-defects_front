@@ -76,7 +76,7 @@
 			<label for={input_id}>{label}</label>
 		{/if}
 		<input
-			class="input input-bordered w-full  input-lg "
+			class="input input-bordered w-full input-lg"
 			bind:this={input}
 			{disabled}
 			id={input_id}
@@ -93,8 +93,9 @@
 			on:change
 		/>
 	</div>
-	<ul tabindex="0"
-		class="Input__dropdown shadow dropdown-content  z-[1] bg-base-100 rounded-box"
+	<ul
+		tabindex="0"
+		class="Input__dropdown shadow dropdown-content z-[1] bg-base-100 rounded-box"
 		class:Input__dropdown-opened={isOpen}
 		on:click={hideOnSuggestionClick ? hide : null}
 		style={`
@@ -118,7 +119,7 @@
 				</li>
 			{/if}
 		{/each}
-			</ul>
+	</ul>
 </div>
 
 <style scoped>
