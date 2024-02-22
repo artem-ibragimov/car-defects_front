@@ -18,4 +18,4 @@
 	];
 </script>
 
-<Selector {variants} on:select />
+<Selector {variants} on:select column />

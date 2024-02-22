@@ -49,6 +49,7 @@
 				<div
 					class="MainContainer_row MainContainer_space-between"
 					class:MainContainer_mobile_invisible={$noChartData}
+					hidden={$noChartData}
 				>
 					<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
 					<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
@@ -75,22 +76,23 @@
 				<div
 					class="MainContainer_sidebar MainContainer_mobile_column-reverse"
 					class:MainContainer_mobile_invisible={$noChartData}
+					hidden={$noChartData}
 				>
 					<DefectCategorySelector />
 					<Button variant="secondary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 				</div>
 			</div>
 		</div>
-		<ArticleLinks />
-
+		{#if $noChartData}
 		<About />
+		{/if}
 	</div>
 </div>
 
 <style scoped>
 	.MainContainer {
 		padding: 0 8px;
-		height: 100%;
+		min-height: 100vh;
 		display: flex;
 		justify-content: center;
 	}
@@ -109,7 +111,9 @@
 	}
 	@media (min-width: 500px) {
 		.MainContainer_column {
+			padding-bottom: 16px;
 			max-width: 900px;
+			justify-content: space-between;
 		}
 	}
 	.MainContainer_row {

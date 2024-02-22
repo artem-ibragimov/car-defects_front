@@ -2,6 +2,7 @@
 	import Notification from '$lib/components/Notification.svelte';
 	import { defectStore, searchStore } from '$lib/store/main.store';
 	import type { LayoutData } from './$types';
+	import '../app.css';
 
 	export let data: LayoutData;
 	$: ({ state: defectState } = defectStore);

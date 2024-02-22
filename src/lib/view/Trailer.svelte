@@ -1,26 +1,39 @@
 <script lang="ts">
-	import { localeStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
-
-	$: ({ selected } = localeStore);
-	// $: src =
-	// 	$selected === 'ru'
-	// 		? 'https://www.youtube.com/embed/72VB1F1sX7s?si=05z6te_SDblAJoi1&amp;controls=0'
-	// 		: 'https://www.youtube.com/embed/km0wsB0xBV4?controls=0';
-	const imgSrc = `poster`;
-	const widths = [320, 640, 1280];
-	$: srcset = imgSrc
-		? widths.map((w) => `/assets/img/en/${imgSrc}--${w}.webp ${w}w`).join(', ')
-		: '';
+	const total_defects = 3989406;
+	const project_start_date = 'Sep 2022';
+	const current_date = new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+	const total_brand = 19;
+	const total_version = 4724;
 </script>
 
-<img
-	class="Trailer"
-	src={`/assets/img/en/${imgSrc}.webp`}
-	alt="Poster"
-	{srcset}
-	sizes="(max-width: 500px) 0vw, 750px"
-/>
+<div class="stats shadow">
+	<div class="stat">
+		<div class="stat-figure text-secondary">
+			<img src="/assets/icon/car_maker.png" alt={$_('label.analyzed-brands')} />
+		</div>
+		<div class="stat-title">{$_('label.analyzed-brands')}</div>
+		<div class="stat-value">{total_brand}</div>
+		<div class="stat-desc">84{$_('label.of-total-car')}</div>
+	</div>
+
+	<div class="stat">
+		<div class="stat-figure text-secondary">
+			<img src="/assets/icon/car_versions.png" alt={$_('label.analyzed-versions')} />
+		</div>
+		<div class="stat-title">{$_('label.analyzed-versions')}</div>
+		<div class="stat-value">{total_version}</div>
+	</div>
+
+	<div class="stat">
+		<div class="stat-figure text-secondary">
+			<img src="/assets/icon/car_crash.png" alt={$_('label.total-defects')} />
+		</div>
+		<div class="stat-title">{$_('label.total-defects')}</div>
+		<div class="stat-value">{total_defects}</div>
+		<div class="stat-desc">{project_start_date} - {current_date}</div>
+	</div>
+</div>
 
 <!-- <iframe
 	class="Trailer"

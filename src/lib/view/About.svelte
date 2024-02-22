@@ -3,9 +3,11 @@
 	import { _ } from 'svelte-i18n';
 </script>
 
-<aside class="About">
-	<h2>{$_('text.about.header')}</h2>
-	<Content data={$_('text.about.text')} />
+<aside class="card w-full bg-base-100 shadow-xl">
+	<div class="card-body">
+		<h2 class="card-title">{$_('text.about.header')}</h2>
+		<Content data={$_('text.about.text')} />
+	</div>
 </aside>
 
 <style scoped>

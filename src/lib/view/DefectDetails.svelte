@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Selector from '$lib/components/Selector.svelte';
 	import { defectStore } from '$lib/store/main.store';
-	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
 
 	let { entities } = defectStore.filter.entityParams;
@@ -11,8 +10,6 @@
 		value,
 		selected: $selectedDetails[value]
 	}));
-
-	$: appendLabel = $_('label.load_details');
 
 	let { loadDetails, details } = defectStore;
 
@@ -27,35 +24,34 @@
 	<div class="DefectDetails__content" class:loadingDetails>
 		{#if !!$selectedDetailEntity}
 			{#each $details[$selectedDetailEntity] || [] as detail}
-				<div class="DefectDetail">
-					<div class="DefectDetails__space-between DefectDetails__bold">
-						<span>
+			{#if detail}
+				<div class="card w-full bg-base-100 shadow-xl">
+					<div class="card-body">
+						<h2 class="card-title">
 							{detail.country}
 							{detail.brand}
 							{detail.model}
 							{detail.gen}
 							{detail.version}
 							{detail.year}
-						</span>
-
-						<span>
 							{#if detail.age !== '0'}
 								{$_('label.detail.age')}: {detail.age}
 							{/if}
 							{#if detail.mileage !== '0'}
 								{$_('label.detail.mileage')}: {detail.mileage}
 							{/if}
-						</span>
 
-						<span>{$_(`defect_category.${detail.category}`)}</span>
+							{$_(`defect_category.${detail.category}`)}
+						</h2>
+						<p>{detail.description}</p>
 					</div>
-					<p>{detail.description}</p>
 				</div>
+				{/if}
 			{/each}
 		{/if}
 	</div>
 	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntity}>
-		<Selector column {variants} on:select={onDetailsSelect} needApplyButton {appendLabel} />
+		<Selector column {variants} on:select={onDetailsSelect} />
 	</div>
 </div>
 
@@ -90,7 +86,6 @@
 	.DefectDetails__bar {
 		display: flex;
 		justify-content: flex-end;
-		background: #f4faff;
 	}
 	.DefectDetails__bar-sticky {
 		position: sticky;
@@ -100,26 +95,5 @@
 		.DefectDetails__bar-sticky {
 			top: 50px;
 		}
-	}
-	.DefectDetails__column-flex {
-		display: flex;
-	}
-	.DefectDetails__gap {
-		gap: 30px;
-	}
-	.DefectDetails__space-between {
-		display: flex;
-		justify-content: space-between;
-	}
-	.DefectDetails__bold {
-		text-transform: capitalize;
-		font-weight: 500;
-	}
-
-	.DefectDetail {
-		flex: 1;
-		padding: 16px;
-		border: 1px solid #ccc;
-		border-radius: 8px;
 	}
 </style>

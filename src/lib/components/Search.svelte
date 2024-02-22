@@ -49,6 +49,8 @@
 	const onSuggestionClick = (item: Item) => {
 		selectedSuggestion = item;
 		value = `${item.title} `;
+		onInput();
+		return
 		// пока максиммум поиск по поколениеям
 		item.genID ? onInput() : onChange();
 	};
@@ -62,7 +64,7 @@
 	<Input
 		type="search"
 		bind:value
-		placeholder={`${$_('label.brand')} ${$_('label.model')} ${$_('label.gen')} `}
+		placeholder={$_('label.search-placeholder')}
 		on:input={onChange}
 		{suggestions}
 		{hidden}
@@ -80,17 +82,18 @@
 			<span class="Search__dropdown__item__label"> {item.label} </span>
 		</div>
 	</Input>
-	{#if !!selectedSuggestionLabel}
+	<!-- {#if !!selectedSuggestionLabel}
 		<Button on:click={onInput} variant="primary"
 			>{$_('label.search_by')}{selectedSuggestionLabel}</Button
 		>
-	{/if}
+	{/if} -->
 </div>
 
 <style scoped>
 	.Search {
 		flex: 1;
 		display: flex;
+		align-items: center;
 	}
 	.Search__dropdown__item__title {
 		flex: 1;

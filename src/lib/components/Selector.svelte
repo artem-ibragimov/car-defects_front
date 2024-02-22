@@ -10,6 +10,7 @@
 		icon?: string;
 	}[] = [];
 	export let multiselect: boolean = false;
+	$: type = multiselect ? 'checkbox' : 'radio';
 	export let column: boolean = false;
 	export let needApplyButton = false;
 	export let disabled = false;
@@ -73,89 +74,29 @@
 </script>
 
 {#if variants.length !== 0}
-	<div class="pure-menu" class:pure-menu-horizontal={!column} {hidden}>
-		<ul class="pure-menu-list">
-			{#each variants as v}
-				<li
-					class="pure-menu-item"
-					class:pure-menu-disabled={disabled}
-					class:pure-menu-selected={v.selected && !v.color}
-					class:pure-menu-item-colorful={!!v.color}
-					style={`${v.selected && v.color ? 'border-color:' + v.color : ''}`}
-					on:click={disabled ? null : () => onclick(v.value)}
+	<div class="join" class:join-vertical={column} class:join-horizontal={!column} {hidden}>
+		{#each variants as v}
+			<label class="label gap-4 cursor-pointer join-item">
+				<span class="label-text" 
+					>{$_(v.label || v.value)}</span
 				>
-					<span class="pure-menu-link">
-						{#if v.icon}
-							<img src={v.icon} alt={v.label || v.value} width="24" height="16" />
-						{:else}
-							{$_(v.label || v.value)}{/if}
-					</span>
-				</li>
-			{/each}
-			{#if needApplyButton && variants.length !== 0}
-				<Button
-					stretch_desktop={column}
-					variant={isApplied ? 'secondary' : 'success'}
-					on:click={() => apply()}
-					>{appendLabel ? appendLabel : isApplied ? $_('label.applied') : $_('label.apply')}
-				</Button>
-			{/if}
-			{#if needResetButton && variants.length !== 0}
-				<Button on:click={reset}>{$_('label.reset')}</Button>
-			{/if}
-		</ul>
+				<input
+					style={v.color && v.selected ? `background: ${v.color}` : ''}
+					{type}
+					checked={v.selected}
+					class={type}
+					on:change={disabled ? null : () => onclick(v.value)}
+				/>
+			</label>
+		{/each}
 	</div>
 {/if}
 
 <style scoped>
-	.pure-menu {
-		max-width: 250px;
-		cursor: pointer;
-	}
-	.pure-menu-horizontal {
-		white-space: normal;
-		width: auto;
-		max-width: none;
-	}
-	.pure-menu-link {
-		box-sizing: border-box;
-		transition: all 0.3s;
-		background-color: inherit;
-	}
-	.pure-menu-link:hover {
-		color: #000;
-		background-color: #fff;
-	}
-	.pure-menu-item {
+	.label {
 		text-transform: capitalize;
 		box-sizing: border-box;
 		user-select: none;
 		text-align: center;
-	}
-	.pure-menu-item-colorful {
-		border: 4px solid;
-		border-color: transparent;
-		transition: border-color 0.5s;
-	}
-	.pure-menu-item.pure-menu-selected .pure-menu-link {
-		border-bottom: 1px solid #b5caac;
-		background-color: #d6eecb;
-	}
-
-	@media (max-width: 500px) {
-		.pure-menu-list {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: stretch;
-		}
-		.pure-menu-item {
-			flex: 1;
-		}
-		.pure-menu-horizontal .pure-menu-item {
-			display: block;
-		}
-		.pure-menu {
-			max-width: none;
-		}
 	}
 </style>

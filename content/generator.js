@@ -221,7 +221,7 @@ function generateArticle(locale, query, article_name, url, cards) {
 			}
 			return openai.chat.completions
 				.create({
-					model: 'gpt-3.5-turbo-16k-0613',
+					model: 'gpt-4',
 					messages: [{ role: 'user', content: query }],
 					temperature: 0.4
 				})

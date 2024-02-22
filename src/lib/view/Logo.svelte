@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { PUBLIC_ORIGIN } from '$env/static/public';
-
-	const widths = [320, 640, 1280];
-	$: srcset = widths.map((w) => `/assets/img/logo-mini--${w}.webp ${w}w`).join(', ');
 </script>
 
 <div class="Logo" on:click>
 	<a href={PUBLIC_ORIGIN}>
-		<img src="/assets/img/logo.webp" alt="logo" width="50" height="50" {srcset} sizes="50px" />
+		<img src="/assets/img/logo.png" alt="logo" width="50" height="50" />
 	</a>
 </div>
 
