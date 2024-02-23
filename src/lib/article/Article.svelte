@@ -66,7 +66,7 @@
 	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>
 
-<article class="Article">
+<article class="Article prose">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
 	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
 	<h1>{title}</h1>

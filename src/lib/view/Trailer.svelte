@@ -9,7 +9,7 @@
 
 <div class="stats shadow stats-vertical lg:stats-horizontal">
 	<div class="stat">
-		<div class="stat-figure text-secondary">
+		<div class="stat-figure">
 			<img src="/assets/icon/car_maker.png" alt={$_('label.analyzed-brands')} />
 		</div>
 		<div class="stat-title">{$_('label.analyzed-brands')}</div>
@@ -47,20 +47,10 @@
 /> -->
 
 <style scoped>
-	.Trailer {
-		display: none;
+	.stat-title {
+		text-wrap: wrap;
 	}
-	@media screen and (min-width: 500px) {
-		.Trailer {
-			display: block;
-			width: 100%;
-			height: 380px;
-		}
-	}
-	@media screen and (min-width: 900px) {
-		.Trailer {
-			display: block;
-			width: 757px;
-		}
+	.stat-figure img {
+		max-width: 32px;
 	}
 </style>

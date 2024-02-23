@@ -10,7 +10,7 @@
 		icon?: string;
 	}[] = [];
 	export let multiselect: boolean = false;
-	$: className = multiselect ? 'checkbox' : 'toggle toggle-success';
+	$: className = multiselect ? 'checkbox' : 'toggle toggle-info';
 	export let column: boolean = false;
 	export let needApplyButton = false;
 	export let applyButtonLabel = $_('label.apply');
@@ -68,7 +68,7 @@
 			</label>
 		{/each}
 		{#if needApplyButton}
-			<Button on:click={apply}>{applyButtonLabel}</Button>
+			<Button variant="neutral" outline on:click={apply}>{applyButtonLabel}</Button>
 		{/if}
 	</div>
 {/if}
