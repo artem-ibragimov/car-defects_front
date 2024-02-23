@@ -21,7 +21,7 @@ const DEFAULT_STATE: IState = {
 };
 
 const cacheStore = createCacheStore<Record<string, IDefectData>>();
-const DETAILS_LIMIT = '5';
+const DETAILS_LIMIT = 5;
 
 export const createDefectStore = (api: {
 	getDefectsCategories(): Promise<IDefectData>;
@@ -101,7 +101,7 @@ export const createDefectStore = (api: {
 	}
 
 	const details = writable<Record<string, IDefectDetails[]>>({});
-	const detailsLoadOffset = writable<string>('0');
+	const detailsLoadOffset = writable<Record<string, number>>({});
 	const selectedDetails = writable<Record<string, boolean>>({});
 	const selectedDetailEntity = derived(
 		selectedDetails,
@@ -149,12 +149,15 @@ export const createDefectStore = (api: {
 			api
 				.getDefectsDetails({
 					...entity,
-					limit: DETAILS_LIMIT,
-					offset: get(detailsLoadOffset),
+					limit: `${DETAILS_LIMIT}`,
+					offset: `${get(detailsLoadOffset)[entityName] || 0}`,
 					categories: filter.categoryParams.getCategories()
 				})
 				.then((res) => {
-					detailsLoadOffset.update((prev) => prev + DETAILS_LIMIT);
+					detailsLoadOffset.update((prev) => {
+						prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
+						return prev;
+					});
 					details.update((prev) => {
 						if (!prev[entityName]) {
 							prev[entityName] = [];

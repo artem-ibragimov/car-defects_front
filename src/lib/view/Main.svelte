@@ -64,7 +64,7 @@
 					{/if}
 				</div>
 				<EntitySelector />
-
+				<Button variant="secondary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 				<div
 					class="MainContainer_row MainContainer_mobile_column"
 					class:MainContainer_mobile_invisible={$noChartData}
@@ -79,7 +79,6 @@
 					hidden={$noChartData}
 				>
 					<DefectCategorySelector />
-					<Button variant="secondary" href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 				</div>
 			</div>
 		</div>

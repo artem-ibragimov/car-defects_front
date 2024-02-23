@@ -51,7 +51,13 @@
 		{/if}
 	</div>
 	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntity}>
-		<Selector column {variants} on:select={onDetailsSelect} />
+		<Selector
+			column
+			{variants}
+			on:select={onDetailsSelect}
+			needApplyButton
+			applyButtonLabel={$_('label.load_details')}
+		/>
 	</div>
 </div>
 

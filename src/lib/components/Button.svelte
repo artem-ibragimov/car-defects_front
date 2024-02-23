@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let disabled = false;
 	export let stretch_desktop = false;
-	export let href: string;
+	export let href: string = '';
 	export let variant: 'primary' | 'neutral' | 'link' | 'accent' | 'ghost' | 'secondary' = 'neutral';
 </script>
 
