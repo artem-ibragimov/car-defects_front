@@ -25,8 +25,8 @@ export const createDefectFilterStore = (
 	);
 
 	return {
-		init() {
-			categoryParams.init();
+		init(url: URL) {
+			return Promise.all([entityParams.init(url), categoryParams.init(url)]);
 		},
 		selector,
 		entityParams,

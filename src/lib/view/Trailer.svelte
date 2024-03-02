@@ -7,7 +7,7 @@
 	const total_version = 4724;
 </script>
 
-<div class="stats shadow stats-vertical lg:stats-horizontal">
+<div class="stats shadow stats-vertical">
 	<div class="stat">
 		<div class="stat-figure">
 			<img src="/assets/icon/car_maker.png" alt={$_('label.analyzed-brands')} />

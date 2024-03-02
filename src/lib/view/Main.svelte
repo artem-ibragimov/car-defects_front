@@ -1,10 +1,9 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
-	import { appInit, defectStore } from '$lib/store/main.store';
+	import { defectStore } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import About from '$lib/view/About.svelte';
 	import AgeMileageRadio from '$lib/view/AgeMileageSelector.svelte';
-	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 	import Header from '$lib/view/Header.svelte';
 	import Search from '$lib/view/Search.svelte';
 	import TotalNormRadio from '$lib/view/TotalNormSelector.svelte';
@@ -13,11 +12,11 @@
 	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
 	import { _ } from 'svelte-i18n';
 	import DefectDetails from './DefectDetails.svelte';
+	import TopReliableModels from './TopReliableModels.svelte';
 	import Trailer from './Trailer.svelte';
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 	$: ({ noChartData } = defectStore.filter.entityParams);
-	appInit();
 
 	function onSearch(
 		e: CustomEvent<
@@ -58,7 +57,9 @@
 				<div class="MainContainer_grow">
 					<DefectsChart displayLegend={false} />
 					{#if $noChartData}
-						<div class="MainContainer_row MainContainer_grow MainContainer_space-around">
+						<div class="MainContainer_row MainContainer_grow MainContainer_space-between">
+							<TopReliableModels />
+							<div class="divider divider-horizontal"></div>
 							<Trailer />
 						</div>
 					{/if}

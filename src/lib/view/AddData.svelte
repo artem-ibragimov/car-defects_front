@@ -92,7 +92,7 @@
 	let JWT = isDebug() ? 'jwt' : '';
 	let signInButton: HTMLDivElement | null = null;
 
-	defectStore.init();
+	defectStore.filter.categoryParams.init();
 	detectUserCountry();
 	onMount(() => {
 		initGoogleSignIn();

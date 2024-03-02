@@ -11,7 +11,7 @@
 		selected: $selectedDetails[value]
 	}));
 
-	let { loadDetails, details } = defectStore;
+	let { loadSelectedEntityDetails: loadDetails, details } = defectStore;
 
 	$: variants.length >= 1 && !$selectedDetailEntity && loadDetails({ [variants[0].value]: true });
 

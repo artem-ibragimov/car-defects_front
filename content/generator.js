@@ -103,7 +103,7 @@ function generateByTopic(topic) {
 					// })),
 					imgs: [],
 					cars,
-					url: `https://car-defects.com/#entity_params=${encodeURI(
+					url: `https://car-defects.com/?entity_params=${encodeURI(
 						JSON.stringify(params_limited)
 					)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
 				};

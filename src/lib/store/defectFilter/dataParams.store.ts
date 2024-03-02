@@ -1,30 +1,20 @@
-import { restore, store } from '$lib/util/hashStore';
+import { restore, store } from '$lib/util/getParamsStore';
 import { get, writable } from 'svelte/store';
 
 const PARAMS_HASH_KEY = 'data_params';
 
 export function createDataParams() {
-	let initValue = {
+	const params = writable<Partial<IDataParams>>({
 		[DATA_PARAMS.NORMALIZE]: true,
 		[DATA_PARAMS.BY_AGE]: true
-	};
-
-	try {
-		initValue = JSON.parse(restore(PARAMS_HASH_KEY));
-	} catch {}
-
-	const initValueSerilized = JSON.stringify(initValue);
-	const params = writable<Partial<IDataParams>>(initValue);
-
-	params.subscribe((v) => {
-		const params = JSON.stringify(v);
-		if (params === initValueSerilized) {
-			return;
-		}
-		v && store(PARAMS_HASH_KEY, JSON.stringify(v));
 	});
 
 	return {
+		init(url: URL) {
+			try {
+				params.set(JSON.parse(restore(PARAMS_HASH_KEY, url)));
+			} catch {}
+		},
 		params,
 		setDataParams(cfg: Record<Partial<DATA_PARAMS>, boolean>) {
 			if (Object.keys(cfg).length === 0) {
@@ -33,6 +23,8 @@ export function createDataParams() {
 			params.update((prev) =>
 				Object.fromEntries(Object.entries({ ...prev, ...cfg }).filter(([_, v]) => v))
 			);
+			const v = JSON.stringify(get(params));
+			v && store(PARAMS_HASH_KEY, JSON.stringify(v));
 		},
 		getDataParams() {
 			return get(params);

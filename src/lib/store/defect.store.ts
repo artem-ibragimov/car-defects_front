@@ -30,7 +30,8 @@ export const createDefectStore = (api: {
 	getDefectsDetails(params: IEntity & IMeta & { categories: string }): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {
-	const onerror = () => {
+	const onerror = (e: Error) => {
+		console.error(e);
 		setState({ error: LOAD_ERROR });
 	};
 	const state = writable<IState>({ ...DEFAULT_STATE });
@@ -116,9 +117,24 @@ export const createDefectStore = (api: {
 	function selectDetails(cfg: Record<string, boolean>) {
 		selectedDetails.set(cfg);
 	}
+	function loadEntityDetails(entity: IEntity, offset: number): Promise<IDefectDetails[]> {
+		setState({ loadingDetails: true });
+		return api
+			.getDefectsDetails({
+				...entity,
+				limit: `${DETAILS_LIMIT}`,
+				offset: `${offset}`,
+				categories: filter.categoryParams.getCategories()
+			})
+			.catch(onerror)
+			.then((res) => {
+				setState({ loadingDetails: false });
+				return res as IDefectDetails[];
+			});
+	}
 	return {
-		init() {
-			filter.init();
+		init(url: URL) {
+			return filter.init(url);
 		},
 		state,
 		selectedChartData,
@@ -135,40 +151,30 @@ export const createDefectStore = (api: {
 		},
 		selectedDetails,
 		selectedDetailEntity,
-		loadDetails(selected: Record<string, boolean>) {
+		loadEntityDetails,
+		loadSelectedEntityDetails(selected: Record<string, boolean>) {
 			const entityName = (Object.entries(selected).find(([_, v]) => v) || [])[0];
 			if (!entityName) {
 				return;
 			}
-
 			const entity = filter.entityParams.getEntity(entityName);
 			if (!entity) {
 				return;
 			}
-			setState({ loadingDetails: true });
-			api
-				.getDefectsDetails({
-					...entity,
-					limit: `${DETAILS_LIMIT}`,
-					offset: `${get(detailsLoadOffset)[entityName] || 0}`,
-					categories: filter.categoryParams.getCategories()
-				})
-				.then((res) => {
-					detailsLoadOffset.update((prev) => {
-						prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
-						return prev;
-					});
-					details.update((prev) => {
-						if (!prev[entityName]) {
-							prev[entityName] = [];
-						}
-						Object.assign(prev[entityName], prev[entityName].concat(res));
-						return prev;
-					});
-					selectDetails(selected);
-					setState({ loadingDetails: false });
-				})
-				.catch(onerror);
+			return loadEntityDetails(entity, get(detailsLoadOffset)[entityName] || 0).then((res) => {
+				selectDetails(selected);
+				detailsLoadOffset.update((prev) => {
+					prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
+					return prev;
+				});
+				details.update((prev) => {
+					if (!prev[entityName]) {
+						prev[entityName] = [];
+					}
+					Object.assign(prev[entityName], prev[entityName].concat(res));
+					return prev;
+				});
+			});
 		},
 		postDefect(defect: IDefect) {
 			return api.postDefect(defect).catch(onerror);
