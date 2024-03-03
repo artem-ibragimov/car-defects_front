@@ -1,6 +1,7 @@
 <script lang="ts">
 	import BaseChart from '$lib/components/Chart.svelte';
 	import { defectStore } from '$lib/store/main.store';
+	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
 
 	export let displayLegend = true;
@@ -22,6 +23,9 @@
 		y: $_(`label.chart.${type}.y`),
 		x: $_(`label.chart.${type}.x`)
 	};
+	onMount(() => {
+		defectStore.client();
+	});
 </script>
 
 {#if !$noChartData}

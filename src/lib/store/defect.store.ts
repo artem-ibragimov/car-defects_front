@@ -21,7 +21,7 @@ const DEFAULT_STATE: IState = {
 };
 
 const cacheStore = createCacheStore<Record<string, IDefectData>>();
-const DETAILS_LIMIT = 5;
+const DETAILS_LIMIT = 10;
 
 export const createDefectStore = (api: {
 	getDefectsCategories(): Promise<IDefectData>;
@@ -133,9 +133,13 @@ export const createDefectStore = (api: {
 			});
 	}
 	return {
-		init(url: URL) {
-			return filter.init(url);
+		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }) {
+			return filter.init(cfg);
 		},
+		client() {
+			return filter.client();
+		},
+
 		state,
 		selectedChartData,
 		filter,

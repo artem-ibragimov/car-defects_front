@@ -1,3 +1,4 @@
+import type { IEntity } from '$lib/api/data/defect.api';
 import { API, init as initAPI } from '$lib/api/main.api';
 import { createAuthorStore } from '$lib/store/author.store';
 import { createBrandStore } from '$lib/store/brand.store';
@@ -26,9 +27,9 @@ export const countryStore = createCountryStore(API.country);
 export const statStore = createStatStore(API.stat);
 
 export const appInit = (cfg: {
-	url: URL;
+	entities?: Record<string, IEntity>;
+	categories?: string[];
 	fetch(input: RequestInfo | URL, init?: RequestInit | undefined): Promise<Response>;
 }) => {
-	initAPI(cfg.fetch);
-	return Promise.all([defectStore.init(cfg.url), statStore.init()]);
+	return Promise.all([initAPI(cfg.fetch), defectStore.init(cfg), statStore.init()]);
 };

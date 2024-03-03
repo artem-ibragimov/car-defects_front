@@ -1,16 +1,20 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import https from 'https';
 
 import { readFileSync } from 'fs';
 const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/en.json');
-export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en', 'de', 'ru', 'es' /*'fr','jp', 'pt',  'zh' */];
+export const ARTICLES = []; //Object.keys(en.text.article);
+export const AVAILABLE_LOCALES = ['en' /* 'de', 'ru', 'es''fr','jp', 'pt',  'zh' */];
 
+const models = await getTopReliableModels();
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
-).reduce((acc, cur) => acc.concat(cur));
+)
+	.reduce((acc, cur) => acc.concat(cur), [])
+	.concat(models.map(({ id, name }) => `/defects/${id}/${name}/`));
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -52,3 +56,27 @@ const config = {
 };
 
 export default config;
+
+function getTopReliableModels() {
+	return new Promise((resolve, reject) => {
+		https
+			.get(`https://car-defects.com/data/stat/top/reliable/model`, (res) => {
+				let data = [];
+
+				res.on('data', (chunk) => {
+					data.push(chunk);
+				});
+
+				res.on('end', () => {
+					const models = JSON.parse(Buffer.concat(data).toString());
+					resolve(
+						models.map((v) => {
+							const [id, name, ...rest] = v.split('|');
+							return { id, name: name.replaceAll(' ', '_') };
+						})
+					);
+				});
+			})
+			.on('error', reject);
+	});
+}

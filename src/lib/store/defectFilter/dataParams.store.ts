@@ -1,4 +1,4 @@
-import { restore, store } from '$lib/util/getParamsStore';
+import { store } from '$lib/util/hashStore';
 import { get, writable } from 'svelte/store';
 
 const PARAMS_HASH_KEY = 'data_params';
@@ -10,10 +10,8 @@ export function createDataParams() {
 	});
 
 	return {
-		init(url: URL) {
-			try {
-				params.set(JSON.parse(restore(PARAMS_HASH_KEY, url)));
-			} catch {}
+		init(data: Partial<IDataParams>) {
+			params.set(data);
 		},
 		params,
 		setDataParams(cfg: Record<Partial<DATA_PARAMS>, boolean>) {

@@ -34,14 +34,13 @@
 								{detail.gen}
 								{detail.version}
 								{detail.year}
+								[{$_(`defect_category.${detail.category}`)}]
 								{#if detail.age !== '0'}
 									{$_('label.detail.age')}: {detail.age}
 								{/if}
 								{#if detail.mileage !== '0'}
 									{$_('label.detail.mileage')}: {detail.mileage}
 								{/if}
-
-								{$_(`defect_category.${detail.category}`)}
 							</h2>
 							<p>{detail.description}</p>
 						</div>

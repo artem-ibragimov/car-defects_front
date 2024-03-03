@@ -8,7 +8,6 @@
 	import type { EntryGenerator, PageData } from './$types';
 
 	export let data: PageData;
-	localeStore.select(data.locale);
 
 	export const entries: EntryGenerator = () =>
 		AVAILABLE_LOCALES.map((locale) =>

@@ -1,13 +1,9 @@
 <script lang="ts">
-	import { statStore, defectStore } from '$lib/store/main.store';
+	import { statStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
 
 	$: ({ state } = statStore);
 	$: ({ data } = $state);
-
-	function onClick({ title, modelID }: { title: string; modelID: string }) {
-		defectStore.addEntity(title, { modelID });
-	}
 </script>
 
 <div class="TopReliableModels">
@@ -31,8 +27,10 @@
 					<!-- {i + 1} -->
 					<hr />
 				</div>
-				<div class="timeline-end timeline-box" on:click={onClick(item)}>
-					{item.title}
+				<div class="timeline-end timeline-box">
+					<a href={`/defects/${item.modelID}/${item.title.replaceAll(' ', '_')}`} target="_self">
+						{item.title}</a
+					>
 				</div>
 				<hr />
 			</li>

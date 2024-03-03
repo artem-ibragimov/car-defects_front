@@ -3,16 +3,16 @@
 	$: content = data.split('\n');
 </script>
 
-<main class="Content">
+<section class="Content">
 	{#each content as p}
 		{#if p.length < 100}
 			<h3>{p}</h3>
 		{/if}
 		{#if p.length > 100}
-			<section>{p}</section>
+			<p class="py-6">{p}</p>
 		{/if}
 	{/each}
-</main>
+</section>
 
 <style scoped>
 	.Content {

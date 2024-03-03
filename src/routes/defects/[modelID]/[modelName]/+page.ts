@@ -6,5 +6,9 @@ export const ssr = true;
 export const csr = true;
 
 export const load = async (e) => {
-	await appInit({ fetch: e.fetch });
+	const name = e.params.modelName.replaceAll('_', ' ');
+	await appInit({ fetch: e.fetch, entities: { [name]: { modelID: e.params.modelID } } });
+	return {
+		name
+	};
 };

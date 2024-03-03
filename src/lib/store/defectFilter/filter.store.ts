@@ -1,4 +1,4 @@
-import type { IDefectData } from '$lib/api/data/defect.api';
+import type { IDefectData, IEntity } from '$lib/api/data/defect.api';
 import { derived } from 'svelte/store';
 import { createCategoriesParams } from './categories.store';
 import { createDataParams } from './dataParams.store';
@@ -6,7 +6,7 @@ import { createEntityParams } from './entityParams.store';
 
 export const createDefectFilterStore = (
 	api: { getDefectsCategories(): Promise<IDefectData> },
-	onerror: () => void
+	onerror: (e: Error) => void
 ) => {
 	const entityParams = createEntityParams();
 	const dataParams = createDataParams();
@@ -25,8 +25,11 @@ export const createDefectFilterStore = (
 	);
 
 	return {
-		init(url: URL) {
-			return Promise.all([entityParams.init(url), categoryParams.init(url)]);
+		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }) {
+			return Promise.all([entityParams.init(cfg.entities), categoryParams.init(cfg.categories)]);
+		},
+		client() {
+			return entityParams.client();
 		},
 		selector,
 		entityParams,

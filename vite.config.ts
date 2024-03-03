@@ -7,7 +7,7 @@ export default defineConfig({
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},
 	build: {
-		target: 'es2015'
+		target: 'es6'
 	},
 	server: {
 		fs: {

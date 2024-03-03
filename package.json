@@ -17,7 +17,8 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"upload": "node ./tools/ftp.js",
 		"git": "git add . && git commit -m 'Auto-commit' && git push",
-		"just_do_it_all": "npm run generate && npm run resize_images && npm run format && npm run build && npm run upload && npm run git && npm run posting"
+		"deploy": "npm run format && npm run build && npm run upload && npm run git && npm run posting",
+		"just_do_it_all": "npm run generate && npm run resize_images && npm run deploy"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",

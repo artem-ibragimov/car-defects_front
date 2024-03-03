@@ -2,11 +2,11 @@ import { LOAD_ERROR } from '$lib/api/error';
 import { writable } from 'svelte/store';
 
 const DEFAULT_STATE: IState = {
-	id: 0,
+	id: '0',
 	error: null
 };
 
-export const createCountryStore = (api: { postCounrty(name: string): Promise<number> }) => {
+export const createCountryStore = (api: { postCounrty(name: string): Promise<string> }) => {
 	const state = writable<IState>({ ...DEFAULT_STATE });
 
 	const setState = (values: Partial<IState>) => {
@@ -30,6 +30,6 @@ export const createCountryStore = (api: { postCounrty(name: string): Promise<num
 };
 
 interface IState {
-	id: number;
+	id: string;
 	error: Error | null;
 }

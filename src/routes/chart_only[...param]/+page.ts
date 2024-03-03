@@ -6,7 +6,7 @@ export const ssr = true;
 export const csr = true;
 
 export const load = async (e) => {
-	await appInit({ url: e.url, fetch: e.fetch });
+	await appInit({ fetch: e.fetch });
 	return {
 		url: e.url
 	};

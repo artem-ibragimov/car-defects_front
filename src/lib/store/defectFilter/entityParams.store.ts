@@ -1,5 +1,5 @@
 import type { IEntity } from '$lib/api/data/defect.api';
-import { restore, store } from '$lib/util/getParamsStore';
+import { restore, store } from '$lib/util/hashStore';
 import { filterNullable } from '$lib/util/tools';
 import { derived, get, writable } from 'svelte/store';
 
@@ -18,6 +18,7 @@ const COLORS = [
 
 export function createEntityParams() {
 	const entities = writable<Record<string, IEntity>>({});
+
 	const selectedEntities = writable<Record<string, boolean>>({});
 
 	const noChartData = derived([entities], ([data]) => Object.keys(data).length === 0);
@@ -45,8 +46,15 @@ export function createEntityParams() {
 	}
 
 	return {
-		init(url: URL) {
-			return entities.set(JSON.parse(restore(ENTITY_HASH_KEY, url) || '{}'));
+		init(data: Record<string, IEntity> = {}) {
+			return entities.set(data);
+		},
+		client() {
+			try {
+				entities.update((v) => ({ ...v, ...JSON.parse(restore(ENTITY_HASH_KEY) || '{}') }));
+			} catch (e) {
+				console.error(e);
+			}
 		},
 		noChartData,
 		selectedEntities,
@@ -56,7 +64,7 @@ export function createEntityParams() {
 			return get(entities)[name];
 		},
 		getEntities,
-		deleteEntity(name): void {
+		deleteEntity(name: string): void {
 			entities.update((prev) => {
 				delete prev[name];
 				return prev;

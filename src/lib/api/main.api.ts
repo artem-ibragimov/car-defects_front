@@ -10,12 +10,29 @@ import { createSearchAPI } from '$lib/api/data/search.api';
 import { createTransAPI } from '$lib/api/data/trans.api';
 import { createVersionAPI } from '$lib/api/data/version.api';
 import { createStatAPI } from '$lib/api/data/stat.api';
+import https from 'https';
 
 let fetchFn = fetch;
+const custom_fetch = (url: string | URL): Promise<Response> => {
+	return new Promise((resolve, reject) => {
+		https.get(url, (res) => {
+			let data: Uint8Array[] = [];
+			res
+				.on('data', (chunk) => {
+					data.push(chunk);
+				})
+				.on('end', () => {
+					resolve(new Response(Buffer.concat(data).toString()));
+				})
+				.on('error', reject);
+		});
+	});
+};
 export const init = (
 	f: (input: RequestInfo | URL, init?: RequestInit | undefined) => Promise<Response>
 ) => {
-	fetchFn = f;
+	// @ts-ignore
+	fetchFn = typeof process === 'undefined' ? f : custom_fetch;
 };
 
 const http = {

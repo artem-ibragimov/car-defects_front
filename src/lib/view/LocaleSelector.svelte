@@ -2,7 +2,7 @@
 	import { localeStore } from '$lib/store/main.store';
 	import Selector from '$lib/components/Selector.svelte';
 
-	$: ({ locales, select } = localeStore);
+	$: ({ locales, init: select } = localeStore);
 </script>
 
 <Selector
