@@ -72,7 +72,7 @@ export function createEntityParams() {
 		},
 		selectEntities,
 		resetEntities() {
-			entities.set({});
+			return entities.set({});
 		},
 		addEntity(name: string, params: IEntity) {
 			entities.update((prev) => Object.assign(prev, { [name]: filterNullable(params) }));

@@ -104,7 +104,7 @@ export const createDefectStore = (api: {
 	const details = writable<Record<string, IDefectDetails[]>>({});
 	const detailsLoadOffset = writable<Record<string, number>>({});
 	const selectedDetails = writable<Record<string, boolean>>({});
-	const selectedDetailEntity = derived(
+	const selectedDetailEntityName = derived(
 		selectedDetails,
 		(details) => (Object.entries(details).find(([_, v]) => v) || [])[0]
 	);
@@ -117,7 +117,27 @@ export const createDefectStore = (api: {
 	function selectDetails(cfg: Record<string, boolean>) {
 		selectedDetails.set(cfg);
 	}
-	function loadEntityDetails(entity: IEntity, offset: number): Promise<IDefectDetails[]> {
+
+	selectedDetailEntityName.subscribe((entityName) => {
+		if (!entityName) {
+			return;
+		}
+		const entity = get(filter.entityParams.entities)[entityName];
+		return loadEntityDetails(entity, get(detailsLoadOffset)[entityName] || 0).then((res) => {
+			detailsLoadOffset.update((prev) => {
+				prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
+				return prev;
+			});
+			details.update((prev) => {
+				if (!prev[entityName]) {
+					prev[entityName] = [];
+				}
+				Object.assign(prev[entityName], prev[entityName].concat(res));
+				return prev;
+			});
+		});
+	});
+	function loadEntityDetails(entity: IEntity, offset: number = 0): Promise<IDefectDetails[]> {
 		setState({ loadingDetails: true });
 		return api
 			.getDefectsDetails({
@@ -132,14 +152,24 @@ export const createDefectStore = (api: {
 				return res as IDefectDetails[];
 			});
 	}
+	function clear() {
+		filter.entityParams.resetEntities();
+		return Promise.all([chartData.set({}), selectedDetails.set({})]);
+	}
 	return {
 		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }) {
-			return filter.init(cfg);
+			return clear()
+				.then(() => filter.init(cfg))
+				.then(
+					() =>
+						cfg.entities &&
+						selectDetails(Object.fromEntries(Object.keys(cfg.entities).map((name) => [name, true])))
+				);
 		},
 		client() {
 			return filter.client();
 		},
-
+		clear,
 		state,
 		selectedChartData,
 		filter,
@@ -148,38 +178,9 @@ export const createDefectStore = (api: {
 			setState({ loading: true });
 			filter.entityParams.addEntity(name, entity);
 		},
-		clear() {
-			filter.entityParams.resetEntities();
-			chartData.set({});
-			selectedDetails.set({});
-		},
 		selectedDetails,
-		selectedDetailEntity,
-		loadEntityDetails,
-		loadSelectedEntityDetails(selected: Record<string, boolean>) {
-			const entityName = (Object.entries(selected).find(([_, v]) => v) || [])[0];
-			if (!entityName) {
-				return;
-			}
-			const entity = filter.entityParams.getEntity(entityName);
-			if (!entity) {
-				return;
-			}
-			return loadEntityDetails(entity, get(detailsLoadOffset)[entityName] || 0).then((res) => {
-				selectDetails(selected);
-				detailsLoadOffset.update((prev) => {
-					prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
-					return prev;
-				});
-				details.update((prev) => {
-					if (!prev[entityName]) {
-						prev[entityName] = [];
-					}
-					Object.assign(prev[entityName], prev[entityName].concat(res));
-					return prev;
-				});
-			});
-		},
+		selectDetails,
+		selectedDetailEntityName,
 		postDefect(defect: IDefect) {
 			return api.postDefect(defect).catch(onerror);
 		}

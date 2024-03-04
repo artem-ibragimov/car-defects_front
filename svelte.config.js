@@ -28,7 +28,7 @@ const config = {
 	kit: {
 		inlineStyleThreshold: 4096,
 		prerender: {
-			concurrency: 3,
+			concurrency: 1,
 			crawl: false,
 			handleHttpError: (details) => {
 				console.warn(details);

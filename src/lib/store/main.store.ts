@@ -9,9 +9,9 @@ import { createGenlStore } from '$lib/store/gen.store';
 import { creatLocaleStore } from '$lib/store/locale.store';
 import { createModelStore } from '$lib/store/model.store';
 import { createSearchStore } from '$lib/store/search.store';
+import { createStatStore } from '$lib/store/stat.store';
 import { createTransStore } from '$lib/store/trans.store';
 import { createVersionStore } from '$lib/store/version.store';
-import { createStatStore } from './stat.store';
 
 export const brandsStore = createBrandStore(API.brand);
 export const modelStore = createModelStore(API.model);

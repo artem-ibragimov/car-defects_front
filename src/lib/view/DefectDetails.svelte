@@ -1,29 +1,34 @@
 <script lang="ts">
 	import Selector from '$lib/components/Selector.svelte';
 	import { defectStore } from '$lib/store/main.store';
+	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
 
 	let { entities } = defectStore.filter.entityParams;
-	let { selectedDetails, selectedDetailEntity, state } = defectStore;
+	let { selectedDetails, selectedDetailEntityName, state } = defectStore;
 	$: ({ loadingDetails } = $state);
 	$: variants = Object.keys($entities).map((value) => ({
 		value,
 		selected: $selectedDetails[value]
 	}));
 
-	let { loadSelectedEntityDetails: loadDetails, details } = defectStore;
+	let { selectDetails, details } = defectStore;
 
-	$: variants.length >= 1 && !$selectedDetailEntity && loadDetails({ [variants[0].value]: true });
+	onMount(() => {
+		if (variants.length >= 1 && !$selectedDetailEntityName) {
+			selectDetails({ [variants[0].value]: true });
+		}
+	});
 
-	function onDetailsSelect({ detail }: Record<string, boolean>) {
-		loadDetails(detail);
+	function onDetailsSelect({ detail }: CustomEvent<Record<string, boolean>>) {
+		selectDetails(detail);
 	}
 </script>
 
 <div class="DefectDetails">
 	<div class="DefectDetails__content" class:loadingDetails>
-		{#if !!$selectedDetailEntity}
-			{#each $details[$selectedDetailEntity] || [] as detail}
+		{#if !!$selectedDetailEntityName}
+			{#each $details[$selectedDetailEntityName] || [] as detail}
 				{#if detail}
 					<div class="card w-full shadow-md bg-base-100">
 						<div class="card-body">
@@ -49,7 +54,7 @@
 			{/each}
 		{/if}
 	</div>
-	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntity}>
+	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntityName}>
 		<Selector
 			column
 			{variants}
