@@ -95,7 +95,7 @@
 	</div>
 	<ul
 		tabindex="0"
-		class="Input__dropdown shadow dropdown-content z-[1] bg-base-100 rounded-box"
+		class="Input__dropdown shadow dropdown-content z-[1] bg-base-100"
 		class:Input__dropdown-opened={isOpen}
 		on:click={hideOnSuggestionClick ? hide : null}
 		style={`
@@ -165,8 +165,9 @@
 		-webkit-appearance: textfield;
 		outline-offset: -2px;
 	}
-	:global([slot='suggestion_item']) :hover,
+	:global([slot='suggestion_item']):hover,
 	.Input__dropdown__item:hover {
+		background-color: oklch(var(--b2));
 		/* -webkit-box-shadow: inset 0 1px 3px #ddd;
 		box-shadow: inset 0 1px 3px #ddd; */
 	}

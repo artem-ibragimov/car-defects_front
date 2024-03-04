@@ -9,7 +9,7 @@
 	$: srcset = imgSrc ? SIZES.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
-<div class="card card-compact w-96 bg-base-100 shadow-xl">
+<div class="card card-compact w-96">
 	<a class="Card__a" {href} target="_self">
 		<figure>
 			<img

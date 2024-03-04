@@ -25,7 +25,7 @@
 		{#if !!$selectedDetailEntity}
 			{#each $details[$selectedDetailEntity] || [] as detail}
 				{#if detail}
-					<div class="card w-full bg-base-100 shadow-xl">
+					<div class="card w-full shadow-md">
 						<div class="card-body">
 							<h2 class="card-title">
 								{detail.country}
@@ -64,7 +64,7 @@
 	.DefectDetails {
 		width: 100%;
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: 16px;
 	}
 	@media (min-width: 500px) {
@@ -80,7 +80,7 @@
 		flex-direction: column;
 		align-items: stretch;
 		gap: 16px;
-		row-gap: 16px;
+		row-gap: 24px;
 		opacity: 1;
 		transition: all;
 	}

@@ -9,6 +9,14 @@
 
 <div class="stats shadow stats-vertical">
 	<div class="stat">
+		<div class="stat-figure text-secondary">
+			<img src="/assets/icon/car_crash.png" alt={$_('label.total-defects')} />
+		</div>
+		<div class="stat-title">{$_('label.total-defects')}</div>
+		<div class="stat-value">{total_defects}</div>
+		<div class="stat-desc">{project_start_date} - {current_date}</div>
+	</div>
+	<div class="stat">
 		<div class="stat-figure">
 			<img src="/assets/icon/car_maker.png" alt={$_('label.analyzed-brands')} />
 		</div>
@@ -23,15 +31,6 @@
 		</div>
 		<div class="stat-title">{$_('label.analyzed-versions')}</div>
 		<div class="stat-value">{total_version}</div>
-	</div>
-
-	<div class="stat">
-		<div class="stat-figure text-secondary">
-			<img src="/assets/icon/car_crash.png" alt={$_('label.total-defects')} />
-		</div>
-		<div class="stat-title">{$_('label.total-defects')}</div>
-		<div class="stat-value">{total_defects}</div>
-		<div class="stat-desc">{project_start_date} - {current_date}</div>
 	</div>
 </div>
 

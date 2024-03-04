@@ -37,7 +37,7 @@
 	}
 </script>
 
-<div class="MainContainer">
+<div class="MainContainer bg-base-200">
 	<div class="MainContainer_column MainContainer_content">
 		<Header />
 		<div class="MainContainer_row MainContainer_wrap">
@@ -45,15 +45,16 @@
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
-				<div
-					class="MainContainer_row MainContainer_space-between"
-					class:MainContainer_mobile_invisible={$noChartData}
-					hidden={$noChartData}
-				>
-					<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
-					<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
-					<!-- <LocaleSelector /> -->
-				</div>
+				{#if !$noChartData}
+					<div
+						class="MainContainer_row MainContainer_space-between"
+						class:MainContainer_mobile_invisible={$noChartData}
+					>
+						<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
+						<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
+						<!-- <LocaleSelector /> -->
+					</div>
+				{/if}
 				<div class="MainContainer_grow">
 					<DefectsChart displayLegend={false} />
 					{#if $noChartData}
@@ -67,22 +68,23 @@
 				{#if !$noChartData}
 					<EntitySelector />
 					<Button outline href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
+					<div
+						class="MainContainer_row MainContainer_mobile_column"
+						class:MainContainer_mobile_invisible={$noChartData}
+					>
+						<DefectDetails />
+					</div>
 				{/if}
-				<div
-					class="MainContainer_row MainContainer_mobile_column"
-					class:MainContainer_mobile_invisible={$noChartData}
-				>
-					<DefectDetails />
-				</div>
 			</div>
 			<div>
-				<div
-					class="MainContainer_sidebar MainContainer_mobile_column-reverse"
-					class:MainContainer_mobile_invisible={$noChartData}
-					hidden={$noChartData}
-				>
-					<DefectCategorySelector />
-				</div>
+				{#if !$noChartData}
+					<div
+						class="MainContainer_sidebar MainContainer_mobile_column-reverse"
+						class:MainContainer_mobile_invisible={$noChartData}
+					>
+						<DefectCategorySelector />
+					</div>
+				{/if}
 			</div>
 		</div>
 		{#if $noChartData}

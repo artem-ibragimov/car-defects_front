@@ -4,10 +4,27 @@
 
 	$: ({ state } = statStore);
 	$: ({ data } = $state);
+
+	$: itemListElement = data.map((c, i) => ({
+		'@type': 'ListItem',
+		position: i + 1,
+		name: c.title,
+		description: c.title
+	}));
+
+	$: schema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		itemListElement
+	});
 </script>
 
+<svelte:head>
+	{@html `<script type="application/ld+json"> ${schema} </script>`}
+</svelte:head>
+
 <div class="TopReliableModels">
-	<div class="navbar bg-base-100 w-full">
+	<div class="navbar w-full">
 		<h1 class="text-5xl font-bold">{$_('label.top_reliable_cars')}</h1>
 	</div>
 	<ul class="timeline timeline-vertical">
