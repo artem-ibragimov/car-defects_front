@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run sitemap",
+		"build": "vite build",
 		"sitemap": "node ./tools/sitemap.js",
 		"generate": "node ./content/generator.js",
 		"posting": "node ./content/poster.js",
@@ -17,7 +17,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"upload": "node ./tools/ftp.js",
 		"git": "git add . && git commit -m 'Auto-commit' && git push",
-		"deploy": "npm run format && npm run build && npm run upload && npm run git && npm run posting",
+		"deploy": "npm run format && npm run build x&& npm run sitemap && npm run upload && npm run git && npm run posting",
 		"just_do_it_all": "npm run generate && npm run resize_images && npm run deploy"
 	},
 	"devDependencies": {

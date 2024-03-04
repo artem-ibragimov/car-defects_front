@@ -9,9 +9,3 @@
 		<Content data={$_('text.about.text')} />
 	</div>
 </aside>
-
-<style scoped>
-	.About {
-		padding: 15px;
-	}
-</style>

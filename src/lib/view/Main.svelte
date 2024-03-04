@@ -15,8 +15,9 @@
 	import TopReliableModels from './TopReliableModels.svelte';
 	import Trailer from './Trailer.svelte';
 
+	export let noChartData = false;
+
 	$: ({ setDataParams } = defectStore.filter.dataParams);
-	$: ({ noChartData } = defectStore.filter.entityParams);
 
 	function onSearch(
 		e: CustomEvent<
@@ -41,14 +42,15 @@
 	<div class="MainContainer_column MainContainer_content">
 		<Header />
 		<div class="MainContainer_row MainContainer_wrap">
+			`
 			<Search on:input={onSearch} />
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
-				{#if !$noChartData}
+				{#if !noChartData}
 					<div
 						class="MainContainer_row MainContainer_space-between"
-						class:MainContainer_mobile_invisible={$noChartData}
+						class:MainContainer_mobile_invisible={noChartData}
 					>
 						<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
 						<AgeMileageRadio on:select={({ detail }) => setDataParams(detail)} />
@@ -56,8 +58,10 @@
 					</div>
 				{/if}
 				<div class="MainContainer_grow">
-					<DefectsChart displayLegend={false} />
-					{#if $noChartData}
+					{#if !noChartData}
+						<DefectsChart displayLegend={false} />
+					{/if}
+					{#if noChartData}
 						<div class="MainContainer_row MainContainer_grow MainContainer_space-between">
 							<TopReliableModels />
 							<div class="divider divider-horizontal"></div>
@@ -65,29 +69,29 @@
 						</div>
 					{/if}
 				</div>
-				{#if !$noChartData}
+				{#if !noChartData}
 					<EntitySelector />
 					<Button outline href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 					<div
 						class="MainContainer_row MainContainer_mobile_column"
-						class:MainContainer_mobile_invisible={$noChartData}
+						class:MainContainer_mobile_invisible={noChartData}
 					>
 						<DefectDetails />
 					</div>
 				{/if}
 			</div>
 			<div>
-				{#if !$noChartData}
+				{#if !noChartData}
 					<div
 						class="MainContainer_sidebar MainContainer_mobile_column-reverse"
-						class:MainContainer_mobile_invisible={$noChartData}
+						class:MainContainer_mobile_invisible={noChartData}
 					>
 						<DefectCategorySelector />
 					</div>
 				{/if}
 			</div>
 		</div>
-		{#if $noChartData}
+		{#if noChartData}
 			<About />
 		{/if}
 	</div>
