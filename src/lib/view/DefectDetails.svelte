@@ -25,7 +25,7 @@
 		{#if !!$selectedDetailEntity}
 			{#each $details[$selectedDetailEntity] || [] as detail}
 				{#if detail}
-					<div class="card w-full shadow-md">
+					<div class="card w-full shadow-md bg-base-100">
 						<div class="card-body">
 							<h2 class="card-title">
 								{detail.country}

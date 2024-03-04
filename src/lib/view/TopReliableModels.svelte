@@ -24,7 +24,7 @@
 </svelte:head>
 
 <div class="TopReliableModels">
-	<div class="navbar w-full">
+	<div class="navbar w-full bg-base-200">
 		<h1 class="text-5xl font-bold">{$_('label.top_reliable_cars')}</h1>
 	</div>
 	<ul class="timeline timeline-vertical">
@@ -33,15 +33,19 @@
 				{#if i != 0}
 					<hr />
 				{/if}
-				<div
+				<!-- <div
 					class="tooltip tooltip-bottom timeline-start timeline-box"
 					data-tip={`${$_('label.sold_cars')} - ${item.sales}\n
 					${$_('label.total-defects')} - ${item.defects}`}
 				>
 					{i + 1}
-				</div>
-				<div class="timeline-middle">
-					<!-- {i + 1} -->
+				</div> -->
+				<div
+					class="tooltip tooltip-bottom timeline-middle"
+					data-tip={`${$_('label.sold_cars')} - ${item.sales}\n
+					${$_('label.total-defects')} - ${item.defects}`}
+				>
+					{i + 1}
 					<hr />
 				</div>
 				<div class="timeline-end timeline-box">
@@ -61,6 +65,7 @@
 		flex-direction: column;
 	}
 	.navbar {
+		z-index: 10;
 		position: sticky;
 		top: 0;
 	}
