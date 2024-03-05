@@ -116,35 +116,41 @@ export const createDefectStore = (api: {
 
 	function selectDetails(cfg: Record<string, boolean>) {
 		selectedDetails.set(cfg);
+		updateEntityDetails(get(selectedDetailEntityName));
 	}
 
-	selectedDetailEntityName.subscribe((entityName) => {
+	function updateEntityDetails(entityName: string | undefined) {
 		if (!entityName) {
 			return;
 		}
 		const entity = get(filter.entityParams.entities)[entityName];
-		return loadEntityDetails(entity, get(detailsLoadOffset)[entityName] || 0).then((res) => {
+		return loadEntityDetails(
+			entity,
+			filter.categoryParams.getCategories(),
+			get(detailsLoadOffset)[entityName] || 0
+		).then((res) => {
 			detailsLoadOffset.update((prev) => {
 				prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
 				return prev;
 			});
 			details.update((prev) => {
-				if (!prev[entityName]) {
-					prev[entityName] = [];
-				}
-				Object.assign(prev[entityName], prev[entityName].concat(res));
+				prev[entityName] = res;
 				return prev;
 			});
 		});
-	});
-	function loadEntityDetails(entity: IEntity, offset: number = 0): Promise<IDefectDetails[]> {
+	}
+	function loadEntityDetails(
+		entity: IEntity,
+		categories: string,
+		offset: number = 0
+	): Promise<IDefectDetails[]> {
 		setState({ loadingDetails: true });
 		return api
 			.getDefectsDetails({
 				...entity,
 				limit: `${DETAILS_LIMIT}`,
 				offset: `${offset}`,
-				categories: filter.categoryParams.getCategories()
+				categories
 			})
 			.catch(onerror)
 			.then((res) => {
