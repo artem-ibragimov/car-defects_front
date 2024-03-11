@@ -37,7 +37,9 @@
 		JSON.stringify({
 			'@context': 'https://schema.org',
 			'@type': 'DiscussionForumPosting',
-			headline: `Find the most common issues based on ${$selectedDetailEntityName} owner complaints`,
+			headline: `${$selectedDetailEntityName} Problems on Car-Defects.com`,
+			text: `Find the most common issues based on ${$selectedDetailEntityName} owner complaints`,
+			datePublished: new Date().toISOString(),
 			comment
 		});
 </script>
