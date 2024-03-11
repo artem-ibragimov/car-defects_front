@@ -24,24 +24,28 @@
 		selectDetails(detail);
 	}
 
-	$: itemListElement = $details[$selectedDetailEntityName as string].map((detail, i) => ({
-		'@type': 'ListItem',
-		position: i + 1,
-		name: `${detail.country} ${detail.brand} ${detail.model} ${detail.gen} ${detail.year} [${$_(
+	$: comment = ($details[$selectedDetailEntityName as string] || []).map((detail, i) => ({
+		'@type': 'Comment',
+		text: `${detail.country} ${detail.brand} ${detail.model} ${detail.gen} ${detail.year} [${$_(
 			`defect_category.${detail.category}`
-		)}]`,
-		description: detail.description
+		)}]\n
+		${detail.description}`
 	}));
 
-	$: schema = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'ItemList',
-		itemListElement
-	});
+	$: schema =
+		$selectedDetailEntityName &&
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'DiscussionForumPosting',
+			headline: `Find the most common issues based on ${$selectedDetailEntityName} owner complaints`,
+			comment
+		});
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json"> ${schema} </script>`}
+	{#if $selectedDetailEntityName}
+		{@html `<script type="application/ld+json"> ${schema} </script>`}
+	{/if}
 </svelte:head>
 
 <div class="DefectDetails">

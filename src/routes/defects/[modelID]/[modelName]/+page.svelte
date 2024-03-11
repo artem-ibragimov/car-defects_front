@@ -13,7 +13,6 @@
 		'@type': 'Car',
 		name,
 		url: data.url,
-		itemCondition: 'https://schema.org/NewCondition',
 		brand: {
 			'@type': 'Brand',
 			name: name.split(' ')[0]

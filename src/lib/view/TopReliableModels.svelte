@@ -1,20 +1,26 @@
 <script lang="ts">
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import { statStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
 
 	$: ({ state } = statStore);
 	$: ({ data } = $state);
 
-	$: itemListElement = data.map((c, i) => ({
+	$: items = data.map((v) => ({
+		...v,
+		url: `${PUBLIC_ORIGIN}/defects/${v.modelID}/${v.title.replaceAll(' ', '_')}`
+	}));
+
+	$: itemListElement = items.map((c, i) => ({
 		'@type': 'ListItem',
 		position: i + 1,
 		name: c.title,
-		description: c.title
+		item: c.url
 	}));
 
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
-		'@type': 'ItemList',
+		'@type': 'BreadcrumbList',
 		itemListElement
 	});
 </script>
@@ -28,7 +34,7 @@
 		<h1 class="text-5xl font-bold">{$_('label.top_reliable_cars')}</h1>
 	</div>
 	<ul class="timeline timeline-vertical">
-		{#each data as item, i}
+		{#each items as item, i}
 			<li>
 				{#if i != 0}
 					<hr />
@@ -49,9 +55,7 @@
 					<hr />
 				</div>
 				<div class="timeline-end timeline-box">
-					<a href={`/defects/${item.modelID}/${item.title.replaceAll(' ', '_')}`} target="_self">
-						{item.title}</a
-					>
+					<a href={item.url} target="_self"> {item.title}</a>
 				</div>
 				<hr />
 			</li>

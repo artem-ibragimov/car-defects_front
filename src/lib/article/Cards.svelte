@@ -15,7 +15,7 @@
 
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
-		'@type': 'ItemList',
+		'@type': 'BreadcrumbList',
 		itemListElement
 	});
 </script>
