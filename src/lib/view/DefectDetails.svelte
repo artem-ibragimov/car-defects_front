@@ -23,7 +23,26 @@
 	function onDetailsSelect({ detail }: CustomEvent<Record<string, boolean>>) {
 		selectDetails(detail);
 	}
+
+	$: itemListElement = $details[$selectedDetailEntityName as string].map((detail, i) => ({
+		'@type': 'ListItem',
+		position: i + 1,
+		name: `${detail.country} ${detail.brand} ${detail.model} ${detail.gen} ${detail.year} [${$_(
+			`defect_category.${detail.category}`
+		)}]`,
+		description: detail.description
+	}));
+
+	$: schema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		itemListElement
+	});
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json"> ${schema} </script>`}
+</svelte:head>
 
 <div class="DefectDetails">
 	<div class="DefectDetails__content" class:loadingDetails>

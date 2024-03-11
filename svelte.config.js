@@ -3,6 +3,7 @@ import preprocess from 'svelte-preprocess';
 import https from 'https';
 
 import { readFileSync } from 'fs';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/en.json');
@@ -20,10 +21,10 @@ const entries = AVAILABLE_LOCALES.map((locale) =>
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	// preprocess: vitePreprocess(),
-	preprocess: preprocess({
-		preserve: ['ld+json']
-	}),
+	preprocess: vitePreprocess(),
+	// preprocess: preprocess({
+	// 	preserve: ['ld+json']
+	// }),
 
 	kit: {
 		inlineStyleThreshold: 4096,

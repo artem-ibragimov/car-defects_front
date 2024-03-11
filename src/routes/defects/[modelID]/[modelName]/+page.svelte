@@ -7,6 +7,19 @@
 	const title = `${name} Problems on Car-Defects.com`;
 	const description = `Find the most common issues based on ${name} owner complaints`;
 	const keywords = `${name.split(' ').join(',')}car,defects,reliability,statistics`;
+
+	$: schema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Car',
+		name,
+		url: data.url,
+		itemCondition: 'https://schema.org/NewCondition',
+		brand: {
+			'@type': 'Brand',
+			name: name.split(' ')[0]
+		},
+		model: name.split(' ').slice(1).join(' ')
+	});
 </script>
 
 <svelte:head>
@@ -17,6 +30,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta name="keywords" content={keywords} />
+	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>
 
 <Main />
