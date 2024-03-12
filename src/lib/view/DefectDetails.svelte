@@ -38,6 +38,10 @@
 			'@context': 'https://schema.org',
 			'@type': 'DiscussionForumPosting',
 			headline: `${$selectedDetailEntityName} Problems on Car-Defects.com`,
+			author: {
+				'@type': 'Person',
+				name: 'Car-Defects.com'
+			},
 			text: `Find the most common issues based on ${$selectedDetailEntityName} owner complaints`,
 			datePublished: new Date().toISOString(),
 			comment
