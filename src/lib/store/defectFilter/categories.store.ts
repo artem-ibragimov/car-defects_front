@@ -2,6 +2,8 @@ import type { IDefectData } from '$lib/api/data/defect.api';
 import { store } from '$lib/util/hashStore';
 import { get, writable } from 'svelte/store';
 
+let isInit = false;
+
 export function createCategoriesParams(
 	api: { getDefectsCategories(): Promise<IDefectData> },
 	onerror: (e: Error) => void
@@ -10,7 +12,11 @@ export function createCategoriesParams(
 	const SEPARATOR = ',';
 	const categories = writable<ICategory[]>([]);
 
-	function init(selected_categories: string[] = []) {
+	function init(selected_categories_labels: string[] = []) {
+		if (isInit) {
+			return;
+		}
+		isInit = true;
 		return api
 			.getDefectsCategories()
 			.then((res) => {
@@ -18,7 +24,7 @@ export function createCategoriesParams(
 					Object.entries(res).map(([value, label]) => ({
 						value,
 						label,
-						selected: selected_categories.includes(value)
+						selected: selected_categories_labels.includes(label)
 					}))
 				);
 			})

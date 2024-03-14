@@ -19,4 +19,4 @@
 	<meta name="keywords" content={keywords} />
 </svelte:head>
 
-<Main noChartData />
+<Main noChartData pageUrl={`${data.url}`} />

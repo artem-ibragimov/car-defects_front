@@ -6,6 +6,8 @@ const DEFAULT_STATE: IState = {
 	error: null
 };
 
+let isInit = false;
+
 export const createStatStore = (api: { getTopReliableModels(): Promise<string[]> }) => {
 	const state = writable<IState>({ ...DEFAULT_STATE });
 
@@ -13,7 +15,8 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 		state.update((s) => ({ ...s, ...values }));
 	};
 
-	const onError = (error: Error) => {
+	const onError = (_: Error) => {
+		isInit = false;
 		setState({ error: LOAD_ERROR });
 	};
 
@@ -31,7 +34,16 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 			.catch(onError);
 	};
 
-	return { state, init: getData };
+	return {
+		state,
+		init() {
+			if (isInit) {
+				return;
+			}
+			getData();
+			isInit = true;
+		}
+	};
 };
 
 interface IState {

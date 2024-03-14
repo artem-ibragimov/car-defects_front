@@ -10,13 +10,28 @@ const en = loadJSON('./src/lib/i18n/en.json');
 export const ARTICLES = []; //Object.keys(en.text.article);
 export const AVAILABLE_LOCALES = ['en' /* 'de', 'ru', 'es''fr','jp', 'pt',  'zh' */];
 
+/**
+"1": "transmission",
+"2": "safety",
+"3": "other",
+"4": "engine",
+"5": "equipment",
+"6": "electronics",
+"7": "brake",
+"8": "light",
+"9": "suspension"
+ */
+const categories = ['transmission', 'engine', 'electronics'];
 const models = await getTopReliableModels();
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 )
 	.reduce((acc, cur) => acc.concat(cur), [])
-	.concat(models.map(({ id, name }) => `/defects/${id}/${name}/`));
-
+	.concat(
+		models
+			.map(({ id, name }) => categories.map((cat) => `/defects/${id}/${name}/${cat}`))
+			.reduce((acc, cur) => acc.concat(cur), [])
+	);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors

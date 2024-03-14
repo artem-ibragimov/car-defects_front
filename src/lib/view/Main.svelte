@@ -14,8 +14,10 @@
 	import DefectDetails from './DefectDetails.svelte';
 	import TopReliableModels from './TopReliableModels.svelte';
 	import Trailer from './Trailer.svelte';
+	import DefectCategoryLinks from './DefectCategoryLinks.svelte';
 
 	export let noChartData = false;
+	export let pageUrl: string;
 
 	$: ({ setDataParams } = defectStore.filter.dataParams);
 
@@ -42,11 +44,11 @@
 	<div class="MainContainer_column MainContainer_content">
 		<Header />
 		<div class="MainContainer_row MainContainer_wrap">
-			`
 			<Search on:input={onSearch} />
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
+				<DefectCategoryLinks {pageUrl} />
 				{#if !noChartData}
 					<div
 						class="MainContainer_row MainContainer_space-between"
@@ -135,9 +137,6 @@
 	}
 	.MainContainer_wrap {
 		flex-wrap: wrap;
-	}
-	.MainContainer_space-around {
-		justify-content: space-around;
 	}
 	.MainContainer_space-between {
 		justify-content: space-between;
