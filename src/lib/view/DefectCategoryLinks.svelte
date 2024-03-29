@@ -33,7 +33,7 @@
 </script>
 
 <svelte:head>
-	{#if $selectedDetailEntityName}
+	{#if $selectedDetailEntityName && itemListElement.length !== 0}
 		{@html `<script type="application/ld+json"> ${schema} </script>`}
 	{/if}
 </svelte:head>

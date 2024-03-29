@@ -21,7 +21,9 @@
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json"> ${schema} </script>`}
+	{#if itemListElement.length !== 0}
+		{@html `<script type="application/ld+json"> ${schema} </script>`}
+	{/if}
 </svelte:head>
 
 {#if cards.length > 0}

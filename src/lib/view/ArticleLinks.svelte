@@ -37,7 +37,9 @@
 </script>
 
 <svelte:head>
-	{@html `<script type="application/ld+json"> ${schema} </script>`}
+	{#if itemListElement.length !== 0}
+		{@html `<script type="application/ld+json"> ${schema} </script>`}
+	{/if}
 </svelte:head>
 
 <nav class="ArticleLinks">
