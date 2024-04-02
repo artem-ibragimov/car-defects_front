@@ -8,6 +8,7 @@ const DEFAULT_STATE: IState = {
 	gens: {},
 	error: null,
 	warn: '',
+	query: '',
 	lastRequest: ''
 };
 
@@ -40,6 +41,7 @@ export const createSearchStore = (api: ISearchAPI) => {
 	return {
 		search(params: { query: string }) {
 			query = params.query;
+			setState({ query });
 			if (isWaitingForReq) {
 				return;
 			}
@@ -60,5 +62,6 @@ interface IState {
 	gens: Record<string, string>;
 	error: Error | null;
 	warn: string;
+	query: string;
 	lastRequest: string;
 }

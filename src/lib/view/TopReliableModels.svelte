@@ -1,16 +1,28 @@
 <script lang="ts">
 	import { PUBLIC_ORIGIN } from '$env/static/public';
-	import { statStore } from '$lib/store/main.store';
+	import { searchStore, statStore } from '$lib/store/main.store';
 	import { _ } from 'svelte-i18n';
 
 	$: ({ state } = statStore);
 	$: ({ data } = $state);
 
+	$: ({ state: searchState } = searchStore);
+	$: ({ query } = $searchState);
+
+	$: console.warn('query', query);
 	$: items = data.map((v) => ({
 		...v,
+		filtered: query && v.title.toLowerCase().includes(query),
 		url: `${PUBLIC_ORIGIN}/defects/${v.modelID}/${v.title.replaceAll(' ', '_')}`
 	}));
 
+	let container: HTMLUListElement;
+	$: if (query) {
+		let targetEl = container && (container.querySelector('.matched') as HTMLLIElement);
+		if (targetEl) {
+			container.scrollTop = targetEl.offsetTop + container.clientHeight / 2;
+		}
+	}
 	$: itemListElement = items.map((c, i) => ({
 		'@type': 'ListItem',
 		position: i + 1,
@@ -35,10 +47,10 @@
 	<div class="navbar w-full bg-base-200">
 		<h1 class="text-5xl font-bold">{$_('label.top_reliable_cars')}</h1>
 	</div>
-	<ul class="timeline timeline-vertical">
+	<ul class="timeline timeline-vertical" bind:this={container}>
 		{#each items as item, i}
 			<li>
-				{#if i != 0}
+				{#if i !== 0}
 					<hr />
 				{/if}
 				<!-- <div
@@ -56,10 +68,12 @@
 					{i + 1}
 					<hr />
 				</div>
-				<div class="timeline-end timeline-box">
+				<div class="timeline-end timeline-box" class:matched={item.filtered}>
 					<a href={item.url} target="_self"> {item.title}</a>
 				</div>
-				<hr />
+				{#if i !== items.length - 1}
+					<hr />
+				{/if}
 			</li>
 		{/each}
 	</ul>
@@ -78,8 +92,10 @@
 	.timeline {
 		max-height: 500px;
 		overflow-y: scroll;
+		scroll-behavior: smooth;
 	}
-	.timeline-box:hover {
+	.timeline-box:hover,
+	.matched {
 		background: oklch(var(--a));
 	}
 	.timeline-box {

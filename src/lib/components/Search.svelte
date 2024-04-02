@@ -55,7 +55,7 @@
 		item.genID ? onInput() : onChange();
 	};
 	const onChange = () => {
-		value && dispatcher('change', value);
+		dispatcher('change', value);
 		hidden = false;
 	};
 </script>
@@ -72,6 +72,7 @@
 		lower
 	>
 		<div
+			class="input-lg"
 			slot="suggestion_item"
 			let:item
 			on:click={() => {
@@ -96,11 +97,13 @@
 		align-items: center;
 	}
 	.Search__dropdown__item__title {
-		flex: 1;
+		flex: 2 1;
+		padding: 4px;
 	}
 	.Search__dropdown__item__label {
 		text-align: right;
-		flex: 1;
-		color: #ccc;
+		flex: 1 2;
+		color: oklch(var(--b3));
+		padding: 4px;
 	}
 </style>

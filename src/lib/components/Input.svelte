@@ -123,6 +123,9 @@
 </div>
 
 <style scoped>
+	.input {
+		border-radius: 0;
+	}
 	.Input {
 		flex: 1;
 	}
@@ -141,7 +144,6 @@
 	.Input__dropdown {
 		overflow-y: scroll;
 		max-height: 200px;
-		flex-direction: column;
 		position: absolute;
 		border-radius: 6px;
 		z-index: 9999999;
@@ -155,6 +157,8 @@
 	}
 	:global([slot='suggestion_item']),
 	.Input__dropdown__item {
+		flex: 1;
+		padding: 4px;
 		display: inline-flex;
 		justify-content: space-between;
 		padding: 0.5em 0.6em;
