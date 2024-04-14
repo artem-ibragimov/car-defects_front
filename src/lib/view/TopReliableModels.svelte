@@ -9,7 +9,6 @@
 	$: ({ state: searchState } = searchStore);
 	$: ({ query } = $searchState);
 
-	$: console.warn('query', query);
 	$: items = data.map((v) => ({
 		...v,
 		filtered: query && v.title.toLowerCase().includes(query),

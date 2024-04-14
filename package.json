@@ -4,12 +4,12 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"preview": "npm run build && vite preview",
 		"build": "vite build",
 		"sitemap": "node ./tools/sitemap.js",
 		"generate": "node ./content/generator.js",
 		"posting": "node ./content/poster.js",
 		"resize_images": "node ./tools/resize_images.js",
-		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "vitest",

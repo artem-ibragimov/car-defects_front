@@ -21,7 +21,17 @@ export const AVAILABLE_LOCALES = ['en' /* 'de', 'ru', 'es''fr','jp', 'pt',  'zh'
 "8": "light",
 "9": "suspension"
  */
-const categories = ['transmission', 'engine', 'electronics'];
+const categories = [
+	'transmission',
+	'safety',
+	'other',
+	'engine',
+	'equipment',
+	'electronics',
+	'brake',
+	'light',
+	'suspension'
+];
 const models = await getTopReliableModels();
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
@@ -63,7 +73,7 @@ const config = {
 			assets: 'build',
 			// fallback: 'index.html',
 			precompress: false,
-			strict: true
+			strict: false
 		}),
 		alias: {
 			$lib: 'src/lib'

@@ -23,12 +23,12 @@
 		selectedSuggestion = void 0;
 	}
 
-	$: selectedSuggestionLabel = selectedSuggestion
-		? selectedSuggestion.title.replace(
-				/(\w)(\w*)/g,
-				(_, g1, g2) => g1.toUpperCase() + g2.toLowerCase()
-			)
-		: '';
+	// $: selectedSuggestionLabel = selectedSuggestion
+	// 	? selectedSuggestion.title.replace(
+	// 			/(\w)(\w*)/g,
+	// 			(_, g1, g2) => g1.toUpperCase() + g2.toLowerCase()
+	// 		)
+	// 	: '';
 
 	const dispatcher = createEventDispatcher();
 	const onInput = () => {
