@@ -7,7 +7,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/en.json');
-export const ARTICLES = []; //Object.keys(en.text.article);
+export const ARTICLES = Object.keys(en.text.article);
 export const AVAILABLE_LOCALES = ['en' /* 'de', 'ru', 'es''fr','jp', 'pt',  'zh' */];
 
 /**

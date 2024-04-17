@@ -9,8 +9,8 @@
 		position: i + 1,
 		name: c.title,
 		description: c.text,
-		item: `${PUBLIC_ORIGIN}${c.href}`,
-		image: `${PUBLIC_ORIGIN}${c.imgSrc}.webp`
+		item: `${PUBLIC_ORIGIN}${c.href}`
+		// image: `${PUBLIC_ORIGIN}${c.imgSrc}.webp`
 	}));
 
 	$: schema = JSON.stringify({

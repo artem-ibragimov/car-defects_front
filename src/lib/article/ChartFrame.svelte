@@ -14,7 +14,7 @@
 		flex-basis: none;
 		max-width: none;
 		display: block;
-		min-height: 270px;
+		min-height: 500px;
 		border: none;
 	}
 

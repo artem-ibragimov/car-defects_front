@@ -17,9 +17,9 @@
 
 	const dispatcher = createEventDispatcher();
 
-	let root: HTMLDivElement = null;
-	let field: HTMLDivElement = null;
-	let input: HTMLInputElement = null;
+	let root: HTMLDivElement;
+	let field: HTMLDivElement;
+	let input: HTMLInputElement;
 
 	$: isOpen = false;
 	const show = () => {
@@ -29,7 +29,7 @@
 		isOpen = false;
 	};
 	$: hidden && hide();
-	const handleInput = (e) => {
+	const handleInput = (e:InputEvent) => {
 		value = type.match(/^(number|range)$/)
 			? +e.target.value
 			: lower

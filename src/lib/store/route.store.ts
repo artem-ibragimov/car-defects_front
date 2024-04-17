@@ -1,8 +1,8 @@
 import * as en from '$lib/i18n/en.json';
 
 const articles = Object.fromEntries(
-	// Object.keys(en.text.article).map((article) => [article, `/${article}`])
-	Object.keys({}).map((article) => [article, `/${article}`])
+	Object.keys(en.text.article).map((article) => [article, `/${article}`])
+	// Object.keys({}).map((article) => [article, `/${article}`])
 );
 
 export const ROUTE_NAMES = {

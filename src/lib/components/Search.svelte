@@ -75,6 +75,11 @@
 			class="input-lg"
 			slot="suggestion_item"
 			let:item
+			tabindex="0"
+			role="button"
+			on:keyup={() => {
+				onSuggestionClick(item);
+			}}
 			on:click={() => {
 				onSuggestionClick(item);
 			}}
