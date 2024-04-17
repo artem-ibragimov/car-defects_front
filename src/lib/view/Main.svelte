@@ -128,10 +128,16 @@
 	}
 	.MainContainer_row {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column-reverse;
 		gap: 8px;
 		align-items: stretch;
 	}
+	@media (min-width: 500px) {
+		.MainContainer_row {
+			flex-direction: row;
+		}
+	}
+
 	.MainContainer_grow {
 		flex-grow: 2;
 	}

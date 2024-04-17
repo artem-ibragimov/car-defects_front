@@ -30,6 +30,8 @@
 		type: 'bar',
 		data: { datasets: [] },
 		options: {
+			aspectRatio: 1,
+			maintainAspectRatio: false,
 			responsive: true,
 			plugins: {
 				title: { display: true, text: title },
@@ -98,10 +100,8 @@
 
 <style scoped>
 	.Chart {
-		min-width: 400px;
-		min-height: 360px;
+		height: 400px;
 		flex-grow: 2;
-		max-height: 500px;
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;

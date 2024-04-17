@@ -54,6 +54,7 @@
 	<!-- Yandex.Metrika counter -->
 	<!-- Yandex.Metrika counter -->
 	<!-- Yandex.Metrika counter -->
+	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (m, e, t, r, i, k, a) {
 			m[i] =
