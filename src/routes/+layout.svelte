@@ -43,22 +43,6 @@
 		gtag('config', 'G-D3Z9TXBZ2M');
 	</script>
 
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
-	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (m, e, t, r, i, k, a) {
 			m[i] =
@@ -96,7 +80,6 @@
 			/>
 		</div></noscript
 	>
-	<!-- /Yandex.Metrika counter -->
 </svelte:head>
 
 <Notification {warn} {error} request={lastRequest} />

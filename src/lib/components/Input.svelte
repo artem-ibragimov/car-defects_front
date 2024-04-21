@@ -29,7 +29,7 @@
 		isOpen = false;
 	};
 	$: hidden && hide();
-	const handleInput = (e:InputEvent) => {
+	const handleInput = (e: InputEvent) => {
 		value = type.match(/^(number|range)$/)
 			? +e.target.value
 			: lower

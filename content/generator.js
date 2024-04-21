@@ -115,26 +115,26 @@ function generateByTopic(topic) {
 function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
-	imgs.push({
-		prompt: `photorealistic poster for article "${topic}", add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
-		name: article_name
-	});
+	// imgs.push({
+	// 	prompt: `photorealistic poster for article "${topic}", add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
+	// 	name: article_name
+	// });
 
-	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
-	const image_generation = imgs.reduce(
-		(chain, img_data, i, arr) =>
-			chain
+	// info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
+	// const image_generation = imgs.reduce(
+	// 	(chain, img_data, i, arr) =>
+	// 		chain
 
-				.then(() => generateImg(img_data))
-				.then(() =>
-					i !== arr.length - 1
-						? new Promise((r) => {
-								setTimeout(r, 60000);
-							})
-						: Promise.resolve()
-				),
-		Promise.resolve()
-	);
+	// 			.then(() => generateImg(img_data))
+	// 			.then(() =>
+	// 				i !== arr.length - 1
+	// 					? new Promise((r) => {
+	// 							setTimeout(r, 60000);
+	// 						})
+	// 					: Promise.resolve()
+	// 			),
+	// 	Promise.resolve()
+	// );
 
 	info('Wait for ChatGPT articles generation ....');
 
@@ -150,10 +150,10 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	Don’t Use Repetitive Sentences,
 	`;
 	const queries = Object.entries({
-		en: `Write ${prompt}`,
-		ru: `Write in Russian ${prompt}`,
-		de: `Write in German ${prompt}`,
-		es: `Write in Spanish ${prompt}`
+		en: `Write ${prompt}`
+		// ru: `Write in Russian ${prompt}`,
+		// de: `Write in German ${prompt}`,
+		// es: `Write in Spanish ${prompt}`
 		// fr: `Write in French ${prompt}`,
 		// pt: `Write in Portuguese ${prompt}`,
 		// jp: `Write in Japanese ${prompt}`,
