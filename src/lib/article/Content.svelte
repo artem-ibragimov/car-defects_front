@@ -5,16 +5,11 @@
 
 <section class="Content">
 	{#each content as p}
-		{#if p.length < 100}
+		{#if p.length < 100 && p.length > 0}
 			<h3>{p}</h3>
 		{/if}
 		{#if p.length > 100}
-			<p class="py-6">{p}</p>
+			<p>{p}</p>
 		{/if}
 	{/each}
 </section>
-
-<style scoped>
-	.Content {
-	}
-</style>

@@ -83,7 +83,7 @@
 	}
 </script>
 
-<fieldset class="column pure-form-aligned">
+<fieldset class="column">
 	<legend>{$_('label.engine.name')}</legend>
 	<Input type="search" bind:value={data.Name} placeholder={$_('label.engine.name')} {suggestions}>
 		<div slot="suggestion_item" let:item on:click={() => onSuggestionClick(item)}>
@@ -92,7 +92,7 @@
 	</Input>
 	<!-- <img src={data.Img} alt={data.Img} />
    <input type="file" on:change={onImgChoose} /> -->
-	<div class="pure-control-group">
+	<div class="">
 		<Input
 			{disabled}
 			type="number"

@@ -15,6 +15,7 @@
 	import TopReliableModels from './TopReliableModels.svelte';
 	import Trailer from './Trailer.svelte';
 	import DefectCategoryLinks from './DefectCategoryLinks.svelte';
+	import { onMount } from 'svelte';
 
 	export let noChartData = false;
 	export let pageUrl: string;
@@ -38,6 +39,10 @@
 			versionID: e.detail.versionID
 		});
 	}
+
+	onMount(() => {
+		defectStore.client();
+	});
 </script>
 
 <div class="MainContainer bg-base-200">
@@ -82,16 +87,16 @@
 					</div>
 				{/if}
 			</div>
-			<div>
-				{#if !noChartData}
+			{#if !noChartData}
+				<div>
 					<div
 						class="MainContainer_sidebar MainContainer_mobile_column-reverse"
 						class:MainContainer_mobile_invisible={noChartData}
 					>
 						<DefectCategorySelector />
 					</div>
-				{/if}
-			</div>
+				</div>
+			{/if}
 		</div>
 		{#if noChartData}
 			<About />

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { defectStore } from '$lib/store/main.store';
 	import Main from '$lib/view/Main.svelte';
 	import type { LayoutData } from './$types';
 
@@ -7,6 +8,7 @@
 	const description =
 		'Car-Defects.com - A Car Service Calls Statistics: Statistics of Defects by Age and Car Mileage';
 	const keywords = `car,defects,reliability,comparison,statistics`;
+	$: ({ noChartData } = defectStore.filter.entityParams);
 </script>
 
 <svelte:head>
@@ -19,4 +21,4 @@
 	<meta name="keywords" content={keywords} />
 </svelte:head>
 
-<Main noChartData pageUrl={`${data.url}`} />
+<Main noChartData={$noChartData} pageUrl={`${data.url}`} />

@@ -75,7 +75,7 @@
 	}
 </script>
 
-<fieldset class="column pure-form-aligned">
+<fieldset class="column">
 	<legend>{$_('label.trans.name')}</legend>
 	<Input
 		type="search"
@@ -87,7 +87,7 @@
 			{item[1]}
 		</div>
 	</Input>
-	<div class="pure-control-group">
+	<div class="">
 		<Input type="number" bind:value={data.Acceleration} label={$_('label.trans.acceleration')} />
 		<Input type="number" bind:value={data.Consumtion} label={$_('label.trans.consumtion')} />
 		<Input type="number" bind:value={data.Gears} label={$_('label.trans.gears')} />

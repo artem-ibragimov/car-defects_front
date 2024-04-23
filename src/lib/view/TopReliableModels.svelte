@@ -44,7 +44,7 @@
 
 <div class="TopReliableModels">
 	<div class="navbar w-full bg-base-200">
-		<h1 class="text-5xl font-bold">{$_('label.top_reliable_cars')}</h1>
+		<h2 class="text-5xl font-bold">{$_('label.top_reliable_cars')}</h2>
 	</div>
 	<ul class="timeline timeline-vertical" bind:this={container}>
 		{#each items as item, i}
@@ -89,7 +89,7 @@
 		top: 0;
 	}
 	.timeline {
-		max-height: 500px;
+		max-height: 400px;
 		overflow-y: scroll;
 		scroll-behavior: smooth;
 	}

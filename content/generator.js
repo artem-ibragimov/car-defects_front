@@ -102,16 +102,33 @@ function generateByTopic(topic) {
 					// 	name: name.toLowerCase(),
 					// })),
 					imgs: [],
+					entities: params_limited,
 					cars,
-					url: `https://car-defects.com/?entity_params=${encodeURI(
+					url: `https://car-defects.com/#entity_params=${encodeURI(
 						JSON.stringify(params_limited)
 					)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
 				};
 			});
 		})
-		.then(({ cars, url, imgs }) => generateContent(topic, imgs, cars, url));
+		.then(({ entities, url, imgs }) =>
+			getCarChartData(entities).then((cars) => generateContent(topic, imgs, cars, url))
+		);
 }
 
+function getCarChartData(cars = {}) {
+	const fetching = Object.entries(cars).map(([car_name, entity]) => {
+		const query = `https://car-defects.com/data/defect/age?${new URLSearchParams(
+			entity
+		)}&by_age=true&norm=true`;
+		return fetch(query)
+			.then((res) => res.json())
+			.then((data) => {
+				return [car_name, data];
+			})
+			.catch(error);
+	});
+	return Promise.all(fetching);
+}
 function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
@@ -120,21 +137,21 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	// 	name: article_name
 	// });
 
-	// info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
-	// const image_generation = imgs.reduce(
-	// 	(chain, img_data, i, arr) =>
-	// 		chain
+	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
+	const image_generation = imgs.reduce(
+		(chain, img_data, i, arr) =>
+			chain
 
-	// 			.then(() => generateImg(img_data))
-	// 			.then(() =>
-	// 				i !== arr.length - 1
-	// 					? new Promise((r) => {
-	// 							setTimeout(r, 60000);
-	// 						})
-	// 					: Promise.resolve()
-	// 			),
-	// 	Promise.resolve()
-	// );
+				.then(() => generateImg(img_data))
+				.then(() =>
+					i !== arr.length - 1
+						? new Promise((r) => {
+								setTimeout(r, 60000);
+							})
+						: Promise.resolve()
+				),
+		Promise.resolve()
+	);
 
 	info('Wait for ChatGPT articles generation ....');
 
@@ -143,10 +160,10 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	// 	debugger;
 	// });
 	const prompt = `
-	catchy professional article for analytics website about "${topic}",
-	compare cars by service call statistics,
-	describe technical details,
-	Add Personal Experience
+	have the chart data from car-defects.com as follows: 
+	${cars.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}
+Analyze the data in the graph, compare the cars in terms of reliability,
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
 	Don’t Use Repetitive Sentences,
 	`;
 	const queries = Object.entries({
@@ -285,7 +302,7 @@ function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
-			messages: [{ role: 'user', content: `what is top  car model names of "${topic}"?` }],
+			messages: [{ role: 'user', content: `what is top car model names of "${topic}"?` }],
 			temperature: 0.1
 		})
 		.then((v) =>

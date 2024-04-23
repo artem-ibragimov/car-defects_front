@@ -129,7 +129,7 @@
 	<script src="https://accounts.google.com/gsi/client" defer></script>
 </svelte:head>
 
-<div class="pure-form">
+<div class="AddData">
 	<div class="column">
 		<Header />
 		<Brand bind:brandID bind:brandName />
@@ -153,7 +153,7 @@
 </div>
 
 <style scoped>
-	.pure-form {
+	.AddData {
 		display: flex;
 		justify-content: center;
 		flex-flow: row wrap;

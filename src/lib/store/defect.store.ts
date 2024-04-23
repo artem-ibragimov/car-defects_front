@@ -181,8 +181,7 @@ export const createDefectStore = (api: {
 		filter,
 		details,
 		addEntity(name: string, entity: IEntity) {
-			setState({ loading: true });
-			filter.entityParams.addEntity(name, entity);
+			return filter.entityParams.addEntity(name, entity);
 		},
 		selectedDetails,
 		selectDetails,

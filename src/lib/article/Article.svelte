@@ -70,11 +70,11 @@
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
 	<!-- <img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" /> -->
 	<h1>{title}</h1>
-	<Content data={content} />
-	<Cards {cards} />
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
+	<Content data={content} />
+	<Cards {cards} />
 	<ArticleLinks pagePath={name} />
 </article>
 

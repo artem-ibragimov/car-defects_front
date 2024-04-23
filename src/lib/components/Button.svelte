@@ -28,26 +28,7 @@
 	a:visited {
 		color: inherit;
 	}
-	.pure-button {
-		border-radius: 2px;
-		padding: 0.4em 2em;
-		white-space: break-spaces;
-	}
-
 	.stretch_desktop {
 		width: 100%;
-	}
-	@media (max-width: 500px) {
-		.pure-button {
-			/* width: 100%; */
-		}
-	}
-	.pure-button-success {
-		background: #d6eecb;
-	}
-	.pure-button-primary {
-		color: #f4faff;
-		background: #4dc9f6;
-		font-weight: 500;
 	}
 </style>

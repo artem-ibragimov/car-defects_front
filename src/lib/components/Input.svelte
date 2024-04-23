@@ -143,7 +143,6 @@
 	}
 	.Input__dropdown {
 		overflow-y: scroll;
-		max-height: 200px;
 		position: absolute;
 		border-radius: 6px;
 		z-index: 9999999;

@@ -95,7 +95,7 @@
 
 <div class="Chart" class:Chart-frame={isFrameChart}>
 	<Loading hidden={!loading} />
-	<canvas bind:this={chartEl} hidden={loading} />
+	<canvas bind:this={chartEl} style:display={loading ? 'none' : 'block'} />
 </div>
 
 <style scoped>

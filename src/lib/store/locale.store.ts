@@ -27,7 +27,10 @@ export const creatLocaleStore = () => {
 	});
 	const selected = derived(locale, (l) => l);
 
-	function init(v: string) {
+	function init(v?: string) {
+		if (!v) {
+			return;
+		}
 		return locale.set(v);
 	}
 	return {

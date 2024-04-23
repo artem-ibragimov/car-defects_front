@@ -8,9 +8,8 @@
 	export let isFrameChart = false;
 
 	$: ({ state: defectState, filter, selectedChartData } = defectStore);
-	$: ({ loading } = $defectState);
 	$: ({ noChartData } = defectStore.filter.entityParams);
-
+	$: ({ loading } = $defectState);
 	$: ({ params: selectedData } = filter.dataParams);
 	$: ({ by_age, by_mileage, norm, total } = isFrameChart
 		? filter.dataParams.getDataParams()
@@ -23,9 +22,6 @@
 		y: $_(`label.chart.${type}.y`),
 		x: $_(`label.chart.${type}.x`)
 	};
-	onMount(() => {
-		defectStore.client();
-	});
 </script>
 
 {#if !$noChartData}
@@ -33,8 +29,8 @@
 		{title}
 		data={$selectedChartData}
 		{axes}
-		{tooltip}
 		{loading}
+		{tooltip}
 		{displayLegend}
 		{isFrameChart}
 	/>

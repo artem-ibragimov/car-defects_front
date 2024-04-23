@@ -104,6 +104,7 @@
 	.Search__dropdown__item__title {
 		flex: 2 1;
 		padding: 4px;
+		text-wrap: nowrap;
 	}
 	.Search__dropdown__item__label {
 		text-align: right;

@@ -1,6 +1,6 @@
 module.exports = {
 	content: ['./src/**/*.{svelte,js,ts}'],
-	plugins: [require('@tailwindcss/typography'), require('daisyui')],
+	plugins: [require('daisyui')],
 	daisyui: {
 		themes: ['pastel'],
 		base: true, // applies background color and foreground color for root element by default

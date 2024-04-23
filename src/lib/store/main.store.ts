@@ -29,7 +29,13 @@ export const statStore = createStatStore(API.stat);
 export const appInit = (cfg: {
 	entities?: Record<string, IEntity>;
 	categories?: string[];
+	locale?: string;
 	fetch(input: RequestInfo | URL, init?: RequestInit | undefined): Promise<Response>;
 }) => {
-	return Promise.all([initAPI(cfg.fetch), defectStore.init(cfg), statStore.init()]);
+	return Promise.all([
+		initAPI(cfg.fetch),
+		defectStore.init(cfg),
+		statStore.init(),
+		localeStore.init(cfg.locale)
+	]);
 };
