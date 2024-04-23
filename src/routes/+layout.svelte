@@ -85,5 +85,7 @@
 	{/if}
 </svelte:head>
 
-<Notification {warn} {error} request={lastRequest} />
-<slot />
+<div class="Layout bg-base-200">
+	<Notification {warn} {error} request={lastRequest} />
+	<slot />
+</div>

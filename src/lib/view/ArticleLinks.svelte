@@ -42,16 +42,4 @@
 	{/if}
 </svelte:head>
 
-<nav class="ArticleLinks">
-	<Cards {cards} />
-</nav>
-
-<style scoped>
-	.ArticleLinks {
-		flex: 1;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-		justify-content: center;
-	}
-</style>
+<Cards {cards} />

@@ -16,6 +16,7 @@
 	import Trailer from './Trailer.svelte';
 	import DefectCategoryLinks from './DefectCategoryLinks.svelte';
 	import { onMount } from 'svelte';
+	import ArticleLinks from './ArticleLinks.svelte';
 
 	export let noChartData = false;
 	export let pageUrl: string;
@@ -45,7 +46,7 @@
 	});
 </script>
 
-<div class="MainContainer bg-base-200">
+<div class="MainContainer">
 	<div class="MainContainer_column MainContainer_content">
 		<Header />
 		<div class="MainContainer_row MainContainer_wrap">
@@ -98,6 +99,7 @@
 				</div>
 			{/if}
 		</div>
+		<ArticleLinks />
 		{#if noChartData}
 			<About />
 		{/if}

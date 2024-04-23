@@ -1,5 +1,5 @@
 <script lang="ts">
-	// export let lazy: boolean = false;
+	export let lazy: boolean = false;
 	export let title: string = '';
 	export let text: string = '';
 	// export let imgSrc: string = '';
@@ -9,7 +9,7 @@
 	// $: srcset = imgSrc ? SIZES.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
-<div class="card w-96 shadow-md">
+<div class="card w-96 shadow-md bg-base-100">
 	<a {href} target="_self">
 		<!-- <figure>
 			<img

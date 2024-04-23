@@ -10,22 +10,14 @@
 
 <style scoped>
 	.ChartFrame {
-		flex: 1;
-		flex-basis: none;
-		max-width: none;
 		display: block;
-		min-height: 500px;
+		height: 400px;
 		border: none;
 	}
 
 	@media (min-width: 500px) {
 		.ChartFrame {
-			flex-basis: 470px;
-			max-width: 450px;
+			min-height: 400px;
 		}
-	}
-	.lg {
-		flex-basis: none;
-		max-width: 900px;
 	}
 </style>

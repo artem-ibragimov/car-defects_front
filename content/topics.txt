@@ -186,8 +186,8 @@ Reliability rankings for used hybrid cars under $20,000?:generated
 What are the most reliable SUVs made in the last 10 years?:generated
 How do Volvo sedans hold up against Lexus sedans in long-term tests?:generated
 Which is more reliable: Honda Accord or Toyota Camry after 100,000 miles?:generated
-Are German cars less reliable than Japanese cars after 150,000 miles?
-Comparison of engine reliability between Ford and Dodge trucks?
+Are German cars less reliable than Japanese cars after 150,000 miles?:generated
+Comparison of engine reliability between Ford and Dodge trucks?:generated
 What are the common problems with Subaru Outbacks after 5 years?
 Most reliable luxury cars under $30,000?
 Least reliable car brands in Europe?

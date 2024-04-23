@@ -12,7 +12,8 @@
 	$: items = data.map((v) => ({
 		...v,
 		filtered: query && v.title.toLowerCase().includes(query),
-		url: `${PUBLIC_ORIGIN}/defects/${v.modelID}/${v.title.replaceAll(' ', '_')}`
+		url: `${PUBLIC_ORIGIN}/defects/${v.modelID}/${v.title.replaceAll(' ', '_')}`,
+		href: `/defects/${v.modelID}/${v.title.replaceAll(' ', '_')}`
 	}));
 
 	let container: HTMLUListElement;
@@ -68,7 +69,7 @@
 					<hr />
 				</div>
 				<div class="timeline-end timeline-box" class:matched={item.filtered}>
-					<a href={item.url} target="_self"> {item.title}</a>
+					<a href={item.href} target="_self"> {item.title}</a>
 				</div>
 				{#if i !== items.length - 1}
 					<hr />

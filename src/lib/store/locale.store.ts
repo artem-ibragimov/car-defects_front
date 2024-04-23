@@ -2,7 +2,7 @@ import { dictionary, locale } from 'svelte-i18n';
 import { derived } from 'svelte/store';
 import { AVAILABLE_LOCALES, DICTIONARIES } from '../i18n';
 
-const DEFAUL_LOCALE =
+export const DEFAUL_LOCALE =
 	(typeof navigator !== 'undefined' &&
 		(AVAILABLE_LOCALES.find((l) => navigator.language.startsWith(l)) ||
 			AVAILABLE_LOCALES.find((l) => navigator.languages.includes(l)))) ||

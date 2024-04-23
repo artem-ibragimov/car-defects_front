@@ -114,6 +114,7 @@
 		flex-direction: column;
 		align-items: stretch;
 		gap: 16px;
+		min-width: 0;
 		row-gap: 24px;
 		opacity: 1;
 		transition: all;

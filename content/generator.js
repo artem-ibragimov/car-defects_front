@@ -131,7 +131,7 @@ function getCarChartData(cars = {}) {
 }
 function generateContent(topic, imgs = [], cars = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
-	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
+	// const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	// imgs.push({
 	// 	prompt: `photorealistic poster for article "${topic}", add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
 	// 	name: article_name
@@ -180,7 +180,7 @@ Analyze the data in the graph, compare the cars in terms of reliability,
 		.reduce(
 			(chain, [locale, content], i, arr) =>
 				chain
-					.then(() => generateArticle(locale, content, article_name, url, cards))
+					.then(() => generateArticle(locale, content, topic, url, cards))
 					.then(() =>
 						i === arr.length - 1
 							? Promise.resolve()
@@ -228,7 +228,8 @@ function downloadImage(url, filename) {
 	});
 }
 
-function generateArticle(locale, query, article_name, url, cards) {
+function generateArticle(locale, query, topic, url, cards) {
+	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	const filename = `src/lib/i18n/${locale}.json`;
 	return readFile(filename, 'utf8')
 		.then((data) => {
@@ -258,16 +259,17 @@ function generateArticle(locale, query, article_name, url, cards) {
 						.replace('Вступление:', '')
 						.replace('Вступительный абзац:', '')
 						.trim();
-					const title =
-						text.includes('\n\n') && text.split('\n\n')[0].length < 100
-							? text.split('\n\n')[0]
-							: `${text.slice(
-									0,
-									/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 100)
-								)}...`;
+					// const title =
+					// 	text.includes('\n\n') && text.split('\n\n')[0].length < 200
+					// 		? text.split('\n\n')[0]
+					// 		: `${text.slice(
+					// 				0,
+					// 				/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 200)
+					// 			)}...`;
 					json.text.article[article_name] = {
-						title: title,
-						text: text.replace(title, ''),
+						title: topic,
+						text,
+						// text: text.replace(title, ''),
 						url: url ? new URL(url).hash : '-',
 						cards
 					};
