@@ -38,10 +38,10 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 		state,
 		init() {
 			if (isInit) {
-				return;
+				return Promise.resolve();
 			}
-			getData();
 			isInit = true;
+			return getData();
 		}
 	};
 };

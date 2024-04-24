@@ -32,6 +32,14 @@ try {
 	console.error(error);
 }
 
+function log(filename, data) {
+	try {
+		const file = './content/' + filename + '.txt';
+		writeFileSync(file, data);
+	} catch (error) {
+		console.error(error);
+	}
+}
 function generateTopics(topics) {
 	const unposted = topics.find((t) => !t.includes(':generated'));
 	if (!unposted) {
@@ -163,11 +171,12 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	have the chart data from car-defects.com as follows: 
 	${cars.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}
 Analyze the data in the graph, compare the cars in terms of reliability,
- draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
-	Don’t Use Repetitive Sentences,
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
 	`;
+	log('video', `${prompt}, formalize everything in the form of a script for a short 60 sec video`);
 	const queries = Object.entries({
-		en: `Write ${prompt}`
+		en: `Write ${prompt} formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
+		Don’t Use Repetitive Sentences.`
 		// ru: `Write in Russian ${prompt}`,
 		// de: `Write in German ${prompt}`,
 		// es: `Write in Spanish ${prompt}`
