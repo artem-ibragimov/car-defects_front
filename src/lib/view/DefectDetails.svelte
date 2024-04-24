@@ -24,13 +24,15 @@
 		selectDetails(detail);
 	}
 
-	$: comment = ($details[$selectedDetailEntityName as string] || []).map((detail, i) => ({
-		'@type': 'Comment',
-		text: `${detail.country} ${detail.brand} ${detail.model} ${detail.gen} ${detail.year} [${$_(
-			`defect_category.${detail.category}`
-		)}]\n
+	$: comment = ($details[$selectedDetailEntityName as string] || [])
+		.filter(Boolean)
+		.map((detail, i) => ({
+			'@type': 'Comment',
+			text: `${detail.country} ${detail.brand} ${detail.model} ${detail.gen} ${detail.year} [${$_(
+				`defect_category.${detail.category}`
+			)}]\n
 		${detail.description}`
-	}));
+		}));
 
 	$: schema =
 		$selectedDetailEntityName &&

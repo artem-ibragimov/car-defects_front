@@ -27,7 +27,7 @@ export const createDefectStore = (api: {
 	getDefectsCategories(): Promise<IDefectData>;
 	getDefectsByAge(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsByMileage(params: IEntity & IDataParams): Promise<IDefectData>;
-	getDefectsDetails(params: IEntity & IMeta & { categories: string }): Promise<IDefectDetails[]>;
+	getDefectsDetails(params: IEntity & IMeta & { categories: string; }): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {
 	const onerror = (e: Error) => {
@@ -114,14 +114,14 @@ export const createDefectStore = (api: {
 		});
 	});
 
-	function selectDetails(cfg: Record<string, boolean>) {
+	function selectDetails(cfg: Record<string, boolean>): Promise<void> {
 		selectedDetails.set(cfg);
-		updateEntityDetails(get(selectedDetailEntityName));
+		return updateEntityDetails(get(selectedDetailEntityName)).catch(console.error);
 	}
 
-	function updateEntityDetails(entityName: string | undefined) {
+	function updateEntityDetails(entityName: string | undefined): Promise<void> {
 		if (!entityName) {
-			return;
+			return Promise.resolve();
 		}
 		const entity = get(filter.entityParams.entities)[entityName];
 		return loadEntityDetails(
@@ -163,7 +163,8 @@ export const createDefectStore = (api: {
 		return Promise.all([chartData.set({}), selectedDetails.set({})]);
 	}
 	return {
-		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }) {
+		init(cfg: { entities?: Record<string, IEntity>; categories?: string[]; }) {
+			if (!cfg.entities) { return Promise.resolve(); }
 			return clear()
 				.then(() => filter.init(cfg))
 				.then(
