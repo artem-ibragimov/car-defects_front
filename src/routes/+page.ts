@@ -6,7 +6,6 @@ export const prerender = true;
 export const ssr = true;
 export const csr = true;
 
-
 export const load = async (e) => {
 	await appInit({ fetch: e.fetch, locale: DEFAUL_LOCALE });
 };

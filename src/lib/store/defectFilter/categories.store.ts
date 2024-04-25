@@ -38,6 +38,9 @@ export function createCategoriesParams(
 
 	return {
 		init,
+		client() {
+			return init();
+		},
 		categories,
 		setCategories(v: Record<string, boolean>) {
 			if (Object.keys(v).length === 0) {

@@ -35,7 +35,8 @@ try {
 function log(filename, data) {
 	try {
 		const file = './content/' + filename + '.txt';
-		writeFileSync(file, data);
+		const content = readFileSync(file).toString();
+		writeFileSync(file, `${content}\n\n${data}`);
 	} catch (error) {
 		console.error(error);
 	}
@@ -131,6 +132,9 @@ function getCarChartData(cars = {}) {
 		return fetch(query)
 			.then((res) => res.json())
 			.then((data) => {
+				if (Object.keys(data).length === 0) {
+					throw new Error('no chart data for ' + car_name);
+				}
 				return [car_name, data];
 			})
 			.catch(error);

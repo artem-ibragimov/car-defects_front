@@ -27,7 +27,7 @@ export const createDefectStore = (api: {
 	getDefectsCategories(): Promise<IDefectData>;
 	getDefectsByAge(params: IEntity & IDataParams): Promise<IDefectData>;
 	getDefectsByMileage(params: IEntity & IDataParams): Promise<IDefectData>;
-	getDefectsDetails(params: IEntity & IMeta & { categories: string; }): Promise<IDefectDetails[]>;
+	getDefectsDetails(params: IEntity & IMeta & { categories: string }): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {
 	const onerror = (e: Error) => {
@@ -163,8 +163,10 @@ export const createDefectStore = (api: {
 		return Promise.all([chartData.set({}), selectedDetails.set({})]);
 	}
 	return {
-		init(cfg: { entities?: Record<string, IEntity>; categories?: string[]; }) {
-			if (!cfg.entities) { return Promise.resolve(); }
+		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }) {
+			if (!cfg.entities && !cfg.categories) {
+				return Promise.resolve();
+			}
 			return clear()
 				.then(() => filter.init(cfg))
 				.then(

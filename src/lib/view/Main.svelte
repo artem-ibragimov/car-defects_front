@@ -126,7 +126,7 @@
 		align-items: stretch;
 		gap: 10px;
 	}
-	@media (min-width: 500px) {
+	@media (min-width: 700px) {
 		.MainContainer_column {
 			padding-bottom: 16px;
 			max-width: 900px;
@@ -139,7 +139,7 @@
 		gap: 8px;
 		align-items: stretch;
 	}
-	@media (min-width: 500px) {
+	@media (min-width: 700px) {
 		.MainContainer_row {
 			flex-direction: row;
 		}
@@ -162,7 +162,7 @@
 		gap: 16px;
 		top: 50px;
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 700px) {
 		.MainContainer_mobile_invisible {
 			display: none;
 		}

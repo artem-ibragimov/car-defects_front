@@ -190,13 +190,13 @@ Are German cars less reliable than Japanese cars after 150,000 miles?:generated
 Comparison of engine reliability between Ford and Dodge trucks?:generated
 What are the common problems with Subaru Outbacks after 5 years?:generated
 Most reliable luxury cars under $30,000?:generated
-Least reliable car brands in Europe?
-Reliability comparison of electric vehicles in cold climates?
-Which cars have the lowest repair costs over 10 years?
-Hybrid vs. diesel reliability statistics for the last decade?
-Are older BMW models more reliable than newer ones?
-What are the reliability ratings for cars with over 200,000 miles?
-Most dependable compact cars from the 2010s?
+Least reliable car brands in Europe?:generated
+Reliability comparison of electric vehicles in cold climates?:generated
+Which cars have the lowest repair costs over 10 years?:generated
+Hybrid vs. diesel reliability statistics for the last decade?:generated
+Are older BMW models more reliable than newer ones?:generated
+What are the reliability ratings for cars with over 200,000 miles?:generated
+Most dependable compact cars from the 2010s?:generated
 Reliability of automatic vs. manual transmission cars?
 Top reliable cars for under $15,000 in 2023?
 How reliable are convertible cars compared to sedans?
