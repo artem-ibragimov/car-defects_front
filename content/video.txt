@@ -109,3 +109,57 @@ mazda 3: {
 Analyze the data in the graph, compare the cars in terms of reliability,
  draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
 	, formalize everything in the form of a script for a short 60 sec video
+
+
+	have the chart data from car-defects.com as follows: 
+	toyota corolla: {
+  "0": "13.1200271536345346",
+  "1": "10.7520145157747232",
+  "2": "6.2697615254252074",
+  "3": "8.2047752013722736",
+  "4": "8.0747169051200938",
+  "5": "8.4981994063314599",
+  "6": "5.7082903440438455",
+  "7": "4.9612481789855929",
+  "8": "4.7566442739059441",
+  "9": "3.1356738011043853",
+  "10": "3.2609738670058756",
+  "11": "2.7153634534601455",
+  "12": "2.0396947436622354",
+  "13": "1.2593449661491562"
+}
+honda civic: {
+  "0": "13.7615199527852181",
+  "1": "12.8087419028799583",
+  "2": "9.6009562426973595",
+  "3": "11.7245461909188006",
+  "4": "10.5074394343783825",
+  "5": "7.7013736729802897",
+  "6": "8.6556451054089120",
+  "7": "8.0403715057835718",
+  "8": "6.6604860541966438",
+  "9": "8.4764392026054149",
+  "10": "6.9561757938224141",
+  "11": "5.7823771304595078",
+  "12": "5.1865175036378798",
+  "13": "3.6035320288736551"
+}
+subaru impreza: {
+  "0": "14.8666841429441011",
+  "1": "11.5965468060621948",
+  "2": "9.3127824159028200",
+  "3": "8.0153909724659768",
+  "4": "7.1534254244291700",
+  "5": "9.0461951330048386",
+  "6": "10.4146765185478102",
+  "7": "7.4377851928536836",
+  "8": "5.1362483171677767",
+  "9": "2.7902802276655396",
+  "10": "3.1723886664859797",
+  "11": "1.4662300559388982",
+  "12": "0.68424069277148582422",
+  "13": "0.81753433422047656920"
+}
+Analyze the data in the graph, compare the cars in terms of reliability,
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
+	, formalize everything in the form of a script for a short 60 sec video

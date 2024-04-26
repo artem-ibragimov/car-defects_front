@@ -27,7 +27,7 @@ c.on('ready', function () {
 });
 c.on('error', console.error);
 c.on('end', () => {
-	console.log('ended');
+	console.log('DONE');
 });
 c.connect({
 	host: 'h35.netangels.ru',
