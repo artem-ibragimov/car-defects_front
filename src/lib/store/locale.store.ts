@@ -9,7 +9,7 @@ export const DEFAUL_LOCALE =
 	AVAILABLE_LOCALES[0];
 
 export const creatLocaleStore = () => {
-	init(DEFAUL_LOCALE);
+	setLocale(DEFAUL_LOCALE);
 	dictionary.set(DICTIONARIES);
 	locale.subscribe((v) => {
 		if (!v || !AVAILABLE_LOCALES.includes(v)) {
@@ -27,7 +27,7 @@ export const creatLocaleStore = () => {
 	});
 	const selected = derived(locale, (l) => l);
 
-	function init(v?: string) {
+	function setLocale(v?: string) {
 		if (!v) {
 			return;
 		}
@@ -35,6 +35,7 @@ export const creatLocaleStore = () => {
 	}
 	return {
 		selected,
-		init
+		ssr: setLocale,
+		csr: setLocale
 	};
 };

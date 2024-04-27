@@ -24,17 +24,23 @@ export const createDefectFilterStore = (
 	);
 
 	return {
-		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }): Promise<void[]> {
-			if (!cfg.entities && !cfg.categories) {
-				return Promise.resolve([]);
-			}
-			return Promise.all<void>([
+		ssr(cfg: {
+			entities?: Record<string, IEntity>;
+			categories?: string[];
+		}): Promise<{ entityParamsState: string; categoryParamsState: string }> {
+			return Promise.all([
 				entityParams.init(cfg.entities),
 				categoryParams.init(cfg.categories)
-			]);
+			]).then(([entityParamsState, categoryParamsState]) => ({
+				entityParamsState,
+				categoryParamsState
+			}));
 		},
-		client() {
-			return Promise.all([categoryParams.client(), entityParams.client()]);
+		csr(states: { entityParamsState: string; categoryParamsState: string }) {
+			return Promise.all([
+				categoryParams.csr(states.categoryParamsState),
+				entityParams.csr(states.entityParamsState)
+			]);
 		},
 		selector,
 		entityParams,

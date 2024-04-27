@@ -2,8 +2,6 @@ import type { IDefectData } from '$lib/api/data/defect.api';
 import { store } from '$lib/util/hashStore';
 import { get, writable } from 'svelte/store';
 
-let isInit = false;
-
 export function createCategoriesParams(
 	api: { getDefectsCategories(): Promise<IDefectData> },
 	onerror: (e: Error) => void
@@ -13,10 +11,6 @@ export function createCategoriesParams(
 	const categories = writable<ICategory[]>([]);
 
 	function init(selected_categories_labels: string[] = []) {
-		if (isInit) {
-			return;
-		}
-		isInit = true;
 		return api
 			.getDefectsCategories()
 			.then((res) => {
@@ -28,7 +22,8 @@ export function createCategoriesParams(
 					}))
 				);
 			})
-			.catch(onerror);
+			.catch(onerror)
+			.then(serialize);
 	}
 	function getCategoriesSerialized(): string {
 		const cats = get(categories);
@@ -36,10 +31,22 @@ export function createCategoriesParams(
 		return (selected.length ? selected : cats.map((c) => c.value)).join(SEPARATOR);
 	}
 
+	function serialize() {
+		return JSON.stringify({ categories: get(categories) });
+	}
+	function deserialize(s: string) {
+		try {
+			const deserialized = JSON.parse(s) as { categories: ICategory[] };
+			categories.set(deserialized.categories);
+		} catch (e) {
+			onerror(e as Error);
+		}
+	}
+
 	return {
 		init,
-		client() {
-			return init();
+		csr(s?: string) {
+			return s ? deserialize(s) : init();
 		},
 		categories,
 		setCategories(v: Record<string, boolean>) {

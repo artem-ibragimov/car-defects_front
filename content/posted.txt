@@ -41,3 +41,4 @@ nissan-altima-vs-toyota-camry-reliability
 nissan-juke-vs-mazda-cx-30-reliability
 nissan-pathfinder-vs-ford-explorer-reliability
 nissan-rogue-reliability-comparison
+nissan-sentra-vs-toyota-corolla-reliability

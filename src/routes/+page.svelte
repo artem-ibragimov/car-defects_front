@@ -1,14 +1,16 @@
 <script lang="ts">
-	import { defectStore } from '$lib/store/main.store';
+	import { appCsr, defectStore } from '$lib/store/main.store';
 	import Main from '$lib/view/Main.svelte';
-	import type { LayoutData } from './$types';
+	import type { LayoutData, PageData } from './$types';
 
-	export let data: LayoutData;
+	export let data: PageData;
 	const title = 'Car-Defects - A Car Service Calls Statistics';
 	const description =
 		'Car-Defects.com - A Car Service Calls Statistics: Statistics of Defects by Age and Car Mileage';
 	const keywords = `car,defects,reliability,comparison,statistics`;
 	$: ({ noChartData } = defectStore.filter.entityParams);
+
+	appCsr(data.states);
 </script>
 
 <svelte:head>

@@ -40,10 +40,6 @@
 			versionID: e.detail.versionID
 		});
 	}
-
-	onMount(() => {
-		defectStore.client();
-	});
 </script>
 
 <div class="MainContainer">

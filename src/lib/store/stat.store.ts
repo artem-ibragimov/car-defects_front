@@ -1,5 +1,5 @@
 import { LOAD_ERROR } from '$lib/api/error';
-import { writable } from 'svelte/store';
+import { get, writable } from 'svelte/store';
 
 const DEFAULT_STATE: IState = {
 	data: [],
@@ -34,14 +34,25 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 			.catch(onError);
 	};
 
+	function serialize() {
+		return JSON.stringify({ state: get(state) });
+	}
+	function deserialize(s: string) {
+		try {
+			const deserialized = JSON.parse(s) as { state: Partial<IState> };
+			setState({ ...deserialized.state });
+		} catch (e) {
+			onError(e as Error);
+		}
+	}
+
 	return {
 		state,
-		init() {
-			if (isInit) {
-				return Promise.resolve();
-			}
-			isInit = true;
-			return getData();
+		ssr() {
+			return getData().then(serialize);
+		},
+		csr(s: string) {
+			deserialize(s);
 		}
 	};
 };

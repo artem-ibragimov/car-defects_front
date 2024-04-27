@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"preview": "npm run build && vite preview",
+		"preview": "vite preview",
 		"build": "vite build",
 		"sitemap": "node ./tools/sitemap.js",
 		"generate": "node ./content/generator.js",

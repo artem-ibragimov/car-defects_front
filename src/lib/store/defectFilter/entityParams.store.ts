@@ -45,13 +45,31 @@ export function createEntityParams() {
 		return Object.entries(get(entities));
 	}
 
+	function serialize() {
+		return JSON.stringify({ entities: get(entities) });
+	}
+	function deserialize(s?: string) {
+		if (!s) {
+			return;
+		}
+		try {
+			const deserialized = JSON.parse(s) as { entities: Record<string, IEntity> };
+			entities.set(deserialized.entities);
+		} catch (e) {
+			console.error(e);
+		}
+	}
+
 	return {
 		init(data: Record<string, IEntity> = {}) {
-			return entities.set(data);
+			entities.set(data);
+			return Promise.resolve(serialize());
 		},
-		client() {
+		csr(s?: string) {
+			deserialize(s);
 			try {
-				entities.update((v) => ({ ...v, ...JSON.parse(restore(ENTITY_HASH_KEY) || '{}') }));
+				const restored = JSON.parse(restore(ENTITY_HASH_KEY) || '{}');
+				entities.update((v) => ({ ...v, ...restored }));
 			} catch (e) {
 				console.error(e);
 			}

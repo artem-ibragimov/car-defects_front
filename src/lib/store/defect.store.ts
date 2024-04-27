@@ -8,7 +8,7 @@ import type {
 } from '$lib/api/data/defect.api';
 import { LOAD_ERROR } from '$lib/api/error';
 import { createCacheStore } from '$lib/util/cacheStore';
-import { filterNullable } from '$lib/util/tools';
+import { debounce, filterNullable } from '$lib/util/tools';
 import { derived, get, writable } from 'svelte/store';
 import { createDefectFilterStore } from '$lib/store/defectFilter/filter.store';
 
@@ -36,15 +36,43 @@ export const createDefectStore = (api: {
 	};
 	const state = writable<IState>({ ...DEFAULT_STATE });
 	const chartData = writable<IData>({});
+	const details = writable<Record<string, IDefectDetails[]>>({});
+	const detailsLoadOffset = writable<Record<string, number>>({});
+	const selectedDetails = writable<Record<string, boolean>>({});
+
+	function serialize() {
+		return JSON.stringify({
+			chartData: get(chartData),
+			details: get(details),
+			detailsLoadOffset: get(detailsLoadOffset),
+			selectedDetails: get(selectedDetails),
+			cacheStore: cacheStore.serialize()
+		});
+	}
+	function deserialize(s: string) {
+		try {
+			const deserialized = JSON.parse(s);
+			chartData.set(deserialized.chartData);
+			details.set(deserialized.details);
+			detailsLoadOffset.set(deserialized.detailsLoadOffset);
+			selectedDetails.set(deserialized.selectedDetails);
+			cacheStore.deserialize(deserialized.cacheStore);
+		} catch (e) {
+			onerror(e as Error);
+		}
+	}
+
+	const selectedDetailEntityName = derived(
+		selectedDetails,
+		(details) => (Object.entries(details).find(([_, v]) => v) || [])[0]
+	);
 	const filter = createDefectFilterStore(api, onerror);
 
-	filter.selector.subscribe((selector) => {
-		// if (selector.categories.length === 0) {
-		// 	// debugger
-		// 	// return;
-		// }
+	filter.selector.subscribe(debounce(onFilterChange));
+
+	function onFilterChange() {
 		setState({ loading: true });
-		Promise.all(filter.entityParams.getEntities().map(([name, p]) => reqChartData(name, p)))
+		return Promise.all(filter.entityParams.getEntities().map(([name, p]) => reqChartData(name, p)))
 			.then((results) => {
 				chartData.update((prev) => Object.assign(prev, ...results));
 			})
@@ -52,7 +80,7 @@ export const createDefectStore = (api: {
 			.then(() => {
 				setState({ loading: false });
 			});
-	});
+	}
 
 	const selectedChartData = derived([chartData, filter.selector], ([d, f]) => {
 		return Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k]));
@@ -101,13 +129,6 @@ export const createDefectStore = (api: {
 		state.update((s) => ({ ...s, ...values }));
 	}
 
-	const details = writable<Record<string, IDefectDetails[]>>({});
-	const detailsLoadOffset = writable<Record<string, number>>({});
-	const selectedDetails = writable<Record<string, boolean>>({});
-	const selectedDetailEntityName = derived(
-		selectedDetails,
-		(details) => (Object.entries(details).find(([_, v]) => v) || [])[0]
-	);
 	filter.entityParams.entities.subscribe((entries) => {
 		selectedDetails.update((details) => {
 			return Object.fromEntries(Object.entries(details).filter(([k, _]) => !!entries[k]));
@@ -163,20 +184,26 @@ export const createDefectStore = (api: {
 		return Promise.all([chartData.set({}), selectedDetails.set({})]);
 	}
 	return {
-		init(cfg: { entities?: Record<string, IEntity>; categories?: string[] }) {
-			if (!cfg.entities && !cfg.categories) {
-				return Promise.resolve();
-			}
-			return clear()
-				.then(() => filter.init(cfg))
-				.then(
-					() =>
-						cfg.entities &&
-						selectDetails(Object.fromEntries(Object.keys(cfg.entities).map((name) => [name, true])))
-				);
+		ssr(cfg: {
+			entities?: Record<string, IEntity>;
+			categories?: string[];
+		}): Promise<IDefectsStoreStates> {
+			const selectedEntities = Object.fromEntries(
+				Object.keys(cfg.entities || {}).map((name) => [name, true])
+			);
+			const filterSsr = filter.ssr(cfg);
+			return Promise.all([
+				// clear().then(() =>
+				Promise.all([filterSsr.then(onFilterChange), selectDetails(selectedEntities)]).then(
+					serialize
+				),
+				// ),
+				filterSsr
+			]).then(([defectStoreState, filterStates]) => ({ defectStoreState, ...filterStates }));
 		},
-		client() {
-			return filter.client();
+		csr(states: IDefectsStoreStates) {
+			deserialize(states.defectStoreState);
+			return filter.csr({ ...states });
 		},
 		clear,
 		state,
@@ -202,4 +229,10 @@ interface IState {
 	warn: string;
 	loading: boolean;
 	loadingDetails: boolean;
+}
+
+export interface IDefectsStoreStates {
+	defectStoreState: string;
+	entityParamsState: string;
+	categoryParamsState: string;
 }

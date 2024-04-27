@@ -3,7 +3,7 @@ import { API, init as initAPI } from '$lib/api/main.api';
 import { createAuthorStore } from '$lib/store/author.store';
 import { createBrandStore } from '$lib/store/brand.store';
 import { createCountryStore } from '$lib/store/country.store';
-import { createDefectStore } from '$lib/store/defect.store';
+import { createDefectStore, type IDefectsStoreStates } from '$lib/store/defect.store';
 import { createEngineStore } from '$lib/store/engine.store';
 import { createGenlStore } from '$lib/store/gen.store';
 import { creatLocaleStore } from '$lib/store/locale.store';
@@ -26,16 +26,19 @@ export const authorStore = createAuthorStore(API.author);
 export const countryStore = createCountryStore(API.country);
 export const statStore = createStatStore(API.stat);
 
-export const appInit = (cfg: {
+export const appSsr = (cfg: {
 	entities?: Record<string, IEntity>;
 	categories?: string[];
 	locale?: string;
 	fetch(input: RequestInfo | URL, init?: RequestInit | undefined): Promise<Response>;
-}) => {
+}): Promise<[IDefectsStoreStates, string, void]> => {
+	initAPI(cfg.fetch);
+	return Promise.all([defectStore.ssr(cfg), statStore.ssr(), localeStore.ssr(cfg.locale)]);
+};
+export const appCsr = ([defectStoreState, statStoreState]: [IDefectsStoreStates, string, void]) => {
 	return Promise.all([
-		initAPI(cfg.fetch),
-		defectStore.init(cfg),
-		statStore.init(),
-		localeStore.init(cfg.locale)
+		defectStore.csr(defectStoreState),
+		statStore.csr(statStoreState),
+		localeStore.csr()
 	]);
 };

@@ -2,9 +2,10 @@
 	import Main from '$lib/view/Main.svelte';
 	import { _ } from 'svelte-i18n';
 	import type { PageData } from './$types';
-	import { defectStore } from '$lib/store/main.store';
+	import { appCsr, defectStore } from '$lib/store/main.store';
 
 	export let data: PageData;
+	appCsr(data.states);
 	const name = data.name[0].toUpperCase() + data.name.slice(1);
 	$: ({ categories } = defectStore.filter.categoryParams);
 	$: selected_category = $categories.find((c) => c.label == data.categories);

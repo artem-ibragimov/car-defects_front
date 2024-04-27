@@ -76,7 +76,6 @@
 	<Content data={content} />
 	<Cards {cards} />
 </article>
-<ArticleLinks pagePath={name} />
 
 <style scoped>
 	.Article {

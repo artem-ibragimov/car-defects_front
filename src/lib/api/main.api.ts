@@ -33,6 +33,7 @@ export const init = (
 ) => {
 	// @ts-ignore
 	fetchFn = typeof process === 'undefined' ? f : custom_fetch;
+	return Promise.resolve();
 };
 
 const http = {

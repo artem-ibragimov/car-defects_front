@@ -60,7 +60,7 @@ function generateByTopic(topic) {
 	return getCars(topic)
 		.then((cars = []) => {
 			info(`Select ${cars} for topic ${topic}`);
-			const fetching = cars
+			const entities_fetching = cars
 				.map((car_name) => car_name.toLowerCase())
 				.map((car_name) => {
 					const query = `https://car-defects.com/data/search/?query=${car_name}`;
@@ -89,43 +89,47 @@ function generateByTopic(topic) {
 						})
 						.catch(error);
 				});
-			return Promise.all(fetching).then((results) => {
-				const entity_params = results
-					.filter(Boolean)
-					.reduce((acc, cur) => Object.assign(acc, cur), {});
-
-				const params_reversed = Object.fromEntries(
-					Object.entries(entity_params).map(([title, params]) => [JSON.stringify(params), title])
-				);
-				const params = Object.fromEntries(
-					Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
-				);
-
-				const params_limited = Object.fromEntries(Object.entries(params).slice(0, 3));
-				if (Object.keys(params_limited).length < 2) {
-					throw new Error('no original cars');
-				}
-				return {
-					// imgs: cars.map((name) => ({
-					// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
-					// 	name: name.toLowerCase(),
-					// })),
-					imgs: [],
-					entities: params_limited,
-					cars,
-					url: `https://car-defects.com/#entity_params=${encodeURI(
-						JSON.stringify(params_limited)
-					)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
-				};
-			});
+			return Promise.all(entities_fetching)
+				.then(dedub_entities)
+				.then(get_defects_for_entities)
+				.then((results) => {
+					const defects = results.map(({ car_name, data }) => [car_name, data]);
+					const entities = results.map(({ car_name, entity }) => ({ car_name, entity }));
+					return {
+						// imgs: cars.map((name) => ({
+						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+						// 	name: name.toLowerCase(),
+						// })),
+						imgs: [],
+						defects,
+						url: `https://car-defects.com/#entity_params=${encodeURI(
+							JSON.stringify(entities)
+						)}&data_params=${encodeURI(JSON.stringify({ total: true, by_age: true }))}`
+					};
+				});
 		})
-		.then(({ entities, url, imgs }) =>
-			getCarChartData(entities).then((cars) => generateContent(topic, imgs, cars, url))
-		);
+		.then(({ url, imgs, defects }) => generateContent(topic, imgs, defects, url));
 }
 
-function getCarChartData(cars = {}) {
-	const fetching = Object.entries(cars).map(([car_name, entity]) => {
+function dedub_entities(entities) {
+	const entity_params = entities.filter(Boolean).reduce((acc, cur) => Object.assign(acc, cur), {});
+
+	const params_reversed = Object.fromEntries(
+		Object.entries(entity_params).map(([title, params]) => [JSON.stringify(params), title])
+	);
+	const params = Object.fromEntries(
+		Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
+	);
+	return Object.fromEntries(Object.entries(params));
+}
+
+/**
+ *
+ * @param {Record<string, Object>} entities
+ * @returns {Promise< Object[]>}
+ */
+function get_defects_for_entities(entities = {}) {
+	const fetching = Object.entries(entities).map(([car_name, entity]) => {
 		const query = `https://car-defects.com/data/defect/age?${new URLSearchParams(
 			entity
 		)}&by_age=true&norm=true`;
@@ -133,15 +137,15 @@ function getCarChartData(cars = {}) {
 			.then((res) => res.json())
 			.then((data) => {
 				if (Object.keys(data).length === 0) {
-					throw new Error('no chart data for ' + car_name);
+					return null;
 				}
-				return [car_name, data];
+				return { car_name, data, entity };
 			})
 			.catch(error);
 	});
-	return Promise.all(fetching);
+	return Promise.all(fetching).then((defects) => defects.filter(Boolean));
 }
-function generateContent(topic, imgs = [], cars = [], url = '') {
+function generateContent(topic, imgs = [], defects = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	// const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	// imgs.push({
@@ -173,11 +177,10 @@ function generateContent(topic, imgs = [], cars = [], url = '') {
 	// });
 	const prompt = `
 	have the chart data from car-defects.com as follows: 
-	${cars.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}
+	${defects.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}
 Analyze the data in the graph, compare the cars in terms of reliability,
- draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
-	`;
-	log('video', `${prompt}, formalize everything in the form of a script for a short 60 sec video`);
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,`;
+	log('video', `${prompt}, generate youtube short`);
 	const queries = Object.entries({
 		en: `Write ${prompt} formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
 		Don’t Use Repetitive Sentences.`
