@@ -1,63 +1,5 @@
 
-	have the chart data from car-defects.com as follows: 
-	nissan leaf: {
-  "0": "17.2572480441785550",
-  "1": "17.2572480441785550",
-  "2": "4.2184384107992023",
-  "3": "5.7524160147261850",
-  "4": "0.38349440098174566651",
-  "5": "1.1504832029452370",
-  "6": "2.3009664058904740",
-  "7": "0.38349440098174566651",
-  "8": "0.76698880196349133303",
-  "9": "1.5339776039269827",
-  "10": "0.38349440098174566651"
-}
-chevrolet bolt: {
-  "0": "3.4269357147176810",
-  "1": "8.4665470598907412",
-  "2": "13.3045739512568791",
-  "3": "2.6205978994899913",
-  "4": "0.20158445380692241014",
-  "5": "0.20158445380692241014"
-}
-hyundai kona electric: {
-  "0": "3.7417307749872781",
-  "1": "13.7321519442033107",
-  "2": "6.0990211632292633",
-  "3": "0.63609423174783727961",
-  "4": "0.11225192324961834346"
-}
-Analyze the data in the graph, compare the cars in terms of reliability,
- draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
-	, formalize everything in the form of a script for a short 60 sec video
-
-
-	have the chart data from car-defects.com as follows: 
-	bmw 7 series: {
-  "0": "244.2279246253778378",
-  "1": "176.5386841597530388",
-  "2": "124.6060839925397132",
-  "3": "131.5197118785774005",
-  "4": "178.6288507299504791",
-  "5": "208.3735288442986687",
-  "6": "216.4126310373657470",
-  "7": "194.0639269406392694",
-  "8": "134.2530066242202071",
-  "9": "95.3437520097755483",
-  "10": "54.3443308251334491",
-  "11": "32.6387549038523378",
-  "12": "20.9016657019744035",
-  "13": "13.0233455527686668"
-}
-bmw x5: {}
-bmw z4: {}
-Analyze the data in the graph, compare the cars in terms of reliability,
- draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
-	, formalize everything in the form of a script for a short 60 sec video
-
-
-	have the chart data from car-defects.com as follows: 
+	have the chart data from car-defects as follows: 
 	toyota corolla: {
   "0": "13.1200271536345346",
   "1": "10.7520145157747232",
@@ -108,7 +50,8 @@ mazda 3: {
 }
 Analyze the data in the graph, compare the cars in terms of reliability,
  draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details, 
-	, formalize everything in the form of a script for a short 60 sec video
+	, generate a short 60 sec video, use norch male voice
+
 
 
 	have the chart data from car-defects.com as follows: 
@@ -462,6 +405,108 @@ toyota yaris (2012-2014): {
   "11": "1.2608029802020311",
   "12": "1.3280458058128061",
   "13": "0.55475331128889367060"
+}
+Analyze the data in the graph, compare the cars in terms of reliability,
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,, generate youtube short
+
+
+	have the chart data from car-defects.com as follows: 
+	hyundai sonata: {
+  "0": "19.7864277852853899",
+  "1": "23.3215843073879547",
+  "2": "19.8909151701751209",
+  "3": "28.9534543529444545",
+  "4": "38.8066147480460859",
+  "5": "41.5128380166901183",
+  "6": "44.6335279120634169",
+  "7": "41.3108290725699717",
+  "8": "32.4502988339207846",
+  "9": "27.4035581437467783",
+  "10": "16.1850959194193288",
+  "11": "11.0443165828445646",
+  "12": "4.6148594992964516",
+  "13": "3.5177419579542763"
+}
+chevrolet malibu: {
+  "0": "17.8630551865780417",
+  "1": "18.4671963234450291",
+  "2": "23.0470610116593963",
+  "3": "29.7532914479732912",
+  "4": "32.8557804303120560",
+  "5": "36.7127862910087178",
+  "6": "35.8448280638068015",
+  "7": "32.5180945546833469",
+  "8": "33.6340408468000966",
+  "9": "29.1148540893627630",
+  "10": "23.6353731231062879",
+  "11": "21.0526038087273332",
+  "12": "15.9767629906832995",
+  "13": "12.3888505621282652"
+}
+ford fusion: {
+  "0": "16.9900608871124642",
+  "1": "19.3247396305898191",
+  "2": "30.8708533541733110",
+  "3": "42.2824139414504755",
+  "4": "41.5951019749127496",
+  "5": "36.8493764916760702",
+  "6": "41.3369054160546620",
+  "7": "37.9912598646540912",
+  "8": "36.1547913826352995",
+  "9": "28.8089174545601331",
+  "10": "21.6266892328034728",
+  "11": "11.7824908549324452",
+  "12": "11.1097251734008087",
+  "13": "3.7420318178165081"
+}
+Analyze the data in the graph, compare the cars in terms of reliability,
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,, generate youtube short
+
+
+	have the chart data from car-defects.com as follows: 
+	ford mustang mach-e: {
+  "0": "29.3552561505704862",
+  "1": "19.9051907382686363",
+  "2": "10.6219402493966513",
+  "3": "13.1783789509593318",
+  "4": "13.5245199170763016",
+  "5": "11.6353409092330809",
+  "6": "10.2507770447652017",
+  "7": "8.3157239329787682",
+  "8": "7.9487311014330653",
+  "9": "7.5900790160588556",
+  "10": "4.7583956908368980",
+  "11": "4.8167809140373507",
+  "12": "2.8900685484224104",
+  "13": "2.4563497475047615"
+}
+chevrolet bolt euv: {
+  "0": "3.4269357147176810",
+  "1": "8.4665470598907412",
+  "2": "13.3045739512568791",
+  "3": "2.6205978994899913",
+  "4": "0.20158445380692241014",
+  "5": "0.20158445380692241014"
+}
+Analyze the data in the graph, compare the cars in terms of reliability,
+ draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,, generate youtube short
+
+
+	have the chart data from car-defects.com as follows: 
+	bmw m3: {
+  "0": "36.0828005317465342",
+  "1": "32.2846110020890042",
+  "2": "10.1285054124200798",
+  "3": "3.7981895296575299",
+  "4": "3.7981895296575299",
+  "5": "3.7981895296575299",
+  "6": "10.7615370006963347",
+  "7": "5.6972842944862949",
+  "8": "8.8624422358675698",
+  "9": "18.3579160600113946",
+  "10": "1.2660631765525100",
+  "12": "0.63303158827625498512",
+  "13": "0.63303158827625498512"
 }
 Analyze the data in the graph, compare the cars in terms of reliability,
  draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,, generate youtube short

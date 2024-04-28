@@ -180,8 +180,14 @@ export const createDefectStore = (api: {
 			});
 	}
 	function clear() {
-		filter.entityParams.resetEntities();
-		return Promise.all([chartData.set({}), selectedDetails.set({})]);
+		return Promise.all([
+			filter.entityParams.resetEntities(),
+			chartData.set({}),
+			details.set({}),
+			detailsLoadOffset.set({}),
+			selectedDetails.set({}),
+			cacheStore.clear()
+		]);
 	}
 	return {
 		ssr(cfg: {
@@ -191,15 +197,23 @@ export const createDefectStore = (api: {
 			const selectedEntities = Object.fromEntries(
 				Object.keys(cfg.entities || {}).map((name) => [name, true])
 			);
-			const filterSsr = filter.ssr(cfg);
-			return Promise.all([
-				// clear().then(() =>
-				Promise.all([filterSsr.then(onFilterChange), selectDetails(selectedEntities)]).then(
-					serialize
-				),
-				// ),
-				filterSsr
-			]).then(([defectStoreState, filterStates]) => ({ defectStoreState, ...filterStates }));
+			return clear()
+				.then(() => {
+					const filterSsr = filter.ssr(cfg);
+					if (!cfg.entities && !cfg.categories) {
+						return Promise.all([filterSsr, serialize()]);
+					}
+					return Promise.all([
+						filterSsr,
+						Promise.all([filterSsr.then(onFilterChange), selectDetails(selectedEntities)]).then(
+							serialize
+						)
+					]);
+				})
+				.then(([filterStates, defectStoreState]) => ({
+					defectStoreState,
+					...filterStates
+				}));
 		},
 		csr(states: IDefectsStoreStates) {
 			deserialize(states.defectStoreState);

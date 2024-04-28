@@ -30,10 +30,15 @@ export const appSsr = (cfg: {
 	entities?: Record<string, IEntity>;
 	categories?: string[];
 	locale?: string;
+	stat?: boolean;
 	fetch(input: RequestInfo | URL, init?: RequestInit | undefined): Promise<Response>;
 }): Promise<[IDefectsStoreStates, string, void]> => {
 	initAPI(cfg.fetch);
-	return Promise.all([defectStore.ssr(cfg), statStore.ssr(), localeStore.ssr(cfg.locale)]);
+	return Promise.all([
+		defectStore.ssr({ entities: cfg.entities, categories: cfg.categories }),
+		cfg.stat ? statStore.ssr() : '',
+		localeStore.ssr(cfg.locale)
+	]);
 };
 export const appCsr = ([defectStoreState, statStoreState]: [IDefectsStoreStates, string, void]) => {
 	return Promise.all([

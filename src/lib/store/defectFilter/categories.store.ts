@@ -25,7 +25,7 @@ export function createCategoriesParams(
 			.catch(onerror)
 			.then(serialize);
 	}
-	function getCategoriesSerialized(): string {
+	function serializeSelected(): string {
 		const cats = get(categories);
 		const selected = cats.filter((c) => c.selected).map((c) => c.value);
 		return (selected.length ? selected : cats.map((c) => c.value)).join(SEPARATOR);
@@ -54,12 +54,12 @@ export function createCategoriesParams(
 				return;
 			}
 			categories.update((cats) => cats.map((c) => ({ ...c, selected: v[c.value] })));
-			const cats = getCategoriesSerialized();
+			const cats = serializeSelected();
 			if (cats) {
 				store(CATEGORIES_HASH_KEY, cats);
 			}
 		},
-		getCategories: getCategoriesSerialized
+		getCategories: serializeSelected
 	};
 }
 

@@ -49,6 +49,10 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 	return {
 		state,
 		ssr() {
+			if (isInit) {
+				return serialize();
+			}
+			isInit = true;
 			return getData().then(serialize);
 		},
 		csr(s: string) {

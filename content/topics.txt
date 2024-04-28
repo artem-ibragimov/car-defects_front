@@ -201,9 +201,9 @@ Reliability of automatic vs. manual transmission cars?:generated
 Top reliable cars for under $15,000 in 2023?:generated
 How reliable are convertible cars compared to sedans?:generated
 Best and worst years for Toyota reliability?:generated
-How do Korean cars compare in reliability to American cars?
-Longevity of electric car batteries in SUVs vs. sedans?
-Reliability issues in luxury sports cars?
+How do Korean cars compare in reliability to American cars?:generated
+Longevity of electric car batteries in SUVs vs. sedans?:generated
+Reliability issues in luxury sports cars?:generated
 What are the top reliable used cars for new drivers?
 Comparison of turbocharged vs. naturally aspirated engines for reliability?
 How reliable are plug-in hybrids compared to traditional hybrids?

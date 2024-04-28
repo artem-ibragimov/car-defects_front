@@ -176,7 +176,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// 	debugger;
 	// });
 	const prompt = `
-	have the chart data from car-defects.com as follows: 
+	have the chart data from site car-defects.com as follows: 
 	${defects.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}
 Analyze the data in the graph, compare the cars in terms of reliability,
  draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,`;

@@ -20,6 +20,9 @@ export const createCacheStore = <T>() => {
 			} catch (e) {
 				console.error(e);
 			}
+		},
+		clear() {
+			cache = {};
 		}
 	};
 };

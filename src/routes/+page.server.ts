@@ -7,7 +7,7 @@ export const ssr = true;
 export const csr = true;
 
 export const load = async (e) => {
-	const states = await appSsr({ fetch: e.fetch, locale: DEFAUL_LOCALE });
+	const states = await appSsr({ fetch: e.fetch, locale: DEFAUL_LOCALE, stat: true });
 	return {
 		states
 	};
