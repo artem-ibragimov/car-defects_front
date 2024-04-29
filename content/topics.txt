@@ -204,10 +204,10 @@ Best and worst years for Toyota reliability?:generated
 How do Korean cars compare in reliability to American cars?:generated
 Longevity of electric car batteries in SUVs vs. sedans?:generated
 Reliability issues in luxury sports cars?:generated
-What are the top reliable used cars for new drivers?
-Comparison of turbocharged vs. naturally aspirated engines for reliability?
-How reliable are plug-in hybrids compared to traditional hybrids?
-Does having a turbo engine affect the long-term reliability of a car?
+What are the top reliable used cars for new drivers?:generated
+Comparison of turbocharged vs. naturally aspirated engines for reliability?:generated
+How reliable are plug-in hybrids compared to traditional hybrids?:generated
+Does having a turbo engine affect the long-term reliability of a car?:generated
 Car brand reliability rankings for the last 5 years?
 Reliability insights for AWD vs. FWD vehicles?
 What are the best reliable mid-size cars for families?

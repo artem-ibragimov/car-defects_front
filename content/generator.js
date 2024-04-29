@@ -94,7 +94,10 @@ function generateByTopic(topic) {
 				.then(get_defects_for_entities)
 				.then((results) => {
 					const defects = results.map(({ car_name, data }) => [car_name, data]);
-					const entities = results.map(({ car_name, entity }) => ({ car_name, entity }));
+					const entities = results.reduce(
+						(acc, { car_name, entity }) => Object.assign(acc, { [car_name]: entity }),
+						{}
+					);
 					return {
 						// imgs: cars.map((name) => ({
 						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
