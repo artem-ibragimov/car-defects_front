@@ -32,7 +32,7 @@ const categories = [
 	'light',
 	'suspension'
 ];
-const models = await getTopReliableModels();
+const models = [] || (await getTopReliableModels());
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 )
