@@ -44,3 +44,4 @@ nissan-rogue-reliability-comparison
 nissan-sentra-vs-toyota-corolla-reliability
 performance-car-reliability-ratings
 pickup-truck-reliability-comparison
+plug-in-hybrid-car-reliability

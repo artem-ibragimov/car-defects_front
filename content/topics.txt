@@ -208,10 +208,8 @@ What are the top reliable used cars for new drivers?:generated
 Comparison of turbocharged vs. naturally aspirated engines for reliability?:generated
 How reliable are plug-in hybrids compared to traditional hybrids?:generated
 Does having a turbo engine affect the long-term reliability of a car?:generated
-Car brand reliability rankings for the last 5 years?
-Reliability insights for AWD vs. FWD vehicles?
+Reliability insights for AWD vs. FWD vehicles?:generated
 What are the best reliable mid-size cars for families?
-Most reliable car models from the 1990s still on the road?
 Are SUVs more reliable than minivans for family use?
 What are the reliability concerns with high-performance vehicles?
 Electric car reliability vs. gasoline car reliability?
