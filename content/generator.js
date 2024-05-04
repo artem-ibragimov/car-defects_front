@@ -178,14 +178,14 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// generateTableContentArticle(topic).then((content) => {
 	// 	debugger;
 	// });
-	const prompt = `according to the car service statistics: 
+	const prompt = `According to the car service calls statistics: 
 	${defects.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}, 
 where the key is the age of the car at the time of contacting the car service, 
-and the value is the normalized (number of service calls per 10000 cars sold) number of service calls. 
+and the value is  number of service calls per 10000 cars sold. 
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,`;
 
-	log('video', `generate a short 60 sec video about ${topic}, use north male voice. ${prompt}`);
+	log('video', `generate a short 60 sec video about "${topic}", use north male voice. ${prompt}`);
 
 	const queries = Object.entries({
 		en: `${prompt} formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
