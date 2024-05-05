@@ -146,7 +146,7 @@ function get_defects_for_entities(entities = {}) {
 			})
 			.catch(error);
 	});
-	return Promise.all(fetching).then((defects) => defects.filter(Boolean));
+	return Promise.all(fetching).then((defects) => defects.filter(Boolean).slice(0, 4));
 }
 function generateContent(topic, imgs = [], defects = [], url = '') {
 	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));

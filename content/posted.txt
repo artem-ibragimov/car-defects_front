@@ -47,3 +47,4 @@ pickup-truck-reliability-comparison
 plug-in-hybrid-car-reliability
 premium-car-reliability-comparison
 rwd-car-reliability-comparison
+reliability-index-for-cars
