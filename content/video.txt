@@ -111,3 +111,66 @@ where the key is the age of the car at the time of contacting the car service,
 and the value is  number of service calls per 10000 cars sold. 
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "What are the reliability concerns with high-performance vehicles?", use north male voice. According to the car service calls statistics: 
+	chevrolet corvette: {
+  "0": "17.2349181514082379",
+  "1": "15.6288586443130814",
+  "2": "11.6741529763045780",
+  "3": "13.9191823948246891",
+  "4": "15.0589665611502840",
+  "5": "21.1896238194167414",
+  "6": "28.4946041581398722",
+  "7": "25.6624131993914243",
+  "8": "28.8227238423851193",
+  "9": "27.3202810776831987",
+  "10": "21.2414321906133593",
+  "11": "16.4405231263934293",
+  "12": "13.4356375969895882",
+  "13": "11.9331948322876677"
+}
+bmw m3: {
+  "0": "36.0828005317465342",
+  "1": "32.2846110020890042",
+  "2": "10.1285054124200798",
+  "3": "3.7981895296575299",
+  "4": "3.7981895296575299",
+  "5": "3.7981895296575299",
+  "6": "10.7615370006963347",
+  "7": "5.6972842944862949",
+  "8": "8.8624422358675698",
+  "9": "18.3579160600113946",
+  "10": "1.2660631765525100",
+  "12": "0.63303158827625498512",
+  "13": "0.63303158827625498512"
+}
+ford mustang gt: {
+  "0": "29.3552561505704862",
+  "1": "19.9051907382686363",
+  "2": "10.6219402493966513",
+  "3": "13.1783789509593318",
+  "4": "13.5245199170763016",
+  "5": "11.6353409092330809",
+  "6": "10.2507770447652017",
+  "7": "8.3157239329787682",
+  "8": "7.9487311014330653",
+  "9": "7.5900790160588556",
+  "10": "4.7583956908368980",
+  "11": "4.8167809140373507",
+  "12": "2.8900685484224104",
+  "13": "2.4563497475047615"
+}
+nissan gt-r: {
+  "0": "7.4582338902147971",
+  "1": "7.4582338902147971",
+  "3": "10.4415274463007160",
+  "4": "1.4916467780429594",
+  "6": "17.8997613365155131",
+  "7": "2.9832935560859189",
+  "8": "1.4916467780429594",
+  "10": "1.4916467780429594"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
