@@ -755,6 +755,12 @@
 				"text": "Unfortunately, there's no graph or data provided in the prompt. Please provide the necessary data so I can assist you better.",
 				"url": "#entity_params=%7B%7D&data_params=%7B%22norm%22:true,%22by_age%22:true%7D",
 				"cards": "[]"
+			},
+			"what-are-the-least-reliable-car-features-": {
+				"title": "What are the least reliable car features?",
+				"text": "[Unfortunately, without the graph or data to analyze, it's impossible to provide a detailed analysis or write a technical article. Please provide the necessary information.]",
+				"url": "#entity_params=%7B%7D&data_params=%7B%22norm%22:true,%22by_age%22:true%7D",
+				"cards": "[]"
 			}
 		}
 	}

@@ -181,3 +181,10 @@ where the key is the age of the car at the time of contacting the car service,
 and the value is  number of service calls per 10000 cars sold. 
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "What are the least reliable car features?", use north male voice. According to the car service calls statistics: 
+	, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
