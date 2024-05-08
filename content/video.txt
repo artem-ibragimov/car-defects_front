@@ -188,3 +188,57 @@ where the key is the age of the car at the time of contacting the car service,
 and the value is  number of service calls per 10000 cars sold. 
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "Reliability of luxury cars vs. economy cars?", use north male voice. According to the car service calls statistics: 
+	toyota avalon: {
+  "0": "16.5811217408314780",
+  "1": "15.5843913889949791",
+  "2": "12.2122756192303751",
+  "3": "20.9592830993656324",
+  "4": "13.3580497619956964",
+  "5": "9.9020968598336299",
+  "6": "8.6724855846708461",
+  "7": "6.9584819889893899",
+  "8": "6.0269582956842507",
+  "9": "5.7475011876927090",
+  "10": "4.3967918324002571",
+  "11": "5.1326955501113171",
+  "12": "5.6543488183621950",
+  "13": "3.1951262680366275"
+}
+honda accord: {
+  "0": "19.4341265278552407",
+  "1": "18.0319587956183144",
+  "2": "12.8606987918873764",
+  "3": "13.5202218068559598",
+  "4": "14.1497665029623348",
+  "5": "14.6621232253346228",
+  "6": "15.1240618659841058",
+  "7": "17.6177129349768901",
+  "8": "18.9258577580550721",
+  "9": "13.3825940702612760",
+  "10": "9.9814175302580030",
+  "11": "7.7344062664497508",
+  "12": "6.4262614433715689",
+  "13": "4.8115201773844380"
+}
+subaru legacy: {
+  "0": "9.7373341988741510",
+  "1": "6.6611117032099292",
+  "2": "4.0774077698436536",
+  "3": "4.7556300523523009",
+  "4": "5.4177041852774091",
+  "5": "5.1351115675654727",
+  "6": "5.0301485952724677",
+  "7": "4.1985188917201978",
+  "8": "4.5376300329745214",
+  "9": "3.0842965704559914",
+  "10": "1.9942964735670939",
+  "11": "2.2203705677366431",
+  "12": "1.4937038364773781",
+  "13": "1.3322223406419858"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,

@@ -51,3 +51,4 @@ reliability-index-for-cars
 reliability-of-american-cars
 reliability-of-asian-cars
 reliability-of-european-cars
+reliability-of-ford-f-150-vs-chevrolet-silverado

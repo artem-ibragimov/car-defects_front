@@ -67,23 +67,11 @@ function generateByTopic(topic) {
 					return fetch(query)
 						.then((res) => res.json())
 						.then((data) => {
-							const genID = Object.keys(data.gens || {}).find((id) =>
-								car_name.includes(data.gens[id])
-							);
-							if (genID) {
-								return { [car_name]: { genID } };
-							}
 							const modelID = Object.keys(data.models || {}).find((id) =>
 								car_name.includes(data.models[id])
 							);
 							if (modelID) {
 								return { [car_name]: { modelID } };
-							}
-							const brandID = Object.keys(data.brands || {}).find((id) =>
-								car_name.includes(data.brands[id])
-							);
-							if (brandID) {
-								return { [car_name]: { brandID } };
 							}
 							return null;
 						})
@@ -326,7 +314,7 @@ function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo-1106',
-			messages: [{ role: 'user', content: `what is top car model names of "${topic}"?` }],
+			messages: [{ role: 'user', content: `what is top 4 car model names of "${topic}"?` }],
 			temperature: 0.1
 		})
 		.then((v) =>
