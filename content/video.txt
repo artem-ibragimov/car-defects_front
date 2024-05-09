@@ -242,3 +242,73 @@ where the key is the age of the car at the time of contacting the car service,
 and the value is  number of service calls per 10000 cars sold. 
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "How does climate affect car reliability?", use north male voice. According to the car service calls statistics: 
+	toyota prius: {
+  "0": "133.2143127098908298",
+  "1": "124.0358069706251822",
+  "2": "79.9429852819960910",
+  "3": "68.6768194137994335",
+  "4": "68.5688369933374847",
+  "5": "90.5972507675750388",
+  "6": "67.7769659099498602",
+  "7": "43.6608920067812960",
+  "8": "55.8269113788275269",
+  "9": "36.5700463964466585",
+  "10": "30.3070660096536284",
+  "11": "28.3633824413385501",
+  "12": "20.5886481680782369",
+  "13": "27.4995230776429597"
+}
+subaru outback: {
+  "0": "20.9346289362766372",
+  "1": "17.0654740450322552",
+  "2": "12.1566983211594715",
+  "3": "14.2457477301203165",
+  "4": "13.9171883160349254",
+  "5": "17.3351869968933972",
+  "6": "13.1521843071196863",
+  "7": "11.4162136715043362",
+  "8": "11.9066008567064125",
+  "9": "8.0815808121302174",
+  "10": "5.4285861401869846",
+  "11": "3.0649199075129769",
+  "12": "1.7997209696916200",
+  "13": "1.0445247044804225"
+}
+honda civic: {
+  "0": "13.7615199527852181",
+  "1": "12.8087419028799583",
+  "2": "9.6009562426973595",
+  "3": "11.7245461909188006",
+  "4": "10.5074394343783825",
+  "5": "7.7013736729802897",
+  "6": "8.6556451054089120",
+  "7": "8.0403715057835718",
+  "8": "6.6604860541966438",
+  "9": "8.4764392026054149",
+  "10": "6.9561757938224141",
+  "11": "5.7823771304595078",
+  "12": "5.1865175036378798",
+  "13": "3.6035320288736551"
+}
+ford f-150: {
+  "0": "14.2506026941375846",
+  "1": "13.8042514713992055",
+  "2": "12.3951254606896558",
+  "3": "13.9127196180001449",
+  "4": "17.0026219534729245",
+  "5": "16.9047126530012800",
+  "6": "14.9945213987015499",
+  "7": "13.2878279061664141",
+  "8": "11.0531921071665288",
+  "9": "9.1372414822508196",
+  "10": "6.9793972914639888",
+  "11": "5.5385947423665542",
+  "12": "3.1570949926592022",
+  "13": "2.4525319873044274"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
