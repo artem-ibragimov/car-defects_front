@@ -82,6 +82,9 @@ function generateByTopic(topic) {
 				.then(get_defects_for_entities)
 				.then((results) => {
 					const defects = results.map(({ car_name, data }) => [car_name, data]);
+					if (defects.length === 0 || results.length == 0) {
+						throw new Error('no data');
+					}
 					const entities = results.reduce(
 						(acc, { car_name, entity }) => Object.assign(acc, { [car_name]: entity }),
 						{}
@@ -173,7 +176,7 @@ and the value is  number of service calls per 10000 cars sold.
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,`;
 
-	log('video', `generate a short 60 sec video about "${topic}", use north male voice. ${prompt}`);
+	// log('video', `generate a short 60 sec video about "${topic}", use north male voice. ${prompt}`);
 
 	const queries = Object.entries({
 		en: `${prompt} formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
@@ -249,7 +252,7 @@ function generateArticle(locale, query, topic, url, cards) {
 			}
 			return openai.chat.completions
 				.create({
-					model: 'gpt-4',
+					model: 'gpt-4o',
 					messages: [{ role: 'user', content: query }],
 					temperature: 0.4
 				})
@@ -313,8 +316,8 @@ function getTableContentArticle(topic) {
 function getCars(topic) {
 	return openai.chat.completions
 		.create({
-			model: 'gpt-3.5-turbo-1106',
-			messages: [{ role: 'user', content: `what is top 4 car model names of "${topic}"?` }],
+			model: 'gpt-3.5-turbo',
+			messages: [{ role: 'user', content: `what are car model names of "${topic}"?` }],
 			temperature: 0.1
 		})
 		.then((v) =>

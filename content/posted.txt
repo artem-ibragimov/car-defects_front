@@ -29,7 +29,6 @@ luxury-car-reliability-rankings
 mazda-3-reliability-compared-to-honda-civic
 mazda-cx-5-reliability-score
 mazda-mx-5-miata-reliability-in-sports-cars
-mercedes-glc-vs-audi-q5-reliability
 mercedes-gle-vs-bmw-x5-suv-reliability
 mercedes-benz-cla-reliability-assessment
 mercedes-benz-e-class-reliability-rating
@@ -53,3 +52,4 @@ reliability-of-asian-cars
 reliability-of-european-cars
 reliability-of-ford-f-150-vs-chevrolet-silverado
 reliability-of-v8-cars
+reliability-of-cars-with-manual-transmission

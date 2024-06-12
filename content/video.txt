@@ -312,3 +312,242 @@ where the key is the age of the car at the time of contacting the car service,
 and the value is  number of service calls per 10000 cars sold. 
 Analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "What are the top reliable cars for snowy conditions?", use north male voice. According to the car service calls statistics: 
+	subaru outback: {
+  "0": "20.9346289362766372",
+  "1": "17.0654740450322552",
+  "2": "12.1566983211594715",
+  "3": "14.2457477301203165",
+  "4": "13.9171883160349254",
+  "5": "17.3351869968933972",
+  "6": "13.1521843071196863",
+  "7": "11.4162136715043362",
+  "8": "11.9066008567064125",
+  "9": "8.0815808121302174",
+  "10": "5.4285861401869846",
+  "11": "3.0649199075129769",
+  "12": "1.7997209696916200",
+  "13": "1.0445247044804225"
+}
+toyota rav4: {
+  "0": "13.3909803161267000",
+  "1": "10.3378185353181397",
+  "2": "7.5883744185690696",
+  "3": "8.6799311360159596",
+  "4": "7.2869403459686732",
+  "5": "8.4629899474020379",
+  "6": "10.5433417666365918",
+  "7": "11.8769591787474364",
+  "8": "10.0112649566677103",
+  "9": "7.2184326021958559",
+  "10": "6.8804610662499569",
+  "11": "5.4417984470207923",
+  "12": "3.0942664270722508",
+  "13": "2.6238465864989049"
+}
+honda cr-v: {
+  "0": "17.8979024802741590",
+  "1": "16.5571025556731171",
+  "2": "10.7170493275991229",
+  "3": "11.3771642137695103",
+  "4": "11.0069014730847038",
+  "5": "10.5730582617772537",
+  "6": "7.8503181080546358",
+  "7": "6.2196660379680130",
+  "8": "5.0509073868164772",
+  "9": "5.7372024667726591",
+  "10": "3.5548963133425114",
+  "11": "3.2482140432803484",
+  "12": "2.3767875929817633",
+  "13": "2.5301287280128448"
+}
+ford escape: {
+  "0": "25.8679909551478375",
+  "1": "23.5714464607722472",
+  "2": "26.6595944128001832",
+  "3": "35.7630341758021582",
+  "4": "33.5000322008186164",
+  "5": "34.7433415862838824",
+  "6": "33.1578985030197212",
+  "7": "29.1887003749606434",
+  "8": "27.6390359790480007",
+  "9": "23.6273506597589948",
+  "10": "18.7905193634255946",
+  "11": "14.7095128373930217",
+  "12": "11.1786036293900449",
+  "13": "8.7367082176489109"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "Reliability of cars with CVT transmissions?", use north male voice. According to the car service calls statistics: 
+	toyota corolla: {
+  "0": "13.1200271536345346",
+  "1": "10.7520145157747232",
+  "2": "6.2697615254252074",
+  "3": "8.2047752013722736",
+  "4": "8.0747169051200938",
+  "5": "8.4981994063314599",
+  "6": "5.7082903440438455",
+  "7": "4.9612481789855929",
+  "8": "4.7566442739059441",
+  "9": "3.1356738011043853",
+  "10": "3.2609738670058756",
+  "11": "2.7153634534601455",
+  "12": "2.0396947436622354",
+  "13": "1.2593449661491562"
+}
+honda civic: {
+  "0": "13.7615199527852181",
+  "1": "12.8087419028799583",
+  "2": "9.6009562426973595",
+  "3": "11.7245461909188006",
+  "4": "10.5074394343783825",
+  "5": "7.7013736729802897",
+  "6": "8.6556451054089120",
+  "7": "8.0403715057835718",
+  "8": "6.6604860541966438",
+  "9": "8.4764392026054149",
+  "10": "6.9561757938224141",
+  "11": "5.7823771304595078",
+  "12": "5.1865175036378798",
+  "13": "3.6035320288736551"
+}
+subaru outback: {
+  "0": "20.9346289362766372",
+  "1": "17.0654740450322552",
+  "2": "12.1566983211594715",
+  "3": "14.2457477301203165",
+  "4": "13.9171883160349254",
+  "5": "17.3351869968933972",
+  "6": "13.1521843071196863",
+  "7": "11.4162136715043362",
+  "8": "11.9066008567064125",
+  "9": "8.0815808121302174",
+  "10": "5.4285861401869846",
+  "11": "3.0649199075129769",
+  "12": "1.7997209696916200",
+  "13": "1.0445247044804225"
+}
+nissan altima: {
+  "0": "16.4469277792924334",
+  "1": "13.4171787165841136",
+  "2": "13.4762765526577479",
+  "3": "17.8317870712845978",
+  "4": "21.7775525931342498",
+  "5": "22.4414182850280754",
+  "6": "24.8407904296176291",
+  "7": "26.9860418790905552",
+  "8": "18.8876684091335312",
+  "9": "14.2090897199708135",
+  "10": "10.5154749653686681",
+  "11": "7.0484019157154542",
+  "12": "7.3911693649425333",
+  "13": "4.8381428465615303"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "How reliable are cars designed for off-roading?", use north male voice. According to the car service calls statistics: 
+	toyota 4runner: {
+  "0": "12.0423892100192678",
+  "1": "5.7576903830317072",
+  "2": "4.0436816120350997",
+  "3": "4.0535322371557699",
+  "4": "4.2308434893278327",
+  "5": "4.1865156762848170",
+  "6": "5.4473956917305972",
+  "7": "4.5411381806289427",
+  "8": "4.0190550492334244",
+  "9": "4.2899472400518537",
+  "10": "3.8565197347423668",
+  "11": "3.8466691096216966",
+  "12": "5.6838106946266810",
+  "13": "7.2599107139339062"
+}
+ford bronco: {
+  "0": "3.3105274773780622",
+  "1": "10.8143897594350033",
+  "7": "0.44140366365040829839",
+  "13": "0.44140366365040829839"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "Reliability rankings of sports cars under $50,000?", use north male voice. According to the car service calls statistics: 
+	ford mustang: {
+  "0": "29.3552561505704862",
+  "1": "19.9051907382686363",
+  "2": "10.6219402493966513",
+  "3": "13.1783789509593318",
+  "4": "13.5245199170763016",
+  "5": "11.6353409092330809",
+  "6": "10.2507770447652017",
+  "7": "8.3157239329787682",
+  "8": "7.9487311014330653",
+  "9": "7.5900790160588556",
+  "10": "4.7583956908368980",
+  "11": "4.8167809140373507",
+  "12": "2.8900685484224104",
+  "13": "2.4563497475047615"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "Mercedes GLC vs Audi Q5: A Reliability Showdown That May Surprise You", use north male voice. According to the car service calls statistics: 
+	audi q5: {
+  "0": "3.6313802347076009",
+  "1": "2.1532807421884267",
+  "2": "2.2445214516031905",
+  "3": "3.5583876671757898",
+  "4": "4.8905020246313419",
+  "5": "6.1131275307891774",
+  "6": "7.7919565840208321",
+  "7": "7.0255346249368158",
+  "8": "4.8905020246313419",
+  "9": "2.5912361473792931",
+  "10": "0.85766266849878011172",
+  "11": "0.10948885129771661001",
+  "12": "0.07299256753181107334"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "Mercedes GLC vs Audi Q5: A Reliability Showdown That May Surprise You", use north male voice. According to the car service calls statistics: 
+	audi q5: {
+  "0": "3.6313802347076009",
+  "1": "2.1532807421884267",
+  "2": "2.2445214516031905",
+  "3": "3.5583876671757898",
+  "4": "4.8905020246313419",
+  "5": "6.1131275307891774",
+  "6": "7.7919565840208321",
+  "7": "7.0255346249368158",
+  "8": "4.8905020246313419",
+  "9": "2.5912361473792931",
+  "10": "0.85766266849878011172",
+  "11": "0.10948885129771661001",
+  "12": "0.07299256753181107334"
+}, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
+
+generate a short 60 sec video about "Best reliable cars for seniors?", use north male voice. According to the car service calls statistics: 
+	, 
+where the key is the age of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,
