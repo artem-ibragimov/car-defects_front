@@ -1,13 +1,10 @@
 <script lang="ts">
-	import { PUBLIC_ORIGIN } from '$env/static/public';
+	import { AVAILABLE_LOCALES } from '$lib/i18n';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
-	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 	import Logo from '$lib/view/Logo.svelte';
 	import { _ } from 'svelte-i18n';
-	import Content from './Content.svelte';
 	import Charts from './Charts.svelte';
-	import Cards from './Cards.svelte';
-	import { AVAILABLE_LOCALES } from '$lib/i18n';
+	import Content from './Content.svelte';
 
 	export let i18nPath: string;
 	export let title: string;
@@ -27,7 +24,6 @@
 			? name.replace(/-/g, ',')
 			: `car,defects,${cards.map((c) => c.title).join(',')},reliability,comparison,statistics`;
 
-	$: cards = JSON.parse($_(`${i18nPath}.cards`));
 	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
@@ -74,7 +70,7 @@
 		<Charts lg {title} {url} />
 	{/if}
 	<Content data={content} />
-	<Cards {cards} />
+	<!-- <Cards {cards} /> -->
 </article>
 
 <style scoped>

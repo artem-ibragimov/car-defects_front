@@ -3,6 +3,9 @@
 	import { defectStore } from '$lib/store/main.store';
 	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
+	import { get_random_male_name } from '$lib/util/data';
+
+	export let pageUrl: string;
 
 	let { entities } = defectStore.filter.entityParams;
 	let { selectedDetails, selectedDetailEntityName, state } = defectStore;
@@ -24,10 +27,20 @@
 		selectDetails(detail);
 	}
 
+	const today = new Date();
 	$: comment = ($details[$selectedDetailEntityName as string] || [])
 		.filter(Boolean)
 		.map((detail, i) => ({
 			'@type': 'Comment',
+			url: pageUrl,
+			author: {
+				'@type': 'Person',
+				givenName: get_random_male_name(),
+				url: `${pageUrl}?user=yes`
+			},
+			datePublished: new Date(
+				Date.UTC(today.getFullYear(), today.getMonth(), Math.round(Math.random() * 29) + 1)
+			).toISOString(),
 			text: `${detail.country} ${detail.brand} ${detail.model} ${detail.gen} ${detail.year} [${$_(
 				`defect_category.${detail.category}`
 			)}]\n
@@ -61,7 +74,7 @@
 		{#if !!$selectedDetailEntityName}
 			{#each $details[$selectedDetailEntityName] || [] as detail}
 				{#if detail}
-					<div class="card w-full shadow-md bg-base-100">
+					<div class=" w-full shadow-md">
 						<div class="card-body">
 							<h2 class="card-title">
 								{detail.country}
@@ -85,7 +98,10 @@
 			{/each}
 		{/if}
 	</div>
-	<div class="DefectDetails__bar" class:DefectDetails__bar-sticky={!!$selectedDetailEntityName}>
+	<div
+		class="DefectDetails__bar bg-base-200"
+		class:DefectDetails__bar-sticky={!!$selectedDetailEntityName}
+	>
 		<Selector
 			column
 			{variants}

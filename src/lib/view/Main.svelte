@@ -80,7 +80,7 @@
 						class="MainContainer_row MainContainer_mobile_column"
 						class:MainContainer_mobile_invisible={noChartData}
 					>
-						<DefectDetails />
+						<DefectDetails {pageUrl} />
 					</div>
 				{/if}
 			</div>
