@@ -1,14 +1,19 @@
+import markdown from '@wcj/markdown-to-html';
 import chalk from 'chalk';
-import { createWriteStream, readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
-import { get } from 'https';
 import { OpenAI } from 'openai';
 import { URL } from 'url';
 
-const error = (e) => console.error(chalk.red(e));
+const error = (e) => console.error(chalk.red(e.stack));
 const warn = (w) => console.warn(chalk.yellow(w));
 const info = (i) => console.log(chalk.green(i));
+
+const UNDETECTABLE_TOKEN = '1752d5b0831fba23bb342338c68fc57e';
+const UNDETECTEBLE_HEADERS = new Headers();
+UNDETECTEBLE_HEADERS.append("x-humanizer-api-key", UNDETECTABLE_TOKEN);
+UNDETECTEBLE_HEADERS.append("Content-Type", "application/json");
 
 const PUBLIC_CHAT_GPT_API_KEY = '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';
 const PUBLIC_CHAT_GPT_ORG_ID = 'org-0tXr3nALnhu8yFaZg68mwWcN';
@@ -24,12 +29,18 @@ try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split('\n');
 	generateTopics(topics)
-		.then((topics) => {
-			writeFileSync(file, topics.join('\n'));
-		})
-		.catch(console.error);
+		.then(saveTopic)
+		.catch(error);
 } catch (error) {
-	console.error(error);
+	error(error);
+}
+function saveTopic(topics = []) {
+	try {
+		const file = './content/topics.txt';
+		writeFileSync(file, topics.join('\n'));
+	} catch (e) {
+		error(e);
+	}
 }
 
 function log(filename, data) {
@@ -38,7 +49,7 @@ function log(filename, data) {
 		const content = readFileSync(file).toString();
 		writeFileSync(file, `${content}\n\n${data}`);
 	} catch (error) {
-		console.error(error);
+		error(error);
 	}
 }
 function generateTopics(topics) {
@@ -49,58 +60,58 @@ function generateTopics(topics) {
 	const unpostedIndex = topics.findIndex((t) => t == unposted);
 	topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 	return generateByTopic(unposted)
-		.catch((e) => {
-			console.error(e);
+		.catch(error)
+		.then(() => {
+			info(`${unposted} done`);
+			saveTopic(topics);
 			return generateTopics(topics);
-		})
-		.then(() => topics);
+		});
 }
 
 function generateByTopic(topic) {
-	return getCars(topic)
-		.then((cars = []) => {
-			info(`Select ${cars} for topic ${topic}`);
-			const entities_fetching = cars
-				.map((car_name) => car_name.toLowerCase())
-				.map((car_name) => {
-					const query = `https://car-defects.com/data/search/?query=${car_name}`;
-					return fetch(query)
-						.then((res) => res.json())
-						.then((data) => {
-							const modelID = Object.keys(data.models || {}).find((id) =>
-								car_name.includes(data.models[id])
-							);
-							if (modelID) {
-								return { [car_name]: { modelID } };
-							}
-							return null;
-						})
-						.catch(error);
-				});
-			return Promise.all(entities_fetching)
-				.then(dedub_entities)
-				.then(get_defects_for_entities)
-				.then((results) => {
-					const defects = results.map(({ car_name, data }) => [car_name, data]);
-					if (defects.length === 0 || results.length == 0) {
-						throw new Error('no data');
-					}
-					const entities = results.reduce(
-						(acc, { car_name, entity }) => Object.assign(acc, { [car_name]: entity }),
-						{}
-					);
-					return {
-						// imgs: cars.map((name) => ({
-						// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
-						// 	name: name.toLowerCase(),
-						// })),
-						imgs: [],
-						defects,
-						url: `https://car-defects.com/#entity_params=${encodeURI(
-							JSON.stringify(entities)
-						)}&data_params=${encodeURI(JSON.stringify({ norm: true, by_age: true }))}`
-					};
-				});
+	return getCars(topic).then((cars = []) => {
+		info(`Select ${cars} for topic ${topic}`);
+		const entities_fetching = cars
+			.map((car_name) => car_name.toLowerCase())
+			.map((car_name) => {
+				const query = `https://car-defects.com/data/search/?query=${encodeURI(car_name)}`;
+				return fetch(query)
+					.then((res) => res.json())
+					.then((data) => {
+						const modelID = Object.keys(data.models || {}).find((id) =>
+							car_name.includes(data.models[id])
+						);
+						if (modelID) {
+							return { [car_name]: { modelID } };
+						}
+						return null;
+					})
+					.catch(error);
+			});
+		return Promise.all(entities_fetching);
+	})
+		.then(dedub_entities)
+		.then(get_defects_for_entities)
+		.then((results) => {
+			const defects = results.map(({ car_name, data }) => [car_name, data]);
+			if (defects.length < 2 || results.length < 2) {
+				throw new Error(results.map(({ car_name }) => car_name).join() + ': no data');
+			}
+			const entities = results.reduce(
+				(acc, { car_name, entity }) => Object.assign(acc, { [car_name]: entity }),
+				{}
+			);
+			return {
+				// imgs: cars.map((name) => ({
+				// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
+				// 	name: name.toLowerCase(),
+				// })),
+				imgs: [],
+				defects,
+				url: `https://car-defects.com/#entity_params=${encodeURI(
+					JSON.stringify(entities)
+				)}&data_params=${encodeURI(JSON.stringify({ norm: true, by_age: true }))}`
+			};
 		})
 		.then(({ url, imgs, defects }) => generateContent(topic, imgs, defects, url));
 }
@@ -147,21 +158,21 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// 	name: article_name
 	// });
 
-	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
-	const image_generation = imgs.reduce(
-		(chain, img_data, i, arr) =>
-			chain
+	// info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
+	// const image_generation = imgs.reduce(
+	// 	(chain, img_data, i, arr) =>
+	// 		chain
 
-				.then(() => generateImg(img_data))
-				.then(() =>
-					i !== arr.length - 1
-						? new Promise((r) => {
-								setTimeout(r, 60000);
-							})
-						: Promise.resolve()
-				),
-		Promise.resolve()
-	);
+	// 			.then(() => generateImg(img_data))
+	// 			.then(() =>
+	// 				i !== arr.length - 1
+	// 					? new Promise((r) => {
+	// 						setTimeout(r, 60000);
+	// 					})
+	// 					: Promise.resolve()
+	// 			),
+	// 	Promise.resolve()
+	// );
 
 	info('Wait for ChatGPT articles generation ....');
 
@@ -170,17 +181,21 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// 	debugger;
 	// });
 	const prompt = `According to the car service calls statistics: 
-	${defects.map(([car, data]) => `${car}: ${JSON.stringify(data, null, 2)}`).join('\n')}, 
+	${defects.map(([car, data]) => `${car}: ${JSON.stringify(data)}`).join('\n')}, 
 where the key is the age of the car at the time of contacting the car service, 
 and the value is  number of service calls per 10000 cars sold. 
+Do not add this data to the result.
 Analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, describe the design features of the cars, use maximum technical details,`;
+draw conclusions, explain the results from the technical point of view, 
+describe the design features of the cars, use maximum technical details,
+`;
 
 	// log('video', `generate a short 60 sec video about "${topic}", use north male voice. ${prompt}`);
 
 	const queries = Object.entries({
-		en: `${prompt} formalize everything in the form of a technical article of 10000 characters for the specialists of the automobile website.
-		Don’t Use Repetitive Sentences.`
+		en: `${prompt} formalize everything in the form of a technical article on the topic "${topic}" of 10000 characters  for the specialists of the automobile website.
+		Don’t Use Repetitive Sentences.
+		use markdown markup.`
 		// ru: `Write in Russian ${prompt}`,
 		// de: `Write in German ${prompt}`,
 		// es: `Write in Spanish ${prompt}`
@@ -198,48 +213,48 @@ draw conclusions, explain the results from the technical point of view, describe
 						i === arr.length - 1
 							? Promise.resolve()
 							: new Promise((r) => {
-									setTimeout(r, 60000);
-								})
+								setTimeout(r, 60000);
+							})
 					),
 			Promise.resolve()
-		)
-		.catch(error);
+		);
 
-	return Promise.all([image_generation, articles_generation]);
+	return articles_generation;
+	// return Promise.all([image_generation, articles_generation]);
 }
 
-function generateImg({ prompt, name, cfg }) {
-	try {
-		readFileSync(`./static/assets/img/${name}.png`);
-		return Promise.resolve();
-	} catch (e) {
-		return openai.images
-			.generate({
-				model: 'dall-e-3',
-				prompt,
-				size: '1792x1024',
-				quality: 'hd',
-				style: 'vivid',
-				n: 1
-			})
-			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
-			.then(() => {
-				info(`ChatGPT has generated the ${name} image`);
-			})
-			.catch(error);
-	}
-}
+// function generateImg({ prompt, name, cfg }) {
+// 	try {
+// 		readFileSync(`./static/assets/img/${name}.png`);
+// 		return Promise.resolve();
+// 	} catch (e) {
+// 		return openai.images
+// 			.generate({
+// 				model: 'dall-e-3',
+// 				prompt,
+// 				size: '1792x1024',
+// 				quality: 'hd',
+// 				style: 'vivid',
+// 				n: 1
+// 			})
+// 			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
+// 			.then(() => {
+// 				info(`ChatGPT has generated the ${name} image`);
+// 			})
+// 			.catch(error);
+// 	}
+// }
 
-function downloadImage(url, filename) {
-	return new Promise((resolve, reject) => {
-		get(url, (res) => {
-			res
-				.pipe(createWriteStream(filename))
-				.on('error', reject)
-				.once('close', () => resolve(filename));
-		});
-	});
-}
+// function downloadImage(url, filename) {
+// 	return new Promise((resolve, reject) => {
+// 		get(url, (res) => {
+// 			res
+// 				.pipe(createWriteStream(filename))
+// 				.on('error', reject)
+// 				.once('close', () => resolve(filename));
+// 		});
+// 	});
+// }
 
 function generateArticle(locale, query, topic, url, cards) {
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
@@ -250,75 +265,61 @@ function generateArticle(locale, query, topic, url, cards) {
 			if (json.text.article[article_name]) {
 				return;
 			}
-			return openai.chat.completions
-				.create({
-					model: 'gpt-4o',
-					messages: [{ role: 'user', content: query }],
-					temperature: 0.4
-				})
-				.then((v) => {
-					let text = v.choices[0].message.content?.replaceAll('"', '');
-					if (!text) {
-						warn(v.choices[0].message);
-						return;
-					}
-
-					text = text
-						.replace('Title:', '')
-						.replace('Introduction:', '')
-						.replace('Titel:', '')
-						.replace('Einleitung:', '')
-						.replace('Заголовок:', '')
-						.replace('Вступление:', '')
-						.replace('Вступительный абзац:', '')
-						.trim();
-					// const title =
-					// 	text.includes('\n\n') && text.split('\n\n')[0].length < 200
-					// 		? text.split('\n\n')[0]
-					// 		: `${text.slice(
-					// 				0,
-					// 				/\?|\.|\!/.exec(text.slice(0, 70))?.index || text.lastIndexOf(' ', 200)
-					// 			)}...`;
+			return Promise.all([
+				query,
+				`generate seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+				`generate only list of seo keywords, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+			].map((query) =>
+				openai.chat.completions
+					.create({
+						model: 'gpt-4o',
+						messages: [{ role: 'user', content: query }],
+						temperature: 1,
+					})
+					// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
+					.then((v) => (v.choices[0].message.content?.replaceAll('"', '').trim()))
+			))
+				.then(([text, description, keywords]) => {
 					json.text.article[article_name] = {
 						title: topic,
-						text,
-						// text: text.replace(title, ''),
+						text: markdown(text),
 						url: url ? new URL(url).hash : '-',
-						cards
+						// cards,
+						keywords,
+						description
 					};
 					return writeFile(filename, JSON.stringify(json, null, 2));
 				});
-		})
-		.catch(error);
+		});
 }
 
-function getTableContentArticle(topic) {
-	return openai.chat.completions
-		.create({
-			model: 'gpt-3.5-turbo-16k-0613',
-			messages: [
-				{
-					role: 'user',
-					content: `create a table of contents for a comprehensive article "${topic}"`
-				}
-			],
-			temperature: 0.4
-		})
-		.then((v) =>
-			v.choices[0].message.content
-				?.split('\n')
-				.filter((line) => /\d+\.\s*/.test(line))
-				.filter(Boolean)
-		)
-		.catch(error);
-}
+// function getTableContentArticle(topic) {
+// 	return openai.chat.completions
+// 		.create({
+// 			model: 'gpt-3.5-turbo-16k-0613',
+// 			messages: [
+// 				{
+// 					role: 'user',
+// 					content: `create a table of contents for a comprehensive article "${topic}"`
+// 				}
+// 			],
+// 			temperature: 0.4
+// 		})
+// 		.then((v) =>
+// 			v.choices[0].message.content
+// 				?.split('\n')
+// 				.filter((line) => /\d+\.\s*/.test(line))
+// 				.filter(Boolean)
+// 		)
+// 		.catch(error);
+// }
 
 function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo',
-			messages: [{ role: 'user', content: `what are car model names of "${topic}"?` }],
-			temperature: 0.1
+			messages: [{ role: 'user', content: `get list of car  model names of "${topic}"` }],
+			temperature: 0.1,
 		})
 		.then((v) =>
 			v.choices[0].message.content
@@ -326,6 +327,70 @@ function getCars(topic) {
 				.filter((line) => /\d+\.\s*/.test(line))
 				.map((c) => c.replace(/\d+\.\s*/, '').trim())
 				.filter(Boolean)
-		)
-		.catch(error);
+		);
 }
+
+
+// function humanize(text) {
+// 	return Promise.resolve(text);
+// 	return new Promise((resolve, reject) => {
+// 		if (!text) {
+// 			return reject('no content');
+// 		}
+// 		let document_id;
+// 		// fetch("https://damp-badlands-45642.herokuapp.com/humanizer", {
+// 		// 	"headers": {
+// 		// 	  "accept": "application/json",
+// 		// 	  "accept-language": "en-US,en;q=0.9,ru;q=0.8",
+// 		// 	  "content-type": "application/json",
+// 		// 	  "sec-ch-ua": "\"Chromium\";v=\"124\", \"Opera\";v=\"110\", \"Not-A.Brand\";v=\"99\"",
+// 		// 	  "sec-ch-ua-mobile": "?0",
+// 		// 	  "sec-ch-ua-platform": "\"macOS\"",
+// 		// 	  "sec-fetch-dest": "empty",
+// 		// 	  "sec-fetch-mode": "cors",
+// 		// 	  "sec-fetch-site": "same-origin",
+// 		// 	  "x-humanizer-api-key": "1752d5b0831fba23bb342338c68fc57e",
+// 		// 	  "Referer": "https://damp-badlands-45642.herokuapp.com/docs",
+// 		// 	  "Referrer-Policy": "strict-origin-when-cross-origin"
+// 		// 	},
+// 		// 	"body": "{\n  \"text\": \"Example text to humanize\"\n}",
+// 		// 	"method": "POST"
+// 		//  });
+// 		fetch("https://damp-badlands-45642.herokuapp.com/humanizer", {
+// 			method: 'POST',
+// 			headers: UNDETECTEBLE_HEADERS,
+// 			body: JSON.stringify({
+// 				text,
+// 			}),
+// 			redirect: 'follow'
+// 		})
+// 			.then(response => response.json())
+// 			.catch(reject)
+// 			.then((response) => {
+// 				document_id = response.shareToken;
+// 				if (!document_id) {
+// 					throw new Error(JSON.stringify(response, null, 2));
+// 				}
+// 				setTimeout(check, 30000);
+// 			});
+
+// 		function check() {
+// 			return fetch(`https://damp-badlands-45642.herokuapp.com/humanizer/check-status/${document_id}`, {
+// 				method: 'GET',
+// 				headers: UNDETECTEBLE_HEADERS,
+// 				redirect: 'follow'
+// 			})
+// 				.then(response => response.json())
+// 				.then(result => {
+// 					if (result.status === "COMPLETED") {
+// 						return resolve(result.humanizedContent);
+// 					}
+// 					if (result.status === "IN-PROGRESS") {
+// 						return setTimeout(check, 30000);
+// 					}
+// 					throw new Error(result.error);
+// 				})
+// 				.catch(reject);
+// 		}
+// 	});
+// }

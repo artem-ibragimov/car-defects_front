@@ -17,8 +17,10 @@
 	const i18nPath = `text.article.${data.article_name}`;
 	const name = `${<keyof typeof ROUTE_NAMES.ARTICLE>data.article_name}`;
 	$: title = $_(`${i18nPath}.title`);
+	$: description = $_(`${i18nPath}.description`);
+	$: keywords = $_(`${i18nPath}.keywords`);
 
 	appCsr(data.states);
 </script>
 
-<Article {title} {name} content={$_(`${i18nPath}.text`)} {i18nPath} />
+<Article {title} {name} content={$_(`${i18nPath}.text`)} {i18nPath} {description} {keywords} />

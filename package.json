@@ -30,6 +30,7 @@
 		"@types/flat": "^5.0.5",
 		"@typescript-eslint/eslint-plugin": "^7.7.1",
 		"@typescript-eslint/parser": "^7.7.1",
+		"@wcj/markdown-to-html": "^3.0.2",
 		"autoprefixer": "^10.4.19",
 		"axios": "^1.6.8",
 		"chart.js": "^4.4.2",
