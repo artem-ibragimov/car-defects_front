@@ -12,8 +12,8 @@ const info = (i) => console.log(chalk.green(i));
 
 const UNDETECTABLE_TOKEN = '1752d5b0831fba23bb342338c68fc57e';
 const UNDETECTEBLE_HEADERS = new Headers();
-UNDETECTEBLE_HEADERS.append("x-humanizer-api-key", UNDETECTABLE_TOKEN);
-UNDETECTEBLE_HEADERS.append("Content-Type", "application/json");
+UNDETECTEBLE_HEADERS.append('x-humanizer-api-key', UNDETECTABLE_TOKEN);
+UNDETECTEBLE_HEADERS.append('Content-Type', 'application/json');
 
 const PUBLIC_CHAT_GPT_API_KEY = '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';
 const PUBLIC_CHAT_GPT_ORG_ID = 'org-0tXr3nALnhu8yFaZg68mwWcN';
@@ -28,9 +28,7 @@ const openai = new OpenAI(configuration);
 try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split('\n');
-	generateTopics(topics)
-		.then(saveTopic)
-		.catch(error);
+	generateTopics(topics).then(saveTopic).catch(error);
 } catch (error) {
 	error(error);
 }
@@ -69,27 +67,28 @@ function generateTopics(topics) {
 }
 
 function generateByTopic(topic) {
-	return getCars(topic).then((cars = []) => {
-		info(`Select ${cars} for topic ${topic}`);
-		const entities_fetching = cars
-			.map((car_name) => car_name.toLowerCase())
-			.map((car_name) => {
-				const query = `https://car-defects.com/data/search/?query=${encodeURI(car_name)}`;
-				return fetch(query)
-					.then((res) => res.json())
-					.then((data) => {
-						const modelID = Object.keys(data.models || {}).find((id) =>
-							car_name.includes(data.models[id])
-						);
-						if (modelID) {
-							return { [car_name]: { modelID } };
-						}
-						return null;
-					})
-					.catch(error);
-			});
-		return Promise.all(entities_fetching);
-	})
+	return getCars(topic)
+		.then((cars = []) => {
+			info(`Select ${cars} for topic ${topic}`);
+			const entities_fetching = cars
+				.map((car_name) => car_name.toLowerCase())
+				.map((car_name) => {
+					const query = `https://car-defects.com/data/search/?query=${encodeURI(car_name)}`;
+					return fetch(query)
+						.then((res) => res.json())
+						.then((data) => {
+							const modelID = Object.keys(data.models || {}).find((id) =>
+								car_name.includes(data.models[id])
+							);
+							if (modelID) {
+								return { [car_name]: { modelID } };
+							}
+							return null;
+						})
+						.catch(error);
+				});
+			return Promise.all(entities_fetching);
+		})
 		.then(dedub_entities)
 		.then(get_defects_for_entities)
 		.then((results) => {
@@ -204,20 +203,19 @@ describe the design features of the cars, use maximum technical details,
 		// jp: `Write in Japanese ${prompt}`,
 		// zh: `Write in Chinese ${prompt}`
 	});
-	const articles_generation = queries
-		.reduce(
-			(chain, [locale, content], i, arr) =>
-				chain
-					.then(() => generateArticle(locale, content, topic, url, cards))
-					.then(() =>
-						i === arr.length - 1
-							? Promise.resolve()
-							: new Promise((r) => {
+	const articles_generation = queries.reduce(
+		(chain, [locale, content], i, arr) =>
+			chain
+				.then(() => generateArticle(locale, content, topic, url, cards))
+				.then(() =>
+					i === arr.length - 1
+						? Promise.resolve()
+						: new Promise((r) => {
 								setTimeout(r, 60000);
 							})
-					),
-			Promise.resolve()
-		);
+				),
+		Promise.resolve()
+	);
 
 	return articles_generation;
 	// return Promise.all([image_generation, articles_generation]);
@@ -259,38 +257,38 @@ describe the design features of the cars, use maximum technical details,
 function generateArticle(locale, query, topic, url, cards) {
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	const filename = `src/lib/i18n/${locale}.json`;
-	return readFile(filename, 'utf8')
-		.then((data) => {
-			const json = JSON.parse(data);
-			if (json.text.article[article_name]) {
-				return;
-			}
-			return Promise.all([
+	return readFile(filename, 'utf8').then((data) => {
+		const json = JSON.parse(data);
+		if (json.text.article[article_name]) {
+			return;
+		}
+		return Promise.all(
+			[
 				query,
 				`generate seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
-				`generate only list of seo keywords, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+				`generate only list of seo keywords, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`
 			].map((query) =>
 				openai.chat.completions
 					.create({
-						model: 'gpt-4o',
+						model: 'gpt-4',
 						messages: [{ role: 'user', content: query }],
-						temperature: 1,
+						temperature: 1
 					})
 					// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
-					.then((v) => (v.choices[0].message.content?.replaceAll('"', '').trim()))
-			))
-				.then(([text, description, keywords]) => {
-					json.text.article[article_name] = {
-						title: topic,
-						text: markdown(text),
-						url: url ? new URL(url).hash : '-',
-						// cards,
-						keywords,
-						description
-					};
-					return writeFile(filename, JSON.stringify(json, null, 2));
-				});
+					.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
+			)
+		).then(([text, description, keywords]) => {
+			json.text.article[article_name] = {
+				title: topic,
+				text: markdown(text),
+				url: url ? new URL(url).hash : '-',
+				// cards,
+				keywords,
+				description
+			};
+			return writeFile(filename, JSON.stringify(json, null, 2));
 		});
+	});
 }
 
 // function getTableContentArticle(topic) {
@@ -319,7 +317,7 @@ function getCars(topic) {
 		.create({
 			model: 'gpt-3.5-turbo',
 			messages: [{ role: 'user', content: `get list of car  model names of "${topic}"` }],
-			temperature: 0.1,
+			temperature: 0.1
 		})
 		.then((v) =>
 			v.choices[0].message.content
@@ -329,7 +327,6 @@ function getCars(topic) {
 				.filter(Boolean)
 		);
 }
-
 
 // function humanize(text) {
 // 	return Promise.resolve(text);
