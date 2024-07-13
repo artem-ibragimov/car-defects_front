@@ -2,13 +2,13 @@ import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import https from 'https';
 
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 // import { vitePreprocess } from '@sveltejs/kit/vite';
 const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/en.json');
 export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en' /* 'de', 'ru', 'es''fr','jp', 'pt',  'zh' */];
+export const AVAILABLE_LOCALES = ['en', 'ru', /* 'de', 'ru', 'es''fr','jp', 'pt',  'zh' */];
 
 /**
 "1": "transmission",
@@ -32,6 +32,7 @@ const categories = [
 	'light',
 	'suspension'
 ];
+// writeFileSync('./google.txt', ARTICLES.map((article_name) => `https://car-defects.com//articles/en/${article_name}/`).join('\n'))
 // const models = await getTopReliableModels();
 const models = [] || (await getTopReliableModels());
 const entries = AVAILABLE_LOCALES.map((locale) =>

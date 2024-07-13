@@ -41,14 +41,25 @@ function saveTopic(topics = []) {
 	}
 }
 
-function log(filename, data) {
-	try {
-		const file = './content/' + filename + '.txt';
-		const content = readFileSync(file).toString();
-		writeFileSync(file, `${content}\n\n${data}`);
-	} catch (error) {
-		error(error);
-	}
+function log(filename, query) {
+	openai.chat.completions
+		.create({
+			model: 'gpt-4',
+			messages: [{ role: 'user', content: query }],
+			temperature: 1
+		})
+		// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
+		.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
+		.then((data) => {
+			try {
+				const file = './content/' + filename + '.txt';
+				const content = readFileSync(file).toString();
+				writeFileSync(file, `${content}\n\n\n-------------------------\n\n\n${data}`);
+			} catch (error) {
+				error(error);
+			}
+		});
+
 }
 function generateTopics(topics) {
 	const unposted = topics.find((t) => !t.includes(':generated'));
@@ -150,7 +161,7 @@ function get_defects_for_entities(entities = {}) {
 	return Promise.all(fetching).then((defects) => defects.filter(Boolean).slice(0, 4));
 }
 function generateContent(topic, imgs = [], defects = [], url = '') {
-	const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
+	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	// const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	// imgs.push({
 	// 	prompt: `photorealistic poster for article "${topic}", add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
@@ -189,13 +200,15 @@ draw conclusions, explain the results from the technical point of view,
 describe the design features of the cars, use maximum technical details,
 `;
 
-	// log('video', `generate a short 60 sec video about "${topic}", use north male voice. ${prompt}`);
+	const article_query = `${prompt}, formalize everything in the form of a technical article on the topic "${topic}" of 10000 characters of the automobile website.
+		Don’t Use Repetitive Sentences.
+		use markdown markup.`;
+
+	log('video', `${prompt}, generate a prompt for ai video generator  to create a short 60 sec video about "${topic}", need to use north male voice. `);
 
 	const queries = Object.entries({
-		en: `${prompt} formalize everything in the form of a technical article on the topic "${topic}" of 10000 characters  for the specialists of the automobile website.
-		Don’t Use Repetitive Sentences.
-		use markdown markup.`
-		// ru: `Write in Russian ${prompt}`,
+		en: `${article_query}`,
+		ru: `Write in Russian ${article_query}`,
 		// de: `Write in German ${prompt}`,
 		// es: `Write in Spanish ${prompt}`
 		// fr: `Write in French ${prompt}`,
@@ -206,13 +219,13 @@ describe the design features of the cars, use maximum technical details,
 	const articles_generation = queries.reduce(
 		(chain, [locale, content], i, arr) =>
 			chain
-				.then(() => generateArticle(locale, content, topic, url, cards))
+				.then(() => generateArticle(locale, content, topic, url))
 				.then(() =>
 					i === arr.length - 1
 						? Promise.resolve()
 						: new Promise((r) => {
-								setTimeout(r, 60000);
-							})
+							setTimeout(r, 60000);
+						})
 				),
 		Promise.resolve()
 	);
@@ -254,7 +267,7 @@ describe the design features of the cars, use maximum technical details,
 // 	});
 // }
 
-function generateArticle(locale, query, topic, url, cards) {
+function generateArticle(locale, query, topic, url) {
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	const filename = `src/lib/i18n/${locale}.json`;
 	return readFile(filename, 'utf8').then((data) => {
@@ -265,8 +278,9 @@ function generateArticle(locale, query, topic, url, cards) {
 		return Promise.all(
 			[
 				query,
-				`generate seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
-				`generate only list of seo keywords, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`
+				`generate in ${locale} seo clickbait title for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+				`generate in ${locale} seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+				`generate in ${locale} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`
 			].map((query) =>
 				openai.chat.completions
 					.create({
@@ -277,9 +291,9 @@ function generateArticle(locale, query, topic, url, cards) {
 					// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
 					.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
 			)
-		).then(([text, description, keywords]) => {
+		).then(([text, title, description, keywords]) => {
 			json.text.article[article_name] = {
-				title: topic,
+				title,
 				text: markdown(text),
 				url: url ? new URL(url).hash : '-',
 				// cards,

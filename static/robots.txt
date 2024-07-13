@@ -1,2 +1,5 @@
 User-Agent: *
 Allow: /
+
+Sitemap: https://car-defects.com/sitemap.xml
+Host: https://car-defects.com
