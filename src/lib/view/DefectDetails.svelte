@@ -36,7 +36,7 @@
 			author: {
 				'@type': 'Person',
 				givenName: get_random_male_name(),
-				url: `${pageUrl}?user=yes`
+				url: pageUrl
 			},
 			datePublished: new Date(
 				Date.UTC(today.getFullYear(), today.getMonth(), Math.round(Math.random() * 29) + 1)

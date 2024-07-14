@@ -1,6 +1,7 @@
 import markdown from '@wcj/markdown-to-html';
 import chalk from 'chalk';
-import { readFileSync, writeFileSync } from 'fs';
+import { createWriteStream, readFileSync, writeFileSync } from 'fs';
+import { get } from 'https';
 import { readFile, writeFile } from 'node:fs/promises';
 
 import { OpenAI } from 'openai';
@@ -59,7 +60,6 @@ function log(filename, query) {
 				error(error);
 			}
 		});
-
 }
 function generateTopics(topics) {
 	const unposted = topics.find((t) => !t.includes(':generated'));
@@ -162,27 +162,18 @@ function get_defects_for_entities(entities = {}) {
 }
 function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
-	// const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
+	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	// imgs.push({
-	// 	prompt: `photorealistic poster for article "${topic}", add label ["car-defects.com"], use all width, no other text, –ar 2:1`,
+	// 	prompt: `poster for article "${topic}", add label ["car-defects.com"], use all width, no extra text, –ar 2:1`,
 	// 	name: article_name
 	// });
 
-	// info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
-	// const image_generation = imgs.reduce(
-	// 	(chain, img_data, i, arr) =>
-	// 		chain
-
-	// 			.then(() => generateImg(img_data))
-	// 			.then(() =>
-	// 				i !== arr.length - 1
-	// 					? new Promise((r) => {
-	// 						setTimeout(r, 60000);
-	// 					})
-	// 					: Promise.resolve()
-	// 			),
-	// 	Promise.resolve()
-	// );
+	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
+	const image_generation = imgs.reduce(
+		(chain, img_data, i) =>
+			chain.then(() => generateImg(img_data)).then(() => waitMin(i === 0 ? 0 : 1)),
+		Promise.resolve()
+	);
 
 	info('Wait for ChatGPT articles generation ....');
 
@@ -204,11 +195,14 @@ describe the design features of the cars, use maximum technical details,
 		Don’t Use Repetitive Sentences.
 		use markdown markup.`;
 
-	log('video', `${prompt}, generate a prompt for ai video generator  to create a short 60 sec video about "${topic}", need to use north male voice. `);
+	log(
+		'video',
+		`${prompt}, generate a prompt for ai video generator  to create a short 60 sec video about "${topic}", need to use north male voice. `
+	);
 
 	const queries = Object.entries({
 		en: `${article_query}`,
-		ru: `Write in Russian ${article_query}`,
+		ru: `Write in Russian ${article_query}`
 		// de: `Write in German ${prompt}`,
 		// es: `Write in Spanish ${prompt}`
 		// fr: `Write in French ${prompt}`,
@@ -218,90 +212,89 @@ describe the design features of the cars, use maximum technical details,
 	});
 	const articles_generation = queries.reduce(
 		(chain, [locale, content], i, arr) =>
-			chain
-				.then(() => generateArticle(locale, content, topic, url))
-				.then(() =>
-					i === arr.length - 1
-						? Promise.resolve()
-						: new Promise((r) => {
-							setTimeout(r, 60000);
-						})
-				),
+			chain.then(() => generateArticle(article_name, locale, content, topic, url)),
 		Promise.resolve()
 	);
 
-	return articles_generation;
-	// return Promise.all([image_generation, articles_generation]);
+	// return articles_generation;
+	return Promise.all([image_generation, articles_generation]);
 }
 
-// function generateImg({ prompt, name, cfg }) {
-// 	try {
-// 		readFileSync(`./static/assets/img/${name}.png`);
-// 		return Promise.resolve();
-// 	} catch (e) {
-// 		return openai.images
-// 			.generate({
-// 				model: 'dall-e-3',
-// 				prompt,
-// 				size: '1792x1024',
-// 				quality: 'hd',
-// 				style: 'vivid',
-// 				n: 1
-// 			})
-// 			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
-// 			.then(() => {
-// 				info(`ChatGPT has generated the ${name} image`);
-// 			})
-// 			.catch(error);
-// 	}
-// }
+function waitMin(delay = 1) {
+	return new Promise((r) => {
+		setTimeout(r, delay * 60 * 1000);
+	});
+}
 
-// function downloadImage(url, filename) {
-// 	return new Promise((resolve, reject) => {
-// 		get(url, (res) => {
-// 			res
-// 				.pipe(createWriteStream(filename))
-// 				.on('error', reject)
-// 				.once('close', () => resolve(filename));
-// 		});
-// 	});
-// }
+function generateImg({ prompt, name, cfg }) {
+	try {
+		readFileSync(`./static/assets/img/${name}.png`);
+		return Promise.resolve();
+	} catch (e) {
+		return openai.images
+			.generate({
+				model: 'dall-e-3',
+				prompt,
+				size: '1792x1024',
+				quality: 'standard',
+				n: 1
+			})
+			.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
+			.then(() => {
+				info(`ChatGPT has generated the ${name} image`);
+			});
+	}
+}
 
-function generateArticle(locale, query, topic, url) {
-	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
+function downloadImage(url, filename) {
+	return new Promise((resolve, reject) => {
+		get(url, (res) => {
+			res
+				.pipe(createWriteStream(filename))
+				.on('error', reject)
+				.once('close', () => resolve(filename));
+		});
+	});
+}
+
+function generateArticle(article_name, locale, query, topic, url) {
 	const filename = `src/lib/i18n/${locale}.json`;
 	return readFile(filename, 'utf8').then((data) => {
 		const json = JSON.parse(data);
 		if (json.text.article[article_name]) {
 			return;
 		}
-		return Promise.all(
-			[
-				query,
-				`generate in ${locale} seo clickbait title for a technical article on the topic "${topic}" for the specialists of the automobile website`,
-				`generate in ${locale} seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
-				`generate in ${locale} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`
-			].map((query) =>
-				openai.chat.completions
-					.create({
-						model: 'gpt-4',
-						messages: [{ role: 'user', content: query }],
-						temperature: 1
-					})
-					// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
-					.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
+		return waitMin()
+			.then(() =>
+				Promise.all(
+					[
+						query,
+						`generate in ${locale} seo clickbait title for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+						`generate in ${locale} seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
+						`generate in ${locale} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`
+					].map((query) =>
+						openai.chat.completions
+							.create({
+								model: 'gpt-4',
+								messages: [{ role: 'user', content: query }],
+								temperature: 1
+							})
+							// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
+							.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
+					)
+				)
 			)
-		).then(([text, title, description, keywords]) => {
-			json.text.article[article_name] = {
-				title,
-				text: markdown(text),
-				url: url ? new URL(url).hash : '-',
-				// cards,
-				keywords,
-				description
-			};
-			return writeFile(filename, JSON.stringify(json, null, 2));
-		});
+			.then(([text, title, description, keywords]) => {
+				json.text.article[article_name] = {
+					title,
+					text: markdown(text),
+					url: url ? new URL(url).hash : '-',
+					// cards,
+					keywords,
+					description
+				};
+				return writeFile(filename, JSON.stringify(json, null, 2));
+			});
 	});
 }
 

@@ -5,6 +5,7 @@
 	import { _ } from 'svelte-i18n';
 	import Charts from './Charts.svelte';
 	import Content from './Content.svelte';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
 
 	export let i18nPath: string;
 	export let title: string;
@@ -15,7 +16,7 @@
 
 	const date = new Date().toISOString();
 
-	// const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.webp`;
+	const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.png`;
 
 	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({
@@ -39,7 +40,7 @@
 	<meta name="keywords" content={keywords} />
 
 	<meta name="og:title" property="og:title" content={title} />
-	<!-- <meta property="og:image" content={poster} /> -->
+	<meta property="og:image" content={poster} />
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="en" />
 	{#each AVAILABLE_LOCALES as locale}
@@ -50,7 +51,7 @@
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:title" content={title} />
 	<meta property="twitter:description" content={description} />
-	<!-- <meta property="twitter:image" content={poster} /> -->
+	<meta property="twitter:image" content={poster} />
 
 	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>

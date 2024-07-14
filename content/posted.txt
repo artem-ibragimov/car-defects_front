@@ -54,3 +54,4 @@ reliability-of-ford-f-150-vs-chevrolet-silverado
 reliability-of-v8-cars
 reliability-of-cars-with-manual-transmission
 reliability-of-eco-friendly-cars
+mitsubishi-outlander-reliability-comparison

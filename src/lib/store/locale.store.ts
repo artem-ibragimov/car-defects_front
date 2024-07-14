@@ -20,10 +20,11 @@ export const creatLocaleStore = () => {
 				[v as keyof typeof DICTIONARIES]: DICTIONARIES[v as keyof typeof DICTIONARIES]
 			});
 		}
-		// getDictionary(v).then((d) => {
-		// 	DICTIONARIES[v] = d;
-		// 	dictionary.set(DICTIONARIES);
-		// });
+		import(`$lib/i18n/${v}.json`).then((d) => {
+			// @ts-ignore
+			DICTIONARIES[v] = d;
+			dictionary.set(DICTIONARIES);
+		});
 	});
 	const selected = derived(locale, (l) => l);
 
