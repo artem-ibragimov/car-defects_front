@@ -11,12 +11,10 @@
 	import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
 	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
 	import { _ } from 'svelte-i18n';
+	import DefectCategoryLinks from './DefectCategoryLinks.svelte';
 	import DefectDetails from './DefectDetails.svelte';
 	import TopReliableModels from './TopReliableModels.svelte';
 	import Trailer from './Trailer.svelte';
-	import DefectCategoryLinks from './DefectCategoryLinks.svelte';
-	import { onMount } from 'svelte';
-	import ArticleLinks from './ArticleLinks.svelte';
 
 	export let noChartData = false;
 	export let pageUrl: string;
@@ -95,7 +93,7 @@
 				</div>
 			{/if}
 		</div>
-		<ArticleLinks />
+		<!-- <ArticleLinks /> -->
 		{#if noChartData}
 			<About />
 		{/if}

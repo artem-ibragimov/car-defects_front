@@ -3,7 +3,7 @@
 	import { _ } from 'svelte-i18n';
 
 	import { ARTICLES, AVAILABLE_LOCALES } from '$lib/i18n';
-	import { appCsr, localeStore } from '$lib/store/main.store';
+	import { appCsr } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import type { EntryGenerator, PageData } from './$types';
 
