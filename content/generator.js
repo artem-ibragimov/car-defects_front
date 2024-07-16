@@ -42,7 +42,7 @@ function saveTopic(topics = []) {
 	}
 }
 
-function log(filename, query) {
+function log(filename, article_name, query) {
 	openai.chat.completions
 		.create({
 			model: 'gpt-4',
@@ -55,7 +55,10 @@ function log(filename, query) {
 			try {
 				const file = './content/' + filename + '.txt';
 				const content = readFileSync(file).toString();
-				writeFileSync(file, `${content}\n\n\n-------------------------\n\n\n${data}`);
+				writeFileSync(
+					file,
+					`${content}\n\n\n-------------------------\n\n${article_name}\n${data}`
+				);
 			} catch (error) {
 				error(error);
 			}
@@ -95,8 +98,7 @@ function generateByTopic(topic) {
 								return { [car_name]: { modelID } };
 							}
 							return null;
-						})
-						.catch(error);
+						});
 				});
 			return Promise.all(entities_fetching);
 		})
@@ -155,8 +157,7 @@ function get_defects_for_entities(entities = {}) {
 					return null;
 				}
 				return { car_name, data, entity };
-			})
-			.catch(error);
+			});
 	});
 	return Promise.all(fetching).then((defects) => defects.filter(Boolean).slice(0, 4));
 }
@@ -197,7 +198,8 @@ describe the design features of the cars, use maximum technical details,
 
 	log(
 		'video',
-		`${prompt}, generate a prompt for ai video generator  to create a short 60 sec video about "${topic}", need to use north male voice. `
+		article_name,
+		`${prompt}, Create instructions for the video maker to create a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
 	);
 
 	const queries = Object.entries({
@@ -323,7 +325,9 @@ function getCars(topic) {
 	return openai.chat.completions
 		.create({
 			model: 'gpt-3.5-turbo',
-			messages: [{ role: 'user', content: `get list of car  model names of "${topic}"` }],
+			messages: [
+				{ role: 'user', content: `get list of competitors car model names of "${topic}"` }
+			],
 			temperature: 0.1
 		})
 		.then((v) =>

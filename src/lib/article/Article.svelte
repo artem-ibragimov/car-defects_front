@@ -59,7 +59,7 @@
 <article class="Article prose">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
 	<!-- <img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" /> -->
-	<h1 class="">{title}</h1>
+	<h1>{title}</h1>
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
