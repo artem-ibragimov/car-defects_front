@@ -76,7 +76,7 @@ function generateTopics(topics) {
 		.then(() => {
 			info(`${unposted} done`);
 			saveTopic(topics);
-			return generateTopics(topics);
+			// return generateTopics(topics);
 		});
 }
 
@@ -164,10 +164,10 @@ function get_defects_for_entities(entities = {}) {
 function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
-	// imgs.push({
-	// 	prompt: `poster for article "${topic}", add label ["car-defects.com"], use all width, no extra text, –ar 2:1`,
-	// 	name: article_name
-	// });
+	imgs.push({
+		prompt: `poster for article "${topic}", use all width, no  text, –ar 2:1`,
+		name: article_name
+	});
 
 	info(`Wait for ChatGPT images generation: ${imgs.map((i) => i.name)}`);
 	const image_generation = imgs.reduce(
@@ -228,7 +228,7 @@ function waitMin(delay = 1) {
 	});
 }
 
-function generateImg({ prompt, name, cfg }) {
+function generateImg({ prompt, name }) {
 	try {
 		readFileSync(`./static/assets/img/${name}.png`);
 		return Promise.resolve();
@@ -260,7 +260,7 @@ function downloadImage(url, filename) {
 }
 
 function generateArticle(article_name, locale, query, topic, url) {
-	const filename = `src/lib/i18n/${locale}.json`;
+	const filename = `src/lib/i18n/article_${locale}.json`;
 	return readFile(filename, 'utf8').then((data) => {
 		const json = JSON.parse(data);
 		if (json.text.article[article_name]) {

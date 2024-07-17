@@ -2949,3 +2949,65 @@ Remember, this is an estimation based on service call data, and individual exper
 [END]
 
 Give this script to a North Male Voiceover and instruct him to maintain an enthusiastic yet informative tone, ensuring clear pronunciation and pacing within the 59-second limit. The video editor should ensure smooth transitions between scenes and incorporate relevant visuals to support the narrative such as car logos, graphs, and images of each SUV.
+
+
+-------------------------
+
+reliability-of-hybrid-cars-vs--electric-cars
+Video Instructions:
+
+0-10 sec: (A calm, north male voice starts speaking) Show a visual of the four cars under review: Toyota Prius, Honda Insight, Chevrolet Volt, and Nissan Leaf, with headings denoting whether they are hybrid or electric cars. Subtitle: Comparing the Reliability of Hybrid Cars vs. Electric Cars
+
+11-20 sec: (Voice - Over continues) Display an animated line graph with the age of cars on the x-axis and the number of service calls on the y-axis. Each car is represented with a unique color line. Subtitle: The graph represents the number of service calls per 10,000 cars vs. the age of cars
+
+21-30 sec: (Voice - Over continues) Focus on the line henceforward the Toyota Prius and the Chevrolet Volt, which fluctuate but show a general upward trend with increasing age (based on the data provided). Subtitle: Hybrid cars like the Prius and Volt exhibit more service calls as they age
+
+31-40 sec: (Voice - Over continues) Transition to the lines for the Honda Insight and the Nissan Leaf, which also fluctuate but tend to plateau or even decrease after a certain age. Subtitle: The Honda Insight and Nissan Leaf, however, show more consistency
+
+41- 50 sec: (Voice - Over continues) Explain that the reliability of a car often relates to its design and technology. Name the unique features of each car, focusing on their hybrid or electric technology. Subtitle: Reliability can be linked to design and technology. Wind-back on technical features of these vehicles
+
+51- 59 sec: (Voice - Over concludes) Summarize by saying even though there's variation, multiple factors contribute to the reliability of a car, including its design, technology and even how it's used. End with a rhetorical question, like Which car would you bet on for reliability? Subtitle: Variation is seen but many factors determine a car's reliability. Which one would be your choice?
+
+Note: This is an interpretation of the data provided and not an assertion about the reliability of these specific vehicles.
+
+
+-------------------------
+
+best-reliable-trucks-for-towing
+Video Script:
+
+[Scene 1]
+(Visuals: Display all four truck models)
+Narrator (North Male Voice): Looking to find the most reliable trucks for towing? Let's dive into some facts.
+
+[Scene 2]
+(Visuals: Representative Line Graph of service calls for each truck model over time)
+Narrator: From service call statistics, it's clear that as trucks age, their need for service calls increases.
+
+[Scene 3]
+(Visuals: Zoom into Ford F-150)
+Narrator: The Ford F-150, a perennial favorite, requires the highest number of calls around the fourth year, but this declines afterward, showcasing its resilience.
+
+[Scene 4]
+(Visuals: Switch to Chevrolet Silverado)
+Narrator: The Chevrolet Silverado peaks at its fourth year, and then the calls decrease, showing its durability and longevity.
+
+[Scene 5]
+(Visuals: Transition to Toyota Tundra)
+Narrator: The Toyota Tundra also demonstrates reliable behavior, with a brief spike in the ninth year.
+
+[Scene 6]
+(Visuals: Finally Nissan Titan)
+Narrator: However, the Nissan Titan shows the highest number of service calls, particularly around the 6th year.
+
+[Scene 7]
+(Visuals: Comparisons among all 4 models with highlighting features and common issues)
+Narrator: Understanding these stats and the unique design features of each truck can help prospective buyers choose the most reliable truck for towing.
+
+[Scene 8]
+(Visuals: Display all four truck models)
+Narrator: Whether you value the aluminum-alloy body and steel frame of the Ford F-150, the rugged design of the Chevrolet Silverado, the powerful V8 of the Toyota Tundra, or the high towing capacity of the Nissan Titan, the choice is yours!
+
+[Subtitles will be placed at the bottom throughout the video.] 
+
+(Ensure the video is cut short, not exceeding the 59-second mark.)

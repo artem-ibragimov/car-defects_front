@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { AVAILABLE_LOCALES } from '$lib/i18n';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
 	import Logo from '$lib/view/Logo.svelte';
 	import { _ } from 'svelte-i18n';
@@ -7,30 +6,30 @@
 	import Content from './Content.svelte';
 	import { PUBLIC_ORIGIN } from '$env/static/public';
 
-	export let i18nPath: string;
-	export let title: string;
-	export let description: string;
-	export let keywords: string;
-	export let content: string;
-	export let name: string;
+	export let article_name: string;
+	export let locale: string;
+
+	const i18nPath = `text.article.${article_name}`;
+	$: title = $_(`${i18nPath}.title`);
+	$: description = $_(`${i18nPath}.description`);
+	$: keywords = $_(`${i18nPath}.keywords`);
+	$: content = $_(`${i18nPath}.text`);
 
 	const date = new Date().toISOString();
 
-	const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.png`;
+	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.png`;
 
 	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
 		headline: title,
-		// image: poster,
+		image: poster,
 		datePublished: date,
 		dateModified: date,
 		articleBody: content,
 		about: description
 	});
-	const SIZES = [320, 640, 1280];
-	$: srcset = name ? SIZES.map((w) => `/assets/img/${name}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
 <svelte:head>
@@ -42,10 +41,7 @@
 	<meta name="og:title" property="og:title" content={title} />
 	<meta property="og:image" content={poster} />
 	<meta property="og:type" content="article" />
-	<meta property="og:locale" content="en" />
-	{#each AVAILABLE_LOCALES as locale}
-		<meta property="og:locale:alternate" content={locale} />
-	{/each}
+	<meta property="og:locale" content={locale} />
 	<meta property="og:description" content={description} />
 
 	<meta property="twitter:card" content="summary_large_image" />
