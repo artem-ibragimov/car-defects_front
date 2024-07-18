@@ -29,7 +29,7 @@ const openai = new OpenAI(configuration);
 try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split('\n');
-	generateTopics(topics).then(saveTopic).catch(error);
+	generateTopics(topics);
 } catch (error) {
 	error(error);
 }
@@ -69,11 +69,11 @@ function generateTopics(topics) {
 	if (!unposted) {
 		return Promise.resolve(topics);
 	}
-	const unpostedIndex = topics.findIndex((t) => t == unposted);
-	topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 	return generateByTopic(unposted)
 		.catch(error)
 		.then(() => {
+			const unpostedIndex = topics.findIndex((t) => t == unposted);
+			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 			info(`${unposted} done`);
 			saveTopic(topics);
 			// return generateTopics(topics);
@@ -165,7 +165,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `poster for article "${topic}", use all width, no  text, –ar 2:1`,
+		prompt: `poster for article "${topic}", fullscreen, no text, –ar 2:1`,
 		name: article_name
 	});
 
@@ -198,7 +198,7 @@ describe the design features of the cars, use maximum technical details,
 
 	log(
 		'video',
-		article_name,
+		`https://car-defects.com/articles/en/${article_name}`,
 		`${prompt}, Create instructions for the video maker to create a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
 	);
 
