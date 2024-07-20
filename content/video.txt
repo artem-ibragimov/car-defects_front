@@ -21,3 +21,46 @@ Video Script Instruction:
 - Conclude with an arresting visual of Toyota RAV4 and Honda CR-V on a scenic road and add voiceover: When it comes to reliability, the Toyota RAV4 and Honda CR-V are clearly ahead of the pack.” 
 
 - Lastly, add subtitles at the bottom synchronized with the voiceover, choose an appealing music bed, ensuring it does not overpower the narrator’s voice. Remember, time limit is 59 seconds.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/ford-escape-vs-chevrolet-equinox-maintenance
+Video Script:
+
+[00:00-00:05]
+(Narrator, with a warm male voice) 
+Let's compare the Ford Escape and the Chevrolet Equinox in terms of reliability based on car service call statistics.
+
+[00:06-00:12]
+(Text on screen: Ford Escape VS Chevrolet Equinox)
+(Visuals: Two cars, Ford and Chevrolet are shown on the screen)
+
+[00:13-00:20]
+(Narrator)
+In general, the Ford Escape has more service calls than the Chevrolet Equinox across all car ages.
+
+[00:21-00:31]
+(Visuals: Graph showing Ford Escape's service calls)
+(Narrator)
+Looking at the Ford Escape, there's a notable rise in service calls as the car ages, the peak is at around the fourth year.
+
+[00:32-00:40]
+(Visuals: Graph showing Chevrolet Equinox's service calls)
+(Narrator)
+In contrast, the Chevrolet Equinox sees its highest number of service calls within its first year, then it decreases significantly.
+
+[00:41-00:50]
+(Narrator)
+The differences in service calls may be attributed to the cars' distinct design features and engineering.
+(Visuals: Close-ups of the key features of both cars)
+
+[00:51-00:59]
+(Narrator)
+To sum up, if you're choosing between the Ford Escape and Chevrolet Equinox, you might want to consider these reliability stats.
+(Visuals: Overhead shot of both cars)
+
+_Subtitles at the bottom screen as per the narration. 
+
+Technical details:
+Broadly speaking, the Ford Escape has more sophisticated components, that could account for higher service calls, such as an automatic transmission and All-Wheel-Drive system. On the other hand, Chevrolet Equinox, while less complex, has its own set of mechanical parts like an inline engine, which could account for its service calls, especially in the first year.

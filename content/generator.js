@@ -326,7 +326,10 @@ function getCars(topic) {
 		.create({
 			model: 'gpt-3.5-turbo',
 			messages: [
-				{ role: 'user', content: `get list of competitors car model names of "${topic}"` }
+				{
+					role: 'user',
+					content: `get list of car model names of "${topic}", select only cars of the same class and price segment`
+				}
 			],
 			temperature: 0.1
 		})
