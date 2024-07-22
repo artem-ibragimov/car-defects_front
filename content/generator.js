@@ -192,7 +192,7 @@ draw conclusions, explain the results from the technical point of view,
 describe the design features of the cars, use maximum technical details,
 `;
 
-	const article_query = `${prompt}, formalize everything in the form of a technical article on the topic "${topic}" of 10000 characters of the automobile website.
+	const article_query = `${prompt}, formalize everything in the form of  article "${topic}" of 10000 characters.
 		Don’t Use Repetitive Sentences.
 		use markdown markup.`;
 
@@ -328,7 +328,7 @@ function getCars(topic) {
 			messages: [
 				{
 					role: 'user',
-					content: `get list of car model names of "${topic}", select only cars of the same class and price segment`
+					content: `get list of car model names for article "${topic}" to compare, select only cars of the same class and price segment`
 				}
 			],
 			temperature: 0.1

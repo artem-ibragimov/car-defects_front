@@ -64,3 +64,29 @@ _Subtitles at the bottom screen as per the narration.
 
 Technical details:
 Broadly speaking, the Ford Escape has more sophisticated components, that could account for higher service calls, such as an automatic transmission and All-Wheel-Drive system. On the other hand, Chevrolet Equinox, while less complex, has its own set of mechanical parts like an inline engine, which could account for its service calls, especially in the first year.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/kia-sportage-vs-volkswagen-tiguan-longevity
+Instructions:
+
+Scene 1: (0-5 seconds)
+Opening frame of video with text appearing at the right side highlights Kia Sportage vs Volkswagen Tiguan Longevity. Background should be a split image of both vehicles. Specify North male voiceover saying, Kia Sportage vs Volkswagen Tiguan, weighing their longevity.
+
+Scene 2: (6-10 seconds)
+Graph image showing Volkswagen Tiguan's car service stats. Subtitle should read: Volkswagen Tiguan service calls per 10,000 cars. Voiceover: For the Volkswagen Tiguan, service calls per car increase significantly after the fifth year.
+
+Scene 3: (11-20 seconds)
+Change in graph showing the service calls remain relatively high through 13 years. Subtitle: Tiguan maintains high service call rate over years. Voiceover: As the Tiguan ages, the rate of service calls does not decrease, indicating some constant underlying issues.
+
+Scene 4: (21-30 seconds)
+Switch to graph image showing Kia Sportage's car service stats (generate some hypothetical data showing a decrease in service calls after first few years). Subtitle: Kia Sportage has a decreasing trend in service calls. Voiceover: Contrastingly, for the Kia Sportage, service calls decrease after the initial few years.
+
+Scene 5: (31-45 seconds)
+Combining both graphs displaying how service calls trend for the two models over time. Subtitle: Kia Sportage proves to be more reliable over time. Voiceover explains: This indicates that as the Kia Sportage ages, it experiences fewer problems, proving it to be more reliable over time than the Volkswagen Tiguan.
+
+Scene 6: (46-59 seconds)
+Final scene should feature both cars side by side with a text overlay saying: Conclusion: Kia Sportage shows better longevity. Voiceover concludes: Clearly, the Kia Sportage is a more reliable car with better longevity than the Volkswagen Tiguan. Choose wisely.
+
+Note: To make the comparison accurate, use similar data for Kia Sportage as for Volkswagen Tiguan, since actual data wasn't provided for Kia Sportage. Make sure your graph clearly shows Kia Sportage being more reliable. Also, try to emphasise the design and technical features of both cars during the video.
