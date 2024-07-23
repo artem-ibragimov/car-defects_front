@@ -90,3 +90,35 @@ Scene 6: (46-59 seconds)
 Final scene should feature both cars side by side with a text overlay saying: Conclusion: Kia Sportage shows better longevity. Voiceover concludes: Clearly, the Kia Sportage is a more reliable car with better longevity than the Volkswagen Tiguan. Choose wisely.
 
 Note: To make the comparison accurate, use similar data for Kia Sportage as for Volkswagen Tiguan, since actual data wasn't provided for Kia Sportage. Make sure your graph clearly shows Kia Sportage being more reliable. Also, try to emphasise the design and technical features of both cars during the video.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/reliable-compact-suvs-2024
+Video Instructions:
+
+Scene 1:
+(0-5 seconds)
+Video starts with bold text Reliable Compact SUVs, 2024 popping up on screen. North Male Voiceover (NMV): Reliability in compact SUVs is a must for buyers.
+
+Scene 2:
+(5-10 seconds)
+Show graphs displaying service call stats for Toyota RAV4, Honda CR-V, Subaru Forester, and Mazda CX-5. NMV: Let's analyze the car service calls statistics for four popular compact SUV models. 
+
+Scene 3:
+(10-30 seconds)
+Highlight each car's graph, starting with Toyota RAV4, then Honda CR-V, Subaru Forester, and finally Mazda CX-5. NMV: As cars age, we see varying rates of service calls per 10,000 cars sold. The Toyota RAV4 and Honda CR-V show a higher call volume in the first few years, while the Subaru Forester and Mazda CX-5 show steadier rates, peaking in the fourth year for the Forester.
+
+Scene 4:
+(30-40 seconds)
+Show images of each car model as each name is said. NMV: This could be due to design differences among the models, such as Toyota's proven reliability and Honda's advanced safety features. Subaru's Forester has a robust boxer engine design, while Mazda's CX-5 has a Skyactiv technology.
+
+Scene 5:
+(40-55 seconds)
+Show a side-by-side comparison of all four cars. NMV: All have their unique selling points, but fewer service calls often signify a more reliable car. By this measure, the Mazda CX-5 seems to be the most reliable compact SUV.
+
+Scene 6:
+(55-59 seconds)
+End screen with the video title Reliable Compact SUVs, 2024 and a call-to-action, like Subscribe now. NMV: If reliability is crucial for you, consider these statistics before making your next compact SUV purchase! Subscribe for more car insights.
+
+Note: Ensure the data display is easy to comprehend, subtitles are clear and sync with the voiceover.

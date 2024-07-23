@@ -62,3 +62,4 @@ reliability-of-turbocharged-cars
 reliable-cars-for-new-drivers
 reliable-family-suvs-compared
 reliable-minivans-for-families
+suv-reliability-comparison
