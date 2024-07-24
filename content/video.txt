@@ -1,30 +1,4 @@
 
-
-
--------------------------
-
-https://car-defects.com/articles/en/toyota-rav4-vs-honda-cr-v-reliability
-The analysis of this data reveals interesting insights into the reliability of the four cars: Toyota RAV4, Honda CR-V, Ford Escape, and Subaru Forester. Toyota RAV4 and Honda CR-V take the lead in reliability, with lower service calls per 10,000 cars sold across the 13-year period. Ford Escape, on the other hand, shows a spike in service calls over the age with the highest rate at 3 years old. Subaru Forester's reliability seems to improve over the years.
-
-Reliability often comes down to model-specific features and overall manufacturer quality. Toyota and Honda are well-known for their long-lasting engines and quality assembly. There are fewer system-wide problems with their models, which can be attributed to their focus on engineering and continuous improvement. 
-
-Video Script Instruction: 
-
-- Start with an aerial shot of the four cars with the captions Toyota RAV4, Honda CR-V, Ford Escape, and Subaru Forester. 
-
-- Transition with a graph showing the service calls. Add a voiceover: When comparing the number of service calls per 10,000 cars sold, Toyota RAV4 and Honda CR-V clearly outperform. 
-
-- Move to highlight Toyota RAV4 and Honda CR-V more closely. Use a voiceover: Toyota and Honda have a reputation for long-lasting engines and a focus on quality engineering. 
-
-- Visualize the service calls data for Toyota RAV4 and Honda CR-V with a comparative bar graph, and underscore their performance. Voiceover: As the cars aged, Toyota RAV4 and Honda CR-V had fewer required service calls, showing their superior reliability. 
-
-- Conclude with an arresting visual of Toyota RAV4 and Honda CR-V on a scenic road and add voiceover: When it comes to reliability, the Toyota RAV4 and Honda CR-V are clearly ahead of the pack.” 
-
-- Lastly, add subtitles at the bottom synchronized with the voiceover, choose an appealing music bed, ensuring it does not overpower the narrator’s voice. Remember, time limit is 59 seconds.
-
-
--------------------------
-
 https://car-defects.com/articles/en/ford-escape-vs-chevrolet-equinox-maintenance
 Video Script:
 
@@ -122,3 +96,42 @@ Scene 6:
 End screen with the video title Reliable Compact SUVs, 2024 and a call-to-action, like Subscribe now. NMV: If reliability is crucial for you, consider these statistics before making your next compact SUV purchase! Subscribe for more car insights.
 
 Note: Ensure the data display is easy to comprehend, subtitles are clear and sync with the voiceover.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/most-durable-crossover-suvs
+Video Instructions:
+
+Content: 
+
+Start the video by displaying the graph that showcases the data, making sure that it is clear and easy to read, but not too flashy to distract from the content of the video. 
+
+1. (Voiceover & On Screen): We have analyzed the service calls data of four crossover SUVs: Toyota RAV4, Honda CR-V, Subaru Forester, and Mazda CX-5. As you mention each car name, highlight it on the graph. 
+
+2. (Voiceover & On Screen): Based on the stats, we found that as cars get older, they tend to need more maintenance work. However, this trend is different for these four models. Now show on the graph how the curves for each car dramatically climbing up as the age of the car increases.
+
+3. (Voiceover & On Screen): Surprisingly, the Mazda CX-5 only reaches a peak at the age of 6 and then decreases, showing its high durability even at older ages. Highlight Mazda CX-5 on the graph and briefly explain its key design features such as Skyactiv technology that enhance durability.
+
+4. (Voiceover & On Screen): The Toyota RAV4 and Honda CR-V show similar trends, with an initial high number of service calls that steadily decrease as the car ages. Highlight Toyota RAV4 and Honda CR-V on the graph and briefly discuss their reliability, such as Toyota's reputation for long-lasting vehicles and Honda's performance-driven design.
+
+5. (Voiceover & On Screen): The Subaru Forester is a solid choice as well, with a relatively low number of service calls throughout its lifespan. Highlight Subaru Forester and briefly explain its design features, like it's boxy engine design and well-known all-wheel drive system.
+
+6. (Voiceover & On Screen): In conclusion, while all these cars are reliable choices, the Mazda CX-5 stands out with fewer service calls as it ages. Reiterate the main points and end with a shot of all four cars.
+
+Voice:
+
+- North American Male voice
+- Clear and authoritative, but not overly dramatic
+- Speak slowly and clearly to ensure comprehension
+
+Visuals:
+
+- Use clear, uncluttered graphics to illustrate points
+- Use each car's brand colors when highlighting them on the graph
+- Include subtitles at the bottom to assist those watching without sound
+
+Duration:
+
+- 59 seconds; each point should be approximately 10 seconds in length
+- Use simple, straight-to-the-point language to ensure fit within time limit.
