@@ -135,3 +135,29 @@ Duration:
 
 - 59 seconds; each point should be approximately 10 seconds in length
 - Use simple, straight-to-the-point language to ensure fit within time limit.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/bmw-3-series-vs-mercedes-c-class-reliability
+Analyzing the data, it can be observed that the Audi A4 generally receives more service calls per 10,000 cars sold when compared to the Lexus IS. This could potentially indicate that the Audi A4 is less reliable in terms of requiring more frequent servicing, particularly when the cars are between 0 and 6 years old. After this, the service calls for the Audi A4 tend to decrease, whereas the Lexus IS maintains a more stable number of calls.
+
+From a technical point of view, it could be that the Audi A4 requires more maintenance due to its complex design or the specific materials used in its manufacture. On the other hand, the Lexus IS may be built with reliability in mind, using more durable components.
+
+Now let's move to the video instructions: 
+
+1. Start with an opening shot of the BMW 3 Series and Mercedes C-Class parked side by side. The subtitle should read BMW 3 Series vs Mercedes C-Class Reliability.
+
+2. The North Male Voice begins: When it comes to reliability, comparing the BMW 3 Series to the Mercedes C-Class is an interesting case.
+
+3. Visuals of both cars' engines with subtitles: Both cars have cutting-edge engineering but they are not without their need for service.
+
+4. Show data-based graphs matching the voiceover: Data analysis shows that newer Audi A4's require more frequent servicing as compared to Lexus IS.
+
+5. Specifications and design features of each car popping up: This could be due to Audi's complex design or specific manufacturing materials, whereas Lexus IS might be using more durable components.
+
+6. Show the logo of BMW and Mercedes as the voice concludes: In conclusion, when choosing between BMW 3 Series and Mercedes C-Class, consider not only performance and style but also service reliability.
+
+7. Fade out to the ending screen with BMW 3 Series vs Mercedes C-Class reliability and your channel's logo.
+
+Please note that this is a suggestive instruction, and the actual reliability comparison between BMW 3 Series and Mercedes C-Class must be based on respective car's service data which is not provided here.

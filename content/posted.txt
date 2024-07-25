@@ -64,3 +64,4 @@ reliable-family-suvs-compared
 reliable-minivans-for-families
 suv-reliability-comparison
 sports-car-reliability-rankings
+sports-sedan-reliability-comparison
