@@ -161,3 +161,37 @@ Now let's move to the video instructions:
 7. Fade out to the ending screen with BMW 3 Series vs Mercedes C-Class reliability and your channel's logo.
 
 Please note that this is a suggestive instruction, and the actual reliability comparison between BMW 3 Series and Mercedes C-Class must be based on respective car's service data which is not provided here.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/audi-a4-vs-lexus-is-durability
+Here are the instructions:
+
+Video Timeline:
+
+0-5 sec:
+(Show: North Male Voice Overlapping - Audi A4 vs Lexus IS durability)
+Subtitles: Audi A4 vs Lexus IS Durability Based on Car Service Call Statistics
+
+5-15 sec:
+(Show: Bar graph comparison - Audi A4 and Lexus IS Age vs Service Calls)
+Subtitles: Key represents car's age while Value represents number of service calls per 10000 cars sold
+
+15-30 sec:
+(Appears: Animated Audi A4)
+Subtitles: Audi A4 shows higher service calls especially for older ages, peaking at 16.93 calls for age 0 cars
+
+30-45 sec:
+(Appears: Animated Lexus IS beside Audi A4)
+Subtitles: Lexus IS, shows fewer service calls across all ages, peaking at 4.42 calls for age 7 cars
+
+45-55 sec:
+(Appears: Text Reliability?)
+North Male Voice Overs with Subtitles: Based on these data, Lexus IS seems to be the more reliable car due to fewer service calls.
+
+55-59 sec:
+(Show: North Male Voice Overlapping - This is a basic comparison and individual experiences may vary)
+Subtitles: This is a basic comparison; individual experiences may vary
+
+Note: The overcrowded data for Audi A4 may be due to the fact that Audi A4 is more popular/common, hence more service calls. In terms of design and tech, Audi A4 is historically known for advanced tech, comfort, and safety features, while the Lexus IS also places a strong emphasis on comfort and includes sporty handling in some models. Refer to detailed car specs for more technical details.
