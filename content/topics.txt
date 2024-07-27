@@ -8,13 +8,13 @@ Best small SUV for reliability:generated
 Most durable crossover SUVs:generated
 BMW 3 Series vs Mercedes C-Class reliability:generated
 Audi A4 vs Lexus IS durability:generated
-Infiniti Q50 vs Acura TLX maintenance costs
-Jaguar XE vs Genesis G70 repair frequency
-Volvo S60 vs Cadillac CT5 longevity
-Reliable luxury sedans 2024
-Best luxury car for long-term use
-Affordable reliable luxury cars
-Most durable premium sedans
+Infiniti Q50 vs Acura TLX maintenance costs:generated
+Jaguar XE vs Genesis G70 repair frequency:generated
+Volvo S60 vs Cadillac CT5 longevity:generated
+Reliable luxury sedans 2024:generated
+Best luxury car for long-term use:generated
+Affordable reliable luxury cars:generated
+Most durable premium sedans:generated
 BMW vs Audi reliability comparison
 Ford F-150 vs Chevy Silverado reliability
 Ram 1500 vs Toyota Tundra durability

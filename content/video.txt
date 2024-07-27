@@ -195,3 +195,27 @@ North Male Voice Overs with Subtitles: Based on these data, Lexus IS seems to be
 Subtitles: This is a basic comparison; individual experiences may vary
 
 Note: The overcrowded data for Audi A4 may be due to the fact that Audi A4 is more popular/common, hence more service calls. In terms of design and tech, Audi A4 is historically known for advanced tech, comfort, and safety features, while the Lexus IS also places a strong emphasis on comfort and includes sporty handling in some models. Refer to detailed car specs for more technical details.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/affordable-reliable-luxury-cars
+Analysis:
+It can be inferred by the data that the Lexus IS tends to be more reliable than the Audi A3 based on the frequency of service calls. The Audi A3's service calls begin to increase significantly after the car is 2 years old, peaking around the age of 4 and 5, then starting to subside. On the other hand, the Lexus IS's service calls stay relatively low even after 7 years, suggesting that it encounters fewer issues needing repairs.
+
+Instruction for Video:
+
+Title: Affordable Reliable Luxury Cars – Lexus IS vs Audi A3
+
+1. Start with a split-screen view of the Audi A3 and Lexus IS, with the respective service call statistics displayed against the age of the car (0-7 seconds).
+2. Voice-over (North male voice): When it comes to balancing luxury with reliability, the Lexus IS holds the edge over the Audi A3. Let's take a closer look. 
+3. Shift to the Audi A3 graphics, zoom into the service call stats. Show the increasing trend with age (8-20 seconds).
+4. Voice Over (V.O): With the Audi A3, we see service calls climbing at year two and peaking at year 4 and 5.
+5. Switch screen to Lexus IS, zoom into its stats showing their low maintenance frequency (21-33 seconds).
+6. V.O: However, the Lexus IS maintains a low count of service calls even past the 7-year mark.
+7. Shift to a comparison view, show both graphs together (34-45 seconds).
+8. V.O: This suggests that the Lexus IS encounters fewer issues over the years. Superior built quality and careful engineering may contribute to this reliability.
+9. Final shot of both cars with the tagline Lexus IS: Luxury that lasts (46-59 seconds).
+10. V.O: For affordable luxury that stands the test of time - choose Lexus IS. Please put subtitles at the bottom of the screen. 
+
+Please note, this video is aimed to be informative, so graph visuals should be simple and straight. Choice of the ideal car may vary depending upon personal preferences and usage.
