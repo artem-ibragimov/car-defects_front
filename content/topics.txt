@@ -15,13 +15,11 @@ Reliable luxury sedans 2024:generated
 Best luxury car for long-term use:generated
 Affordable reliable luxury cars:generated
 Most durable premium sedans:generated
-BMW vs Audi reliability comparison
-Ford F-150 vs Chevy Silverado reliability
-Ram 1500 vs Toyota Tundra durability
-Nissan Titan vs GMC Sierra maintenance costs
-Honda Ridgeline vs Ford Ranger repair frequency
-Chevy Colorado vs Toyota Tacoma longevity
-Reliable pickup trucks 2024
+BMW vs Audi reliability comparison:generated
+Ford F-150 vs Chevy Silverado reliability:generated
+Ram 1500 vs Toyota Tundra durability:generated
+Chevy Colorado vs Toyota Tacoma longevity:generated
+Reliable pickup trucks 2024:generated
 Best truck for reliability
 Long-lasting pickup trucks
 Affordable reliable trucks
