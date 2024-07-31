@@ -346,3 +346,26 @@ Voiceover: “Choose wisely when considering your next truck. For durability, re
 End Frame: (Fade out the video with the logo of your channel/company)
 
 [Note: The script assumes that the data comparing service calls of the three trucks reveal Toyota Tacoma as the most reliable. Modify as needed based on actual data.]
+
+
+-------------------------
+
+https://car-defects.com/articles/en/affordable-reliable-trucks
+The analysis of the data illustrates interesting details in terms of car reliability. 
+
+The Ford Ranger shows a consistent decrease in service calls as the age of the vehicle increases. This suggests better long-term reliability when compared with the other trucks in the data set. 
+
+The Toyota Tacoma has a moderate number of service calls for the first few years, but this number also decreases with age, similar to the Ford Ranger. This suggests that the Tacoma also has fair long-term reliability. 
+
+The Chevrolet Colorado has a high number of service calls throughout the vehicle's life, with a particular spike in the first five years. This suggests there might be common issues with this model that often require service attention. 
+
+The Nissan Frontier, interestingly, starts with relatively few calls but shows an increase over time, hitting a peak at 6-9 years. This implies that while new models might be reliable, issues may come up over time. 
+
+Technical details can explain these trends. The Ford Ranger, for example, is known for simplicity and rugged design, which potentially leads to fewer service calls. Toyota, on the other hand, emphasizes quality and reliability, which might explain Tacoma's desirable performance. The Chevrolet Colorado might have specific design or manufacturing issues that result in more servicings. As for Nissan Frontier's trend, specific parts like timing belts, or differential system might become problematic as the car ages.
+
+Video Instructions:
+(0-15 seconds): Display the graph, highlight each car model one by one, explaining their trends. 
+(15-30 seconds): Talk about Ford Ranger, mention reliability and design. Show a Ford Ranger image. 
+(30-45 seconds): Talk about Toyota Tacoma, mention quality. Show a Tacoma image; briefly touch Chevrolet Colorado and Nissan Frontier, showing respective models. 
+(45-59 seconds): Wrap up the video with a sentence like Choose wisely for long-term reliability and place the logo of an affordable, reliable truck. 
+Use a North male voice narration and place subtitles at the bottom throughout the video.
