@@ -369,3 +369,71 @@ Video Instructions:
 (30-45 seconds): Talk about Toyota Tacoma, mention quality. Show a Tacoma image; briefly touch Chevrolet Colorado and Nissan Frontier, showing respective models. 
 (45-59 seconds): Wrap up the video with a sentence like Choose wisely for long-term reliability and place the logo of an affordable, reliable truck. 
 Use a North male voice narration and place subtitles at the bottom throughout the video.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/most-durable-pickup-trucks
+Script:
+
+[00:00 - 00:05] - (Establishing Shot) An over-the-shoulder perspective of a male narrator examining the provided data on a large computer monitor.
+
+Voice Over (VO): Let's analyze some data on the three top-selling pickup trucks; the Toyota Tundra, Ford F-150, and Chevrolet Silverado.
+
+[00:06 - 00:12] - (Graphical Representation) Graphs depicting the car service calls statistics for each truck gradually appear on the screen.
+
+VO: These charts represent the number of vehicle service calls per 10,000 cars sold over the age of the vehicle.
+
+[00:13 - 00:23] - (Comparison Shot) Switch between three separate charts indicating the performance of each vehicle.
+
+VO: The Toyota Tundra has the highest calls in the first four years but stabilizes indicating good long-term reliability. The Ford F-150 stays consistently high, while the Chevy Silverado has lower calls overall.
+
+[00:24 - 00:34] - (Features Display) Footage of Toyota Tundra detailing its advanced features.
+
+VO: The design features of these trucks play a substantial role in their reliability. Toyota's long-lasting performance can be attributed to its sturdy build and advanced aerodynamics.
+
+[00:35 - 00:45] - (Features Display) Footage of Ford F-150 and Chevrolet Silverado in a split-screen highlighting their salient features.
+
+VO: The Ford F-150, with its military-grade aluminum-alloy body and high-strength steel frame, and the Silverado’s durable cargo box and dependable powertrains contribute to their performances.
+
+[00:46 - 00:53] - (Conclusion Shot) Visuals of all three trucks with their respective data.
+
+VO: Overall, in terms of fewer service calls implying greater reliability, the Chevy Silverado leads, followed closely by the Tundra.
+
+[00:54 - 00:59] - (Ending Shot) Fade-out with the title 'Most Durable Pickup Trucks' appearing on screen.
+
+VO: This concludes a brief overview on the most durable pickup trucks based on service call data.
+
+(Subtitles should mirror the script at the bottom of the screen throughout the video.)
+
+
+-------------------------
+
+https://car-defects.com/articles/en/toyota-prius-vs-honda-insight-reliability
+Analysis:
+
+Analyzing the provided data, it is clear that the Toyota Prius experiences a higher frequency of service calls per 10,000 vehicles sold than the Honda Insight. We observe a general decrease in service calls with increasing car age, which could indicate that initial manufacturing problems are resolved over time.
+
+Also, the calls for Toyota reduce somewhat linearly, except around the 5th year, where they increase again, a possible hint at the part’s lifespan. The data for Honda, though significantly less than Toyota, shows a kind of a wave pattern which can be due to the model specific reason.
+
+Technical details:
+
+While both cars are popular hybrid models, the Toyota Prius uses a series-parallel hybrid system, which allows it to run on either the gas engine, electric motor, or both. This might lead to more potential issues, given the additional complexity.
+
+The Honda Insight, on the other hand, utilizes a parallel hybrid system, with its gas engine continuously providing power to the wheels and the electric motor serving as an assist. This simpler design may be contributing to the lower frequency of service calls.
+
+Video Script:
+
+[0:00-0:10] (Scene starts with two cars, Toyota Prius and Honda Insight on screen) Today, we're going to compare the reliability of two popular hybrid cars - the Toyota Prius and the Honda Insight.
+
+[0:11-0:20] (Pie Chart) The data we're looking at represents the number of service calls per 10,000 cars sold for each model over their life span.
+
+[0:21-0:31] (Graph goes up for Toyota Prius) With the Prius, we see a remarkably higher rate of service calls.
+
+[0:32-0:42] (Graph shows wave pattern for Honda) But for the Insight, although the rates are lower, there are unexpected rises and falls.
+
+[0:43-0:52] (Images of Prius and Insight cutaway showing internal workings) This could be due to the Prius's series-parallel hybrid system and Insight's parallel hybrid system.
+
+[0:53-0:59] (Two cars with brand logo at center) Though both cars have their perks, in terms of reliability, the simpler design of the Honda Insight takes the lead.
+
+[North male voice; Subtitles placed at the bottom]

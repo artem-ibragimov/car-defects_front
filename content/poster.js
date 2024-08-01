@@ -7,7 +7,9 @@ try {
 	const file = './content/posted.txt';
 	const posted = readFileSync(file).toString().split('\n');
 	const json = JSON.parse(readFileSync(`src/lib/i18n/article_en.json`).toString());
-	const poster = Object.keys(json.text.article).filter((t) => !posted.includes(t))[0];
+	const poster = Object.keys(json.text.article)
+		.filter((t) => !posted.includes(t))
+		.pop();
 	const link = `https://car-defects.com/articles/en/${poster}/`;
 	const read_more = `...\n\nRead more: ${link}`;
 	post({
