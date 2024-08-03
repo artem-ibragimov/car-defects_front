@@ -437,3 +437,26 @@ Video Script:
 [0:53-0:59] (Two cars with brand logo at center) Though both cars have their perks, in terms of reliability, the simpler design of the Honda Insight takes the lead.
 
 [North male voice; Subtitles placed at the bottom]
+
+
+-------------------------
+
+https://car-defects.com/articles/en/ford-fusion-hybrid-vs-toyota-camry-hybrid-maintenance
+Analysis:
+From the data, it seems that the Ford Fusion Hybrid has a higher rate of service calls as the car ages compared to the Toyota Camry Hybrid. The increased rate of service calls in the Ford Fusion Hybrid could indicate a decrease in performance and reliability over time. In contrast, the Toyota Camry Hybrid seems to maintain a relatively low and steady rate of service calls, even as the car ages, which could suggest better long-term reliability.
+
+Video Instructions: 
+
+0-5 sec: (Screen shows both cars side by side) If you've ever wondered how the Ford Fusion Hybrid measures up against the Toyota Camry Hybrid in terms of maintenance, we've got some insight for you. (Subtitles: Ford Fusion Hybrid vs Toyota Camry Hybrid Maintenance)
+
+6-10 sec: (Show graphic of service calls for both cars against car’s age) Statistically, the Ford Fusion Hybrid has a higher rate of service calls as the car ages, compared to the Toyota Camry Hybrid. (Subtitles: Higher service calls for Ford Fusion Hybrid as car ages)
+
+11-20 sec: (Display the Ford Fusion Hybrid with stats overlay) This could indicate varying degrees of performance and reliability as the car gets older... (Subtitles: Declining performance and reliability over time?)
+
+21-30 sec: (Switch to the Toyota Camry Hybrid with stats overlay) ... compared to the Toyota Camry Hybrid, which maintains a relatively low and steady rate of service calls, even as the car ages. (Subtitles: Steady performance and reliability over time)
+
+31-40 sec: (Show clips of both cars on the road) There could be many technical reasons for these results like design features, parts durability, or build quality. (Subtitles: Design features, Parts durability, Build Quality)
+
+41-50 sec: (Show both cars side by side again) This data gives you a glimpse of long term maintenance for these two popular hybrid vehicles. (Subtitles: Ford Fusion Hybrid vs Toyota Camry Hybrid Maintenance, Draw your conclusions)
+
+51-59 sec: (Company logo or closing graphic on the screen) Stay informed and choose wisely. Don't forget to like, share, and subscribe for more car insights. (Subtitles: Like, share, and subscribe!)

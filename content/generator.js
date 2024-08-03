@@ -271,9 +271,9 @@ function generateArticle(article_name, locale, query, topic, url) {
 				Promise.all(
 					[
 						query,
-						`generate in ${locale} seo clickbait title for a technical article on the topic "${topic}" for the specialists of the automobile website`,
-						`generate in ${locale} seo description for a technical article on the topic "${topic}" for the specialists of the automobile website`,
-						`generate in ${locale} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}" for the specialists of the automobile website`
+						`generate in ${locale} seo clickbait title for a technical article on the topic "${topic}"`,
+						`generate in ${locale} seo description for a technical article on the topic "${topic}"`,
+						`generate in ${locale} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}"`
 					].map((query) =>
 						openai.chat.completions
 							.create({

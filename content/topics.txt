@@ -25,8 +25,8 @@ Long-lasting pickup trucks:generated
 Affordable reliable trucks:generated
 Most durable pickup trucks:generated
 Toyota Prius vs Honda Insight reliability:generated
-Hyundai Ioniq vs Kia Niro hybrid durability
-Ford Fusion Hybrid vs Toyota Camry Hybrid maintenance
+Hyundai Ioniq vs Kia Niro hybrid durability:generated
+Ford Fusion Hybrid vs Toyota Camry Hybrid maintenance:generated
 Chevy Volt vs Honda Clarity repair costs
 Lexus ES Hybrid vs Lincoln MKZ Hybrid longevity
 Reliable hybrid cars 2024
