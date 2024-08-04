@@ -460,3 +460,70 @@ Video Instructions:
 41-50 sec: (Show both cars side by side again) This data gives you a glimpse of long term maintenance for these two popular hybrid vehicles. (Subtitles: Ford Fusion Hybrid vs Toyota Camry Hybrid Maintenance, Draw your conclusions)
 
 51-59 sec: (Company logo or closing graphic on the screen) Stay informed and choose wisely. Don't forget to like, share, and subscribe for more car insights. (Subtitles: Like, share, and subscribe!)
+
+
+-------------------------
+
+https://car-defects.com/articles/en/reliable-hybrid-cars-2024
+Title: Reliable Hybrid Cars 2024
+
+Video Making Instructions:
+
+1. Start the video with a panning shot of the four hybrid cars mentioned: Toyota Prius, Honda Insight, Ford Fusion Hybrid, and Chevrolet Malibu Hybrid.
+Voiceover (VO): Meet the leaders of hybrid technology: Toyota Prius, Honda Insight, Ford Fusion Hybrid, and Chevrolet Malibu Hybrid.
+
+2. Show a graph depicting the car service calls data. Highlight each car one-by-one as the voiceover describes the stats.
+VO: Statistically, the Toyota Prius demonstrates the highest reliability with fewer service calls as the vehicle ages. Honda Insight follows a similar yet more pronounced trend with fewer service calls in general.
+
+3. Proceed with visuals of the engines, batteries and internal components of each car with quick shots. 
+VO: This can be attributed to their advanced hybrid engines, long-lasting battery technology, quality of components.
+
+4. Transition to shots of the Toyota Prius and Honda Insight on the road, showing their smooth operation.
+VO: Both Toyota Prius and Honda Insight have earned their reputation by delivering consistent, superior performance.
+
+5. Highlight the car design features. Show visuals of high-quality materials, hybrid drivetrains, aerodynamic designs.
+VO: Their hybrid drivetrains maximize efficiency, while the aerodynamic designs reduce resistance and increase fuel efficiency.
+
+6. End the video with a shot of all four cars, indicating that all are great choices.
+VO: While Ford Fusion Hybrid and Chevrolet Malibu Hybrid show higher service calls with age, they still remain strong competitors in the hybrid market.
+
+7. Fade out with the text Reliable Hybrid Cars 2024 appearing on the screen.
+VO: When it comes to reliability in the hybrid category, these are your top picks for 2024.
+
+Remember, the voiceover should be a north male voice. Please place subtitles at the bottom and limit the video to 59 seconds.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/honda-civic,-vw-golf-and-mazda-3-reliability-statistics-analysis
+Video Script:
+
+[0:00-0:05]
+(Video starts with a graph comparing service calls for Honda Civic and Mazda 3 with the age of cars as the x-axis and number of service calls per 10,000 cars sold as the y-axis. Graph lines animate according to the provided data.)
+Narration: Today, we compare the reliability of Honda Civic and Mazda 3 based on service call statistics.”
+
+[0:06-0:10]
+(Visual emphasis on Honda Civic's graph line, showing it's higher at first but decreases with age)
+Narration: The Honda Civic starts with higher service calls which reduce as the car ages.
+
+[0:11-0:15]
+(Visual emphasis shifts to Mazda 3's graph line, showing it's relatively lower but increases over time)
+Narration: The Mazda 3, on the other hand, sees a rise in service calls as the car gets older.
+
+[0:16-0:25]
+(Visuals shift to images and clips of Honda Civic, showcasing design features: Engine, suspension type etc)
+Narration: The Honda Civic's reliability might be due to its robust engine, advanced suspension system, and other technical features.
+
+[0:26-0:35]
+(Visuals shift to images and clips of Mazda 3, emphasizing technical features: Interior, turbocharging mechanism etc)
+Narration: Meanwhile, certain technical aspects like Mazda 3's turbocharging might lead to increased service calls over time.
+
+[0:36-0:45]
+(Visuals change to side-by-side comparisons of the Honda Civic and Mazda 3, detailing similarities and differences)
+Narration: While both cars have their pros and cons, both continue to be loved by many around the globe.
+
+[0:46-0:59]
+(Video ends with a visual of both cars displayed side by side with the text: 'Reliability is a journey, not a destination' appears)
+Narration: Ultimately, car reliability is a journey, not a destination. Find the one that suits your journey best.
+
+(Subtitles should be placed at the bottom of the video and also include timestamps.)
