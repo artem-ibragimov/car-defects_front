@@ -31,10 +31,10 @@ Chevy Volt vs Honda Clarity repair costs:generated
 Lexus ES Hybrid vs Lincoln MKZ Hybrid longevity:generated
 Reliable hybrid cars 2024:generated
 Honda Civic, VW Golf and Mazda 3 reliability statistics analysis:generated
-Best hybrid for reliability
-Long-lasting hybrid vehicles
-Affordable reliable hybrid cars
-Most durable hybrid sedans
+Best hybrid for reliability:generated
+Long-lasting hybrid vehicles:generated
+Affordable reliable hybrid cars:generated
+Most durable hybrid sedans:generated
 Ford Mustang vs Chevy Camaro reliability
 Dodge Challenger vs Toyota Supra durability
 Nissan 370Z vs Mazda MX-5 Miata maintenance costs

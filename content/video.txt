@@ -527,3 +527,81 @@ Narration: While both cars have their pros and cons, both continue to be loved b
 Narration: Ultimately, car reliability is a journey, not a destination. Find the one that suits your journey best.
 
 (Subtitles should be placed at the bottom of the video and also include timestamps.)
+
+
+-------------------------
+
+https://car-defects.com/articles/en/long-lasting-hybrid-vehicles
+Voiceover (North Male Voice):
+Let's compare the reliability of three long-lasting hybrid vehicles. On the screen, you'll see a graph comparing the Toyota Prius, Honda Insight, and Ford Fusion Hybrid.
+
+As cars age, they naturally require more service calls. However, the function of calls in relation to age is different for each of these cars.”
+
+Frame 1 (5 seconds): Show a line graph of service calls for all three cars over time. 
+
+Voiceover:
+The Toyota Prius starts with a high service call rate at year zero, but we see a continuous decrease over time.
+
+Frame 2 (10 seconds): Highlight the Toyota Prius line.
+
+Voiceover:
+This likely reflects the Prius's strong build quality and the durability of its hybrid system, a combination of a 1.8-liter engine with an electric motor.
+
+Frame 3 (10 seconds): Highlight the Honda Insight line.
+
+Voiceover:
+The Honda Insight has fairly consistent service call rates, with little increase over the years. This could be attributed to its simplified hybrid system featuring an electric motor that assists a 1.3-liter engine.
+
+Frame 4 (10 seconds): Highlight the Ford Fusion Hybrid line.
+
+Voiceover:
+In contrast, the Ford Fusion Hybrid appears to require more service calls as it ages. This indicates, perhaps, a bit less reliability. Its sophisticated system combines a 2.5-liter engine with an electric motor.
+
+Frame 5 (10 seconds): Show all lines simultaneously.
+
+Voiceover:
+Though all three are remarkable hybrids, the Toyota Prius stands out as the most reliable based on the number of service calls.
+
+Frame 6 (10 seconds): Show a side by side by side image of the three cars.
+
+Voiceover:
+This data reveals insights into the longevity and reliability of these hybrid vehicles. Choose wisely, as a dependable hybrid could save you costly service calls down the line.
+
+Subtitle Locations:
+Display subtitles at the bottom-center of the screen so as not to interfere with the graph or images of the cars.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/most-durable-hybrid-sedans
+Graph Analysis Instructions:
+
+1. Start with a graph that clearly displays the service calls per 10000 cars sold for each of the mentioned hybrid sedans.
+
+2. Point out that the lower number of service calls per 10,000 cars sold, the more reliable the car is considered.
+
+3. Highlight Toyota Prius initially has the highest service calls with approximately 133 calls per 10000 cars, but these numbers significantly decrease as the car ages. This is likely due to excellent longevity and mechanical integrity, proving its reliability over the long run.
+
+4. Next, draw attention to the Honda Accord Hybrid, with respective service calls staying comparatively low throughout the years, but increasing numbers with age, unlike Prius. This might infer a consistency in manufacturing, but also an increased need for technical assistance as the vehicle gets older.
+
+5. Discuss Ford Fusion Hybrid's numbers starting modestly, but escalating drastically as the car ages, reaching its peak around the fourth year. These spike in service calls may imply possible failure of critical components.
+
+6. Lastly, present the Hyundai Sonata Hybrid's graph, which starts low but rises significantly, peaking around the sixth year before declining again. This could be due to issues that occur as the vehicle ages.
+
+7. Conclude by indicating that while all four cars have their respective strengths and weaknesses, the Toyota Prius seems to be the most durable hybrid sedan over time, as it requires the fewer service calls as it ages, compared to the others.
+
+Technical Details for Video:
+
+1. North Male voice: Calm, clear, and confident.
+2. A clear graph with proper labels.
+3. Use animations to highlight each car's service call numbers when discussing.
+4. Use visuals that represent each hybrid sedan.
+5. Display facts and details as bullet points or short texts.
+6. Include subtitles at the bottom of the screen.
+7. Maintain a consistent pace in the narration.
+
+Video content: 
+
+Welcome to our quick analysis of the most durable hybrid sedans based on service calls per 10000 cars sold. First off, we have the Toyota Prius, which starts high but impressively drops over the years, proving its long-term reliability. The Honda Accord Hybrid consistently sits on the lower side but observe a slight uptick as the vehicle ages. The Ford Fusion Hybrid exhibits a sharp increase, peaking around year 4, possibly hinting at component failures. Lastly, the Hyundai Sonata Hybrid shares a similar pattern, but with its peak around year 6. Among them, Toyota Prius takes the lead as the most durable hybrid sedan over time. Stay tuned for more. Thank you!
+
+Remember, this all in just 59 seconds! Let's make every second count!
