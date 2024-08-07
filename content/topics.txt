@@ -35,13 +35,13 @@ Best hybrid for reliability:generated
 Long-lasting hybrid vehicles:generated
 Affordable reliable hybrid cars:generated
 Most durable hybrid sedans:generated
-Ford Mustang vs Chevy Camaro reliability
-Dodge Challenger vs Toyota Supra durability
-Nissan 370Z vs Mazda MX-5 Miata maintenance costs
-Subaru BRZ vs Hyundai Veloster repair frequency
-BMW Z4 vs Audi TT longevity
-Reliable sports cars 2024
-Best sports car for reliability
+Ford Mustang vs Chevy Camaro reliability:generated
+Dodge Challenger vs Toyota Supra durability:generated
+Nissan 370Z vs Mazda MX-5 Miata maintenance costs:generated
+Subaru BRZ vs Hyundai Veloster repair frequency:generated
+BMW Z4 vs Audi TT longevity:generated
+Reliable sports cars 2024:generated
+Best sports car for reliability:generated
 Long-lasting sports cars
 Affordable reliable sports cars
 Most durable performance cars

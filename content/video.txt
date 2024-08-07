@@ -605,3 +605,53 @@ Video content:
 Welcome to our quick analysis of the most durable hybrid sedans based on service calls per 10000 cars sold. First off, we have the Toyota Prius, which starts high but impressively drops over the years, proving its long-term reliability. The Honda Accord Hybrid consistently sits on the lower side but observe a slight uptick as the vehicle ages. The Ford Fusion Hybrid exhibits a sharp increase, peaking around year 4, possibly hinting at component failures. Lastly, the Hyundai Sonata Hybrid shares a similar pattern, but with its peak around year 6. Among them, Toyota Prius takes the lead as the most durable hybrid sedan over time. Stay tuned for more. Thank you!
 
 Remember, this all in just 59 seconds! Let's make every second count!
+
+
+-------------------------
+
+https://car-defects.com/articles/en/best-sports-car-for-reliability
+Script:
+
+[Opening shot: The title BEST SPORTS CAR FOR RELIABILITY on a sleek metallic background]
+
+VOICEOVER (Excited North Male Voice): 
+Are you looking for the most reliable sports car? We've got some interesting data for you.
+
+[The screen transitions to a comparative bar chart of the 4 cars]
+
+VOICEOVER:
+We analyzed Ford Mustang, Chevrolet Camaro, Nissan 370Z, and Audi TT. The data shows the number of service calls per 10,000 cars sold based on the age of the car.
+
+[Highlights Ford Mustang bar chart]
+
+VOICEOVER:  
+The Ford Mustang starts strong but has a consistent need for service as it ages, peaking around the 1 and 4 year mark.
+
+[Highlights Chevrolet Camaro bar chart]
+
+VOICEOVER:
+Chevrolet Camaro has lower initial service calls but increases drastically as it aged to 6 years, then the service calls count drop.
+
+[Highlights Nissan 370Z bar chart]
+
+VOICEOVER:
+The Nissan 370Z starts modestly but skyrockets at the 3-year-mark and stays relatively high until it reaches 5 years.
+
+[Highlights Audi TT bar chart]
+
+VOICEOVER:
+Lastly, the Audi TT starts fairly high, lowers, and then jumps dramatically around the 6-year-mark.
+
+[Screen transitions to Ford Mustang victory animation]
+
+VOICEOVER:
+Overall, if you're looking for a sports car that combines power, style, and delivers the best reliability over the long haul, the Ford Mustang emerged as the clear winner in our analysis.
+
+[Screen transitions back to title with the text “Best sports car for reliability: Ford Mustang”]
+
+VOICEOVER (concluding):
+So there you have it, folks. When it comes to reliability in the world of sports cars, Ford Mustang is your best bet. Drive safe, drive Mustang!
+
+[The screen fades to black]
+
+Note: Remember to subtitle the data represented on the graph verbally. Keep animations smooth and visuals high-contrast so viewers can easily follow along.
