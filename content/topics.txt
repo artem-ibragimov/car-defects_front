@@ -42,16 +42,16 @@ Subaru BRZ vs Hyundai Veloster repair frequency:generated
 BMW Z4 vs Audi TT longevity:generated
 Reliable sports cars 2024:generated
 Best sports car for reliability:generated
-Long-lasting sports cars
-Affordable reliable sports cars
-Most durable performance cars
-BMW X5 vs Mercedes GLE reliability
-Audi Q7 vs Volvo XC90 durability
-Lexus RX vs Acura MDX maintenance costs
-Infiniti QX60 vs Lincoln Aviator repair frequency
-Porsche Cayenne vs Jaguar F-Pace longevity
-Reliable luxury SUVs 2024
-Best luxury SUV for long-term use
-Affordable reliable luxury SUVs
+Long-lasting sports cars:generated
+Affordable reliable sports cars:generated
+Most durable performance cars:generated
+BMW X5 vs Mercedes GLE reliability:generated
+Audi Q7 vs Volvo XC90 durability:generated
+Lexus RX vs Acura MDX maintenance costs:generated
+Infiniti QX60 vs Lincoln Aviator repair frequency:generated
+Porsche Cayenne vs Jaguar F-Pace longevity:generated
+Reliable luxury SUVs 2024:generated
+Best luxury SUV for long-term use:generated
+Affordable reliable luxury SUVs:generated
 Most durable premium SUVs
 BMW vs Lexus SUV reliability comparison

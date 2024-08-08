@@ -655,3 +655,56 @@ So there you have it, folks. When it comes to reliability in the world of sports
 [The screen fades to black]
 
 Note: Remember to subtitle the data represented on the graph verbally. Keep animations smooth and visuals high-contrast so viewers can easily follow along.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/long-lasting-sports-cars
+Title: Long-lasting Sports Cars – A Comparative Analysis”
+
+Script:
+
+[0:01-0:08]
+(Overhead shot of four car models: Chevrolet Corvette, Ford Mustang, Nissan 370z, Audi TT) 
+Four iconic sports cars. But, which one reigns supreme in terms of reliability?
+
+[0:09-0:15]
+(Show graph with Corvette service calls data)
+First up, the Chevrolet Corvette. An age-old classic. Notice how service calls spike significantly after the 5-year mark.
+
+[0:16-0:22]
+(Shift to Ford Mustang data)
+Now the Ford Mustang. Nearly twice as many service calls initially, but a sharper decline compared to the Corvette.
+
+[0:23-0:30]
+(Show Nissan 370z data)
+The Nissan 370z has the highest peak around the 3-4 year mark but decreases rapidly afterwards.
+
+[0:31-0:38]
+(Switch to Audi TT data)
+The Audi TT, starts low, but has a significant spike around the 6th year.
+
+[0:39-0:45]
+(Show all four models side by side)
+All cars have their quirks and kinks. Understanding their distinct patterns helps us discern overall reliability.
+
+[0:46-0:52]
+(Shift to a close-up of each model)
+The Corvette's durable design, the Mustang's rugged construct, the 370z's excellent handling, and the TT’s fine-tuned mechanics
+
+[0:53-0:57]
+(Return to comparing service call data)
+Each of these variables can contribute to the service call patterns we see.
+
+[0:58-0:59]
+(Subtitle)
+Reliable sports cars - a matter of historic design and modern ingenuity.
+
+Voice: North Male 
+
+Subtitle Placement: bottom of the screen. 
+
+Technical Details:
+1. Individual Service Call data for each car model
+2. Close-up shots of car models showcasing distinct design features
+3. Comparative graph showing service call patterns over time for each model.
