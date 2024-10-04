@@ -1,0 +1,140 @@
+{
+	"error": {
+		"LOAD_ERROR": "Error de carga"
+	},
+	"warn": {
+		"NO_DATA": "Lo sentimos, pero no tenemos suficientes datos para "
+	},
+	"defect_category": {
+		"safety": "Seguridad",
+		"electronics": "Electrónica",
+		"light": "Luz",
+		"transmission": "Transmisión",
+		"other": "Otro",
+		"equipment": "Equipamiento",
+		"engine": "Motor",
+		"brake": "Freno",
+		"suspension": "Suspensión"
+	},
+	"label": {
+		"tips": {
+			"norm_data": "Para mayor objetividad, considere los datos normalizados, es decir, el número de accidentes por cada 10,000 autos vendidos",
+			"search": "Buscar entre 4 millones de accidentes",
+			"age_mileage": "Comparar defectos por edad o kilometraje",
+			"category": "Seleccionar categoría de defecto específica"
+		},
+		"detail": {
+			"age": "Edad del defecto",
+			"mileage": "Kilometraje"
+		},
+		"defect": {
+			"header": "Descripción del defecto",
+			"description": "Por favor, proporcione detalles del defecto",
+			"cost": "Costo de reparación, $",
+			"year": "Año en que ocurrió el defecto",
+			"age": "Edad del auto cuando ocurrió el defecto",
+			"mileage": "Kilometraje del auto cuando ocurrió el defecto",
+			"rating": "Calificación: ¿qué tan grave es el defecto?"
+		},
+		"cancel": "Cancelar",
+		"main_header": "Estadísticas de llamadas de servicio de autos",
+		"norm": "Normalizado",
+		"total": "Total",
+		"search-placeholder": "Comience buscando estadísticas sobre la marca, modelo o versión especial",
+		"defects": "defectos",
+		"total-defects": "Total de defectos",
+		"analyzed-brands": "Marcas de autos analizadas",
+		"analyzed-versions": "Versiones de autos analizadas",
+		"of-total-car": "% del total de autos en el mundo",
+		"by_age": "por Edad",
+		"by_mileage": "por Kilometraje",
+		"chart": {
+			"by_age": {
+				"total": {
+					"title": "Todos los defectos por edad",
+					"tooltip": "total de defectos"
+				},
+				"norm": {
+					"title": "Defectos por edad normalizados",
+					"tooltip": "Promedio de defectos por cada 10,000 ventas"
+				},
+				"y": "Número de defectos",
+				"x": "Edad del defecto"
+			},
+			"by_mileage": {
+				"total": {
+					"title": "Todos los defectos por kilometraje",
+					"tooltip": "total de defectos"
+				},
+				"norm": {
+					"title": "Defectos por kilometraje normalizados",
+					"tooltip": "Promedio de defectos por cada 10,000 ventas"
+				},
+				"y": "Número de defectos",
+				"x": "Kilometraje del auto"
+			}
+		},
+		"top_reliable_cars": "Los autos más fiables",
+		"sold_cars": "autos vendidos",
+		"add_data": "Agregar datos",
+		"update": "Actualizar",
+		"load_details": "Cargar más detalles",
+		"apply": "Aplicar",
+		"applied": "Aplicado",
+		"reset": "Restablecer",
+		"post": "Publicar",
+		"posted": "¡Publicado!",
+		"more": "Más",
+		"search_by": "Buscar defectos por ",
+		"model": "Modelo",
+		"brand": "Marca",
+		"gen": "Generación",
+		"gen_start": "Inicio de lanzamiento",
+		"gen_finish": "Fin de lanzamiento",
+		"version": "Versión",
+		"engine": {
+			"name": "Motor",
+			"displacement": "Desplazamiento",
+			"cylinders": "Cilindros",
+			"valves": "Válvulas",
+			"fuel_type": "Tipo de combustible",
+			"power_hp": "Potencia (hp)",
+			"torque": "par motor"
+		},
+		"trans": {
+			"name": "Transmisión",
+			"acceleration": "Aceleración",
+			"consumtion": "Consumo",
+			"gears": "Marchas"
+		}
+	},
+	"text": {
+		"about": {
+			"header": "Acerca de este sitio",
+			"text": "Bienvenido a Car-Defects.com - El lugar donde puede encontrar todas las estadísticas sobre defectos de autos y llamadas de servicio. Descubra la fiabilidad de diferentes modelos de autos y compare las estadísticas por edad y kilometraje. Descubra qué autos son los más fiables y cuáles son los defectos más comunes. No se pierda nuestras comparaciones y estadísticas exhaustivas para optimizar su elección de auto. Bienvenido a la fuente de información más fiable sobre defectos de autos y llamadas de servicio - Car-Defects.com."
+		},
+		"article": {
+			"japanese-top-selling-compact-suvs": {
+				"title": "¡Descubre los SUV compactos japoneses más vendidos que están revolucionando el mercado!",
+				"text": "<h1>Los SUV Compactos Más Vendidos de Japón</h1>\n<p>En el segmento de los SUV compactos, los modelos Toyota RAV4, Honda CR-V, Nissan Rogue y Subaru Forester destacan como líderes indiscutidos en el mercado japonés. Este artículo analiza la fiabilidad de estos vehículos utilizando estadísticas de llamadas a servicios técnicos, ofreciendo una explicación técnica detallada y describiendo sus características de diseño únicas.</p>\n<h2>Análisis de Datos de Servicio</h2>\n<p>Basándonos en los datos de llamadas a servicios, podemos observar diferencias significativas en la fiabilidad de estos modelos a lo largo de los años.</p>\n<h3>Toyota RAV4</h3>\n<p>El Toyota RAV4 muestra una tasa de llamadas a servicio que aumenta al principio, alcanzando su máximo en el quinto año con 0.1558 llamadas por cada 10,000 vehículos, y luego decrece paulatinamente. Este patrón es indicativo de la longevidad y durabilidad del RAV4, que tiende a estabilizarse después de resolver los problemas iniciales.</p>\n<h3>Honda CR-V</h3>\n<p>El Honda CR-V presenta un aumento similar en los primeros años, con un pico en el quinto año (0.1385). Posteriormente, las llamadas disminuyen, pero no en la misma medida que el RAV4. Esto sugiere que el CR-V podría experimentar problemas recurrentes o un desgaste más notable en componentes específicos que el RAV4.</p>\n<h3>Nissan Rogue</h3>\n<p>El Nissan Rogue destaca por una tasa de llamadas significativamente alta en los años tercero, cuarto y quinto, superando 0.17 en la tercera edad. Sin embargo, observa una caída brusca después del quinto año. Esto podría indicar problemas más graves al inicio que, una vez resueltos, aportan una estabilidad relativa al modelo.</p>\n<h3>Subaru Forester</h3>\n<p>El Subaru Forester muestra el perfil más expansivo con un aumento continuo hasta el cuarto año. Aunque después del quinto año la tasa disminuye, sigue siendo superior al inicio. Esto indica que el Forester tiene un enfoque de diseño que quizás privilegie la innovación y complejidad tecnológica, afectando su fiabilidad inicial.</p>\n<h2>Comparación de Fiabilidad</h2>\n<p>En términos de fiabilidad, el Toyota RAV4 se posiciona como el SUV más consistente con una tasa de llamadas a servicio que se mantiene relativamente baja. Le sigue el Honda CR-V, que muestra un ligero repunte en problemas que podrían estar relacionados con componentes de alta tecnología, como sistemas de infoentretenimiento o de asistencia a la conducción.</p>\n<p>El Nissan Rogue, aunque presenta problemas iniciales significativos, parece ser capaz de estabilizarse. Esto podría estar relacionado con la necesidad de mantenimiento adicional al inicio para corregir fallas de diseño o fabricación.</p>\n<p>El Subaru Forester, por otro lado, sugiere una tendencia hacia problemas asociados con la complejidad de sus sistemas. Esto podría deberse a la integración de tecnologías avanzadas que, aunque mejoran el rendimiento y confort, también incrementan la posibilidad de fallos.</p>\n<h2>Explicación Técnica</h2>\n<p>Desde un punto de vista técnico, la fiabilidad de un vehículo está intrínsecamente vinculada al diseño y la calidad de sus componentes. Estos SUV japoneses comparten ciertos elementos comunes, como motores de diseño eficiente y sistemas de tracción avanzada; sin embargo, hay diferencias sustanciales en la implementación y la filosofía detrás de cada modelo.</p>\n<h3>Toyota RAV4: Minimalismo y Eficiencia</h3>\n<p>El RAV4 se ha caracterizado por un diseño minimalista que prioriza la confiabilidad. Sus motores de combustión interna están optimizados para ofrecer un rendimiento estable con un menor número de piezas móviles, lo que minimiza las oportunidades de fallas mecánicas. Su enfoque en la durabilidad se refleja en la longevidad de sus transmisiones y un tren motriz robusto.</p>\n<h3>Honda CR-V: Innovación Equilibrada</h3>\n<p>El CR-V intenta equilibrar la innovación tecnológica con la fiabilidad. Integra características avanzadas como sistemas de gestión del motor que optimizan el consumo de combustible pero que también incrementan la complejidad del vehículo. El uso de materiales más ligeros y de alta resistencia busca mejorar el rendimiento sin comprometer la longevidad del vehículo, aunque puede llevar a problemas de desgaste en componentes estructurales.</p>\n<h3>Nissan Rogue: Apuesta por la Tecnología</h3>\n<p>El Rogue enfatiza la adopción temprana de tecnologías para atraer a consumidores que valoran el aspecto tecnológico e innovador. Esto, sin embargo, puede contribuir a una mayor tasa de incidencia de problemas al necesitar actualizaciones de software o ajustes en sistemas electrónicos complejos, como sistemas de navegación y control de estabilidad.</p>\n<h3>Subaru Forester: Complejidad Técnica</h3>\n<p>El Forester incorpora sistemas avanzados de tracción en las cuatro ruedas que son la envidia de muchos competidores. Aunque estos sistemas permiten un rendimiento excepcional en condiciones adversas, también aumentan el riesgo de problemas mecánicos y electrónicos. La inclusión de elementos como suspensiones independientes avanzadas mejora la conducción, pero añade complejidad al mantenimiento del vehículo.</p>\n<h2>Conclusiones</h2>\n<p>Los modelos de SUV compactos japoneses demuestran un compromiso compartido hacia la seguridad, la eficiencia y el rendimiento. Sin embargo, sus enfoques de diseño y características únicas influyen notablemente en sus perfiles de fiabilidad. Mientras que el Toyota RAV4 mantiene una reputación de vehículo robusto y confiable, el Honda CR-V presenta una mezcla de innovación y fiabilidad. El Nissan Rogue, con un inicio más problemático, compensa con estabilidad futura, y el Subaru Forester representa la vanguardia técnica con sus desafíos inherentes.</p>\n<p>Al considerar la compra de un SUV compacto japonés, estos factores deben ser sopesados cuidadosamente para alinear las expectativas de fiabilidad con las necesidades individuales de los consumidores.</p>",
+				"url": "#entity_params=%7B%22toyota%20rav4%22:%7B%22modelID%22:%221898%22%7D,%22honda%20cr-v%22:%7B%22modelID%22:%22250%22%7D,%22nissan%20rogue%22:%7B%22modelID%22:%22754%22%7D,%22subaru%20forester%22:%7B%22modelID%22:%22907%22%7D%7D&data_params=%7B%22norm%22:true,%22by_age%22:true%7D",
+				"keywords": "SUV compactos japoneses, coches más vendidos Japón, mejores SUVs Japón, vehículos compactos populares.",
+				"description": "Descubre los SUV compactos japoneses más vendidos en nuestro último artículo técnico. Analizamos las características clave, rendimiento, eficiencia y ventajas competitivas de estos vehículos líderes en el mercado. Si buscas calidad y tecnología avanzada, te contamos por qué estos SUV compactos japoneses son la elección preferida a nivel mundial. ¡Infórmate y elige el mejor para ti!"
+			},
+			"luxury-car-reliability-rankings": {
+				"title": "¡Descubre los Secretos Ocultos! Rankings Definitivos de Fiabilidad de Autos de Lujo que Sorprenderán a Todos",
+				"text": "<h1>Clasificación de la Fiabilidad de Coches de Lujo</h1>\n<p>En el competitivo mundo de los automóviles de lujo, la fiabilidad es un factor primordial que influye en las decisiones de compra de los consumidores. La presente análisis se centra en dos modelos de alta gama: el Audi A6 y el Volvo S90. Ambos vehículos son conocidos por su diseño sofisticado, pero presentan diferencias significativas en términos de fiabilidad que se reflejan en las estadísticas de llamadas al servicio técnico.</p>\n<h2>Análisis de Datos</h2>\n<p>Las estadísticas proporcionadas muestran el número de llamadas al servicio por cada 10,000 coches vendidos según la edad del vehículo. Se observan las siguientes tendencias:</p>\n<h3>Audi A6</h3>\n<ul>\n<li><strong>Edad 0-1:</strong> Al comienzo, el Audi A6 muestra un índice de llamadas de servicio relativamente estable, con ligeros aumentos del 0.54 al 0.55 para edades de 0 y 1 año respectivamente.</li>\n<li><strong>Edad 2-3:</strong> Se aprecia un incremento notable en las llamadas al servicio, alcanzando su punto más alto a los 3 años con un valor de 0.71.</li>\n<li><strong>Edad 4-7:</strong> Aunque hay una disminución inicial, la tendencia sigue siendo alta con valores que oscilan entre 0.65 y 0.83, indicando posibles problemas recurrentes a medida que el coche envejece.</li>\n<li><strong>Edad 8-13:</strong> A partir de los 8 años, se observa una disminución general en las llamadas, bajando hasta 0.19 a los 13 años.</li>\n</ul>\n<h3>Volvo S90</h3>\n<ul>\n<li><strong>Edad 0-1:</strong> Los valores son consistentemente altos con 0.98, lo que podría sugerir problemas iniciales persistentes en el Volvo S90.</li>\n<li><strong>Edad 2-3:</strong> Se observa una disminución significativa del índice de llamadas (0.49), sugiriendo una estabilización de problemas a medida que los vehículos envejecen.</li>\n<li><strong>Edad 4-6:</strong> Hay una variabilidad con un pico de fiabilidad a los 4 años (0.74) seguido de una marcada reducción a 0.25 a los 6 años.</li>\n<li><strong>Edad 9:</strong> Similar al Audi, el índice de llamadas se mantiene bajo al alcanzar los 9 años, alrededor de 0.25.</li>\n</ul>\n<h2>Comparación y Conclusiones</h2>\n<p>Desde el punto de vista de fiabilidad, el Volvo S90 muestra un patrón diferente respecto al Audi A6. Mientras que el Audi tiene un aumento constante de problemas en los primeros años, el Volvo tiene una alta incidencia inicial que se reduce progresivamente.</p>\n<h3>Consideraciones Técnicas</h3>\n<h4>Audi A6</h4>\n<ul>\n<li><strong>Plataforma y Tecnología:</strong> El Audi A6 está basado en la plataforma MLB del Grupo Volkswagen, que está diseñada para integrar una diversidad de motorizaciones. La sofisticación tecnológica, como los sistemas híbridos y eléctricos, puede contribuir a problemas de software o integración durante los primeros años.</li>\n<li><strong>Mecánica y Diseño:</strong> Utiliza motores TFSI y diésel TDI, que aunque eficientes, pueden ser propensos a problemas de emisión y contaminación a lo largo del tiempo debido a la complejidad de los sistemas de control.</li>\n</ul>\n<h4>Volvo S90</h4>\n<ul>\n<li><strong>Seguridad y Conectividad:</strong> Volvo se destaca por un enfoque integral en la seguridad y la tecnología de asistencia al conductor, como el sistema Pilot Assist. La elevada tecnología integrada puede ser una fuente de problemas iniciales que son resueltos con el tiempo.</li>\n<li><strong>Ingeniería de Propulsión:</strong> Equipado con motores Drive-E, los problemas iniciales pueden surgir de la transición a sistemas de propulsión híbrida y eléctrica, que necesitan depurarse en los primeros años de producción.</li>\n</ul>\n<h2>Conclusiones</h2>\n<p>En síntesis, el análisis de la fiabilidad del Audi A6 y Volvo S90 destaca las diferencias en sus enfoques de ingeniería y tecnología. Los resultados sugieren que:</p>\n<ul>\n<li><strong>Audi A6:</strong> Los propietarios pueden enfrentar un aumento de problemas a medida que el vehículo se envejece, posiblemente atribuible a la complejidad del sistema de propulsión y tecnologías integradas.</li>\n<li><strong>Volvo S90:</strong> Aunque con más problemas iniciales, probablemente debido a la sofisticación tecnológica, estos problemas parecen estabilizarse rápidamente, sugiriendo un período de rodaje necesario para la puesta a punto de sus sistemas.</li>\n</ul>\n<p>Estas conclusiones indican que los potenciales compradores de coches de lujo deben considerar no solo el prestigio de la marca, sino también un análisis detallado de la fiabilidad a lo largo de la vida útil del vehículo. La elección entre un Audi A6 o un Volvo S90 dependerá de las prioridades del comprador, como tecnología, seguridad, y la importancia dada a la reducción de problemas a largo plazo.</p>\n<p>La fiabilidad de los vehículos sigue siendo un factor crítico en la satisfacción del cliente y el valor de reventa, y debe ser evaluada con primacía al considerar la adquisición de un coche de lujo.</p>",
+				"url": "#entity_params=%7B%22audi%20a6%22:%7B%22modelID%22:%22118%22%7D,%22volvo%20s90%22:%7B%22modelID%22:%222073%22%7D%7D&data_params=%7B%22norm%22:true,%22by_age%22:true%7D",
+				"keywords": "fiabilidad coches de lujo, ranking coches de lujo, coches de lujo confiables, clasificación fiabilidad coches de lujo",
+				"description": "Descubre el fascinante mundo de los automóviles de alta gama a través de nuestro artículo sobre las clasificaciones de fiabilidad de coches de lujo. Analizamos en profundidad las marcas más prestigiosas del mercado, evaluando su rendimiento y confiabilidad. Ideal para entusiastas y compradores potenciales que buscan información detallada y objetiva para tomar decisiones informadas. ¡No te pierdas esta guía imprescindible para entender cuál es el coche de lujo más fiable!"
+			},
+			"mazda-3-reliability-compared-to-honda-civic": {
+				"title": "¡Descubre Qué Modelo Triunfa en Fiabilidad: Mazda 3 vs. Honda Civic, la Comparativa que No Te Puedes Perder!",
+				"text": "<h1>Comparación de la Fiabilidad del Mazda 3 y Honda Civic</h1>\n<h2>Introducción</h2>\n<p>En el mundo automovilístico, la fiabilidad de un vehículo es un factor crucial que puede influir en la decisión de compra de los consumidores. En este artículo, analizaremos y compararemos la fiabilidad de dos modelos populares: el Mazda 3 y el Honda Civic, basándonos en las estadísticas de llamadas al servicio técnico en función de la edad del automóvil.</p>\n<h2>Análisis de Datos</h2>\n<hr>\n<h3>Mazda 3</h3>\n<p>El Mazda 3 muestra un patrón específico en sus llamadas al servicio. Durante los primeros años hasta el tercer año, las llamadas de servicio aumentan, alcanzando su punto máximo en el cuarto y quinto año. Este aumento puede deberse al desgaste de los componentes y a los mantenimientos programados que estos modelos necesitan. Sin embargo, a partir del quinto año, las llamadas comienzan a disminuir progresivamente, lo que podría indicar una estabilización o mejora en la fiabilidad del vehículo con el envejecimiento, posiblemente debido a reparaciones integrales o actualizaciones llevadas a cabo por los propietarios.</p>\n<h3>Honda Civic</h3>\n<p>Por otro lado, el Honda Civic presenta un incremento más gradual y menos pronunciado en las llamadas al servicio. La curva de llamadas al servicio es más plana comparada con la del Mazda 3, lo que sugiere una consistencia superior en la fiabilidad del Civic a medida que envejece. Los picos de llamadas para el Civic son menos agresivos, insinuando que los problemas son menos severos o más fáciles de prever y gestionar. Esto se puede atribuir a una calidad superior en los componentes, así como a un diseño orientado hacia el mantenimiento y una reparación más sencilla.</p>\n<h2>Comparación Técnica</h2>\n<hr>\n<h3>Diseño y Componentes</h3>\n<p>El Mazda 3 está equipado con una transmisión manual o automática Skyactiv, que es conocida por su complejidad técnica y eficiencia. Este sistema es altamente innovador, pero también puede ser más propenso a necesitar ajustes y reparaciones específicas por su diseño avanzado. Además, el uso de la tecnología Skyactiv en los motores, aunque optimiza el consumo de combustible y reduce las emisiones, podría requerir mantenimiento especializado, lo que se refleja en el número de llamadas al servicio durante los primeros años de uso.</p>\n<p>Por el contrario, el Honda Civic ofrece motores y transmisiones más tradicionales en su línea base, con tecnologías que han sido probadas y perfeccionadas a lo largo de las generaciones. Esta simplicidad relativa podría ser la razón del menor incremento de llamadas al servicio. Además, el diseño del Civic frecuentemente se enfoca en la economía de combustible y confiabilidad a largo plazo, asegurando que los componentes críticos sean accesibles y estándar, lo cual facilita su servicio y mantenimiento.</p>\n<h3>Innovaciones Tecnológicas</h3>\n<p>Ambos vehículos ofrecen múltiples características tecnológicas que impactan su mantenimiento. El Mazda 3 incorpora la tecnología G-Vectoring Control para mejorar el manejo, lo cual aunque sofisticado, podría introducir la necesidad de ajustes técnicos específicos para mantener la eficacia del sistema en el tiempo. En contraste, el Honda Civic, aunque está equipado con tecnologías avanzadas como el Honda Sensing, mantiene un enfoque más discreto sobre las tecnologías complejas, lo cual parece beneficiar su reputación de fiabilidad a largo plazo.</p>\n<h2>Conclusiones</h2>\n<hr>\n<p>Al comparar la fiabilidad del Mazda 3 con la del Honda Civic, se observa que aunque ambos vehículos son confiables, el Honda Civic parece tener una ventaja en términos de consistencia y menor incremento en necesidades de servicio a lo largo del tiempo. Esto podría ser a causa del enfoque de Honda en una ingeniería robusta y componentes de largo plazo, comparado con las innovaciones tecnológicas de Mazda que, aunque avanzadas, pueden requerir intervenciones más frecuentes.</p>\n<p>Desde un punto de vista técnico, la diferencia en la fiabilidad deriva de las filosofías de diseño de cada fabricante. Mazda se enfoca en la innovación y la conducción dinámica, lo cual puede representar retos en términos de mantenimiento a medida que los vehículos envejecen. Mientras tanto, Honda prioriza la simplicidad y fiabilidad de sus componentes, resultando en vehículos que ofrecen una experiencia más consistente a lo largo de los años.</p>\n<p>Este análisis demuestra cómo las decisiones de diseño y las innovaciones tecnológicas afectan no solo la experiencia del usuario, sino también el mantenimiento y fiabilidad percibidos del vehículo. Ambos modelos tienen méritos significativos, y la elección entre ellos podría depender de las preferencias individuales del comprador en términos de conducción, mantenimiento y priorización de tecnologías avanzadas frente a una fiabilidad comprobada.</p>",
+				"url": "#entity_params=%7B%22mazda%203%22:%7B%22modelID%22:%2251%22%7D,%22honda%20civic%22:%7B%22modelID%22:%22247%22%7D%7D&data_params=%7B%22norm%22:true,%22by_age%22:true%7D",
+				"keywords": "fiabilidad Mazda 3, comparación Honda Civic, Mazda vs Honda, rendimiento Mazda 3, durabilidad Honda Civic",
+				"description": "Descubre la fiabilidad del Mazda 3 en comparación con el Honda Civic en nuestro detallado artículo técnico. Analizamos el rendimiento, durabilidad y costos de mantenimiento de estos populares sedanes compactos. Ideal para compradores informados que buscan el equilibrio perfecto entre confiabilidad y eficiencia. ¡Encuentra el vehículo que se adapta a tus necesidades con nuestro extenso análisis comparativo!"
+			}
+		}
+	}
+}

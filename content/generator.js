@@ -30,8 +30,8 @@ try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split('\n');
 	generateTopics(topics);
-} catch (error) {
-	error(error);
+} catch (e) {
+	error(e);
 }
 function saveTopic(topics = []) {
 	try {
@@ -45,7 +45,7 @@ function saveTopic(topics = []) {
 function log(filename, article_name, query) {
 	openai.chat.completions
 		.create({
-			model: 'gpt-4',
+			model: 'gpt-4o',
 			messages: [{ role: 'user', content: query }],
 			temperature: 1
 		})
@@ -59,8 +59,8 @@ function log(filename, article_name, query) {
 					file,
 					`${content}\n\n\n-------------------------\n\n${article_name}\n${data}`
 				);
-			} catch (error) {
-				error(error);
+			} catch (e) {
+				error(e);
 			}
 		});
 }
@@ -165,7 +165,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `poster for article "${topic}", fullscreen, no text, –ar 2:1`,
+		prompt: ` ${defects.map(([car_name, _]) => car_name).join(' and ')}, without text, close perspective, –ar 2:1, minimalistic `,
 		name: article_name
 	});
 
@@ -204,13 +204,9 @@ describe the design features of the cars, use maximum technical details,
 
 	const queries = Object.entries({
 		en: `${article_query}`,
-		ru: `Write in Russian ${article_query}`
-		// de: `Write in German ${prompt}`,
-		// es: `Write in Spanish ${prompt}`
-		// fr: `Write in French ${prompt}`,
-		// pt: `Write in Portuguese ${prompt}`,
-		// jp: `Write in Japanese ${prompt}`,
-		// zh: `Write in Chinese ${prompt}`
+		ru: `Write in Russian ${article_query}`,
+		de: `Write in German ${article_query}`,
+		es: `Write in Spanish ${article_query}`
 	});
 	const articles_generation = queries.reduce(
 		(chain, [locale, content], i, arr) =>
@@ -266,18 +262,24 @@ function generateArticle(article_name, locale, query, topic, url) {
 		if (json.text.article[article_name]) {
 			return;
 		}
+		const lang = {
+			en: `generate`,
+			ru: `generate in Russian `,
+			de: `generate in German `,
+			es: `generate in Spanish `
+		};
 		return waitMin()
 			.then(() =>
 				Promise.all(
 					[
 						query,
-						`generate in ${locale} seo clickbait title for a technical article on the topic "${topic}"`,
-						`generate in ${locale} seo description for a technical article on the topic "${topic}"`,
-						`generate in ${locale} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}"`
+						`generate in ${lang[locale]} seo clickbait title for a technical article on the topic "${topic}"`,
+						`generate in ${lang[locale]} seo description for a technical article on the topic "${topic}"`,
+						`generate in ${lang[locale]} only list of seo keywords, less than 5, separated by comma, for a technical article on the topic "${topic}"`
 					].map((query) =>
 						openai.chat.completions
 							.create({
-								model: 'gpt-4',
+								model: 'gpt-4o',
 								messages: [{ role: 'user', content: query }],
 								temperature: 1
 							})

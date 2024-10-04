@@ -1,117 +1,117 @@
 {
 	"error": {
-		"LOAD_ERROR": "Load error"
+		"LOAD_ERROR": "Error de carga"
 	},
 	"warn": {
-		"NO_DATA": "We are sorry, but we do not have enougth data for "
+		"NO_DATA": "Lo sentimos, pero no tenemos suficientes datos para "
 	},
 	"defect_category": {
-		"safety": "Safety",
-		"electronics": "Electronics",
-		"light": "Light",
-		"transmission": "transmission",
-		"other": "Other",
-		"equipment": "Equipment",
-		"engine": "Engine",
-		"brake": "Brake",
-		"suspension": "Suspension"
+		"safety": "Seguridad",
+		"electronics": "Electrónica",
+		"light": "Luz",
+		"transmission": "Transmisión",
+		"other": "Otro",
+		"equipment": "Equipamiento",
+		"engine": "Motor",
+		"brake": "Freno",
+		"suspension": "Suspensión"
 	},
 	"label": {
 		"tips": {
-			"norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
-			"search": "Search over 4 million crashes",
-			"age_mileage": "Compare defects by age or mileage",
-			"category": "Select specific defect category"
+			"norm_data": "Para mayor objetividad, considere los datos normalizados, es decir, el número de accidentes por cada 10,000 autos vendidos",
+			"search": "Buscar entre 4 millones de accidentes",
+			"age_mileage": "Comparar defectos por edad o kilometraje",
+			"category": "Seleccionar categoría de defecto específica"
 		},
 		"detail": {
-			"age": "Defect age",
-			"mileage": "Mileage"
+			"age": "Edad del defecto",
+			"mileage": "Kilometraje"
 		},
 		"defect": {
-			"header": "Defect Description",
-			"description": "Please, provide defect details",
-			"cost": "Repair Cost, $",
-			"year": "Year, when defect occured",
-			"age": "Car Age, when defect occured",
-			"mileage": "Car Mileage, when defect occured",
-			"rating": "Rating: how serious is the defect?"
+			"header": "Descripción del defecto",
+			"description": "Por favor, proporcione detalles del defecto",
+			"cost": "Costo de reparación, $",
+			"year": "Año en que ocurrió el defecto",
+			"age": "Edad del auto cuando ocurrió el defecto",
+			"mileage": "Kilometraje del auto cuando ocurrió el defecto",
+			"rating": "Calificación: ¿qué tan grave es el defecto?"
 		},
-		"cancel": "Cancel",
-		"main_header": "A Car Service Calls Statistics",
-		"norm": "Normalized",
+		"cancel": "Cancelar",
+		"main_header": "Estadísticas de llamadas de servicio de autos",
+		"norm": "Normalizado",
 		"total": "Total",
-		"search-placeholder": "Start by searching for statistics about the brand, model or special version ",
-		"defects": "defects",
-		"total-defects": "Total Defects",
-		"analyzed-brands": "Analyzed Car Brands",
-		"analyzed-versions": "Analyzed Car Versions",
-		"of-total-car": "% of the world's total cars",
-		"by_age": "by Age",
-		"by_mileage": "by Mileage",
+		"search-placeholder": "Comience buscando estadísticas sobre la marca, modelo o versión especial",
+		"defects": "defectos",
+		"total-defects": "Total de defectos",
+		"analyzed-brands": "Marcas de autos analizadas",
+		"analyzed-versions": "Versiones de autos analizadas",
+		"of-total-car": "% del total de autos en el mundo",
+		"by_age": "por Edad",
+		"by_mileage": "por Kilometraje",
 		"chart": {
 			"by_age": {
 				"total": {
-					"title": "All Defects by Age",
-					"tooltip": "total defects"
+					"title": "Todos los defectos por edad",
+					"tooltip": "total de defectos"
 				},
 				"norm": {
-					"title": "Defects by Age Normalized",
-					"tooltip": "Average defects per 10,000 sales"
+					"title": "Defectos por edad normalizados",
+					"tooltip": "Promedio de defectos por cada 10,000 ventas"
 				},
-				"y": "Number of Defects",
-				"x": "Age of Defect"
+				"y": "Número de defectos",
+				"x": "Edad del defecto"
 			},
 			"by_mileage": {
 				"total": {
-					"title": "All Defects by Mileage",
-					"tooltip": "total defects"
+					"title": "Todos los defectos por kilometraje",
+					"tooltip": "total de defectos"
 				},
 				"norm": {
-					"title": "Defects by Mileage Normalized",
-					"tooltip": "Average defects per 10,000 sales"
+					"title": "Defectos por kilometraje normalizados",
+					"tooltip": "Promedio de defectos por cada 10,000 ventas"
 				},
-				"y": "Number of Defects",
-				"x": "Car Mileage"
+				"y": "Número de defectos",
+				"x": "Kilometraje del auto"
 			}
 		},
-		"top_reliable_cars": "Los coches más fiables",
+		"top_reliable_cars": "Los autos más fiables",
 		"sold_cars": "autos vendidos",
-		"add_data": "Add Data",
-		"update": "Update",
-		"load_details": "Load more details",
-		"apply": "Apply",
-		"applied": "Applied",
-		"reset": "Reset",
-		"post": "Post",
-		"posted": "Posted!",
-		"more": "More",
-		"search_by": "Search for defects by ",
-		"model": "Model",
-		"brand": "Brand",
-		"gen": "Generation",
-		"gen_start": "Release start",
-		"gen_finish": "Release end",
-		"version": "Version",
+		"add_data": "Agregar datos",
+		"update": "Actualizar",
+		"load_details": "Cargar más detalles",
+		"apply": "Aplicar",
+		"applied": "Aplicado",
+		"reset": "Restablecer",
+		"post": "Publicar",
+		"posted": "¡Publicado!",
+		"more": "Más",
+		"search_by": "Buscar defectos por ",
+		"model": "Modelo",
+		"brand": "Marca",
+		"gen": "Generación",
+		"gen_start": "Inicio de lanzamiento",
+		"gen_finish": "Fin de lanzamiento",
+		"version": "Versión",
 		"engine": {
-			"name": "Engine",
-			"displacement": "Displacement",
-			"cylinders": "Cylinders",
-			"valves": "Valves",
-			"fuel_type": "Fuel type",
-			"power_hp": "Power (hp)",
-			"torque": "torque"
+			"name": "Motor",
+			"displacement": "Desplazamiento",
+			"cylinders": "Cilindros",
+			"valves": "Válvulas",
+			"fuel_type": "Tipo de combustible",
+			"power_hp": "Potencia (hp)",
+			"torque": "par motor"
 		},
 		"trans": {
-			"name": "transmission",
-			"acceleration": "Acceleration",
-			"consumtion": "Consumtion",
-			"gears": "Gears"
+			"name": "Transmisión",
+			"acceleration": "Aceleración",
+			"consumtion": "Consumo",
+			"gears": "Marchas"
 		}
 	},
 	"text": {
 		"about": {
-			"header": "About this site",
-			"text": "Bienvenido a Car-Defects.com, donde le ofrecemos las estadísticas más completas sobre defectos de coches y llamadas al servicio técnico. Nuestros datos se centran en ofrecerle información valiosa sobre la fiabilidad de los distintos modelos de coches, comparando sus tasas de defectos por antigüedad y kilometraje. Con nuestras estadísticas cuidadosamente seleccionadas, podrá tomar decisiones con conocimiento de causa a la hora de comprar un coche nuevo o de mantener el que ya tiene. Despídete de las averías inesperadas y las reparaciones costosas: deja que nuestros datos te guíen hacia una experiencia de propiedad más fiable. Descubra hoy mismo el poder de la comparación y las estadísticas en Car-Defects.com."
+			"header": "Acerca de este sitio",
+			"text": "Bienvenido a Car-Defects.com - El lugar donde puede encontrar todas las estadísticas sobre defectos de autos y llamadas de servicio. Descubra la fiabilidad de diferentes modelos de autos y compare las estadísticas por edad y kilometraje. Descubra qué autos son los más fiables y cuáles son los defectos más comunes. No se pierda nuestras comparaciones y estadísticas exhaustivas para optimizar su elección de auto. Bienvenido a la fuente de información más fiable sobre defectos de autos y llamadas de servicio - Car-Defects.com."
 		}
 	}
 }

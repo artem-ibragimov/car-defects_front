@@ -1,8 +1,12 @@
 import * as en from './en.json';
+import * as de from './de.json';
+import * as ru from './ru.json';
+import * as es from './es.json';
 
-// export const DICTIONARIES = { en, de, ru, es };
-export const DICTIONARIES = { en };
+export const DICTIONARIES = { en, de, ru, es };
 
 // export const ARTICLES = Object.keys(en.text.article);
 // export const AVAILABLE_LOCALES = ['en', 'de', 'es', 'ru'];
-export const AVAILABLE_LOCALES = ['en', 'ru', 'article_en', 'article_ru'];
+export const AVAILABLE_LOCALES = Object.keys(DICTIONARIES).reduce<string[]>((acc, locale) => {
+	return acc.concat([locale, `article_${locale}`]);
+}, []);
