@@ -8,7 +8,7 @@ const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/article_en.json');
 export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en', 'ru', 'es', 'de',/*  'ru','fr','jp', 'pt',  'zh' */];
+export const AVAILABLE_LOCALES = ['en', 'ru', 'es', 'de' /*  'ru','fr','jp', 'pt',  'zh' */];
 
 /**
 "1": "transmission",
@@ -33,17 +33,16 @@ const categories = [
 	'suspension'
 ];
 // writeFileSync('./google.txt', ARTICLES.map((article_name) => `https://car-defects.com//articles/en/${article_name}/`).join('\n'))
-const models = await getTopReliableModels();
-// const models = [] || (await getTopReliableModels());
-const entries = AVAILABLE_LOCALES
-	.map((locale) =>
-		ARTICLES
-			.map((article_name) => `/articles/${locale}/${article_name}/`)
-	)
+// const models = await getTopReliableModels();
+const models = [] || (await getTopReliableModels());
+const entries = AVAILABLE_LOCALES.map((locale) =>
+	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
+)
 	.reduce((acc, cur) => acc.concat(cur), [])
 	.concat(
 		// TODO хуй знает какого хуя только 20 из 244
-		models.slice(0, 20)
+		models
+			.slice(0, 20)
 			.map(({ id, name }) => categories.map((cat) => `/defects/${id}/${name}/${cat}`))
 			.reduce((acc, cur) => acc.concat(cur), [])
 	);

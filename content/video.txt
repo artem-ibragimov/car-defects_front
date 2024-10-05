@@ -827,3 +827,66 @@ The data presented provides insight into the reliability of four popular Japanes
 **Visuals:** Use HD clips and dynamic animations featuring each SUV on varied terrains, highlighting key technical features.
 
 **Duration:** Ensure the entire content, narration, and visual representation, fits within 59 seconds.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
+### Analysis and Comparison of Mazda 3 and Honda Civic Reliability
+
+**Reliability Data Analysis:**
+- **Mazda 3:**
+  - Initial service call rate (age 0) starts at approximately 0.321 calls per 10,000 cars.
+  - Peaks at age 4 with 0.557 calls.
+  - Gradual decline suggests high service demand between ages 1 and 5, after which reliability improves incrementally.
+
+- **Honda Civic:**
+  - Initial service call rate (age 0) starts at approximately 0.153 calls per 10,000 cars.
+  - Peaks at age 6 with 0.251 calls.
+  - Overall lower service demand consistently, indicating general reliability across all ages compared to the Mazda 3.
+
+**Technical Insights:**
+- **Mazda 3:**
+  - The peak in service demand between 1 to 5 years may relate to specific components that wear out during this period, such as suspension or engine components.
+  - Design elements include a focus on driving dynamics, which might prioritize performance over long-term durability in some areas.
+
+- **Honda Civic:**
+  - More consistent and lower service call rate implies better reliability in the early years.
+  - Known for robust engine performance and efficient powertrain, combined with conservative design features that enhance longevity.
+
+**Conclusion:** 
+- The Honda Civic generally exhibits superior reliability compared to the Mazda 3, especially in the early years, likely due to its conservative design philosophy prioritizing durability and efficiency.
+
+### Video Script Instructions
+
+**Opening Shot:**
+- Show both cars with voiceover introduction. Display text: Mazda 3 vs. Honda Civic: A Reliability Comparison.
+
+**Voiceover (North Male Voice):**
+- Today, we explore the reliability of the Mazda 3 against the Honda Civic. How do these popular cars compare over time?
+
+**Subtitles:**
+- Display subtitles at the bottom matching the voiceover content.
+
+**Visuals:**
+- Use graphical representation such as line graphs to depict the service call rates for each car model over time.
+  
+**Voiceover Continued:**
+- Mazda 3 starts with higher service demand but sees improvement as it ages. Peaking at age four, it suggests common issues in the interim years.
+- The Honda Civic, known for steady reliability, peaks at a much lower rate, highlighting its engineering focus on durability.
+
+**Subtitles Continued:**
+- Continue matching the voice with corresponding subtitles.
+
+**Technical Details:**
+- Show short clips of engine parts, suspension systems, etc.
+- Highlight specific features like the Mazda's performance-driven design and Civic's engine efficiency.
+
+**Voiceover Conclusion:**
+- In summary, the Honda Civic consistently outperforms the Mazda 3 in reliability, blending dependability with fuel efficiency.
+
+**Ending Text:**
+- Display text: Stay informed. Choose reliability.
+
+**Screen Transition:**
+- Fade out with music outro.
