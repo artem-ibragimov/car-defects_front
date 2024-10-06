@@ -165,7 +165,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: ` ${defects.map(([car_name, _]) => car_name).join(' and ')}, without text, close perspective, –ar 2:1, minimalistic `,
+		prompt: ` ${defects.map(([car_name, _]) => car_name).join(' and ')} as a poster for article "${topic}", without text, close perspective, –ar 2:1 `,
 		name: article_name
 	});
 

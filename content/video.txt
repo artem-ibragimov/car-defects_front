@@ -890,3 +890,47 @@ https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
 
 **Screen Transition:**
 - Fade out with music outro.
+
+
+-------------------------
+
+https://car-defects.com/articles/en/mitsubishi-outlander-reliability-comparison
+### Analysis of Car Service Call Data
+
+The provided service call data for the Toyota RAV4, Honda CR-V, Subaru Forester, and Nissan Rogue demonstrates varying levels of reliability over the age range of the vehicles. Below is a detailed comparison and conclusion based on the given information.
+
+#### Toyota RAV4
+- **Reliability Trend**: Service calls are relatively consistent but show a slight increase with age, peaking at age 5 before declining.
+- **Conclusion**: The RAV4 demonstrates moderate reliability, with design features such as robust construction and a long-standing reputation for durability that contributes to its consistency in service calls over time.
+
+#### Honda CR-V
+- **Reliability Trend**: Starts with a lower number of service calls that increase steadily until age 5 but stabilize afterward.
+- **Conclusion**: The CR-V's reliability is supported by its efficient powertrains and user-friendly technology, which helps maintain a lower service call rate initially. The increase in calls could relate to regular maintenance needs.
+
+#### Subaru Forester
+- **Reliability Trend**: Experiences a marked increase in service calls peaking at age 4, but the number declines afterward.
+- **Conclusion**: Known for its AWD system and rugged nature, the Forester may initially have higher service calls due to issues with its complex drivetrain or electronic systems, which improve over time due to rectifications.
+
+#### Nissan Rogue
+- **Reliability Trend**: Service calls increase until age 4 and then decline significantly.
+- **Conclusion**: The initial increase might be attributed to teething issues in earlier production versions, which are rectified as the vehicle ages. The efficient CVT transmission and refinement in later models contribute to improved reliability over time.
+
+### Instructions for Video Maker
+
+**Objective**: Create a concise video on the reliability of the Mitsubishi Outlander compared to its peers. 
+
+**Voiceover Script**:   
+Welcome to our quick dive into the reliability of the Mitsubishi Outlander. While known for its spacious interior and versatile AWD system, how does it stack up against rivals like the Toyota RAV4, Honda CR-V, Subaru Forester, and Nissan Rogue? Analyzing service call data highlights Mitsubishi's commitment to engineering quality and innovation. While each model has strengths, the Outlander sets itself apart with [highlight a feature, e.g., advanced safety technology or fuel efficiency]. Stay tuned for more insights in our next video! 
+
+**Visuals**: 
+1. **Intro Scene**: A sweeping shot of the Mitsubishi Outlander in an urban setting.
+2. **Data Comparison**: Graphical representation comparing service calls for each vehicle, highlighting the Outlander.
+3. **Feature Highlight**: Showcase specific design features of the Outlander such as AWD, safety technology, or interior design.
+4. **Outro**: Include a call-to-action to learn more about Mitsubishi’s reliability.
+
+**Technical Specifications**:
+- **Voice**: Utilize a clear, engaging North American male voice.
+- **Subtitles**: Place readable subtitles at the bottom of the screen.
+- **Duration**: Ensure the video does not exceed 59 seconds.
+
+Remember, the goal is to present a factual yet engaging narrative that underscores Mitsubishi Outlander's reputation in reliability with clear visuals and narration.
