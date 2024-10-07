@@ -109,7 +109,9 @@ function generateByTopic(topic) {
 			return Promise.all(entities_fetching);
 		})
 		.then(dedub_entities)
-		.then(get_defects_for_entities)
+		.then((entities) =>
+			get_defects_for_entities_norm(entities).catch(() => get_defects_for_entities_total(entities))
+		)
 		.then((results) => {
 			const defects = results.map(({ car_name, data }) => [car_name, data]);
 			if (defects.length < 2 || results.length < 2) {
@@ -128,7 +130,9 @@ function generateByTopic(topic) {
 				defects,
 				url: `https://car-defects.com/#entity_params=${encodeURI(
 					JSON.stringify(entities)
-				)}&data_params=${encodeURI(JSON.stringify({ norm: true, by_age: true }))}`
+				)}&${new URLSearchParams({
+					data_params: JSON.stringify(results[0].params)
+				})}`
 			};
 		})
 		.then(({ url, imgs, defects }) => generateContent(topic, imgs, defects, url));
@@ -146,36 +150,46 @@ function dedub_entities(entities) {
 	return Object.fromEntries(Object.entries(params));
 }
 
+function get_defects_for_entities_norm(entities = {}) {
+	return get_defects_for_entities(
+		{
+			by_age: true,
+			norm: true
+		},
+		entities
+	);
+}
+function get_defects_for_entities_total(entities = {}) {
+	return get_defects_for_entities(
+		{
+			by_age: true,
+			total: true
+		},
+		entities
+	);
+}
 /**
  *
  * @param {Record<string, Object>} entities
- * @returns {Promise< Object[]>}
+ * @returns {Promise<{car_name:string, data: Record<number, number>, entity:object, params:object}[]>}
  */
-function get_defects_for_entities(entities = {}) {
+function get_defects_for_entities(params, entities = {}) {
 	const ORIGIN = 'https://car-defects.com/data/defect/age';
 	const fetching = Object.entries(entities).map(([car_name, entity]) => {
-		const query = `${ORIGIN}?${new URLSearchParams({
-			...entity,
-			by_age: true,
-			norm: true
-		})}`;
+		const query = `${ORIGIN}?${new URLSearchParams({ ...entity, ...params })}`;
 		return fetch(query)
 			.then((res) => res.json())
 			.then((data) => {
-				if (Object.keys(data).length !== 0) {
-					return data;
+				if (Object.keys(data).length === 0) {
+					throw new Error('no defects for ' + car_name);
 				}
-				const query = `${ORIGIN}?${new URLSearchParams({
-					...entity,
-					by_age: true,
-					total: true
-				})}`;
-				return fetch(query).then((res) => res.json());
+				return data;
 			})
-			.then((data) => ({ car_name, data, entity }));
+			.then((data) => ({ car_name, data, entity, params }));
 	});
-	return Promise.all(fetching).then((defects) => defects.filter(Boolean).slice(0, 4));
+	return Promise.all(fetching);
 }
+
 function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
@@ -317,27 +331,6 @@ function generateArticle(article_name, locale, query, topic, url) {
 	});
 }
 
-// function getTableContentArticle(topic) {
-// 	return openai.chat.completions
-// 		.create({
-// 			model: 'gpt-3.5-turbo-16k-0613',
-// 			messages: [
-// 				{
-// 					role: 'user',
-// 					content: `create a table of contents for a comprehensive article "${topic}"`
-// 				}
-// 			],
-// 			temperature: 0.4
-// 		})
-// 		.then((v) =>
-// 			v.choices[0].message.content
-// 				?.split('\n')
-// 				.filter((line) => /\d+\.\s*/.test(line))
-// 				.filter(Boolean)
-// 		)
-// 		.catch(error);
-// }
-
 function getCars(topic) {
 	return openai.chat.completions
 		.create({
@@ -358,67 +351,3 @@ function getCars(topic) {
 				.filter(Boolean)
 		);
 }
-
-// function humanize(text) {
-// 	return Promise.resolve(text);
-// 	return new Promise((resolve, reject) => {
-// 		if (!text) {
-// 			return reject('no content');
-// 		}
-// 		let document_id;
-// 		// fetch("https://damp-badlands-45642.herokuapp.com/humanizer", {
-// 		// 	"headers": {
-// 		// 	  "accept": "application/json",
-// 		// 	  "accept-language": "en-US,en;q=0.9,ru;q=0.8",
-// 		// 	  "content-type": "application/json",
-// 		// 	  "sec-ch-ua": "\"Chromium\";v=\"124\", \"Opera\";v=\"110\", \"Not-A.Brand\";v=\"99\"",
-// 		// 	  "sec-ch-ua-mobile": "?0",
-// 		// 	  "sec-ch-ua-platform": "\"macOS\"",
-// 		// 	  "sec-fetch-dest": "empty",
-// 		// 	  "sec-fetch-mode": "cors",
-// 		// 	  "sec-fetch-site": "same-origin",
-// 		// 	  "x-humanizer-api-key": "1752d5b0831fba23bb342338c68fc57e",
-// 		// 	  "Referer": "https://damp-badlands-45642.herokuapp.com/docs",
-// 		// 	  "Referrer-Policy": "strict-origin-when-cross-origin"
-// 		// 	},
-// 		// 	"body": "{\n  \"text\": \"Example text to humanize\"\n}",
-// 		// 	"method": "POST"
-// 		//  });
-// 		fetch("https://damp-badlands-45642.herokuapp.com/humanizer", {
-// 			method: 'POST',
-// 			headers: UNDETECTEBLE_HEADERS,
-// 			body: JSON.stringify({
-// 				text,
-// 			}),
-// 			redirect: 'follow'
-// 		})
-// 			.then(response => response.json())
-// 			.catch(reject)
-// 			.then((response) => {
-// 				document_id = response.shareToken;
-// 				if (!document_id) {
-// 					throw new Error(JSON.stringify(response, null, 2));
-// 				}
-// 				setTimeout(check, 30000);
-// 			});
-
-// 		function check() {
-// 			return fetch(`https://damp-badlands-45642.herokuapp.com/humanizer/check-status/${document_id}`, {
-// 				method: 'GET',
-// 				headers: UNDETECTEBLE_HEADERS,
-// 				redirect: 'follow'
-// 			})
-// 				.then(response => response.json())
-// 				.then(result => {
-// 					if (result.status === "COMPLETED") {
-// 						return resolve(result.humanizedContent);
-// 					}
-// 					if (result.status === "IN-PROGRESS") {
-// 						return setTimeout(check, 30000);
-// 					}
-// 					throw new Error(result.error);
-// 				})
-// 				.catch(reject);
-// 		}
-// 	});
-// }
