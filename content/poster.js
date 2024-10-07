@@ -15,7 +15,7 @@ try {
 	post({
 		mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
 		keywords: json.text.article[poster].tikeywordstle,
-		title: json.text.article[poster].title,
+		title: json.text.article[poster].title.slice(0, 280),
 		post: `${json.text.article[poster].description
 			.replaceAll('\n', '')
 			.slice(0, 280 - read_more.length - `[Sent with Free Plan] `.length)}${read_more}`,

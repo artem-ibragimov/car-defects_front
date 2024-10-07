@@ -15,6 +15,7 @@
 	import DefectDetails from './DefectDetails.svelte';
 	import TopReliableModels from './TopReliableModels.svelte';
 	import Trailer from './Trailer.svelte';
+	import ArticleLinks from './ArticleLinks.svelte';
 
 	export let noChartData = false;
 	export let pageUrl: string;
@@ -93,7 +94,7 @@
 				</div>
 			{/if}
 		</div>
-		<!-- <ArticleLinks /> -->
+		<ArticleLinks random />
 		{#if noChartData}
 			<About />
 		{/if}

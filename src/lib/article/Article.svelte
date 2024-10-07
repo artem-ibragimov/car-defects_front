@@ -5,6 +5,7 @@
 	import Charts from './Charts.svelte';
 	import Content from './Content.svelte';
 	import { PUBLIC_ORIGIN } from '$env/static/public';
+	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 
 	export let article_name: string;
 	export let locale: string;
@@ -16,8 +17,11 @@
 	$: content = $_(`${i18nPath}.text`);
 
 	const date = new Date().toISOString();
-
+	const SIZES = [320, 640, 1280];
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.png`;
+	$: srcset = poster
+		? SIZES.map((w) => `/assets/img/${article_name}--${w}.webp ${w}w`).join(', ')
+		: '';
 
 	$: url = $_(`${i18nPath}.url`);
 	$: schema = JSON.stringify({
@@ -54,13 +58,14 @@
 
 <article class="Article prose">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
-	<!-- <img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" /> -->
+	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
 	<h1>{title}</h1>
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
 	<Content data={content} />
 	<!-- <Cards {cards} /> -->
+	<ArticleLinks pagePath={article_name} />
 </article>
 
 <style scoped>

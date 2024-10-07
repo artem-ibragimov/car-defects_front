@@ -91,9 +91,15 @@ function generateByTopic(topic) {
 					return fetch(query)
 						.then((res) => res.json())
 						.then((data) => {
-							const modelID = Object.keys(data.models || {}).find((id) =>
-								car_name.includes(data.models[id])
-							);
+							const car_name_parts = car_name.split(/\s|\-/);
+							const matches = Object.keys(data.models || {}).map((id) => {
+								const parts = data.models[id].split(/\s|\-/);
+								const match_amount = car_name_parts.reduce((match_amount, car_name_part) => {
+									return match_amount + (parts.includes(car_name_part) ? 1 : 0);
+								}, 0);
+								return [id, match_amount];
+							});
+							const modelID = matches.sort((a, b) => b[1] - a[1])[0][0];
 							if (modelID) {
 								return { [car_name]: { modelID } };
 							}
@@ -146,18 +152,27 @@ function dedub_entities(entities) {
  * @returns {Promise< Object[]>}
  */
 function get_defects_for_entities(entities = {}) {
+	const ORIGIN = 'https://car-defects.com/data/defect/age';
 	const fetching = Object.entries(entities).map(([car_name, entity]) => {
-		const query = `https://car-defects.com/data/defect/age?${new URLSearchParams(
-			entity
-		)}&by_age=true&norm=true`;
+		const query = `${ORIGIN}?${new URLSearchParams({
+			...entity,
+			by_age: true,
+			norm: true
+		})}`;
 		return fetch(query)
 			.then((res) => res.json())
 			.then((data) => {
-				if (Object.keys(data).length === 0) {
-					return null;
+				if (Object.keys(data).length !== 0) {
+					return data;
 				}
-				return { car_name, data, entity };
-			});
+				const query = `${ORIGIN}?${new URLSearchParams({
+					...entity,
+					by_age: true,
+					total: true
+				})}`;
+				return fetch(query).then((res) => res.json());
+			})
+			.then((data) => ({ car_name, data, entity }));
 	});
 	return Promise.all(fetching).then((defects) => defects.filter(Boolean).slice(0, 4));
 }
@@ -165,7 +180,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: ` ${defects.map(([car_name, _]) => car_name).join(' and ')} as a poster for article "${topic}", without text, close perspective, –ar 2:1 `,
+		prompt: `photorealistic ${defects.map(([car_name, _]) => car_name).join(' and ')} on the road, cinematic Footage , without text, close perspective, –ar 2:1 `,
 		name: article_name
 	});
 
