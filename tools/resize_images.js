@@ -18,11 +18,11 @@ const SIZE_PREFIX = '--';
 remove_resized(FOLDER)
 	.then(() =>
 		imagemin([`${FOLDER}/**/*.png`], {
-			// use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
-			use: [imageminPngquant()]
+			use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
+			// use: [imageminPngquant()]
 		})
 	)
-	// .then(() => resize_images(FOLDER, SIZES))
+	.then(() => resize_images(FOLDER, SIZES))
 	.catch(error);
 
 function remove_resized(dir) {
