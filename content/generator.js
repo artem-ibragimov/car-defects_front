@@ -99,9 +99,9 @@ function generateByTopic(topic) {
 								}, 0);
 								return [id, match_amount];
 							});
-							const modelID = matches.sort((a, b) => b[1] - a[1])[0][0];
+							const modelID = matches.sort((a, b) => b[1] - a[1])[0];
 							if (modelID) {
-								return { [car_name]: { modelID } };
+								return { [car_name]: { modelID: modelID[0] } };
 							}
 							return null;
 						});
@@ -194,7 +194,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
-		prompt: `photorealistic ${defects.map(([car_name, _]) => car_name).join(' and ')} on the road, cinematic Footage , without text, close perspective, –ar 2:1 `,
+		prompt: `${defects.map(([car_name, _]) => car_name).join(' vs ')}, comic style, without text, fullscreen –ar 2:1 `,
 		name: article_name
 	});
 
