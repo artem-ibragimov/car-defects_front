@@ -39,7 +39,8 @@ export const createDefectFilterStore = (
 		csr(states: { entityParamsState: string; categoryParamsState: string }) {
 			return Promise.all([
 				categoryParams.csr(states.categoryParamsState),
-				entityParams.csr(states.entityParamsState)
+				entityParams.csr(states.entityParamsState),
+				dataParams.csr()
 			]);
 		},
 		selector,

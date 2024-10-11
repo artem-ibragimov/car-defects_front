@@ -128,11 +128,11 @@ function generateByTopic(topic) {
 				// })),
 				imgs: [],
 				defects,
-				url: `https://car-defects.com/#entity_params=${encodeURI(
-					JSON.stringify(entities)
-				)}&${new URLSearchParams({
-					data_params: JSON.stringify(results[0].params)
-				})}`
+				url: `https://car-defects.com/#entity_params=${JSON.stringify(entities)}&${new URLSearchParams(
+					{
+						data_params: JSON.stringify(results[0].params)
+					}
+				)}`
 			};
 		})
 		.then(({ url, imgs, defects }) => generateContent(topic, imgs, defects, url));
@@ -228,7 +228,7 @@ describe the design features of the cars, use maximum technical details,
 	log(
 		'video',
 		`https://car-defects.com/articles/en/${article_name}`,
-		`${prompt}, Generate prompt for the ai video maker to create a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
+		`${prompt}, Generate prompt for the ai video maker to create a short video about "${topic}", add instructions: need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
 	);
 
 	const queries = Object.entries({
