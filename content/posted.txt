@@ -8,3 +8,6 @@ most-and-least-reliable-cars
 most-reliable-cars-of-the-year
 new-car-reliability-ratings
 nissan-altima-vs-toyota-camry-reliability
+reliability-of-popular-sedans
+reliability-of-entry-level-cars
+reliability-of-eco-friendly-cars

@@ -1,13 +1,20 @@
 import { restore, store } from '$lib/util/hashStore';
 import { get, writable } from 'svelte/store';
 
-const PARAMS_HASH_KEY = 'data_params';
+export enum DATA_PARAMS {
+	TOTAL = 'total',
+	NORMALIZE = 'norm',
+	BY_AGE = 'by_age',
+	BY_MILEAGE = 'by_mileage'
+}
 
+const PARAMS_HASH_KEY = 'data_params';
+const DEFAULT_VALUE = {
+	[DATA_PARAMS.NORMALIZE]: true,
+	[DATA_PARAMS.BY_AGE]: true
+};
 export function createDataParams() {
-	const params = writable<Partial<IDataParams>>({
-		[DATA_PARAMS.NORMALIZE]: true,
-		[DATA_PARAMS.BY_AGE]: true
-	});
+	const params = writable<Partial<IDataParams>>({ ...DEFAULT_VALUE });
 
 	return {
 		csr() {
@@ -15,7 +22,6 @@ export function createDataParams() {
 				const data = JSON.parse(restore(PARAMS_HASH_KEY)) as Partial<IDataParams>;
 				params.set(data);
 			} catch (e) {
-				console.error(e);
 			}
 		},
 		params,
@@ -35,11 +41,5 @@ export function createDataParams() {
 	};
 }
 
-export enum DATA_PARAMS {
-	TOTAL = 'total',
-	NORMALIZE = 'norm',
-	BY_AGE = 'by_age',
-	BY_MILEAGE = 'by_mileage'
-}
 
 type IDataParams = Record<Partial<DATA_PARAMS>, boolean>;

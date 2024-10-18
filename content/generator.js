@@ -45,7 +45,7 @@ function saveTopic(topics = []) {
 function log(filename, article_name, query) {
 	openai.chat.completions
 		.create({
-			model: 'gpt-4o',
+			model: 'gpt-4',
 			messages: [{ role: 'user', content: query }],
 			temperature: 1
 		})
@@ -216,19 +216,19 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 where the key is the age of the car at the time of contacting the car service, 
 and the value is  number of service calls per 10000 cars sold. 
 Do not add this data to the result.
-Analyze the data in the graph, compare the cars in terms of reliability,
+Step by step analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, 
 describe the design features of the cars, use maximum technical details,
 `;
 
-	const article_query = `${prompt}, formalize everything in the form of  article "${topic}" of 10000 characters.
+	const article_query = `${prompt}, formalize everything in the form of article "${topic}" of 10000 characters.
 		Don’t Use Repetitive Sentences.
 		use markdown markup.`;
 
 	log(
 		'video',
 		`https://car-defects.com/articles/en/${article_name}`,
-		`${prompt}, Generate prompt for the ai video maker to create a short video about "${topic}", add instructions: need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
+		`${prompt}, Generate prompt step by step for the ai video maker to create a short video about "${topic}", add instructions: need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
 	);
 
 	const queries = Object.entries({
