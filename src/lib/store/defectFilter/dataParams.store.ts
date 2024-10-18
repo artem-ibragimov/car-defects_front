@@ -21,8 +21,7 @@ export function createDataParams() {
 			try {
 				const data = JSON.parse(restore(PARAMS_HASH_KEY)) as Partial<IDataParams>;
 				params.set(data);
-			} catch (e) {
-			}
+			} catch (e) {}
 		},
 		params,
 		setDataParams(cfg: Record<Partial<DATA_PARAMS>, boolean>) {
@@ -40,6 +39,5 @@ export function createDataParams() {
 		}
 	};
 }
-
 
 type IDataParams = Record<Partial<DATA_PARAMS>, boolean>;

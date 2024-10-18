@@ -43,26 +43,27 @@ function saveTopic(topics = []) {
 }
 
 function log(filename, article_name, query) {
-	openai.chat.completions
-		.create({
-			model: 'gpt-4',
-			messages: [{ role: 'user', content: query }],
-			temperature: 1
-		})
-		// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
-		.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
-		.then((data) => {
-			try {
-				const file = './content/' + filename + '.txt';
-				const content = readFileSync(file).toString();
-				writeFileSync(
-					file,
-					`${content}\n\n\n-------------------------\n\n${article_name}\n${data}`
-				);
-			} catch (e) {
-				error(e);
-			}
-		});
+	// openai.chat.completions
+	// 	.create({
+	// 		model: 'gpt-4',
+	// 		messages: [{ role: 'user', content: query }],
+	// 		temperature: 1
+	// 	})
+	// 	// .then((v) => humanize(v.choices[0].message.content?.replaceAll('"', '').trim()))
+	// 	.then((v) => v.choices[0].message.content?.replaceAll('"', '').trim())
+	// 	.then((data) => {
+	try {
+		const file = './content/' + filename + '.txt';
+		const content = readFileSync(file).toString();
+		writeFileSync(
+			file,
+			// `${content}\n\n\n-------------------------\n\n${article_name}\n${data}`
+			`${content}\n\n\n-------------------------\n\n${article_name}\n${query}`
+		);
+	} catch (e) {
+		error(e);
+	}
+	// });
 }
 function generateTopics(topics) {
 	const unposted = topics.find((t) => !t.includes(':generated'));
@@ -110,7 +111,9 @@ function generateByTopic(topic) {
 		})
 		.then(dedub_entities)
 		.then((entities) =>
-			get_defects_for_entities_norm(entities).catch(() => get_defects_for_entities_total(entities))
+			get_defects_for_entities_norm(entities, topic.includes('miles')).catch(() =>
+				get_defects_for_entities_total(entities, topic.includes('miles'))
+			)
 		)
 		.then((results) => {
 			const defects = results.map(({ car_name, data }) => [car_name, data]);
@@ -121,6 +124,7 @@ function generateByTopic(topic) {
 				(acc, { car_name, entity }) => Object.assign(acc, { [car_name]: entity }),
 				{}
 			);
+			const data_params = results[0].params;
 			return {
 				// imgs: cars.map((name) => ({
 				// 	prompt: ` realistic ${name} photo, , ultra detailed,  the car plate text ["car-defects.com"], illustration for article, –ar 2:1`,
@@ -128,14 +132,17 @@ function generateByTopic(topic) {
 				// })),
 				imgs: [],
 				defects,
+				data_params,
 				url: `https://car-defects.com/#entity_params=${JSON.stringify(entities)}&${new URLSearchParams(
 					{
-						data_params: JSON.stringify(results[0].params)
+						data_params: JSON.stringify(data_params)
 					}
 				)}`
 			};
 		})
-		.then(({ url, imgs, defects }) => generateContent(topic, imgs, defects, url));
+		.then(({ url, imgs, defects, data_params }) =>
+			generateContent(topic, imgs, defects, url, data_params)
+		);
 }
 
 function dedub_entities(entities) {
@@ -150,19 +157,19 @@ function dedub_entities(entities) {
 	return Object.fromEntries(Object.entries(params));
 }
 
-function get_defects_for_entities_norm(entities = {}) {
+function get_defects_for_entities_norm(entities = {}, by_mileage = false) {
 	return get_defects_for_entities(
 		{
-			by_age: true,
+			...(by_mileage ? { by_mileage } : { by_age: true }),
 			norm: true
 		},
 		entities
 	);
 }
-function get_defects_for_entities_total(entities = {}) {
+function get_defects_for_entities_total(entities = {}, by_mileage = false) {
 	return get_defects_for_entities(
 		{
-			by_age: true,
+			...(by_mileage ? { by_mileage } : { by_age: true }),
 			total: true
 		},
 		entities
@@ -190,7 +197,13 @@ function get_defects_for_entities(params, entities = {}) {
 	return Promise.all(fetching);
 }
 
-function generateContent(topic, imgs = [], defects = [], url = '') {
+function generateContent(
+	topic,
+	imgs = [],
+	defects = [],
+	url = '',
+	data_params = { by_age: true, by_mileage: false }
+) {
 	// const cards = JSON.stringify(imgs.map(({ name }) => ({ title: name })));
 	const article_name = `${topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
 	imgs.push({
@@ -213,7 +226,7 @@ function generateContent(topic, imgs = [], defects = [], url = '') {
 	// });
 	const prompt = `According to the car service calls statistics: 
 	${defects.map(([car, data]) => `${car}: ${JSON.stringify(data)}`).join('\n')}, 
-where the key is the age of the car at the time of contacting the car service, 
+where the key is the ${data_params.by_mileage ? 'mileage' : 'age'}  of the car at the time of contacting the car service, 
 and the value is  number of service calls per 10000 cars sold. 
 Do not add this data to the result.
 Step by step analyze the data in the graph, compare the cars in terms of reliability,
@@ -228,7 +241,7 @@ describe the design features of the cars, use maximum technical details,
 	log(
 		'video',
 		`https://car-defects.com/articles/en/${article_name}`,
-		`${prompt}, Generate prompt step by step for the ai video maker to create a short video about "${topic}", add instructions: need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
+		`${prompt}, Generate a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
 	);
 
 	const queries = Object.entries({
