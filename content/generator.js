@@ -241,7 +241,7 @@ describe the design features of the cars, use maximum technical details,
 	log(
 		'video',
 		`https://car-defects.com/articles/en/${article_name}`,
-		`${prompt}, Generate a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom `
+		`${prompt}, Generate a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and seroius soundtrack `
 	);
 
 	const queries = Object.entries({
