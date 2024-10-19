@@ -77,7 +77,7 @@ function generateTopics(topics) {
 			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 			info(`${unposted} done`);
 			saveTopic(topics);
-			return generateTopics(topics);
+			// return generateTopics(topics);
 		});
 }
 

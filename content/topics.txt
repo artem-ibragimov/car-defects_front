@@ -61,19 +61,14 @@ what are the most reliable suvs made in the last 10 years :generated
 which is more reliable: honda accord or toyota camry after 100,000 miles :generated
 are german cars less reliable than japanese cars after 150,000 miles :generated
 comparison of engine reliability between ford and dodge trucks :generated
-reliability comparison of electric vehicles in cold climates 
-which cars have the lowest repair costs over 10 years 
-hybrid vs  diesel reliability statistics for the last decade 
-are older bmw models more reliable than newer ones 
-what are the reliability ratings for cars with over 200,000 miles 
-most dependable compact cars from the 2010s 
+which cars have the lowest repair costs over 10 years :generated
+hybrid vs  diesel reliability statistics for the last decade :generated
+what are the reliability ratings for cars with over 200,000 miles :generated
+most dependable compact cars from the 2010s :generated
 reliability of automatic vs  manual transmission cars 
 top reliable cars for under $15,000 in 2023 
-how reliable are convertible cars compared to sedans 
-best and worst years for toyota reliability 
 how do korean cars compare in reliability to american cars 
 comparison of turbocharged vs  naturally aspirated engines for reliability 
-how reliable are plug in hybrids compared to traditional hybrids 
 reliability of luxury cars vs  economy cars 
 which suv has the best reliability in 2024 
 reliability of hybrid cars vs  electric cars
