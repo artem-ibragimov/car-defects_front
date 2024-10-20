@@ -65,8 +65,8 @@ which cars have the lowest repair costs over 10 years :generated
 hybrid vs  diesel reliability statistics for the last decade :generated
 what are the reliability ratings for cars with over 200,000 miles :generated
 most dependable compact cars from the 2010s :generated
-top reliable cars for under $15,000 in 2023 :generated
-how do korean cars compare in reliability to american cars 
+top reliable cars for under $15,000 in 2023:generated
+how do korean cars compare in reliability to american cars :generated
 comparison of turbocharged vs  naturally aspirated engines for reliability 
 reliability of luxury cars vs  economy cars 
 which suv has the best reliability in 2024 

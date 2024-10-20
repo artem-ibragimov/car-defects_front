@@ -115,7 +115,6 @@ function generateByTopic(topic) {
 				get_defects_for_entities_total(entities, topic.includes('miles'))
 			)
 		)
-		.then((results) => results.slice(0, 4))
 		.then((results) => {
 			const defects = results.map(({ car_name, data }) => [car_name, data]);
 			if (defects.length < 2 || results.length < 2) {
@@ -155,7 +154,7 @@ function dedub_entities(entities) {
 	const params = Object.fromEntries(
 		Object.entries(params_reversed).map(([params, title]) => [title, JSON.parse(params)])
 	);
-	return Object.fromEntries(Object.entries(params));
+	return Object.fromEntries(Object.entries(params).slice(0, 4));
 }
 
 function get_defects_for_entities_norm(entities = {}, by_mileage = false) {
