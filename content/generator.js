@@ -115,6 +115,7 @@ function generateByTopic(topic) {
 				get_defects_for_entities_total(entities, topic.includes('miles'))
 			)
 		)
+		.then((results) => results.slice(0, 4))
 		.then((results) => {
 			const defects = results.map(({ car_name, data }) => [car_name, data]);
 			if (defects.length < 2 || results.length < 2) {
@@ -241,7 +242,7 @@ describe the design features of the cars, use maximum technical details,
 	log(
 		'video',
 		`https://car-defects.com/articles/en/${article_name}`,
-		`${prompt}, Generate a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and seroius soundtrack `
+		`${prompt}, Generate a short video about "${topic}", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack `
 	);
 
 	const queries = Object.entries({
