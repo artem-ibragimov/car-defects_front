@@ -119,3 +119,26 @@ Step by step analyze the data in the graph, compare the cars in terms of reliabi
 draw conclusions, explain the results from the technical point of view, 
 describe the design features of the cars, use maximum technical details,
 , Generate a short video about "comparison of turbocharged vs  naturally aspirated engines for reliability ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
+
+
+-------------------------
+
+https://car-defects.com/articles/en/which-suv-has-the-best-reliability-in-2024-
+According to the car service calls statistics: 
+	toyota rav4: {"0":"96","1":"89","2":"100","3":"112","4":"126","5":"142","6":"129","7":"129","8":"118","9":"102","10":"98","11":"84","12":"71","13":"66"}
+honda cr-v: {"0":"86","1":"95","2":"111","3":"131","4":"145","5":"154","6":"143","7":"128","8":"130","9":"124","10":"113","11":"90","12":"86","13":"78"}
+subaru forester: {"0":"74","1":"91","2":"105","3":"119","4":"135","5":"114","6":"106","7":"94","8":"99","9":"85","10":"77","11":"59","12":"47","13":"34"}
+mazda cx-5: {"0":"34","1":"38","2":"40","3":"43","4":"50","5":"33","6":"32","7":"21","8":"17","9":"8","10":"3","11":"1"}
+ford escape: {"0":"89","1":"104","2":"134","3":"156","4":"165","5":"174","6":"174","7":"168","8":"163","9":"161","10":"155","11":"137","12":"124","13":"110"}
+hyundai tucson: {"0":"53","1":"70","2":"70","3":"75","4":"84","5":"78","6":"72","7":"76","8":"64","9":"46","10":"35","11":"33","12":"30","13":"27"}
+kia sportage: {"0":"59","1":"61","2":"73","3":"94","4":"86","5":"97","6":"95","7":"101","8":"94","9":"66","10":"57","11":"43","12":"40","13":"35"}
+nissan rogue: {"0":"54","1":"65","2":"82","3":"96","4":"100","5":"100","6":"99","7":"92","8":"81","9":"64","10":"53","11":"28","12":"18","13":"9"}
+chevrolet equinox: {"0":"68","1":"81","2":"93","3":"112","4":"117","5":"131","6":"113","7":"114","8":"106","9":"96","10":"74","11":"60","12":"45","13":"27"}
+volkswagen tiguan: {"0":"39","1":"47","2":"56","3":"52","4":"59","5":"62","6":"53","7":"45","8":"37","9":"29","10":"20","11":"12","12":"6","13":"7"}, 
+where the key is the age  of the car at the time of contacting the car service, 
+and the value is  number of service calls per 10000 cars sold. 
+Do not add this data to the result.
+Step by step analyze the data in the graph, compare the cars in terms of reliability,
+draw conclusions, explain the results from the technical point of view, 
+describe the design features of the cars, use maximum technical details,
+, Generate a short video about "which suv has the best reliability in 2024 ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
