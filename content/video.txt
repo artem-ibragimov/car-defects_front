@@ -71,23 +71,6 @@ describe the design features of the cars, use maximum technical details,
 
 -------------------------
 
-https://car-defects.com/articles/en/top-reliable-cars-for-under-$15,000-in-2023-
-According to the car service calls statistics: 
-	toyota corolla: {"0":"97","1":"114","2":"131","3":"151","4":"156","5":"145","6":"146","7":"140","8":"126","9":"115","10":"119","11":"101","12":"69","13":"68"}
-honda civic: {"0":"108","1":"115","2":"130","3":"152","4":"167","5":"170","6":"177","7":"162","8":"151","9":"143","10":"147","11":"132","12":"106","13":"104"}
-hyundai elantra: {"0":"79","1":"101","2":"117","3":"134","4":"140","5":"134","6":"135","7":"128","8":"128","9":"121","10":"98","11":"91","12":"71","13":"54"}
-kia forte: {"0":"36","1":"43","2":"55","3":"57","4":"67","5":"68","6":"56","7":"47","8":"44","9":"37","10":"34","11":"14","12":"11","13":"5"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "top reliable cars for under $15,000 in 2023 ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
-
-
--------------------------
-
 https://car-defects.com/articles/en/how-do-korean-cars-compare-in-reliability-to-american-cars-
 According to the car service calls statistics: 
 	hyundai elantra: {"0":"79","1":"101","2":"117","3":"134","4":"140","5":"134","6":"135","7":"128","8":"128","9":"121","10":"98","11":"91","12":"71","13":"54"}
@@ -106,39 +89,18 @@ describe the design features of the cars, use maximum technical details,
 
 -------------------------
 
-https://car-defects.com/articles/en/comparison-of-turbocharged-vs--naturally-aspirated-engines-for-reliability-
-According to the car service calls statistics: 
-	honda civic: {"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290","9":"0.20261515235455101262","10":"0.20828270906376922276","11":"0.18702937140420093472","12":"0.15019025279428256879","13":"0.14735647443967346372"}
-toyota corolla: {"0":"0.14846014686840921126","1":"0.17447893549483144417","2":"0.20049772412125367707","3":"0.23110806368175042166","4":"0.23876064857187460781","5":"0.22192496181360139828","6":"0.22345547879162623551","7":"0.21427237692347721213","8":"0.19284513923112949092","9":"0.17600945247285628139","10":"0.18213152038495563031","11":"0.15458221478050856018","12":"0.10560567148371376884","13":"0.10407515450568893161"}
-volkswagen golf: {"0":"0.93016368982647701452","1":"1.0250783520536685","2":"1.2338906089534899","3":"1.3098223387352431","4":"1.4427028658533113","5":"1.2908394062898048","6":"1.0820271493899835","7":"0.75931729781753225675","8":"0.74033436537209395033","9":"0.51253917602683427330","10":"0.18982932445438306419","11":"0.26576105423613628986","12":"0.18982932445438306419","13":"0.13288052711806814493"}
-ford focus: {"0":"0.25686081662731987057","1":"0.28254689829005185763","2":"0.34162488611433542786","3":"0.36474235961079421621","4":"0.40327148210489219680","5":"0.44436921276526337609","6":"0.48803555159190775409","7":"0.43409478010017058127","8":"0.42895756376762418386","9":"0.37501679227588701104","10":"0.32107602078414983822","11":"0.25172360029477347316","12":"0.25686081662731987057","13":"0.16952813897403111458"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "comparison of turbocharged vs  naturally aspirated engines for reliability ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
 
 
 -------------------------
 
-https://car-defects.com/articles/en/which-suv-has-the-best-reliability-in-2024-
+https://car-defects.com/articles/en/mazda-cx-5-vs-subaru-forester-durability
 According to the car service calls statistics: 
-	toyota rav4: {"0":"96","1":"89","2":"100","3":"112","4":"126","5":"142","6":"129","7":"129","8":"118","9":"102","10":"98","11":"84","12":"71","13":"66"}
-honda cr-v: {"0":"86","1":"95","2":"111","3":"131","4":"145","5":"154","6":"143","7":"128","8":"130","9":"124","10":"113","11":"90","12":"86","13":"78"}
-subaru forester: {"0":"74","1":"91","2":"105","3":"119","4":"135","5":"114","6":"106","7":"94","8":"99","9":"85","10":"77","11":"59","12":"47","13":"34"}
-mazda cx-5: {"0":"34","1":"38","2":"40","3":"43","4":"50","5":"33","6":"32","7":"21","8":"17","9":"8","10":"3","11":"1"}
-ford escape: {"0":"89","1":"104","2":"134","3":"156","4":"165","5":"174","6":"174","7":"168","8":"163","9":"161","10":"155","11":"137","12":"124","13":"110"}
-hyundai tucson: {"0":"53","1":"70","2":"70","3":"75","4":"84","5":"78","6":"72","7":"76","8":"64","9":"46","10":"35","11":"33","12":"30","13":"27"}
-kia sportage: {"0":"59","1":"61","2":"73","3":"94","4":"86","5":"97","6":"95","7":"101","8":"94","9":"66","10":"57","11":"43","12":"40","13":"35"}
-nissan rogue: {"0":"54","1":"65","2":"82","3":"96","4":"100","5":"100","6":"99","7":"92","8":"81","9":"64","10":"53","11":"28","12":"18","13":"9"}
-chevrolet equinox: {"0":"68","1":"81","2":"93","3":"112","4":"117","5":"131","6":"113","7":"114","8":"106","9":"96","10":"74","11":"60","12":"45","13":"27"}
-volkswagen tiguan: {"0":"39","1":"47","2":"56","3":"52","4":"59","5":"62","6":"53","7":"45","8":"37","9":"29","10":"20","11":"12","12":"6","13":"7"}, 
+	mazda cx-5: {"0":"0.25960936426248033841","1":"0.29015164241100743704","2":"0.30542278148527098636","3":"0.32832949009666631034","4":"0.38177847685658873295","5":"0.25197379472534856375","6":"0.24433822518821678909","7":"0.16034696027976726784","8":"0.12980468213124016920","9":"0.06108455629705419727","10":"0.02290670861139532398","11":"0.00763556953713177466"}
+subaru forester: {"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"}, 
 where the key is the age  of the car at the time of contacting the car service, 
 and the value is  number of service calls per 10000 cars sold. 
 Do not add this data to the result.
 Step by step analyze the data in the graph, compare the cars in terms of reliability,
 draw conclusions, explain the results from the technical point of view, 
 describe the design features of the cars, use maximum technical details,
-, Generate a short video about "which suv has the best reliability in 2024 ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
+, Generate a short video about "mazda cx 5 vs subaru forester durability", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
