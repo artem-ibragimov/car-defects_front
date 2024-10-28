@@ -71,21 +71,24 @@ function generateByTopic(topic: string) {
 					})
 					.then(info, error),
 
-				VideoPrompt.log({
-					url: `https://car-defects.com/articles/en/${article.name}`,
-					filename: 'video',
-					dataParams,
-					defects,
-					topic
-				}).then(info, error),
-
 				!article.isExists &&
 					anthropicAI
 						.generateChapters({
 							system: article.system,
 							contents: article.contents
 						})
-						.then(article.save, error)
+						.then(article.save)
+						.then((data) =>
+							VideoPrompt.log({
+								url: `https://car-defects.com/articles/en/${article.name}`,
+								filename: 'video',
+								dataParams,
+								...data,
+								defects,
+								topic
+							})
+						)
+						.then(info, error)
 			]);
 		});
 }

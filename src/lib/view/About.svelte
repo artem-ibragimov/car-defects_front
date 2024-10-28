@@ -6,6 +6,6 @@
 <aside class="card w-full">
 	<div class="card-body">
 		<h2 class="card-title">{$_('text.about.header')}</h2>
-		<Content data={$_('text.about.text')} />
+		<Content md={$_('text.about.text')} />
 	</div>
 </aside>

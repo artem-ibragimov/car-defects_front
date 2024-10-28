@@ -1,7 +1,9 @@
 <script lang="ts">
-	export let data: string;
+	import markdown from '@wcj/markdown-to-html';
+	export let md: string;
+	$: html = markdown(md);
 </script>
 
 <section class="Content">
-	{@html data}
+	{@html html}
 </section>

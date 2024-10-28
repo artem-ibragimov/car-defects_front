@@ -396,20 +396,23 @@ car buyers comparing the reliability of different models.`
 
 	save = (contents: Record<string, string>) => {
 		return readFile(this.filename, 'utf8').then((data) => {
-			const json = JSON.parse(data);
-			if (json.text.article[this.name]) {
-				return;
-			}
 			const { title, keywords, description, ...chapters } = contents as unknown as Contents;
-			json.text.article[this.name] = {
+			const json = JSON.parse(data);
+			if (!json.text.article[this.name]) {
+				json.text.article[this.name] = {
+					title,
+					text: Object.values(chapters).join('\n\n<hr />\n\n'),
+					url: new URL(this.url).hash,
+					keywords,
+					date: new Date().toISOString(),
+					description
+				};
+			}
+			return writeFile(this.filename, JSON.stringify(json, null, 2)).then(() => ({
 				title,
-				text: Object.values(chapters).join('\n\n<hr />\n\n'),
-				url: new URL(this.url).hash,
 				keywords,
-				date: new Date().toISOString(),
 				description
-			};
-			return writeFile(this.filename, JSON.stringify(json, null, 2));
+			}));
 		});
 	};
 }

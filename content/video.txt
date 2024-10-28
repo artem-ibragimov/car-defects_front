@@ -58,6 +58,14 @@
       compare the each car this others in terms of reliability,
       draw conclusions, explain the results from the technical point of view, 
       describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
       generate a short video about "mazda 3 reliability compared to honda civic", 
       need to use north male voice, 
       Limit video up to 59 sec, place captions at the bottom, 

@@ -7,6 +7,9 @@ export class VideoPrompt {
 		url: string;
 		defects: Record<string, Record<number, number>>;
 		topic: string;
+		title: string;
+		description: string;
+		keywords: string;
 		dataParams: { by_mileage?: boolean };
 	}) {
 		const filename = './content/' + cfg.filename + '.txt';
@@ -14,6 +17,10 @@ export class VideoPrompt {
 
 		const data = `-------------------------
       ${cfg.url}
+      ${cfg.title}
+      ${cfg.description}
+      ${cfg.keywords}
+      --
       According to the car service calls statistics: 
       ${JSON.stringify(cfg.defects)}, 
       where the key is the ${key} of the car at the time of contacting the car service, 
