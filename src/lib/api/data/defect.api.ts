@@ -9,10 +9,10 @@ export const createDefectAPI = (http: {
 		getDefectsDetails(params: IEntity & IMeta & ILocale & ICategories) {
 			return http.get<IDefectDetails[]>('/data/defect/details', params);
 		},
-		getDefectsByAge(params: IEntity & IDataParams) {
+		getDefectsByAge(params: IEntity & { norm?: boolean }) {
 			return http.get<IDefectData>('/data/defect/age', params);
 		},
-		getDefectsByMileage(params: IEntity & IDataParams) {
+		getDefectsByMileage(params: IEntity & { norm?: boolean }) {
 			return http.get<IDefectData>('/data/defect/mileage', params);
 		},
 		postDefect(defect: IDefect) {

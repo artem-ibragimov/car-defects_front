@@ -6,6 +6,7 @@
 	import Content from './Content.svelte';
 	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
+	import markdown from '@wcj/markdown-to-html';
 
 	export let article_name: string;
 	export let locale: string;
@@ -14,9 +15,9 @@
 	$: title = $_(`${i18nPath}.title`);
 	$: description = $_(`${i18nPath}.description`);
 	$: keywords = $_(`${i18nPath}.keywords`);
-	$: content = $_(`${i18nPath}.text`);
+	$: date = $_(`${i18nPath}.date`);
+	$: content = markdown($_(`${i18nPath}.text`));
 
-	const date = new Date().toISOString();
 	const SIZES = [320, 640, 1280];
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.png`;
 	$: srcset = poster
@@ -30,8 +31,8 @@
 		headline: title,
 		image: poster,
 		datePublished: date,
-		dateModified: date,
 		articleBody: content,
+		keywords,
 		about: description
 	});
 </script>
@@ -59,7 +60,6 @@
 <article class="Article prose">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
 	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
-	<h1>{title}</h1>
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
@@ -76,6 +76,6 @@
 		justify-content: center;
 		align-items: stretch;
 		margin: auto;
-		max-width: 920px;
+		max-width: 700px;
 	}
 </style>

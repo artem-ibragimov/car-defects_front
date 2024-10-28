@@ -16,12 +16,12 @@ const UNDETECTEBLE_HEADERS = new Headers();
 UNDETECTEBLE_HEADERS.append('x-humanizer-api-key', UNDETECTABLE_TOKEN);
 UNDETECTEBLE_HEADERS.append('Content-Type', 'application/json');
 
-const PUBLIC_CHAT_GPT_API_KEY = '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';
-const PUBLIC_CHAT_GPT_ORG_ID = 'org-0tXr3nALnhu8yFaZg68mwWcN';
+const CHAT_GPT_API_KEY = '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';
+const CHAT_GPT_ORG_ID = 'org-0tXr3nALnhu8yFaZg68mwWcN';
 
 const configuration = {
-	apiKey: PUBLIC_CHAT_GPT_API_KEY,
-	organization: PUBLIC_CHAT_GPT_ORG_ID,
+	apiKey: CHAT_GPT_API_KEY,
+	organization: CHAT_GPT_ORG_ID,
 	dangerouslyAllowBrowser: true
 };
 const openai = new OpenAI(configuration);

@@ -6,11 +6,18 @@
 	"configurations": [
 		{
 			"name": "Generator",
-			"program": "${workspaceFolder}/content/generator",
-			"request": "launch",
-			"skipFiles": ["<node_internals>/**"],
+			"program": "${workspaceFolder}/content/generator.ts",
 			"type": "node",
-			"console": "integratedTerminal"
+			"request": "launch",
+			"runtimeExecutable": "tsx",
+			// Files to exclude from debugger (e.g. call stack)
+			"skipFiles": [
+				// Node.js internal core modules
+				"<node_internals>/**",
+				// Ignore all dependencies (optional)
+				"${workspaceFolder}/node_modules/**"
+			],
+			"envFile": "${workspaceFolder}/.env"
 		},
 		{
 			"name": "Upload FTP",

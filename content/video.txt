@@ -1,121 +1,65 @@
 
 
+-------------------------
+      https://car-defects.com/articles/en/japanese-top-selling-compact-suvs
+      According to the car service calls statistics: 
+      {"toyota rav4":{"0":"0.20924423597518712102","1":"0.19398684376866306011","2":"0.21796274580748658439","3":"0.24411827530438497452","4":"0.27463305971743309634","5":"0.30950709904663094984","6":"0.28117194209165769387","7":"0.28117194209165769387","8":"0.25719604005283416958","9":"0.22232200072363631608","10":"0.21360349089133685271","11":"0.18308870647828873089","12":"0.15475354952331547492","13":"0.14385541223294114570"},"honda cr-v":{"0":"0.15471226576832809650","1":"0.17090308427896708335","2":"0.19968676163121417107","3":"0.23566635832152303072","4":"0.26085207600473923248","5":"0.27704289451537821932","6":"0.25725411633570834651","7":"0.23026941881797670177","8":"0.23386737848700758774","9":"0.22307349947991492984","10":"0.20328472130024505703","11":"0.16190818510638986843","12":"0.15471226576832809650","13":"0.14032042709220455264"},"nissan rogue":{"0":"0.19126465963922526479","1":"0.23022597919536374465","2":"0.29043892760030503171","3":"0.34002606158084491518","4":"0.35419381414671345331","5":"0.35419381414671345331","6":"0.35065187600524631878","7":"0.32585830901497637704","8":"0.28689698945883789718","9":"0.22668404105389661012","10":"0.18772272149775813025","11":"0.09917426796107976693","12":"0.06375488654640842160","13":"0.03187744327320421080"},"subaru forester":{"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"}}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      generate a short video about "japanese top selling compact suvs", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
 
 -------------------------
-
-
-https://car-defects.com/articles/en/most-dependable-compact-cars-from-the-2010s-
-According to the car service calls statistics: 
-	honda civic: {"0":"108","1":"115","2":"130","3":"152","4":"167","5":"170","6":"177","7":"162","8":"151","9":"143","10":"147","11":"132","12":"106","13":"104"}
-toyota corolla: {"0":"97","1":"114","2":"131","3":"151","4":"156","5":"145","6":"146","7":"140","8":"126","9":"115","10":"119","11":"101","12":"69","13":"68"}
-mazda 3: {"0":"53","1":"65","2":"76","3":"86","4":"92","5":"89","6":"81","7":"75","8":"73","9":"66","10":"60","11":"44","12":"35","13":"24"}
-hyundai elantra: {"0":"79","1":"101","2":"117","3":"134","4":"140","5":"134","6":"135","7":"128","8":"128","9":"121","10":"98","11":"91","12":"71","13":"54"}
-kia forte: {"0":"36","1":"43","2":"55","3":"57","4":"67","5":"68","6":"56","7":"47","8":"44","9":"37","10":"34","11":"14","12":"11","13":"5"}
-volkswagen golf: {"0":"49","1":"54","2":"65","3":"69","4":"76","5":"68","6":"57","7":"40","8":"39","9":"27","10":"10","11":"14","12":"10","13":"7"}
-ford focus: {"0":"100","1":"110","2":"133","3":"142","4":"157","5":"173","6":"190","7":"169","8":"167","9":"146","10":"125","11":"98","12":"100","13":"66"}
-chevrolet cruze: {"0":"31","1":"41","2":"61","3":"65","4":"63","5":"62","6":"57","7":"52","8":"41","9":"33","10":"16","11":"9","12":"6","13":"3"}
-subaru impreza: {"0":"63","1":"67","2":"81","3":"88","4":"88","5":"90","6":"75","7":"70","8":"58","9":"57","10":"53","11":"40","12":"29","13":"25"}
-nissan sentra: {"0":"82","1":"95","2":"115","3":"126","4":"137","5":"130","6":"129","7":"110","8":"107","9":"88","10":"73","11":"69","12":"50","13":"41"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "most dependable compact cars from the 2010s ", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom 
-
+      https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
+      According to the car service calls statistics: 
+      {"mazda 3":{"0":"0.32091784926912473592","1":"0.39357849438666241198","2":"0.46018408574440528170","3":"0.52073462334235334508","4":"0.55706494590112218311","5":"0.53889978462173776410","6":"0.49045935454337931339","7":"0.45412903198461047536","8":"0.44201892446502086269","9":"0.39963354814645721832","10":"0.36330322558768838029","11":"0.26642236543097147888","12":"0.21192688159281822184","13":"0.14532129023507535212"},"honda civic":{"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290","9":"0.20261515235455101262","10":"0.20828270906376922276","11":"0.18702937140420093472","12":"0.15019025279428256879","13":"0.14735647443967346372"},"toyota corolla":{"0":"0.14846014686840921126","1":"0.17447893549483144417","2":"0.20049772412125367707","3":"0.23110806368175042166","4":"0.23876064857187460781","5":"0.22192496181360139828","6":"0.22345547879162623551","7":"0.21427237692347721213","8":"0.19284513923112949092","9":"0.17600945247285628139","10":"0.18213152038495563031","11":"0.15458221478050856018","12":"0.10560567148371376884","13":"0.10407515450568893161"},"volkswagen jetta":{"0":"0.37113685545020798425","1":"0.43018135518092289084","2":"0.53561796184291379545","3":"0.60309739010658797441","4":"0.62840217570546579151","5":"0.64105456850490470007","6":"0.57779260450771015730","7":"0.64105456850490470007","8":"0.54827035464235270401","9":"0.49344331917811743361","10":"0.41752896238148398228","11":"0.33317967705189125859","12":"0.30787489145301344148","13":"0.23196053465637999016"}}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      generate a short video about "mazda 3 reliability compared to honda civic", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
 
 -------------------------
-
-https://car-defects.com/articles/en/reliability-of-automatic-vs--manual-transmission-cars-
-According to the car service calls statistics: 
-	toyota corolla: {"0":"97","1":"114","2":"131","3":"151","4":"156","5":"145","6":"146","7":"140","8":"126","9":"115","10":"119","11":"101","12":"69","13":"68"}
-honda civic: {"0":"108","1":"115","2":"130","3":"152","4":"167","5":"170","6":"177","7":"162","8":"151","9":"143","10":"147","11":"132","12":"106","13":"104"}
-ford focus: {"0":"100","1":"110","2":"133","3":"142","4":"157","5":"173","6":"190","7":"169","8":"167","9":"146","10":"125","11":"98","12":"100","13":"66"}
-volkswagen jetta: {"0":"88","1":"102","2":"127","3":"143","4":"149","5":"152","6":"137","7":"152","8":"130","9":"117","10":"99","11":"79","12":"73","13":"55"}
-subaru impreza: {"0":"63","1":"67","2":"81","3":"88","4":"88","5":"90","6":"75","7":"70","8":"58","9":"57","10":"53","11":"40","12":"29","13":"25"}
-hyundai elantra: {"0":"79","1":"101","2":"117","3":"134","4":"140","5":"134","6":"135","7":"128","8":"128","9":"121","10":"98","11":"91","12":"71","13":"54"}
-kia forte: {"0":"36","1":"43","2":"55","3":"57","4":"67","5":"68","6":"56","7":"47","8":"44","9":"37","10":"34","11":"14","12":"11","13":"5"}
-nissan sentra: {"0":"82","1":"95","2":"115","3":"126","4":"137","5":"130","6":"129","7":"110","8":"107","9":"88","10":"73","11":"69","12":"50","13":"41"}
-chevrolet cruze: {"0":"31","1":"41","2":"61","3":"65","4":"63","5":"62","6":"57","7":"52","8":"41","9":"33","10":"16","11":"9","12":"6","13":"3"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "reliability of automatic vs  manual transmission cars ", need to use north male voice, Limit video up to 59 sec, place subtitles at the bottom 
-
+      https://car-defects.com/articles/en/mitsubishi-outlander-reliability-comparison
+      According to the car service calls statistics: 
+      {"toyota rav4":{"0":"0.20924423597518712102","1":"0.19398684376866306011","2":"0.21796274580748658439","3":"0.24411827530438497452","4":"0.27463305971743309634","5":"0.30950709904663094984","6":"0.28117194209165769387","7":"0.28117194209165769387","8":"0.25719604005283416958","9":"0.22232200072363631608","10":"0.21360349089133685271","11":"0.18308870647828873089","12":"0.15475354952331547492","13":"0.14385541223294114570"},"honda cr-v":{"0":"0.15471226576832809650","1":"0.17090308427896708335","2":"0.19968676163121417107","3":"0.23566635832152303072","4":"0.26085207600473923248","5":"0.27704289451537821932","6":"0.25725411633570834651","7":"0.23026941881797670177","8":"0.23386737848700758774","9":"0.22307349947991492984","10":"0.20328472130024505703","11":"0.16190818510638986843","12":"0.15471226576832809650","13":"0.14032042709220455264"},"subaru forester":{"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"},"ford escape":{"0":"0.18889561225206654983","1":"0.22073195139567327172","2":"0.28440462968288671548","3":"0.33109792709350990757","4":"0.35019973057967394070","5":"0.36930153406583797383","6":"0.36930153406583797383","7":"0.35656699840839528508","8":"0.34595488536052637779","9":"0.34171004014137881487","10":"0.32897550448393612612","11":"0.29077189751160805986","12":"0.26318040358714890089","13":"0.23346648705311596047"}}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      generate a short video about "mitsubishi outlander reliability comparison", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
 
 -------------------------
-
-https://car-defects.com/articles/en/reliability-of-automatic-vs--manual-transmission-cars-
-According to the car service calls statistics: 
-	toyota corolla: {"0":"97","1":"114","2":"131","3":"151","4":"156","5":"145","6":"146","7":"140","8":"126","9":"115","10":"119","11":"101","12":"69","13":"68"}
-honda civic: {"0":"108","1":"115","2":"130","3":"152","4":"167","5":"170","6":"177","7":"162","8":"151","9":"143","10":"147","11":"132","12":"106","13":"104"}
-ford focus: {"0":"100","1":"110","2":"133","3":"142","4":"157","5":"173","6":"190","7":"169","8":"167","9":"146","10":"125","11":"98","12":"100","13":"66"}
-volkswagen jetta: {"0":"88","1":"102","2":"127","3":"143","4":"149","5":"152","6":"137","7":"152","8":"130","9":"117","10":"99","11":"79","12":"73","13":"55"}
-subaru impreza: {"0":"63","1":"67","2":"81","3":"88","4":"88","5":"90","6":"75","7":"70","8":"58","9":"57","10":"53","11":"40","12":"29","13":"25"}
-hyundai elantra: {"0":"79","1":"101","2":"117","3":"134","4":"140","5":"134","6":"135","7":"128","8":"128","9":"121","10":"98","11":"91","12":"71","13":"54"}
-kia forte: {"0":"36","1":"43","2":"55","3":"57","4":"67","5":"68","6":"56","7":"47","8":"44","9":"37","10":"34","11":"14","12":"11","13":"5"}
-nissan sentra: {"0":"82","1":"95","2":"115","3":"126","4":"137","5":"130","6":"129","7":"110","8":"107","9":"88","10":"73","11":"69","12":"50","13":"41"}
-chevrolet cruze: {"0":"31","1":"41","2":"61","3":"65","4":"63","5":"62","6":"57","7":"52","8":"41","9":"33","10":"16","11":"9","12":"6","13":"3"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "reliability of automatic vs  manual transmission cars ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
-
-
--------------------------
-
-https://car-defects.com/articles/en/how-do-korean-cars-compare-in-reliability-to-american-cars-
-According to the car service calls statistics: 
-	hyundai elantra: {"0":"79","1":"101","2":"117","3":"134","4":"140","5":"134","6":"135","7":"128","8":"128","9":"121","10":"98","11":"91","12":"71","13":"54"}
-kia forte: {"0":"36","1":"43","2":"55","3":"57","4":"67","5":"68","6":"56","7":"47","8":"44","9":"37","10":"34","11":"14","12":"11","13":"5"}
-chevrolet cruze: {"0":"31","1":"41","2":"61","3":"65","4":"63","5":"62","6":"57","7":"52","8":"41","9":"33","10":"16","11":"9","12":"6","13":"3"}
-ford focus: {"0":"100","1":"110","2":"133","3":"142","4":"157","5":"173","6":"190","7":"169","8":"167","9":"146","10":"125","11":"98","12":"100","13":"66"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "how do korean cars compare in reliability to american cars ", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
-
-
-
--------------------------
-
-
-
--------------------------
-
-https://car-defects.com/articles/en/mazda-cx-5-vs-subaru-forester-durability
-According to the car service calls statistics: 
-	mazda cx-5: {"0":"0.25960936426248033841","1":"0.29015164241100743704","2":"0.30542278148527098636","3":"0.32832949009666631034","4":"0.38177847685658873295","5":"0.25197379472534856375","6":"0.24433822518821678909","7":"0.16034696027976726784","8":"0.12980468213124016920","9":"0.06108455629705419727","10":"0.02290670861139532398","11":"0.00763556953713177466"}
-subaru forester: {"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "mazda cx 5 vs subaru forester durability", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
-
-
--------------------------
-
-https://car-defects.com/articles/en/ford-escape-vs-chevrolet-equinox-maintenance
-According to the car service calls statistics: 
-	ford escape: {"0":"0.18889561225206654983","1":"0.22073195139567327172","2":"0.28440462968288671548","3":"0.33109792709350990757","4":"0.35019973057967394070","5":"0.36930153406583797383","6":"0.36930153406583797383","7":"0.35656699840839528508","8":"0.34595488536052637779","9":"0.34171004014137881487","10":"0.32897550448393612612","11":"0.29077189751160805986","12":"0.26318040358714890089","13":"0.23346648705311596047"}
-chevrolet equinox: {"0":"0.18257327363545272265","1":"0.21747698771281868433","2":"0.24969580070731034127","3":"0.30070892128192213142","4":"0.31413342669629365515","5":"0.35172204185653392158","6":"0.30339382236479643617","7":"0.30607872344767074091","8":"0.28459951478467630296","9":"0.25775050395593325551","10":"0.19868268013269855112","11":"0.16109406497245828469","12":"0.12082054872934371352","13":"0.07249232923760622811"}, 
-where the key is the age  of the car at the time of contacting the car service, 
-and the value is  number of service calls per 10000 cars sold. 
-Do not add this data to the result.
-Step by step analyze the data in the graph, compare the cars in terms of reliability,
-draw conclusions, explain the results from the technical point of view, 
-describe the design features of the cars, use maximum technical details,
-, Generate a short video about "ford escape vs chevrolet equinox maintenance", need to use north male voice, Limit video up to 59 sec, place captions at the bottom, use calm and serious soundtrack 
+      https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
+      According to the car service calls statistics: 
+      {"mazda 3":{"0":"0.32091784926912473592","1":"0.39357849438666241198","2":"0.46018408574440528170","3":"0.52073462334235334508","4":"0.55706494590112218311","5":"0.53889978462173776410","6":"0.49045935454337931339","7":"0.45412903198461047536","8":"0.44201892446502086269","9":"0.39963354814645721832","10":"0.36330322558768838029","11":"0.26642236543097147888","12":"0.21192688159281822184","13":"0.14532129023507535212"},"honda civic":{"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290","9":"0.20261515235455101262","10":"0.20828270906376922276","11":"0.18702937140420093472","12":"0.15019025279428256879","13":"0.14735647443967346372"}}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      generate a short video about "mazda 3 reliability compared to honda civic", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
