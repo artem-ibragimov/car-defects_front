@@ -15,7 +15,7 @@
 	$: description = $_(`${i18nPath}.description`);
 	$: keywords = $_(`${i18nPath}.keywords`);
 	$: date = $_(`${i18nPath}.date`);
-	$: content = $_(`${i18nPath}.text`);
+	$: chapters = $_(`${i18nPath}.text`).split('\n## ');
 
 	const SIZES = [320, 640, 1280];
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.png`;
@@ -30,7 +30,7 @@
 		headline: title,
 		image: poster,
 		datePublished: date,
-		articleBody: content,
+		articleBody: chapters,
 		keywords,
 		about: description
 	});
@@ -56,26 +56,29 @@
 	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>
 
-<article class="Article prose">
+<article class="Article prose bg-base-100 shadow-xl">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
 	<h1>{title}</h1>
 	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
-	<Content md={content} />
+	{#each chapters as chapter}
+		<Content md={chapter} />
+		<hr />
+	{/each}
 	<!-- <Cards {cards} /> -->
 	<ArticleLinks pagePath={article_name} />
 </article>
 
 <style scoped>
 	.Article {
-		padding: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: stretch;
 		margin: auto;
-		max-width: 700px;
+		padding: 16px;
+		max-width: 800px;
 	}
 </style>
