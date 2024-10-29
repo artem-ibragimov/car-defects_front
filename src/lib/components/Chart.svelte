@@ -2,6 +2,7 @@
 	import { Chart } from 'chart.js/auto';
 	import { onMount } from 'svelte';
 	import Loading from '../view/Loading.svelte';
+	import Share from './Share.svelte';
 
 	const COLORS = [
 		'#4dc9f6',
@@ -110,7 +111,7 @@
 	}
 	@media (min-width: 500px) {
 		.Chart-frame {
-			height: 100vh;
+			height: calc(100vh - 24px);
 		}
 	}
 </style>

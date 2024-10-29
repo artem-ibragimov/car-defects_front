@@ -344,6 +344,45 @@ Avoid overly technical language and explain concepts in a way that's accessible 
 Ensure that the content is engaging, 
 informative, and provides clear value to potential 
 car buyers based on the reliability comparison and defects data provided.`,
+			recall_campaigns: `You are tasked with writing an SEO-friendly and engaging chapter 
+            titled "Recall campaigns" for an article comparing the reliability of different car models. 
+            This chapter will focus on describing recall campaigns for the car models provided. 
+            Follow these instructions to create the content:
+
+2. The car models list is [${this.cars}]. For each car model in this list:
+   a. Research recent recall campaigns (within the last 5 years) for that specific model.
+   b. Identify the most significant or frequent issues that led to recalls.
+   c. Note the number of vehicles affected and the severity of the problems.
+   d. Mention how the manufacturer handled the recall (e.g., promptly, delayed response, etc.).
+
+3. Present the information for each car model in the following structure:
+   <car_model>
+   <recall_info>
+   - Brief description of the recall issue
+   - Number of vehicles affected
+   - Year of the recall
+   - Severity of the problem (use terms like "minor," "moderate," or "severe")
+   - Manufacturer's response
+   </recall_info>
+   </car_model>
+
+4. To make the content SEO-friendly and engaging:
+   b. Include relevant keywords naturally throughout the text (e.g., "car reliability," "vehicle recalls," "automotive safety").
+   e. Include a brief comparison or summary after discussing all models, highlighting which models had the least and most concerning recall histories.
+
+5. Conclude the chapter by:
+   a. Summarizing the importance of considering recall history when assessing car reliability.
+   b. Encouraging readers to stay informed about recalls for their specific vehicles.
+   c. Providing a brief call-to-action, such as suggesting readers check for open recalls on their current vehicles.
+
+Remember to maintain an objective tone throughout the chapter, 
+presenting facts without bias towards any particular 
+car model or manufacturer.
+ Your goal is to provide valuable, accurate information to help readers make informed decisions about car reliability.
+
+Format "Comparative Analysis" and "Recall Campaigns"
+in the markdown table, but Summary and Recommendations write as markdown text
+`,
 			faq: `You are tasked with generating an engaging and SEO-friendly FAQ section 
             for a technical article comparing the reliability of different car models. T
             his FAQ will be aimed at potential car buyers. 
@@ -389,7 +428,6 @@ and user-friendly FAQ that will be valuable to potential
 car buyers comparing the reliability of different models.`
 		};
 	}
-
 	private get filename() {
 		return `src/lib/i18n/article_${this.locale}.json`;
 	}
@@ -427,6 +465,7 @@ type Chapters = {
 	maintenance_cost_comparison: string;
 	common_issues_solutions: string;
 	buyers_guide: string;
+	recall_campaigns: string;
 	faq: string;
 };
 

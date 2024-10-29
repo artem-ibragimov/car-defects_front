@@ -14,7 +14,7 @@ try {
 	const read_more = `...\n\nRead more: ${link}`;
 	post({
 		mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
-		keywords: json.text.article[poster].tikeywordstle,
+		keywords: json.text.article[poster].keywords,
 		title: json.text.article[poster].title.slice(0, 150),
 		post: `${json.text.article[poster].description
 			.replaceAll('\n', '')
