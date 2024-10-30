@@ -468,15 +468,3 @@ type Chapters = {
 	recall_campaigns: string;
 	faq: string;
 };
-
-/*
-generate a useful engaging seo chapter "Common Issues and Solutions" 
-for the technical article "${this.topic}" 
-about cars {{CARS}} reliability comparison for potential car buyers.
-There are service call statistics {{DEFECTS}}.
-This data represents the number of service calls per 10,000 cars sold, 
-with the key being the age of the vehicle at the time of contacting the car service.
-Format your output using markdown.
-Use tables and charts when comparing values.
-Use human written patterns;
-*/

@@ -25,7 +25,10 @@
 		x: $_(`label.chart.${type}.x`)
 	};
 
-	$: chartURL = `${new URL(ROUTE_NAMES.CHART_ONLY, PUBLIC_ORIGIN)}${location.hash}`;
+	$: chartURL =
+		typeof location !== 'undefined'
+			? `${new URL(ROUTE_NAMES.CHART_ONLY, PUBLIC_ORIGIN)}${location.hash}`
+			: '/';
 </script>
 
 {#if !$noChartData}

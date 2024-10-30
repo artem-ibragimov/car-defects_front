@@ -20,30 +20,6 @@
 			"envFile": "${workspaceFolder}/.env"
 		},
 		{
-			"name": "Upload FTP",
-			"program": "${workspaceFolder}/tools/ftp",
-			"request": "launch",
-			"skipFiles": ["<node_internals>/**"],
-			"type": "node",
-			"console": "integratedTerminal"
-		},
-		{
-			"name": "Poster",
-			"program": "${workspaceFolder}/content/poster",
-			"request": "launch",
-			"skipFiles": ["<node_internals>/**"],
-			"type": "node",
-			"console": "integratedTerminal"
-		},
-		{
-			"name": "Resize Images",
-			"program": "${workspaceFolder}/tools/resize_images",
-			"request": "launch",
-			"skipFiles": ["<node_internals>/**"],
-			"type": "node",
-			"console": "integratedTerminal"
-		},
-		{
 			"name": "Chrome",
 			"request": "launch",
 			"type": "chrome",
