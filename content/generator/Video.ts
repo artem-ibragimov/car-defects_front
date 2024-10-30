@@ -22,7 +22,7 @@ export class VideoPrompt {
       ${cfg.keywords}
       --
       According to the car service calls statistics: 
-      ${JSON.stringify(cfg.defects)}, 
+      ${JSON.stringify(cfg.defects, null, 2)}, 
       where the key is the ${key} of the car at the time of contacting the car service, 
       and the value is  number of service calls per 10000 cars sold. 
       Step by step analyze the data, 

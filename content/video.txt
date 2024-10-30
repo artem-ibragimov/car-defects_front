@@ -1,105 +1,3 @@
-
-
--------------------------
-      https://car-defects.com/articles/en/japanese-top-selling-compact-suvs
-      According to the car service calls statistics: 
-      {"toyota rav4":{"0":"0.20924423597518712102","1":"0.19398684376866306011","2":"0.21796274580748658439","3":"0.24411827530438497452","4":"0.27463305971743309634","5":"0.30950709904663094984","6":"0.28117194209165769387","7":"0.28117194209165769387","8":"0.25719604005283416958","9":"0.22232200072363631608","10":"0.21360349089133685271","11":"0.18308870647828873089","12":"0.15475354952331547492","13":"0.14385541223294114570"},"honda cr-v":{"0":"0.15471226576832809650","1":"0.17090308427896708335","2":"0.19968676163121417107","3":"0.23566635832152303072","4":"0.26085207600473923248","5":"0.27704289451537821932","6":"0.25725411633570834651","7":"0.23026941881797670177","8":"0.23386737848700758774","9":"0.22307349947991492984","10":"0.20328472130024505703","11":"0.16190818510638986843","12":"0.15471226576832809650","13":"0.14032042709220455264"},"nissan rogue":{"0":"0.19126465963922526479","1":"0.23022597919536374465","2":"0.29043892760030503171","3":"0.34002606158084491518","4":"0.35419381414671345331","5":"0.35419381414671345331","6":"0.35065187600524631878","7":"0.32585830901497637704","8":"0.28689698945883789718","9":"0.22668404105389661012","10":"0.18772272149775813025","11":"0.09917426796107976693","12":"0.06375488654640842160","13":"0.03187744327320421080"},"subaru forester":{"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"}}, 
-      where the key is the age of the car at the time of contacting the car service, 
-      and the value is  number of service calls per 10000 cars sold. 
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      generate a short video about "japanese top selling compact suvs", 
-      need to use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      use calm and serious soundtrack.
-      
-
--------------------------
-      https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
-      According to the car service calls statistics: 
-      {"mazda 3":{"0":"0.32091784926912473592","1":"0.39357849438666241198","2":"0.46018408574440528170","3":"0.52073462334235334508","4":"0.55706494590112218311","5":"0.53889978462173776410","6":"0.49045935454337931339","7":"0.45412903198461047536","8":"0.44201892446502086269","9":"0.39963354814645721832","10":"0.36330322558768838029","11":"0.26642236543097147888","12":"0.21192688159281822184","13":"0.14532129023507535212"},"honda civic":{"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290","9":"0.20261515235455101262","10":"0.20828270906376922276","11":"0.18702937140420093472","12":"0.15019025279428256879","13":"0.14735647443967346372"},"toyota corolla":{"0":"0.14846014686840921126","1":"0.17447893549483144417","2":"0.20049772412125367707","3":"0.23110806368175042166","4":"0.23876064857187460781","5":"0.22192496181360139828","6":"0.22345547879162623551","7":"0.21427237692347721213","8":"0.19284513923112949092","9":"0.17600945247285628139","10":"0.18213152038495563031","11":"0.15458221478050856018","12":"0.10560567148371376884","13":"0.10407515450568893161"},"volkswagen jetta":{"0":"0.37113685545020798425","1":"0.43018135518092289084","2":"0.53561796184291379545","3":"0.60309739010658797441","4":"0.62840217570546579151","5":"0.64105456850490470007","6":"0.57779260450771015730","7":"0.64105456850490470007","8":"0.54827035464235270401","9":"0.49344331917811743361","10":"0.41752896238148398228","11":"0.33317967705189125859","12":"0.30787489145301344148","13":"0.23196053465637999016"}}, 
-      where the key is the age of the car at the time of contacting the car service, 
-      and the value is  number of service calls per 10000 cars sold. 
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      generate a short video about "mazda 3 reliability compared to honda civic", 
-      need to use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      use calm and serious soundtrack.
-      
-
--------------------------
-      https://car-defects.com/articles/en/mitsubishi-outlander-reliability-comparison
-      According to the car service calls statistics: 
-      {"toyota rav4":{"0":"0.20924423597518712102","1":"0.19398684376866306011","2":"0.21796274580748658439","3":"0.24411827530438497452","4":"0.27463305971743309634","5":"0.30950709904663094984","6":"0.28117194209165769387","7":"0.28117194209165769387","8":"0.25719604005283416958","9":"0.22232200072363631608","10":"0.21360349089133685271","11":"0.18308870647828873089","12":"0.15475354952331547492","13":"0.14385541223294114570"},"honda cr-v":{"0":"0.15471226576832809650","1":"0.17090308427896708335","2":"0.19968676163121417107","3":"0.23566635832152303072","4":"0.26085207600473923248","5":"0.27704289451537821932","6":"0.25725411633570834651","7":"0.23026941881797670177","8":"0.23386737848700758774","9":"0.22307349947991492984","10":"0.20328472130024505703","11":"0.16190818510638986843","12":"0.15471226576832809650","13":"0.14032042709220455264"},"subaru forester":{"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"},"ford escape":{"0":"0.18889561225206654983","1":"0.22073195139567327172","2":"0.28440462968288671548","3":"0.33109792709350990757","4":"0.35019973057967394070","5":"0.36930153406583797383","6":"0.36930153406583797383","7":"0.35656699840839528508","8":"0.34595488536052637779","9":"0.34171004014137881487","10":"0.32897550448393612612","11":"0.29077189751160805986","12":"0.26318040358714890089","13":"0.23346648705311596047"}}, 
-      where the key is the age of the car at the time of contacting the car service, 
-      and the value is  number of service calls per 10000 cars sold. 
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      generate a short video about "mitsubishi outlander reliability comparison", 
-      need to use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      use calm and serious soundtrack.
-      
-
--------------------------
-      https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
-      According to the car service calls statistics: 
-      {"mazda 3":{"0":"0.32091784926912473592","1":"0.39357849438666241198","2":"0.46018408574440528170","3":"0.52073462334235334508","4":"0.55706494590112218311","5":"0.53889978462173776410","6":"0.49045935454337931339","7":"0.45412903198461047536","8":"0.44201892446502086269","9":"0.39963354814645721832","10":"0.36330322558768838029","11":"0.26642236543097147888","12":"0.21192688159281822184","13":"0.14532129023507535212"},"honda civic":{"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290","9":"0.20261515235455101262","10":"0.20828270906376922276","11":"0.18702937140420093472","12":"0.15019025279428256879","13":"0.14735647443967346372"}}, 
-      where the key is the age of the car at the time of contacting the car service, 
-      and the value is  number of service calls per 10000 cars sold. 
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      - Highlight any significant differences between the models.
-      - Consider the implications of the data for potential car buyers.
-      Use clear, concise language suitable for a technical audience.
-      - Incorporate relevant keywords naturally throughout the text.
-      - Include subheadings to break up the content and improve readability.
-      - Include a brief explanation of what service calls indicate about car reliability.
-      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
-      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
-      generate a short video about "mazda 3 reliability compared to honda civic", 
-      need to use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      use calm and serious soundtrack.
-      
-
--------------------------
-      https://car-defects.com/articles/en/mitsubishi-outlander-reliability-comparison
-      Mitsubishi Outlander vs Popular SUVs: The Truth About Reliability
-      Discover how the Mitsubishi Outlander's reliability stacks up against popular SUV competitors like the RAV4 and CR-V. Data-driven comparison with real service records and expert insights.
-      Mitsubishi Outlander reliability review, SUV reliability comparison, Outlander vs competitors reliability, Mitsubishi Outlander service history
-      --
-      According to the car service calls statistics: 
-      {"toyota rav4":{"0":"0.20924423597518712102","1":"0.19398684376866306011","2":"0.21796274580748658439","3":"0.24411827530438497452","4":"0.27463305971743309634","5":"0.30950709904663094984","6":"0.28117194209165769387","7":"0.28117194209165769387","8":"0.25719604005283416958","9":"0.22232200072363631608","10":"0.21360349089133685271","11":"0.18308870647828873089","12":"0.15475354952331547492","13":"0.14385541223294114570"},"honda cr-v":{"0":"0.15471226576832809650","1":"0.17090308427896708335","2":"0.19968676163121417107","3":"0.23566635832152303072","4":"0.26085207600473923248","5":"0.27704289451537821932","6":"0.25725411633570834651","7":"0.23026941881797670177","8":"0.23386737848700758774","9":"0.22307349947991492984","10":"0.20328472130024505703","11":"0.16190818510638986843","12":"0.15471226576832809650","13":"0.14032042709220455264"},"subaru forester":{"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914","9":"0.34302603850124256138","10":"0.31074123487759620266","11":"0.23810042672439189555","12":"0.18967322128892235747","13":"0.13721041540049702455"},"ford escape":{"0":"0.18889561225206654983","1":"0.22073195139567327172","2":"0.28440462968288671548","3":"0.33109792709350990757","4":"0.35019973057967394070","5":"0.36930153406583797383","6":"0.36930153406583797383","7":"0.35656699840839528508","8":"0.34595488536052637779","9":"0.34171004014137881487","10":"0.32897550448393612612","11":"0.29077189751160805986","12":"0.26318040358714890089","13":"0.23346648705311596047"}}, 
-      where the key is the age of the car at the time of contacting the car service, 
-      and the value is  number of service calls per 10000 cars sold. 
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      - Highlight any significant differences between the models.
-      - Consider the implications of the data for potential car buyers.
-      Use clear, concise language suitable for a technical audience.
-      - Incorporate relevant keywords naturally throughout the text.
-      - Include subheadings to break up the content and improve readability.
-      - Include a brief explanation of what service calls indicate about car reliability.
-      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
-      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
-      generate a short video about "mitsubishi outlander reliability comparison", 
-      need to use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      use calm and serious soundtrack.
-      
-
 -------------------------
       https://car-defects.com/articles/en/most-and-least-reliable-cars
       Most vs Least Reliable Cars: Shocking Service Data Revealed
@@ -123,6 +21,99 @@
       - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
       - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
       generate a short video about "most and least reliable cars", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/mitsubishi-outlander-reliability-comparison
+      Mitsubishi Outlander Reliability: How Does It Really Compare?
+      Discover how the Mitsubishi Outlander's reliability stacks up against top SUV competitors like RAV4, CR-V, and Forester with our data-driven comparison of service records and maintenance costs.
+      Mitsubishi Outlander reliability, Outlander vs RAV4 reliability, SUV reliability comparison, Mitsubishi Outlander problems
+      --
+      According to the car service calls statistics: 
+      {
+  "mitsubishi outlander": {
+    "0": "0.97696797987445961459",
+    "1": "1.3229774727466641",
+    "2": "1.1397959765202029",
+    "3": "1.3840379714888178",
+    "4": "1.3840379714888178",
+    "5": "1.2619169740045103",
+    "6": "1.1805029756816387",
+    "7": "1.2008564752623566",
+    "8": "0.77343298406728052821",
+    "9": "0.93626098071302379731",
+    "10": "0.87520048197087007140",
+    "11": "0.63095848700225516775",
+    "12": "0.48848398993722980729",
+    "13": "0.38671649203364026411"
+  },
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958",
+    "9": "0.22232200072363631608",
+    "10": "0.21360349089133685271",
+    "11": "0.18308870647828873089",
+    "12": "0.15475354952331547492",
+    "13": "0.14385541223294114570"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774",
+    "9": "0.22307349947991492984",
+    "10": "0.20328472130024505703",
+    "11": "0.16190818510638986843",
+    "12": "0.15471226576832809650",
+    "13": "0.14032042709220455264"
+  },
+  "subaru forester": {
+    "0": "0.29863443351872881814",
+    "1": "0.36723964121897733042",
+    "2": "0.42373804756035845817",
+    "3": "0.48023645390173958593",
+    "4": "0.54480606114903230337",
+    "5": "0.46005845163696061173",
+    "6": "0.42777364801331425301",
+    "7": "0.37934644257784471494",
+    "8": "0.39952444484262368914",
+    "9": "0.34302603850124256138",
+    "10": "0.31074123487759620266",
+    "11": "0.23810042672439189555",
+    "12": "0.18967322128892235747",
+    "13": "0.13721041540049702455"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "mitsubishi outlander reliability comparison", 
       need to use north male voice, 
       Limit video up to 59 sec, place captions at the bottom, 
       use calm and serious soundtrack.
