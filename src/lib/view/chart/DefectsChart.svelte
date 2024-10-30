@@ -25,10 +25,8 @@
 		x: $_(`label.chart.${type}.x`)
 	};
 
-	$: chartURL =
-		typeof location !== 'undefined'
-			? `${new URL(ROUTE_NAMES.CHART_ONLY, PUBLIC_ORIGIN)}${location.hash}`
-			: '/';
+	const url = `${new URL(ROUTE_NAMES.CHART_ONLY, PUBLIC_ORIGIN)}`;
+	$: chartURL = typeof location !== 'undefined' ? `${url}${location.hash}` : '';
 </script>
 
 {#if !$noChartData}
@@ -41,5 +39,7 @@
 		{displayLegend}
 		{isFrameChart}
 	/>
-	<Share value={chartURL} />
+	{#if chartURL}
+		<Share value={chartURL} />
+	{/if}
 {/if}
