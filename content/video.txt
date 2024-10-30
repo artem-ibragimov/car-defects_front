@@ -99,3 +99,31 @@
       Limit video up to 59 sec, place captions at the bottom, 
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/most-and-least-reliable-cars
+      Most vs Least Reliable Cars: Shocking Service Data Revealed
+      Discover which popular compact cars stand the test of time based on real service data. Compare reliability ratings of Toyota Corolla, Honda Civic, Subaru Impreza, and Hyundai Elantra over 13 years.
+      car reliability rankings, most dependable cars, vehicle maintenance costs, reliable car comparison
+      --
+      According to the car service calls statistics: 
+      {"toyota corolla":{"0":"0.14846014686840921126","1":"0.17447893549483144417","2":"0.20049772412125367707","3":"0.23110806368175042166","4":"0.23876064857187460781","5":"0.22192496181360139828","6":"0.22345547879162623551","7":"0.21427237692347721213","8":"0.19284513923112949092","9":"0.17600945247285628139","10":"0.18213152038495563031","11":"0.15458221478050856018","12":"0.10560567148371376884","13":"0.10407515450568893161"},"honda civic":{"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290","9":"0.20261515235455101262","10":"0.20828270906376922276","11":"0.18702937140420093472","12":"0.15019025279428256879","13":"0.14735647443967346372"},"subaru impreza":{"0":"0.54201707783967478975","1":"0.57643086055965414148","2":"0.69687910007958187254","3":"0.75710321983954573807","4":"0.75710321983954573807","5":"0.77431011119953541393","6":"0.64525842599961284494","7":"0.60224119759963865528","8":"0.49899984943970060009","9":"0.49039640375970576216","10":"0.45598262103972641043","11":"0.34413782719979351730","12":"0.24949992471985030005","13":"0.21508614199987094831"},"hyundai elantra":{"0":"0.24635734163588759120","1":"0.31496318361043856596","2":"0.36485834141011200216","3":"0.41787194657226502811","4":"0.43658263074714256668","5":"0.41787194657226502811","6":"0.42099039393474461787","7":"0.39916126239738748954","8":"0.39916126239738748954","9":"0.37733213086003036120","10":"0.30560784152299979668","11":"0.28377870998564266834","12":"0.22140976273605087310","13":"0.16839615757389784715"}}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "most and least reliable cars", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      

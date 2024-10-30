@@ -12,14 +12,17 @@ export class ChatGPT {
 			dangerouslyAllowBrowser: true
 		});
 	}
-	getCars(topic) {
+	getCars(topic: string) {
 		return this.openai.chat.completions
 			.create({
 				model: 'gpt-3.5-turbo',
 				messages: [
 					{
 						role: 'user',
-						content: `get list of car model names in article "${topic}" to compare, select only cars of the same class and price segment, sort by sales in USA`
+						content: `you are writing the article "${topic}" about car reliability comparison.
+									generate the list of 4 car names that will be compared in the article, 
+									and obligatorily add the car names from the title on top, 
+									select only cars of the same class and sort by sales in the USA`
 					}
 				],
 				temperature: 0.1
