@@ -291,6 +291,31 @@ export class Article {
             examples and support your arguments. 
             Use tables or charts to effectively compare maintenance costs across different car models.
             Format your output using markdown`,
+			deprecation_analysis: `You are an automotive expert tasked with writing an SEO-optimized analysis of car prices and depreciation for a specific list of vehicles. This analysis will be part of a larger article comparing cars in terms of long-term reliability. Your goal is to provide valuable insights for readers considering the long-term value of their potential car purchases.
+
+         Please follow these steps to complete your analysis:
+
+         1. Research and Analysis:
+         - Create a comparison table and for each car in the list add a column to the  table:
+               - Calculate key statistics: initial price, estimated prices at 1, 3, and 5 years
+               - Calculate exact depreciation percentages for 1, 3, and 5 years
+               - Calculate its depreciation rate to the average for its class
+               - List factors influencing its depreciation (e.g., brand reputation, reliability, market demand)
+               - Research and note down any specific factors affecting depreciation for this particular model
+               - Calculate this car's depreciation rate with similar models in its class
+               - Consider how this car's unique features might impact its long-term value
+
+         Use Markdown formatting as follows:
+                     - Use ## for main section headings and ### for subsection headings
+                     - Use bullet points (-) for unordered lists and numbered lists (1., 2., 3.) for ordered lists
+                     - Use **bold** to emphasize important terms or phrases
+
+         - Create Key Depreciation Factors comparison table 
+
+         write the chapter using the following structure:
+            - Title
+            - Analysis
+            - Insights`,
 			common_issues_solutions: `You are tasked with generating an engaging and SEO-friendly "Common Issues and Solutions" chapter 
             for a technical article comparing the reliability of different car models. 
             Follow these instructions carefully to create high-quality content:
@@ -464,7 +489,8 @@ type Chapters = {
 	service_call_analysis: string;
 	maintenance_cost_comparison: string;
 	common_issues_solutions: string;
-	buyers_guide: string;
+	deprecation_analysis: string;
 	recall_campaigns: string;
+	buyers_guide: string;
 	faq: string;
 };
