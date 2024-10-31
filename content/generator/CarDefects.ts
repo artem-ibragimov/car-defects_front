@@ -69,9 +69,10 @@ function getDefects(cfg: { isNorm: boolean; byMilage: boolean }, entities: Entit
 		by_age: !cfg.byMilage,
 		by_mileage: cfg.byMilage
 	};
-	const url = `https://car-defects.com/#entity_params=${JSON.stringify(
-		entities
-	)}&${new URLSearchParams({ data_params: JSON.stringify(dataParams) })}`;
+	const url = `https://car-defects.com/#${new URLSearchParams({
+		entity_params: JSON.stringify(entities),
+		data_params: JSON.stringify(dataParams)
+	})}`;
 	const fetching = Object.entries(entities).map(
 		([carName, entity]): Promise<[CarName, DefectData]> => {
 			const query = `${ORIGIN}${cfg.byMilage ? 'mileage' : ('age' as Key)}?${new URLSearchParams({ ...entity, ...{ norm: cfg.isNorm ? 'true' : 'false' } })}`;

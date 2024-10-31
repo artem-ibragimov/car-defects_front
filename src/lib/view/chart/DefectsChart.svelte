@@ -16,7 +16,7 @@
 	$: ({ by_age, by_mileage, norm, total } = isFrameChart
 		? filter.dataParams.getDataParams()
 		: $selectedData);
-	$: type = (by_age && 'by_age') || (by_mileage && 'by_mileage');
+	$: type = (by_mileage && 'by_mileage') || 'by_age';
 	$: normal = (norm && 'norm') || 'total';
 	$: tooltip = $_(`label.chart.${type}.${normal}.tooltip`);
 	$: title = $_(`label.chart.${type}.${normal}.title`);

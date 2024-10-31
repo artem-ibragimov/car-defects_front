@@ -8,7 +8,7 @@ const loadJSON = (path) => JSON.parse(readFileSync(path));
 
 const en = loadJSON('./src/lib/i18n/article_en.json');
 export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en', 'ru', 'es', 'de' /*  'ru','fr','jp', 'pt',  'zh' */];
+export const AVAILABLE_LOCALES = ['en' /*'ru', 'es', 'de'   'ru','fr','jp', 'pt',  'zh' */];
 
 /**
 "1": "transmission",

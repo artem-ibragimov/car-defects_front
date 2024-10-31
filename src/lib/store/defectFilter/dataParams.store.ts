@@ -19,9 +19,12 @@ export function createDataParams() {
 	return {
 		csr() {
 			try {
-				const data = JSON.parse(restore(PARAMS_HASH_KEY)) as Partial<IDataParams>;
+				const restored = restore(PARAMS_HASH_KEY);
+				const data = JSON.parse(restored) as Partial<IDataParams>;
 				params.set(data);
-			} catch (e) {}
+			} catch (e) {
+				console.error(e);
+			}
 		},
 		params,
 		setDataParams(cfg: Record<Partial<DATA_PARAMS>, boolean>) {
