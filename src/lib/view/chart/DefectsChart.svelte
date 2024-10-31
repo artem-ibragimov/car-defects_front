@@ -10,14 +10,14 @@
 	export let isFrameChart = false;
 
 	$: ({ state: defectState, filter, selectedChartData } = defectStore);
-	$: ({ noChartData, entities } = defectStore.filter.entityParams);
+	$: ({ noChartData } = defectStore.filter.entityParams);
 	$: ({ loading } = $defectState);
 	$: ({ params: selectedData } = filter.dataParams);
 	$: ({ by_age, by_mileage, norm, total } = isFrameChart
 		? filter.dataParams.getDataParams()
 		: $selectedData);
 	$: type = (by_age && 'by_age') || (by_mileage && 'by_mileage');
-	$: normal = (norm && 'norm') || (total && 'total');
+	$: normal = (norm && 'norm') || 'total';
 	$: tooltip = $_(`label.chart.${type}.${normal}.tooltip`);
 	$: title = $_(`label.chart.${type}.${normal}.title`);
 	$: axes = {
