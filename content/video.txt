@@ -254,3 +254,64 @@
       Limit video up to 59 sec, place captions at the bottom, 
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/most-reliable-cars-of-the-year
+      Toyota Camry vs Honda Accord: Battle of Reliability Champions 2024
+      Discover the most dependable vehicles of the year through detailed reliability analysis. Compare Honda Accord vs Toyota Camry service records and make an informed car-buying decision.
+      reliable car rankings, car reliability comparison, most dependable vehicles, best car longevity
+      --
+      According to the car service calls statistics: 
+      {
+  "toyota camry": {
+    "0": "0.11967898068582691599",
+    "1": "0.12915850390846667171",
+    "2": "0.15522719277072599995",
+    "3": "0.16352177559053578621",
+    "4": "0.17063141800751560300",
+    "5": "0.17892600082732538926",
+    "6": "0.18011094123015535872",
+    "7": "0.17537117961883548086",
+    "8": "0.17063141800751560300",
+    "9": "0.17063141800751560300",
+    "10": "0.13982296753393639690",
+    "11": "0.13389826551978654958",
+    "12": "0.11256933826884709920",
+    "13": "0.09598017262922752669"
+  },
+  "honda accord": {
+    "0": "0.14526812203314622359",
+    "1": "0.13866502557709412252",
+    "2": "0.15847431494525042573",
+    "3": "0.18752793935187967045",
+    "4": "0.20865784801124639388",
+    "5": "0.22450527950577143646",
+    "6": "0.22318466021456101624",
+    "7": "0.22054342163214017581",
+    "8": "0.21261970588487765453",
+    "9": "0.20733722872003597367",
+    "10": "0.18092484289582756938",
+    "11": "0.17564236573098588852",
+    "12": "0.16243617281888168638",
+    "13": "0.13338254841225244166"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "most reliable cars of the year", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
