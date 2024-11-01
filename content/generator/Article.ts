@@ -464,7 +464,7 @@ car buyers comparing the reliability of different models.`
 			if (!json.text.article[this.name]) {
 				json.text.article[this.name] = {
 					title,
-					text: Object.values(chapters).join('\n'),
+					text: Object.values(chapters).join('  \n'),
 					url: new URL(this.url).hash,
 					keywords,
 					date: new Date().toISOString(),

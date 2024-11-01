@@ -20,12 +20,15 @@ export function createDataParams() {
 		csr() {
 			try {
 				const restored = restore(PARAMS_HASH_KEY);
+				if (!restored) {
+					return;
+				}
 				const data = JSON.parse(restored) as Partial<IDataParams>;
 				params.set({
-					by_age: data.by_age || !data.by_mileage,
-					by_mileage: data.by_mileage || !data.by_age,
-					norm: data.norm || !data.total,
-					total: data.total || !data.norm
+					by_age: data.by_age || (typeof data.by_mileage !== 'undefined' && !data.by_mileage),
+					by_mileage: data.by_mileage || (typeof data.by_age !== 'undefined' && !data.by_age),
+					norm: data.norm || (typeof data.total !== 'undefined' && !data.total),
+					total: data.total || (typeof data.norm !== 'undefined' && !data.norm)
 				});
 			} catch (e) {
 				console.error(e);
