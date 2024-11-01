@@ -39,9 +39,10 @@
 		function gtag() {
 			dataLayer.push(arguments);
 		}
-		gtag('js', new Date());
-
-		gtag('config', 'G-D3Z9TXBZ2M');
+		setTimeout(() => {
+			gtag('js', new Date());
+			gtag('config', 'G-D3Z9TXBZ2M');
+		}, 300);
 	</script>
 	{#if !isDebug()}
 		<script type="text/javascript">

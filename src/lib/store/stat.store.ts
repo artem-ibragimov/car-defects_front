@@ -2,13 +2,17 @@ import { LOAD_ERROR } from '$lib/api/error';
 import { get, writable } from 'svelte/store';
 
 const DEFAULT_STATE: IState = {
-	data: [],
+	sources: {},
+	topReliableModels: [],
 	error: null
 };
 
 let isInit = false;
 
-export const createStatStore = (api: { getTopReliableModels(): Promise<string[]> }) => {
+export const createStatStore = (api: {
+	getTopReliableModels(): Promise<string[]>;
+	getSources(): Promise<Record<string, string>>;
+}) => {
 	const state = writable<IState>({ ...DEFAULT_STATE });
 
 	const setState = (values: Partial<IState>) => {
@@ -20,18 +24,20 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 		setState({ error: LOAD_ERROR });
 	};
 
-	const getData = (): Promise<void> => {
-		return api
-			.getTopReliableModels()
-			.then((data) => {
+	const getData = () => {
+		return Promise.all([
+			api.getTopReliableModels().then((data) => {
 				setState({
-					data: data.map((v) => {
+					topReliableModels: data.map((v) => {
 						const [modelID, title, defects, sales] = v.split('|');
 						return { modelID, title, defects: Number(defects), sales: Number(sales) };
 					})
 				});
+			}),
+			api.getSources().then((sources) => {
+				setState({ sources });
 			})
-			.catch(onError);
+		]).catch(onError);
 	};
 
 	function serialize() {
@@ -62,6 +68,7 @@ export const createStatStore = (api: { getTopReliableModels(): Promise<string[]>
 };
 
 interface IState {
-	data: { modelID: string; title: string; defects: number; sales: number }[];
+	sources: Record<string, string>;
+	topReliableModels: { modelID: string; title: string; defects: number; sales: number }[];
 	error: Error | null;
 }

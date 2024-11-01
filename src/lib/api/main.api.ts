@@ -36,7 +36,7 @@ export const init = (
 	return Promise.resolve();
 };
 
-const http = {
+const httpClient = {
 	get: <T = void>(path: string, params: Record<string, string> = {}): Promise<T> => {
 		const query = `${new URLSearchParams(params)}`;
 		return fetchFn(`${PUBLIC_ORIGIN}${path}${query ? `?${query}` : ''}`).then((res) => res.json());
@@ -68,15 +68,15 @@ const http = {
 };
 
 export const API = {
-	brand: createBrandAPI(http),
-	model: createModelAPI(http),
-	gen: createGenAPI(http),
-	version: createVersionAPI(http),
-	engine: createEngineAPI(http),
-	trans: createTransAPI(http),
-	defect: createDefectAPI(http),
-	search: createSearchAPI(http),
-	author: createAuthorAPI(http),
-	country: createCountryAPI(http),
-	stat: createStatAPI(http)
+	brand: createBrandAPI(httpClient),
+	model: createModelAPI(httpClient),
+	gen: createGenAPI(httpClient),
+	version: createVersionAPI(httpClient),
+	engine: createEngineAPI(httpClient),
+	trans: createTransAPI(httpClient),
+	defect: createDefectAPI(httpClient),
+	search: createSearchAPI(httpClient),
+	author: createAuthorAPI(httpClient),
+	country: createCountryAPI(httpClient),
+	stat: createStatAPI(httpClient)
 };

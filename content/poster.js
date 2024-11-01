@@ -12,19 +12,20 @@ try {
 		.pop();
 	const link = `https://car-defects.com/articles/en/${poster}/`;
 	const read_more = `...\n\nRead more: ${link}`;
-	post({
-		mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
-		keywords: json.text.article[poster].keywords,
-		title: json.text.article[poster].title.slice(0, 150),
-		post: `${json.text.article[poster].description
-			.replaceAll('\n', '')
-			.slice(0, 280 - read_more.length - `[Sent with Free Plan] `.length)}${read_more}`,
-		link
-	})
-		.then(console.log, console.error)
-		.then(() => {
-			writeFileSync(file, posted.concat(poster).join('\n'));
-		});
+	json.text.article[poster] &&
+		post({
+			mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
+			keywords: json.text.article[poster].keywords,
+			title: json.text.article[poster].title.slice(0, 150),
+			post: `${json.text.article[poster].description
+				.replaceAll('\n', '')
+				.slice(0, 280 - read_more.length - `[Sent with Free Plan] `.length)}${read_more}`,
+			link
+		})
+			.then(console.log, console.error)
+			.then(() => {
+				writeFileSync(file, posted.concat(poster).join('\n'));
+			});
 } catch (error) {
 	console.error(error);
 }

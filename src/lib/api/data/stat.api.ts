@@ -7,6 +7,9 @@ export const createStatAPI = (http: {
 	return {
 		getTopReliableModels() {
 			return http.get<string[]>('/data/stat/top/reliable/model');
+		},
+		getSources() {
+			return http.get<Record<string, string>>('/data/stat/sources');
 		}
 	};
 };

@@ -4,7 +4,7 @@
 	import { _ } from 'svelte-i18n';
 
 	$: ({ state } = statStore);
-	$: ({ data } = $state);
+	$: ({ topReliableModels: data } = $state);
 
 	$: ({ state: searchState } = searchStore);
 	$: ({ query } = $searchState);

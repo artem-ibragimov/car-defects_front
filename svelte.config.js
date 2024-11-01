@@ -33,8 +33,8 @@ const categories = [
 	'suspension'
 ];
 // writeFileSync('./google.txt', ARTICLES.map((article_name) => `https://car-defects.com//articles/en/${article_name}/`).join('\n'))
-// const models = await getTopReliableModels();
-const models = [] || (await getTopReliableModels());
+const models = await getTopReliableModels();
+// const models = [] || (await getTopReliableModels());
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 )
