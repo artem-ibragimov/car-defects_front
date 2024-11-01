@@ -21,7 +21,12 @@ export function createDataParams() {
 			try {
 				const restored = restore(PARAMS_HASH_KEY);
 				const data = JSON.parse(restored) as Partial<IDataParams>;
-				params.set(data);
+				params.set({
+					by_age: data.by_age || !data.by_mileage,
+					by_mileage: data.by_mileage || !data.by_age,
+					norm: data.norm || !data.total,
+					total: data.total || !data.norm
+				});
 			} catch (e) {
 				console.error(e);
 			}
