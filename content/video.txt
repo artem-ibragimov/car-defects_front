@@ -315,3 +315,105 @@
       Limit video up to 59 sec, place captions at the bottom, 
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/new-car-reliability-ratings
+      Toyota Camry vs Honda Accord: The Ultimate Reliability Showdown
+      Discover how the Toyota Camry and Honda Accord stack up in reliability with our data-driven analysis of service calls and maintenance records over 8 years of ownership. Expert insights included.
+      car reliability comparison, new vehicle dependability ratings, most reliable cars 2024, automotive reliability statistics
+      --
+      According to the car service calls statistics: 
+      {
+  "toyota camry": {
+    "0": "0.11967898068582691599",
+    "1": "0.12915850390846667171",
+    "2": "0.15522719277072599995",
+    "3": "0.16352177559053578621",
+    "4": "0.17063141800751560300",
+    "5": "0.17892600082732538926",
+    "6": "0.18011094123015535872",
+    "7": "0.17537117961883548086",
+    "8": "0.17063141800751560300"
+  },
+  "honda accord": {
+    "0": "0.14658874132435664380",
+    "1": "0.13998564486830454273",
+    "2": "0.15979493423646084595",
+    "3": "0.18752793935187967045",
+    "4": "0.21394032517608807474",
+    "5": "0.22450527950577143646",
+    "6": "0.22318466021456101624",
+    "7": "0.22318466021456101624",
+    "8": "0.21526094446729849496"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "new car reliability ratings", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/nissan-altima-vs-toyota-camry-reliability
+      Nissan Altima vs Toyota Camry: Ultimate Reliability Showdown 2024
+      Discover the ultimate reliability showdown between the Nissan Altima and Toyota Camry. In-depth analysis of service data reveals which sedan stands the test of time and delivers better long-term value.
+      altima vs camry reliability comparison, toyota camry reliability stats, nissan altima service issues, midsize sedan reliability rankings
+      --
+      According to the car service calls statistics: 
+      {
+  "nissan altima": {
+    "0": "0.17527973972306956814",
+    "1": "0.20802430648452212483",
+    "2": "0.23113811831613569426",
+    "3": "0.29662725183904080763",
+    "4": "0.31974106367065437705",
+    "5": "0.31396261071275098470",
+    "6": "0.33515027155839675667",
+    "7": "0.33322412057242895922",
+    "8": "0.32359336564258997196"
+  },
+  "toyota camry": {
+    "0": "0.11967898068582691599",
+    "1": "0.12915850390846667171",
+    "2": "0.15522719277072599995",
+    "3": "0.16352177559053578621",
+    "4": "0.17063141800751560300",
+    "5": "0.17892600082732538926",
+    "6": "0.18011094123015535872",
+    "7": "0.17537117961883548086",
+    "8": "0.17063141800751560300"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "nissan altima vs toyota camry reliability", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      use calm and serious soundtrack.
+      

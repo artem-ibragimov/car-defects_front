@@ -17,7 +17,7 @@
 	$: date = $_(`${i18nPath}.date`);
 	$: chapters = $_(`${i18nPath}.text`).split('\n## ');
 
-	const SIZES = [320, 640, 1280];
+	const SIZES = [320, 640];
 	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.png`;
 	$: srcset = poster
 		? SIZES.map((w) => `/assets/img/${article_name}--${w}.webp ${w}w`).join(', ')

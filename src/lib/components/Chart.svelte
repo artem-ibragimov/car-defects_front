@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { Chart } from 'chart.js/auto';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import Loading from '../view/Loading.svelte';
 	import Share from './Share.svelte';
 
 	const COLORS = [
 		'#4dc9f6',
 		'#f67019',
-		'#f53794',
+		// '#f53794',
 		'#537bc4',
 		'#acc236',
 		'#166a8f',
@@ -29,7 +29,14 @@
 
 	$: config = {
 		type: 'bar',
-		data: { datasets: [] },
+		data: {
+			datasets: Object.entries(data).map(([label, data], i) => ({
+				label,
+				data,
+				borderColor: COLORS[i],
+				backgroundColor: `${COLORS[i]}f0`
+			}))
+		},
 		options: {
 			aspectRatio: 1,
 			maintainAspectRatio: false,
@@ -64,7 +71,7 @@
 			}
 		}
 	};
-
+	// TODO update вызывается несколько раз
 	$: {
 		if (chart && chart.data) {
 			// @ts-ignore
@@ -74,19 +81,32 @@
 				borderColor: COLORS[i],
 				backgroundColor: `${COLORS[i]}f0`
 			}));
-			chart.update();
+			update();
 		}
 	}
 	$: if (title && chart && chart.options?.plugins?.title) {
 		chart.options.plugins.title.text = title;
-		chart.update();
+		update();
 	}
 	$: if (axes && chart) {
 		// @ts-ignore
 		chart.options.scales.x.title.text = axes.x;
 		// @ts-ignore
 		chart.options.scales.y.title.text = axes.y;
-		chart.update();
+		update();
+	}
+	let udpdating = false;
+	function update() {
+		if (udpdating) {
+			return;
+		}
+		udpdating = true;
+		setTimeout(() => {
+			tick().then(() => {
+				chart.update();
+				udpdating = false;
+			});
+		}, 400);
 	}
 	onMount(() => {
 		// @ts-ignore

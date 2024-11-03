@@ -12,7 +12,7 @@ import child_process from 'child_process';
 
 const error = (e) => console.error(chalk.red(e));
 const FOLDER = './static/assets/img';
-const SIZES = [320, 640, 1280];
+const SIZES = [320, 640];
 const SIZE_PREFIX = '--';
 
 remove_resized(FOLDER)

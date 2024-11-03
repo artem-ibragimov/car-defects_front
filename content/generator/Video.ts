@@ -40,6 +40,7 @@ export class VideoPrompt {
       generate a short video about "${cfg.topic}", 
       need to use north male voice, 
       Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       `;
 		return readFile(filename)

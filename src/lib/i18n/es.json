@@ -17,6 +17,7 @@
 		"suspension": "Suspensión"
 	},
 	"label": {
+		"data_sources": "Data sources",
 		"tips": {
 			"norm_data": "Para mayor objetividad, considere los datos normalizados, es decir, el número de accidentes por cada 10,000 autos vendidos",
 			"search": "Buscar entre 4 millones de accidentes",

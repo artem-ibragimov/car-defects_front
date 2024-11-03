@@ -17,6 +17,7 @@
 		"suspension": "Suspension"
 	},
 	"label": {
+		"data_sources": "Data sources",
 		"tips": {
 			"norm_data": "For objectivity consider normalized data i.e. the number of crashes per 10 000 cars sold",
 			"search": "Search over 4 million crashes",

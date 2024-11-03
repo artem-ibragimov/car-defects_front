@@ -17,6 +17,7 @@
 		"suspension": "Fahrwerk"
 	},
 	"label": {
+		"data_sources": "Data sources",
 		"tips": {
 			"norm_data": "Für Objektivität berücksichtigen Sie normalisierte Daten, d. h. die Anzahl der Unfälle pro 10.000 verkaufter Autos",
 			"search": "Suche in über 4 Millionen Unfällen",

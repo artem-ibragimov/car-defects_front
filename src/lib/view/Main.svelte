@@ -2,20 +2,20 @@
 	import Button from '$lib/components/Button.svelte';
 	import { defectStore } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
-	import About from '$lib/view/About.svelte';
 	import AgeMileageRadio from '$lib/view/AgeMileageSelector.svelte';
 	import Header from '$lib/view/Header.svelte';
 	import Search from '$lib/view/Search.svelte';
 	import TotalNormRadio from '$lib/view/TotalNormSelector.svelte';
-	import DefectCategorySelector from '$lib/view/chart/DefectCategorySelector.svelte';
-	import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
-	import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
+	import About from '$lib/view/About.svelte';
+	// import DefectCategorySelector from '$lib/view/chart/DefectCategorySelector.svelte';
+	// import DefectsChart from '$lib/view/chart/DefectsChart.svelte';
+	// import EntitySelector from '$lib/view/chart/EntitySelector.svelte';
 	import { _ } from 'svelte-i18n';
 	import DefectCategoryLinks from './DefectCategoryLinks.svelte';
-	import DefectDetails from './DefectDetails.svelte';
-	import TopReliableModels from './TopReliableModels.svelte';
-	import Trailer from './Trailer.svelte';
-	import ArticleLinks from './ArticleLinks.svelte';
+	// import DefectDetails from './DefectDetails.svelte';
+	import TopReliableModels from '$lib/view/TopReliableModels.svelte';
+	import Trailer from '$lib/view/Trailer.svelte';
+	// import ArticleLinks from './ArticleLinks.svelte';
 
 	export let noChartData = false;
 	export let pageUrl: string;
@@ -62,24 +62,39 @@
 				{/if}
 				<div class="MainContainer_grow">
 					{#if !noChartData}
-						<DefectsChart displayLegend={false} />
+						{#await import('$lib/view/chart/DefectsChart.svelte') then { default: DefectsChart }}
+							<DefectsChart displayLegend={false} />
+						{/await}
+						<!-- <DefectsChart displayLegend={false} /> -->
 					{/if}
 					{#if noChartData}
 						<div class="MainContainer_row MainContainer_grow MainContainer_space-between">
+							<!-- {#await import('$lib/view/TopReliableModels.svelte') then { default: TopReliableModels }}
+								<TopReliableModels />
+							{/await} -->
 							<TopReliableModels />
 							<div class="divider divider-horizontal"></div>
+							<!-- {#await import('$lib/view/Trailer.svelte') then { default: Trailer }}
+								<Trailer />
+							{/await} -->
 							<Trailer />
 						</div>
 					{/if}
 				</div>
 				{#if !noChartData}
-					<EntitySelector />
+					{#await import('$lib/view/chart/EntitySelector.svelte') then { default: EntitySelector }}
+						<EntitySelector />
+					{/await}
+					<!-- <EntitySelector /> -->
 					<Button outline href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
 					<div
 						class="MainContainer_row MainContainer_mobile_column"
 						class:MainContainer_mobile_invisible={noChartData}
 					>
-						<DefectDetails {pageUrl} />
+						{#await import('$lib/view/DefectDetails.svelte') then { default: DefectDetails }}
+							<DefectDetails {pageUrl} />
+						{/await}
+						<!-- <DefectDetails {pageUrl} /> -->
 					</div>
 				{/if}
 			</div>
@@ -89,13 +104,19 @@
 						class="MainContainer_sidebar MainContainer_mobile_column-reverse"
 						class:MainContainer_mobile_invisible={noChartData}
 					>
-						<DefectCategorySelector />
+						{#await import('$lib/view/chart/DefectCategorySelector.svelte') then { default: DefectCategorySelector }}
+							<DefectCategorySelector />
+						{/await}
+						<!-- <DefectCategorySelector /> -->
 					</div>
 				</div>
 			{/if}
 		</div>
-		<ArticleLinks random />
+		<!-- <ArticleLinks random /> -->
 		{#if noChartData}
+			<!-- {#await import('$lib/view/About.svelte') then { default: About }}
+				<About />
+			{/await} -->
 			<About />
 		{/if}
 	</div>

@@ -1,16 +1,16 @@
 import type {
+	IDataParams,
+	IDefect,
 	IDefectData,
 	IDefectDetails,
-	IDataParams,
 	IEntity,
-	IMeta,
-	IDefect
+	IMeta
 } from '$lib/api/data/defect.api';
 import { LOAD_ERROR } from '$lib/api/error';
+import { createDefectFilterStore } from '$lib/store/defectFilter/filter.store';
 import { createCacheStore } from '$lib/util/cacheStore';
 import { debounce, filterNullable } from '$lib/util/tools';
 import { derived, get, writable } from 'svelte/store';
-import { createDefectFilterStore } from '$lib/store/defectFilter/filter.store';
 
 const DEFAULT_STATE: IState = {
 	error: null,
@@ -82,8 +82,19 @@ export const createDefectStore = (api: {
 			});
 	}
 
-	const selectedChartData = derived([chartData, filter.selector], ([d, f]) => {
-		return Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k]));
+	const selectedChartData = derived([chartData, filter.selector], ([d, f], set) => {
+		if (get(state).loading) {
+			return;
+		}
+		setState({ loading: true });
+		new Promise((r) => {
+			setTimeout(r, 500);
+		})
+			.then(() => Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k])))
+			.then(set)
+			.then(() => {
+				setState({ loading: false });
+			});
 	});
 
 	function reqChartData(

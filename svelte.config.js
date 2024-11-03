@@ -33,17 +33,17 @@ const categories = [
 	'suspension'
 ];
 // writeFileSync('./google.txt', ARTICLES.map((article_name) => `https://car-defects.com//articles/en/${article_name}/`).join('\n'))
-const models = await getTopReliableModels();
-// const models = [] || (await getTopReliableModels());
+// const models = await getTopReliableModels();
+const models = [] || (await getTopReliableModels());
 const entries = AVAILABLE_LOCALES.map((locale) =>
 	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
 )
 	.reduce((acc, cur) => acc.concat(cur), [])
 	.concat(
-		// TODO хуй знает какого хуя только 20 из 244
 		models
-			.slice(0, 20)
-			.map(({ id, name }) => categories.map((cat) => `/defects/${id}/${name}/${cat}`))
+			.map(({ id, name }) =>
+				[`/defects/${id}/${name}/`].concat(categories.map((cat) => `/defects/${id}/${name}/${cat}`))
+			)
 			.reduce((acc, cur) => acc.concat(cur), [])
 	);
 /** @type {import('@sveltejs/kit').Config} */
