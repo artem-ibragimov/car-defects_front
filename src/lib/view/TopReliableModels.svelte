@@ -90,7 +90,7 @@
 		top: 0;
 	}
 	.timeline {
-		max-height: 400px;
+		max-height: 655px;
 		overflow-y: scroll;
 		scroll-behavior: smooth;
 	}

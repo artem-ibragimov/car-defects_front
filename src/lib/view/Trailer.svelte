@@ -22,7 +22,12 @@
 	</div>
 	<div class="stat">
 		<div class="stat-figure text-secondary">
-			<img src="/assets/icon/car_crash.png" alt={$_('label.total-defects')} />
+			<img
+				width="64"
+				height="64"
+				src="/assets/icon/car_crash.png"
+				alt={$_('label.total-defects')}
+			/>
 		</div>
 		<div class="stat-title">{$_('label.total-defects')}</div>
 		<div class="stat-value">{total_defects}</div>
@@ -30,7 +35,12 @@
 	</div>
 	<div class="stat">
 		<div class="stat-figure">
-			<img src="/assets/icon/car_maker.png" alt={$_('label.analyzed-brands')} />
+			<img
+				width="64"
+				height="64"
+				src="/assets/icon/car_maker.png"
+				alt={$_('label.analyzed-brands')}
+			/>
 		</div>
 		<div class="stat-title">{$_('label.analyzed-brands')}</div>
 		<div class="stat-value">{total_brand}</div>
@@ -39,7 +49,12 @@
 
 	<div class="stat">
 		<div class="stat-figure text-secondary">
-			<img src="/assets/icon/car_versions.png" alt={$_('label.analyzed-versions')} />
+			<img
+				width="64"
+				height="64"
+				src="/assets/icon/car_versions.png"
+				alt={$_('label.analyzed-versions')}
+			/>
 		</div>
 		<div class="stat-title">{$_('label.analyzed-versions')}</div>
 		<div class="stat-value">{total_version}</div>
