@@ -3,3 +3,5 @@ mitsubishi-outlander-reliability-comparison
 most-reliable-cars-of-the-year
 mercedes-glc-vs-audi-q5-reliability
 most-and-least-reliable-cars
+nissan-altima-vs-toyota-camry-reliability
+new-car-reliability-ratings

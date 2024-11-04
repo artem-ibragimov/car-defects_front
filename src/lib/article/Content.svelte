@@ -1,7 +1,12 @@
 <script lang="ts">
-	import markdown from '@wcj/markdown-to-html';
+	import markdownit from 'markdown-it';
 	export let md: string;
-	const html = markdown(md);
+	const converter = markdownit({
+		html: true,
+		linkify: true,
+		typographer: true
+	});
+	const html = converter.render(md);
 </script>
 
 <section class="Content">

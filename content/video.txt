@@ -417,3 +417,55 @@
       Limit video up to 59 sec, place captions at the bottom, 
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/nissan-pathfinder-vs-ford-explorer-reliability
+      Nissan Pathfinder vs Ford Explorer: Reliability Showdown
+      Compare the reliability of Nissan Pathfinder vs Ford Explorer with in-depth data analysis. Discover which SUV offers better durability for your needs.
+      Nissan Pathfinder reliability, Ford Explorer reliability, SUV comparison, vehicle service calls, car reliability analysis
+      --
+      According to the car service calls statistics: 
+      {
+  "nissan pathfinder": {
+    "0": "0.43975140398217642068",
+    "1": "0.50798869080699689975",
+    "2": "0.60655366066507092508",
+    "3": "0.73544631355639849666",
+    "4": "0.78093783810627881604",
+    "5": "0.86433896644772606824",
+    "6": "0.79610167962290558916",
+    "7": "0.84159320417278590855",
+    "8": "0.84917512493109929511"
+  },
+  "ford explorer": {
+    "0": "0.21047649499166604591",
+    "1": "0.20864626460043416725",
+    "2": "0.24525087242507174046",
+    "3": "0.28734617142340494964",
+    "4": "0.28734617142340494964",
+    "5": "0.30381824494449185758",
+    "6": "0.30747870572695561490",
+    "7": "0.32395077924804252284",
+    "8": "0.31662985768311500820"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "nissan pathfinder vs ford explorer reliability", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

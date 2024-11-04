@@ -44,7 +44,7 @@ export class AnthropicAI {
 			if (res.processing_status === 'ended') {
 				return id;
 			}
-			console.log(res.processing_status, res.request_counts);
+			console.log(res.id, res.processing_status, res.request_counts);
 			return waitMin().then(() => this.wait(id));
 		});
 	}

@@ -65,7 +65,6 @@
 	{/if}
 	{#each chapters as chapter}
 		<Content md={chapter} />
-		<hr />
 	{/each}
 	<!-- <Cards {cards} /> -->
 	<ArticleLinks pagePath={article_name} />

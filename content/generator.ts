@@ -72,7 +72,7 @@ function generateByTopic(topic: string) {
 					.then(info, error),
 
 				!article.isExists &&
-					anthropicAI
+					chatGpt //	anthropicAI
 						.generateChapters({
 							system: article.system,
 							contents: article.contents
