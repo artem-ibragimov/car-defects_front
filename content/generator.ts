@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import { readFileSync, writeFileSync } from 'fs';
 
 import * as dotenv from 'dotenv';
-import { Article } from './generator/Article';
+import { Article, Locale } from './generator/Article';
 import { CarDefects } from './generator/CarDefects';
 import { VideoPrompt } from './generator/Video';
 import { AnthropicAI } from './generator/ai/Claude';
@@ -10,8 +10,9 @@ import { ChatGPT } from './generator/ai/OpenAi';
 dotenv.config();
 
 const error = (e) => console.error(chalk.red(e.stack));
-const warn = (w) => console.warn(chalk.yellow(w));
-const info = (i) => console.log(chalk.green(i));
+const info = (i) => {
+	console.log(chalk.green(i));
+};
 
 const chatGpt = new ChatGPT({
 	apiKey: process.env.CHAT_GPT_API_KEY as string,
@@ -62,33 +63,40 @@ function generateByTopic(topic: string) {
 		.then(CarDefects.removeDublicates)
 		.then(CarDefects.getDefects({ byMilage: topic.includes('miles') }))
 		.then(({ cars, defects, dataParams, url }) => {
-			const article = new Article({ topic, cars, defects, dataParams, locale: 'en', url });
-			return Promise.all([
-				chatGpt
-					.generateImg({
-						name: article.name,
-						prompt: article.poster
-					})
-					.then(info, error),
+			const articlesGenerating = (['en', 'ru', 'es', 'de'] as Locale[])
+				.map((locale) => new Article({ topic, cars, defects, dataParams, locale, url }))
+				.map((article) =>
+					Promise.all([
+						article.needPoster &&
+							chatGpt.generateImg({ name: article.name, prompt: article.poster }).then(info, error),
 
-				!article.isExists &&
-					chatGpt //	anthropicAI
-						.generateChapters({
-							system: article.system,
-							contents: article.contents
-						})
-						.then(article.save)
-						.then((data) =>
-							VideoPrompt.log({
-								url: `https://car-defects.com/articles/en/${article.name}`,
-								filename: 'video',
-								dataParams,
-								...data,
-								defects,
-								topic
-							})
-						)
-						.then(info, error)
-			]);
+						!article.isExists &&
+							chatGpt
+								.generate({
+									locale: article.locale,
+									system: article.system,
+									contents: article.contents
+								})
+								.then(article.save)
+								.then((data) =>
+									article.needVideoPrompt
+										? VideoPrompt.log({
+												url: `https://car-defects.com/articles/${article.locale}/${article.name}`,
+												filename: 'video',
+												dataParams,
+												...data,
+												defects,
+												topic
+											}).then(info)
+										: void 0
+								)
+								.catch(error)
+					])
+				);
+			return Promise.all(articlesGenerating);
 		});
+}
+
+function chain(fs: (() => Promise<any>)[]): Promise<void> {
+	return fs.reduce((ch, f) => ch.then(f), Promise.resolve());
 }

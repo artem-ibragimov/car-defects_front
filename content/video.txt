@@ -469,3 +469,233 @@
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/japanese-top-selling-compact-suvs
+      Nissan Pathfinder vs Ford Explorer: Reliability Showdown
+      Compare the reliability of Nissan Pathfinder vs Ford Explorer with in-depth data analysis. Discover which SUV offers better durability for your needs.
+      Nissan Pathfinder reliability, Ford Explorer reliability, SUV comparison, vehicle service calls, car reliability analysis
+      --
+      According to the car service calls statistics: 
+      {
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "japanese top selling compact suvs", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/japanese-top-selling-compact-suvs
+      Nissan Pathfinder vs Ford Explorer: Reliability Showdown
+      Compare the reliability of Nissan Pathfinder vs Ford Explorer with in-depth data analysis. Discover which SUV offers better durability for your needs.
+      Nissan Pathfinder reliability, Ford Explorer reliability, SUV comparison, vehicle service calls, car reliability analysis
+      --
+      According to the car service calls statistics: 
+      {
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "japanese top selling compact suvs", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/japanese-top-selling-compact-suvs
+      Top Reliable Japanese Compact SUVs Compared
+      Discover the reliability of Japan's top-selling compact SUVs, the Toyota RAV4 and Honda CR-V, in our technical analysis. Find out which model stands out!
+      Japanese compact SUVs, Toyota RAV4 reliability, Honda CR-V performance, top-selling SUVs comparison, SUV service call statistics
+      --
+      According to the car service calls statistics: 
+      {
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "japanese top selling compact suvs", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/japanese-top-selling-compact-suvs
+      Top 4 Reliable Japanese Compact SUVs Compared
+      Explore the reliability of Japanese top-selling compact SUVs with an in-depth technical analysis of the Toyota RAV4, Honda CR-V, Subaru Forester, and Mazda CX-5.
+      Japanese compact SUVs, car reliability comparison, Toyota RAV4 reliability, Honda CR-V reliability, Subaru Forester analysis
+      --
+      According to the car service calls statistics: 
+      {
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774"
+  },
+  "subaru forester": {
+    "0": "0.29863443351872881814",
+    "1": "0.36723964121897733042",
+    "2": "0.42373804756035845817",
+    "3": "0.48023645390173958593",
+    "4": "0.54480606114903230337",
+    "5": "0.46005845163696061173",
+    "6": "0.42777364801331425301",
+    "7": "0.37934644257784471494",
+    "8": "0.39952444484262368914"
+  },
+  "mazda cx-5": {
+    "0": "0.25960936426248033841",
+    "1": "0.29015164241100743704",
+    "2": "0.30542278148527098636",
+    "3": "0.32832949009666631034",
+    "4": "0.38177847685658873295",
+    "5": "0.25197379472534856375",
+    "6": "0.24433822518821678909",
+    "7": "0.16034696027976726784",
+    "8": "0.12980468213124016920"
+  }
+}, 
+      where the key is the age of the car at the time of contacting the car service, 
+      and the value is  number of service calls per 10000 cars sold. 
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "japanese top selling compact suvs", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

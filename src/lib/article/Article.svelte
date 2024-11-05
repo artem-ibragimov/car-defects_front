@@ -63,11 +63,15 @@
 	{#if url !== '-'}
 		<Charts lg {title} {url} />
 	{/if}
-	{#each chapters as chapter}
-		<Content md={chapter} />
-	{/each}
-	<!-- <Cards {cards} /> -->
-	<ArticleLinks pagePath={article_name} />
+	<main>
+		{#each chapters as chapter}
+			<Content md={chapter} />
+		{/each}
+	</main>
+	<footer>
+		<!-- <Cards {cards} /> -->
+		<ArticleLinks pagePath={article_name} />
+	</footer>
 </article>
 
 <style scoped>

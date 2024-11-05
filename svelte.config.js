@@ -2,25 +2,21 @@ import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import https from 'https';
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
 // import { vitePreprocess } from '@sveltejs/kit/vite';
-const loadJSON = (path) => JSON.parse(readFileSync(path));
+// const loadJSON = (path) => JSON.parse(readFileSync(path));
 
-const en = loadJSON('./src/lib/i18n/article_en.json');
-export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en' /*'ru', 'es', 'de'   'ru','fr','jp', 'pt',  'zh' */];
+// const en = loadJSON('./src/lib/i18n/article_en.json');
+export const ARTICLES = Array.from(
+	new Set(
+		readdirSync('./src/lib/i18n/article').map((file_name) =>
+			file_name.slice(0, file_name.indexOf('.'))
+		)
+	)
+);
+console.log(ARTICLES);
+export const AVAILABLE_LOCALES = ['en', 'ru', 'es', 'de' /*  'ru','fr','jp', 'pt',  'zh' */];
 
-/**
-"1": "transmission",
-"2": "safety",
-"3": "other",
-"4": "engine",
-"5": "equipment",
-"6": "electronics",
-"7": "brake",
-"8": "light",
-"9": "suspension"
- */
 const categories = [
 	'transmission',
 	'safety',

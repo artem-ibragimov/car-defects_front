@@ -12,5 +12,5 @@
 
 {#if url}
 	<ChartFrame {title} {lg} {src} />
-	<a href={`/${url}`} target="_blank">{$_('label.more')}</a>
+	<a href={`/${url}`} target="_blank">{'More'}</a>
 {/if}

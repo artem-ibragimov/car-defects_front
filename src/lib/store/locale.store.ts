@@ -12,7 +12,7 @@ export const creatLocaleStore = () => {
 	setLocale(DEFAUL_LOCALE);
 	dictionary.set(DICTIONARIES);
 	locale.subscribe((v) => {
-		if (!v || !AVAILABLE_LOCALES.includes(v)) {
+		if (!v) {
 			return;
 		}
 		if (v in DICTIONARIES) {
@@ -20,11 +20,13 @@ export const creatLocaleStore = () => {
 				[v as keyof typeof DICTIONARIES]: DICTIONARIES[v as keyof typeof DICTIONARIES]
 			});
 		}
-		import(`$lib/i18n/${v}.json`).then((d) => {
-			// @ts-ignore
-			DICTIONARIES[v] = d;
-			dictionary.set(DICTIONARIES);
-		});
+		import(`$lib/i18n/article/${v}.json`)
+			.then((d) => {
+				// @ts-ignore
+				DICTIONARIES[v] = d;
+				dictionary.set(DICTIONARIES);
+			})
+			.catch(console.error);
 	});
 	const selected = derived(locale, (l) => l);
 

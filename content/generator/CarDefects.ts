@@ -5,7 +5,7 @@ type Key = 'age' | 'mileage';
 type DataParams = { norm?: boolean; by_mileage?: boolean; by_age?: boolean };
 type DefectData = Record<number, number>;
 
-const MAX_CARS = 2;
+const MAX_CARS = 4;
 const ORIGIN = 'https://car-defects.com/data/defect/';
 
 export class CarDefects {

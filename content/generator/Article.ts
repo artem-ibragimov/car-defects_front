@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 
 type Key = 'age' | 'mileage';
 type DefectData = Record<string, Record<number, number>>;
-type Locale = 'en' | 'ru' | 'es' | 'de';
+export type Locale = 'en' | 'ru' | 'es' | 'de';
 
 const LOCALED_QUERY: Record<Locale, string> = {
 	en: `Write in English`,
@@ -15,7 +15,7 @@ const LOCALED_QUERY: Record<Locale, string> = {
 export class Article {
 	public readonly name: string;
 	public readonly isExists: boolean = false;
-	private locale: Locale = 'en';
+	readonly locale: Locale = 'en';
 	private topic: string;
 	private url: string;
 	private defects: DefectData;
@@ -50,6 +50,14 @@ export class Article {
 		de: `Write in German`,
 		es: `Write in Spanish`
 	};
+
+	get needPoster() {
+		return this.locale === 'en';
+	}
+
+	get needVideoPrompt() {
+		return this.locale === 'en';
+	}
 
 	get system() {
 		return `
@@ -291,7 +299,12 @@ export class Article {
             examples and support your arguments. 
             Use tables or charts to effectively compare maintenance costs across different car models.
             Format your output using markdown`,
-			deprecation_analysis: `You are an automotive expert tasked with writing an SEO-optimized analysis of car prices and depreciation for a specific list of vehicles. This analysis will be part of a larger article comparing cars in terms of long-term reliability. Your goal is to provide valuable insights for readers considering the long-term value of their potential car purchases.
+			deprecation_analysis: `You are an automotive expert tasked with writing an SEO-optimized analysis of car prices and depreciation 
+         for a specific list of vehicles.
+         This analysis will be part of a larger article comparing cars in terms of long-term reliability. 
+         Your goal is to provide valuable insights for readers considering the long-term value of their potential car purchases.
+
+         You will be comparing the following cars in terms of car prices and depreciation : ${this.cars}.
 
          Please follow these steps to complete your analysis:
 
@@ -454,31 +467,33 @@ car buyers comparing the reliability of different models.`
 		};
 	}
 	private get filename() {
-		return `src/lib/i18n/article_${this.locale}.json`;
+		return `src/lib/i18n/article/${this.name}.${this.locale}.json`;
 	}
 
 	save = (contents: Record<string, string>) => {
-		return readFile(this.filename, 'utf8').then((data) => {
-			const { title, keywords, description, ...chapters } = contents as unknown as Contents;
-			const json = JSON.parse(data);
-			if (!json.text.article[this.name]) {
-				json.text.article[this.name] = {
-					title,
-					text: Object.values(chapters).join('  \n'),
-					url: new URL(this.url).hash,
-					keywords,
-					date: new Date().toISOString(),
-					description
-				};
+		const { title, keywords, description, ...chapters } = contents as unknown as Contents;
+		const data = {
+			text: {
+				article: {
+					[this.name]: {
+						title,
+						text: Object.values(chapters).join('  \n'),
+						url: new URL(this.url).hash,
+						keywords,
+						date: new Date().toISOString(),
+						description
+					}
+				}
 			}
-			return writeFile(this.filename, JSON.stringify(json, null, 2)).then(() => ({
-				title,
-				keywords,
-				description
-			}));
-		});
+		};
+		return writeFile(this.filename, JSON.stringify(data, null, 2)).then(() => ({
+			title,
+			keywords,
+			description
+		}));
 	};
 }
+
 type Contents = Chapters & Meta;
 type Meta = {
 	title: string;

@@ -1,8 +1,11 @@
 import { createReadStream, createWriteStream } from 'fs';
 import { get } from 'https';
+import { resolve } from 'path';
 import { readFile, writeFile } from 'node:fs/promises';
 import { OpenAI } from 'openai';
 import { safeJSON } from 'openai/core.mjs';
+
+const root = resolve('content', 'generator', 'ai', 'openai');
 
 export class ChatGPT {
 	private openai: OpenAI;
@@ -14,14 +17,70 @@ export class ChatGPT {
 		});
 	}
 
-	generateChapters = ({
+	generate = (params: {
+		locale: string;
+		system: string;
+		contents: Record<string, string>;
+	}): Promise<Record<string, string>> => {
+		const messages: { name: string; content: string; role: 'user' }[] = Object.entries(
+			params.contents
+		).map(([name, content]) => ({ name, content, role: 'user' }));
+
+		const generating = messages.map((message) =>
+			this.openai.chat.completions
+				.create({
+					model: 'gpt-4o',
+					max_tokens: 8192,
+					messages: [{ role: 'system', content: params.system }, message]
+				})
+				.then((res) => ({
+					[message.name]: res.choices[0].message.content || ''
+				}))
+		);
+
+		return Promise.all(generating).then((results) => {
+			return results.reduce((acc, r) => Object.assign({}, acc, r), {});
+		});
+	};
+
+	generateWithBatches = (params: {
+		locale: string;
+		system: string;
+		contents: Record<string, string>;
+	}): Promise<Record<string, string>> => {
+		const batchIDFile = resolve(root, `./${params.locale}.log`);
+
+		return restore(batchIDFile)
+			.then((data) => {
+				const isExists = Object.entries(data).length !== 0;
+				if (isExists) {
+					return Object.entries(data)[0];
+				}
+
+				return this.createNewBatch(params).then(([batchID, fileID]) => {
+					store(batchIDFile, batchID, fileID);
+					return [batchID, fileID];
+				});
+			})
+			.then(([batchID, fileID]) =>
+				this.wait(batchID)
+					.then(() => {
+						store(batchIDFile, '', '');
+					})
+					.then(() => this.getGeneratedContent(fileID))
+			);
+	};
+
+	private createNewBatch({
+		locale,
 		system,
 		contents
 	}: {
+		locale: string;
 		system: string;
 		contents: Record<string, string>;
-	}) => {
-		const filename = 'batchinput.jsonl';
+	}): Promise<[string, string]> {
+		const batchFile = resolve(root, `./${locale}.jsonl`);
 
 		const requests = Object.entries(contents)
 			.map(([custom_id, content]) => ({
@@ -40,44 +99,42 @@ export class ChatGPT {
 			.map((r) => JSON.stringify(r))
 			.join('\n');
 
-		return (
-			writeFile(filename, requests)
-				// .then(() => {
-				// 	return this.openai.files.create({
-				// 		file: createReadStream(filename),
-				// 		purpose: 'batch'
-				// 	});
-				// })
-				// .then((file) => {
-				// return this.openai.batches
-				// 	.create({
-				// 		input_file_id: file.id,
-				// 		endpoint: '/v1/chat/completions',
-				// 		completion_window: '24h'
-				// 	})
-				// 	.then((batch) => this.wait(batch.id))
-				// .then(() => this.openai.files.content(file.id))
-				.then(() => this.openai.files.content('file-6Iu2uILAIQ3RUZ03U44MsgCE'))
-				.then((fileResponse) => fileResponse.text())
-				.then((fileContents) => {
-					const responses = fileContents.split('\n');
-					const jsons = responses.map(safeJSON).filter(Boolean);
-					return jsons.reduce((acc, res) => {
-						if (!res.response) {
-							console.error(res);
-							return acc;
-						}
-						acc[res.custom_id] = res.response.body.choices[0].message.content;
+		return writeFile(batchFile, requests)
+			.then(() =>
+				this.openai.files.create({
+					file: createReadStream(batchFile),
+					purpose: 'batch'
+				})
+			)
+			.then((file) =>
+				this.openai.batches
+					.create({
+						input_file_id: file.id,
+						endpoint: '/v1/chat/completions',
+						completion_window: '24h'
+					})
+					.then((batch) => [batch.id, file.id])
+			);
+	}
+
+	private getGeneratedContent(fileID: string): Promise<Record<string, string>> {
+		return this.openai.files
+			.content(fileID)
+			.then(() => this.openai.files.content('file-6Iu2uILAIQ3RUZ03U44MsgCE'))
+			.then((fileResponse) => fileResponse.text())
+			.then((fileContents) => {
+				const responses = fileContents.split('\n');
+				const jsons = responses.map(safeJSON).filter(Boolean);
+				return jsons.reduce((acc, res) => {
+					if (!res.response) {
+						console.error(res);
 						return acc;
-					}, {});
-				})
-				// })
-				.catch((e) => {
-					console.error(e);
-					debugger;
-				})
-		);
-	};
+					}
+					acc[res.custom_id] = res.response.body.choices[0].message.content;
+					return acc;
+				}, {});
+			});
+	}
 
 	getCars(topic: string) {
 		return this.openai.chat.completions
@@ -119,16 +176,16 @@ export class ChatGPT {
 			)
 			.then(() => `ChatGPT has generated the ${name} image`);
 	}
-	private wait(id: string): Promise<string> {
-		return this.openai.batches.retrieve(id).then((res) => {
+	private wait(batchID: string): Promise<string> {
+		return this.openai.batches.retrieve(batchID).then((res) => {
 			if (res.status === 'failed') {
 				throw new Error(JSON.stringify(res.errors, null, 2));
 			}
 			if (res.status === 'completed') {
-				return id;
+				return batchID;
 			}
 			console.log(res.id, res.status, res.request_counts);
-			return waitMin(10).then(() => this.wait(id));
+			return waitMin(10).then(() => this.wait(batchID));
 		});
 	}
 }
@@ -148,4 +205,16 @@ function downloadImage(url, filename) {
 				.once('close', () => resolve(filename));
 		});
 	});
+}
+
+function store(filename: string, batchId: string, fileId: string) {
+	return writeFile(
+		filename,
+		JSON.stringify(batchId && fileId ? { [batchId]: fileId } : {}, null, 2)
+	);
+}
+function restore(filename: string): Promise<Record<string, string>> {
+	return readFile(filename, 'utf-8')
+		.then((data) => JSON.parse(data))
+		.catch(() => ({}));
 }
