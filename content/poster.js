@@ -19,7 +19,9 @@ try {
 		process.exit();
 	}
 
-	const content = JSON.parse(readFileSync(`./src/lib/i18n/article${article_name}`, 'utf-8'));
+	const content = JSON.parse(
+		readFileSync(`./src/lib/i18n/article/${article_name}.en.json`, 'utf-8')
+	).text.article[article_name];
 	const link = `https://car-defects.com/articles/en/${article_name}/`;
 	const read_more = `...\n\nRead more: ${link}`;
 	content &&
