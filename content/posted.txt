@@ -6,3 +6,4 @@ most-and-least-reliable-cars
 nissan-altima-vs-toyota-camry-reliability
 new-car-reliability-ratings
 off-road-vehicle-reliability-comparison
+pickup-truck-reliability-comparison
