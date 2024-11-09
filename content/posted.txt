@@ -8,3 +8,4 @@ new-car-reliability-ratings
 off-road-vehicle-reliability-comparison
 pickup-truck-reliability-comparison
 japanese-top-selling-compact-suvs
+volkswagen-golf-vs-mazda-3
