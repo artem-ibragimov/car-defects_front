@@ -7,7 +7,6 @@ export const ssr = true;
 
 export const load: PageServerLoad = async (e) => {
 	const locale = `${e.params.article_name}.${e.params.locale}`;
-	console.log('set locale', locale);
 	const states = await appSsr({ fetch: e.fetch, locale });
 	return {
 		article_name: e.params.article_name,

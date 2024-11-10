@@ -2,7 +2,7 @@
 	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import Card from '$lib/article/Card.svelte';
 
-	export let cards: { title: string; text?: string; imgSrc?: string; href?: string }[] = [];
+	export let cards: { title: string; text?: string; imgSrc: string; href?: string }[] = [];
 
 	$: itemListElement = cards.map((c, i) => ({
 		'@type': 'ListItem',
@@ -27,9 +27,15 @@
 </svelte:head>
 
 {#if cards.length > 0}
-	<nav class="Cards flex flex-col gap-4 justify-around md:flex-row md:flex-wrap">
+	<nav class="Cards grid gap-4 grid-cols-1 md:grid-cols-2">
 		{#each cards as card, i}
-			<Card lazy={i > 1} title={card.title} href={card.href} text={card.text} />
+			<Card
+				lazy={i > 1}
+				title={card.title}
+				href={card.href}
+				text={card.text}
+				imgSrc={card.imgSrc}
+			/>
 		{/each}
 	</nav>
 {/if}

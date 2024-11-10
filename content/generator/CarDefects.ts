@@ -69,7 +69,7 @@ function getDefects(cfg: { isNorm: boolean; byMilage: boolean }, entities: Entit
 		by_age: !cfg.byMilage,
 		by_mileage: cfg.byMilage
 	};
-	const url = `https://car-defects.com/#${new URLSearchParams({
+	const hash = `https://car-defects.com/#${new URLSearchParams({
 		entity_params: JSON.stringify(entities),
 		data_params: JSON.stringify(dataParams)
 	})}`;
@@ -92,6 +92,6 @@ function getDefects(cfg: { isNorm: boolean; byMilage: boolean }, entities: Entit
 		if (defects.length < 2) {
 			throw new Error(cars.join() + ': no data');
 		}
-		return { defects: Object.fromEntries(defects), cars, dataParams, url };
+		return { defects: Object.fromEntries(defects), cars, dataParams, hash };
 	});
 }

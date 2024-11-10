@@ -3,28 +3,35 @@
 	import Cards from '$lib/article/Cards.svelte';
 	import { localeStore } from '$lib/store/main.store';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
-	import { _ } from 'svelte-i18n';
+	import { _, t } from 'svelte-i18n';
 
 	export let random = false;
 	export let pagePath: string = '';
 
-	$: ({ selected } = localeStore);
+	$: ({ lang } = localeStore);
 
-	$: cards = Object.entries(ROUTE_NAMES.ARTICLE)
+	$: cards = Object.entries(
+		ROUTE_NAMES.ARTICLE[($lang as keyof typeof ROUTE_NAMES.ARTICLE) || 'en']
+	)
 		.sort(() => (random ? Math.random() - 0.5 : -1))
-		.map(([name, path]) => ({
-			title: $_(`text.article.${name}.title`),
+		.map(([name, article]) => ({
+			title: article.title,
+			date: article.date,
+			text: article.cars.map((c) => `#${c}`).join(' '),
+			keywords: article.keywords,
+			name,
 			imgSrc: name,
-			href: `/articles/${$selected}${path}`,
-			path
+			href: `/articles/${$lang}/${name}`
 		}))
-		.filter((card) => (pagePath ? !card.path.includes(pagePath) : true))
+		.filter(({ name }) => name !== pagePath)
 		.slice(0, 4);
 
 	$: itemListElement = cards.map((c, i) => ({
 		'@type': 'ListItem',
 		position: i + 1,
 		name: c.title,
+		description: c.text,
+		keywords: c.keywords,
 		item: `${PUBLIC_ORIGIN}${c.href}`
 	}));
 

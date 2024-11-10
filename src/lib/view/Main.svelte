@@ -15,7 +15,7 @@
 	// import DefectDetails from './DefectDetails.svelte';
 	import TopReliableModels from '$lib/view/TopReliableModels.svelte';
 	import Trailer from '$lib/view/Trailer.svelte';
-	// import ArticleLinks from './ArticleLinks.svelte';
+	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 
 	export let noChartData = false;
 	export let pageUrl: string;
@@ -112,7 +112,7 @@
 				</div>
 			{/if}
 		</div>
-		<!-- <ArticleLinks random /> -->
+		<ArticleLinks random />
 		{#if noChartData}
 			<!-- {#await import('$lib/view/About.svelte') then { default: About }}
 				<About />

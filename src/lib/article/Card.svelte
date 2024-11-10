@@ -1,16 +1,17 @@
 <script lang="ts">
 	export let lazy: boolean = false;
-	export let title: string = '';
+	export let title: string;
 	export let text: string = '';
-	export let imgSrc: string = '';
+	export let imgSrc: string;
 	export let href: string | undefined;
-	const SIZES = [320, 640, 1280];
+
+	const SIZES = [320, 640];
 	const loading: 'lazy' | 'eager' = lazy ? 'lazy' : 'eager';
 	$: srcset = imgSrc ? SIZES.map((w) => `/assets/img/${imgSrc}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
-<div class=" w-96 shadow-md bg-base-100">
-	<a {href} target="_self">
+<div class=" shadow-md bg-base-100">
+	<a {href} target="_self" class="not-prose">
 		<figure>
 			<img
 				{loading}

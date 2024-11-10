@@ -17,14 +17,14 @@ export class Article {
 	public readonly isExists: boolean = false;
 	readonly locale: Locale = 'en';
 	private topic: string;
-	private url: string;
+	private hash: string;
 	private defects: DefectData;
 	private cars: string[];
 	private key: Key;
 
 	constructor(cfg: {
 		topic: string;
-		url: string;
+		hash: string;
 		defects: DefectData;
 		cars: string[];
 		locale?: Locale;
@@ -34,7 +34,7 @@ export class Article {
 		this.topic = cfg.topic;
 		this.defects = cfg.defects;
 		this.cars = cfg.cars;
-		this.url = cfg.url;
+		this.hash = cfg.hash;
 		this.locale = cfg.locale || 'en';
 		this.key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
 		try {
@@ -469,6 +469,31 @@ car buyers comparing the reliability of different models.`
 	private get filename() {
 		return `src/lib/i18n/article/${this.name}.${this.locale}.json`;
 	}
+	private get commonFile() {
+		return `src/lib/i18n/articles.json`;
+	}
+
+	private registerArticle({ keywords, title }: { keywords: string; title: string }) {
+		return readFile(this.commonFile, 'utf-8')
+			.then((v) => JSON.parse(v))
+			.then((json) => {
+				if (!json[this.locale]) {
+					json[this.locale] = {};
+				}
+				json[this.locale][this.name] = {
+					generated: true,
+					cars: this.cars,
+					title,
+					keywords: keywords.split(', '),
+					date: new Date().toISOString()
+				};
+				return json;
+			})
+			.then((json) => writeFile(this.commonFile, JSON.stringify(json, null, 3)))
+			.catch((e) => {
+				debugger;
+			});
+	}
 
 	save = (contents: Record<string, string>) => {
 		const { title, keywords, description, ...chapters } = contents as unknown as Contents;
@@ -478,7 +503,7 @@ car buyers comparing the reliability of different models.`
 					[this.name]: {
 						title,
 						text: Object.values(chapters).join('  \n'),
-						url: new URL(this.url).hash,
+						hash: new URL(this.hash).hash,
 						keywords,
 						date: new Date().toISOString(),
 						description
@@ -486,11 +511,14 @@ car buyers comparing the reliability of different models.`
 				}
 			}
 		};
-		return writeFile(this.filename, JSON.stringify(data, null, 2)).then(() => ({
-			title,
-			keywords,
-			description
-		}));
+
+		return this.registerArticle({ keywords, title })
+			.then(() => writeFile(this.filename, JSON.stringify(data, null, 3)))
+			.then(() => ({
+				title,
+				keywords,
+				description
+			}));
 	};
 }
 

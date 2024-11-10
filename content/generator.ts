@@ -62,9 +62,9 @@ function generateByTopic(topic: string) {
 		.then(CarDefects.searchForCars)
 		.then(CarDefects.removeDublicates)
 		.then(CarDefects.getDefects({ byMilage: topic.includes('miles') }))
-		.then(({ cars, defects, dataParams, url }) => {
+		.then(({ cars, defects, dataParams, hash }) => {
 			const articlesGenerating = (['en', 'ru', 'es', 'de'] as Locale[])
-				.map((locale) => new Article({ topic, cars, defects, dataParams, locale, url }))
+				.map((locale) => new Article({ topic, cars, defects, dataParams, locale, hash }))
 				.map((article) =>
 					Promise.all([
 						article.needPoster &&

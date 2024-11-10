@@ -4,19 +4,15 @@ import https from 'https';
 
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
 // import { vitePreprocess } from '@sveltejs/kit/vite';
-// const loadJSON = (path) => JSON.parse(readFileSync(path));
+const loadJSON = (path) => JSON.parse(readFileSync(path, 'utf-8'));
 
-// const en = loadJSON('./src/lib/i18n/article_en.json');
-export const ARTICLES = Array.from(
-	new Set(
-		readdirSync('./src/lib/i18n/article').map((file_name) =>
-			file_name.slice(0, file_name.indexOf('.'))
-		)
-	)
+const ARTICLES = loadJSON('./src/lib/i18n/articles.json');
+export const AVAILABLE_LOCALES = Object.keys(ARTICLES);
+const ARTICLES_NAMES = Object.entries(ARTICLES).map(([locale, articles]) =>
+	Object.keys(articles).map((article) => `/articles/${locale}/${article}/`)
 );
-console.log(ARTICLES);
-export const AVAILABLE_LOCALES = ['en', 'ru', 'es', 'de' /*  'ru','fr','jp', 'pt',  'zh' */];
 
+console.log(ARTICLES_NAMES);
 const categories = [
 	'transmission',
 	'safety',
@@ -31,17 +27,13 @@ const categories = [
 // writeFileSync('./google.txt', ARTICLES.map((article_name) => `https://car-defects.com//articles/en/${article_name}/`).join('\n'))
 // const models = await getTopReliableModels();
 const models = [] || (await getTopReliableModels());
-const entries = AVAILABLE_LOCALES.map((locale) =>
-	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
-)
-	.reduce((acc, cur) => acc.concat(cur), [])
-	.concat(
-		models
-			.map(({ id, name }) =>
-				[`/defects/${id}/${name}/`].concat(categories.map((cat) => `/defects/${id}/${name}/${cat}`))
-			)
-			.reduce((acc, cur) => acc.concat(cur), [])
-	);
+const entries = ARTICLES_NAMES.reduce((acc, cur) => acc.concat(cur), []).concat(
+	models
+		.map(({ id, name }) =>
+			[`/defects/${id}/${name}/`].concat(categories.map((cat) => `/defects/${id}/${name}/${cat}`))
+		)
+		.reduce((acc, cur) => acc.concat(cur), [])
+);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
