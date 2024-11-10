@@ -999,3 +999,61 @@ honda odyssey,toyota sienna,chrysler pacifica,kia sedona
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/nissan-altima-vs-toyota-camry-reliability
+      Nissan Altima vs Toyota Camry: Reliability Showdown
+      Compare the reliability of Nissan Altima vs Toyota Camry in this detailed analysis. Discover which car stands out in service calls and longevity.
+      Nissan Altima reliability, Toyota Camry reliability, Altima vs Camry comparison, car reliability analysis, sedan reliability ratings
+      --
+      You are tasked with creating an engaging viral YouTube short video script for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {"nissan altima":{"0":"0.17527973972306956814","1":"0.20802430648452212483","2":"0.23113811831613569426","3":"0.29662725183904080763","4":"0.31974106367065437705","5":"0.31396261071275098470","6":"0.33515027155839675667","7":"0.33322412057242895922","8":"0.32359336564258997196"},"toyota camry":{"0":"0.11967898068582691599","1":"0.12915850390846667171","2":"0.15522719277072599995","3":"0.16352177559053578621","4":"0.17063141800751560300","5":"0.17892600082732538926","6":"0.18011094123015535872","7":"0.17537117961883548086","8":"0.17063141800751560300"},"honda accord":{"0":"0.14658874132435664380","1":"0.13998564486830454273","2":"0.15979493423646084595","3":"0.18752793935187967045","4":"0.21394032517608807474","5":"0.22450527950577143646","6":"0.22318466021456101624","7":"0.22318466021456101624","8":"0.21526094446729849496"},"chevrolet malibu":{"0":"0.27018299108010153734","1":"0.28562201914182162519","2":"0.33965861735784193266","3":"0.41428058632282235726","4":"0.41685375766644237190","5":"0.45030498513350256224","6":"0.46831718453884266472","7":"0.46059767050798262080","8":"0.42971961438454244510"}}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+nissan altima,toyota camry,honda accord,chevrolet malibu
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "nissan altima vs toyota camry reliability", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

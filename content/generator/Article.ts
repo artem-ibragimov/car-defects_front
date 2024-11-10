@@ -96,7 +96,7 @@ export class Article {
       Remember to:
       - Cite sources for your information when applicable
       - Provide clear arguments backed by data
-      - Use charts or tables to make comparisons more objective
+      - Use tables to make comparisons more objective
       - Avoid repetitive sentences
       - Include technical details while keeping the content accessible
       - Use mid-frequency words throughout the analysis
@@ -223,7 +223,7 @@ export class Article {
             Formatting Requirements:
             - Begin with the title "Service Call Analysis" as an H2 heading.
             - Format your output using markdown.
-            - Use tables and charts when comparing values.
+            - Use tables  when comparing values.
             - Aim for a length of 500-700 words.
 
             After completing your draft, 
@@ -247,7 +247,7 @@ export class Article {
             
             - Identify factors that influence maintenance costs for each car model (e.g., build quality, availability of parts).
             - Identify trends in maintenance costs over time for each car model.
-            - Design tables or charts to effectively compare maintenance costs across car models.
+            - Design tables to effectively compare maintenance costs across car models.
 
             Now, write the chapter following these guidelines:
 
@@ -260,7 +260,7 @@ export class Article {
             - Include specific examples of maintenance costs for the car models or brands
             - Address common questions or concerns about maintenance costs
             - Incorporate insights from the defects data to strengthen arguments
-            - Use tables or charts to compare maintenance costs across car models
+            - Use tables to compare maintenance costs across car models
 
             3. SEO Optimization:
             - Naturally incorporate the main keyword "maintenance cost comparison" throughout the text
@@ -297,7 +297,7 @@ export class Article {
             Remember to focus on the specific car models or brands mentioned in the <car_models> variable 
             and incorporate insights from the defects data throughout your content to provide concrete 
             examples and support your arguments. 
-            Use tables or charts to effectively compare maintenance costs across different car models.
+            Use tables  to effectively compare maintenance costs across different car models.
             Format your output using markdown`,
 			deprecation_analysis: `You are an automotive expert tasked with writing an SEO-optimized analysis of car prices and depreciation 
          for a specific list of vehicles.

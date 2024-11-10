@@ -23,7 +23,7 @@
 		? SIZES.map((w) => `/assets/img/${article_name}--${w}.webp ${w}w`).join(', ')
 		: '';
 
-	$: url = $_(`${i18nPath}.url`);
+	$: hash = $_(`${i18nPath}.hash`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
@@ -60,8 +60,8 @@
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
 	<h1>{title}</h1>
 	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
-	{#if url !== '-'}
-		<Charts lg {title} {url} />
+	{#if hash !== '-'}
+		<Charts lg {title} url={hash} />
 	{/if}
 	<main>
 		{#each chapters as chapter}
