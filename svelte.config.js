@@ -12,7 +12,6 @@ const ARTICLES_NAMES = Object.entries(ARTICLES).map(([locale, articles]) =>
 	Object.keys(articles).map((article) => `/articles/${locale}/${article}/`)
 );
 
-console.log(ARTICLES_NAMES);
 const categories = [
 	'transmission',
 	'safety',

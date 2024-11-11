@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { Chart } from 'chart.js/auto';
-	import { onMount, tick } from 'svelte';
-	import Loading from '../view/Loading.svelte';
+	// import { type Chart } from 'chart.js/auto';
+	import { tick } from 'svelte';
 
 	const COLORS = [
 		'#4dc9f6',
@@ -19,7 +18,7 @@
 	export let data: Record<string, number> = {};
 
 	let chartEl: HTMLCanvasElement;
-	let chart: Chart;
+	let chart;
 
 	$: config = {
 		type: 'doughnut',
@@ -53,11 +52,22 @@
 	function update() {
 		tick().then(() => chart.update());
 	}
-	onMount(() => {
+	const render = () => {
 		// @ts-ignore
 		chart = new Chart(chartEl, config);
-	});
+	};
 </script>
+
+<svelte:head>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js"
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+		on:load={render}
+		async
+		defer
+	></script>
+</svelte:head>
 
 <div class="PieChart">
 	<canvas bind:this={chartEl} />

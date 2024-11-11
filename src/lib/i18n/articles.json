@@ -25,7 +25,7 @@
 			],
 			"date": "2024-11-10T06:00:51.661Z"
 		},
-		"mitsubishi-outlander-reliability-comparison:": {
+		"mitsubishi-outlander-reliability-comparison": {
 			"generated": true,
 			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
 			"title": "Comparativa de Fiabilidad: Mitsubishi Outlander 2023",
@@ -141,6 +141,19 @@
 				"análisis de minivans"
 			],
 			"date": "2024-11-10T06:25:19.703Z"
+		},
+		"suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Comparativa de Fiabilidad de SUVs: ¿Cuál es el Más Confiable?",
+			"keywords": [
+				"SUV reliability comparison",
+				"Toyota RAV4 reliability",
+				"Honda CR-V reliability",
+				"Ford Escape reliability",
+				"Subaru Forester reliability"
+			],
+			"date": "2024-11-11T08:08:21.610Z"
 		}
 	},
 	"de": {
@@ -170,7 +183,7 @@
 			],
 			"date": "2024-11-10T06:00:56.730Z"
 		},
-		"mitsubishi-outlander-reliability-comparison:": {
+		"mitsubishi-outlander-reliability-comparison": {
 			"generated": true,
 			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
 			"title": "Mitsubishi Outlander vs. Rivalen: Zuverlässigkeitsranking",
@@ -285,6 +298,19 @@
 				"Familienfreundliche Fahrzeuge"
 			],
 			"date": "2024-11-10T06:25:19.290Z"
+		},
+		"suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "SUV-Zuverlässigkeit: Toyota, Honda, Ford & Subaru im Vergleich",
+			"keywords": [
+				"SUV Zuverlässigkeitsvergleich",
+				"Toyota RAV4 Zuverlässigkeit",
+				"Honda CR-V Zuverlässigkeit",
+				"Ford Escape Zuverlässigkeit",
+				"Subaru Forester Zuverlässigkeit"
+			],
+			"date": "2024-11-11T08:08:20.687Z"
 		}
 	},
 	"en": {
@@ -314,7 +340,7 @@
 			],
 			"date": "2024-11-10T06:00:54.137Z"
 		},
-		"mitsubishi-outlander-reliability-comparison:": {
+		"mitsubishi-outlander-reliability-comparison": {
 			"generated": true,
 			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
 			"title": "Mitsubishi Outlander Reliability: In-Depth 2023 Comparison",
@@ -428,6 +454,19 @@
 				"minivan service calls"
 			],
 			"date": "2024-11-10T06:25:20.103Z"
+		},
+		"suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "SUV Reliability Showdown: Top Models Compared",
+			"keywords": [
+				"SUV reliability comparison",
+				"Toyota RAV4 reliability",
+				"Honda CR-V reliability",
+				"Ford Escape reliability",
+				"Subaru Forester reliability"
+			],
+			"date": "2024-11-11T07:58:14.627Z"
 		}
 	},
 	"ru": {
@@ -457,7 +496,7 @@
 			],
 			"date": "2024-11-10T06:00:52.482Z"
 		},
-		"mitsubishi-outlander-reliability-comparison:": {
+		"mitsubishi-outlander-reliability-comparison": {
 			"generated": true,
 			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
 			"title": "Nадежность Mitsubishi Outlander: сравнение и анализ",
@@ -537,7 +576,7 @@
 		"nissan-altima-vs-toyota-camry-reliability": {
 			"generated": true,
 			"cars": ["nissan altima", "toyota camry", "honda accord", "chevrolet malibu"],
-			"title": "Nissan Altima vs Toyota Camry: Reliability Showdown",
+			"title": "Nissan Altima vs Toyota Camry: Сравнение надежности",
 			"keywords": [
 				"Nissan Altima reliability",
 				"Toyota Camry reliability",
@@ -571,6 +610,19 @@
 				"обслуживание минивэнов"
 			],
 			"date": "2024-11-10T06:25:22.317Z"
+		},
+		"suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Сравнение надежности SUV: Топ-4 модели 2023 года",
+			"keywords": [
+				"SUV reliability",
+				"Toyota RAV4 reliability",
+				"Honda CR-V reliability",
+				"Ford Escape reliability",
+				"Subaru Forester reliability"
+			],
+			"date": "2024-11-11T07:58:18.644Z"
 		}
 	}
 }

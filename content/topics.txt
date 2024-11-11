@@ -8,7 +8,8 @@ volkswagen golf vs mazda 3:generated
 nissan altima vs toyota camry reliability:generated
 reliable family suvs compared:generated
 reliable minivans for families:generated
-suv reliability comparison
+suv reliability comparison:generated
+mitsubishi-outlander-reliability-comparison:generated
 sports car reliability rankings
 sports sedan reliability comparison
 subaru forester vs toyota rav4 reliability

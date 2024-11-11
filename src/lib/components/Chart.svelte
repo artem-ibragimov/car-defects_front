@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Chart } from 'chart.js/auto';
-	import { onMount, tick } from 'svelte';
+	// import { type Chart } from 'chart.js/auto';
+	import { tick } from 'svelte';
 	import Loading from '../view/Loading.svelte';
-	import Share from './Share.svelte';
 
 	const COLORS = [
 		'#4dc9f6',
@@ -25,7 +24,7 @@
 	export let isFrameChart = false;
 
 	let chartEl: HTMLCanvasElement;
-	let chart: Chart;
+	let chart;
 
 	$: config = {
 		type: 'bar',
@@ -108,11 +107,22 @@
 			});
 		}, 400);
 	}
-	onMount(() => {
+	const render = () => {
 		// @ts-ignore
-		chart = new Chart(chartEl, config);
-	});
+		// chart = new Chart(chartEl, config);
+	};
 </script>
+
+<svelte:head>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js"
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+		on:load={render}
+		async
+		defer
+	></script>
+</svelte:head>
 
 <div class="Chart" class:Chart-frame={isFrameChart}>
 	<Loading hidden={!loading} />
