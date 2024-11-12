@@ -154,6 +154,32 @@
 				"Subaru Forester reliability"
 			],
 			"date": "2024-11-11T08:08:21.610Z"
+		},
+		"subaru-forester-vs-toyota-rav4-reliability": {
+			"generated": true,
+			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
+			"title": "Subaru Forester vs Toyota RAV4: ¿Cuál es más fiable?",
+			"keywords": [
+				"Subaru Forester reliability",
+				"Toyota RAV4 reliability",
+				"Subaru vs Toyota reliability",
+				"SUV reliability comparison",
+				"car service calls analysis"
+			],
+			"date": "2024-11-12T08:16:25.357Z"
+		},
+		"toyota-corolla-vs-honda-civic-reliability": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Toyota Corolla vs Honda Civic: ¿Cuál es más fiable?",
+			"keywords": [
+				"Toyota Corolla reliability",
+				"Honda Civic reliability",
+				"car reliability comparison",
+				"Toyota vs Honda reliability",
+				"compact car reliability"
+			],
+			"date": "2024-11-12T08:19:28.339Z"
 		}
 	},
 	"de": {
@@ -311,6 +337,32 @@
 				"Subaru Forester Zuverlässigkeit"
 			],
 			"date": "2024-11-11T08:08:20.687Z"
+		},
+		"subaru-forester-vs-toyota-rav4-reliability": {
+			"generated": true,
+			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
+			"title": "Subaru Forester vs Toyota RAV4: Zuverlässigkeit im Vergleich",
+			"keywords": [
+				"Subaru Forester reliability",
+				"Toyota RAV4 reliability",
+				"Subaru vs Toyota reliability",
+				"SUV reliability comparison",
+				"car service calls analysis"
+			],
+			"date": "2024-11-12T08:16:27.069Z"
+		},
+		"toyota-corolla-vs-honda-civic-reliability": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Toyota Corolla vs Honda Civic: Zuverlässigkeitsvergleich",
+			"keywords": [
+				"Toyota Corolla Zuverlässigkeit",
+				"Honda Civic Zuverlässigkeit",
+				"Auto Zuverlässigkeitsvergleich",
+				"Toyota vs Honda",
+				"Fahrzeugwartungskosten"
+			],
+			"date": "2024-11-12T08:19:25.945Z"
 		}
 	},
 	"en": {
@@ -467,6 +519,32 @@
 				"Subaru Forester reliability"
 			],
 			"date": "2024-11-11T07:58:14.627Z"
+		},
+		"subaru-forester-vs-toyota-rav4-reliability": {
+			"generated": true,
+			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
+			"title": "Subaru Forester vs Toyota RAV4: Reliability Showdown",
+			"keywords": [
+				"Subaru Forester reliability",
+				"Toyota RAV4 reliability",
+				"Forester vs RAV4 comparison",
+				"SUV reliability analysis",
+				"car service call statistics"
+			],
+			"date": "2024-11-12T08:16:22.260Z"
+		},
+		"toyota-corolla-vs-honda-civic-reliability": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Toyota Corolla vs Honda Civic: Unveiling Reliability Secrets",
+			"keywords": [
+				"Toyota Corolla reliability",
+				"Honda Civic reliability",
+				"car reliability comparison",
+				"Toyota vs Honda reliability",
+				"compact car reliability"
+			],
+			"date": "2024-11-12T08:19:28.646Z"
 		}
 	},
 	"ru": {
@@ -623,6 +701,32 @@
 				"Subaru Forester reliability"
 			],
 			"date": "2024-11-11T07:58:18.644Z"
+		},
+		"subaru-forester-vs-toyota-rav4-reliability": {
+			"generated": true,
+			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
+			"title": "Сравнение надежности: Subaru Forester vs Toyota RAV4",
+			"keywords": [
+				"Subaru Forester reliability",
+				"Toyota RAV4 reliability",
+				"Forester vs RAV4 comparison",
+				"SUV reliability analysis",
+				"car service statistics"
+			],
+			"date": "2024-11-12T08:16:59.417Z"
+		},
+		"toyota-corolla-vs-honda-civic-reliability": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Toyota Corolla vs Honda Civic: Надежность в Цифрах",
+			"keywords": [
+				"Toyota Corolla reliability",
+				"Honda Civic reliability",
+				"car reliability comparison",
+				"Toyota vs Honda reliability",
+				"compact car reliability"
+			],
+			"date": "2024-11-12T08:19:25.364Z"
 		}
 	}
 }

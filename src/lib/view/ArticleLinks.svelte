@@ -13,7 +13,11 @@
 	$: cards = Object.entries(
 		ROUTE_NAMES.ARTICLE[($lang as keyof typeof ROUTE_NAMES.ARTICLE) || 'en']
 	)
-		.sort(() => (random ? Math.random() - 0.5 : -1))
+		.sort(([_, article], [__, article2]) =>
+			random
+				? Math.random() - 0.5
+				: new Date(article.date).getTime() - new Date(article2.date).getTime()
+		)
 		.map(([name, article]) => ({
 			title: article.title,
 			date: article.date,

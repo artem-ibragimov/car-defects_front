@@ -1115,3 +1115,119 @@ toyota rav4,honda cr-v,ford escape,subaru forester
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/subaru-forester-vs-toyota-rav4-reliability
+      Subaru Forester vs Toyota RAV4: Reliability Showdown
+      Compare Subaru Forester vs Toyota RAV4 reliability in this technical analysis. Discover which SUV stands out in durability and performance. Click to learn more!
+      Subaru Forester reliability, Toyota RAV4 reliability, Forester vs RAV4 comparison, SUV reliability analysis, car service call statistics
+      --
+      You are tasked with creating an engaging viral YouTube short video script for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {"subaru forester":{"0":"0.29863443351872881814","1":"0.36723964121897733042","2":"0.42373804756035845817","3":"0.48023645390173958593","4":"0.54480606114903230337","5":"0.46005845163696061173","6":"0.42777364801331425301","7":"0.37934644257784471494","8":"0.39952444484262368914"},"toyota rav4":{"0":"0.20924423597518712102","1":"0.19398684376866306011","2":"0.21796274580748658439","3":"0.24411827530438497452","4":"0.27463305971743309634","5":"0.30950709904663094984","6":"0.28117194209165769387","7":"0.28117194209165769387","8":"0.25719604005283416958"},"honda cr-v":{"0":"0.15471226576832809650","1":"0.17090308427896708335","2":"0.19968676163121417107","3":"0.23566635832152303072","4":"0.26085207600473923248","5":"0.27704289451537821932","6":"0.25725411633570834651","7":"0.23026941881797670177","8":"0.23386737848700758774"},"ford escape":{"0":"0.18889561225206654983","1":"0.22073195139567327172","2":"0.28440462968288671548","3":"0.33109792709350990757","4":"0.35019973057967394070","5":"0.36930153406583797383","6":"0.36930153406583797383","7":"0.35656699840839528508","8":"0.34595488536052637779"}}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+subaru forester,toyota rav4,honda cr-v,ford escape
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "subaru forester vs toyota rav4 reliability", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/toyota-corolla-vs-honda-civic-reliability
+      Toyota Corolla vs Honda Civic: Unveiling Reliability Secrets
+      Compare the reliability of Toyota Corolla vs Honda Civic in this in-depth analysis. Discover which car stands out in durability and performance. Read now!
+      Toyota Corolla reliability, Honda Civic reliability, car reliability comparison, Toyota vs Honda reliability, compact car reliability
+      --
+      You are tasked with creating an engaging viral YouTube short video script for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {"toyota corolla":{"0":"0.14846014686840921126","1":"0.17447893549483144417","2":"0.20049772412125367707","3":"0.23110806368175042166","4":"0.23876064857187460781","5":"0.22192496181360139828","6":"0.22345547879162623551","7":"0.21427237692347721213","8":"0.19284513923112949092"},"honda civic":{"0":"0.15302403114889167386","1":"0.16294225539002354161","2":"0.18419559304959182965","3":"0.21536715495029198544","4":"0.23662049260986027347","5":"0.24087116014177393108","6":"0.25078938438290579883","7":"0.22953604672333751079","8":"0.21395026577298743290"},"nissan sentra":{"0":"0.26994613916118516890","1":"0.31274247829649501275","2":"0.37858300004312554174","3":"0.41479528700377233269","4":"0.45100757396441912364","5":"0.42796339135309843849","6":"0.42467136526576691204","7":"0.36212286960646790949","8":"0.35224679134447333014"},"hyundai elantra":{"0":"0.24635734163588759120","1":"0.31496318361043856596","2":"0.36485834141011200216","3":"0.41787194657226502811","4":"0.43658263074714256668","5":"0.41787194657226502811","6":"0.42099039393474461787","7":"0.39916126239738748954","8":"0.39916126239738748954"}}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+toyota corolla,honda civic,nissan sentra,hyundai elantra
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "toyota corolla vs honda civic reliability", 
+      need to use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

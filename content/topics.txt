@@ -10,18 +10,13 @@ reliable family suvs compared:generated
 reliable minivans for families:generated
 suv reliability comparison:generated
 mitsubishi-outlander-reliability-comparison:generated
-sports car reliability rankings
-sports sedan reliability comparison
-subaru forester vs toyota rav4 reliability
-subaru outback reliability ratings
-top reliable cars for seniors
-top reliable cars ranked
-toyota camry vs honda accord reliability comparison
-toyota corolla vs honda civic reliability
+sports car reliability rankings:generated
+sports sedan reliability comparison:generated
+subaru forester vs toyota rav4 reliability:generated
+toyota corolla vs honda civic reliability:generated
 toyota rav4 vs honda cr v reliability
 toyota tundra vs nissan titan reliability
 truck reliability comparison
-used car reliability comparison
 volkswagen passat vs honda accord reliability
 which car brands have the highest reliability ratings 
 what are the most reliable used cars under $10,000 
