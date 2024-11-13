@@ -24,6 +24,7 @@
 		: '';
 
 	$: hash = $_(`${i18nPath}.hash`);
+	$: date = $_(`${i18nPath}.date`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
@@ -70,7 +71,7 @@
 	</main>
 	<footer>
 		<!-- <Cards {cards} /> -->
-		<ArticleLinks pagePath={article_name} />
+		<ArticleLinks pagePath={article_name} articleAfterDate={date} />
 	</footer>
 </article>
 

@@ -180,6 +180,19 @@
 				"compact car reliability"
 			],
 			"date": "2024-11-12T08:19:28.339Z"
+		},
+		"toyota-rav4-vs-honda-cr-v-reliability": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
+			"title": "Toyota RAV4 vs Honda CR-V: ¿Cuál es más confiable?",
+			"keywords": [
+				"Toyota RAV4 reliability",
+				"Honda CR-V reliability",
+				"RAV4 vs CR-V comparison",
+				"car reliability analysis",
+				"SUV reliability ratings"
+			],
+			"date": "2024-11-13T06:55:44.106Z"
 		}
 	},
 	"de": {
@@ -363,6 +376,19 @@
 				"Fahrzeugwartungskosten"
 			],
 			"date": "2024-11-12T08:19:25.945Z"
+		},
+		"toyota-rav4-vs-honda-cr-v-reliability": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
+			"title": "Toyota RAV4 vs Honda CR-V: Welches Auto ist zuverlässiger?",
+			"keywords": [
+				"Toyota RAV4 Zuverlässigkeit",
+				"Honda CR-V Zuverlässigkeit",
+				"RAV4 vs CR-V Vergleich",
+				"Auto Zuverlässigkeitsanalyse",
+				"Kompakt-SUV Zuverlässigkeit"
+			],
+			"date": "2024-11-13T06:55:36.651Z"
 		}
 	},
 	"en": {
@@ -545,6 +571,19 @@
 				"compact car reliability"
 			],
 			"date": "2024-11-12T08:19:28.646Z"
+		},
+		"toyota-rav4-vs-honda-cr-v-reliability": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
+			"title": "Toyota RAV4 vs Honda CR-V: Reliability Showdown",
+			"keywords": [
+				"Toyota RAV4 reliability",
+				"Honda CR-V reliability",
+				"RAV4 vs CR-V comparison",
+				"car reliability analysis",
+				"SUV reliability ratings"
+			],
+			"date": "2024-11-13T06:55:37.893Z"
 		}
 	},
 	"ru": {
@@ -727,6 +766,19 @@
 				"compact car reliability"
 			],
 			"date": "2024-11-12T08:19:25.364Z"
+		},
+		"toyota-rav4-vs-honda-cr-v-reliability": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
+			"title": "Toyota RAV4 vs Honda CR-V: Reliability Showdown",
+			"keywords": [
+				"Toyota RAV4 reliability",
+				"Honda CR-V reliability",
+				"RAV4 vs CR-V comparison",
+				"car reliability analysis",
+				"SUV reliability ratings"
+			],
+			"date": "2024-11-13T06:55:33.693Z"
 		}
 	}
 }

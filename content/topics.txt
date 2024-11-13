@@ -14,7 +14,7 @@ sports car reliability rankings:generated
 sports sedan reliability comparison:generated
 subaru forester vs toyota rav4 reliability:generated
 toyota corolla vs honda civic reliability:generated
-toyota rav4 vs honda cr v reliability
+toyota rav4 vs honda cr v reliability:generated
 toyota tundra vs nissan titan reliability
 truck reliability comparison
 volkswagen passat vs honda accord reliability

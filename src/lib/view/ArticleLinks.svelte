@@ -7,16 +7,16 @@
 
 	export let random = false;
 	export let pagePath: string = '';
+	export let articleAfterDate: string = '';
 
+	const dateAfter = new Date(articleAfterDate).getTime();
 	$: ({ lang } = localeStore);
 
 	$: cards = Object.entries(
 		ROUTE_NAMES.ARTICLE[($lang as keyof typeof ROUTE_NAMES.ARTICLE) || 'en']
 	)
-		.sort(([_, article], [__, article2]) =>
-			random
-				? Math.random() - 0.5
-				: new Date(article.date).getTime() - new Date(article2.date).getTime()
+		.sort(([_, article]) =>
+			random ? Math.random() - 0.5 : dateAfter - new Date(article.date).getTime()
 		)
 		.map(([name, article]) => ({
 			title: article.title,
