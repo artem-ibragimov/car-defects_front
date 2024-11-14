@@ -193,6 +193,19 @@
 				"SUV reliability ratings"
 			],
 			"date": "2024-11-13T06:55:44.106Z"
+		},
+		"toyota-tundra-vs-nissan-titan-reliability": {
+			"generated": true,
+			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
+			"title": "Toyota Tundra vs Nissan Titan: ¿Cuál es más fiable?",
+			"keywords": [
+				"Toyota Tundra reliability",
+				"Nissan Titan reliability",
+				"truck reliability comparison",
+				"Tundra vs Titan",
+				"pickup truck service calls"
+			],
+			"date": "2024-11-14T06:25:50.629Z"
 		}
 	},
 	"de": {
@@ -389,6 +402,19 @@
 				"Kompakt-SUV Zuverlässigkeit"
 			],
 			"date": "2024-11-13T06:55:36.651Z"
+		},
+		"toyota-tundra-vs-nissan-titan-reliability": {
+			"generated": true,
+			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
+			"title": "Toyota Tundra vs Nissan Titan: Zuverlässigkeit im Vergleich",
+			"keywords": [
+				"Toyota Tundra reliability",
+				"Nissan Titan reliability",
+				"truck reliability comparison",
+				"Tundra vs Titan",
+				"pickup truck service calls"
+			],
+			"date": "2024-11-14T06:25:53.687Z"
 		}
 	},
 	"en": {
@@ -584,6 +610,19 @@
 				"SUV reliability ratings"
 			],
 			"date": "2024-11-13T06:55:37.893Z"
+		},
+		"toyota-tundra-vs-nissan-titan-reliability": {
+			"generated": true,
+			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
+			"title": "Toyota Tundra vs Nissan Titan: Reliability Showdown",
+			"keywords": [
+				"Toyota Tundra reliability",
+				"Nissan Titan reliability",
+				"Tundra vs Titan comparison",
+				"truck reliability analysis",
+				"pickup truck service calls"
+			],
+			"date": "2024-11-14T06:25:49.904Z"
 		}
 	},
 	"ru": {
@@ -779,6 +818,19 @@
 				"SUV reliability ratings"
 			],
 			"date": "2024-11-13T06:55:33.693Z"
+		},
+		"toyota-tundra-vs-nissan-titan-reliability": {
+			"generated": true,
+			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
+			"title": "Toyota Tundra vs Nissan Titan: Надежность в Цифрах",
+			"keywords": [
+				"Toyota Tundra reliability",
+				"Nissan Titan reliability",
+				"Tundra vs Titan comparison",
+				"truck reliability analysis",
+				"pickup truck service calls"
+			],
+			"date": "2024-11-14T06:25:48.870Z"
 		}
 	}
 }
