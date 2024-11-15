@@ -206,6 +206,19 @@
 				"pickup truck service calls"
 			],
 			"date": "2024-11-14T06:25:50.629Z"
+		},
+		"truck-reliability-comparison": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Comparativa de Fiabilidad: Ford F-150 vs. Rivales",
+			"keywords": [
+				"comparación de confiabilidad de camiones",
+				"fiabilidad de camionetas",
+				"análisis de durabilidad de pickups",
+				"estadísticas de servicio de camiones",
+				"evaluación de confiabilidad de vehículos"
+			],
+			"date": "2024-11-15T08:05:33.559Z"
 		}
 	},
 	"de": {
@@ -415,6 +428,19 @@
 				"pickup truck service calls"
 			],
 			"date": "2024-11-14T06:25:53.687Z"
+		},
+		"truck-reliability-comparison": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Lkw-Zuverlässigkeit: Ford, Chevy, Ram & Toyota im Vergleich",
+			"keywords": [
+				"Lkw-Zuverlässigkeitsvergleich",
+				"Pickup-Truck-Zuverlässigkeit",
+				"Ford F-150 Zuverlässigkeit",
+				"Chevrolet Silverado Probleme",
+				"Toyota Tundra Wartung"
+			],
+			"date": "2024-11-15T08:05:25.044Z"
 		}
 	},
 	"en": {
@@ -623,6 +649,19 @@
 				"pickup truck service calls"
 			],
 			"date": "2024-11-14T06:25:49.904Z"
+		},
+		"truck-reliability-comparison": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Truck Reliability Showdown: Ford vs. Chevy vs. Ram vs. Toyota",
+			"keywords": [
+				"truck reliability",
+				"pickup truck comparison",
+				"vehicle service calls",
+				"truck maintenance data",
+				"reliable trucks"
+			],
+			"date": "2024-11-15T08:05:29.127Z"
 		}
 	},
 	"ru": {
@@ -831,6 +870,19 @@
 				"pickup truck service calls"
 			],
 			"date": "2024-11-14T06:25:48.870Z"
+		},
+		"truck-reliability-comparison": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Сравнение надежности грузовиков: Ford, Chevy, Ram, Toyota",
+			"keywords": [
+				"надежность грузовиков",
+				"сравнение пикапов",
+				"надежность Ford F-150",
+				"надежность Chevrolet Silverado",
+				"надежность Toyota Tundra"
+			],
+			"date": "2024-11-15T08:05:16.631Z"
 		}
 	}
 }
