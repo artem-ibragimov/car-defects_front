@@ -2,20 +2,20 @@ import { readFile, writeFile } from 'node:fs/promises';
 type Key = 'age' | 'mileage';
 
 export class VideoPrompt {
-	static log(cfg: {
-		filename: string;
-		url: string;
-		defects: Record<string, Record<number, number>>;
-		topic: string;
-		title: string;
-		description: string;
-		keywords: string;
-		dataParams: { by_mileage?: boolean };
-	}) {
-		const filename = './content/' + cfg.filename + '.txt';
-		const key: Key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
+   static log(cfg: {
+      filename: string;
+      url: string;
+      defects: Record<string, Record<number, number>>;
+      topic: string;
+      title: string;
+      description: string;
+      keywords: string;
+      dataParams: { by_mileage?: boolean; };
+   }) {
+      const filename = './content/' + cfg.filename + '.txt';
+      const key: Key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
 
-		const data = `-------------------------
+      const data = `-------------------------
       ${cfg.url}
       ${cfg.title}
       ${cfg.description}
@@ -29,7 +29,7 @@ export class VideoPrompt {
 
 1. First, review the car service call statistics data provided:
 <data>
- ${JSON.stringify(cfg.defects)}, 
+ ${JSON.stringify(cfg.defects, null, 2)}, 
 </data>
 This data represents the number of service calls per 10,000 cars sold, 
 with the key being the ${key} of the car at the time of contacting the car service.
@@ -73,9 +73,9 @@ ${Object.keys(cfg.defects)}
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       `;
-		return readFile(filename)
-			.then((val) => val.toString())
-			.then((content) => writeFile(filename, `${content}\n\n${data}`))
-			.then(() => `video prompt is ready`);
-	}
+      return readFile(filename)
+         .then((val) => val.toString())
+         .then((content) => writeFile(filename, `${content}\n\n${data}`))
+         .then(() => `video prompt is ready`);
+   }
 }

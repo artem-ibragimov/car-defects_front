@@ -145,7 +145,7 @@ export class ChatGPT {
 					{
 						role: 'user',
 						content: `you are writing the article "${topic}" about car reliability comparison.
-									generate the list of 2 - 4 car names that will be compared in the article, 
+									generate the list of 4 car names that will be compared in the article, 
 									and obligatorily add the car names from the title on top, 
 									select only cars of the same class and sort by sales in the USA`
 					}

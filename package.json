@@ -18,7 +18,7 @@
 		"upload": "node ./tools/ftp.js",
 		"git": "git add . && git commit -m 'Auto-commit' && git push",
 		"deploy": "npm run resize_images && npm run format && npm run build && npm run sitemap && npm run upload  ",
-		"just_do_it_all": "npm run generate &&  npm run deploy && npm run git && npm run posting"
+		"just_do_it_all": "npm run generate &&  npm run deploy && npm run git"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^5.0.13",

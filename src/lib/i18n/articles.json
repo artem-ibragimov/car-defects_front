@@ -232,6 +232,19 @@
 				"vehicle service calls"
 			],
 			"date": "2024-11-16T06:26:34.675Z"
+		},
+		"jeep-vs-ford-suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep vs Ford: ¿Cuál SUV es más confiable?",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV reliability comparison",
+				"Jeep vs Ford SUVs",
+				"car service call statistics"
+			],
+			"date": "2024-11-16T19:28:21.893Z"
 		}
 	},
 	"de": {
@@ -467,6 +480,19 @@
 				"Fahrzeugwartungskosten"
 			],
 			"date": "2024-11-16T06:26:35.093Z"
+		},
+		"jeep-vs-ford-suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep vs Ford: Welcher SUV ist zuverlässiger?",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV reliability comparison",
+				"Jeep vs Ford SUVs",
+				"car service call statistics"
+			],
+			"date": "2024-11-16T19:28:24.845Z"
 		}
 	},
 	"en": {
@@ -701,6 +727,19 @@
 				"vehicle service calls"
 			],
 			"date": "2024-11-16T06:26:36.886Z"
+		},
+		"jeep-vs-ford-suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep vs Ford: SUV Reliability Showdown 2023",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV reliability comparison",
+				"Jeep vs Ford SUVs",
+				"car service call statistics"
+			],
+			"date": "2024-11-16T19:28:19.103Z"
 		}
 	},
 	"ru": {
@@ -935,6 +974,19 @@
 				"vehicle service calls"
 			],
 			"date": "2024-11-16T06:26:34.943Z"
+		},
+		"jeep-vs-ford-suv-reliability-comparison": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Сравнение надежности: Jeep Grand Cherokee vs Ford Explorer",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV reliability comparison",
+				"Jeep vs Ford SUVs",
+				"car service call statistics"
+			],
+			"date": "2024-11-16T19:28:09.694Z"
 		}
 	}
 }

@@ -10,7 +10,3 @@ pickup-truck-reliability-comparison
 japanese-top-selling-compact-suvs
 volkswagen-golf-vs-mazda-3
 reliable-minivans-for-families
-toyota-corolla-vs-honda-civic-reliability
-toyota-rav4-vs-honda-cr-v-reliability
-toyota-tundra-vs-nissan-titan-reliability
-truck-reliability-comparison
