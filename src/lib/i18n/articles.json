@@ -219,6 +219,19 @@
 				"evaluación de confiabilidad de vehículos"
 			],
 			"date": "2024-11-15T08:05:33.559Z"
+		},
+		"volkswagen-passat-vs-honda-accord-reliability": {
+			"generated": true,
+			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
+			"title": "Volkswagen Passat vs Honda Accord: ¿Cuál es más fiable?",
+			"keywords": [
+				"Volkswagen Passat reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"Passat vs Accord",
+				"vehicle service calls"
+			],
+			"date": "2024-11-16T06:26:34.675Z"
 		}
 	},
 	"de": {
@@ -441,6 +454,19 @@
 				"Toyota Tundra Wartung"
 			],
 			"date": "2024-11-15T08:05:25.044Z"
+		},
+		"volkswagen-passat-vs-honda-accord-reliability": {
+			"generated": true,
+			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
+			"title": "Volkswagen Passat vs Honda Accord: Zuverlässigkeit im Test",
+			"keywords": [
+				"Volkswagen Passat Zuverlässigkeit",
+				"Honda Accord Zuverlässigkeit",
+				"Auto Zuverlässigkeitsvergleich",
+				"Passat vs Accord",
+				"Fahrzeugwartungskosten"
+			],
+			"date": "2024-11-16T06:26:35.093Z"
 		}
 	},
 	"en": {
@@ -662,6 +688,19 @@
 				"reliable trucks"
 			],
 			"date": "2024-11-15T08:05:29.127Z"
+		},
+		"volkswagen-passat-vs-honda-accord-reliability": {
+			"generated": true,
+			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
+			"title": "Volkswagen Passat vs Honda Accord: Reliability Showdown",
+			"keywords": [
+				"Volkswagen Passat reliability",
+				"Honda Accord reliability",
+				"Passat vs Accord comparison",
+				"car reliability analysis",
+				"vehicle service calls"
+			],
+			"date": "2024-11-16T06:26:36.886Z"
 		}
 	},
 	"ru": {
@@ -883,6 +922,19 @@
 				"надежность Toyota Tundra"
 			],
 			"date": "2024-11-15T08:05:16.631Z"
+		},
+		"volkswagen-passat-vs-honda-accord-reliability": {
+			"generated": true,
+			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
+			"title": "Volkswagen Passat vs Honda Accord: Надежность в Сравнении",
+			"keywords": [
+				"Volkswagen Passat reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"Passat vs Accord",
+				"vehicle service calls"
+			],
+			"date": "2024-11-16T06:26:34.943Z"
 		}
 	}
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
 	// import { type Chart } from 'chart.js/auto';
-	import { tick } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import Loading from '../view/Loading.svelte';
 
 	const COLORS = [
@@ -108,21 +108,25 @@
 		}, 400);
 	}
 	const render = () => {
-		// @ts-ignore
-		// chart = new Chart(chartEl, config);
+		try {
+			// @ts-ignore
+			chart = new Chart(chartEl, config);
+		} catch (e) {
+			console.error(e);
+		}
 	};
+	onMount(() => {
+		const script = document.createElement('script');
+		script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+		script.referrerPolicy = 'no-referrer';
+		script.crossOrigin = 'anonymous';
+		script.onload = render;
+		script.async = true;
+		script.defer = true;
+		document.head.appendChild(script);
+		document.addEventListener('DOMContentLoaded', render);
+	});
 </script>
-
-<svelte:head>
-	<script
-		src="https://cdn.jsdelivr.net/npm/chart.js"
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"
-		on:load={render}
-		async
-		defer
-	></script>
-</svelte:head>
 
 <div class="Chart" class:Chart-frame={isFrameChart}>
 	<Loading hidden={!loading} />

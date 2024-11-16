@@ -67,7 +67,8 @@ ${Object.keys(cfg.defects)}
       - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
       - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
       generate a short video about "${cfg.topic}", 
-      need to use north male voice, 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
       Limit video up to 59 sec, place captions at the bottom, 
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.

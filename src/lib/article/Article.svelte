@@ -18,13 +18,12 @@
 	$: chapters = $_(`${i18nPath}.text`).split('\n## ');
 
 	const SIZES = [320, 640];
-	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.png`;
+	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.webp`;
 	$: srcset = poster
 		? SIZES.map((w) => `/assets/img/${article_name}--${w}.webp ${w}w`).join(', ')
 		: '';
 
 	$: hash = $_(`${i18nPath}.hash`);
-	$: date = $_(`${i18nPath}.date`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
