@@ -46,10 +46,10 @@ function findModelName(carName: string, models: Record<ModelID, string> = {}): E
 	const countNameMatches = createCountNameMathes(carName);
 	const matches = Object.entries(models).map(countNameMatches);
 	const modelID = matches.sort((a, b) => b[1] - a[1])[0];
-	if (!modelID) {
-		return null;
+	if (modelID) {
+		return { [carName]: { modelID: modelID[0] } };
 	}
-	return { [carName]: { modelID: modelID[0] } };
+	return null;
 }
 
 function createCountNameMathes(carName: CarName): (entry: [string, string]) => [string, number] {

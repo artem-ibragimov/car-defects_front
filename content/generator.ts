@@ -74,29 +74,29 @@ function generateByTopic(topic: string) {
 				.map((article) =>
 					Promise.all([
 						article.needPoster &&
-						chatGpt.generateImg({ name: article.name, prompt: article.poster }).then(info, error),
+							chatGpt.generateImg({ name: article.name, prompt: article.poster }).then(info, error),
 
 						!article.isExists &&
-						chatGpt
-							.generate({
-								locale: article.locale,
-								system: article.system,
-								contents: article.contents
-							})
-							.then(article.save)
-							.then((data) =>
-								article.needVideoPrompt
-									? VideoPrompt.log({
-										url: `https://car-defects.com/articles/${article.locale}/${article.name}`,
-										filename: 'video',
-										dataParams,
-										...data,
-										defects,
-										topic
-									}).then(info)
-									: void 0
-							)
-							.catch(error)
+							chatGpt
+								.generate({
+									locale: article.locale,
+									system: article.system,
+									contents: article.contents
+								})
+								.then(article.save)
+								.then((data) =>
+									article.needVideoPrompt
+										? VideoPrompt.log({
+												url: `https://car-defects.com/articles/${article.locale}/${article.name}`,
+												filename: 'video',
+												dataParams,
+												...data,
+												defects,
+												topic
+											}).then(info)
+										: void 0
+								)
+								.catch(error)
 					])
 				);
 			return Promise.all(articlesGenerating);

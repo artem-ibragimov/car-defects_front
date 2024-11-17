@@ -245,6 +245,37 @@
 				"car service call statistics"
 			],
 			"date": "2024-11-16T19:28:21.893Z"
+		},
+		"what-are-the-most-reliable-used-cars-under-$10,000-": {
+			"generated": true,
+			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
+			"title": "Los 3 Autos Usados Más Fiables por Menos de $10,000",
+			"keywords": [
+				"reliable used cars",
+				"under $10,000",
+				"car reliability comparison",
+				"affordable used cars",
+				"best used cars"
+			],
+			"date": "2024-11-17T08:03:38.723Z"
+		},
+		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+			"generated": true,
+			"cars": [
+				"toyota prius (hybrid)",
+				"toyota camry (gasoline)",
+				"honda accord (gasoline)",
+				"ford fusion (hybrid)"
+			],
+			"title": "¿Son los coches híbridos más fiables que los de gasolina?",
+			"keywords": [
+				"reliability of hybrid cars",
+				"hybrid vs gasoline reliability",
+				"car reliability comparison",
+				"hybrid car maintenance",
+				"gasoline car reliability"
+			],
+			"date": "2024-11-17T08:06:16.728Z"
 		}
 	},
 	"de": {
@@ -493,6 +524,37 @@
 				"car service call statistics"
 			],
 			"date": "2024-11-16T19:28:24.845Z"
+		},
+		"what-are-the-most-reliable-used-cars-under-$10,000-": {
+			"generated": true,
+			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
+			"title": "Die zuverlässigsten Gebrauchtwagen unter $10.000",
+			"keywords": [
+				"gebrauchte Autos unter 10000",
+				"zuverlässige Gebrauchtwagen",
+				"Honda Civic Zuverlässigkeit",
+				"Toyota Corolla Zuverlässigkeit",
+				"Subaru Impreza Zuverlässigkeit"
+			],
+			"date": "2024-11-17T08:03:37.779Z"
+		},
+		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+			"generated": true,
+			"cars": [
+				"toyota prius (hybrid)",
+				"toyota camry (gasoline)",
+				"honda accord (gasoline)",
+				"ford fusion (hybrid)"
+			],
+			"title": "Sind Hybridautos zuverlässiger als Benziner? Vergleich 2023",
+			"keywords": [
+				"Hybrid car reliability",
+				"gasoline car reliability",
+				"hybrid vs gasoline reliability",
+				"car service calls",
+				"vehicle reliability comparison"
+			],
+			"date": "2024-11-17T08:06:16.848Z"
 		}
 	},
 	"en": {
@@ -740,6 +802,37 @@
 				"car service call statistics"
 			],
 			"date": "2024-11-16T19:28:19.103Z"
+		},
+		"what-are-the-most-reliable-used-cars-under-$10,000-": {
+			"generated": true,
+			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
+			"title": "Top 3 Reliable Used Cars Under $10K: A Data-Driven Guide",
+			"keywords": [
+				"reliable used cars",
+				"under $10,000",
+				"car reliability comparison",
+				"affordable used cars",
+				"best used cars"
+			],
+			"date": "2024-11-17T08:03:37.380Z"
+		},
+		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+			"generated": true,
+			"cars": [
+				"toyota prius (hybrid)",
+				"toyota camry (gasoline)",
+				"honda accord (gasoline)",
+				"ford fusion (hybrid)"
+			],
+			"title": "Hybrid vs Gasoline: Which Cars Are More Reliable?",
+			"keywords": [
+				"hybrid car reliability",
+				"gasoline car reliability",
+				"hybrid vs gasoline reliability",
+				"car reliability comparison",
+				"hybrid vehicle performance"
+			],
+			"date": "2024-11-17T08:06:16.229Z"
 		}
 	},
 	"ru": {
@@ -987,6 +1080,37 @@
 				"car service call statistics"
 			],
 			"date": "2024-11-16T19:28:09.694Z"
+		},
+		"what-are-the-most-reliable-used-cars-under-$10,000-": {
+			"generated": true,
+			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
+			"title": "Самые надежные авто до $10,000: сравнение моделей",
+			"keywords": [
+				"надежные подержанные автомобили",
+				"автомобили до 10000 долларов",
+				"надежность автомобилей",
+				"подержанные автомобили",
+				"сравнение автомобилей"
+			],
+			"date": "2024-11-17T08:03:40.558Z"
+		},
+		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+			"generated": true,
+			"cars": [
+				"toyota prius (hybrid)",
+				"toyota camry (gasoline)",
+				"honda accord (gasoline)",
+				"ford fusion (hybrid)"
+			],
+			"title": "Гибриды против бензиновых: надежность автомобилей 2023",
+			"keywords": [
+				"гибридные автомобили надежность",
+				"традиционные бензиновые автомобили",
+				"сравнение надежности автомобилей",
+				"надежность гибридов",
+				"надежность бензиновых автомобилей"
+			],
+			"date": "2024-11-17T08:06:15.922Z"
 		}
 	}
 }

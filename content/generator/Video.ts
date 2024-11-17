@@ -2,20 +2,20 @@ import { readFile, writeFile } from 'node:fs/promises';
 type Key = 'age' | 'mileage';
 
 export class VideoPrompt {
-   static log(cfg: {
-      filename: string;
-      url: string;
-      defects: Record<string, Record<number, number>>;
-      topic: string;
-      title: string;
-      description: string;
-      keywords: string;
-      dataParams: { by_mileage?: boolean; };
-   }) {
-      const filename = './content/' + cfg.filename + '.txt';
-      const key: Key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
+	static log(cfg: {
+		filename: string;
+		url: string;
+		defects: Record<string, Record<number, number>>;
+		topic: string;
+		title: string;
+		description: string;
+		keywords: string;
+		dataParams: { by_mileage?: boolean };
+	}) {
+		const filename = './content/' + cfg.filename + '.txt';
+		const key: Key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
 
-      const data = `-------------------------
+		const data = `-------------------------
       ${cfg.url}
       ${cfg.title}
       ${cfg.description}
@@ -73,9 +73,9 @@ ${Object.keys(cfg.defects)}
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       `;
-      return readFile(filename)
-         .then((val) => val.toString())
-         .then((content) => writeFile(filename, `${content}\n\n${data}`))
-         .then(() => `video prompt is ready`);
-   }
+		return readFile(filename)
+			.then((val) => val.toString())
+			.then((content) => writeFile(filename, `${content}\n\n${data}`))
+			.then(() => `video prompt is ready`);
+	}
 }
