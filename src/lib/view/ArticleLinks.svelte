@@ -12,7 +12,7 @@
 	const dateAfter = new Date(articleAfterDate).getTime();
 	$: ({ lang } = localeStore);
 
-	$: cards = Object.entries(
+	$: links = Object.entries(
 		ROUTE_NAMES.ARTICLE[($lang as keyof typeof ROUTE_NAMES.ARTICLE) || 'en']
 	)
 		.sort(([_, article]) =>
@@ -27,9 +27,9 @@
 			imgSrc: name,
 			href: `/articles/${$lang}/${name}`
 		}))
-		.filter(({ name }) => name !== pagePath)
-		.slice(0, 4);
+		.filter(({ name }) => name !== pagePath);
 
+	$: cards = links.slice(links.length - 4);
 	$: itemListElement = cards.map((c, i) => ({
 		'@type': 'ListItem',
 		position: i + 1,
