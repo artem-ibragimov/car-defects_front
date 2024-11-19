@@ -1627,3 +1627,139 @@ toyota prius (hybrid),toyota camry (gasoline),honda accord (gasoline),ford fusio
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/which-is-more-reliable:-honda-accord-or-toyota-camry-after-100,000-miles-
+      Honda Accord vs. Toyota Camry: Reliability After 100K Miles
+      Discover which car reigns supreme in reliability after 100,000 miles: Honda Accord or Toyota Camry. Dive into our technical analysis to make an informed choice.
+      Honda Accord reliability, Toyota Camry reliability, car reliability after 100,000 miles, Accord vs Camry reliability, long-term car reliability
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "honda accord": {
+    "2": "0.00132061929121042021",
+    "198": "0.00132061929121042021",
+    "2100": "0.00132061929121042021",
+    "15200": "0.00132061929121042021",
+    "16000": "0.00132061929121042021",
+    "20000": "0.00132061929121042021",
+    "20900": "0.00132061929121042021",
+    "23781": "0.00132061929121042021",
+    "24000": "0.00132061929121042021",
+    "25000": "0.36317030508286555898",
+    "30058": "0.00132061929121042021",
+    "40000": "0.00132061929121042021",
+    "46000": "0.00132061929121042021",
+    "50000": "0.32751358422018421318",
+    "75000": "0.34336101571470925576",
+    "80000": "0.00132061929121042021",
+    "87000": "0.00132061929121042021",
+    "93205": "0.00132061929121042021",
+    "100000": "0.34864349287955093662",
+    "104017": "0.00132061929121042021",
+    "105509": "0.00132061929121042021",
+    "113000": "0.00132061929121042021",
+    "114000": "0.00132061929121042021",
+    "115000": "0.00132061929121042021",
+    "120450": "0.00132061929121042021",
+    "125000": "0.32619296492897379297",
+    "127000": "0.00132061929121042021",
+    "132000": "0.00132061929121042021",
+    "134000": "0.00132061929121042021",
+    "140000": "0.00132061929121042021",
+    "147000": "0.00264123858242084043",
+    "148000": "0.00132061929121042021",
+    "148442": "0.00132061929121042021",
+    "150000": "0.28657438619266118654",
+    "155000": "0.00132061929121042021",
+    "160000": "0.00132061929121042021",
+    "161089": "0.00132061929121042021",
+    "165000": "0.00132061929121042021",
+    "166000": "0.00132061929121042021",
+    "170000": "0.00396185787363126064",
+    "171000": "0.00132061929121042021",
+    "175000": "0.26016200036845278225",
+    "180000": "0.00132061929121042021",
+    "189547": "0.00132061929121042021",
+    "190000": "0.00132061929121042021",
+    "198135": "0.00132061929121042021",
+    "198839": "0.00132061929121042021"
+  },
+  "toyota camry": {
+    "25000": "0.31163932594428196937",
+    "50000": "0.27253629265089297701",
+    "75000": "0.28794051788768258006",
+    "100000": "0.26661159063674312969",
+    "125000": "0.25120736539995352664",
+    "150000": "0.20617963009241468696",
+    "175000": "0.18485070284147523658"
+  },
+  "nissan altima": {
+    "25000": "0.44494087775856121144",
+    "50000": "0.42567936789888323692",
+    "75000": "0.51043001128146632481",
+    "100000": "0.46035008564630359106",
+    "125000": "0.44301472677259341399",
+    "150000": "0.38908249916549508533",
+    "175000": "0.29277494986710521272"
+  },
+  "ford fusion": {
+    "25000": "0.51710485916972351050",
+    "50000": "0.52033676453953428244",
+    "75000": "0.54619200749802045796",
+    "100000": "0.52356866990934505438",
+    "125000": "0.48155390010180501915",
+    "150000": "0.42984341418483266810",
+    "175000": "0.36520530678861722929"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the mileage of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+honda accord,toyota camry,nissan altima,ford fusion
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "which is more reliable: honda accord or toyota camry after 100,000 miles ", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

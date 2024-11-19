@@ -21,7 +21,7 @@ export class VideoPrompt {
       ${cfg.description}
       ${cfg.keywords}
       --
-      You are tasked with creating an engaging viral YouTube short video script for potential car buyers, 
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
       comparing the reliability of specific car models. 
       Your script should be informative, objective, and engaging, 
       emulating the style of top automotive journalists. 
