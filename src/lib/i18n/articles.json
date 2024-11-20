@@ -289,6 +289,18 @@
 				"long-term car reliability"
 			],
 			"date": "2024-11-19T07:42:16.270Z"
+		},
+		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Los coches más fiables y económicos en reparaciones",
+			"keywords": [
+				"car repair costs",
+				"long-term car reliability",
+				"affordable car maintenance",
+				"10-year car expenses"
+			],
+			"date": "2024-11-20T07:07:27.507Z"
 		}
 	},
 	"de": {
@@ -569,7 +581,7 @@
 			],
 			"date": "2024-11-17T08:06:16.848Z"
 		},
-		"which-is-more-reliable:-honda-accord-or-toyota-camry-after-100,000-miles-": {
+		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
 			"generated": true,
 			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
 			"title": "Honda Accord vs. Toyota Camry: Zuverlässigkeit ab 100.000 Meilen",
@@ -581,6 +593,19 @@
 				"Accord vs Camry reliability"
 			],
 			"date": "2024-11-19T07:42:21.970Z"
+		},
+		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Die zuverlässigsten Autos: Geringste Reparaturkosten",
+			"keywords": [
+				"car repair costs",
+				"long-term car reliability",
+				"10-year car maintenance",
+				"affordable car repairs",
+				"vehicle service calls"
+			],
+			"date": "2024-11-20T07:07:30.130Z"
 		}
 	},
 	"en": {
@@ -860,7 +885,7 @@
 			],
 			"date": "2024-11-17T08:06:16.229Z"
 		},
-		"which-is-more-reliable:-honda-accord-or-toyota-camry-after-100,000-miles-": {
+		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
 			"generated": true,
 			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
 			"title": "Honda Accord vs. Toyota Camry: Reliability After 100K Miles",
@@ -872,6 +897,18 @@
 				"long-term car reliability"
 			],
 			"date": "2024-11-19T07:42:16.796Z"
+		},
+		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Top 4 Cars with Lowest 10-Year Repair Costs",
+			"keywords": [
+				"car repair costs",
+				"long-term reliability",
+				"affordable maintenance",
+				"10-year car costs"
+			],
+			"date": "2024-11-20T07:07:06.238Z"
 		}
 	},
 	"ru": {
@@ -1151,7 +1188,7 @@
 			],
 			"date": "2024-11-17T08:06:15.922Z"
 		},
-		"which-is-more-reliable:-honda-accord-or-toyota-camry-after-100,000-miles-": {
+		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
 			"generated": true,
 			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
 			"title": "Honda Accord vs Toyota Camry: Надежность после 100,000 миль",
@@ -1163,6 +1200,19 @@
 				"long-term car reliability"
 			],
 			"date": "2024-11-19T07:42:14.773Z"
+		},
+		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Самые надежные авто: минимальные затраты на ремонт за 10 лет",
+			"keywords": [
+				"car repair costs",
+				"10-year car reliability",
+				"low maintenance cars",
+				"affordable car repairs",
+				"long-term car costs"
+			],
+			"date": "2024-11-20T07:07:07.263Z"
 		}
 	}
 }
