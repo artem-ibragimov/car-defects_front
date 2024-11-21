@@ -25,7 +25,7 @@ are german cars less reliable than japanese cars after 150,000 miles:generated
 which is more reliable honda accord or toyota camry after 100,000 miles:generated
 comparison of engine reliability between ford and dodge trucks :generated
 which cars have the lowest repair costs over 10 years :generated
-hybrid vs  diesel reliability statistics for the last decade 
+hybrid vs diesel reliability statistics for the last decade :generated
 what are the reliability ratings for cars with over 200,000 miles 
 most dependable compact cars from the 2010s 
 top reliable cars for under $15,000 in 2023

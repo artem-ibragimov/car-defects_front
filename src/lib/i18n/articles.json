@@ -301,6 +301,19 @@
 				"10-year car expenses"
 			],
 			"date": "2024-11-20T07:07:27.507Z"
+		},
+		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+			"generated": true,
+			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
+			"title": "Comparativa: Fiabilidad Híbridos vs Diésel Última Década",
+			"keywords": [
+				"reliability statistics",
+				"hybrid vs diesel",
+				"car reliability comparison",
+				"hybrid car performance",
+				"diesel car reliability"
+			],
+			"date": "2024-11-21T06:33:36.598Z"
 		}
 	},
 	"de": {
@@ -606,6 +619,19 @@
 				"vehicle service calls"
 			],
 			"date": "2024-11-20T07:07:30.130Z"
+		},
+		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+			"generated": true,
+			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
+			"title": "Hybrid vs Diesel: Zuverlässigkeitsvergleich der letzten 10 Jahre",
+			"keywords": [
+				"Hybrid Reliability",
+				"Diesel Reliability",
+				"Car Reliability Statistics",
+				"Hybrid vs Diesel",
+				"Automotive Reliability Analysis"
+			],
+			"date": "2024-11-21T06:33:36.749Z"
 		}
 	},
 	"en": {
@@ -909,6 +935,19 @@
 				"10-year car costs"
 			],
 			"date": "2024-11-20T07:07:06.238Z"
+		},
+		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+			"generated": true,
+			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
+			"title": "Hybrid vs Diesel: Unveiling a Decade of Reliability Data",
+			"keywords": [
+				"hybrid reliability statistics",
+				"diesel reliability comparison",
+				"car reliability analysis",
+				"hybrid vs diesel reliability",
+				"automotive reliability trends"
+			],
+			"date": "2024-11-21T06:33:35.366Z"
 		}
 	},
 	"ru": {
@@ -1213,6 +1252,19 @@
 				"long-term car costs"
 			],
 			"date": "2024-11-20T07:07:07.263Z"
+		},
+		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+			"generated": true,
+			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
+			"title": "Гибриды против дизелей: Надежность за последнее десятилетие",
+			"keywords": [
+				"гибридная надежность",
+				"дизельная надежность",
+				"статистика надежности автомобилей",
+				"сравнение гибридов и дизелей",
+				"надежность автомобилей за десятилетие"
+			],
+			"date": "2024-11-21T06:33:32.962Z"
 		}
 	}
 }
