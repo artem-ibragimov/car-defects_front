@@ -26,12 +26,10 @@ which is more reliable honda accord or toyota camry after 100,000 miles:generate
 comparison of engine reliability between ford and dodge trucks :generated
 which cars have the lowest repair costs over 10 years :generated
 hybrid vs diesel reliability statistics for the last decade :generated
-what are the reliability ratings for cars with over 200,000 miles 
-most dependable compact cars from the 2010s 
-top reliable cars for under $15,000 in 2023
+top reliable cars for under $15,000 in 2024:generated
 how do korean cars compare in reliability to american cars 
-comparison of turbocharged vs  naturally aspirated engines for reliability 
-reliability of luxury cars vs  economy cars
+comparison of turbocharged vs naturally aspirated engines for reliability 
+reliability of luxury cars vs economy cars
 which suv has the best reliability in 2024 
 reliability of hybrid cars vs  electric cars
 mazda cx 5 vs subaru forester durability

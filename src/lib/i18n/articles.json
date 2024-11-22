@@ -314,6 +314,32 @@
 				"diesel car reliability"
 			],
 			"date": "2024-11-21T06:33:36.598Z"
+		},
+		"what-are-the-reliability-ratings-for-cars-with-over-200,000-miles-": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord", "ford f-150", "chevrolet silverado"],
+			"title": "Comparativa de Fiabilidad: Coches con Más de 200,000 Millas",
+			"keywords": [
+				"car reliability over 200,000 miles",
+				"high mileage car ratings",
+				"vehicle longevity analysis",
+				"durable cars",
+				"long-lasting vehicles"
+			],
+			"date": "2024-11-22T07:50:51.287Z"
+		},
+		"top-reliable-cars-for-under-$15,000-in-2024": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Los 4 coches más fiables por menos de $15,000 en 2024",
+			"keywords": [
+				"coches fiables 2024",
+				"coches económicos",
+				"mejores coches usados",
+				"coches por menos de $15,000",
+				"fiabilidad automotriz"
+			],
+			"date": "2024-11-22T07:52:08.668Z"
 		}
 	},
 	"de": {
@@ -632,6 +658,19 @@
 				"Automotive Reliability Analysis"
 			],
 			"date": "2024-11-21T06:33:36.749Z"
+		},
+		"top-reliable-cars-for-under-$15,000-in-2024": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Die besten zuverlässigen Autos unter $15.000 im Jahr 2024",
+			"keywords": [
+				"günstige zuverlässige Autos 2024",
+				"zuverlässige Gebrauchtwagen unter 15000",
+				"beste Autos unter 15000 2024",
+				"Auto Zuverlässigkeit 2024",
+				"preiswerte zuverlässige Fahrzeuge"
+			],
+			"date": "2024-11-22T07:52:08.586Z"
 		}
 	},
 	"en": {
@@ -948,6 +987,19 @@
 				"automotive reliability trends"
 			],
 			"date": "2024-11-21T06:33:35.366Z"
+		},
+		"top-reliable-cars-for-under-$15,000-in-2024": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Top 4 Reliable Cars Under $15K in 2024: A Must-See Guide",
+			"keywords": [
+				"reliable cars under $15,000",
+				"2024 affordable cars",
+				"budget-friendly reliable cars",
+				"top cars under $15k",
+				"best cheap cars 2024"
+			],
+			"date": "2024-11-22T07:52:02.519Z"
 		}
 	},
 	"ru": {
@@ -1265,6 +1317,31 @@
 				"надежность автомобилей за десятилетие"
 			],
 			"date": "2024-11-21T06:33:32.962Z"
+		},
+		"what-are-the-reliability-ratings-for-cars-with-over-200,000-miles-": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord", "ford f-150", "chevrolet silverado"],
+			"title": "Надежность авто: рейтинг моделей с пробегом 200,000+ миль",
+			"keywords": [
+				"car reliability over 200,000 miles",
+				"high mileage car ratings",
+				"vehicle longevity analysis",
+				"durable cars",
+				"long-lasting vehicles"
+			],
+			"date": "2024-11-22T07:50:51.392Z"
+		},
+		"top-reliable-cars-for-under-$15,000-in-2024": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
+			"title": "Надежные авто до $15,000 в 2024: Топ-выборы",
+			"keywords": [
+				"надежные автомобили до 15000 долларов 2024",
+				"лучшие бюджетные автомобили 2024",
+				"надежность автомобилей 2024",
+				"доступные автомобили 2024"
+			],
+			"date": "2024-11-22T07:51:59.573Z"
 		}
 	}
 }
