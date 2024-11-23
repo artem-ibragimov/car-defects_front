@@ -2053,3 +2053,211 @@ toyota corolla,honda civic,subaru impreza,mazda 3
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/mazda-3-reliability-compared-to-honda-civic
+      Mazda 3 vs Honda Civic: The Ultimate Reliability Showdown
+      Discover how the Mazda 3 stacks up against the Honda Civic in reliability. Our data-driven comparison reveals surprising service records and long-term durability insights for both models.
+      mazda 3 vs honda civic reliability, mazda 3 reliability review, honda civic vs mazda 3 maintenance, compact car reliability comparison
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "mazda 3": {
+    "0": "0.32091784926912473592",
+    "1": "0.39357849438666241198",
+    "2": "0.46018408574440528170",
+    "3": "0.52073462334235334508",
+    "4": "0.55706494590112218311",
+    "5": "0.53889978462173776410",
+    "6": "0.49045935454337931339",
+    "7": "0.45412903198461047536",
+    "8": "0.44201892446502086269"
+  },
+  "honda civic": {
+    "0": "0.15302403114889167386",
+    "1": "0.16294225539002354161",
+    "2": "0.18419559304959182965",
+    "3": "0.21536715495029198544",
+    "4": "0.23662049260986027347",
+    "5": "0.24087116014177393108",
+    "6": "0.25078938438290579883",
+    "7": "0.22953604672333751079",
+    "8": "0.21395026577298743290"
+  },
+  "toyota corolla": {
+    "0": "0.14846014686840921126",
+    "1": "0.17447893549483144417",
+    "2": "0.20049772412125367707",
+    "3": "0.23110806368175042166",
+    "4": "0.23876064857187460781",
+    "5": "0.22192496181360139828",
+    "6": "0.22345547879162623551",
+    "7": "0.21427237692347721213",
+    "8": "0.19284513923112949092"
+  },
+  "volkswagen jetta": {
+    "0": "0.37113685545020798425",
+    "1": "0.43018135518092289084",
+    "2": "0.53561796184291379545",
+    "3": "0.60309739010658797441",
+    "4": "0.62840217570546579151",
+    "5": "0.64105456850490470007",
+    "6": "0.57779260450771015730",
+    "7": "0.64105456850490470007",
+    "8": "0.54827035464235270401"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+mazda 3,honda civic,toyota corolla,volkswagen jetta
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "mazda 3 reliability compared to honda civic", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/which-suv-has-the-best-reliability-in-2024-
+      Most Reliable SUV of 2024: Honda CR-V Leads the Pack
+      Discover which SUV leads the pack in reliability for 2024. Compare real service data from Toyota RAV4, Honda CR-V, Ford Escape, and Subaru Forester to make an informed buying decision.
+      most reliable SUV 2024, SUV reliability comparison, best SUV reliability ratings, compact SUV dependability 2024
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774"
+  },
+  "ford escape": {
+    "0": "0.18889561225206654983",
+    "1": "0.22073195139567327172",
+    "2": "0.28440462968288671548",
+    "3": "0.33109792709350990757",
+    "4": "0.35019973057967394070",
+    "5": "0.36930153406583797383",
+    "6": "0.36930153406583797383",
+    "7": "0.35656699840839528508",
+    "8": "0.34595488536052637779"
+  },
+  "subaru forester": {
+    "0": "0.29863443351872881814",
+    "1": "0.36723964121897733042",
+    "2": "0.42373804756035845817",
+    "3": "0.48023645390173958593",
+    "4": "0.54480606114903230337",
+    "5": "0.46005845163696061173",
+    "6": "0.42777364801331425301",
+    "7": "0.37934644257784471494",
+    "8": "0.39952444484262368914"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+toyota rav4,honda cr-v,ford escape,subaru forester
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "which suv has the best reliability in 2024 ", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

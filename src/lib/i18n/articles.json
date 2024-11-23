@@ -315,19 +315,6 @@
 			],
 			"date": "2024-11-21T06:33:36.598Z"
 		},
-		"what-are-the-reliability-ratings-for-cars-with-over-200,000-miles-": {
-			"generated": true,
-			"cars": ["toyota camry", "honda accord", "ford f-150", "chevrolet silverado"],
-			"title": "Comparativa de Fiabilidad: Coches con Más de 200,000 Millas",
-			"keywords": [
-				"car reliability over 200,000 miles",
-				"high mileage car ratings",
-				"vehicle longevity analysis",
-				"durable cars",
-				"long-lasting vehicles"
-			],
-			"date": "2024-11-22T07:50:51.287Z"
-		},
 		"top-reliable-cars-for-under-$15,000-in-2024": {
 			"generated": true,
 			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
@@ -340,6 +327,18 @@
 				"fiabilidad automotriz"
 			],
 			"date": "2024-11-22T07:52:08.668Z"
+		},
+		"which-suv-has-the-best-reliability-in-2024-": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "¿Cuál es el SUV más Confiable del 2024? Análisis Definitivo",
+			"keywords": [
+				"SUV más confiable 2024",
+				"comparativa fiabilidad SUVs",
+				"mejor SUV calidad-precio 2024",
+				"SUV con menos averías"
+			],
+			"date": "2024-11-23T08:17:04.198Z"
 		}
 	},
 	"de": {
@@ -671,6 +670,18 @@
 				"preiswerte zuverlässige Fahrzeuge"
 			],
 			"date": "2024-11-22T07:52:08.586Z"
+		},
+		"which-suv-has-the-best-reliability-in-2024-": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "SUV-Zuverlässigkeit 2024: CR-V vs. RAV4 vs. Forester im Härtetest",
+			"keywords": [
+				"zuverlässigste SUVs 2024",
+				"SUV Langzeittest Vergleich",
+				"SUV Pannenstatistik 2024",
+				"bester SUV Qualität"
+			],
+			"date": "2024-11-23T08:19:15.540Z"
 		}
 	},
 	"en": {
@@ -690,15 +701,14 @@
 		"mazda-3-reliability-compared-to-honda-civic": {
 			"generated": true,
 			"cars": ["mazda 3", "honda civic", "toyota corolla", "volkswagen jetta"],
-			"title": "Mazda 3 vs Honda Civic: Unveiling the Reliability Winner",
+			"title": "Mazda 3 vs Honda Civic: The Ultimate Reliability Showdown",
 			"keywords": [
-				"Mazda 3 reliability",
-				"Honda Civic reliability",
-				"car reliability comparison",
-				"service call data analysis",
-				"vehicle reliability study"
+				"mazda 3 vs honda civic reliability",
+				"mazda 3 reliability review",
+				"honda civic vs mazda 3 maintenance",
+				"compact car reliability comparison"
 			],
-			"date": "2024-11-10T06:00:54.137Z"
+			"date": "2024-11-23T07:29:04.058Z"
 		},
 		"mitsubishi-outlander-reliability-comparison": {
 			"generated": true,
@@ -1000,6 +1010,18 @@
 				"best cheap cars 2024"
 			],
 			"date": "2024-11-22T07:52:02.519Z"
+		},
+		"which-suv-has-the-best-reliability-in-2024-": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Most Reliable SUV of 2024: Honda CR-V Leads the Pack",
+			"keywords": [
+				"most reliable SUV 2024",
+				"SUV reliability comparison",
+				"best SUV reliability ratings",
+				"compact SUV dependability 2024"
+			],
+			"date": "2024-11-23T08:12:39.886Z"
 		}
 	},
 	"ru": {
@@ -1019,15 +1041,14 @@
 		"mazda-3-reliability-compared-to-honda-civic": {
 			"generated": true,
 			"cars": ["mazda 3", "honda civic", "toyota corolla", "volkswagen jetta"],
-			"title": "Надежность Mazda 3 против Honda Civic: Кто лучше?",
+			"title": "Mazda 3 против Honda Civic: Битва надежности 2024",
 			"keywords": [
-				"Mazda 3 reliability",
-				"Honda Civic comparison",
-				"car service calls",
-				"vehicle durability analysis",
-				"compact car dependability"
+				"надежность mazda 3",
+				"сравнение mazda 3 и honda civic",
+				"обслуживание mazda 3 honda civic",
+				"mazda 3 vs honda civic надежность"
 			],
-			"date": "2024-11-10T06:00:52.482Z"
+			"date": "2024-11-23T07:31:01.095Z"
 		},
 		"mitsubishi-outlander-reliability-comparison": {
 			"generated": true,
@@ -1342,6 +1363,18 @@
 				"доступные автомобили 2024"
 			],
 			"date": "2024-11-22T07:51:59.573Z"
+		},
+		"which-suv-has-the-best-reliability-in-2024-": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Самый надежный кроссовер 2024: сравнение ТОП-4 популярных SUV",
+			"keywords": [
+				"надежные внедорожники 2024",
+				"самый надежный кроссовер",
+				"рейтинг надежности SUV",
+				"лучший кроссовер по надежности"
+			],
+			"date": "2024-11-23T08:15:04.261Z"
 		}
 	}
 }

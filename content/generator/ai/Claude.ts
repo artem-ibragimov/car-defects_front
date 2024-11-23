@@ -1,4 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { chain } from '../utils';
 
 export class AnthropicAI {
 	anthropic: Anthropic;
@@ -6,7 +7,35 @@ export class AnthropicAI {
 	constructor(apiKey: string) {
 		this.anthropic = new Anthropic({ apiKey });
 	}
-	generateChapters = ({
+
+	generate = (params: {
+		system: string;
+		contents: Record<string, string>;
+	}): Promise<Record<string, string>> => {
+		const messages = Object.entries(params.contents).map(([name, content]) => ({ name, content }));
+
+		const generating = messages.map(
+			(message) => (results: Record<string, string>) =>
+				this.anthropic.messages
+					.create({
+						model: 'claude-3-5-sonnet-latest',
+						max_tokens: 8192,
+						temperature: 0.1,
+						system: params.system,
+						messages: [{ role: 'user', content: message.content }]
+					})
+					.then((res) => {
+						if (res.content[0].type === 'text') {
+							results[message.name] = res.content[0].text;
+						}
+						return results;
+					})
+		);
+
+		return chain<Record<string, string>>(generating, {});
+	};
+
+	generateWithBatches = ({
 		system,
 		contents
 	}: {

@@ -7,6 +7,7 @@ import { CarDefects } from './generator/CarDefects';
 import { VideoPrompt } from './generator/Video';
 import { AnthropicAI } from './generator/ai/Claude';
 import { ChatGPT } from './generator/ai/OpenAi';
+import { chain } from './generator/utils';
 dotenv.config();
 
 const error = (e) => console.error(chalk.red(e.stack));
@@ -71,38 +72,45 @@ function generateByTopic(topic: string) {
 		.then(({ cars, defects, dataParams, hash }) => {
 			const articlesGenerating = (['en', 'ru', 'es', 'de'] as Locale[])
 				.map((locale) => new Article({ topic, cars, defects, dataParams, locale, hash }))
-				.map((article) =>
-					Promise.all([
-						article.needPoster &&
-							chatGpt.generateImg({ name: article.name, prompt: article.poster }).then(info, error),
+				.map(
+					(article) => () =>
+						Promise.all([
+							// Promise.all([
+							article.needPoster &&
+								chatGpt
+									.generateImg({ name: article.name, prompt: article.poster })
+									.then(info, error),
 
-						!article.isExists &&
-							chatGpt
-								.generate({
-									locale: article.locale,
-									system: article.system,
-									contents: article.contents
-								})
-								.then(article.save)
-								.then((data) =>
-									article.needVideoPrompt
-										? VideoPrompt.log({
-												url: `https://car-defects.com/articles/${article.locale}/${article.name}`,
-												filename: 'video',
-												dataParams,
-												...data,
-												defects,
-												topic
-											}).then(info)
-										: void 0
-								)
-								.catch(error)
-					])
+							!article.isExists &&
+								anthropicAI
+									.generate({
+										system: article.system,
+										contents: article.contents
+									})
+									// chatGpt
+									// 	.generate({
+									// 		locale: article.locale,
+									// 		system: article.system,
+									// 		contents: article.contents
+									// 	})
+									.then(article.save)
+									.then((data) => {
+										if (!article.needVideoPrompt) {
+											return;
+										}
+										VideoPrompt.log({
+											url: `https://car-defects.com/articles/${article.locale}/${article.name}`,
+											filename: 'video',
+											dataParams,
+											...data,
+											defects,
+											topic
+										}).then(info);
+									})
+									.catch(error)
+						]) as unknown as Promise<void>
 				);
-			return Promise.all(articlesGenerating);
+			// return Promise.all(articlesGenerating);
+			return chain<void>(articlesGenerating);
 		});
-}
-
-function chain(fs: (() => Promise<any>)[]): Promise<void> {
-	return fs.reduce((ch, f) => ch.then(f), Promise.resolve());
 }

@@ -18,7 +18,6 @@ export class ChatGPT {
 	}
 
 	generate = (params: {
-		locale: string;
 		system: string;
 		contents: Record<string, string>;
 	}): Promise<Record<string, string>> => {
