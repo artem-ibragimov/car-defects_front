@@ -53,16 +53,15 @@
 		},
 		"mercedes-glc-vs-audi-q5-reliability": {
 			"generated": true,
-			"cars": ["mercedes glc", "audi q5", "bmw x3", "lexus nx"],
-			"title": "Mercedes GLC vs Audi Q5: ¿Cuál es más fiable?",
+			"cars": ["mercedes glc", "audi q5"],
+			"title": "Mercedes GLC vs Audi Q5: ¿Cuál es más Confiable en 2024?",
 			"keywords": [
-				"mercedes glc reliability",
-				"audi q5 reliability",
-				"car service calls",
-				"luxury SUV comparisons",
-				"vehicle reliability analysis"
+				"comparación mercedes glc audi q5",
+				"fiabilidad mercedes glc vs q5",
+				"problemas comunes glc q5",
+				"mantenimiento mercedes glc audi q5"
 			],
-			"date": "2024-11-10T06:03:09.312Z"
+			"date": "2024-11-24T13:01:37.205Z"
 		},
 		"off-road-vehicle-reliability-comparison": {
 			"generated": true,
@@ -405,19 +404,6 @@
 			],
 			"date": "2024-11-10T06:02:07.526Z"
 		},
-		"mercedes-glc-vs-audi-q5-reliability": {
-			"generated": true,
-			"cars": ["mercedes glc", "audi q5", "bmw x3", "lexus nx"],
-			"title": "Mercedes GLC oder Audi Q5: Welcher ist zuverlässiger?",
-			"keywords": [
-				"Mercedes GLC Zuverlässigkeit",
-				"Audi Q5 Zuverlässigkeit",
-				"Mercedes vs Audi Serviceanfragen",
-				"Auto Zuverlässigkeitsvergleich",
-				"Premium-SUV Wartungsstatistik"
-			],
-			"date": "2024-11-10T06:02:48.625Z"
-		},
 		"off-road-vehicle-reliability-comparison": {
 			"generated": true,
 			"cars": ["jeep wrangler", "toyota 4runner", "ford bronco", "chevrolet colorado zr2"],
@@ -706,6 +692,18 @@
 				"SUV Dauerhaltbarkeit Vergleich"
 			],
 			"date": "2024-11-24T07:58:14.987Z"
+		},
+		"mercedes-glc-vs-audi-q5-reliability": {
+			"generated": true,
+			"cars": ["mercedes glc", "audi q5"],
+			"title": "Mercedes GLC vs. Audi Q5: Zuverlässigkeitsvergleich 2024",
+			"keywords": [
+				"Mercedes GLC vs Audi Q5 Zuverlässigkeit",
+				"SUV Langzeitqualität Vergleich",
+				"Premium SUV Pannenstatistik",
+				"Wartungskosten GLC Q5"
+			],
+			"date": "2024-11-24T13:03:47.770Z"
 		}
 	},
 	"en": {
@@ -760,16 +758,15 @@
 		},
 		"mercedes-glc-vs-audi-q5-reliability": {
 			"generated": true,
-			"cars": ["mercedes glc", "audi q5", "bmw x3", "lexus nx"],
-			"title": "Mercedes GLC vs Audi Q5: A Reliability Showdown",
+			"cars": ["mercedes glc", "audi q5"],
+			"title": "Mercedes GLC vs Audi Q5: Which SUV Is More Reliable in 2024?",
 			"keywords": [
-				"mercedes glc reliability",
-				"audi q5 reliability",
-				"mercedes vs audi reliability",
-				"luxury SUV reliability",
-				"SUV service calls"
+				"mercedes glc reliability comparison",
+				"audi q5 vs glc reliability",
+				"luxury suv reliability comparison",
+				"german suv maintenance costs"
 			],
-			"date": "2024-11-10T06:02:52.804Z"
+			"date": "2024-11-24T12:57:30.522Z"
 		},
 		"off-road-vehicle-reliability-comparison": {
 			"generated": true,
@@ -1113,16 +1110,15 @@
 		},
 		"mercedes-glc-vs-audi-q5-reliability": {
 			"generated": true,
-			"cars": ["mercedes glc", "audi q5", "bmw x3", "lexus nx"],
-			"title": "Mercedes GLC vs Audi Q5: Битва за Надёжность",
+			"cars": ["mercedes glc", "audi q5"],
+			"title": "Mercedes GLC или Audi Q5: Чья Надежность Выше в 2024?",
 			"keywords": [
-				"mercedes glc reliability",
-				"audi q5 reliability",
-				"car reliability comparison",
-				"mercedes vs audi reliability",
-				"service call statistics"
+				"надежность mercedes glc",
+				"сравнение audi q5 и mercedes glc",
+				"обслуживание mercedes glc audi q5",
+				"статистика поломок glc q5"
 			],
-			"date": "2024-11-10T06:03:10.065Z"
+			"date": "2024-11-24T12:59:37.095Z"
 		},
 		"off-road-vehicle-reliability-comparison": {
 			"generated": true,
