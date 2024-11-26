@@ -2262,11 +2262,12 @@ toyota rav4,honda cr-v,ford escape,subaru forester
       use calm and serious soundtrack.
       
 
+
 -------------------------
-      https://car-defects.com/articles/en/mazda-cx-5-vs-subaru-forester-durability
-      Mazda CX-5 vs Subaru Forester: 8-Year Reliability Showdown
-      Discover the truth about long-term reliability between the Mazda CX-5 and Subaru Forester. Compare real service data, maintenance costs, and durability metrics over 8 years of ownership.
-      mazda cx-5 reliability, subaru forester problems, cx-5 vs forester comparison, crossover suv durability
+      https://car-defects.com/articles/en/kia-sportage-vs-volkswagen-tiguan-longevity
+      Kia Sportage vs VW Tiguan: Which SUV Lasts Longer? [2024 Data]
+      Discover which SUV stands the test of time in our data-driven comparison of Kia Sportage vs Volkswagen Tiguan reliability. Analysis of 9-year service records reveals surprising insights.
+      kia sportage reliability, volkswagen tiguan vs sportage, suv longevity comparison, compact suv reliability comparison
       --
       You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
       comparing the reliability of specific car models. 
@@ -2277,27 +2278,27 @@ toyota rav4,honda cr-v,ford escape,subaru forester
 1. First, review the car service call statistics data provided:
 <data>
  {
-  "mazda cx-5": {
-    "0": "0.25960936426248033841",
-    "1": "0.29015164241100743704",
-    "2": "0.30542278148527098636",
-    "3": "0.32832949009666631034",
-    "4": "0.38177847685658873295",
-    "5": "0.25197379472534856375",
-    "6": "0.24433822518821678909",
-    "7": "0.16034696027976726784",
-    "8": "0.12980468213124016920"
+  "kia sportage": {
+    "0": "59",
+    "1": "61",
+    "2": "73",
+    "3": "94",
+    "4": "86",
+    "5": "97",
+    "6": "95",
+    "7": "101",
+    "8": "94"
   },
-  "subaru forester": {
-    "0": "0.29863443351872881814",
-    "1": "0.36723964121897733042",
-    "2": "0.42373804756035845817",
-    "3": "0.48023645390173958593",
-    "4": "0.54480606114903230337",
-    "5": "0.46005845163696061173",
-    "6": "0.42777364801331425301",
-    "7": "0.37934644257784471494",
-    "8": "0.39952444484262368914"
+  "volkswagen tiguan": {
+    "0": "39",
+    "1": "47",
+    "2": "56",
+    "3": "52",
+    "4": "59",
+    "5": "62",
+    "6": "53",
+    "7": "45",
+    "8": "37"
   }
 }, 
 </data>
@@ -2306,7 +2307,7 @@ with the key being the age of the car at the time of contacting the car service.
 
 2. You will be comparing the following cars in terms of reliability:
 <cars>
-mazda cx-5,subaru forester
+kia sportage,volkswagen tiguan
 </cars>
 
 3. Analyze the data and create a script that:
@@ -2336,169 +2337,7 @@ mazda cx-5,subaru forester
       - Include a brief explanation of what service calls indicate about car reliability.
       - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
       - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
-      generate a short video about "mazda cx 5 vs subaru forester durability", 
-      don't use absolute values, compare car reliability relatively of each car
-      use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      scenes should be  at least 5 sec long,
-      use calm and serious soundtrack.
-      
-
--------------------------
-      https://car-defects.com/articles/en/mercedes-glc-vs-audi-q5-reliability
-      Mercedes GLC vs Audi Q5: Which SUV Is More Reliable in 2024?
-      Discover the truth about Mercedes GLC vs Audi Q5 reliability with real service data analysis. Compare maintenance costs, common issues, and long-term durability between these luxury SUVs.
-      mercedes glc reliability comparison, audi q5 vs glc reliability, luxury suv reliability comparison, german suv maintenance costs
-      --
-      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
-      comparing the reliability of specific car models. 
-      Your script should be informative, objective, and engaging, 
-      emulating the style of top automotive journalists. 
-      Follow these instructions carefully:
-
-1. First, review the car service call statistics data provided:
-<data>
- {
-  "mercedes glc": {
-    "0": "17",
-    "1": "10",
-    "2": "13",
-    "3": "13",
-    "4": "9",
-    "5": "7",
-    "6": "2"
-  },
-  "audi q5": {
-    "0": "37",
-    "1": "31",
-    "2": "36",
-    "3": "40",
-    "4": "38",
-    "5": "46",
-    "6": "46",
-    "7": "43",
-    "8": "26"
-  }
-}, 
-</data>
-This data represents the number of service calls per 10,000 cars sold, 
-with the key being the age of the car at the time of contacting the car service.
-
-2. You will be comparing the following cars in terms of reliability:
-<cars>
-mercedes glc,audi q5
-</cars>
-
-3. Analyze the data and create a script that:
-   - Cites sources for your information when applicable
-   - Provides clear arguments backed by data
-   - Uses charts or tables to make comparisons more objective
-   - Avoids repetitive sentences
-   - Includes technical details while keeping the content accessible
-   - Uses mid-frequency words throughout the analysis
-
-4. Your script should have the following elements:
-   - An attention-grabbing introduction
-   - A brief explanation of the data and its significance
-   - A comparison of the reliability of the specified car models
-   - Key findings and insights
-   - A conclusion with recommendations for potential car buyers
-
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      - Highlight any significant differences between the models.
-      - Consider the implications of the data for potential car buyers.
-      Use clear, concise language suitable for a technical audience.
-      - Incorporate relevant keywords naturally throughout the text.
-      - Include subheadings to break up the content and improve readability.
-      - Include a brief explanation of what service calls indicate about car reliability.
-      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
-      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
-      generate a short video about "mercedes glc vs audi q5 reliability", 
-      don't use absolute values, compare car reliability relatively of each car
-      use north male voice, 
-      Limit video up to 59 sec, place captions at the bottom, 
-      scenes should be  at least 5 sec long,
-      use calm and serious soundtrack.
-      
-
--------------------------
-      https://car-defects.com/articles/en/ford-escape-vs-chevrolet-equinox-maintenance
-      Ford Escape vs Chevy Equinox: Real Maintenance Costs Revealed
-      Discover the real maintenance costs and reliability differences between the Ford Escape and Chevrolet Equinox. Data-driven comparison reveals which SUV is truly cheaper to maintain.
-      ford escape reliability, chevrolet equinox maintenance costs, ford vs chevy suv repairs, compact suv maintenance comparison
-      --
-      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
-      comparing the reliability of specific car models. 
-      Your script should be informative, objective, and engaging, 
-      emulating the style of top automotive journalists. 
-      Follow these instructions carefully:
-
-1. First, review the car service call statistics data provided:
-<data>
- {
-  "ford escape": {
-    "0": "0.18889561225206654983",
-    "1": "0.22073195139567327172",
-    "2": "0.28440462968288671548",
-    "3": "0.33109792709350990757",
-    "4": "0.35019973057967394070",
-    "5": "0.36930153406583797383",
-    "6": "0.36930153406583797383",
-    "7": "0.35656699840839528508",
-    "8": "0.34595488536052637779"
-  },
-  "chevrolet equinox": {
-    "0": "0.18257327363545272265",
-    "1": "0.21747698771281868433",
-    "2": "0.24969580070731034127",
-    "3": "0.30070892128192213142",
-    "4": "0.31413342669629365515",
-    "5": "0.35172204185653392158",
-    "6": "0.30339382236479643617",
-    "7": "0.30607872344767074091",
-    "8": "0.28459951478467630296"
-  }
-}, 
-</data>
-This data represents the number of service calls per 10,000 cars sold, 
-with the key being the age of the car at the time of contacting the car service.
-
-2. You will be comparing the following cars in terms of reliability:
-<cars>
-ford escape,chevrolet equinox
-</cars>
-
-3. Analyze the data and create a script that:
-   - Cites sources for your information when applicable
-   - Provides clear arguments backed by data
-   - Uses charts or tables to make comparisons more objective
-   - Avoids repetitive sentences
-   - Includes technical details while keeping the content accessible
-   - Uses mid-frequency words throughout the analysis
-
-4. Your script should have the following elements:
-   - An attention-grabbing introduction
-   - A brief explanation of the data and its significance
-   - A comparison of the reliability of the specified car models
-   - Key findings and insights
-   - A conclusion with recommendations for potential car buyers
-
-      Step by step analyze the data, 
-      compare the each car this others in terms of reliability,
-      draw conclusions, explain the results from the technical point of view, 
-      describe the design features of the cars, use maximum technical details,
-      - Highlight any significant differences between the models.
-      - Consider the implications of the data for potential car buyers.
-      Use clear, concise language suitable for a technical audience.
-      - Incorporate relevant keywords naturally throughout the text.
-      - Include subheadings to break up the content and improve readability.
-      - Include a brief explanation of what service calls indicate about car reliability.
-      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
-      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
-      generate a short video about "ford escape vs chevrolet equinox maintenance", 
+      generate a short video about "kia sportage vs volkswagen tiguan longevity", 
       don't use absolute values, compare car reliability relatively of each car
       use north male voice, 
       Limit video up to 59 sec, place captions at the bottom, 
