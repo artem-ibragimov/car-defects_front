@@ -2344,3 +2344,107 @@ kia sportage,volkswagen tiguan
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/reliable-compact-suvs-2024
+      Most Reliable Compact SUVs 2024: RAV4 vs CR-V vs Escape vs Forester
+      Discover the most reliable compact SUVs for 2024 with our data-driven comparison. Analyze real service records of RAV4, CR-V, Escape, and Forester to make your smart buying decision.
+      most reliable compact SUVs 2024, best small SUV reliability ratings, compact SUV comparison 2024, SUV maintenance costs 2024
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "toyota rav4": {
+    "0": "0.20924423597518712102",
+    "1": "0.19398684376866306011",
+    "2": "0.21796274580748658439",
+    "3": "0.24411827530438497452",
+    "4": "0.27463305971743309634",
+    "5": "0.30950709904663094984",
+    "6": "0.28117194209165769387",
+    "7": "0.28117194209165769387",
+    "8": "0.25719604005283416958"
+  },
+  "honda cr-v": {
+    "0": "0.15471226576832809650",
+    "1": "0.17090308427896708335",
+    "2": "0.19968676163121417107",
+    "3": "0.23566635832152303072",
+    "4": "0.26085207600473923248",
+    "5": "0.27704289451537821932",
+    "6": "0.25725411633570834651",
+    "7": "0.23026941881797670177",
+    "8": "0.23386737848700758774"
+  },
+  "ford escape": {
+    "0": "0.18889561225206654983",
+    "1": "0.22073195139567327172",
+    "2": "0.28440462968288671548",
+    "3": "0.33109792709350990757",
+    "4": "0.35019973057967394070",
+    "5": "0.36930153406583797383",
+    "6": "0.36930153406583797383",
+    "7": "0.35656699840839528508",
+    "8": "0.34595488536052637779"
+  },
+  "subaru forester": {
+    "0": "0.29863443351872881814",
+    "1": "0.36723964121897733042",
+    "2": "0.42373804756035845817",
+    "3": "0.48023645390173958593",
+    "4": "0.54480606114903230337",
+    "5": "0.46005845163696061173",
+    "6": "0.42777364801331425301",
+    "7": "0.37934644257784471494",
+    "8": "0.39952444484262368914"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+toyota rav4,honda cr-v,ford escape,subaru forester
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "reliable compact suvs 2024", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
