@@ -776,6 +776,18 @@
 				"kompakte SUV Langzeittest"
 			],
 			"date": "2024-11-27T08:27:16.002Z"
+		},
+		"most-durable-crossover-suvs": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "Die zuverlässigsten Crossover SUVs im Langzeittest 2024",
+			"keywords": [
+				"zuverlässige Crossover SUV",
+				"langlebige SUV Vergleich",
+				"SUV Haltbarkeit Test",
+				"beste SUV Qualität"
+			],
+			"date": "2024-11-28T08:44:52.017Z"
 		}
 	},
 	"en": {
@@ -1163,6 +1175,18 @@
 				"SUV maintenance costs 2024"
 			],
 			"date": "2024-11-27T08:10:30.715Z"
+		},
+		"most-durable-crossover-suvs": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "Most Reliable Crossover SUVs: 8-Year Durability Showdown",
+			"keywords": [
+				"most reliable crossover SUVs",
+				"crossover SUV reliability comparison",
+				"best long-lasting SUVs",
+				"durable compact SUVs"
+			],
+			"date": "2024-11-28T08:40:23.312Z"
 		}
 	},
 	"ru": {
@@ -1563,6 +1587,18 @@
 				"рейтинг надежности кроссоверов"
 			],
 			"date": "2024-11-27T08:21:55.796Z"
+		},
+		"most-durable-crossover-suvs": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "Самые надежные кроссоверы: сравнение 4 популярных моделей",
+			"keywords": [
+				"надежные кроссоверы",
+				"сравнение кроссоверов по надежности",
+				"самые долговечные SUV",
+				"лучшие кроссоверы по качеству"
+			],
+			"date": "2024-11-28T08:42:34.863Z"
 		}
 	}
 }
