@@ -2552,3 +2552,85 @@ toyota rav4,honda cr-v,subaru forester,ford escape
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/bmw-3-series-vs-mercedes-c-class-reliability
+      BMW 3 Series vs Mercedes C-Class: The Ultimate Reliability Battle
+      Discover the truth about BMW 3 Series vs Mercedes C-Class reliability with our data-driven comparison. Real service statistics reveal which luxury sedan stands the test of time.
+      BMW vs Mercedes reliability comparison, 3 Series reliability issues, C-Class maintenance costs, German luxury car reliability
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "bmw 3 series": {
+    "0": "4",
+    "1": "1",
+    "2": "3",
+    "3": "7",
+    "4": "9",
+    "5": "12",
+    "6": "14",
+    "7": "14",
+    "8": "18"
+  },
+  "mercedes c class": {
+    "0": "5",
+    "1": "5",
+    "2": "4",
+    "3": "6",
+    "4": "6",
+    "5": "11",
+    "6": "5",
+    "7": "8",
+    "8": "2"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+bmw 3 series,mercedes c class
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "bmw 3 series vs mercedes c class reliability", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      

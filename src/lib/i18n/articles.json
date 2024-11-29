@@ -386,6 +386,18 @@
 				"SUV compacto Toyota vs Honda"
 			],
 			"date": "2024-11-27T08:25:11.044Z"
+		},
+		"bmw-3-series-vs-mercedes-c-class-reliability": {
+			"generated": true,
+			"cars": ["bmw 3 series", "mercedes c class"],
+			"title": "BMW Serie 3 vs Mercedes Clase C: ¿Cuál es más Confiable?",
+			"keywords": [
+				"fiabilidad bmw serie 3 vs mercedes clase c",
+				"comparativa mantenimiento bmw mercedes",
+				"problemas comunes serie 3 clase c",
+				"costos reparación bmw mercedes"
+			],
+			"date": "2024-11-29T08:36:40.297Z"
 		}
 	},
 	"de": {
@@ -788,6 +800,18 @@
 				"beste SUV Qualität"
 			],
 			"date": "2024-11-28T08:44:52.017Z"
+		},
+		"bmw-3-series-vs-mercedes-c-class-reliability": {
+			"generated": true,
+			"cars": ["bmw 3 series", "mercedes c class"],
+			"title": "BMW 3er vs. Mercedes C-Klasse: Der große Zuverlässigkeitstest",
+			"keywords": [
+				"BMW 3er vs C-Klasse Zuverlässigkeit",
+				"Mercedes C-Klasse Reparaturen",
+				"BMW 3er Langzeittest",
+				"deutsche Mittelklasse Vergleich"
+			],
+			"date": "2024-11-29T08:38:37.658Z"
 		}
 	},
 	"en": {
@@ -1187,6 +1211,18 @@
 				"durable compact SUVs"
 			],
 			"date": "2024-11-28T08:40:23.312Z"
+		},
+		"bmw-3-series-vs-mercedes-c-class-reliability": {
+			"generated": true,
+			"cars": ["bmw 3 series", "mercedes c class"],
+			"title": "BMW 3 Series vs Mercedes C-Class: The Ultimate Reliability Battle",
+			"keywords": [
+				"BMW vs Mercedes reliability comparison",
+				"3 Series reliability issues",
+				"C-Class maintenance costs",
+				"German luxury car reliability"
+			],
+			"date": "2024-11-29T08:32:33.700Z"
 		}
 	},
 	"ru": {
@@ -1503,19 +1539,6 @@
 			],
 			"date": "2024-11-21T06:33:32.962Z"
 		},
-		"what-are-the-reliability-ratings-for-cars-with-over-200,000-miles-": {
-			"generated": true,
-			"cars": ["toyota camry", "honda accord", "ford f-150", "chevrolet silverado"],
-			"title": "Надежность авто: рейтинг моделей с пробегом 200,000+ миль",
-			"keywords": [
-				"car reliability over 200,000 miles",
-				"high mileage car ratings",
-				"vehicle longevity analysis",
-				"durable cars",
-				"long-lasting vehicles"
-			],
-			"date": "2024-11-22T07:50:51.392Z"
-		},
 		"top-reliable-cars-for-under-$15,000-in-2024": {
 			"generated": true,
 			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
@@ -1599,6 +1622,18 @@
 				"лучшие кроссоверы по качеству"
 			],
 			"date": "2024-11-28T08:42:34.863Z"
+		},
+		"bmw-3-series-vs-mercedes-c-class-reliability": {
+			"generated": true,
+			"cars": ["bmw 3 series", "mercedes c class"],
+			"title": "BMW 3 Series vs Mercedes C-Class: Битва надежности 2024",
+			"keywords": [
+				"надежность bmw 3 series и mercedes c class",
+				"сравнение надежности bmw и mercedes",
+				"обслуживание bmw 3 series mercedes c class",
+				"статистика поломок bmw mercedes"
+			],
+			"date": "2024-11-29T08:34:47.780Z"
 		}
 	}
 }
