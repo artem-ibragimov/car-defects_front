@@ -422,6 +422,30 @@
 				"confiabilidad sedanes lujo"
 			],
 			"date": "2024-11-30T09:32:39.301Z"
+		},
+		"bmw-vs-audi-reliability-comparison": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: ¿Cuál es Más Confiable? Análisis Real 2024",
+			"keywords": [
+				"comparación fiabilidad BMW Audi",
+				"problemas comunes BMW vs Audi",
+				"mantenimiento BMW Audi",
+				"confiabilidad BMW 3 Series vs Audi A4"
+			],
+			"date": "2024-12-01T09:09:29.248Z"
+		},
+		"reliable-pickup-trucks-2024": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Las 4 Pickups Más Fiables del 2024: Análisis de Datos Reales",
+			"keywords": [
+				"camionetas más confiables 2024",
+				"pickup trucks fiables",
+				"mejores pickups duraderas",
+				"comparativa pickups confiabilidad"
+			],
+			"date": "2024-12-01T09:23:33.601Z"
 		}
 	},
 	"de": {
@@ -848,6 +872,30 @@
 				"Wartungskosten A4 IS"
 			],
 			"date": "2024-11-30T09:34:27.308Z"
+		},
+		"bmw-vs-audi-reliability-comparison": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs. Audi: Der große Zuverlässigkeitsvergleich 2024",
+			"keywords": [
+				"BMW Audi Zuverlässigkeitsvergleich",
+				"deutsche Autos Langzeittest",
+				"BMW 3er vs Audi A4 Haltbarkeit",
+				"Premiumautos Wartungskosten"
+			],
+			"date": "2024-12-01T09:11:25.305Z"
+		},
+		"reliable-pickup-trucks-2024": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Die zuverlässigsten Pickup-Trucks 2024 im Härtetest",
+			"keywords": [
+				"zuverlässige Pickup-Trucks 2024",
+				"beste Pickup-Trucks Deutschland",
+				"Pickup Langzeittest Vergleich",
+				"langlebige Pickup-Modelle"
+			],
+			"date": "2024-12-01T09:25:55.867Z"
 		}
 	},
 	"en": {
@@ -1271,6 +1319,30 @@
 				"german vs japanese car reliability"
 			],
 			"date": "2024-11-30T09:28:20.474Z"
+		},
+		"bmw-vs-audi-reliability-comparison": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: The Ultimate Reliability Showdown (2024 Data)",
+			"keywords": [
+				"BMW vs Audi reliability",
+				"German car reliability comparison",
+				"BMW 3 Series vs Audi A4 reliability",
+				"luxury car maintenance costs"
+			],
+			"date": "2024-12-01T09:05:18.352Z"
+		},
+		"reliable-pickup-trucks-2024": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Most Reliable Pickup Trucks 2024: Data-Driven Comparison",
+			"keywords": [
+				"most reliable pickup trucks 2024",
+				"best truck reliability ratings",
+				"pickup truck maintenance costs",
+				"truck dependability comparison"
+			],
+			"date": "2024-12-01T09:18:55.261Z"
 		}
 	},
 	"ru": {
@@ -1694,6 +1766,30 @@
 				"статистика поломок audi lexus"
 			],
 			"date": "2024-11-30T09:30:37.613Z"
+		},
+		"bmw-vs-audi-reliability-comparison": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: Битва надежности в 2024 году",
+			"keywords": [
+				"надежность BMW против Audi",
+				"сравнение BMW 3 серии и Audi A4",
+				"статистика поломок BMW и Audi",
+				"обслуживание BMW и Audi"
+			],
+			"date": "2024-12-01T09:07:36.720Z"
+		},
+		"reliable-pickup-trucks-2024": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Самые надежные пикапы 2024: ТОП-4 по статистике сервисов",
+			"keywords": [
+				"надежные пикапы 2024",
+				"рейтинг пикапов по надежности",
+				"лучшие пикапы 2024",
+				"сравнение надежности пикапов"
+			],
+			"date": "2024-12-01T09:21:24.693Z"
 		}
 	}
 }
