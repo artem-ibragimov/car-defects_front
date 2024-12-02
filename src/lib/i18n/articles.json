@@ -446,6 +446,18 @@
 				"comparativa pickups confiabilidad"
 			],
 			"date": "2024-12-01T09:23:33.601Z"
+		},
+		"best-truck-for-reliability": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Las 4 Pickups Más Confiables: Análisis Definitivo 2024",
+			"keywords": [
+				"camionetas más confiables",
+				"mejor pickup fiabilidad",
+				"comparativa pickups durabilidad",
+				"confiabilidad camionetas pickup"
+			],
+			"date": "2024-12-02T08:33:23.369Z"
 		}
 	},
 	"de": {
@@ -896,6 +908,18 @@
 				"langlebige Pickup-Modelle"
 			],
 			"date": "2024-12-01T09:25:55.867Z"
+		},
+		"best-truck-for-reliability": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Die zuverlässigsten Pickup-Trucks 2024 im Härtetest",
+			"keywords": [
+				"zuverlässigster Pickup-Truck",
+				"langlebige Trucks Vergleich",
+				"Pickup Wartungskosten Test",
+				"bester Truck Haltbarkeit"
+			],
+			"date": "2024-12-02T08:35:24.692Z"
 		}
 	},
 	"en": {
@@ -1343,6 +1367,18 @@
 				"truck dependability comparison"
 			],
 			"date": "2024-12-01T09:18:55.261Z"
+		},
+		"best-truck-for-reliability": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Most Reliable Pickup Trucks: Real Data Reveals The Winner",
+			"keywords": [
+				"most reliable pickup trucks",
+				"truck reliability comparison",
+				"best truck reliability ratings",
+				"long-lasting pickup trucks"
+			],
+			"date": "2024-12-02T08:18:26.954Z"
 		}
 	},
 	"ru": {
@@ -1790,6 +1826,18 @@
 				"сравнение надежности пикапов"
 			],
 			"date": "2024-12-01T09:21:24.693Z"
+		},
+		"best-truck-for-reliability": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Самый надежный пикап 2024: сравнение ТОП-4 моделей",
+			"keywords": [
+				"надежные пикапы",
+				"самый надежный грузовик",
+				"рейтинг надежности пикапов",
+				"лучший пикап по надежности"
+			],
+			"date": "2024-12-02T08:31:00.606Z"
 		}
 	}
 }
