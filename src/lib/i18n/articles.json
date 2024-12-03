@@ -920,6 +920,18 @@
 				"bester Truck Haltbarkeit"
 			],
 			"date": "2024-12-02T08:35:24.692Z"
+		},
+		"affordable-reliable-trucks": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Die 4 zuverlässigsten Pickup-Trucks im Langzeittest 2024",
+			"keywords": [
+				"zuverlässige Pickup-Trucks",
+				"günstige Nutzfahrzeuge",
+				"langlebige Trucks Vergleich",
+				"preiswerte Pickup-Modelle"
+			],
+			"date": "2024-12-03T07:45:21.753Z"
 		}
 	},
 	"en": {
@@ -1838,6 +1850,18 @@
 				"лучший пикап по надежности"
 			],
 			"date": "2024-12-02T08:31:00.606Z"
+		},
+		"affordable-reliable-trucks": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Топ-4 Надежных Пикапов: Какой Прослужит Дольше?",
+			"keywords": [
+				"надежные пикапы",
+				"недорогие грузовики в обслуживании",
+				"лучшие подержанные пикапы",
+				"сравнение надежности пикапов"
+			],
+			"date": "2024-12-03T07:41:08.190Z"
 		}
 	}
 }
