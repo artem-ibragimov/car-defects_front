@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { readdirSync, statSync, writeFileSync } from 'fs';
+import { readdirSync, writeFileSync } from 'fs';
 import path from 'path';
 
 const error = (e) => console.error(chalk.red(e));
@@ -16,6 +16,7 @@ try {
 }
 
 function createSiteMap(dir, options) {
+	// return;
 	const paths = collectPaths(dir);
 	const non_articles_paths = paths.filter((p) => !/article/.test(p));
 	const articles_paths = Object.values(

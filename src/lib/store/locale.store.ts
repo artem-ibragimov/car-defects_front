@@ -1,45 +1,48 @@
-// import { restore, store } from '$lib/util/hashStore';
 import { dictionary, locale } from 'svelte-i18n';
-import { derived } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 import { AVAILABLE_LOCALES, DICTIONARIES } from '../i18n';
 
-const DEFAUL_LOCALE =
+export const DEFAUL_LOCALE =
 	(typeof navigator !== 'undefined' &&
 		(AVAILABLE_LOCALES.find((l) => navigator.language.startsWith(l)) ||
 			AVAILABLE_LOCALES.find((l) => navigator.languages.includes(l)))) ||
 	AVAILABLE_LOCALES[0];
 
-// const LOCALE_HASH_KEY = 'locale';
-
 export const creatLocaleStore = () => {
-	// const locales: Writable<{ icon: string; selected?: boolean; value: string }[]> = writable([
-	// 	{
-	// 		icon: '/public/assets/icon/en.webp',
-	// 		selected: false,
-	// 		value: 'en'
-	// 	},
-	// 	{
-	// 		icon: '/public/assets/icon/ru.webp',
-	// 		selected: false,
-	// 		value: 'ru'
-	// 	}
-	// ]);
-
+	setLocale(DEFAUL_LOCALE);
+	const lang = writable<string>('');
 	dictionary.set(DICTIONARIES);
-	// locale.set(restore(LOCALE_HASH_KEY) || DEFAUL_LOCALE);
-	locale.set(DEFAUL_LOCALE);
 	locale.subscribe((v) => {
-		// locales.update((ls) => ls.map((l) => ({ ...l, selected: l.value === v })));
-		// store(LOCALE_HASH_KEY, v || DEFAUL_LOCALE);
+		if (!v) {
+			return;
+		}
+		if (v in DICTIONARIES) {
+			lang.set(v.split('.').pop().trim());
+			return dictionary.set({
+				[v as keyof typeof DICTIONARIES]: DICTIONARIES[v as keyof typeof DICTIONARIES]
+			});
+		}
+		import(`$lib/i18n/article/${v}.json`)
+			.then((d) => {
+				lang.set(v.split('.').pop().trim());
+				// @ts-ignore
+				DICTIONARIES[v] = d;
+				dictionary.set(DICTIONARIES);
+			})
+			.catch(console.error);
 	});
-
 	const selected = derived(locale, (l) => l);
 
-	return {
-		// locales,
-		selected,
-		select(v: string) {
-			locale.set(v);
+	function setLocale(v?: string) {
+		if (!v) {
+			return;
 		}
+		return locale.set(v);
+	}
+	return {
+		lang,
+		selected,
+		ssr: setLocale,
+		csr: setLocale
 	};
 };

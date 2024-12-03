@@ -1,9 +1,9 @@
-export const store = (key: string, data: string) => {
+export const store = (key: string, val: string) => {
 	if (typeof location === 'undefined') {
 		return;
 	}
 	const params = new URLSearchParams(location.hash.slice(1));
-	params.set(key, data);
+	params.set(key, val);
 	location.hash = params.toString();
 };
 

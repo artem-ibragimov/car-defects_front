@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { Chart } from 'chart.js/auto';
-	import { onMount } from 'svelte';
+	// import { type Chart } from 'chart.js/auto';
+	import { onMount, tick } from 'svelte';
 	import Loading from '../view/Loading.svelte';
 
 	const COLORS = [
 		'#4dc9f6',
 		'#f67019',
-		'#f53794',
+		// '#f53794',
 		'#537bc4',
 		'#acc236',
 		'#166a8f',
@@ -24,12 +24,21 @@
 	export let isFrameChart = false;
 
 	let chartEl: HTMLCanvasElement;
-	let chart: Chart;
+	let chart;
 
 	$: config = {
 		type: 'bar',
-		data: { datasets: [] },
+		data: {
+			datasets: Object.entries(data).map(([label, data], i) => ({
+				label,
+				data,
+				borderColor: COLORS[i],
+				backgroundColor: `${COLORS[i]}f0`
+			}))
+		},
 		options: {
+			aspectRatio: 1,
+			maintainAspectRatio: false,
 			responsive: true,
 			plugins: {
 				title: { display: true, text: title },
@@ -61,7 +70,7 @@
 			}
 		}
 	};
-
+	// TODO update вызывается несколько раз
 	$: {
 		if (chart && chart.data) {
 			// @ts-ignore
@@ -71,37 +80,63 @@
 				borderColor: COLORS[i],
 				backgroundColor: `${COLORS[i]}f0`
 			}));
-			chart.update();
+			update();
 		}
 	}
 	$: if (title && chart && chart.options?.plugins?.title) {
 		chart.options.plugins.title.text = title;
-		chart.update();
+		update();
 	}
 	$: if (axes && chart) {
 		// @ts-ignore
 		chart.options.scales.x.title.text = axes.x;
 		// @ts-ignore
 		chart.options.scales.y.title.text = axes.y;
-		chart.update();
+		update();
 	}
+	let udpdating = false;
+	function update() {
+		if (udpdating) {
+			return;
+		}
+		udpdating = true;
+		setTimeout(() => {
+			tick().then(() => {
+				chart.update();
+				udpdating = false;
+			});
+		}, 400);
+	}
+	const render = () => {
+		try {
+			// @ts-ignore
+			chart = new Chart(chartEl, config);
+		} catch (e) {
+			console.error(e);
+		}
+	};
 	onMount(() => {
-		// @ts-ignore
-		chart = new Chart(chartEl, config);
+		const script = document.createElement('script');
+		script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+		script.referrerPolicy = 'no-referrer';
+		script.crossOrigin = 'anonymous';
+		script.onload = render;
+		script.async = true;
+		script.defer = true;
+		document.head.appendChild(script);
+		document.addEventListener('DOMContentLoaded', render);
 	});
 </script>
 
 <div class="Chart" class:Chart-frame={isFrameChart}>
 	<Loading hidden={!loading} />
-	<canvas bind:this={chartEl} hidden={loading} />
+	<canvas bind:this={chartEl} style:display={loading ? 'none' : 'block'} />
 </div>
 
 <style scoped>
 	.Chart {
-		min-width: 400px;
-		min-height: 360px;
+		height: 400px;
 		flex-grow: 2;
-		max-height: 500px;
 		display: flex;
 		flex-direction: column;
 		align-items: stretch;
@@ -110,7 +145,7 @@
 	}
 	@media (min-width: 500px) {
 		.Chart-frame {
-			height: 100vh;
+			height: calc(100vh - 24px);
 		}
 	}
 </style>

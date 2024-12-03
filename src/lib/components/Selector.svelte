@@ -10,18 +10,14 @@
 		icon?: string;
 	}[] = [];
 	export let multiselect: boolean = false;
-	$: type = multiselect ? 'checkbox' : 'radio';
+	$: className = multiselect ? 'checkbox ' : 'toggle ';
 	export let column: boolean = false;
 	export let needApplyButton = false;
+	export let applyButtonLabel = $_('label.apply');
 	export let disabled = false;
-	export let needResetButton = false;
-	export let appendLabel = '';
 	export let hidden = false;
 
 	let isApplied = true;
-	let isRecentlyClicked = false;
-	let prevVal;
-	let timeoutID;
 
 	$: if (multiselect && variants.every((v) => !v.selected)) {
 		variants = variants.map((v) => ({ ...v, selected: true }));
@@ -51,48 +47,43 @@
 			}
 		: selectOne;
 
-	const onclick = (v: string) => {
-		if (isRecentlyClicked && v === prevVal) {
-			clearTimeout(timeoutID);
-			selectOne(v);
-			return;
-		}
-		prevVal = v;
-		isRecentlyClicked = true;
-		timeoutID = setTimeout(function () {
-			isRecentlyClicked = false;
-			onselect(v);
-		}, 300);
-	};
 	const apply = () => {
 		dispatch('select', Object.fromEntries(variants.map((v) => [v.value, v.selected])));
 		isApplied = true;
 	};
-	const reset = () => {
-		dispatch('reset');
-	};
 </script>
 
 {#if variants.length !== 0}
-	<div class="join" class:join-vertical={column} class:join-horizontal={!column} {hidden}>
-		{#each variants as v}
-			<label class="label gap-4 cursor-pointer join-item">
-				<span class="label-text" 
-					>{$_(v.label || v.value)}</span
-				>
-				<input
-					style={v.color && v.selected ? `background: ${v.color}` : ''}
-					{type}
-					checked={v.selected}
-					class={type}
-					on:change={disabled ? null : () => onclick(v.value)}
-				/>
-			</label>
-		{/each}
+	<div class="flex-column">
+		<div
+			class="join flex-wrap"
+			class:sm:join-vertical={column}
+			class:join-horizontal={!column}
+			{hidden}
+		>
+			{#each variants as v}
+				<label class="label gap-4 cursor-pointer join-item">
+					<span class="label-text">{$_(v.label || v.value)}</span>
+					<input
+						style={v.color && v.selected ? `background: ${v.color}` : ''}
+						type="checkbox"
+						checked={v.selected}
+						class={className}
+						on:change={disabled ? null : () => onselect(v.value)}
+					/>
+				</label>
+			{/each}
+		</div>
+		{#if needApplyButton}
+			<Button variant="neutral" outline on:click={apply}>{applyButtonLabel}</Button>
+		{/if}
 	</div>
 {/if}
 
 <style scoped>
+	.join {
+		max-width: 100%;
+	}
 	.label {
 		text-transform: capitalize;
 		box-sizing: border-box;

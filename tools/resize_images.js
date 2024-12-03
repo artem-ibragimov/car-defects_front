@@ -6,17 +6,20 @@ import path from 'path';
 import sharp from 'sharp';
 import imagemin from 'imagemin-keep-folder';
 import imageminWebp from 'imagemin-webp';
+import imageminPngquant from 'imagemin-pngquant';
+
 import child_process from 'child_process';
 
 const error = (e) => console.error(chalk.red(e));
 const FOLDER = './static/assets/img';
-const SIZES = [320, 640, 1280];
+const SIZES = [320, 640];
 const SIZE_PREFIX = '--';
 
 remove_resized(FOLDER)
 	.then(() =>
 		imagemin([`${FOLDER}/**/*.png`], {
 			use: [imageminWebp({ method: 6, quality: 100, lossless: 9 })]
+			// use: [imageminPngquant()]
 		})
 	)
 	.then(() => resize_images(FOLDER, SIZES))

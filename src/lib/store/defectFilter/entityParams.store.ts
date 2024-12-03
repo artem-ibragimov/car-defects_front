@@ -17,7 +17,8 @@ const COLORS = [
 ];
 
 export function createEntityParams() {
-	const entities = writable<Record<string, IEntity>>(JSON.parse(restore(ENTITY_HASH_KEY) || '{}'));
+	const entities = writable<Record<string, IEntity>>({});
+
 	const selectedEntities = writable<Record<string, boolean>>({});
 
 	const noChartData = derived([entities], ([data]) => Object.keys(data).length === 0);
@@ -26,10 +27,6 @@ export function createEntityParams() {
 		selectedEntities.update((prev) =>
 			Object.fromEntries(Object.keys(v).map((k) => [k, prev[k] !== false]))
 		);
-		const entities = JSON.stringify(v);
-		if (Object.keys(v).length !== 0) {
-			store(ENTITY_HASH_KEY, entities);
-		}
 	});
 
 	const colors = derived(selectedEntities, (s) => {
@@ -48,7 +45,35 @@ export function createEntityParams() {
 		return Object.entries(get(entities));
 	}
 
+	function serialize() {
+		return JSON.stringify({ entities: get(entities) });
+	}
+	function deserialize(s?: string) {
+		if (!s) {
+			return;
+		}
+		try {
+			const deserialized = JSON.parse(s) as { entities: Record<string, IEntity> };
+			entities.set(deserialized.entities);
+		} catch (e) {
+			console.error(e);
+		}
+	}
+
 	return {
+		init(data: Record<string, IEntity> = {}) {
+			entities.set(data);
+			return Promise.resolve(serialize());
+		},
+		csr(s?: string) {
+			deserialize(s);
+			try {
+				const restored = JSON.parse(restore(ENTITY_HASH_KEY) || '{}');
+				entities.update((v) => ({ ...v, ...restored }));
+			} catch (e) {
+				console.error(e);
+			}
+		},
 		noChartData,
 		selectedEntities,
 		entities,
@@ -57,7 +82,7 @@ export function createEntityParams() {
 			return get(entities)[name];
 		},
 		getEntities,
-		deleteEntity(name): void {
+		deleteEntity(name: string): void {
 			entities.update((prev) => {
 				delete prev[name];
 				return prev;
@@ -65,10 +90,13 @@ export function createEntityParams() {
 		},
 		selectEntities,
 		resetEntities() {
-			entities.set({});
+			return entities.set({});
 		},
 		addEntity(name: string, params: IEntity) {
 			entities.update((prev) => Object.assign(prev, { [name]: filterNullable(params) }));
+			if (Object.keys(get(entities)).length !== 0) {
+				store(ENTITY_HASH_KEY, JSON.stringify(get(entities)));
+			}
 		}
 	};
 }

@@ -75,7 +75,7 @@
 	}
 </script>
 
-<fieldset class="column pure-form-aligned">
+<fieldset class="column">
 	<legend>{$_('label.trans.name')}</legend>
 	<Input
 		{disabled}
@@ -88,7 +88,7 @@
 			{item[1]}
 		</div>
 	</Input>
-	<div class="pure-control-group">
+	<div class="">
 		<Input
 			{disabled}
 			type="number"

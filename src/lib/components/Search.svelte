@@ -23,12 +23,12 @@
 		selectedSuggestion = void 0;
 	}
 
-	$: selectedSuggestionLabel = selectedSuggestion
-		? selectedSuggestion.title.replace(
-				/(\w)(\w*)/g,
-				(_, g1, g2) => g1.toUpperCase() + g2.toLowerCase()
-			)
-		: '';
+	// $: selectedSuggestionLabel = selectedSuggestion
+	// 	? selectedSuggestion.title.replace(
+	// 			/(\w)(\w*)/g,
+	// 			(_, g1, g2) => g1.toUpperCase() + g2.toLowerCase()
+	// 		)
+	// 	: '';
 
 	const dispatcher = createEventDispatcher();
 	const onInput = () => {
@@ -50,12 +50,12 @@
 		selectedSuggestion = item;
 		value = `${item.title} `;
 		onInput();
-		return
+		return;
 		// пока максиммум поиск по поколениеям
 		item.genID ? onInput() : onChange();
 	};
 	const onChange = () => {
-		value && dispatcher('change', value);
+		dispatcher('change', value);
 		hidden = false;
 	};
 </script>
@@ -72,8 +72,14 @@
 		lower
 	>
 		<div
+			class="input-lg"
 			slot="suggestion_item"
 			let:item
+			tabindex="0"
+			role="button"
+			on:keyup={() => {
+				onSuggestionClick(item);
+			}}
 			on:click={() => {
 				onSuggestionClick(item);
 			}}
@@ -96,11 +102,14 @@
 		align-items: center;
 	}
 	.Search__dropdown__item__title {
-		flex: 1;
+		flex: 2 1;
+		padding: 4px;
+		text-wrap: nowrap;
 	}
 	.Search__dropdown__item__label {
 		text-align: right;
-		flex: 1;
-		color: #ccc;
+		flex: 1 2;
+		color: oklch(var(--b3));
+		padding: 4px;
 	}
 </style>

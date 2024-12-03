@@ -1,20 +1,14 @@
 <script lang="ts">
-	export let data: string;
-	$: content = data.split('\n');
+	import markdownit from 'markdown-it';
+	export let md: string;
+	const converter = markdownit({
+		html: true,
+		linkify: true,
+		typographer: true
+	});
+	const html = converter.render(md);
 </script>
 
-<main class="Content">
-	{#each content as p}
-		{#if p.length < 100}
-			<h3>{p}</h3>
-		{/if}
-		{#if p.length > 100}
-			<section>{p}</section>
-		{/if}
-	{/each}
-</main>
-
-<style scoped>
-	.Content {
-	}
-</style>
+<section class="Content">
+	{@html html}
+</section>

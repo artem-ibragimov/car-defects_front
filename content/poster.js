@@ -1,34 +1,51 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import SocialPost from 'social-post-api';
 
 const social = new SocialPost('66H3ABB-NZ9MW1R-M6MWFSA-6VHPXRW');
 
 try {
-	// const file = './content/posted.txt';
-	// const posted = readFileSync(file).toString().split('\n');
-	// const json = JSON.parse(readFileSync(`src/lib/i18n/en.json`).toString());
-	// const poster = Object.keys(json.text.article).filter((t) => !posted.includes(t))[0];
-	// const link = `https://car-defects.com/articles/en/${poster}/`;
-	// const read_more = `...\n\nRead more: ${link}`;
-	// post({
-	// 	mediaUrls: [`https://car-defects.com/assets/img/${poster}.png`],
-	// 	title: json.text.article[poster].title,
-	// 	post: `${json.text.article[poster].text
-	// 		.replaceAll('\n', '')
-	// 		.slice(0, 280 - read_more.length - `[Sent with Free Plan] `.length)}${read_more}`,
-	// 	link
-	// })
-	// 	.then(console.log, console.error)
-	// 	.then(() => {
-	// 		writeFileSync(file, posted.concat(poster).join('\n'));
-	// 	});
+	const file = './content/posted.txt';
+	const posted = readFileSync(file).toString().split('\n');
+	const articles = Array.from(
+		new Set(
+			readdirSync('./src/lib/i18n/article').map((file_name) =>
+				file_name.slice(0, file_name.indexOf('.'))
+			)
+		)
+	);
+	const article_name = articles.filter((t) => !posted.includes(t)).pop();
+
+	if (!article_name) {
+		process.exit();
+	}
+
+	const content = JSON.parse(
+		readFileSync(`./src/lib/i18n/article/${article_name}.en.json`, 'utf-8')
+	).text.article[article_name];
+	const link = `https://car-defects.com/articles/en/${article_name}/`;
+	const read_more = `...\n\nRead more: ${link}`;
+	content &&
+		post({
+			mediaUrls: [`https://car-defects.com/assets/img/${article_name}.png`],
+			keywords: content.keywords,
+			title: content.title.slice(0, 150),
+			post: `${content.description
+				.replaceAll('\n', '')
+				.slice(0, 280 - read_more.length - `[Sent with Free Plan] `.length)}${read_more}`,
+			link
+		})
+			.then(console.log, console.error)
+			.then(() => {
+				writeFileSync(file, posted.concat(article_name).join('\n'));
+			});
 } catch (error) {
 	console.error(error);
 }
 
-function post({ title, post, link, mediaUrls }) {
+function post({ title, post, keywords, link, mediaUrls }) {
 	const cfg = {
 		post,
+		keywords,
 		shortenLinks: false,
 		max: 3, // optional, range 1-5
 		position: 'auto' // optional, "auto" or "end"

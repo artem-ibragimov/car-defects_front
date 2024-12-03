@@ -28,7 +28,7 @@
 	}
 </script>
 
-<fieldset class="column pure-form-aligned">
+<fieldset class="column">
 	<legend>{$_('label.defect.header')}</legend>
 	<Selector
 		{disabled}
@@ -42,7 +42,7 @@
 		bind:value={data.Desc}
 		placeholder={$_('label.defect.description')}
 	/>
-	<div class="pure-control-group">
+	<div class="">
 		<Input
 			disabled={disabled || !data.Desc}
 			type="number"
@@ -79,11 +79,6 @@
 </fieldset>
 
 <style scoped>
-	.pure-control-group {
-		gap: 1 '' px;
-		display: flex;
-		flex-direction: column;
-	}
 	.column {
 		max-width: 4 '' '' px;
 		display: flex;

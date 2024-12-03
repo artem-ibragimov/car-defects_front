@@ -1,16 +1,16 @@
 import type {
+	IDataParams,
+	IDefect,
 	IDefectData,
 	IDefectDetails,
-	IDataParams,
 	IEntity,
-	IMeta,
-	IDefect
+	IMeta
 } from '$lib/api/data/defect.api';
 import { LOAD_ERROR } from '$lib/api/error';
-import { createCacheStore } from '$lib/util/cacheStore';
-import { filterNullable } from '$lib/util/tools';
-import { derived, get, writable } from 'svelte/store';
 import { createDefectFilterStore } from '$lib/store/defectFilter/filter.store';
+import { createCacheStore } from '$lib/util/cacheStore';
+import { debounce, filterNullable } from '$lib/util/tools';
+import { derived, get, writable } from 'svelte/store';
 
 const DEFAULT_STATE: IState = {
 	error: null,
@@ -21,7 +21,7 @@ const DEFAULT_STATE: IState = {
 };
 
 const cacheStore = createCacheStore<Record<string, IDefectData>>();
-const DETAILS_LIMIT = '5';
+const DETAILS_LIMIT = 10;
 
 export const createDefectStore = (api: {
 	getDefectsCategories(): Promise<IDefectData>;
@@ -30,20 +30,49 @@ export const createDefectStore = (api: {
 	getDefectsDetails(params: IEntity & IMeta & { categories: string }): Promise<IDefectDetails[]>;
 	postDefect(defect: IDefect): Promise<void>;
 }) => {
-	const onerror = () => {
+	const onerror = (e: Error) => {
+		console.error(e);
 		setState({ error: LOAD_ERROR });
 	};
 	const state = writable<IState>({ ...DEFAULT_STATE });
 	const chartData = writable<IData>({});
+	const details = writable<Record<string, IDefectDetails[]>>({});
+	const detailsLoadOffset = writable<Record<string, number>>({});
+	const selectedDetails = writable<Record<string, boolean>>({});
+
+	function serialize() {
+		return JSON.stringify({
+			chartData: get(chartData),
+			details: get(details),
+			detailsLoadOffset: get(detailsLoadOffset),
+			selectedDetails: get(selectedDetails),
+			cacheStore: cacheStore.serialize()
+		});
+	}
+	function deserialize(s: string) {
+		try {
+			const deserialized = JSON.parse(s);
+			chartData.set(deserialized.chartData);
+			details.set(deserialized.details);
+			detailsLoadOffset.set(deserialized.detailsLoadOffset);
+			selectedDetails.set(deserialized.selectedDetails);
+			cacheStore.deserialize(deserialized.cacheStore);
+		} catch (e) {
+			onerror(e as Error);
+		}
+	}
+
+	const selectedDetailEntityName = derived(
+		selectedDetails,
+		(details) => (Object.entries(details).find(([_, v]) => v) || [])[0]
+	);
 	const filter = createDefectFilterStore(api, onerror);
 
-	filter.selector.subscribe((selector) => {
-		// if (selector.categories.length === 0) {
-		// 	// debugger
-		// 	// return;
-		// }
+	filter.selector.subscribe(debounce(onFilterChange));
+
+	function onFilterChange() {
 		setState({ loading: true });
-		Promise.all(filter.entityParams.getEntities().map(([name, p]) => reqChartData(name, p)))
+		return Promise.all(filter.entityParams.getEntities().map(([name, p]) => reqChartData(name, p)))
 			.then((results) => {
 				chartData.update((prev) => Object.assign(prev, ...results));
 			})
@@ -51,10 +80,21 @@ export const createDefectStore = (api: {
 			.then(() => {
 				setState({ loading: false });
 			});
-	});
+	}
 
-	const selectedChartData = derived([chartData, filter.selector], ([d, f]) => {
-		return Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k]));
+	const selectedChartData = derived([chartData, filter.selector], ([d, f], set) => {
+		if (get(state).loading) {
+			return;
+		}
+		setState({ loading: true });
+		new Promise((r) => {
+			setTimeout(r, 500);
+		})
+			.then(() => Object.fromEntries(Object.entries(d).filter(([k, _]) => f.selectedEntities[k])))
+			.then(set)
+			.then(() => {
+				setState({ loading: false });
+			});
 	});
 
 	function reqChartData(
@@ -100,73 +140,107 @@ export const createDefectStore = (api: {
 		state.update((s) => ({ ...s, ...values }));
 	}
 
-	const details = writable<Record<string, IDefectDetails[]>>({});
-	const detailsLoadOffset = writable<string>('0');
-	const selectedDetails = writable<Record<string, boolean>>({});
-	const selectedDetailEntity = derived(
-		selectedDetails,
-		(details) => (Object.entries(details).find(([_, v]) => v) || [])[0]
-	);
 	filter.entityParams.entities.subscribe((entries) => {
 		selectedDetails.update((details) => {
 			return Object.fromEntries(Object.entries(details).filter(([k, _]) => !!entries[k]));
 		});
 	});
 
-	function selectDetails(cfg: Record<string, boolean>) {
+	function selectDetails(cfg: Record<string, boolean>): Promise<void> {
 		selectedDetails.set(cfg);
+		return updateEntityDetails(get(selectedDetailEntityName)).catch(console.error);
+	}
+
+	function updateEntityDetails(entityName: string | undefined): Promise<void> {
+		if (!entityName) {
+			return Promise.resolve();
+		}
+		const entity = get(filter.entityParams.entities)[entityName];
+		return loadEntityDetails(
+			entity,
+			filter.categoryParams.getCategories(),
+			get(detailsLoadOffset)[entityName] || 0
+		).then((res) => {
+			detailsLoadOffset.update((prev) => {
+				prev[entityName] = (prev[entityName] || 0) + DETAILS_LIMIT;
+				return prev;
+			});
+			details.update((prev) => {
+				prev[entityName] = res;
+				return prev;
+			});
+		});
+	}
+	function loadEntityDetails(
+		entity: IEntity,
+		categories: string,
+		offset: number = 0
+	): Promise<IDefectDetails[]> {
+		setState({ loadingDetails: true });
+		return api
+			.getDefectsDetails({
+				...entity,
+				limit: `${DETAILS_LIMIT}`,
+				offset: `${offset}`,
+				categories
+			})
+			.catch(onerror)
+			.then((res) => {
+				setState({ loadingDetails: false });
+				return res as IDefectDetails[];
+			});
+	}
+	function clear() {
+		return Promise.all([
+			filter.entityParams.resetEntities(),
+			chartData.set({}),
+			details.set({}),
+			detailsLoadOffset.set({}),
+			selectedDetails.set({}),
+			cacheStore.clear()
+		]);
 	}
 	return {
-		init() {
-			filter.init();
+		ssr(cfg: {
+			entities?: Record<string, IEntity>;
+			categories?: string[];
+		}): Promise<IDefectsStoreStates> {
+			const selectedEntities = Object.fromEntries(
+				Object.keys(cfg.entities || {}).map((name) => [name, true])
+			);
+			return clear()
+				.then(() => {
+					const filterSsr = filter.ssr(cfg);
+					if (!cfg.entities && !cfg.categories) {
+						return Promise.all([filterSsr, serialize()]);
+					}
+					return Promise.all([
+						filterSsr,
+						Promise.all([filterSsr.then(onFilterChange), selectDetails(selectedEntities)]).then(
+							serialize
+						)
+					]);
+				})
+				.then(([filterStates, defectStoreState]) => ({
+					defectStoreState,
+					...filterStates
+				}));
 		},
+		csr(states: IDefectsStoreStates) {
+			deserialize(states.defectStoreState);
+			return filter.csr({ ...states });
+		},
+		clear,
 		state,
 		selectedChartData,
 		filter,
 		details,
 		addEntity(name: string, entity: IEntity) {
-			setState({ loading: true });
-			filter.entityParams.addEntity(name, entity);
-		},
-		clear() {
-			filter.entityParams.resetEntities();
-			chartData.set({});
-			selectedDetails.set({});
+			return filter.entityParams.addEntity(name, entity);
 		},
 		selectedDetails,
-		selectedDetailEntity,
-		loadDetails(selected: Record<string, boolean>) {
-			const entityName = (Object.entries(selected).find(([_, v]) => v) || [])[0];
-			if (!entityName) {
-				return;
-			}
-
-			const entity = filter.entityParams.getEntity(entityName);
-			if (!entity) {
-				return;
-			}
-			setState({ loadingDetails: true });
-			api
-				.getDefectsDetails({
-					...entity,
-					limit: DETAILS_LIMIT,
-					offset: get(detailsLoadOffset),
-					categories: filter.categoryParams.getCategories()
-				})
-				.then((res) => {
-					detailsLoadOffset.update((prev) => prev + DETAILS_LIMIT);
-					details.update((prev) => {
-						if (!prev[entityName]) {
-							prev[entityName] = [];
-						}
-						Object.assign(prev[entityName], prev[entityName].concat(res));
-						return prev;
-					});
-					selectDetails(selected);
-					setState({ loadingDetails: false });
-				})
-				.catch(onerror);
-		},
+		selectDetails,
+		selectedDetailEntityName,
 		postDefect(defect: IDefect) {
 			return api.postDefect(defect).catch(onerror);
 		}
@@ -180,4 +254,10 @@ interface IState {
 	warn: string;
 	loading: boolean;
 	loadingDetails: boolean;
+}
+
+export interface IDefectsStoreStates {
+	defectStoreState: string;
+	entityParamsState: string;
+	categoryParamsState: string;
 }

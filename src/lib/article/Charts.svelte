@@ -11,19 +11,6 @@
 </script>
 
 {#if url}
-	<div class="Charts" class:lg>
-		<ChartFrame {title} {lg} {src} />
-	</div>
-	<a href={`/${url}`} target="_blank">{$_('label.more')}</a>
+	<ChartFrame {title} {lg} {src} />
+	<a href={`/${url}`} target="_blank">{'More'}</a>
 {/if}
-
-<style scoped>
-	.Charts {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-	}
-	.lg {
-		flex-direction: column;
-	}
-</style>

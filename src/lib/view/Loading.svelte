@@ -3,7 +3,7 @@
 	export let hidden = false;
 </script>
 
-<div class="Loading" {hidden}><Spinner /></div>
+<div class="Loading" class:Loading-hidden={hidden}><Spinner /></div>
 
 <style scoped>
 	.Loading {
@@ -12,5 +12,8 @@
 		justify-content: center;
 		align-content: center;
 		height: 300px;
+	}
+	.Loading-hidden {
+		display: none;
 	}
 </style>

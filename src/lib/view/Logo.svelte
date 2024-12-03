@@ -1,12 +1,8 @@
-<script lang="ts">
-	import { PUBLIC_ORIGIN } from '$env/static/public';
-</script>
-
-<div class="Logo" on:click>
-	<a href={PUBLIC_ORIGIN}>
+<aside class="Logo" on:click>
+	<a href="/">
 		<img src="/assets/img/logo.png" alt="logo" width="50" height="50" />
 	</a>
-</div>
+</aside>
 
 <style scoped>
 	.Logo {

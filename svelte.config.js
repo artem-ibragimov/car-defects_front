@@ -1,17 +1,38 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import https from 'https';
 
-import { readFileSync } from 'fs';
-const loadJSON = (path) => JSON.parse(readFileSync(path));
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
+// import { vitePreprocess } from '@sveltejs/kit/vite';
+const loadJSON = (path) => JSON.parse(readFileSync(path, 'utf-8'));
 
-const en = loadJSON('./src/lib/i18n/en.json');
-export const ARTICLES = Object.keys(en.text.article);
-export const AVAILABLE_LOCALES = ['en', 'de', 'ru', 'es' /*'fr','jp', 'pt',  'zh' */];
+const ARTICLES = loadJSON('./src/lib/i18n/articles.json');
+export const AVAILABLE_LOCALES = Object.keys(ARTICLES);
+const ARTICLES_NAMES = Object.entries(ARTICLES).map(([locale, articles]) =>
+	Object.keys(articles).map((article) => `/articles/${locale}/${article}/`)
+);
 
-const entries = AVAILABLE_LOCALES.map((locale) =>
-	ARTICLES.map((article_name) => `/articles/${locale}/${article_name}/`)
-).reduce((acc, cur) => acc.concat(cur));
-
+const categories = [
+	'transmission',
+	'safety',
+	'other',
+	'engine',
+	'equipment',
+	'electronics',
+	'brake',
+	'light',
+	'suspension'
+];
+// writeFileSync('./google.txt', ARTICLES.map((article_name) => `https://car-defects.com//articles/en/${article_name}/`).join('\n'))
+// const models = await getTopReliableModels();
+const models = [] || (await getTopReliableModels());
+const entries = ARTICLES_NAMES.reduce((acc, cur) => acc.concat(cur), []).concat(
+	models
+		.map(({ id, name }) =>
+			[`/defects/${id}/${name}/`].concat(categories.map((cat) => `/defects/${id}/${name}/${cat}`))
+		)
+		.reduce((acc, cur) => acc.concat(cur), [])
+);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
@@ -24,7 +45,7 @@ const config = {
 	kit: {
 		inlineStyleThreshold: 4096,
 		prerender: {
-			concurrency: 3,
+			concurrency: 1,
 			crawl: false,
 			handleHttpError: (details) => {
 				console.warn(details);
@@ -43,7 +64,7 @@ const config = {
 			assets: 'build',
 			// fallback: 'index.html',
 			precompress: false,
-			strict: true
+			strict: false
 		}),
 		alias: {
 			$lib: 'src/lib'
@@ -52,3 +73,27 @@ const config = {
 };
 
 export default config;
+
+function getTopReliableModels() {
+	return new Promise((resolve, reject) => {
+		https
+			.get(`https://car-defects.com/data/stat/top/reliable/model`, (res) => {
+				let data = [];
+
+				res.on('data', (chunk) => {
+					data.push(chunk);
+				});
+
+				res.on('end', () => {
+					const models = JSON.parse(Buffer.concat(data).toString());
+					resolve(
+						models.map((v) => {
+							const [id, name, ...rest] = v.split('|');
+							return { id, name: name.replaceAll(' ', '_') };
+						})
+					);
+				});
+			})
+			.on('error', reject);
+	});
+}

@@ -1,46 +1,39 @@
 <script lang="ts">
-	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import { ROUTE_NAMES } from '$lib/store/route.store';
-	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 	import Logo from '$lib/view/Logo.svelte';
 	import { _ } from 'svelte-i18n';
-	import Content from './Content.svelte';
 	import Charts from './Charts.svelte';
-	import Cards from './Cards.svelte';
-	import { AVAILABLE_LOCALES } from '$lib/i18n';
+	import Content from './Content.svelte';
+	import { PUBLIC_ORIGIN } from '$env/static/public';
+	import ArticleLinks from '$lib/view/ArticleLinks.svelte';
 
-	export let i18nPath: string;
-	export let title: string;
-	export let content: string;
-	export let name: string;
-	export let cards: { title: string }[] = [];
+	export let article_name: string;
+	export let locale: string;
 
-	const date = new Date().toISOString();
+	const i18nPath = `text.article.${article_name}`;
+	$: title = $_(`${i18nPath}.title`);
+	$: description = $_(`${i18nPath}.description`);
+	$: keywords = $_(`${i18nPath}.keywords`);
+	$: date = $_(`${i18nPath}.date`);
+	$: chapters = $_(`${i18nPath}.text`).split('\n## ');
 
-	const poster = `${PUBLIC_ORIGIN}/assets/img/${name}.webp`;
-	$: description =
-		cards.length === 0
-			? name.replace(/-/g, ' ')
-			: `${cards.map((c) => c.title).join(' vs ')} breakdown statistics comparison`;
-	$: keywords =
-		cards.length === 0
-			? name.replace(/-/g, ',')
-			: `car,defects,${cards.map((c) => c.title).join(',')},reliability,comparison,statistics`;
+	const SIZES = [320, 640];
+	const poster = `${PUBLIC_ORIGIN}/assets/img/${article_name}.webp`;
+	$: srcset = poster
+		? SIZES.map((w) => `/assets/img/${article_name}--${w}.webp ${w}w`).join(', ')
+		: '';
 
-	$: cards = JSON.parse($_(`${i18nPath}.cards`));
-	$: url = $_(`${i18nPath}.url`);
+	$: hash = $_(`${i18nPath}.hash`);
 	$: schema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
 		headline: title,
 		image: poster,
 		datePublished: date,
-		dateModified: date,
-		articleBody: content,
+		articleBody: chapters,
+		keywords,
 		about: description
 	});
-	const SIZES = [320, 640, 1280];
-	$: srcset = name ? SIZES.map((w) => `/assets/img/${name}--${w}.webp ${w}w`).join(', ') : '';
 </script>
 
 <svelte:head>
@@ -52,10 +45,7 @@
 	<meta name="og:title" property="og:title" content={title} />
 	<meta property="og:image" content={poster} />
 	<meta property="og:type" content="article" />
-	<meta property="og:locale" content="en" />
-	{#each AVAILABLE_LOCALES as locale}
-		<meta property="og:locale:alternate" content={locale} />
-	{/each}
+	<meta property="og:locale" content={locale} />
 	<meta property="og:description" content={description} />
 
 	<meta property="twitter:card" content="summary_large_image" />
@@ -66,26 +56,32 @@
 	{@html `<script type="application/ld+json"> ${schema} </script>`}
 </svelte:head>
 
-<article class="Article">
+<article class="Article prose bg-base-100 shadow-xl">
 	<Logo on:click={() => typeof location !== 'undefined' && location.assign(ROUTE_NAMES.MAIN)} />
-	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
 	<h1>{title}</h1>
-	<Content data={content} />
-	<Cards {cards} />
-	{#if url !== '-'}
-		<Charts lg {title} {url} />
+	<img src={poster} alt={title} {srcset} sizes="(max-width: 500px) 100vw, 70vw" />
+	{#if hash !== '-'}
+		<Charts lg {title} url={hash} />
 	{/if}
-	<ArticleLinks pagePath={name} />
+	<main>
+		{#each chapters as chapter}
+			<Content md={chapter} />
+		{/each}
+	</main>
+	<footer>
+		<!-- <Cards {cards} /> -->
+		<ArticleLinks pagePath={article_name} articleAfterDate={date} />
+	</footer>
 </article>
 
 <style scoped>
 	.Article {
-		padding: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: stretch;
 		margin: auto;
-		max-width: 920px;
+		padding: 16px;
+		max-width: 800px;
 	}
 </style>

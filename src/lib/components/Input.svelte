@@ -17,9 +17,9 @@
 
 	const dispatcher = createEventDispatcher();
 
-	let root: HTMLDivElement = null;
-	let field: HTMLDivElement = null;
-	let input: HTMLInputElement = null;
+	let root: HTMLDivElement;
+	let field: HTMLDivElement;
+	let input: HTMLInputElement;
 
 	$: isOpen = false;
 	const show = () => {
@@ -29,7 +29,7 @@
 		isOpen = false;
 	};
 	$: hidden && hide();
-	const handleInput = (e) => {
+	const handleInput = (e: InputEvent) => {
 		value = type.match(/^(number|range)$/)
 			? +e.target.value
 			: lower
@@ -76,7 +76,7 @@
 			<label for={input_id}>{label}</label>
 		{/if}
 		<input
-			class="input input-bordered w-full  input-lg "
+			class="input input-bordered w-full input-lg"
 			bind:this={input}
 			{disabled}
 			id={input_id}
@@ -93,8 +93,9 @@
 			on:change
 		/>
 	</div>
-	<ul tabindex="0"
-		class="Input__dropdown shadow dropdown-content  z-[1] bg-base-100 rounded-box"
+	<ul
+		tabindex="0"
+		class="Input__dropdown shadow dropdown-content z-[1] bg-base-100"
 		class:Input__dropdown-opened={isOpen}
 		on:click={hideOnSuggestionClick ? hide : null}
 		style={`
@@ -118,10 +119,13 @@
 				</li>
 			{/if}
 		{/each}
-			</ul>
+	</ul>
 </div>
 
 <style scoped>
+	.input {
+		border-radius: 0;
+	}
 	.Input {
 		flex: 1;
 	}
@@ -139,8 +143,6 @@
 	}
 	.Input__dropdown {
 		overflow-y: scroll;
-		max-height: 200px;
-		flex-direction: column;
 		position: absolute;
 		border-radius: 6px;
 		z-index: 9999999;
@@ -154,6 +156,8 @@
 	}
 	:global([slot='suggestion_item']),
 	.Input__dropdown__item {
+		flex: 1;
+		padding: 4px;
 		display: inline-flex;
 		justify-content: space-between;
 		padding: 0.5em 0.6em;
@@ -164,8 +168,9 @@
 		-webkit-appearance: textfield;
 		outline-offset: -2px;
 	}
-	:global([slot='suggestion_item']) :hover,
+	:global([slot='suggestion_item']):hover,
 	.Input__dropdown__item:hover {
+		background-color: oklch(var(--b2));
 		/* -webkit-box-shadow: inset 0 1px 3px #ddd;
 		box-shadow: inset 0 1px 3px #ddd; */
 	}
