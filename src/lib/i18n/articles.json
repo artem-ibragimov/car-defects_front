@@ -458,6 +458,18 @@
 				"confiabilidad camionetas pickup"
 			],
 			"date": "2024-12-02T08:33:23.369Z"
+		},
+		"most-durable-pickup-trucks": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Las 4 Pickups Más Duraderas: Datos Reales de Confiabilidad",
+			"keywords": [
+				"camionetas más duraderas",
+				"pickup confiables",
+				"mejor pickup calidad-precio",
+				"comparativa pickups durabilidad"
+			],
+			"date": "2024-12-04T09:44:03.914Z"
 		}
 	},
 	"de": {
@@ -932,6 +944,18 @@
 				"preiswerte Pickup-Modelle"
 			],
 			"date": "2024-12-03T07:45:21.753Z"
+		},
+		"most-durable-pickup-trucks": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Die 4 langlebigsten Pickup-Trucks im Härtetest 2024",
+			"keywords": [
+				"langlebige Pickup-Trucks",
+				"zuverlässige Nutzfahrzeuge",
+				"haltbare Pritschenwagen",
+				"robuste Pick-ups"
+			],
+			"date": "2024-12-04T09:45:44.108Z"
 		}
 	},
 	"en": {
@@ -1391,6 +1415,18 @@
 				"long-lasting pickup trucks"
 			],
 			"date": "2024-12-02T08:18:26.954Z"
+		},
+		"most-durable-pickup-trucks": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Most Reliable Pickup Trucks: 9-Year Durability Showdown",
+			"keywords": [
+				"most reliable pickup trucks",
+				"truck durability comparison",
+				"best long-lasting trucks",
+				"pickup truck reliability ratings"
+			],
+			"date": "2024-12-04T09:40:13.973Z"
 		}
 	},
 	"ru": {
@@ -1862,6 +1898,18 @@
 				"сравнение надежности пикапов"
 			],
 			"date": "2024-12-03T07:41:08.190Z"
+		},
+		"most-durable-pickup-trucks": {
+			"generated": true,
+			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
+			"title": "Самые надежные пикапы 2024: ТОП-4 проверенных временем",
+			"keywords": [
+				"надежные пикапы",
+				"самые долговечные грузовики",
+				"рейтинг пикапов по надежности",
+				"лучшие пикапы по качеству"
+			],
+			"date": "2024-12-04T09:42:15.039Z"
 		}
 	}
 }
