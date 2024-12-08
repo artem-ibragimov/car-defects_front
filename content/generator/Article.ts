@@ -119,7 +119,7 @@ export class Article {
 	}
 
 	get poster() {
-		return `${this.cars.join(' vs ')}, photo realistic, without text, fullscreen, no paddings –ar 2:1 `;
+		return `${this.cars.join(' vs ')} on road, photo realistic, without text, fullscreen, no paddings –ar 2:1 `;
 	}
 
 	private get title() {

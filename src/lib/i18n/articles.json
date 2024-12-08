@@ -506,6 +506,18 @@
 				"fiabilidad coches deportivos japoneses"
 			],
 			"date": "2024-12-07T08:00:01.652Z"
+		},
+		"top-5-reliable-cars-under-$20k": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
+			"title": "Los 5 Autos Más Confiables Por Menos de $20,000 en 2024",
+			"keywords": [
+				"autos económicos confiables",
+				"carros baratos menos 20000",
+				"mejores coches económicos nuevos",
+				"autos usados fiables"
+			],
+			"date": "2024-12-08T07:49:48.883Z"
 		}
 	},
 	"de": {
@@ -1028,6 +1040,18 @@
 				"Sportwagen Zuverlässigkeitsvergleich"
 			],
 			"date": "2024-12-07T08:02:20.894Z"
+		},
+		"top-5-reliable-cars-under-$20k": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
+			"title": "Die 5 zuverlässigsten Gebrauchtwagen unter 20.000 Euro im Test",
+			"keywords": [
+				"zuverlässige Gebrauchtwagen unter 20000",
+				"günstige zuverlässige Autos",
+				"langlebige Kompaktwagen",
+				"preiswerte Qualitätsautos"
+			],
+			"date": "2024-12-08T07:51:58.643Z"
 		}
 	},
 	"en": {
@@ -1535,6 +1559,18 @@
 				"best reliable performance cars"
 			],
 			"date": "2024-12-07T07:54:57.636Z"
+		},
+		"top-5-reliable-cars-under-$20k": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
+			"title": "Revealed: Most Reliable Cars Under $20K - 2024 Reliability Guide",
+			"keywords": [
+				"reliable cars under 20000",
+				"best cheap reliable cars",
+				"most reliable used cars",
+				"affordable reliable sedans"
+			],
+			"date": "2024-12-08T07:44:24.635Z"
 		}
 	},
 	"ru": {
@@ -2054,6 +2090,18 @@
 				"спортивные авто с минимальными поломками"
 			],
 			"date": "2024-12-07T07:57:22.534Z"
+		},
+		"top-5-reliable-cars-under-$20k": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
+			"title": "Топ-5 надежных авто до $20 000: рейтинг 2024 года",
+			"keywords": [
+				"надежные автомобили до 20000",
+				"самые надежные бюджетные авто",
+				"рейтинг надежности недорогих машин",
+				"лучшие автомобили эконом класса"
+			],
+			"date": "2024-12-08T07:47:14.648Z"
 		}
 	}
 }
