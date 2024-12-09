@@ -50,7 +50,7 @@ long lasting hybrid vehicles:generated
 best sports car for reliability:generated
 long lasting sports cars:generated
 Top 5 reliable cars under $20k:generated
-Best used SUVs for reliability under $30k
+Best used SUVs for reliability under $30k:generated
 Which small SUVs have best reliability ratings
 Best reliable sedans under $25k
 Most reliable compact luxury cars

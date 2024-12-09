@@ -518,6 +518,18 @@
 				"autos usados fiables"
 			],
 			"date": "2024-12-08T07:49:48.883Z"
+		},
+		"best-used-suvs-for-reliability-under-$30k": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
+			"title": "Los 4 SUVs Más Fiables Por Menos de $30,000: Guía Definitiva 2024",
+			"keywords": [
+				"SUVs usados confiables",
+				"SUVs económicos bajo $30000",
+				"mejores SUVs segunda mano",
+				"SUVs fiables baratos"
+			],
+			"date": "2024-12-09T14:14:16.318Z"
 		}
 	},
 	"de": {
@@ -1052,6 +1064,18 @@
 				"preiswerte Qualitätsautos"
 			],
 			"date": "2024-12-08T07:51:58.643Z"
+		},
+		"best-used-suvs-for-reliability-under-$30k": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
+			"title": "Die 4 zuverlässigsten Gebrauchten SUVs unter 30.000€",
+			"keywords": [
+				"zuverlässige gebrauchte SUVs",
+				"SUV Zuverlässigkeitsvergleich",
+				"beste SUVs unter 30000",
+				"gebrauchte Kompakt-SUVs Langzeittest"
+			],
+			"date": "2024-12-09T14:16:53.957Z"
 		}
 	},
 	"en": {
@@ -1571,6 +1595,18 @@
 				"affordable reliable sedans"
 			],
 			"date": "2024-12-08T07:44:24.635Z"
+		},
+		"best-used-suvs-for-reliability-under-$30k": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
+			"title": "Most Reliable Used SUVs Under $30K: 4 Top Picks Ranked",
+			"keywords": [
+				"reliable used SUVs",
+				"best SUVs under 30000",
+				"most reliable crossovers",
+				"affordable reliable SUVs"
+			],
+			"date": "2024-12-09T14:08:53.242Z"
 		}
 	},
 	"ru": {
@@ -2102,6 +2138,18 @@
 				"лучшие автомобили эконом класса"
 			],
 			"date": "2024-12-08T07:47:14.648Z"
+		},
+		"best-used-suvs-for-reliability-under-$30k": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
+			"title": "Топ-4 надежных б/у кроссоверов до 30 000$ - Полный обзор",
+			"keywords": [
+				"надежные подержанные кроссоверы",
+				"лучшие б/у SUV до 30000$",
+				"самые надежные кроссоверы с пробегом",
+				"рейтинг надежности подержанных SUV"
+			],
+			"date": "2024-12-09T14:11:40.948Z"
 		}
 	}
 }

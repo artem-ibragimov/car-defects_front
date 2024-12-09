@@ -18,3 +18,4 @@ volkswagen-passat-vs-honda-accord-reliability
 truck-reliability-comparison
 toyota-tundra-vs-nissan-titan-reliability
 toyota-rav4-vs-honda-cr-v-reliability
+toyota-prius-vs-honda-insight-reliability
