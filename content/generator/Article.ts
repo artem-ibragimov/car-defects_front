@@ -119,7 +119,7 @@ export class Article {
 	}
 
 	get poster() {
-		return `${this.cars.join(' and ')} as an article poster, photo realistic, without text, fullscreen, no paddings –ar 2:1 `;
+		return `${this.cars.join(' and ')} as an article poster, comics style, without text, fullscreen, no paddings –ar 2:1 `;
 	}
 
 	private get title() {
