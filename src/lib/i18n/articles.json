@@ -530,6 +530,18 @@
 				"SUVs fiables baratos"
 			],
 			"date": "2024-12-09T14:14:16.318Z"
+		},
+		"which-small-suvs-have-best-reliability-ratings": {
+			"generated": true,
+			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
+			"title": "Los SUV Compactos Más Fiables: Comparativa 2024 de Confiabilidad",
+			"keywords": [
+				"SUV más confiable",
+				"comparativa SUV compactos",
+				"mejor SUV calidad precio",
+				"fiabilidad crossover compacto"
+			],
+			"date": "2024-12-10T07:51:55.843Z"
 		}
 	},
 	"de": {
@@ -1076,6 +1088,18 @@
 				"gebrauchte Kompakt-SUVs Langzeittest"
 			],
 			"date": "2024-12-09T14:16:53.957Z"
+		},
+		"which-small-suvs-have-best-reliability-ratings": {
+			"generated": true,
+			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
+			"title": "Die zuverlässigsten Kompakt-SUVs im Langzeittest 2024",
+			"keywords": [
+				"zuverlässigste Kompakt-SUVs",
+				"SUV Zuverlässigkeitsvergleich",
+				"SUV Pannenstatistik",
+				"Kompakt-SUV Qualitätstest"
+			],
+			"date": "2024-12-10T07:55:06.003Z"
 		}
 	},
 	"en": {
@@ -1607,6 +1631,18 @@
 				"affordable reliable SUVs"
 			],
 			"date": "2024-12-09T14:08:53.242Z"
+		},
+		"which-small-suvs-have-best-reliability-ratings": {
+			"generated": true,
+			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
+			"title": "Most Reliable Small SUVs: CR-V vs RAV4 vs Forester vs CX-5",
+			"keywords": [
+				"most reliable small SUV",
+				"compact SUV reliability comparison",
+				"best SUV reliability ratings",
+				"SUV dependability rankings"
+			],
+			"date": "2024-12-10T07:46:20.241Z"
 		}
 	},
 	"ru": {
@@ -2150,6 +2186,18 @@
 				"рейтинг надежности подержанных SUV"
 			],
 			"date": "2024-12-09T14:11:40.948Z"
+		},
+		"which-small-suvs-have-best-reliability-ratings": {
+			"generated": true,
+			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
+			"title": "Самые надежные компактные SUV: сравнение 4 популярных моделей",
+			"keywords": [
+				"надежность компактных кроссоверов",
+				"рейтинг надежности SUV",
+				"сравнение надежности кроссоверов",
+				"лучшие кроссоверы по надежности"
+			],
+			"date": "2024-12-10T07:49:00.428Z"
 		}
 	}
 }
