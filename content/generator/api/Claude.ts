@@ -8,14 +8,14 @@ export class AnthropicAI {
 		this.anthropic = new Anthropic({ apiKey });
 	}
 
-	generate = (params: {
-		system: string;
-		contents: Record<string, string>;
-	}): Promise<Record<string, string>> => {
-		const messages = Object.entries(params.contents).map(([name, content]) => ({ name, content }));
+	generate = <T extends Record<string, string>>(params: {
+		system?: string;
+		contents: T;
+	}): Promise<T> => {
+		const messages = Object.entries(params.contents).map(([name, content]) => ({ name, content }) as { name: keyof T, content: T[keyof T]; });
 
 		const generating = messages.map(
-			(message) => (results: Record<string, string>) =>
+			(message) => (results: T) =>
 				this.anthropic.messages
 					.create({
 						model: 'claude-3-5-sonnet-latest',
@@ -26,13 +26,13 @@ export class AnthropicAI {
 					})
 					.then((res) => {
 						if (res.content[0].type === 'text') {
-							results[message.name] = res.content[0].text;
+							results[message.name] = res.content[0].text as T[keyof T];
 						}
 						return results;
 					})
 		);
 
-		return chain<Record<string, string>>(generating, {});
+		return chain<T>(generating, {} as T);
 	};
 
 	generateWithBatches = ({

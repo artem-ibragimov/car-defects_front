@@ -20,7 +20,7 @@ export class Article {
 	private hash: string;
 	private defects: DefectData;
 	private cars: string[];
-	private key: Key;
+	key: Key;
 
 	constructor(cfg: {
 		topic: string;
@@ -55,14 +55,14 @@ export class Article {
 		return this.locale === 'en';
 	}
 
-	get needVideoPrompt() {
+	get needVideo() {
 		return this.locale === 'en';
 	}
 
 	get system() {
 		return `
       You are an experienced automotive writer tasked with creating 
-      an SEO-optimized chapter for an article on car reliability. 
+      an SEO-optimized content on car reliability. 
       Your writing should be informative, objective, and engaging, 
       emulating the style of top automotive journalists.
       Aim for a professional, authoritative tone that combines 

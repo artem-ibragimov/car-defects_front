@@ -3,11 +3,14 @@ import { readFileSync, writeFileSync } from 'fs';
 
 import * as dotenv from 'dotenv';
 import { Article, Locale } from './generator/Article';
-import { CarDefects } from './generator/CarDefects';
-import { VideoPrompt } from './generator/Video';
-import { AnthropicAI } from './generator/ai/Claude';
-import { ChatGPT } from './generator/ai/OpenAi';
+import { Video } from './generator/Video';
+import { CarDefects } from './generator/api/CarDefects';
+import { AnthropicAI } from './generator/api/Claude';
+import { ChatGPT } from './generator/api/OpenAi';
+import { Playht } from './generator/api/Playht';
+import { Youtube } from './generator/api/Youtube';
 import { chain } from './generator/utils';
+import { resolve } from 'path';
 dotenv.config();
 
 const error = (e) => console.error(chalk.red(e.stack));
@@ -20,11 +23,24 @@ const chatGpt = new ChatGPT({
 	organization: process.env.CHAT_GPT_ORG_ID as string
 });
 const anthropicAI = new AnthropicAI(process.env.ANTHROPIC_API_KEY as string);
+const playht = new Playht({
+	apiKey: process.env.PLAYHT_API_KEY as string,
+	userId: process.env.PLAYHT_USER_ID as string,
+});
+const car_footage_path = resolve('/Users/artem/project/car_defects/cars_footage');
 
 try {
 	const file = './content/topics.txt';
 	const topics = readFileSync(file).toString().split('\n');
-	generateTopics(topics);
+	// !FIXME
+	const video = new Video({
+		name: 'audi-a4-vs-lexus-is-durability',
+		key: 'age',
+		defects: { 'lexus is': {}, 'audi a4': {} },
+		topic: 'audi a4 vs lexus is durability'
+	}, car_footage_path);
+	video.loadScript().then(() => video.generateVideo());
+	// generateTopics(topics);
 } catch (e) {
 	error(e);
 }
@@ -47,15 +63,17 @@ function generateTopics(topics) {
 		.then(() => {
 			const unpostedIndex = topics.findIndex((t) => t == unposted);
 			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
-			info(`${unposted} done`);
+			info(`✅ "${unposted}"`);
 			saveTopic(topics);
 			// return generateTopics(topics);
 		});
 }
 
 function generateByTopic(topic: string) {
-	return chatGpt
-		.getCars(topic)
+	return Promise.resolve(['lexus is', 'audi a4'])
+		// TODO
+		// chatGpt
+		// .getCars(topic)
 		.then((cars = []) => {
 			if (topic.includes(' vs ')) {
 				return cars.slice(0, topic.split(' vs ').length);
@@ -77,37 +95,53 @@ function generateByTopic(topic: string) {
 						Promise.all([
 							// Promise.all([
 							article.needPoster &&
-								chatGpt
-									.generateImg({ name: article.name, prompt: article.poster })
-									.then(info, error),
+							chatGpt
+								.generateImg({ name: article.name, prompt: article.poster })
+								.then(info, error),
 
 							!article.isExists &&
-								anthropicAI
-									.generate({
-										system: article.system,
-										contents: article.contents
-									})
-									// chatGpt
-									// 	.generate({
-									// 		locale: article.locale,
-									// 		system: article.system,
-									// 		contents: article.contents
-									// 	})
-									.then(article.save)
-									.then((data) => {
-										if (!article.needVideoPrompt) {
-											return;
+							anthropicAI
+								.generate({
+									system: article.system,
+									contents: article.contents
+								})
+								// chatGpt
+								// 	.generate({
+								// 		locale: article.locale,
+								// 		system: article.system,
+								// 		contents: article.contents
+								// 	})
+								.then(article.save),
+
+							article.needVideo && (() => {
+								const youtube = new Youtube(process.env.YOUTUBE_API_KEY as string, car_footage_path);
+
+								const video = new Video({
+									name: article.name,
+									key: article.key,
+									defects,
+									topic
+								}, car_footage_path);
+								return video.store()
+									.then(() => {
+										if (video.isScriptExists) {
+											return video.loadScript();
 										}
-										VideoPrompt.log({
-											url: `https://car-defects.com/articles/${article.locale}/${article.name}`,
-											filename: 'video',
-											dataParams,
-											...data,
-											defects,
-											topic
-										}).then(info);
-									})
-									.catch(error)
+										return anthropicAI
+											.generate({ contents: video.contents })
+											.then(video.save);
+									}).then(() => {
+										if (!video.isVoiceExists) {
+											return playht.generateVoice(video.voicePath, video.script);
+										}
+									}).then(() => {
+										if (video.isVideoExists) { return; }
+										// TODO
+										// return chain(video.cars.map((car) => () => youtube.getVideos(car)))
+										// 	.then(() => video.generateVideo());
+										return video.generateVideo();
+									});
+							})().then(info, (e) => { debugger; })
 						]) as unknown as Promise<void>
 				);
 			// return Promise.all(articlesGenerating);

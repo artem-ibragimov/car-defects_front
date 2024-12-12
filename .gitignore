@@ -11,3 +11,5 @@ vite.config.ts.timestamp-*
 *.webp
 *.jsonl
 *.log
+*.mp3
+*.mp4

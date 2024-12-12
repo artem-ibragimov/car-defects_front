@@ -9,7 +9,7 @@ const root = resolve('content', 'generator', 'ai', 'openai');
 
 export class ChatGPT {
 	private openai: OpenAI;
-	constructor({ apiKey, organization }: { apiKey: string; organization: string }) {
+	constructor({ apiKey, organization }: { apiKey: string; organization: string; }) {
 		this.openai = new OpenAI({
 			apiKey,
 			organization,
@@ -21,7 +21,7 @@ export class ChatGPT {
 		system: string;
 		contents: Record<string, string>;
 	}): Promise<Record<string, string>> => {
-		const messages: { name: string; content: string; role: 'user' }[] = Object.entries(
+		const messages: { name: string; content: string; role: 'user'; }[] = Object.entries(
 			params.contents
 		).map(([name, content]) => ({ name, content, role: 'user' }));
 
@@ -174,7 +174,7 @@ export class ChatGPT {
 					})
 					.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
 			)
-			.then(() => `ChatGPT has generated the ${name} image`);
+			.then(() => `✅ ${name}.png`);
 	}
 	private wait(batchID: string): Promise<string> {
 		return this.openai.batches.retrieve(batchID).then((res) => {
