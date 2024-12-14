@@ -29,22 +29,20 @@ type Config = {
 export class Video {
    readonly cars: string[];
    script: string;
-   scene_breakdown: [number, string][];
+   scene_breakdown: [number, string[], boolean][];
 
-   constructor(private cfg: Config, private car_footage_path: string) {
+   constructor(private cfg: Config, private carFootagePath: string) {
       this.cars = Object.keys(cfg.defects);
+      if (!existsSync(this.folder)) {
+         mkdirSync(this.folder);
+      }
+      if (!existsSync(this.chartFolder)) {
+         mkdirSync(this.chartFolder);
+      }
    }
 
    store = () => {
-      return new Promise<void>((resolve, reject) => {
-         if (this.isFolderExists) {
-            return resolve();
-         }
-         return mkdir(this.folder).then(resolve, reject);
-      })
-         .then(() =>
-            writeFile(this.configPath, JSON.stringify(this.cfg, null, 4))
-         );
+      return writeFile(this.configPath, JSON.stringify(this.cfg, null, 4));
    };
 
    get configPath() {
@@ -82,221 +80,240 @@ export class Video {
          .split('\n')
          .map((line) => {
             const [time, name] = line.split(' - ');
-
-            const car_name = this.cars.find((car_name) => new RegExp(car_name, 'gi').test(name));
-
-            return [Number(time), car_name || this.cars[Math.floor(Math.random() * this.cars.length)]];
+            const cars = this.cars.filter((car_name) => new RegExp(car_name, 'gi').test(name));
+            const isChart = new RegExp('chart', 'gi').test(name);
+            return [Number(time), cars.length === 0 ? this.cars : cars, isChart];
          });
    };
 
    save = (data: { script: string; }) => {
       this.setScript(data.script);
-      return writeFile(this.scriptPath, data.script);
+      return writeFile(this.scriptPath, data.script).then(()=>`✅ ${this.cfg.topic} script`);
    };
 
+
    generateVideo() {
-      return readdir(this.car_footage_path)
-         .then((cars): [number, string][] => {
+      return readdir(this.carFootagePath)
+         .then((cars) => {
             if (!this.cars.every((car) => cars.includes(car))) {
                throw new Error(`Footage for ${this.cars.find((car) => !cars.includes(car))} doesn't exist! `);
             }
             let prev_timestamp = 0;
-            return this.scene_breakdown
-               .map(([time, car]) => {
+            const carScenes = this.scene_breakdown
+               .map(([time, cars, isChart]) => {
                   let duration = time - prev_timestamp;
                   prev_timestamp = time;
-                  return [duration, resolve(this.car_footage_path, car)] as [number, string];
+                  const car = cars[Math.floor(Math.random() * cars.length)];
+                  return {
+                     duration, cars, car, isChart, path: isChart ? resolve(this.chartFolder, car) : resolve(this.carFootagePath, car)
+                  };
+                  // ,
+                  // isChart] as [number, string, boolean];
                })
-               .filter(([duration, _]) => duration !== 0);
-         }).then((car_paths) => {
+               .filter(({ duration }) => duration !== 0);
 
-            if (!existsSync(this.tempFolder)) {
-               mkdirSync(this.tempFolder);
-            }
-
-
-            const videos = car_paths.reduce<[number, string][]>((acc, [duration, path]) => {
+            let chartedCars: string[] = [];
+            const chartsRendering = carScenes
+               .filter(({ isChart }) => isChart)
+               .map(({ duration, car, path }, i) => {
+                  chartedCars.push(car);
+                  const defects = Object.fromEntries(
+                     Object
+                        .entries(this.cfg.defects)
+                        .filter(([car, _]) => chartedCars.includes(car))
+                  );
+                  return this.generateChart(defects, path, duration);
+               });
+            return Promise.all(chartsRendering).then(() => carScenes);
+         }).then((carPaths) => {
+            const videos = carPaths.reduce<[number, string][]>((acc, { duration, path }) => {
                const videos = readdirSync(path).filter((file) => file.endsWith('mp4'));
                const randomVideoPath = resolve(path, videos[Math.floor(Math.random() * videos.length)]);
                return acc.concat([[duration, randomVideoPath]]);
             }, []);
 
-
             if (videos.length === 0) {
                return Promise.reject('no enough videos');
             }
-            const width = 1080;
-            const height = 1920;
-            const totalDuration = 4; // Total duration in seconds
-            const fps = 60; // Frames per second
-            const totalFrames = totalDuration * fps;
 
-            const COLORS = [
-               '#4dc9f6',
-               '#f67019',
-               // '#f53794',
-               '#537bc4',
-               '#acc236',
-               '#166a8f',
-               '#00a950',
-               '#58595b',
-               '#8549ba'
-            ];
-
-            const axes: { y: string; x: string; } = { x: 'x axis', y: 'y axis' };
-            const configuration = {
-               type: 'bar' as keyof ChartTypeRegistry,
-               options: {
-                  aspectRatio: 1,
-                  maintainAspectRatio: false,
-                  responsive: true,
-                  layout: {
-                     padding: 10,
-                  },
-                  backgroundColor: '#ffffff', // Set background color here
-
-                  plugins: {
-                     title: { display: true, text: 'title' },
-                     tooltip: {
-                        callbacks: {
-                           title() {
-                              return 'tooltip';
-                           }
-                        }
-                     },
-                     legend: {
-                        position: 'bottom',
-                        display: true
-                     }
-                  },
-                  scales: {
-                     x: {
-                        title: {
-                           display: true,
-                           text: axes.x
-                        }
-                     },
-                     y: {
-                        max: Math.max(...Object.values(this.cfg.defects).map((v) => Object.values(v).map(Number)).flat()),
-                        min: 0,
-                        title: {
-                           display: true,
-                           text: axes.y
-                        }
-                     }
-                  }
-               }
-            };
-
-            const chartJSNodeCanvas = new ChartJSNodeCanvas({
-               backgroundColour: '#ffffff', // Set background color to white
-               width, height, chartCallback: (ChartJS) => {
-                  ChartJS.defaults.backgroundColor = '#ffffff';
-               }
-            });
-
-            const generateFrames = (data: Record<string, Record<number, number>>) => {
-               return Promise.all(
-                  Array.from({ length: totalFrames })
-                     .map((_, frameIndex) => {
-                        const step = (frameIndex + 1) / totalFrames;
-                        console.log('step', step);
-                        const framePath = `${this.tempFolder}/frame_${String(frameIndex).padStart(4, '0')}.png`;
-                        return chartJSNodeCanvas
-                           .renderToBuffer({
-                              ...configuration,
-                              data: {
-                                 datasets: Object.entries(data).map(([label, data], i) => {
-                                    console.log('label', label);
-                                    return {
-                                       label,
-                                       data: Object.entries(data).map(([x, y]) => ({ x, y: Number(y) * step })),
-                                       borderColor: COLORS[i],
-                                       borderWidth: 1,
-                                       backgroundColor: `${COLORS[i]}f0`
-                                    };
-                                 })
-                              },
-                           })
-                           .then((buffer) => writeFile(framePath, buffer));
-                     }));
-            };
-
-            const createVideo = () => {
-               const out = resolve(this.folder, 'chart.mp4');
-               return new Promise<void>((resolve, reject) => {
-                  ffmpeg()
-                     .input(`${this.tempFolder}/frame_%04d.png`)
-                     .inputOptions([`-framerate ${fps}`])
-                     .outputOptions(['-c:v libx264', `-r ${fps}`, '-pix_fmt yuv420p'])
-                     .output(out)
-                     .on('end', () => {
-                        console.log(`Video created: ${out}`);
-                        resolve();
-                     })
-                     .on('error', reject)
-                     .run();
-               });
-            };
-
-            // Main execution
-            return generateFrames(this.cfg.defects)
-               .then(() => createVideo())
-               .then(() => {
-                  // Clean up frames (optional)
-                  rmSync(this.tempFolder, { recursive: true, force: true });
-               })
-               .catch((e) => { debugger; });
-
-            return this.preprocessVideos(videos)
+            const tempFolder = resolve(this.folder, 'temp');
+            if (!existsSync(tempFolder)) {
+               mkdirSync(tempFolder);
+            }
+            return this.preprocessVideos(videos, tempFolder)
                .then((standardizedVideos) => {
-                  const fileList = resolve(this.tempFolder, 'fileList.txt');
+                  const fileList = resolve(tempFolder, 'fileList.txt');
                   const fileListContent = standardizedVideos.map(file => `file '${file}'`).join('\n');
                   writeFileSync(fileList, fileListContent);
-
-                  ffmpeg()
-                     .input(this.voicePath)
-                     .input(fileList)
-                     .inputOptions(['-f concat', '-safe 0'])
-                     .outputOptions([
-                        '-c:v libx264',
-                        '-crf 28',
-                        '-preset medium',
-                        '-c:a aac',
-                        '-b:a 192k',       // Audio bitrate
-                        '-shortest',
-                        '-map 1:v:0',
-                        '-map 0:a:0',
-                     ])
-                     .on('start', commandLine => {
-                        console.log('FFmpeg command:', commandLine);
-                     })
-                     .on('progress', progress => {
-                        console.log('Progress:', progress.timemark);
-                     })
-                     .on('end', () => {
-                        console.log('Merge completed!');
-                        rmSync(this.tempFolder, { recursive: true });
-                     })
-                     .on('error', err => {
-                        console.error('Error during merging:', err.message);
-                        if (existsSync(this.tempFolder)) {
-                           rmSync(this.tempFolder, { recursive: true });
-                        }
-                     })
-                     .save(this.videoPath);
+                  return new Promise((res, rej) => {
+                     ffmpeg()
+                        .input(this.voicePath)
+                        .input(fileList)
+                        .inputOptions(['-f concat', '-safe 0'])
+                        .outputOptions([
+                           '-c:v libx264',
+                           '-crf 28',
+                           '-preset medium',
+                           '-c:a aac',
+                           '-b:a 192k',       // Audio bitrate
+                           '-shortest',
+                           '-map 1:v:0',
+                           '-map 0:a:0',
+                        ])
+                        .on('start', commandLine => {
+                           console.log('FFmpeg command:', commandLine);
+                        })
+                        .on('progress', progress => {
+                           console.log('Progress:', progress.timemark);
+                        })
+                        .on('end', res)
+                        .on('error', rej)
+                        .save(this.videoPath);
+                  });
+               }).then(() => {
+                  if (existsSync(tempFolder)) {
+                     rmSync(tempFolder, { recursive: true });
+                  }
+                  if (existsSync(this.chartFolder)) {
+                     rmSync(this.chartFolder, { recursive: true });
+                  }
                });
          });
    }
 
-   private preprocessVideos(videoFiles: [number, string][]): Promise<string[]> {
-      return new Promise((res, reject) => {
+   private generateChart = (data: Record<string, Record<string, string>>, folder: string, totalDuration: number) => {
+      if (!existsSync(folder)) {
+         mkdirSync(folder);
+      }
+      const chartVideoPath = resolve(folder, 'chart.mp4');
+      const width = 1080;
+      const height = 1920;
+      const fps = 60; // Frames per second
+      const totalFrames = totalDuration * fps;
 
-         const standardizedVideos: string[] = [];
-         let completed = 0;
+      const barColors = [
+         '#4dc9f6',
+         '#f67019',
+         // '#f53794',
+         '#537bc4',
+         '#acc236',
+         '#166a8f',
+         '#00a950',
+         '#58595b',
+         '#8549ba'
+      ];
+      const BG = '#fbf9fa';
+      const axes: { y: string; x: string; } = { x: `Car ${this.cfg.key}`, y: 'Defects amount' };
+      const configuration = {
+         type: 'bar',
+         options: {
+            aspectRatio: 1,
+            maintainAspectRatio: false,
+            responsive: true,
+            layout: {
+               padding: 10,
+            },
+            backgroundColor: BG,
 
-         videoFiles.forEach(([duration, file], index) => {
-            const outputFile = resolve(this.tempFolder, `standardized_${index}.mp4`);
+            plugins: {
+               title: {
+                  display: true,
+                  text: 'title',
+                  font: {
+                     size: 48, // Increase title font size
+                  },
+               },
+               tooltip: {
+                  callbacks: {
+                     title() {
+                        return 'tooltip';
+                     }
+                  }
+               },
+               legend: {
+                  position: 'bottom',
+                  display: true,
+                  labels: {
+                     font: {
+                        size: 48, // Increase legend font size
+                        family: 'Arial', // Optionally set a font family
+                     },
+                  },
+               }
+            },
+            scales: {
+               x: {
+                  title: {
+                     display: true,
+                     text: axes.x,
+                     font: {
+                        size: 42, // Increase X-axis title font size
+                     },
+                  }
+               },
+               y: {
+                  max: Math.max(...Object.values(this.cfg.defects).map((v) => Object.values(v).map(Number)).flat()),
+                  min: 0,
+                  title: {
+                     display: true,
+                     text: axes.y,
+                     font: {
+                        size: 42, // Increase X-axis title font size
+                     },
+                  }
+               }
+            }
+         }
+      };
+
+      const chartJSNodeCanvas = new ChartJSNodeCanvas({
+         backgroundColour: BG,
+         width, height,
+      });
+      const tempFolder = `${folder}_temp`;
+      if (!existsSync(tempFolder)) {
+         mkdirSync(tempFolder);
+      }
+      const framesRenderign = Array.from({ length: totalFrames })
+         .map((_, frameIndex) => {
+            const step = (frameIndex + 1) / totalFrames;
+            const framePath = `${tempFolder}/frame_${String(frameIndex).padStart(4, '0')}.png`;
+            return chartJSNodeCanvas.renderToBuffer({
+               ...configuration,
+               data: {
+                  datasets: Object.entries(data).map(([label, data], i) => {
+                     return {
+                        label,
+                        data: Object.entries(data).map(([x, y]) => ({ x, y: Number(y) * step })),
+                        borderColor: barColors[i],
+                        borderWidth: 1,
+                        backgroundColor: `${barColors[i]}f0`
+                     };
+                  })
+               },
+            })
+               .then((buffer) => writeFile(framePath, buffer));
+         });
+      return Promise
+         .all(framesRenderign)
+         .then(() =>
+            new Promise<void>((res, reject) => {
+               ffmpeg()
+                  .input(`${tempFolder}/frame_%04d.png`)
+                  .inputOptions([`-framerate ${fps}`])
+                  .outputOptions(['-c:v libx264', `-r ${fps}`, '-pix_fmt yuv420p'])
+                  .output(chartVideoPath)
+                  .on('end', res as () => void)
+                  .on('error', reject)
+                  .run();
+            }))
+         .then(() => rmSync(tempFolder, { recursive: true, force: true }));
+   };
+
+   private preprocessVideos(videoFiles: [number, string][], folder: string): Promise<string[]> {
+      const processing = videoFiles.map(([duration, file], index) => {
+         return new Promise<string>((res, reject) => {
+            const outputFile = resolve(folder, `standardized_${index}.mp4`);
             ffmpeg(file)
                .videoCodec('libx264')
                .outputOptions([
@@ -306,16 +323,14 @@ export class Video {
                ])
                .noAudio() // Explicitly state there is no audio
                .on('end', () => {
-                  standardizedVideos.push(outputFile);
-                  completed++;
-                  if (completed === videoFiles.length) {
-                     res(standardizedVideos);
-                  }
+                  res(outputFile);
                })
                .on('error', reject)
                .save(outputFile);
          });
       });
+
+      return Promise.all(processing);
    }
 
    get isVideoExists() {
@@ -339,8 +354,8 @@ export class Video {
       return resolve(`./content/video/${this.cfg.name}`);
    }
 
-   get tempFolder() {
-      return resolve(this.folder, './temp');
+   get chartFolder() {
+      return resolve(this.folder, './chart');
    }
 
    get scriptPrompt() {

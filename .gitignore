@@ -13,3 +13,4 @@ vite.config.ts.timestamp-*
 *.log
 *.mp3
 *.mp4
+content/video/*
