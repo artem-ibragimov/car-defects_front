@@ -10,6 +10,8 @@ import {
 } from 'fs';
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'path';
+import { ChartTypeRegistry } from 'chart.js';
+import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 
@@ -19,7 +21,7 @@ type Key = 'age' | 'mileage';
 type Config = {
    name: string;
    key: Key;
-   defects: Record<string, Record<number, number>>;
+   defects: Record<string, Record<string, string>>;
    topic: string;
 };
 
@@ -123,76 +125,101 @@ export class Video {
             if (videos.length === 0) {
                return Promise.reject('no enough videos');
             }
-
-            const jsonData = {
-               "title": "Sales Report",
-               "data": [
-                  { "month": "January", "sales": 150 },
-                  { "month": "February", "sales": 200 },
-                  { "month": "March", "sales": 180 }
-               ]
-            };
-            // Canvas settings
             const width = 1080;
             const height = 1920;
-            const canvas = createCanvas(width, height);
-            const ctx = canvas.getContext('2d');
-            const totalDuration = 5; // Total duration in seconds
+            const totalDuration = 4; // Total duration in seconds
             const fps = 60; // Frames per second
             const totalFrames = totalDuration * fps;
 
-            function interpolate(start, end, factor) {
-               return start + (end - start) * factor;
-            }
+            const COLORS = [
+               '#4dc9f6',
+               '#f67019',
+               // '#f53794',
+               '#537bc4',
+               '#acc236',
+               '#166a8f',
+               '#00a950',
+               '#58595b',
+               '#8549ba'
+            ];
 
-            const generateFrames = (data) => {
-               const maxSales = Math.max(...data.map(d => d.sales));
+            const axes: { y: string; x: string; } = { x: 'x axis', y: 'y axis' };
+            const configuration = {
+               type: 'bar' as keyof ChartTypeRegistry,
+               options: {
+                  aspectRatio: 1,
+                  maintainAspectRatio: false,
+                  responsive: true,
+                  layout: {
+                     padding: 10,
+                  },
+                  backgroundColor: '#ffffff', // Set background color here
 
-               for (let frameIndex = 0; frameIndex < totalFrames; frameIndex++) {
-                  const progress = frameIndex / totalFrames;
+                  plugins: {
+                     title: { display: true, text: 'title' },
+                     tooltip: {
+                        callbacks: {
+                           title() {
+                              return 'tooltip';
+                           }
+                        }
+                     },
+                     legend: {
+                        position: 'bottom',
+                        display: true
+                     }
+                  },
+                  scales: {
+                     x: {
+                        title: {
+                           display: true,
+                           text: axes.x
+                        }
+                     },
+                     y: {
+                        max: Math.max(...Object.values(this.cfg.defects).map((v) => Object.values(v).map(Number)).flat()),
+                        min: 0,
+                        title: {
+                           display: true,
+                           text: axes.y
+                        }
+                     }
+                  }
+               }
+            };
 
-                  // Clear canvas
-                  ctx.fillStyle = '#ffffff';
-                  ctx.fillRect(0, 0, width, height);
+            const chartJSNodeCanvas = new ChartJSNodeCanvas({
+               backgroundColour: '#ffffff', // Set background color to white
+               width, height, chartCallback: (ChartJS) => {
+                  ChartJS.defaults.backgroundColor = '#ffffff';
+               }
+            });
 
-                  // Draw title
-                  ctx.fillStyle = '#000000';
-                  ctx.font = 'bold 64px Arial';
-                  ctx.textAlign = 'center';
-                  ctx.fillText(jsonData.title, width / 2, 150);
-
-                  // Draw data with interpolation
-                  const interpolatedData = data.map((item, index) => {
-                     const startHeight = (item.sales / maxSales) * 800;
-                     const targetHeight = (item.sales / maxSales) * 800;
-                     const height = interpolate(0, targetHeight, progress);
-
-                     return { ...item, barHeight: height };
-                  });
-
-                  interpolatedData.forEach((item, index) => {
-                     const barWidth = 100;
-                     const barX = 200 + index * 250;
-                     const barY = 1500 - item.barHeight;
-
-                     // Draw bar
-                     ctx.fillStyle = '#007bff';
-                     ctx.fillRect(barX, barY, barWidth, item.barHeight);
-
-                     // Draw labels
-                     ctx.fillStyle = '#000000';
-                     ctx.font = '32px Arial';
-                     ctx.textAlign = 'center';
-                     ctx.fillText(item.month, barX + barWidth / 2, 1600);
-                  });
-
-                  // Save frame
-                  const framePath = `${this.tempFolder}/frame_${String(frameIndex).padStart(4, '0')}.png`;
-                  const buffer = canvas.toBuffer('image/png');
-                  writeFileSync(framePath, buffer);
-                  console.log(`Frame ${frameIndex + 1}/${totalFrames} saved: ${framePath}`);
-               };
-               return Promise.resolve();
+            const generateFrames = (data: Record<string, Record<number, number>>) => {
+               return Promise.all(
+                  Array.from({ length: totalFrames })
+                     .map((_, frameIndex) => {
+                        const step = (frameIndex + 1) / totalFrames;
+                        console.log('step', step);
+                        const framePath = `${this.tempFolder}/frame_${String(frameIndex).padStart(4, '0')}.png`;
+                        return chartJSNodeCanvas
+                           .renderToBuffer({
+                              ...configuration,
+                              data: {
+                                 datasets: Object.entries(data).map(([label, data], i) => {
+                                    console.log('label', label);
+                                    return {
+                                       label,
+                                       data: Object.entries(data).map(([x, y]) => ({ x, y: Number(y) * step })),
+                                       borderColor: COLORS[i],
+                                       borderWidth: 1,
+                                       backgroundColor: `${COLORS[i]}f0`
+                                    };
+                                 })
+                              },
+                           })
+                           .then((buffer) => writeFile(framePath, buffer));
+                     }));
             };
 
             const createVideo = () => {
@@ -213,7 +240,7 @@ export class Video {
             };
 
             // Main execution
-            return generateFrames(jsonData.data)
+            return generateFrames(this.cfg.defects)
                .then(() => createVideo())
                .then(() => {
                   // Clean up frames (optional)

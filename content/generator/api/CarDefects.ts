@@ -3,7 +3,7 @@ type ModelID = string;
 type Entity = { [name: CarName]: { modelID: ModelID } };
 type Key = 'age' | 'mileage';
 type DataParams = { norm?: boolean; by_mileage?: boolean; by_age?: boolean };
-type DefectData = Record<number, number>;
+type DefectData = Record<string, string>;
 
 const MAX_CARS = 4;
 const ORIGIN = 'https://car-defects.com/data/defect/';

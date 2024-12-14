@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { readFileSync } from 'node:fs';
 
 type Key = 'age' | 'mileage';
-type DefectData = Record<string, Record<number, number>>;
+type DefectData = Record<string, Record<string, string>>;
 export type Locale = 'en' | 'ru' | 'es' | 'de';
 
 const LOCALED_QUERY: Record<Locale, string> = {
