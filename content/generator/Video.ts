@@ -30,7 +30,7 @@ type Config = {
 export class Video {
    readonly cars: string[];
    script: string;
-   scene_breakdown: [number, string[], boolean][];
+   scene_breakdown: { duration: number, isChart: boolean, query: string; car: string; }[];
 
    constructor(private cfg: Config, private carFootagePath: string) {
       this.cars = Object.keys(cfg.defects);
@@ -79,19 +79,31 @@ export class Video {
          .slice(script.indexOf('<scene_breakdown>') + '<scene_breakdown>'.length, script.lastIndexOf('</scene_breakdown>'))
          .trim()
          .split('\n')
+         .filter(Boolean)
          .map((line) => {
-            const [time, name] = line.split(' - ');
-            const cars = this.cars.filter((car_name) => new RegExp(car_name, 'gi').test(name));
-            const isChart = new RegExp('chart', 'gi').test(name);
-            return [Number(time), cars.length === 0 ? this.cars : cars, isChart] as [number, string[], boolean];
+            const [time, query] = line.split(' - ');
+            // const cars = this.cars.filter((car_name) => new RegExp(car_name, 'gi').test(query));
+            const isChart = new RegExp('chart', 'gi').test(query);
+            const car = isChart &&
+               this.cars.find((car) => new RegExp(car, 'gi').test(query)) ||
+               this.cars[Math.floor(Math.random() * this.cars.length)];
+            return { duration: Number(time), car, isChart, query };
          })
-         .filter(([time, ..._]) => !isNaN(time));
-      const video_duration = this.scene_breakdown.reduce((total, [duration]) => total + duration, 0);
+         .filter(({ duration }) => !isNaN(duration));
+      const video_duration = this.scene_breakdown.reduce((total, { duration }) => total + duration, 0);
       if (video_duration < 60) {
-         const additional_videos: [number, string[], false][] =
+         const additional_videos =
             Array
                .from({ length: (60 - video_duration) / 4 })
-               .map(() => [4, this.cars, false]);
+               .map(() => {
+                  const car = this.cars[Math.floor(Math.random() * this.cars.length)];
+                  return {
+                     duration: 4,
+                     isChart: false,
+                     car,
+                     query: car,
+                  };
+               });
          this.scene_breakdown = this.scene_breakdown.concat(additional_videos);
       }
    };
@@ -102,17 +114,20 @@ export class Video {
    };
 
 
-   generateVideo() {
+   generateVideo(downloadVideo: (query: string) => Promise<string>) {
       return readdir(this.carFootagePath)
          .then((cars) => {
             if (!this.cars.every((car) => cars.includes(car))) {
                throw new Error(`Footage for ${this.cars.find((car) => !cars.includes(car))} doesn't exist! `);
             }
             const carScenes = this.scene_breakdown
-               .map(([duration, cars, isChart]) => {
-                  const car = cars[Math.floor(Math.random() * cars.length)];
+               .map(({ duration, query, car, isChart }) => {
                   return {
-                     duration, cars, car, isChart, path: isChart ? resolve(this.chartFolder, car) : resolve(this.carFootagePath, car)
+                     duration,
+                     car,
+                     isChart,
+                     path: isChart ? resolve(this.chartFolder, car) : '',
+                     query: isChart ? '' : query
                   };
                   // ,
                   // isChart] as [number, string, boolean];
@@ -132,22 +147,25 @@ export class Video {
                   return this.generateChart(defects, path, duration);
                });
             return Promise.all(chartsRendering).then(() => carScenes);
-         }).then((carPaths) => {
-            const videos = carPaths.reduce<[number, string][]>((acc, { duration, path }) => {
-               const videos = readdirSync(path).filter((file) => file.endsWith('mp4'));
-               const randomVideoPath = resolve(path, videos[Math.floor(Math.random() * videos.length)]);
-               return acc.concat([[duration, randomVideoPath]]);
-            }, []);
+         }).then((carScenes) => {
+            // const videos = carScenes.reduce<[number, string][]>((acc, { duration, path }) => {
+            //    const videos = readdirSync(path).filter((file) => file.endsWith('mp4'));
+            //    const randomVideoPath = resolve(path, videos[Math.floor(Math.random() * videos.length)]);
+            //    return acc.concat([[duration, randomVideoPath]]);
+            // }, []);
 
-            if (videos.length === 0) {
-               return Promise.reject('no enough videos');
-            }
+            const videosGetting: Promise<[number, string]>[] = carScenes.map((scene) => {
+               if (scene.path) { return Promise.resolve([scene.duration, scene.path]); }
+               return downloadVideo(scene.query).then((path) => [scene.duration, path]);
+            });
+
 
             const tempFolder = resolve(this.folder, 'temp');
             if (!existsSync(tempFolder)) {
                mkdirSync(tempFolder);
             }
-            return this.preprocessVideos(videos, tempFolder)
+            return Promise.all(videosGetting)
+               .then((videos) => this.preprocessVideos(videos, tempFolder))
                .then((standardizedVideos) => {
                   const fileList = resolve(tempFolder, 'fileList.txt');
                   const fileListContent = standardizedVideos.map(file => `file '${file}'`).join('\n');
@@ -228,12 +246,12 @@ export class Video {
                datalabels: {
                   color: 'black',
                   font: {
-                     size: 36,
+                     size: 54,
                      weight: 'bold'
                   },
-                  anchor: 'end', // Расположение текста
+                  anchor: 'top', // Расположение текста
                   align: 'top',  // Выравнивание текста
-                  formatter: (value) => JSON.stringify( value, null, 2) // Отображаемые данные
+                  formatter: ({ y }: { y: string; }) => Number(y).toFixed(2) // Отображаемые данные
                },
                title: {
                   display: true,
@@ -435,14 +453,14 @@ ${this.cars}
       </script>
 
       <scene_breakdown>
-      [Insert your scene-by-scene breakdown here, using only "<car name>" or "<car name> chart" for each line]
+      [Insert your scene-by-scene breakdown here, using only youtube video footage search query or "<car name> chart" for each line]
       </scene_breakdown>
 
       Remember that each scene should be between 3 and 5 seconds long.
       There should be only one scene with a chart for each car and only when the script refers to the number of defects.
 
       For the scene breakdown, use the following format for each line:
-      [fragment duration time in seconds] - [car name] or [car name] chart
+      [fragment duration time in seconds] - [youtube video footage search query] or [car name] chart
 
       Example:
       4 - audi a4

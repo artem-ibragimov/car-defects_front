@@ -13,7 +13,10 @@ import { chain } from './generator/utils';
 import { resolve } from 'path';
 dotenv.config();
 
-const error = (e) => console.error(chalk.red(e.stack));
+const error = (e) => {
+	console.trace();
+	console.error(chalk.red(e.stack));
+};
 const info = (i) => {
 	console.log(chalk.green(i));
 };
@@ -162,11 +165,12 @@ function generateByTopic(topic: string) {
 										}
 									}).then(() => {
 										if (video.isVideoExists) { return; }
-										return chain(
-											video.cars.map((car) =>
-												() => youtube.getVideos(car).then(info)
-											))
-											.then(() => video.generateVideo())
+										return video.generateVideo(youtube.getVideo)
+											// return chain(
+											// 	video.cars.map((car) =>
+											// 		() => youtube.getVideos(car).then(info)
+											// 	))
+											// 	.then(() => video.generateVideo(youtube.getVideos))
 											.then(info);
 										// return video.generateVideo();
 									});

@@ -4,7 +4,8 @@ import {
    existsSync,
    mkdirSync,
 } from 'fs';
-import { resolve } from 'path';
+import path, { resolve } from 'path';
+import { chain } from '../utils';
 
 const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search`;
 const MAX_RESULTS = 5;
@@ -14,17 +15,26 @@ export class Youtube {
 
    }
 
-   getVideos(query: string) {
-      const directory = resolve(this.car_footage_path, query);
+   getVideo = (query: string) => {
+      const directory = resolve(this.car_footage_path, 'query');
       if (!existsSync(directory)) {
          mkdirSync(directory);
       }
       return this.searchVideos(query)
-         .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
-         .then(() => `✅ ${query} youtube videos`);
-   }
+         // .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
+         .then(videos => {
+            return videos.reduce<Promise<string | null>>((gettingVideo, video) => {
+               return gettingVideo.then((path) => {
+                  if (path) { return path; }
+                  return this.downloadVideo(directory)(video);
+               });
+            }, Promise.resolve(null));
+         });
+      // .then(() => `✅ ${query}`)
+      // .catch((e) => `❌ ${query} ${e}`);
+   };
 
-   private searchVideos(query: string) {
+   private searchVideos(query: string): Promise<{ videoId, title; }[]> {
       const params = new URLSearchParams({
          part: 'snippet',
          q: query,
@@ -42,8 +52,8 @@ export class Youtube {
             }
             return response.json();
          })
-         .then(data => {
-            return data.items.map(item => ({
+         .then((data) => {
+            return data.items.map((item) => ({
                videoId: item.id.videoId,
                title: item.snippet.title,
             }));
@@ -61,14 +71,14 @@ export class Youtube {
             if (!format) {
                return Promise.resolve(null);
             }
-            const outputPath = resolve(directory, `${title}.mp4`);
+            const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);
             const readable = ytdl(videoUrl, { format });
             const writable = createWriteStream(outputPath);
 
-            return new Promise<void>((resolve, reject) => {
+            return new Promise<string>((resolve, reject) => {
                readable.pipe(writable);
-               writable.on('finish', resolve);
-               writable.on('error', reject);
+               writable.on('finish', () => resolve(outputPath));
+               writable.on('error', (e) => { console.error(e); resolve(null); });
             });
          });
    };
