@@ -174,7 +174,7 @@ export class ChatGPT {
 					})
 					.then((res) => downloadImage(res.data[0].url, `./static/assets/img/${name}.png`))
 			)
-			.then(() => `✅ ${name}.png`);
+			.then(() => `✅ poster`);
 	}
 	private wait(batchID: string): Promise<string> {
 		return this.openai.batches.retrieve(batchID).then((res) => {

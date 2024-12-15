@@ -21,7 +21,7 @@
 		"just_do_it_all": "npm run generate &&  npm run deploy && npm run git"
 	},
 	"devDependencies": {
-		"@distube/ytdl-core": "^4.15.1",
+		"@distube/ytdl-core": "^4.15.3",
 		"@ffmpeg-installer/ffmpeg": "^1.1.0",
 		"@fontsource/fira-mono": "^5.0.13",
 		"@neoconfetti/svelte": "^2.2.1",
@@ -39,6 +39,7 @@
 		"canvas": "^2.11.2",
 		"chart.js": "3.9.1",
 		"chartjs-node-canvas": "^4.1.6",
+		"chartjs-plugin-datalabels": "^2.2.0",
 		"daisyui": "^4.10.2",
 		"eslint": "^9.1.1",
 		"eslint-config-prettier": "^9.1.0",
@@ -50,7 +51,7 @@
 		"imagemin-pngquant": "^10.0.0",
 		"imagemin-webp": "^8.0.0",
 		"markdown-it": "^14.1.0",
-		"playht": "^0.13.0",
+		"playht": "^0.14.0",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.3",
 		"sharp": "^0.33.3",

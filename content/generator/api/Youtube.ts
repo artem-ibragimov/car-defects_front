@@ -21,7 +21,7 @@ export class Youtube {
       }
       return this.searchVideos(query)
          .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
-         .then(() => { console.log(`✅ ${query} youtube videos`); });
+         .then(() => `✅ ${query} youtube videos`);
    }
 
    private searchVideos(query: string) {

@@ -10,8 +10,9 @@ import {
 } from 'fs';
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'path';
-import { ChartTypeRegistry } from 'chart.js';
+import { Chart, ChartTypeRegistry } from 'chart.js';
 import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 
@@ -82,13 +83,22 @@ export class Video {
             const [time, name] = line.split(' - ');
             const cars = this.cars.filter((car_name) => new RegExp(car_name, 'gi').test(name));
             const isChart = new RegExp('chart', 'gi').test(name);
-            return [Number(time), cars.length === 0 ? this.cars : cars, isChart];
-         });
+            return [Number(time), cars.length === 0 ? this.cars : cars, isChart] as [number, string[], boolean];
+         })
+         .filter(([time, ..._]) => !isNaN(time));
+      const video_duration = this.scene_breakdown.reduce((total, [duration]) => total + duration, 0);
+      if (video_duration < 60) {
+         const additional_videos: [number, string[], false][] =
+            Array
+               .from({ length: (60 - video_duration) / 4 })
+               .map(() => [4, this.cars, false]);
+         this.scene_breakdown = this.scene_breakdown.concat(additional_videos);
+      }
    };
 
    save = (data: { script: string; }) => {
       this.setScript(data.script);
-      return writeFile(this.scriptPath, data.script).then(()=>`✅ ${this.cfg.topic} script`);
+      return writeFile(this.scriptPath, data.script).then(() => `✅ script`);
    };
 
 
@@ -98,11 +108,8 @@ export class Video {
             if (!this.cars.every((car) => cars.includes(car))) {
                throw new Error(`Footage for ${this.cars.find((car) => !cars.includes(car))} doesn't exist! `);
             }
-            let prev_timestamp = 0;
             const carScenes = this.scene_breakdown
-               .map(([time, cars, isChart]) => {
-                  let duration = time - prev_timestamp;
-                  prev_timestamp = time;
+               .map(([duration, cars, isChart]) => {
                   const car = cars[Math.floor(Math.random() * cars.length)];
                   return {
                      duration, cars, car, isChart, path: isChart ? resolve(this.chartFolder, car) : resolve(this.carFootagePath, car)
@@ -170,14 +177,16 @@ export class Video {
                         .on('error', rej)
                         .save(this.videoPath);
                   });
-               }).then(() => {
+               })
+               .then(() => {
                   if (existsSync(tempFolder)) {
                      rmSync(tempFolder, { recursive: true });
                   }
                   if (existsSync(this.chartFolder)) {
                      rmSync(this.chartFolder, { recursive: true });
                   }
-               });
+               })
+               .then(() => `✅ video`);
          });
    }
 
@@ -216,19 +225,26 @@ export class Video {
             backgroundColor: BG,
 
             plugins: {
+               datalabels: {
+                  color: 'black',
+                  font: {
+                     size: 36,
+                     weight: 'bold'
+                  },
+                  anchor: 'end', // Расположение текста
+                  align: 'top',  // Выравнивание текста
+                  formatter: (value) => JSON.stringify( value, null, 2) // Отображаемые данные
+               },
                title: {
                   display: true,
-                  text: 'title',
+                  text: 'Service Calls',
                   font: {
                      size: 48, // Increase title font size
                   },
                },
                tooltip: {
-                  callbacks: {
-                     title() {
-                        return 'tooltip';
-                     }
-                  }
+                  display: true,
+                  text: 'Service Calls',
                },
                legend: {
                   position: 'bottom',
@@ -269,7 +285,11 @@ export class Video {
       const chartJSNodeCanvas = new ChartJSNodeCanvas({
          backgroundColour: BG,
          width, height,
+         chartCallback(chartjs) {
+            chartjs.register(ChartDataLabels);
+         }
       });
+
       const tempFolder = `${folder}_temp`;
       if (!existsSync(tempFolder)) {
          mkdirSync(tempFolder);
@@ -284,7 +304,7 @@ export class Video {
                   datasets: Object.entries(data).map(([label, data], i) => {
                      return {
                         label,
-                        data: Object.entries(data).map(([x, y]) => ({ x, y: Number(y) * step })),
+                        data: Object.entries(data).map(([x, y]) => ({ x, y: Number(y) * 0.7 + Number(y) * 0.3 * step })),
                         borderColor: barColors[i],
                         borderWidth: 1,
                         backgroundColor: `${barColors[i]}f0`
@@ -304,7 +324,10 @@ export class Video {
                   .outputOptions(['-c:v libx264', `-r ${fps}`, '-pix_fmt yuv420p'])
                   .output(chartVideoPath)
                   .on('end', res as () => void)
-                  .on('error', reject)
+                  .on('error', (e) => {
+                     console.error(e);
+                     res();
+                  })
                   .run();
             }))
          .then(() => rmSync(tempFolder, { recursive: true, force: true }));
@@ -364,14 +387,14 @@ export class Video {
       Your task is to write a script for a YouTube Short video "${this.cfg.topic}" for potential car buyers,
       comparing the reliability of specific car models. 
       emulating the style of top automotive journalists. 
-      The script should be informative, engaging, and fit within the 59 seconds time limit.
+      The script should be informative, engaging, and fit within  the 140-word limit.
       Follow these instructions carefully:
 
 1. First, review the car service call statistics data provided:
 <data>
  ${JSON.stringify(this.cfg.defects, null, 2)}, 
 </data>
-This data represents the number of service calls per 10,000 cars sold, 
+This data represents the number of service calls per 10 thousands cars sold, 
 with the key being the ${this.cfg.key} of the car at the time of contacting the car service.
 
 2. You will be comparing the following cars in terms of reliability:
@@ -412,23 +435,28 @@ ${this.cars}
       </script>
 
       <scene_breakdown>
-      [Insert your scene-by-scene breakdown here, using only car names or "<car name> chart" for each line]
+      [Insert your scene-by-scene breakdown here, using only "<car name>" or "<car name> chart" for each line]
       </scene_breakdown>
 
+      Remember that each scene should be between 3 and 5 seconds long.
+      There should be only one scene with a chart for each car and only when the script refers to the number of defects.
+
       For the scene breakdown, use the following format for each line:
-      [start time in seconds] - [car name] or [car name] chart
+      [fragment duration time in seconds] - [car name] or [car name] chart
 
       Example:
-      0 - audi a4
+      4 - audi a4
+      5 - lexus is
+      3 - audi a4
+      3 - audi a4 chart
+      5 - lexus is chart
+      3 - audi a4
       4 - lexus is
-      9 - audi a4
-      12 - audi a4 chart
-      16 - lexus is chart
+      5 - audi a4
 
       Ensure that the scene breakdown covers the entire duration of the video and alternates between the cars or their charts.
       Do not include any additional text or descriptions in this section.
       Provide only one video script that best fits the given topic gand uidelines.
-      Remember that each scene should be between 3 and 5 seconds long.
       Remember to keep the content engaging and informative while adhering to the time constraints of a YouTube Short video.
       `;
    }

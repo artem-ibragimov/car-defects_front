@@ -86,7 +86,7 @@ function generateTopics(topics) {
 		.then(() => {
 			const unpostedIndex = topics.findIndex((t) => t == unposted);
 			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
-			info(`✅ "${unposted}"`);
+			info(`✅ ${unposted}`);
 			saveTopic(topics);
 			// return generateTopics(topics);
 		});
@@ -152,18 +152,25 @@ function generateByTopic(topic: string) {
 										}
 										return anthropicAI
 											.generate({ contents: video.contents })
-											.then(video.save);
+											.then(video.save)
+											.then(info);
 									}).then(() => {
 										if (!video.isVoiceExists) {
-											return playht.generateVoice(video.voicePath, video.script);
+											return playht
+												.generateVoice(video.voicePath, video.script)
+												.then(info);
 										}
 									}).then(() => {
 										if (video.isVideoExists) { return; }
-										return chain(video.cars.map((car) => () => youtube.getVideos(car)))
-											.then(() => video.generateVideo());
+										return chain(
+											video.cars.map((car) =>
+												() => youtube.getVideos(car).then(info)
+											))
+											.then(() => video.generateVideo())
+											.then(info);
 										// return video.generateVideo();
 									});
-							})().then(info, (e) => { debugger; })
+							})()
 						]) as unknown as Promise<void>
 				);
 			// return Promise.all(articlesGenerating);
