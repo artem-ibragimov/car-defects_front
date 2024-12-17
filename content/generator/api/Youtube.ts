@@ -4,11 +4,10 @@ import {
    existsSync,
    mkdirSync,
 } from 'fs';
-import path, { resolve } from 'path';
-import { chain } from '../utils';
+import { resolve } from 'path';
 
 const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search`;
-const MAX_RESULTS = 5;
+const MAX_RESULTS = 7;
 
 export class Youtube {
    constructor(private apiKey: string, private car_footage_path: string) {
@@ -16,22 +15,27 @@ export class Youtube {
    }
 
    getVideo = (query: string) => {
-      const directory = resolve(this.car_footage_path, 'query');
+      const directory = resolve(this.car_footage_path, query);
       if (!existsSync(directory)) {
          mkdirSync(directory);
       }
       return this.searchVideos(query)
          // .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
-         .then(videos => {
+         .then((videos) => videos.sort(() => Math.random() - 0.5))
+         .then((videos) => {
             return videos.reduce<Promise<string | null>>((gettingVideo, video) => {
                return gettingVideo.then((path) => {
                   if (path) { return path; }
                   return this.downloadVideo(directory)(video);
                });
             }, Promise.resolve(null));
+         })
+         .then((path) => {
+            if (path === null) {
+               throw new Error('no video path!');
+            }
+            return path;
          });
-      // .then(() => `✅ ${query}`)
-      // .catch((e) => `❌ ${query} ${e}`);
    };
 
    private searchVideos(query: string): Promise<{ videoId, title; }[]> {
@@ -39,6 +43,13 @@ export class Youtube {
          part: 'snippet',
          q: query,
          type: 'video',
+         /**
+          * date — последние загруженные видео.
+          * relevance — максимально релевантные видео.
+          * viewCount — популярные видео.
+          */
+         order: 'relevance',
+         regionCode: 'US',
          videoDuration: 'short',
          videoDefinition: 'high',
          maxResults: `${MAX_RESULTS}`,
@@ -48,7 +59,7 @@ export class Youtube {
       return fetch(`${YOUTUBE_API}?${params}`)
          .then(response => {
             if (!response.ok) {
-               throw new Error(`Failed to fetch videos: ${response.statusText}`);
+               return response.json().then((e) => { throw new Error(`Failed to fetch videos: ${JSON.stringify(e, null, 2)}`); });
             }
             return response.json();
          })
@@ -62,20 +73,19 @@ export class Youtube {
 
    private downloadVideo = (directory: string) => ({ videoId, title }: { videoId: string, title: string; }) => {
       const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-
       return ytdl.getInfo(videoUrl)
          .then((videoInfo) => {
-            // Фильтруем только вертикальные видео
             const format = videoInfo.formats.find(f => f.width && f.height && f.width < f.height && f.container === 'mp4');
 
             if (!format) {
                return Promise.resolve(null);
             }
+
             const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);
             const readable = ytdl(videoUrl, { format });
             const writable = createWriteStream(outputPath);
 
-            return new Promise<string>((resolve, reject) => {
+            return new Promise<string | null>((resolve) => {
                readable.pipe(writable);
                writable.on('finish', () => resolve(outputPath));
                writable.on('error', (e) => { console.error(e); resolve(null); });

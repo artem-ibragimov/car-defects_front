@@ -87,6 +87,7 @@ function generateTopics(topics) {
 	return generateByTopic(unposted)
 		.catch(error)
 		.then(() => {
+			return; //!FIXME
 			const unpostedIndex = topics.findIndex((t) => t == unposted);
 			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 			info(`✅ ${unposted}`);
@@ -147,7 +148,7 @@ function generateByTopic(topic: string) {
 									key: article.key,
 									defects,
 									topic
-								}, car_footage_path);
+								});
 								return video.store()
 									.then(() => {
 										if (video.isScriptExists) {
@@ -157,13 +158,15 @@ function generateByTopic(topic: string) {
 											.generate({ contents: video.contents })
 											.then(video.save)
 											.then(info);
-									}).then(() => {
+									})
+									.then(() => {
 										if (!video.isVoiceExists) {
 											return playht
 												.generateVoice(video.voicePath, video.script)
 												.then(info);
 										}
-									}).then(() => {
+									})
+									.then(() => {
 										if (video.isVideoExists) { return; }
 										return video.generateVideo(youtube.getVideo)
 											// return chain(
