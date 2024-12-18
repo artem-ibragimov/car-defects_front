@@ -117,8 +117,8 @@ export class Video {
       return writeFile(this.scriptPath, data.script).then(() => `✅ script`);
    };
 
-   generateVideo(downloadVideo: (query: string) => Promise<string>) {
-      return this.recordCharts();
+   generateVideo(downloadVideo: (query: string) => Promise<string>, hash: string) {
+      return this.recordCharts(hash);
       const carScenes = this.scene_breakdown
          .map(({ duration, query, car, isChart }) => {
             return {
@@ -380,9 +380,9 @@ export class Video {
       return Promise.all(processing);
    }
 
-   private async recordCharts() {
-      const duration = 16;
-      const position = { x: 0, y: 0 };
+   private async recordCharts(url: string) {
+      const duration = 10;
+      const position = { x: 0, y: 220 };
       const viewport = { width: 430, height: 932 };
       const outputFilePath = resolve(this.folder, 'screencast.mp4');
       console.log('Starting screen recording...');
@@ -397,7 +397,7 @@ export class Video {
                '--no-sandbox',
                '--disable-setuid-sandbox',
                `--window-size=${viewport.width},${viewport.height}`,
-               `--window-position=${position.x},${position.y}` // Adjust as needed
+               `--window-position=${0},${0}` // Adjust as needed
             ]
          })
          .then((browser) =>
@@ -405,11 +405,12 @@ export class Video {
                .newPage()
                .then((page) => ({ page, browser })))
          .then(({ page, browser }) => {
+
             // page.setViewport(viewport);
-            const targetURL = 'https://car-defects.com'; // Replace with your URL
+            const targetURL = url; // Replace with your URL
             console.log(`Navigating to ${targetURL}...`);
-            new Promise((resolve, reject) => {
-               exec(`ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i 4 -y -vcodec h264_videotoolbox -filter:v crop=${viewport.width}:${viewport.height}:${position.x}:${position.y} -preset ultrafast -t ${duration} ${outputFilePath}`, (err, stdout, stderr) => {
+            const capturing = new Promise((resolve, reject) => {
+               exec(`ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i 2 -y -vcodec h264_videotoolbox -filter:v crop=${viewport.width * 2}:${viewport.height}:${position.x}:${position.y} -t ${duration} ${outputFilePath}`, (err, stdout, stderr) => {
                   if (err) {
                      return reject(err);
                   }
@@ -418,35 +419,42 @@ export class Video {
                });
             });
             return page
-               .goto(targetURL, { waitUntil: 'load' })
-               .then(() => ({ browser, page }));
-         })
-         .then(({ browser, page }) => {
-            const searchText = 'lexus is'; // Replace with the text you want to search
-            return page.evaluate((text) => {
-               const input = document.querySelector<HTMLInputElement>('.Search input');
-               if (!input) { return Promise.resolve('no search input'); }
-               input.value = text;
-               return new Promise<void>((resolve) => {
-                  setTimeout(() => {
-                     input.dispatchEvent(new Event('input', { bubbles: true, }));
-                     setTimeout(() => {
-                        Array.from(document.querySelectorAll<HTMLSpanElement>('.Search__dropdown__item__label')).find((span) => {
-                           console.log(span);
-                           if (span.innerText === 'Model') {
-                              span.parentElement?.click();
-                           }
-                           resolve()
-                        });
-                     }, 1000);
-                  }, 1000);
-               });
-            }, searchText)
-               .then(() => ({ browser, page }));
-         })
-         .then(({ browser }) => {
-            new Promise((resolve) => setTimeout(resolve, duration))
-               .then(() => browser.close());
+               .goto(targetURL, { waitUntil: 'networkidle2' })
+               .then(async () => {
+                  await installMouseHelper(page);
+                  await page.evaluate(() => {
+                     const chart = document.querySelector('div.Chart');
+                     if (chart) {
+                        chart.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                     }
+                  });
+
+                  // Ждем появления элемента
+                  await page.waitForSelector('div.Chart');
+
+                  // Перемещаем мышь на элемент div.Chart
+                  const chart = await page.$('div.Chart');
+                  if (!chart) { return; }
+                  const box = await chart.boundingBox();
+
+                  if (box) {
+                     const startX = box.x;
+                     const startY = 100 + box.height / 2; // Центр по вертикали
+                     const endX = box.x + box.width;
+
+                     // Двигаем мышь слева направо
+                     for (let x = startX; x <= endX; x += 10) {
+                        await page.mouse.down();
+                        await page.mouse.move(x, startY);
+                        await page.mouse.up();
+                        await page.evaluate(() => new Promise((resolve) => setTimeout(resolve, 500)));
+                     }
+                  }
+
+                  // Ждем окончания скринкаста
+                  return capturing;
+               })
+            .then(() => browser.close());
          });
 
       return browsering;
@@ -564,4 +572,70 @@ ${this.cars}
    }
 }
 
-
+async function installMouseHelper(page) {
+   await page.evaluateOnNewDocument(() => {
+      // Install mouse helper only for top-level frame.
+      if (window !== window.parent)
+         return;
+      window.addEventListener('DOMContentLoaded', () => {
+         const box = document.createElement('puppeteer-mouse-pointer');
+         const styleElement = document.createElement('style');
+         styleElement.innerHTML = `
+         puppeteer-mouse-pointer {
+           pointer-events: none;
+           position: absolute;
+           top: 0;
+           z-index: 10000;
+           left: 0;
+           width: 20px;
+           height: 20px;
+           background: rgba(0,0,0,.4);
+           border: 1px solid white;
+           border-radius: 10px;
+           margin: -10px 0 0 -10px;
+           padding: 0;
+           transition: background .2s, border-radius .2s, border-color .2s;
+         }
+         puppeteer-mouse-pointer.button-1 {
+           transition: none;
+           background: rgba(0,0,0,0.9);
+         }
+         puppeteer-mouse-pointer.button-2 {
+           transition: none;
+           border-color: rgba(0,0,255,0.9);
+         }
+         puppeteer-mouse-pointer.button-3 {
+           transition: none;
+           border-radius: 4px;
+         }
+         puppeteer-mouse-pointer.button-4 {
+           transition: none;
+           border-color: rgba(255,0,0,0.9);
+         }
+         puppeteer-mouse-pointer.button-5 {
+           transition: none;
+           border-color: rgba(0,255,0,0.9);
+         }
+       `;
+         document.head.appendChild(styleElement);
+         document.body.appendChild(box);
+         document.addEventListener('mousemove', event => {
+            box.style.left = event.pageX + 'px';
+            box.style.top = event.pageY + 'px';
+            updateButtons(event.buttons);
+         }, true);
+         document.addEventListener('mousedown', event => {
+            updateButtons(event.buttons);
+            box.classList.add('button-' + event.which);
+         }, true);
+         document.addEventListener('mouseup', event => {
+            updateButtons(event.buttons);
+            box.classList.remove('button-' + event.which);
+         }, true);
+         function updateButtons(buttons) {
+            for (let i = 0; i < 5; i++)
+               box.classList.toggle('button-' + i, buttons & (1 << i));
+         }
+      }, false);
+   });
+};

@@ -168,7 +168,7 @@ function generateByTopic(topic: string) {
 									})
 									.then(() => {
 										if (video.isVideoExists) { return; }
-										return video.generateVideo(youtube.getVideo)
+										return video.generateVideo(youtube.getVideo, hash)
 											// return chain(
 											// 	video.cars.map((car) =>
 											// 		() => youtube.getVideos(car).then(info)
