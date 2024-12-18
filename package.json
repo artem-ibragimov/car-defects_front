@@ -54,6 +54,7 @@
 		"playht": "^0.14.0",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.3",
+		"puppeteer": "^23.10.4",
 		"sharp": "^0.33.3",
 		"social-post-api": "^1.1.1",
 		"svelte": "^4.2.15",

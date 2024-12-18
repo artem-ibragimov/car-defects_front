@@ -4,6 +4,7 @@ import {
    existsSync,
    mkdirSync,
 } from 'fs';
+import { mkdir, readdir } from 'fs/promises';
 import { resolve } from 'path';
 
 const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search`;
@@ -16,10 +17,16 @@ export class Youtube {
 
    getVideo = (query: string) => {
       const directory = resolve(this.car_footage_path, query);
-      if (!existsSync(directory)) {
-         mkdirSync(directory);
+      if (existsSync(directory)) {
+         return readdir(directory)
+            .then((videos) => videos.filter((name) => !name.includes('.DS_Store')))
+            .then((videos) => {
+               const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+               return resolve(directory, randomVideo);
+            });
       }
-      return this.searchVideos(query)
+      return mkdir(directory)
+         .then(() => this.searchVideos(query))
          // .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
          .then((videos) => videos.sort(() => Math.random() - 0.5))
          .then((videos) => {

@@ -31,6 +31,7 @@ const playht = new Playht({
 	userId: process.env.PLAYHT_USER_ID as string,
 });
 const car_footage_path = resolve('/Users/artem/project/car_defects/cars_footage');
+const bg_music_folder = resolve('/Users/artem/project/car_defects/soundtrack');
 
 try {
 	const file = './content/topics.txt';
@@ -142,13 +143,12 @@ function generateByTopic(topic: string) {
 
 							article.needVideo && (() => {
 								const youtube = new Youtube(process.env.YOUTUBE_API_KEY as string, car_footage_path);
-
 								const video = new Video({
 									name: article.name,
 									key: article.key,
 									defects,
 									topic
-								});
+								}, bg_music_folder);
 								return video.store()
 									.then(() => {
 										if (video.isScriptExists) {

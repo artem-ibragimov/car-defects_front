@@ -8,10 +8,14 @@ import {
    rmSync,
    writeFileSync
 } from 'fs';
+import { exec } from 'node:child_process';
+import { readdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'path';
+import puppeteer from 'puppeteer';
 
 ffmpeg.setFfmpegPath(ffmpegPath);
+// ffmpeg.setFfmpegPath('/opt/homebrew/bin/ffmpeg');
 
 
 type Key = 'age' | 'mileage';
@@ -29,11 +33,14 @@ export class Video {
    script: string;
    scene_breakdown: { duration: number, isChart: boolean, query: string; car: string; }[];
 
-   constructor(private cfg: Config) {
+   private backgroundMusic: string;
+   constructor(private cfg: Config, backgroundMusicsFolder: string) {
       this.cars = Object.keys(cfg.defects);
       if (!existsSync(this.folder)) {
          mkdirSync(this.folder);
       }
+      const tracks = readdirSync(backgroundMusicsFolder);
+      this.backgroundMusic = resolve(backgroundMusicsFolder, tracks[Math.floor(Math.random() * tracks.length)]);
       if (!existsSync(this.chartFolder)) {
          mkdirSync(this.chartFolder);
       }
@@ -111,6 +118,7 @@ export class Video {
    };
 
    generateVideo(downloadVideo: (query: string) => Promise<string>) {
+      return this.recordCharts();
       const carScenes = this.scene_breakdown
          .map(({ duration, query, car, isChart }) => {
             return {
@@ -154,19 +162,35 @@ export class Video {
                   writeFileSync(fileList, fileListContent);
                   return new Promise((res, rej) => {
                      ffmpeg()
-                        .input(this.voicePath)
                         .input(fileList)
                         .inputOptions(['-f concat', '-safe 0'])
-                        .outputOptions([
-                           '-c:v libx264',
-                           '-crf 28',
-                           '-preset medium',
-                           '-c:a aac',
-                           '-b:a 192k',       // Audio bitrate
-                           '-shortest',
-                           '-map 1:v:0',
-                           '-map 0:a:0',
+                        .input(this.backgroundMusic)
+                        .input(this.voicePath)
+                        // Add background music and voiceover
+
+                        // Filter complex to handle audio mixing
+                        .complexFilter([
+                           // Set background music volume to 20% (0.2)
+                           '[1:a]volume=0.2[bgm]',
+                           // Mix voiceover (as is) and background music
+                           '[bgm][2:a]amix=inputs=2:duration=shortest[audioMix]',
+                           // Send the video output and mixed audio to the final output
+                           '[0:v]setpts=PTS-STARTPTS[v]',
                         ])
+
+                        // Map video and the mixed audio
+                        .outputOptions(['-map [v]', '-map [audioMix]', '-c:v libx264', '-c:a aac', '-b:a 192k', '-shortest'])
+
+                        // .outputOptions([
+                        //    '-c:v libx264',
+                        //    '-crf 28',
+                        //    '-preset medium',
+                        //    '-c:a aac',
+                        //    '-b:a 192k',       // Audio bitrate
+                        //    '-shortest',
+                        //    '-map 1:v:0',
+                        //    '-map 0:a:0',
+                        // ])
                         .on('start', commandLine => {
                            console.log('FFmpeg command:', commandLine);
                         })
@@ -338,7 +362,7 @@ export class Video {
          return new Promise<string>((res, reject) => {
             const outputFile = resolve(folder, `standardized_${index}.mp4`);
             ffmpeg(file)
-               .videoCodec('libx264')
+               .videoCodec('h264_videotoolbox')
                .outputOptions([
                   '-vf scale=1080:1920',
                   '-r 30',  // Set frame rate to 30fps,
@@ -354,6 +378,78 @@ export class Video {
       });
 
       return Promise.all(processing);
+   }
+
+   private async recordCharts() {
+      const duration = 16;
+      const position = { x: 0, y: 0 };
+      const viewport = { width: 430, height: 932 };
+      const outputFilePath = resolve(this.folder, 'screencast.mp4');
+      console.log('Starting screen recording...');
+
+      const browsering = puppeteer
+         .launch({
+            defaultViewport: viewport,
+            headless: false, // Use `false` to see the browser, or `true` for headless mode
+            args: [
+               '--enable-usermedia-screen-capturing',
+               '--disable-infobars',
+               '--no-sandbox',
+               '--disable-setuid-sandbox',
+               `--window-size=${viewport.width},${viewport.height}`,
+               `--window-position=${position.x},${position.y}` // Adjust as needed
+            ]
+         })
+         .then((browser) =>
+            browser
+               .newPage()
+               .then((page) => ({ page, browser })))
+         .then(({ page, browser }) => {
+            // page.setViewport(viewport);
+            const targetURL = 'https://car-defects.com'; // Replace with your URL
+            console.log(`Navigating to ${targetURL}...`);
+            new Promise((resolve, reject) => {
+               exec(`ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i 4 -y -vcodec h264_videotoolbox -filter:v crop=${viewport.width}:${viewport.height}:${position.x}:${position.y} -preset ultrafast -t ${duration} ${outputFilePath}`, (err, stdout, stderr) => {
+                  if (err) {
+                     return reject(err);
+                  }
+                  stderr && console.error(stderr);
+                  resolve(stdout);
+               });
+            });
+            return page
+               .goto(targetURL, { waitUntil: 'load' })
+               .then(() => ({ browser, page }));
+         })
+         .then(({ browser, page }) => {
+            const searchText = 'lexus is'; // Replace with the text you want to search
+            return page.evaluate((text) => {
+               const input = document.querySelector<HTMLInputElement>('.Search input');
+               if (!input) { return Promise.resolve('no search input'); }
+               input.value = text;
+               return new Promise<void>((resolve) => {
+                  setTimeout(() => {
+                     input.dispatchEvent(new Event('input', { bubbles: true, }));
+                     setTimeout(() => {
+                        Array.from(document.querySelectorAll<HTMLSpanElement>('.Search__dropdown__item__label')).find((span) => {
+                           console.log(span);
+                           if (span.innerText === 'Model') {
+                              span.parentElement?.click();
+                           }
+                           resolve()
+                        });
+                     }, 1000);
+                  }, 1000);
+               });
+            }, searchText)
+               .then(() => ({ browser, page }));
+         })
+         .then(({ browser }) => {
+            new Promise((resolve) => setTimeout(resolve, duration))
+               .then(() => browser.close());
+         });
+
+      return browsering;
    }
 
    get isVideoExists() {
