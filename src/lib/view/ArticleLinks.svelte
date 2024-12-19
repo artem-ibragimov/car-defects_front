@@ -25,7 +25,7 @@
 			keywords: article.keywords,
 			name,
 			imgSrc: name,
-			href: `/articles/${$lang}/${name}`
+			href: `/articles/${$lang}/${name}/`
 		}))
 		.filter(({ name }) => name !== pagePath);
 

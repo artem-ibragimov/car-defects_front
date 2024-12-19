@@ -2634,3 +2634,375 @@ bmw 3 series,mercedes c class
       scenes should be  at least 5 sec long,
       use calm and serious soundtrack.
       
+
+-------------------------
+      https://car-defects.com/articles/en/audi-a4-vs-lexus-is-durability
+      Audi A4 vs Lexus IS: The Ultimate 8-Year Reliability Showdown
+      Discover the truth about Audi A4 vs Lexus IS reliability with our data-driven comparison. Analyze real service records and durability stats to make an informed luxury car choice.
+      audi a4 reliability comparison, lexus is vs audi a4 maintenance, luxury sedan durability test, german vs japanese car reliability
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "audi a4": {
+    "0": "0.63826000503243465506",
+    "1": "0.68735692849646809007",
+    "2": "0.83464769888856839508",
+    "3": "0.99421270014667705885",
+    "4": "1.0433096236107105",
+    "5": "1.1046807779407523",
+    "6": "1.0433096236107105",
+    "7": "0.95739000754865198260",
+    "8": "1.0801323162087356"
+  },
+  "lexus is": {
+    "0": "0.55344086484359146225",
+    "1": "0.55344086484359146225",
+    "2": "0.66105436634095646880",
+    "3": "0.76866786783832147535",
+    "4": "0.69180108105448932782",
+    "5": "0.69180108105448932782",
+    "6": "0.76866786783832147535",
+    "7": "0.76866786783832147535",
+    "8": "0.90702808404921934091"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+audi a4,lexus is
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "audi a4 vs lexus is durability", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/bmw-vs-audi-reliability-comparison
+      BMW vs Audi: The Ultimate Reliability Showdown (2024 Data)
+      Discover the truth about BMW vs Audi reliability with our data-driven comparison. Analyze real service records and maintenance costs to make an informed choice between these luxury rivals.
+      BMW vs Audi reliability, German car reliability comparison, BMW 3 Series vs Audi A4 reliability, luxury car maintenance costs
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "bmw 3 series": {
+    "0": "4",
+    "1": "1",
+    "2": "3",
+    "3": "7",
+    "4": "9",
+    "5": "12",
+    "6": "14",
+    "7": "14",
+    "8": "18"
+  },
+  "audi a4": {
+    "0": "52",
+    "1": "56",
+    "2": "68",
+    "3": "81",
+    "4": "85",
+    "5": "90",
+    "6": "85",
+    "7": "78",
+    "8": "88"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+bmw 3 series,audi a4
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "bmw vs audi reliability comparison", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/reliable-pickup-trucks-2024
+      Most Reliable Pickup Trucks 2024: Data-Driven Comparison
+      Discover the most reliable pickup trucks for 2024 with our data-driven comparison. Analyze real service records and reliability stats for Ford F-150, Silverado, RAM 1500, and Tundra models.
+      most reliable pickup trucks 2024, best truck reliability ratings, pickup truck maintenance costs, truck dependability comparison
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "ford f-150": {
+    "0": "112",
+    "1": "110",
+    "2": "138",
+    "3": "167",
+    "4": "185",
+    "5": "183",
+    "6": "181",
+    "7": "183",
+    "8": "170"
+  },
+  "chevrolet silverado": {
+    "0": "129",
+    "1": "149",
+    "2": "183",
+    "3": "214",
+    "4": "227",
+    "5": "211",
+    "6": "224",
+    "7": "215",
+    "8": "198"
+  },
+  "ram 1500": {
+    "0": "62",
+    "1": "66",
+    "2": "71",
+    "3": "84",
+    "4": "88",
+    "5": "87",
+    "6": "85",
+    "7": "78",
+    "8": "72"
+  },
+  "toyota tundra": {
+    "0": "77",
+    "1": "85",
+    "2": "94",
+    "3": "93",
+    "4": "101",
+    "5": "113",
+    "6": "93",
+    "7": "103",
+    "8": "100"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+ford f-150,chevrolet silverado,ram 1500,toyota tundra
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "reliable pickup trucks 2024", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
+
+-------------------------
+      https://car-defects.com/articles/en/best-truck-for-reliability
+      Most Reliable Pickup Trucks: Real Data Reveals The Winner
+      Discover which pickup truck stands the test of time with our data-driven reliability comparison of the F-150, Silverado, RAM 1500, and Tundra. Real service records reveal the truth.
+      most reliable pickup trucks, truck reliability comparison, best truck reliability ratings, long-lasting pickup trucks
+      --
+      You are tasked with creating an engaging viral YouTube short video for potential car buyers, 
+      comparing the reliability of specific car models. 
+      Your script should be informative, objective, and engaging, 
+      emulating the style of top automotive journalists. 
+      Follow these instructions carefully:
+
+1. First, review the car service call statistics data provided:
+<data>
+ {
+  "ford f-150": {
+    "0": "112",
+    "1": "110",
+    "2": "138",
+    "3": "167",
+    "4": "185",
+    "5": "183",
+    "6": "181",
+    "7": "183",
+    "8": "170"
+  },
+  "chevrolet silverado": {
+    "0": "129",
+    "1": "149",
+    "2": "183",
+    "3": "214",
+    "4": "227",
+    "5": "211",
+    "6": "224",
+    "7": "215",
+    "8": "198"
+  },
+  "ram 1500": {
+    "0": "62",
+    "1": "66",
+    "2": "71",
+    "3": "84",
+    "4": "88",
+    "5": "87",
+    "6": "85",
+    "7": "78",
+    "8": "72"
+  },
+  "toyota tundra": {
+    "0": "77",
+    "1": "85",
+    "2": "94",
+    "3": "93",
+    "4": "101",
+    "5": "113",
+    "6": "93",
+    "7": "103",
+    "8": "100"
+  }
+}, 
+</data>
+This data represents the number of service calls per 10,000 cars sold, 
+with the key being the age of the car at the time of contacting the car service.
+
+2. You will be comparing the following cars in terms of reliability:
+<cars>
+ford f-150,chevrolet silverado,ram 1500,toyota tundra
+</cars>
+
+3. Analyze the data and create a script that:
+   - Cites sources for your information when applicable
+   - Provides clear arguments backed by data
+   - Uses charts or tables to make comparisons more objective
+   - Avoids repetitive sentences
+   - Includes technical details while keeping the content accessible
+   - Uses mid-frequency words throughout the analysis
+
+4. Your script should have the following elements:
+   - An attention-grabbing introduction
+   - A brief explanation of the data and its significance
+   - A comparison of the reliability of the specified car models
+   - Key findings and insights
+   - A conclusion with recommendations for potential car buyers
+
+      Step by step analyze the data, 
+      compare the each car this others in terms of reliability,
+      draw conclusions, explain the results from the technical point of view, 
+      describe the design features of the cars, use maximum technical details,
+      - Highlight any significant differences between the models.
+      - Consider the implications of the data for potential car buyers.
+      Use clear, concise language suitable for a technical audience.
+      - Incorporate relevant keywords naturally throughout the text.
+      - Include subheadings to break up the content and improve readability.
+      - Include a brief explanation of what service calls indicate about car reliability.
+      - Vary sentence structure and use transitions between paragraphs to create a natural, human-like flow.
+      - Maintain a professional tone while occasionally incorporating conversational elements to engage the reader.
+      generate a short video about "best truck for reliability", 
+      don't use absolute values, compare car reliability relatively of each car
+      use north male voice, 
+      Limit video up to 59 sec, place captions at the bottom, 
+      scenes should be  at least 5 sec long,
+      use calm and serious soundtrack.
+      
