@@ -3,6 +3,7 @@ import {
    createWriteStream,
    existsSync,
    mkdirSync,
+   readdirSync,
 } from 'fs';
 import { mkdir, readdir } from 'fs/promises';
 import { resolve } from 'path';
@@ -17,16 +18,17 @@ export class Youtube {
 
    getVideo = (query: string) => {
       const directory = resolve(this.car_footage_path, query);
-      if (existsSync(directory)) {
-         return readdir(directory)
-            .then((videos) => videos.filter((name) => !name.includes('.DS_Store')))
-            .then((videos) => {
-               const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-               return resolve(directory, randomVideo);
-            });
+      if (!existsSync(directory)) {
+         mkdirSync(directory);
       }
-      return mkdir(directory)
-         .then(() => this.searchVideos(query))
+      const downloadedVideos = readdirSync(directory);
+      if (downloadedVideos.length > 10) {
+         const videos = downloadedVideos.filter((name) => !name.includes('.DS_Store'));
+         const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+         return Promise.resolve(resolve(directory, randomVideo));
+      }
+
+      return this.searchVideos(query)
          // .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
          .then((videos) => videos.sort(() => Math.random() - 0.5))
          .then((videos) => {

@@ -118,30 +118,29 @@ export class Video {
    };
 
    generateVideo(downloadVideo: (query: string) => Promise<string>, hash: string) {
-      return this.recordCharts(hash);
       const carScenes = this.scene_breakdown
          .map(({ duration, query, car, isChart }) => {
             return {
                duration,
                car,
                isChart,
-               path: isChart ? resolve(this.chartFolder, car, 'chart.mp4') : '',
+               path: isChart ? resolve(this.chartFolder, 'chart.mp4') : '',
                query: isChart ? '' : query
             };
          })
          .filter(({ duration }) => duration !== 0);
 
-      let chartedCars: string[] = [];
+      // let chartedCars: string[] = [];
       const chartsRendering = carScenes
          .filter(({ isChart }) => isChart)
-         .map(({ duration, car, path }, i) => {
-            chartedCars.push(car);
-            const defects = Object.fromEntries(
-               Object
-                  .entries(this.cfg.defects)
-                  .filter(([car, _]) => chartedCars.includes(car))
-            );
-            return this.generateChart({ defects, path, car, duration });
+         .map(({ duration, path }) => {
+            // chartedCars.push(car);
+            // const defects = Object.fromEntries(
+            //    Object
+            //       .entries(this.cfg.defects)
+            //       .filter(([car, _]) => chartedCars.includes(car))
+            // );
+            return this.recordCharts({ path, url: hash, duration });
          });
       return Promise.all(chartsRendering)
          .then(() => {
@@ -380,11 +379,9 @@ export class Video {
       return Promise.all(processing);
    }
 
-   private async recordCharts(url: string) {
-      const duration = 10;
+   private async recordCharts({ url, path, duration }: { path: string, url: string; duration: number; }) {
       const position = { x: 0, y: 220 };
       const viewport = { width: 430, height: 932 };
-      const outputFilePath = resolve(this.folder, 'screencast.mp4');
       console.log('Starting screen recording...');
 
       const browsering = puppeteer
@@ -405,23 +402,21 @@ export class Video {
                .newPage()
                .then((page) => ({ page, browser })))
          .then(({ page, browser }) => {
-
-            // page.setViewport(viewport);
-            const targetURL = url; // Replace with your URL
-            console.log(`Navigating to ${targetURL}...`);
-            const capturing = new Promise((resolve, reject) => {
-               exec(`ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i 2 -y -vcodec h264_videotoolbox -filter:v crop=${viewport.width * 2}:${viewport.height}:${position.x}:${position.y} -t ${duration} ${outputFilePath}`, (err, stdout, stderr) => {
-                  if (err) {
-                     return reject(err);
+            const inputDetect = new Promise((resolve, reject) => {
+               exec('ffmpeg -f avfoundation -list_devices true -i ""', (err, stdout, stderr) => {
+                  const input = Number(/\[(\d)\] Capture screen/.exec(stderr)?.pop());
+                  if (!isNaN(input)) {
+                     return resolve(input);
                   }
-                  stderr && console.error(stderr);
-                  resolve(stdout);
+                  reject({ err, stderr, stdout });
                });
             });
+            console.log('goto', url);
             return page
-               .goto(targetURL, { waitUntil: 'networkidle2' })
+               .goto(url, { waitUntil: 'networkidle2' })
                .then(async () => {
                   await installMouseHelper(page);
+
                   await page.evaluate(() => {
                      const chart = document.querySelector('div.Chart');
                      if (chart) {
@@ -429,32 +424,44 @@ export class Video {
                      }
                   });
 
-                  // Ждем появления элемента
-                  await page.waitForSelector('div.Chart');
+                  const capturing = inputDetect.then((input) => new Promise((resolve, reject) => {
+                     exec(`ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i ${input} -y -vcodec h264_videotoolbox -filter:v crop=${Math.round(viewport.height / 16 * 9)}:${viewport.height}:${position.x}:${position.y},scale=720:1280 -t ${duration} ${path}`, (err, stdout, stderr) => {
+                        if (err) {
+                           return reject(err);
+                        }
+                        stderr && console.error(stderr);
+                        resolve(stdout);
+                     });
+                  }));
 
-                  // Перемещаем мышь на элемент div.Chart
-                  const chart = await page.$('div.Chart');
-                  if (!chart) { return; }
-                  const box = await chart.boundingBox();
+                  const charting = (async () => {
+                     // Ждем появления элемента
+                     await page.waitForSelector('div.Chart');
 
-                  if (box) {
-                     const startX = box.x;
-                     const startY = 100 + box.height / 2; // Центр по вертикали
-                     const endX = box.x + box.width;
+                     // Перемещаем мышь на элемент div.Chart
+                     const chart = await page.$('div.Chart');
+                     if (!chart) { return; }
+                     const box = await chart.boundingBox();
 
-                     // Двигаем мышь слева направо
-                     for (let x = startX; x <= endX; x += 10) {
-                        await page.mouse.down();
-                        await page.mouse.move(x, startY);
-                        await page.mouse.up();
-                        await page.evaluate(() => new Promise((resolve) => setTimeout(resolve, 500)));
+                     if (box) {
+                        const startX = box.x;
+                        const startY = 100 + box.height / 2; // Центр по вертикали
+                        const endX = box.x + box.width;
+
+                        // Двигаем мышь слева направо
+                        for (let x = startX; x <= endX; x += 10) {
+                           await page.mouse.down();
+                           await page.mouse.move(x, startY);
+                           await page.mouse.up();
+                           await page.evaluate(() => new Promise((resolve) => setTimeout(resolve, 500)));
+                        }
                      }
-                  }
+                  })();
 
                   // Ждем окончания скринкаста
-                  return capturing;
+                  return Promise.race([charting, capturing]);
                })
-            .then(() => browser.close());
+               .then(() => browser.close());
          });
 
       return browsering;
@@ -542,23 +549,23 @@ ${this.cars}
       [Insert your scene-by-scene breakdown here, using only youtube video footage search query or "<car name> chart" for each line]
       </scene_breakdown>
 
-      There should be only one scene with a chart for each car and only when the script refers to the number of defects.
+      There should be only one scene with a chart and only when the script refers to the number of defects.
 
       For the scene breakdown, use the following format for each line:
-      [fragment duration time in seconds] - [youtube video footage search query] or [car name] chart
+      [fragment duration time in seconds] - [youtube video footage search query] or "chart"
 
       Example:
       2 - audi a4
-      4 - audi a4 chart
-      5 - lexus is
+      4 - lexus is
+      7 - chart
       1 - audi a4
-      5 - lexus is chart
+      5 - lexus is
       3 - audi a4
       8 - lexus is
       5 - audi a4
 
       Ensure that the scene breakdown covers the entire duration of the video and alternates between the cars or their charts.
-      Keep in mind that the narrator will be reading the script at 2.7 words per second, so adjust the duration of the scenes accordingly.
+      Keep in mind that the narrator will be reading the script at 2.6 words per second, so adjust the duration of the scenes accordingly.
       Do not include any additional text or descriptions in this section.
       Provide only one video script that best fits the given topic gand uidelines.
       Remember to keep the content engaging and informative while adhering to the time constraints of a YouTube Short video.

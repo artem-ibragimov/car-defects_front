@@ -49,10 +49,10 @@
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
-				<DefectCategoryLinks {pageUrl} />
+				<DefectCategoryLinks {pageUrl} className="MainContainer_mobile_invisible"/>
 				{#if !noChartData}
 					<div
-						class="MainContainer_row MainContainer_space-between"
+						class="MainContainer_row MainContainer_space-between MainContainer_mobile_invisible"
 						class:MainContainer_mobile_invisible={noChartData}
 					>
 						<TotalNormRadio on:select={({ detail }) => setDataParams(detail)} />
@@ -101,8 +101,7 @@
 			{#if !noChartData}
 				<div>
 					<div
-						class="MainContainer_sidebar MainContainer_mobile_column-reverse"
-						class:MainContainer_mobile_invisible={noChartData}
+						class="MainContainer_sidebar MainContainer_mobile_invisible"
 					>
 						{#await import('$lib/view/chart/DefectCategorySelector.svelte') then { default: DefectCategorySelector }}
 							<DefectCategorySelector />
@@ -179,8 +178,8 @@
 		top: 50px;
 	}
 	@media (max-width: 700px) {
-		.MainContainer_mobile_invisible {
-			display: none;
+		:global(.MainContainer_mobile_invisible) {
+			display: none !important;
 		}
 		.MainContainer_mobile_column {
 			flex-direction: column;

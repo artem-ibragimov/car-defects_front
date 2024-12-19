@@ -76,7 +76,7 @@
 			<label for={input_id}>{label}</label>
 		{/if}
 		<input
-			class="input input-bordered w-full input-lg"
+			class="input input-bordered w-full"
 			bind:this={input}
 			{disabled}
 			id={input_id}

@@ -3,6 +3,7 @@
 	import { _ } from 'svelte-i18n';
 
 	export let pageUrl: string;
+	export let className: string;
 
 	let { selectedDetailEntityName } = defectStore;
 
@@ -39,7 +40,7 @@
 </svelte:head>
 
 {#if $selectedDetailEntityName}
-	<div class="DefectCategoryLinks text-sm breadcrumbs flex-wrap">
+	<div class={`DefectCategoryLinks text-sm breadcrumbs flex-wrap" ${className}`}>
 		<ul>
 			{#each variants as v}
 				<li>
