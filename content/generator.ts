@@ -56,7 +56,6 @@ function generateTopics(topics) {
 	return generateByTopic(unposted)
 		.catch(error)
 		.then(() => {
-			return; //!FIXME
 			const unpostedIndex = topics.findIndex((t) => t == unposted);
 			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 			info(`✅ ${unposted}`);
@@ -66,10 +65,8 @@ function generateTopics(topics) {
 }
 
 function generateByTopic(topic: string) {
-	return Promise.resolve(['lexus is', 'audi a4'])
-		// TODO
-		// chatGpt
-		// .getCars(topic)
+	return chatGpt
+		.getCars(topic)
 		.then((cars = []) => {
 			if (topic.includes(' vs ')) {
 				return cars.slice(0, topic.split(' vs ').length);
@@ -112,6 +109,9 @@ function generateByTopic(topic: string) {
 							article.needVideo && (() => {
 								const youtube = new Youtube(process.env.YOUTUBE_API_KEY as string, car_footage_path);
 								const video = new Video({
+									title: article.title,
+									keywords: article.keywords,
+									description: article.description,
 									name: article.name,
 									key: article.key,
 									defects,
@@ -137,13 +137,6 @@ function generateByTopic(topic: string) {
 									.then(() => {
 										if (video.isVideoExists) { return; }
 										return video.generateVideo(youtube.getVideo, hash)
-											// return chain(
-											// 	video.cars.map((car) =>
-											// 		() => youtube.getVideos(car).then(info)
-											// 	))
-											// 	.then(() => video.generateVideo(youtube.getVideos))
-											.then(info);
-										// return video.generateVideo();
 									});
 							})()
 						]) as unknown as Promise<void>

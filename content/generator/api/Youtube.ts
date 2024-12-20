@@ -21,13 +21,6 @@ export class Youtube {
       if (!existsSync(directory)) {
          mkdirSync(directory);
       }
-      const downloadedVideos = readdirSync(directory);
-      if (downloadedVideos.length > 10) {
-         const videos = downloadedVideos.filter((name) => !name.includes('.DS_Store'));
-         const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-         return Promise.resolve(resolve(directory, randomVideo));
-      }
-
       return this.searchVideos(query)
          // .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
          .then((videos) => videos.sort(() => Math.random() - 0.5))
@@ -44,6 +37,13 @@ export class Youtube {
                throw new Error('no video path!');
             }
             return path;
+         }).catch(() => {
+            const downloadedVideos = readdirSync(directory);
+            if (downloadedVideos.length > 0) {
+               const videos = downloadedVideos.filter((name) => !name.includes('.DS_Store'));
+               const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+               return Promise.resolve(resolve(directory, randomVideo));
+            }
          });
    };
 
@@ -84,10 +84,10 @@ export class Youtube {
       const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
       return ytdl.getInfo(videoUrl)
          .then((videoInfo) => {
-            const format = videoInfo.formats.find(f => f.width && f.height && f.width < f.height && f.container === 'mp4');
+            let format = videoInfo.formats.find(f => f.width && f.height && f.width < f.height && f.container === 'mp4');
 
             if (!format) {
-               return Promise.resolve(null);
+               format = videoInfo.formats.find(f => f.container === 'mp4');
             }
 
             const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);

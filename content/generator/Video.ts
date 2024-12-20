@@ -21,6 +21,9 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 type Key = 'age' | 'mileage';
 
 type Config = {
+   title: string,
+   keywords: string,
+   description: string,
    name: string;
    key: Key;
    defects: Record<string, Record<string, string>>;
@@ -78,7 +81,10 @@ export class Video {
          .then((script) => { this.setScript(script); });
    };
    setScript = (script: string) => {
-      this.script = script.slice(script.indexOf('<script>') + '<script>'.length, script.lastIndexOf('</script>')).trim();
+      this.script = script
+         .slice(script.indexOf('<script>') + '<script>'.length, script.lastIndexOf('</script>'))
+         .trim()
+         .replaceAll('10,000', '10 thousands');
       this.scene_breakdown = script
          .slice(script.indexOf('<scene_breakdown>') + '<scene_breakdown>'.length, script.lastIndexOf('</scene_breakdown>'))
          .trim()
@@ -362,6 +368,7 @@ export class Video {
             const outputFile = resolve(folder, `standardized_${index}.mp4`);
             ffmpeg(file)
                .videoCodec('h264_videotoolbox')
+               .videoFilter('crop=1080:1920:(in_w-out_w)/2:0')
                .outputOptions([
                   '-vf scale=1080:1920',
                   '-r 30',  // Set frame rate to 30fps,
@@ -444,12 +451,12 @@ export class Video {
                      const box = await chart.boundingBox();
 
                      if (box) {
-                        const startX = box.x;
-                        const startY = 100 + box.height / 2; // Центр по вертикали
+                        const startX = 70;
+                        const startY = box.height * 0.75;
                         const endX = box.x + box.width;
 
                         // Двигаем мышь слева направо
-                        for (let x = startX; x <= endX; x += 10) {
+                        for (let x = startX; x <= endX; x += 7) {
                            await page.mouse.down();
                            await page.mouse.move(x, startY);
                            await page.mouse.up();
@@ -461,7 +468,7 @@ export class Video {
                   // Ждем окончания скринкаста
                   return Promise.race([charting, capturing]);
                })
-               .then(() => browser.close());
+               // .then(() => browser.close());
          });
 
       return browsering;
@@ -555,14 +562,14 @@ ${this.cars}
       [fragment duration time in seconds] - [youtube video footage search query] or "chart"
 
       Example:
-      2 - audi a4
-      4 - lexus is
+      2 - <car 1 name>
+      4 - <car 2 name>
       7 - chart
-      1 - audi a4
-      5 - lexus is
-      3 - audi a4
-      8 - lexus is
-      5 - audi a4
+      1 - <car 2 name>
+      5 - <car 1 name>
+      3 - <car 2 name>
+      8 - <car 1 name>
+      5 - <car 2 name>
 
       Ensure that the scene breakdown covers the entire duration of the video and alternates between the cars or their charts.
       Keep in mind that the narrator will be reading the script at 2.6 words per second, so adjust the duration of the scenes accordingly.
