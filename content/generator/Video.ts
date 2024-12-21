@@ -170,7 +170,6 @@ export class Video {
             return this.recordCharts({ path, url: hash, duration });
          });
       return Promise.all(chartsRendering).then(() => {
-         // return;
          const videosGetting: Promise<[number, string]>[] = carScenes.map((scene) => {
             if (scene.path) {
                return Promise.resolve([scene.duration, scene.path]);
@@ -233,7 +232,9 @@ export class Video {
                         console.log('Progress:', progress.timemark);
                      })
                      .on('end', res)
-                     .on('error', rej)
+                     .on('error', (e) => {
+                        rej(e);
+                     })
                      .save(this.videoPath);
                });
             })
@@ -246,187 +247,57 @@ export class Video {
       });
    }
 
-   private generateChart = ({
-      car,
-      defects,
-      path,
-      duration
-   }: {
-      path: string;
-      defects: Record<string, Record<string, string>>;
-      car: string;
-      duration: number;
-   }) => {
-      const folder = resolve(this.chartFolder, car);
-      if (!existsSync(folder)) {
-         mkdirSync(folder);
-      }
-      const width = 1080;
-      const height = 1920;
-      const fps = 60;
-      const totalFrames = duration * fps;
-
-      const barColors = [
-         '#4dc9f6',
-         '#f67019',
-         // '#f53794',
-         '#537bc4',
-         '#acc236',
-         '#166a8f',
-         '#00a950',
-         '#58595b',
-         '#8549ba'
-      ];
-      const BG = '#fbf9fa';
-      const axes: { y: string; x: string; } = { x: `Car ${this.cfg.key}`, y: 'Defects amount' };
-      const configuration = {
-         type: 'bar',
-         options: {
-            aspectRatio: 1,
-            maintainAspectRatio: false,
-            responsive: true,
-            layout: {
-               padding: 10
-            },
-            backgroundColor: BG,
-            plugins: {
-               datalabels: {
-                  color: 'black',
-                  font: {
-                     size: 54,
-                     weight: 'bold'
-                  },
-                  // clamp: true,
-                  anchor: 'end', // Расположение текста
-                  align: 'top', // Выравнивание текста
-                  formatter: ({ y }: { y: string; }) => Number(y).toFixed(2) // Отображаемые данные
-               },
-               title: {
-                  display: true,
-                  text: 'Service Calls',
-                  font: {
-                     size: 48 // Increase title font size
-                  }
-               },
-               tooltip: {
-                  display: true,
-                  text: 'Service Calls'
-               },
-               legend: {
-                  position: 'bottom',
-                  display: true,
-                  labels: {
-                     font: {
-                        size: 48, // Increase legend font size
-                        family: 'Arial' // Optionally set a font family
-                     }
-                  }
-               }
-            },
-            scales: {
-               x: {
-                  title: {
-                     display: true,
-                     text: axes.x,
-                     font: {
-                        size: 42 // Increase X-axis title font size
-                     }
-                  }
-               },
-               y: {
-                  max:
-                     Math.max(
-                        ...Object.values(this.cfg.defects)
-                           .map((v) => Object.values(v).map(Number))
-                           .flat()
-                     ) * 2,
-                  min: 0,
-                  title: {
-                     display: true,
-                     text: axes.y,
-                     font: {
-                        size: 42 // Increase X-axis title font size
-                     }
-                  }
-               }
-            }
-         }
-      };
-
-      const chartJSNodeCanvas = new ChartJSNodeCanvas({
-         backgroundColour: BG,
-         width,
-         height,
-         chartCallback(chartjs) {
-            chartjs.register(ChartDataLabels);
-         }
-      });
-
-      const tempFolder = `${folder}_temp`;
-      if (!existsSync(tempFolder)) {
-         mkdirSync(tempFolder);
-      }
-      const framesRenderign = Array.from({ length: totalFrames }).map((_, frameIndex) => {
-         const step = (frameIndex + 1) / totalFrames;
-         const framePath = `${tempFolder}/frame_${String(frameIndex).padStart(4, '0')}.png`;
-         return chartJSNodeCanvas
-            .renderToBuffer({
-               ...configuration,
-               data: {
-                  datasets: Object.entries(defects).map(([label, data], i) => {
-                     return {
-                        label,
-                        data: Object.entries(data).map(([x, y]) => ({
-                           x,
-                           y: Number(y) * 0.8 + Number(y) * 0.2 * step
-                        })),
-                        borderColor: barColors[i],
-                        borderWidth: 1,
-                        backgroundColor: `${barColors[i]}f0`
-                     };
-                  })
-               }
-            })
-            .then((buffer) => writeFile(framePath, buffer));
-      });
-      return Promise.all(framesRenderign)
-         .then(
-            () =>
-               new Promise<void>((res, reject) => {
-                  ffmpeg()
-                     .input(`${tempFolder}/frame_%04d.png`)
-                     .inputOptions([`-framerate ${fps}`])
-                     .outputOptions(['-c:v libx264', `-r ${fps}`, '-pix_fmt yuv420p'])
-                     .output(path)
-                     .on('end', res as () => void)
-                     .on('error', (e) => {
-                        console.error(e);
-                        res();
-                     })
-                     .run();
-               })
-         )
-         .then(() => rmSync(tempFolder, { recursive: true, force: true }));
-   };
-
    private preprocessVideos(videoFiles: [number, string][], folder: string): Promise<string[]> {
       const processing = videoFiles.map(([duration, file], index) => {
-         return new Promise<string>((res, reject) => {
-            const outputFile = resolve(folder, `standardized_${index}.mp4`);
-            ffmpeg(file)
-               .videoCodec('h264_videotoolbox')
-               .videoFilter('crop=1080:1920:(in_w-out_w)/2:0')
-               .outputOptions([
-                  // '-vf scale=1080:1920',
-                  '-r 30', // Set frame rate to 30fps,
-                  `-t ${duration}`
-               ])
-               .noAudio() // Explicitly state there is no audio
-               .on('end', () => {
-                  res(outputFile);
-               })
-               .on('error', reject)
-               .save(outputFile);
+         return new Promise<{ cropHeight: number, cropWidth: number, xOffset: number, yOffset: number; }>((resolve, reject) => {
+            ffmpeg.ffprobe(file, (err, metadata) => {
+               if (err) {
+                  reject('Error reading metadata:', err);
+                  return;
+               }
+
+               const inputWidth = Number(metadata.streams[0].width);
+               const inputHeight = Number(metadata.streams[0].height);
+               const ar = inputWidth / inputHeight;
+               let cropWidth, cropHeight, xOffset, yOffset = 0;
+
+               if (ar > (9 / 16)) {
+                  // Wider than 9:16 -> crop width
+                  cropHeight = inputHeight;
+                  cropWidth = Math.floor(inputHeight * 9 / 16);
+                  xOffset = Math.floor((inputWidth - cropWidth) / 2);
+                  yOffset = 0;
+                  resolve({ cropHeight, cropWidth, xOffset, yOffset });
+               } else {
+                  // Taller than 9:16 -> crop height
+                  cropWidth = inputWidth;
+                  cropHeight = Math.floor(inputWidth * 16 / 9);
+                  xOffset = 0;
+                  yOffset = Math.floor((inputHeight - cropHeight) / 2);
+                  resolve({ cropHeight, cropWidth, xOffset, yOffset });
+               }
+            });
+         }).then(({ cropHeight, cropWidth, xOffset, yOffset }) => {
+            return new Promise<string>((res, reject) => {
+               const outputFile = resolve(folder, `standardized_${index}.mp4`);
+               ffmpeg(file)
+                  .videoCodec('h264_videotoolbox')
+                  .videoFilter(`crop=${cropWidth}:${cropHeight}:${xOffset}:${yOffset},scale=1080:1920`)
+                  .outputOptions([
+                     // '-vf scale=1080:1920',
+                     // `-vf crop=ih*16/9:iw,scale=1080:1920`,
+                     '-r 30', // Set frame rate to 30fps,
+                     `-t ${duration}`
+                  ])
+                  .noAudio() // Explicitly state there is no audio
+                  .on('end', () => {
+                     res(outputFile);
+                  })
+                  .on('error', (e) => {
+                     reject(e);
+                  })
+                  .save(outputFile);
+            });
          });
       });
 
@@ -468,11 +339,11 @@ export class Video {
             console.log('goto', url);
             return page.goto(url, { waitUntil: 'networkidle2' }).then(async () => {
                await installMouseHelper(page);
-               const ancor = 'div.EntitySelector';
+               await page.waitForSelector('div.Selector');
                await page.evaluate(() => {
-                  const chart = document.querySelector('div.EntitySelector');
+                  const chart = document.querySelector('div.Selector');
                   if (chart) {
-                     chart.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                     chart.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                });
 
@@ -480,7 +351,7 @@ export class Video {
                   (input) =>
                      new Promise((resolve, reject) => {
                         exec(
-                           `ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i ${input} -y -vcodec h264_videotoolbox -filter:v crop=${Math.round((viewport.height / 16) * 9)}:${viewport.height}:${position.x}:${position.y},scale=720:1280 -t ${duration} ${path}`,
+                           `ffmpeg -f avfoundation -framerate 30 -video_size 2560x1600 -pix_fmt nv12 -probesize 50M -analyzeduration 100M -i ${input} -y -vcodec h264_videotoolbox -filter:v crop=720:1280:${position.x}:${position.y},scale=1080:1920 -t ${duration} ${path}`,
                            (err, stdout, stderr) => {
                               if (err) {
                                  return reject(err);
@@ -493,11 +364,12 @@ export class Video {
                );
 
                const charting = (async () => {
+                  const anchor = 'div.Chart';
                   // Ждем появления элемента
-                  await page.waitForSelector(ancor);
+                  await page.waitForSelector(anchor);
 
                   // Перемещаем мышь на элемент div.Chart
-                  const chart = await page.$(ancor);
+                  const chart = await page.$(anchor);
                   if (!chart) {
                      return;
                   }
@@ -507,8 +379,8 @@ export class Video {
                   //    return new Promise((resolve) => setTimeout(resolve, 30000));
                   // });
                   if (box) {
-                     const startX = 70;
-                     const startY = 568;
+                     const startX = 71;
+                     const startY = 390;
                      const endX = box.x + box.width;
 
                      // Двигаем мышь слева направо
@@ -643,6 +515,169 @@ ${this.cars}
          script: this.scriptPrompt
       };
    }
+
+   // private generateChart = ({
+   //    car,
+   //    defects,
+   //    path,
+   //    duration
+   // }: {
+   //    path: string;
+   //    defects: Record<string, Record<string, string>>;
+   //    car: string;
+   //    duration: number;
+   // }) => {
+   //    const folder = resolve(this.chartFolder, car);
+   //    if (!existsSync(folder)) {
+   //       mkdirSync(folder);
+   //    }
+   //    const width = 1080;
+   //    const height = 1920;
+   //    const fps = 60;
+   //    const totalFrames = duration * fps;
+
+   //    const barColors = [
+   //       '#4dc9f6',
+   //       '#f67019',
+   //       // '#f53794',
+   //       '#537bc4',
+   //       '#acc236',
+   //       '#166a8f',
+   //       '#00a950',
+   //       '#58595b',
+   //       '#8549ba'
+   //    ];
+   //    const BG = '#fbf9fa';
+   //    const axes: { y: string; x: string; } = { x: `Car ${this.cfg.key}`, y: 'Defects amount' };
+   //    const configuration = {
+   //       type: 'bar',
+   //       options: {
+   //          aspectRatio: 1,
+   //          maintainAspectRatio: false,
+   //          responsive: true,
+   //          layout: {
+   //             padding: 10
+   //          },
+   //          backgroundColor: BG,
+   //          plugins: {
+   //             datalabels: {
+   //                color: 'black',
+   //                font: {
+   //                   size: 54,
+   //                   weight: 'bold'
+   //                },
+   //                // clamp: true,
+   //                anchor: 'end', // Расположение текста
+   //                align: 'top', // Выравнивание текста
+   //                formatter: ({ y }: { y: string; }) => Number(y).toFixed(2) // Отображаемые данные
+   //             },
+   //             title: {
+   //                display: true,
+   //                text: 'Service Calls',
+   //                font: {
+   //                   size: 48 // Increase title font size
+   //                }
+   //             },
+   //             tooltip: {
+   //                display: true,
+   //                text: 'Service Calls'
+   //             },
+   //             legend: {
+   //                position: 'bottom',
+   //                display: true,
+   //                labels: {
+   //                   font: {
+   //                      size: 48, // Increase legend font size
+   //                      family: 'Arial' // Optionally set a font family
+   //                   }
+   //                }
+   //             }
+   //          },
+   //          scales: {
+   //             x: {
+   //                title: {
+   //                   display: true,
+   //                   text: axes.x,
+   //                   font: {
+   //                      size: 42 // Increase X-axis title font size
+   //                   }
+   //                }
+   //             },
+   //             y: {
+   //                max:
+   //                   Math.max(
+   //                      ...Object.values(this.cfg.defects)
+   //                         .map((v) => Object.values(v).map(Number))
+   //                         .flat()
+   //                   ) * 2,
+   //                min: 0,
+   //                title: {
+   //                   display: true,
+   //                   text: axes.y,
+   //                   font: {
+   //                      size: 42 // Increase X-axis title font size
+   //                   }
+   //                }
+   //             }
+   //          }
+   //       }
+   //    };
+
+   //    const chartJSNodeCanvas = new ChartJSNodeCanvas({
+   //       backgroundColour: BG,
+   //       width,
+   //       height,
+   //       chartCallback(chartjs) {
+   //          chartjs.register(ChartDataLabels);
+   //       }
+   //    });
+
+   //    const tempFolder = `${folder}_temp`;
+   //    if (!existsSync(tempFolder)) {
+   //       mkdirSync(tempFolder);
+   //    }
+   //    const framesRenderign = Array.from({ length: totalFrames }).map((_, frameIndex) => {
+   //       const step = (frameIndex + 1) / totalFrames;
+   //       const framePath = `${tempFolder}/frame_${String(frameIndex).padStart(4, '0')}.png`;
+   //       return chartJSNodeCanvas
+   //          .renderToBuffer({
+   //             ...configuration,
+   //             data: {
+   //                datasets: Object.entries(defects).map(([label, data], i) => {
+   //                   return {
+   //                      label,
+   //                      data: Object.entries(data).map(([x, y]) => ({
+   //                         x,
+   //                         y: Number(y) * 0.8 + Number(y) * 0.2 * step
+   //                      })),
+   //                      borderColor: barColors[i],
+   //                      borderWidth: 1,
+   //                      backgroundColor: `${barColors[i]}f0`
+   //                   };
+   //                })
+   //             }
+   //          })
+   //          .then((buffer) => writeFile(framePath, buffer));
+   //    });
+   //    return Promise.all(framesRenderign)
+   //       .then(
+   //          () =>
+   //             new Promise<void>((res, reject) => {
+   //                ffmpeg()
+   //                   .input(`${tempFolder}/frame_%04d.png`)
+   //                   .inputOptions([`-framerate ${fps}`])
+   //                   .outputOptions(['-c:v libx264', `-r ${fps}`, '-pix_fmt yuv420p'])
+   //                   .output(path)
+   //                   .on('end', res as () => void)
+   //                   .on('error', (e) => {
+   //                      console.error(e);
+   //                      res();
+   //                   })
+   //                   .run();
+   //             })
+   //       )
+   //       .then(() => rmSync(tempFolder, { recursive: true, force: true }));
+   // };
 }
 
 async function installMouseHelper(page) {

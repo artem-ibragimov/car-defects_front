@@ -1,5 +1,5 @@
 import ytdl from '@distube/ytdl-core';
-import { createWriteStream, existsSync, mkdirSync, readdirSync } from 'fs';
+import { createWriteStream, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, unlinkSync } from 'fs';
 import { resolve } from 'path';
 
 const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search`;
@@ -9,7 +9,7 @@ export class Youtube {
 	constructor(
 		private apiKey: string,
 		private car_footage_path: string
-	) {}
+	) { }
 
 	getVideo = (query: string) => {
 		const directory = resolve(this.car_footage_path, query);
@@ -41,14 +41,24 @@ export class Youtube {
 					if (downloadedVideos.length == 0) {
 						throw new Error('no downloaded videos!');
 					}
-					const videos = downloadedVideos.filter((name) => !name.includes('.DS_Store'));
-					const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-					return Promise.resolve(resolve(directory, randomVideo));
+					const videos = downloadedVideos
+						.filter((name) => !name.includes('.DS_Store'))
+						.map((v) => resolve(directory, v));
+					videos.forEach((v) => {
+						const file = statSync(v);
+						if (file.size == 0) {
+							unlinkSync(v);
+						}
+					});
+					if (videos.length === 0) {
+						throw new Error(`not enought videos for ${directory}`);
+					}
+					return videos[Math.floor(Math.random() * videos.length)];
 				})
 		);
 	};
 
-	private searchVideos(query: string): Promise<{ videoId; title }[]> {
+	private searchVideos(query: string): Promise<{ videoId; title; }[]> {
 		const params = new URLSearchParams({
 			part: 'snippet',
 			q: query,
@@ -85,29 +95,29 @@ export class Youtube {
 
 	private downloadVideo =
 		(directory: string) =>
-		({ videoId, title }: { videoId: string; title: string }) => {
-			const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-			return ytdl.getInfo(videoUrl).then((videoInfo) => {
-				let format = videoInfo.formats.find(
-					(f) => f.width && f.height && f.width < f.height && f.container === 'mp4'
-				);
+			({ videoId, title }: { videoId: string; title: string; }) => {
+				const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+				return ytdl.getInfo(videoUrl).then((videoInfo) => {
+					let format = videoInfo.formats.find(
+						(f) => f.width && f.height && f.width < f.height && f.container === 'mp4'
+					);
 
-				if (!format) {
-					format = videoInfo.formats.find((f) => f.container === 'mp4');
-				}
+					if (!format) {
+						format = videoInfo.formats.find((f) => f.container === 'mp4');
+					}
 
-				const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);
-				const readable = ytdl(videoUrl, { format });
-				const writable = createWriteStream(outputPath);
+					const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);
+					const readable = ytdl(videoUrl, { format });
+					const writable = createWriteStream(outputPath);
 
-				return new Promise<string | null>((resolve) => {
-					readable.pipe(writable);
-					writable.on('finish', () => resolve(outputPath));
-					writable.on('error', (e) => {
-						console.error(e);
-						resolve(null);
+					return new Promise<string | null>((resolve) => {
+						readable.pipe(writable);
+						writable.on('finish', () => resolve(outputPath));
+						writable.on('error', (e) => {
+							console.error(e);
+							resolve(null);
+						});
 					});
 				});
-			});
-		};
+			};
 }
