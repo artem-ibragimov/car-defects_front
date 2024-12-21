@@ -49,7 +49,7 @@
 		</div>
 		<div class="MainContainer_row MainContainer_mobile_column-reverse">
 			<div class="MainContainer_column">
-				<DefectCategoryLinks {pageUrl} className="MainContainer_mobile_invisible"/>
+				<DefectCategoryLinks {pageUrl} className="MainContainer_mobile_invisible" />
 				{#if !noChartData}
 					<div
 						class="MainContainer_row MainContainer_space-between MainContainer_mobile_invisible"
@@ -83,7 +83,7 @@
 				</div>
 				{#if !noChartData}
 					{#await import('$lib/view/chart/EntitySelector.svelte') then { default: EntitySelector }}
-						<EntitySelector />
+						<EntitySelector className="EntitySelector" />
 					{/await}
 					<!-- <EntitySelector /> -->
 					<Button outline href={ROUTE_NAMES.ADD_DATA}>{$_('label.add_data')}</Button>
@@ -100,9 +100,7 @@
 			</div>
 			{#if !noChartData}
 				<div>
-					<div
-						class="MainContainer_sidebar MainContainer_mobile_invisible"
-					>
+					<div class="MainContainer_sidebar MainContainer_mobile_invisible">
 						{#await import('$lib/view/chart/DefectCategorySelector.svelte') then { default: DefectCategorySelector }}
 							<DefectCategorySelector />
 						{/await}

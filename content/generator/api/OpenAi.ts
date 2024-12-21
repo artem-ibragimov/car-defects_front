@@ -9,7 +9,7 @@ const root = resolve('content', 'generator', 'ai', 'openai');
 
 export class ChatGPT {
 	private openai: OpenAI;
-	constructor({ apiKey, organization }: { apiKey: string; organization: string; }) {
+	constructor({ apiKey, organization }: { apiKey: string; organization: string }) {
 		this.openai = new OpenAI({
 			apiKey,
 			organization,
@@ -21,7 +21,7 @@ export class ChatGPT {
 		system: string;
 		contents: Record<string, string>;
 	}): Promise<Record<string, string>> => {
-		const messages: { name: string; content: string; role: 'user'; }[] = Object.entries(
+		const messages: { name: string; content: string; role: 'user' }[] = Object.entries(
 			params.contents
 		).map(([name, content]) => ({ name, content, role: 'user' }));
 

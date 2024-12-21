@@ -147,7 +147,7 @@
 	}
 	.DefectDetails__bar-sticky {
 		position: sticky;
-		top: 0;
+		top: 74px;
 	}
 	@media (min-width: 500px) {
 		.DefectDetails__bar-sticky {

@@ -10,12 +10,13 @@
 		icon?: string;
 	}[] = [];
 	export let multiselect: boolean = false;
-	$: className = multiselect ? 'checkbox ' : 'toggle ';
+	$: inputCassName = multiselect ? 'checkbox ' : 'toggle ';
 	export let column: boolean = false;
 	export let needApplyButton = false;
 	export let applyButtonLabel = $_('label.apply');
 	export let disabled = false;
 	export let hidden = false;
+	export let className = '';
 
 	let isApplied = true;
 
@@ -54,7 +55,7 @@
 </script>
 
 {#if variants.length !== 0}
-	<div class="flex-column">
+	<div class={`Selector ${className} flex-column`}>
 		<div
 			class="join flex-wrap"
 			class:sm:join-vertical={column}
@@ -68,7 +69,7 @@
 						style={v.color && v.selected ? `background: ${v.color}` : ''}
 						type="checkbox"
 						checked={v.selected}
-						class={className}
+						class={inputCassName}
 						on:change={disabled ? null : () => onselect(v.value)}
 					/>
 				</label>

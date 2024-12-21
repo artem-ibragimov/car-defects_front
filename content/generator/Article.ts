@@ -6,64 +6,70 @@ type DefectData = Record<string, Record<string, string>>;
 export type Locale = 'en' | 'ru' | 'es' | 'de';
 
 const LOCALED_QUERY: Record<Locale, string> = {
-   en: `Write in English`,
-   ru: `Write in Russian`,
-   de: `Write in German`,
-   es: `Write in Spanish`
+	en: `Write in English`,
+	ru: `Write in Russian`,
+	de: `Write in German`,
+	es: `Write in Spanish`
 };
 
 export class Article {
-   public readonly name: string;
-   public readonly isExists: boolean = false;
-   readonly locale: Locale = 'en';
-   private topic: string;
-   private hash: string;
-   private defects: DefectData;
-   private cars: string[];
-   title: string;
-   keywords: string;
-   description: string;
-   key: Key;
+	public readonly name: string;
+	public readonly isExists: boolean = false;
+	readonly locale: Locale = 'en';
+	private topic: string;
+	private hash: string;
+	private defects: DefectData;
+	private cars: string[];
+	title: string;
+	keywords: string;
+	description: string;
+	key: Key;
 
-   constructor(cfg: {
-      topic: string;
-      hash: string;
-      defects: DefectData;
-      cars: string[];
-      locale?: Locale;
-      dataParams: Partial<{ by_mileage: boolean; by_age: boolean; }>;
-   }) {
-      this.name = `${cfg.topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
-      this.topic = cfg.topic;
-      this.defects = cfg.defects;
-      this.cars = cfg.cars;
-      this.hash = cfg.hash;
-      this.locale = cfg.locale || 'en';
-      this.key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
-      try {
-         const data = readFileSync(this.filename, 'utf8');
-         const json = JSON.parse(data);
-         this.isExists = !!json.text.article[this.name];
-      } catch { }
-   }
+	constructor(cfg: {
+		topic: string;
+		hash: string;
+		defects: DefectData;
+		cars: string[];
+		locale?: Locale;
+		dataParams: Partial<{ by_mileage: boolean; by_age: boolean }>;
+	}) {
+		this.name = `${cfg.topic}`.replace(/\?|\.|\!|\s/gi, '-').toLowerCase();
+		this.topic = cfg.topic;
+		this.defects = cfg.defects;
+		this.cars = cfg.cars;
+		this.hash = cfg.hash;
+		this.locale = cfg.locale || 'en';
+		this.key = cfg.dataParams.by_mileage ? 'mileage' : 'age';
+		try {
+			const data = readFileSync(this.filename, 'utf8');
+			const json = JSON.parse(data);
+			const article = json.text.article[this.name];
+			this.isExists = !!article;
+			if (this.isExists) {
+				this.title = article.title;
+				this.description = article.description;
+				this.keywords = article.keywords;
+			}
+		} catch {}
+	}
 
-   static readonly LOCALE: Record<Locale, string> = {
-      en: `Write in English`,
-      ru: `Write in Russian`,
-      de: `Write in German`,
-      es: `Write in Spanish`
-   };
+	static readonly LOCALE: Record<Locale, string> = {
+		en: `Write in English`,
+		ru: `Write in Russian`,
+		de: `Write in German`,
+		es: `Write in Spanish`
+	};
 
-   get needPoster() {
-      return this.locale === 'en';
-   }
+	get needPoster() {
+		return this.locale === 'en';
+	}
 
-   get needVideo() {
-      return this.locale === 'en';
-   }
+	get needVideo() {
+		return this.locale === 'en';
+	}
 
-   get system() {
-      return `
+	get system() {
+		return `
       You are an experienced automotive writer tasked with creating 
       an SEO-optimized content on car reliability. 
       Your writing should be informative, objective, and engaging, 
@@ -110,23 +116,23 @@ export class Article {
       car buyers comparing the reliability of different models.
       ${LOCALED_QUERY[this.locale]}
       `;
-   }
+	}
 
-   get contents(): Contents {
-      return {
-         description: this.descriptionPrompt,
-         title: this.titlePrompt,
-         keywords: this.keywordsPrompt,
-         ...this.chapters
-      };
-   }
+	get contents(): Contents {
+		return {
+			description: this.descriptionPrompt,
+			title: this.titlePrompt,
+			keywords: this.keywordsPrompt,
+			...this.chapters
+		};
+	}
 
-   get poster() {
-      return `${this.cars.join(' vs ')} as an article poster, comics style, without text, fullscreen, no paddings –ar 2:1 `;
-   }
+	get poster() {
+		return `${this.cars.join(' vs ')} as an article poster, comics style, without text, fullscreen, no paddings –ar 2:1 `;
+	}
 
-   private get titlePrompt() {
-      return `You are tasked with generating an SEO-optimized title for a technical article about about car reliability comparison. 
+	private get titlePrompt() {
+		return `You are tasked with generating an SEO-optimized title for a technical article about about car reliability comparison. 
       The specific topic of the article is provided below:
          <topic>
          ${this.topic}
@@ -143,9 +149,9 @@ export class Article {
          Your title should be no longer than 60 characters to ensure it displays properly in search engine results.
          Do not include any other options or variations. 
          Provide only one title option.`;
-   }
-   private get descriptionPrompt() {
-      return `
+	}
+	private get descriptionPrompt() {
+		return `
       You are tasked with generating an SEO description for a technical article on car reliability, focusing on the specific topic provided. This description should be optimized for search engines while accurately representing the content of the article.
 
       Here are the guidelines for creating an effective SEO description:
@@ -168,9 +174,9 @@ export class Article {
 
       Do not include any other options or variations. 
       Provide only one SEO description that best fits the given topic and guidelines.`;
-   }
-   private get keywordsPrompt() {
-      return `You are tasked with generating a short list of SEO keywords for a technical article. Your goal is to create a concise, relevant set of keywords that will help improve the article's search engine visibility.
+	}
+	private get keywordsPrompt() {
+		return `You are tasked with generating a short list of SEO keywords for a technical article. Your goal is to create a concise, relevant set of keywords that will help improve the article's search engine visibility.
 
          Guidelines for generating SEO keywords:
          - Focus on the main topic and key concepts of the article
@@ -189,10 +195,10 @@ export class Article {
          Based on this topic, generate a list of SEO keywords that meet the above guidelines. 
          Remember to keep the list to fewer than 5 keywords and separate them with commas.
          Do not include any other options or variations. `;
-   }
-   private get chapters(): Chapters {
-      return {
-         service_call_analysis: `Your task is to write a chapter titled "Service Call Analysis" that thoroughly examines this data. 
+	}
+	private get chapters(): Chapters {
+		return {
+			service_call_analysis: `Your task is to write a chapter titled "Service Call Analysis" that thoroughly examines this data. 
             In your analysis, consider the following:
 
             - Highlight any significant differences between the models.
@@ -233,19 +239,20 @@ export class Article {
             review it to ensure it meets all requirements and is engaging, 
             informative, and optimized for search engines.`,
 
-         maintenance_cost_comparison: `You are an expert automotive content writer tasked with creating an SEO-optimized chapter titled 
+			maintenance_cost_comparison: `You are an expert automotive content writer tasked with creating an SEO-optimized chapter titled 
             "Maintenance Cost Comparison" for a technical article about car reliability comparison. 
             Your goal is to produce informative, well-structured content that engages readers and ranks well in search engines.
 
             - Examine the given topic and identify key points to address.
             - Categorize maintenance costs (e.g., routine maintenance, unexpected repairs, age-related issues).
             - Estimate potential maintenance costs based on service call frequency.
-            ${this.key === 'mileage'
-               ? `- Calculate and compare maintenance costs per mile or kilometer for each car model.
+            ${
+							this.key === 'mileage'
+								? `- Calculate and compare maintenance costs per mile or kilometer for each car model.
             - Compare maintenance costs at different mileage points (e.g., 30,000, 60,000, 90,000 miles).
             `
-               : ``
-            }
+								: ``
+						}
             
             - Identify factors that influence maintenance costs for each car model (e.g., build quality, availability of parts).
             - Identify trends in maintenance costs over time for each car model.
@@ -301,7 +308,7 @@ export class Article {
             examples and support your arguments. 
             Use tables  to effectively compare maintenance costs across different car models.
             Format your output using markdown`,
-         deprecation_analysis: `You are an automotive expert tasked with writing an SEO-optimized analysis of car prices and depreciation 
+			deprecation_analysis: `You are an automotive expert tasked with writing an SEO-optimized analysis of car prices and depreciation 
          for a specific list of vehicles.
          This analysis will be part of a larger article comparing cars in terms of long-term reliability. 
          Your goal is to provide valuable insights for readers considering the long-term value of their potential car purchases.
@@ -331,7 +338,7 @@ export class Article {
             - Title
             - Analysis
             - Insights`,
-         common_issues_solutions: `You are tasked with generating an engaging and SEO-friendly "Common Issues and Solutions" chapter 
+			common_issues_solutions: `You are tasked with generating an engaging and SEO-friendly "Common Issues and Solutions" chapter 
             for a technical article comparing the reliability of different car models. 
             Follow these instructions carefully to create high-quality content:
 
@@ -362,7 +369,7 @@ export class Article {
             Your goal is to create a comprehensive yet accessible guide 
             to common car issues and their solutions, 
             tailored to the specific models mentioned in the input data.`,
-         buyers_guide: `You are tasked with generating a useful and engaging SEO chapter titled "Buyer's Guide" 
+			buyers_guide: `You are tasked with generating a useful and engaging SEO chapter titled "Buyer's Guide" 
             for a technical article about car reliability comparison. 
             This guide is intended for potential car buyers and should be based on the provided information and data.
 
@@ -384,7 +391,7 @@ Avoid overly technical language and explain concepts in a way that's accessible 
 Ensure that the content is engaging, 
 informative, and provides clear value to potential 
 car buyers based on the reliability comparison and defects data provided.`,
-         recall_campaigns: `You are tasked with writing an SEO-friendly and engaging chapter 
+			recall_campaigns: `You are tasked with writing an SEO-friendly and engaging chapter 
             titled "Recall campaigns" for an article comparing the reliability of different car models. 
             This chapter will focus on describing recall campaigns for the car models provided. 
             Follow these instructions to create the content:
@@ -423,7 +430,7 @@ car model or manufacturer.
 Format "Comparative Analysis" and "Recall Campaigns"
 in the markdown table, but Summary and Recommendations write as markdown text
 `,
-         faq: `You are tasked with generating an engaging and SEO-friendly FAQ section 
+			faq: `You are tasked with generating an engaging and SEO-friendly FAQ section 
             for a technical article comparing the reliability of different car models. T
             his FAQ will be aimed at potential car buyers. 
             Follow these instructions carefully to create a comprehensive and informative FAQ:
@@ -466,79 +473,78 @@ Do not include any additional commentary or explanations outside of the FAQ cont
 Remember to focus on creating an informative, engaging, 
 and user-friendly FAQ that will be valuable to potential 
 car buyers comparing the reliability of different models.`
-      };
-   }
-   private get filename() {
-      return `src/lib/i18n/article/${this.name}.${this.locale}.json`;
-   }
-   private get commonFile() {
-      return `src/lib/i18n/articles.json`;
-   }
+		};
+	}
+	private get filename() {
+		return `src/lib/i18n/article/${this.name}.${this.locale}.json`;
+	}
+	private get commonFile() {
+		return `src/lib/i18n/articles.json`;
+	}
 
-   private registerArticle({ keywords, title }: { keywords: string; title: string; }) {
-      return readFile(this.commonFile, 'utf-8')
-         .then((v) => JSON.parse(v))
-         .then((json) => {
-            if (!json[this.locale]) {
-               json[this.locale] = {};
-            }
-            json[this.locale][this.name] = {
-               generated: true,
-               cars: this.cars,
-               title,
-               keywords: keywords.split(', '),
-               date: new Date().toISOString()
-            };
-            return json;
-         })
-         .then((json) => writeFile(this.commonFile, JSON.stringify(json, null, 3)))
-         .catch((e) => {
-            debugger;
-         });
-   }
+	private registerArticle({ keywords, title }: { keywords: string; title: string }) {
+		return readFile(this.commonFile, 'utf-8')
+			.then((v) => JSON.parse(v))
+			.then((json) => {
+				if (!json[this.locale]) {
+					json[this.locale] = {};
+				}
+				json[this.locale][this.name] = {
+					generated: true,
+					cars: this.cars,
+					title,
+					keywords: keywords.split(', '),
+					date: new Date().toISOString()
+				};
+				return json;
+			})
+			.then((json) => writeFile(this.commonFile, JSON.stringify(json, null, 3)))
+			.catch((e) => {
+				debugger;
+			});
+	}
 
-   save = (contents: Record<string, string>) => {
-      const { title, keywords, description, ...chapters } = contents as unknown as Contents;
-      this.title = title,
-      this.description = description;
-      this.keywords = keywords;
-      const data = {
-         text: {
-            article: {
-               [this.name]: {
-                  title,
-                  text: Object.values(chapters).join('  \n'),
-                  hash: new URL(this.hash).hash,
-                  keywords,
-                  date: new Date().toISOString(),
-                  description
-               }
-            }
-         }
-      };
+	save = (contents: Record<string, string>) => {
+		const { title, keywords, description, ...chapters } = contents as unknown as Contents;
+		(this.title = title), (this.description = description);
+		this.keywords = keywords;
+		const data = {
+			text: {
+				article: {
+					[this.name]: {
+						title,
+						text: Object.values(chapters).join('  \n'),
+						hash: new URL(this.hash).hash,
+						keywords,
+						date: new Date().toISOString(),
+						description
+					}
+				}
+			}
+		};
 
-      return this.registerArticle({ keywords, title })
-         .then(() => writeFile(this.filename, JSON.stringify(data, null, 3)))
-         .then(() => ({
-            title,
-            keywords,
-            description
-         }));
-   };
+		return this.registerArticle({ keywords, title })
+			.then(() => writeFile(this.filename, JSON.stringify(data, null, 3)))
+			.then(() => ({
+				title,
+				keywords,
+				description
+			}));
+	};
 }
 
 type Contents = Chapters & Meta;
 type Meta = {
-   title: string;
-   keywords: string;
-   description: string;
+	title: string;
+	keywords: string;
+	description: string;
 };
 type Chapters = {
-   service_call_analysis: string;
-   maintenance_cost_comparison: string;
-   common_issues_solutions: string;
-   deprecation_analysis: string;
-   recall_campaigns: string;
-   buyers_guide: string;
-   faq: string;
+	service_call_analysis: string;
+	maintenance_cost_comparison: string;
+	common_issues_solutions: string;
+	deprecation_analysis: string;
+	recall_campaigns: string;
+	buyers_guide: string;
+	faq: string;
 };

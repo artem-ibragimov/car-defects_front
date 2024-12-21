@@ -4,7 +4,7 @@
 	import Logo from './Logo.svelte';
 </script>
 
-<header class="Header" on:click={() => window.location.assign(ROUTE_NAMES.MAIN)}>
+<header class="Header bg-base-200" on:click={() => window.location.assign(ROUTE_NAMES.MAIN)}>
 	<Logo />
 	<h1>
 		{$_('label.main_header')}
@@ -30,6 +30,8 @@
 
 	@media (max-width: 500px) {
 		.Header {
+			position: sticky;
+			top: 0;
 			padding: 0 15px;
 			/* gap: 0; */
 		}
@@ -37,9 +39,9 @@
 			/* width: 35px; */
 		}
 		.Header h1 {
-			font-size: 25px;
+			font-size: 22px;
 			text-align: center;
-			padding: 5px;
+			padding: 4px;
 		}
 	}
 </style>

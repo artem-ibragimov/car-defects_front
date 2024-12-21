@@ -12,7 +12,9 @@ export class AnthropicAI {
 		system?: string;
 		contents: T;
 	}): Promise<T> => {
-		const messages = Object.entries(params.contents).map(([name, content]) => ({ name, content }) as { name: keyof T, content: T[keyof T]; });
+		const messages = Object.entries(params.contents).map(
+			([name, content]) => ({ name, content }) as { name: keyof T; content: T[keyof T] }
+		);
 
 		const generating = messages.map(
 			(message) => (results: T) =>

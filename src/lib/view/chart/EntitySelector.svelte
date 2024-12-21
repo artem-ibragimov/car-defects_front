@@ -2,8 +2,9 @@
 	import { defectStore } from '$lib/store/main.store';
 	import Selector from '$lib/components/Selector.svelte';
 
-	let { colors, entities, selectedEntities } = defectStore.filter.entityParams;
+	export let className = '';
 
+	let { colors, entities, selectedEntities } = defectStore.filter.entityParams;
 	$: variants = Object.keys($entities).map((value) => ({
 		value,
 		selected: $selectedEntities[value],
@@ -12,6 +13,7 @@
 </script>
 
 <Selector
+	{className}
 	multiselect
 	{variants}
 	on:select={({ detail }) => {

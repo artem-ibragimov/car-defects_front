@@ -27,7 +27,7 @@ const chatGpt = new ChatGPT({
 const anthropicAI = new AnthropicAI(process.env.ANTHROPIC_API_KEY as string);
 const playht = new Playht({
 	apiKey: process.env.PLAYHT_API_KEY as string,
-	userId: process.env.PLAYHT_USER_ID as string,
+	userId: process.env.PLAYHT_USER_ID as string
 });
 const car_footage_path = resolve('/Users/artem/project/car_defects/cars_footage');
 const bg_music_folder = resolve('/Users/artem/project/car_defects/soundtrack');
@@ -54,14 +54,14 @@ function generateTopics(topics) {
 		return Promise.resolve(topics);
 	}
 	return generateByTopic(unposted)
-		.catch(error)
 		.then(() => {
 			const unpostedIndex = topics.findIndex((t) => t == unposted);
 			topics[unpostedIndex] = `${topics[unpostedIndex]}:generated`;
 			info(`✅ ${unposted}`);
 			saveTopic(topics);
 			// return generateTopics(topics);
-		});
+		})
+		.catch(error);
 }
 
 function generateByTopic(topic: string) {
@@ -88,57 +88,68 @@ function generateByTopic(topic: string) {
 						Promise.all([
 							// Promise.all([
 							article.needPoster &&
-							chatGpt
-								.generateImg({ name: article.name, prompt: article.poster })
-								.then(info, error),
+								chatGpt
+									.generateImg({ name: article.name, prompt: article.poster })
+									.then(info, error),
 
 							!article.isExists &&
-							anthropicAI
-								.generate({
-									system: article.system,
-									contents: article.contents
-								})
-								// chatGpt
-								// 	.generate({
-								// 		locale: article.locale,
-								// 		system: article.system,
-								// 		contents: article.contents
-								// 	})
-								.then(article.save),
+								anthropicAI
+									.generate({
+										system: article.system,
+										contents: article.contents
+									})
+									// chatGpt
+									// 	.generate({
+									// 		locale: article.locale,
+									// 		system: article.system,
+									// 		contents: article.contents
+									// 	})
+									.then(article.save),
 
-							article.needVideo && (() => {
-								const youtube = new Youtube(process.env.YOUTUBE_API_KEY as string, car_footage_path);
-								const video = new Video({
-									title: article.title,
-									keywords: article.keywords,
-									description: article.description,
-									name: article.name,
-									key: article.key,
-									defects,
-									topic
-								}, bg_music_folder);
-								return video.store()
-									.then(() => {
-										if (video.isScriptExists) {
-											return video.loadScript();
-										}
-										return anthropicAI
-											.generate({ contents: video.contents })
-											.then(video.save)
-											.then(info);
-									})
-									.then(() => {
-										if (!video.isVoiceExists) {
-											return playht
-												.generateVoice(video.voicePath, video.script)
+							article.needVideo &&
+								(() => {
+									const youtube = new Youtube(
+										process.env.YOUTUBE_API_KEY as string,
+										car_footage_path
+									);
+									const video = new Video(
+										{
+											norm: !!dataParams.norm,
+											title: article.title,
+											keywords: article.keywords,
+											description: article.description,
+											name: article.name,
+											key: article.key,
+											defects,
+											topic
+										},
+										bg_music_folder
+									);
+									return video
+										.store()
+										.then(() => {
+											if (video.isScriptExists) {
+												return video.loadScript();
+											}
+											return anthropicAI
+												.generate({ contents: video.contents })
+												.then(video.save)
 												.then(info);
-										}
-									})
-									.then(() => {
-										if (video.isVideoExists) { return; }
-										return video.generateVideo(youtube.getVideo, hash)
-									});
-							})()
+										})
+										.then(() => {
+											if (!video.isVoiceExists) {
+												return playht.generateVoice(video.voicePath, video.script).then(info);
+											}
+										})
+										.then(() => {
+											if (video.isVideoExists) {
+												return;
+											}
+											return video
+												.setDuration()
+												.then(() => video.generateVideo(youtube.getVideo, hash));
+										});
+								})()
 						]) as unknown as Promise<void>
 				);
 			// return Promise.all(articlesGenerating);
