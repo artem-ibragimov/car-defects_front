@@ -1,2227 +1,3067 @@
 {
-	"es": {
-		"japanese-top-selling-compact-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Fiabilidad de los Mejores SUVs Japoneses Compactos",
-			"keywords": [
-				"compact SUVs Japón",
-				"Toyota RAV4 confiabilidad",
-				"Honda CR-V rendimiento",
-				"Subaru Forester durabilidad",
-				"Mazda CX-5 comparativa"
-			],
-			"date": "2024-11-10T05:40:15.941Z"
-		},
-		"mazda-3-reliability-compared-to-honda-civic": {
-			"generated": true,
-			"cars": ["mazda 3", "honda civic", "toyota corolla", "volkswagen jetta"],
-			"title": "Comparativa de fiabilidad: Mazda 3 vs Honda Civic",
-			"keywords": [
-				"mazda 3 reliability",
-				"honda civic durability",
-				"car reliability comparison",
-				"technical performance analysis"
-			],
-			"date": "2024-11-10T06:00:51.661Z"
-		},
-		"mitsubishi-outlander-reliability-comparison": {
-			"generated": true,
-			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
-			"title": "Comparativa de Fiabilidad: Mitsubishi Outlander 2023",
-			"keywords": [
-				"Mitsubishi Outlander fiabilidad",
-				"comparación de fiabilidad de coches",
-				"estadísticas de servicio automotriz",
-				"SUV confiabilidad",
-				"análisis de fiabilidad automotriz"
-			],
-			"date": "2024-11-10T06:01:24.697Z"
-		},
-		"most-and-least-reliable-cars": {
-			"generated": true,
-			"cars": ["toyota camry", "honda accord", "ford fusion", "chevrolet malibu"],
-			"title": "Los coches más confiables y menos confiables revelados",
-			"keywords": [
-				"coches más fiables",
-				"coches menos fiables",
-				"comparación de fiabilidad",
-				"estadísticas de servicio automotriz",
-				"análisis de coches fiables"
-			],
-			"date": "2024-11-10T06:02:14.466Z"
-		},
-		"mercedes-glc-vs-audi-q5-reliability": {
-			"generated": true,
-			"cars": ["mercedes glc", "audi q5"],
-			"title": "Mercedes GLC vs Audi Q5: ¿Cuál es más Confiable en 2024?",
-			"keywords": [
-				"comparación mercedes glc audi q5",
-				"fiabilidad mercedes glc vs q5",
-				"problemas comunes glc q5",
-				"mantenimiento mercedes glc audi q5"
-			],
-			"date": "2024-11-24T13:01:37.205Z"
-		},
-		"off-road-vehicle-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep wrangler", "toyota 4runner", "ford bronco", "chevrolet colorado zr2"],
-			"title": "Comparativa de fiabilidad: 4x4 más seguros 2023",
-			"keywords": [
-				"off-road vehicle reliability",
-				"Jeep Wrangler reliability",
-				"Toyota 4Runner reliability",
-				"Ford Bronco reliability",
-				"Chevrolet Colorado ZR2 durability"
-			],
-			"date": "2024-11-10T06:04:01.842Z"
-		},
-		"pickup-truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Descubre la Fiabilidad de Camionetas: ¿Cuál es la Mejor?",
-			"keywords": [
-				"pickup truck reliability",
-				"Ford F-150 maintenance",
-				"Chevrolet Silverado issues",
-				"Ram 1500 durability",
-				"Toyota Tundra performance"
-			],
-			"date": "2024-11-10T06:06:32.191Z"
-		},
-		"volkswagen-golf-vs-mazda-3": {
-			"generated": true,
-			"cars": ["volkswagen golf", "mazda 3", "honda civic", "toyota corolla"],
-			"title": "Volkswagen Golf vs Mazda 3: ¿Cuál es Más Confiable?",
-			"keywords": [
-				"Volkswagen Golf reliability",
-				"Mazda 3 service calls",
-				"Golf vs Mazda reliability",
-				"car reliability comparison",
-				"compact car maintenance"
-			],
-			"date": "2024-11-10T06:06:53.551Z"
-		},
-		"nissan-altima-vs-toyota-camry-reliability": {
-			"generated": true,
-			"cars": ["nissan altima", "toyota camry", "honda accord", "chevrolet malibu"],
-			"title": "Nissan Altima vs Toyota Camry: ¿Cuál es más fiable?",
-			"keywords": [
-				"Nissan Altima reliability",
-				"Toyota Camry reliability",
-				"Altima vs Camry comparison",
-				"car reliability analysis",
-				"sedan service calls"
-			],
-			"date": "2024-11-10T06:35:59.328Z"
-		},
-		"reliable-family-suvs-compared": {
-			"generated": true,
-			"cars": ["toyota highlander", "honda pilot", "ford explorer", "subaru ascent"],
-			"title": "Comparativa: SUVs Familiares Más Fiables 2023",
-			"keywords": [
-				"reliable family SUVs",
-				"SUV reliability comparison",
-				"family SUV maintenance",
-				"dependable family vehicles",
-				"SUV service calls"
-			],
-			"date": "2024-11-10T06:07:56.513Z"
-		},
-		"reliable-minivans-for-families": {
-			"generated": true,
-			"cars": ["honda odyssey", "toyota sienna", "chrysler pacifica", "kia sedona"],
-			"title": "Minivans Familiares Más Confiables: Comparativa 2023",
-			"keywords": [
-				"minivans familiares confiables",
-				"fiabilidad de minivans",
-				"comparativa minivans",
-				"minivans para familias",
-				"análisis de minivans"
-			],
-			"date": "2024-11-10T06:25:19.703Z"
-		},
-		"suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Comparativa de Fiabilidad de SUVs: ¿Cuál es el Más Confiable?",
-			"keywords": [
-				"SUV reliability comparison",
-				"Toyota RAV4 reliability",
-				"Honda CR-V reliability",
-				"Ford Escape reliability",
-				"Subaru Forester reliability"
-			],
-			"date": "2024-11-11T08:08:21.610Z"
-		},
-		"subaru-forester-vs-toyota-rav4-reliability": {
-			"generated": true,
-			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
-			"title": "Subaru Forester vs Toyota RAV4: ¿Cuál es más fiable?",
-			"keywords": [
-				"Subaru Forester reliability",
-				"Toyota RAV4 reliability",
-				"Subaru vs Toyota reliability",
-				"SUV reliability comparison",
-				"car service calls analysis"
-			],
-			"date": "2024-11-12T08:16:25.357Z"
-		},
-		"toyota-corolla-vs-honda-civic-reliability": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
-			"title": "Toyota Corolla vs Honda Civic: ¿Cuál es más fiable?",
-			"keywords": [
-				"Toyota Corolla reliability",
-				"Honda Civic reliability",
-				"car reliability comparison",
-				"Toyota vs Honda reliability",
-				"compact car reliability"
-			],
-			"date": "2024-11-12T08:19:28.339Z"
-		},
-		"toyota-rav4-vs-honda-cr-v-reliability": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
-			"title": "Toyota RAV4 vs Honda CR-V: ¿Cuál es más confiable?",
-			"keywords": [
-				"Toyota RAV4 reliability",
-				"Honda CR-V reliability",
-				"RAV4 vs CR-V comparison",
-				"car reliability analysis",
-				"SUV reliability ratings"
-			],
-			"date": "2024-11-13T06:55:44.106Z"
-		},
-		"toyota-tundra-vs-nissan-titan-reliability": {
-			"generated": true,
-			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
-			"title": "Toyota Tundra vs Nissan Titan: ¿Cuál es más fiable?",
-			"keywords": [
-				"Toyota Tundra reliability",
-				"Nissan Titan reliability",
-				"truck reliability comparison",
-				"Tundra vs Titan",
-				"pickup truck service calls"
-			],
-			"date": "2024-11-14T06:25:50.629Z"
-		},
-		"truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Comparativa de Fiabilidad: Ford F-150 vs. Rivales",
-			"keywords": [
-				"comparación de confiabilidad de camiones",
-				"fiabilidad de camionetas",
-				"análisis de durabilidad de pickups",
-				"estadísticas de servicio de camiones",
-				"evaluación de confiabilidad de vehículos"
-			],
-			"date": "2024-11-15T08:05:33.559Z"
-		},
-		"volkswagen-passat-vs-honda-accord-reliability": {
-			"generated": true,
-			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
-			"title": "Volkswagen Passat vs Honda Accord: ¿Cuál es más fiable?",
-			"keywords": [
-				"Volkswagen Passat reliability",
-				"Honda Accord reliability",
-				"car reliability comparison",
-				"Passat vs Accord",
-				"vehicle service calls"
-			],
-			"date": "2024-11-16T06:26:34.675Z"
-		},
-		"jeep-vs-ford-suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep grand cherokee", "ford explorer"],
-			"title": "Jeep vs Ford: ¿Cuál SUV es más confiable?",
-			"keywords": [
-				"Jeep Grand Cherokee reliability",
-				"Ford Explorer reliability",
-				"SUV reliability comparison",
-				"Jeep vs Ford SUVs",
-				"car service call statistics"
-			],
-			"date": "2024-11-16T19:28:21.893Z"
-		},
-		"what-are-the-most-reliable-used-cars-under-$10,000-": {
-			"generated": true,
-			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
-			"title": "Los 3 Autos Usados Más Fiables por Menos de $10,000",
-			"keywords": [
-				"reliable used cars",
-				"under $10,000",
-				"car reliability comparison",
-				"affordable used cars",
-				"best used cars"
-			],
-			"date": "2024-11-17T08:03:38.723Z"
-		},
-		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
-			"generated": true,
-			"cars": [
-				"toyota prius (hybrid)",
-				"toyota camry (gasoline)",
-				"honda accord (gasoline)",
-				"ford fusion (hybrid)"
-			],
-			"title": "¿Son los coches híbridos más fiables que los de gasolina?",
-			"keywords": [
-				"reliability of hybrid cars",
-				"hybrid vs gasoline reliability",
-				"car reliability comparison",
-				"hybrid car maintenance",
-				"gasoline car reliability"
-			],
-			"date": "2024-11-17T08:06:16.728Z"
-		},
-		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
-			"generated": true,
-			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
-			"title": "Honda Accord vs. Toyota Camry: ¿Cuál es más fiable tras 100K millas?",
-			"keywords": [
-				"Honda Accord reliability",
-				"Toyota Camry reliability",
-				"car reliability after 100,000 miles",
-				"Accord vs Camry reliability",
-				"long-term car reliability"
-			],
-			"date": "2024-11-19T07:42:16.270Z"
-		},
-		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Los coches más fiables y económicos en reparaciones",
-			"keywords": [
-				"car repair costs",
-				"long-term car reliability",
-				"affordable car maintenance",
-				"10-year car expenses"
-			],
-			"date": "2024-11-20T07:07:27.507Z"
-		},
-		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
-			"generated": true,
-			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
-			"title": "Comparativa: Fiabilidad Híbridos vs Diésel Última Década",
-			"keywords": [
-				"reliability statistics",
-				"hybrid vs diesel",
-				"car reliability comparison",
-				"hybrid car performance",
-				"diesel car reliability"
-			],
-			"date": "2024-11-21T06:33:36.598Z"
-		},
-		"top-reliable-cars-for-under-$15,000-in-2024": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Los 4 coches más fiables por menos de $15,000 en 2024",
-			"keywords": [
-				"coches fiables 2024",
-				"coches económicos",
-				"mejores coches usados",
-				"coches por menos de $15,000",
-				"fiabilidad automotriz"
-			],
-			"date": "2024-11-22T07:52:08.668Z"
-		},
-		"which-suv-has-the-best-reliability-in-2024-": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "¿Cuál es el SUV más Confiable del 2024? Análisis Definitivo",
-			"keywords": [
-				"SUV más confiable 2024",
-				"comparativa fiabilidad SUVs",
-				"mejor SUV calidad-precio 2024",
-				"SUV con menos averías"
-			],
-			"date": "2024-11-23T08:17:04.198Z"
-		},
-		"mazda-cx-5-vs-subaru-forester-durability": {
-			"generated": true,
-			"cars": ["mazda cx-5", "subaru forester"],
-			"title": "Mazda CX-5 vs Subaru Forester: ¿Cuál es más Duradero en 2024?",
-			"keywords": [
-				"comparativa mazda cx-5 subaru forester",
-				"fiabilidad suv compactos",
-				"durabilidad cx5 forester",
-				"mantenimiento mazda vs subaru"
-			],
-			"date": "2024-11-24T07:56:13.850Z"
-		},
-		"ford-escape-vs-chevrolet-equinox-maintenance": {
-			"generated": true,
-			"cars": ["ford escape", "chevrolet equinox"],
-			"title": "Ford Escape vs Chevrolet Equinox: Duelo de Mantenimiento 2024",
-			"keywords": [
-				"mantenimiento ford escape chevrolet equinox",
-				"comparativa suv ford chevrolet",
-				"costos servicio escape equinox",
-				"confiabilidad suv compactas"
-			],
-			"date": "2024-11-25T09:28:29.515Z"
-		},
-		"kia-sportage-vs-volkswagen-tiguan-longevity": {
-			"generated": true,
-			"cars": ["kia sportage", "volkswagen tiguan"],
-			"title": "Kia Sportage vs VW Tiguan: ¿Cuál es más Confiable en 2024?",
-			"keywords": [
-				"fiabilidad kia sportage volkswagen tiguan",
-				"comparativa durabilidad suv compactos",
-				"problemas comunes sportage tiguan",
-				"mantenimiento suv kia volkswagen"
-			],
-			"date": "2024-11-26T09:02:23.570Z"
-		},
-		"reliable-compact-suvs-2024": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Los SUV Compactos Más Fiables 2024: Análisis de Servicio Técnico",
-			"keywords": [
-				"SUVs compactos más confiables 2024",
-				"comparativa SUVs compactos",
-				"mejor SUV compacto fiabilidad",
-				"SUV compacto Toyota vs Honda"
-			],
-			"date": "2024-11-27T08:25:11.044Z"
-		},
-		"bmw-3-series-vs-mercedes-c-class-reliability": {
-			"generated": true,
-			"cars": ["bmw 3 series", "mercedes c class"],
-			"title": "BMW Serie 3 vs Mercedes Clase C: ¿Cuál es más Confiable?",
-			"keywords": [
-				"fiabilidad bmw serie 3 vs mercedes clase c",
-				"comparativa mantenimiento bmw mercedes",
-				"problemas comunes serie 3 clase c",
-				"costos reparación bmw mercedes"
-			],
-			"date": "2024-11-29T08:36:40.297Z"
-		},
-		"most-durable-crossover-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru outback", "ford escape"],
-			"title": "Los SUVs Más Fiables: RAV4 vs CR-V vs Outback vs Escape",
-			"keywords": [
-				"SUVs más confiables",
-				"crossover duradero",
-				"comparativa SUVs compactos",
-				"mejor SUV calidad-precio"
-			],
-			"date": "2024-11-29T08:51:12.515Z"
-		},
-		"audi-a4-vs-lexus-is-durability": {
-			"generated": true,
-			"cars": ["audi a4", "lexus is"],
-			"title": "Audi A4 vs Lexus IS: ¿Cuál Es Más Confiable en 2024?",
-			"keywords": [
-				"durabilidad audi a4 vs lexus is",
-				"comparativa fiabilidad audi lexus",
-				"mantenimiento audi a4 lexus is",
-				"confiabilidad sedanes lujo"
-			],
-			"date": "2024-11-30T09:32:39.301Z"
-		},
-		"bmw-vs-audi-reliability-comparison": {
-			"generated": true,
-			"cars": ["bmw 3 series", "audi a4"],
-			"title": "BMW vs Audi: ¿Cuál es Más Confiable? Análisis Real 2024",
-			"keywords": [
-				"comparación fiabilidad BMW Audi",
-				"problemas comunes BMW vs Audi",
-				"mantenimiento BMW Audi",
-				"confiabilidad BMW 3 Series vs Audi A4"
-			],
-			"date": "2024-12-01T09:09:29.248Z"
-		},
-		"reliable-pickup-trucks-2024": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Las 4 Pickups Más Fiables del 2024: Análisis de Datos Reales",
-			"keywords": [
-				"camionetas más confiables 2024",
-				"pickup trucks fiables",
-				"mejores pickups duraderas",
-				"comparativa pickups confiabilidad"
-			],
-			"date": "2024-12-01T09:23:33.601Z"
-		},
-		"best-truck-for-reliability": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Las 4 Pickups Más Confiables: Análisis Definitivo 2024",
-			"keywords": [
-				"camionetas más confiables",
-				"mejor pickup fiabilidad",
-				"comparativa pickups durabilidad",
-				"confiabilidad camionetas pickup"
-			],
-			"date": "2024-12-02T08:33:23.369Z"
-		},
-		"most-durable-pickup-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Las 4 Pickups Más Duraderas: Datos Reales de Confiabilidad",
-			"keywords": [
-				"camionetas más duraderas",
-				"pickup confiables",
-				"mejor pickup calidad-precio",
-				"comparativa pickups durabilidad"
-			],
-			"date": "2024-12-04T09:44:03.914Z"
-		},
-		"toyota-prius-vs-honda-insight-reliability": {
-			"generated": true,
-			"cars": ["toyota prius", "honda insight"],
-			"title": "Toyota Prius vs Honda Insight: ¿Cuál es más Confiable en 2024?",
-			"keywords": [
-				"comparación fiabilidad prius insight",
-				"híbridos más confiables",
-				"problemas comunes prius insight",
-				"mantenimiento coches híbridos toyota honda"
-			],
-			"date": "2024-12-05T08:58:25.647Z"
-		},
-		"honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
-			"generated": true,
-			"cars": ["honda civic", "volkswagen golf", "mazda 3"],
-			"title": "Análisis: Civic vs Golf vs Mazda 3 - ¿Cuál es más confiable?",
-			"keywords": [
-				"comparación fiabilidad civic golf mazda3",
-				"estadísticas averías compactos",
-				"análisis confiabilidad hatchbacks",
-				"mantenimiento honda volkswagen mazda"
-			],
-			"date": "2024-12-06T09:05:58.914Z"
-		},
-		"best-sports-car-for-reliability": {
-			"generated": true,
-			"cars": ["toyota 86", "mazda mx-5 miata", "subaru brz", "nissan 370z"],
-			"title": "Los 4 Deportivos Más Fiables: Datos Reales que te Sorprenderán",
-			"keywords": [
-				"coches deportivos más fiables",
-				"deportivos confiables comparativa",
-				"mejores deportivos duraderos",
-				"fiabilidad coches deportivos japoneses"
-			],
-			"date": "2024-12-07T08:00:01.652Z"
-		},
-		"top-5-reliable-cars-under-$20k": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
-			"title": "Los 5 Autos Más Confiables Por Menos de $20,000 en 2024",
-			"keywords": [
-				"autos económicos confiables",
-				"carros baratos menos 20000",
-				"mejores coches económicos nuevos",
-				"autos usados fiables"
-			],
-			"date": "2024-12-08T07:49:48.883Z"
-		},
-		"best-used-suvs-for-reliability-under-$30k": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Los 4 SUVs Más Fiables Por Menos de $30,000: Guía Definitiva 2024",
-			"keywords": [
-				"SUVs usados confiables",
-				"SUVs económicos bajo $30000",
-				"mejores SUVs segunda mano",
-				"SUVs fiables baratos"
-			],
-			"date": "2024-12-09T14:14:16.318Z"
-		},
-		"which-small-suvs-have-best-reliability-ratings": {
-			"generated": true,
-			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
-			"title": "Los SUV Compactos Más Fiables: Comparativa 2024 de Confiabilidad",
-			"keywords": [
-				"SUV más confiable",
-				"comparativa SUV compactos",
-				"mejor SUV calidad precio",
-				"fiabilidad crossover compacto"
-			],
-			"date": "2024-12-10T07:51:55.843Z"
-		},
-		"affordable-reliable-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Las 4 Camionetas Más Confiables: Guía Definitiva 2024",
-			"keywords": [
-				"camionetas económicas confiables",
-				"mejores pickups baratas",
-				"comparativa pickup fiables",
-				"camionetas duraderas precio accesible"
-			],
-			"date": "2024-12-10T08:19:44.769Z"
-		}
-	},
-	"de": {
-		"japanese-top-selling-compact-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Japanische Top-SUVs im Zuverlässigkeitstest 2023",
-			"keywords": [
-				"japanische Kompakt-SUVs",
-				"zuverlässige japanische SUVs",
-				"Toyota RAV4 Zuverlässigkeit",
-				"Honda CR-V Wartung",
-				"Subaru Forester Probleme"
-			],
-			"date": "2024-11-10T05:40:16.160Z"
-		},
-		"mazda-3-reliability-compared-to-honda-civic": {
-			"generated": true,
-			"cars": ["mazda 3", "honda civic", "toyota corolla", "volkswagen jetta"],
-			"title": "Mazda 3 vs Honda Civic: Zuverlässigkeit im Vergleich",
-			"keywords": [
-				"Mazda 3 reliability",
-				"Honda Civic comparison",
-				"car reliability analysis",
-				"Mazda vs Honda",
-				"technical reliability review"
-			],
-			"date": "2024-11-10T06:00:56.730Z"
-		},
-		"mitsubishi-outlander-reliability-comparison": {
-			"generated": true,
-			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
-			"title": "Mitsubishi Outlander vs. Rivalen: Zuverlässigkeitsranking",
-			"keywords": [
-				"Mitsubishi Outlander Zuverlässigkeit",
-				"Auto Zuverlässigkeitsvergleich",
-				"Mitsubishi Outlander Wartung",
-				"Fahrzeugzuverlässigkeit Bewertung"
-			],
-			"date": "2024-11-10T06:01:26.840Z"
-		},
-		"most-and-least-reliable-cars": {
-			"generated": true,
-			"cars": ["toyota camry", "honda accord", "ford fusion", "chevrolet malibu"],
-			"title": "Die 10 zuverlässigsten Autos im Vergleich 2023",
-			"keywords": [
-				"car reliability comparison",
-				"reliable car models",
-				"least reliable cars",
-				"automotive reliability analysis",
-				"car service statistics"
-			],
-			"date": "2024-11-10T06:02:07.526Z"
-		},
-		"off-road-vehicle-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep wrangler", "toyota 4runner", "ford bronco", "chevrolet colorado zr2"],
-			"title": "Geländewagen Zuverlässigkeit: Wrangler vs. 4Runner & Co.",
-			"keywords": [
-				"Offroad-Fahrzeugzuverlässigkeit",
-				"Geländefahrzeug-Servicevergleich",
-				"Zuverlässigkeitsstudie robust Fahrzeuge",
-				"Offroad-Fahrzeugleistung",
-				"Serviceprobleme Offroad-Modelle"
-			],
-			"date": "2024-11-10T06:04:11.815Z"
-		},
-		"pickup-truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Pick-up-Truck Zuverlässigkeit: Der Ultimative Vergleich",
-			"keywords": [
-				"pickup truck reliability",
-				"truck reliability comparison",
-				"Ford F-150 reliability",
-				"Chevrolet Silverado service",
-				"Toyota Tundra long-term performance"
-			],
-			"date": "2024-11-10T06:06:32.164Z"
-		},
-		"volkswagen-golf-vs-mazda-3": {
-			"generated": true,
-			"cars": ["volkswagen golf", "mazda 3", "honda civic", "toyota corolla"],
-			"title": "Volkswagen Golf vs. Mazda 3: Wer ist zuverlässiger?",
-			"keywords": [
-				"Volkswagen Golf Zuverlässigkeit",
-				"Mazda 3 Zuverlässigkeit",
-				"Auto Zuverlässigkeitsvergleich",
-				"Serviceanrufe Autoanalyse",
-				"Golf vs Mazda 3 Test"
-			],
-			"date": "2024-11-10T06:06:53.205Z"
-		},
-		"nissan-altima-vs-toyota-camry-reliability": {
-			"generated": true,
-			"cars": ["nissan altima", "toyota camry", "honda accord", "chevrolet malibu"],
-			"title": "Nissan Altima vs Toyota Camry: Zuverlässigkeit im Vergleich",
-			"keywords": [
-				"Nissan Altima reliability",
-				"Toyota Camry reliability",
-				"Altima vs Camry comparison",
-				"car reliability analysis",
-				"service call statistics"
-			],
-			"date": "2024-11-10T06:35:59.976Z"
-		},
-		"reliable-family-suvs-compared": {
-			"generated": true,
-			"cars": ["toyota highlander", "honda pilot", "ford explorer", "subaru ascent"],
-			"title": "Vergleich der zuverlässigsten Familien-SUVs 2023",
-			"keywords": [
-				"Family SUV reliability",
-				"Toyota Highlander reliability",
-				"Honda Pilot service calls",
-				"Ford Explorer reviews",
-				"Subaru Ascent issues"
-			],
-			"date": "2024-11-10T06:08:05.137Z"
-		},
-		"reliable-minivans-for-families": {
-			"generated": true,
-			"cars": ["honda odyssey", "toyota sienna", "chrysler pacifica", "kia sedona"],
-			"title": "Die zuverlässigsten Familien-Minivans im Vergleich",
-			"keywords": [
-				"zuverlässige Familienvans",
-				"Minivan Zuverlässigkeit",
-				"Familienauto Vergleich",
-				"Minivan Wartung",
-				"Familienfreundliche Fahrzeuge"
-			],
-			"date": "2024-11-10T06:25:19.290Z"
-		},
-		"suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "SUV-Zuverlässigkeit: Toyota, Honda, Ford & Subaru im Vergleich",
-			"keywords": [
-				"SUV Zuverlässigkeitsvergleich",
-				"Toyota RAV4 Zuverlässigkeit",
-				"Honda CR-V Zuverlässigkeit",
-				"Ford Escape Zuverlässigkeit",
-				"Subaru Forester Zuverlässigkeit"
-			],
-			"date": "2024-11-11T08:08:20.687Z"
-		},
-		"subaru-forester-vs-toyota-rav4-reliability": {
-			"generated": true,
-			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
-			"title": "Subaru Forester vs Toyota RAV4: Zuverlässigkeit im Vergleich",
-			"keywords": [
-				"Subaru Forester reliability",
-				"Toyota RAV4 reliability",
-				"Subaru vs Toyota reliability",
-				"SUV reliability comparison",
-				"car service calls analysis"
-			],
-			"date": "2024-11-12T08:16:27.069Z"
-		},
-		"toyota-corolla-vs-honda-civic-reliability": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
-			"title": "Toyota Corolla vs Honda Civic: Zuverlässigkeitsvergleich",
-			"keywords": [
-				"Toyota Corolla Zuverlässigkeit",
-				"Honda Civic Zuverlässigkeit",
-				"Auto Zuverlässigkeitsvergleich",
-				"Toyota vs Honda",
-				"Fahrzeugwartungskosten"
-			],
-			"date": "2024-11-12T08:19:25.945Z"
-		},
-		"toyota-rav4-vs-honda-cr-v-reliability": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
-			"title": "Toyota RAV4 vs Honda CR-V: Welches Auto ist zuverlässiger?",
-			"keywords": [
-				"Toyota RAV4 Zuverlässigkeit",
-				"Honda CR-V Zuverlässigkeit",
-				"RAV4 vs CR-V Vergleich",
-				"Auto Zuverlässigkeitsanalyse",
-				"Kompakt-SUV Zuverlässigkeit"
-			],
-			"date": "2024-11-13T06:55:36.651Z"
-		},
-		"toyota-tundra-vs-nissan-titan-reliability": {
-			"generated": true,
-			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
-			"title": "Toyota Tundra vs Nissan Titan: Zuverlässigkeit im Vergleich",
-			"keywords": [
-				"Toyota Tundra reliability",
-				"Nissan Titan reliability",
-				"truck reliability comparison",
-				"Tundra vs Titan",
-				"pickup truck service calls"
-			],
-			"date": "2024-11-14T06:25:53.687Z"
-		},
-		"truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Lkw-Zuverlässigkeit: Ford, Chevy, Ram & Toyota im Vergleich",
-			"keywords": [
-				"Lkw-Zuverlässigkeitsvergleich",
-				"Pickup-Truck-Zuverlässigkeit",
-				"Ford F-150 Zuverlässigkeit",
-				"Chevrolet Silverado Probleme",
-				"Toyota Tundra Wartung"
-			],
-			"date": "2024-11-15T08:05:25.044Z"
-		},
-		"volkswagen-passat-vs-honda-accord-reliability": {
-			"generated": true,
-			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
-			"title": "Volkswagen Passat vs Honda Accord: Zuverlässigkeit im Test",
-			"keywords": [
-				"Volkswagen Passat Zuverlässigkeit",
-				"Honda Accord Zuverlässigkeit",
-				"Auto Zuverlässigkeitsvergleich",
-				"Passat vs Accord",
-				"Fahrzeugwartungskosten"
-			],
-			"date": "2024-11-16T06:26:35.093Z"
-		},
-		"jeep-vs-ford-suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep grand cherokee", "ford explorer"],
-			"title": "Jeep vs Ford: Welcher SUV ist zuverlässiger?",
-			"keywords": [
-				"Jeep Grand Cherokee reliability",
-				"Ford Explorer reliability",
-				"SUV reliability comparison",
-				"Jeep vs Ford SUVs",
-				"car service call statistics"
-			],
-			"date": "2024-11-16T19:28:24.845Z"
-		},
-		"what-are-the-most-reliable-used-cars-under-$10,000-": {
-			"generated": true,
-			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
-			"title": "Die zuverlässigsten Gebrauchtwagen unter $10.000",
-			"keywords": [
-				"gebrauchte Autos unter 10000",
-				"zuverlässige Gebrauchtwagen",
-				"Honda Civic Zuverlässigkeit",
-				"Toyota Corolla Zuverlässigkeit",
-				"Subaru Impreza Zuverlässigkeit"
-			],
-			"date": "2024-11-17T08:03:37.779Z"
-		},
-		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
-			"generated": true,
-			"cars": [
-				"toyota prius (hybrid)",
-				"toyota camry (gasoline)",
-				"honda accord (gasoline)",
-				"ford fusion (hybrid)"
-			],
-			"title": "Sind Hybridautos zuverlässiger als Benziner? Vergleich 2023",
-			"keywords": [
-				"Hybrid car reliability",
-				"gasoline car reliability",
-				"hybrid vs gasoline reliability",
-				"car service calls",
-				"vehicle reliability comparison"
-			],
-			"date": "2024-11-17T08:06:16.848Z"
-		},
-		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
-			"generated": true,
-			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
-			"title": "Honda Accord vs. Toyota Camry: Zuverlässigkeit ab 100.000 Meilen",
-			"keywords": [
-				"Honda Accord reliability",
-				"Toyota Camry reliability",
-				"car reliability comparison",
-				"100000 miles car performance",
-				"Accord vs Camry reliability"
-			],
-			"date": "2024-11-19T07:42:21.970Z"
-		},
-		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Die zuverlässigsten Autos: Geringste Reparaturkosten",
-			"keywords": [
-				"car repair costs",
-				"long-term car reliability",
-				"10-year car maintenance",
-				"affordable car repairs",
-				"vehicle service calls"
-			],
-			"date": "2024-11-20T07:07:30.130Z"
-		},
-		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
-			"generated": true,
-			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
-			"title": "Hybrid vs Diesel: Zuverlässigkeitsvergleich der letzten 10 Jahre",
-			"keywords": [
-				"Hybrid Reliability",
-				"Diesel Reliability",
-				"Car Reliability Statistics",
-				"Hybrid vs Diesel",
-				"Automotive Reliability Analysis"
-			],
-			"date": "2024-11-21T06:33:36.749Z"
-		},
-		"top-reliable-cars-for-under-$15,000-in-2024": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Die besten zuverlässigen Autos unter $15.000 im Jahr 2024",
-			"keywords": [
-				"günstige zuverlässige Autos 2024",
-				"zuverlässige Gebrauchtwagen unter 15000",
-				"beste Autos unter 15000 2024",
-				"Auto Zuverlässigkeit 2024",
-				"preiswerte zuverlässige Fahrzeuge"
-			],
-			"date": "2024-11-22T07:52:08.586Z"
-		},
-		"which-suv-has-the-best-reliability-in-2024-": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "SUV-Zuverlässigkeit 2024: CR-V vs. RAV4 vs. Forester im Härtetest",
-			"keywords": [
-				"zuverlässigste SUVs 2024",
-				"SUV Langzeittest Vergleich",
-				"SUV Pannenstatistik 2024",
-				"bester SUV Qualität"
-			],
-			"date": "2024-11-23T08:19:15.540Z"
-		},
-		"mazda-cx-5-vs-subaru-forester-durability": {
-			"generated": true,
-			"cars": ["mazda cx-5", "subaru forester"],
-			"title": "Mazda CX-5 vs. Subaru Forester: Der große Langzeit-Härtetest",
-			"keywords": [
-				"Mazda CX-5 Langzeittest",
-				"Subaru Forester Zuverlässigkeit",
-				"CX-5 vs Forester Haltbarkeit",
-				"SUV Dauerhaltbarkeit Vergleich"
-			],
-			"date": "2024-11-24T07:58:14.987Z"
-		},
-		"mercedes-glc-vs-audi-q5-reliability": {
-			"generated": true,
-			"cars": ["mercedes glc", "audi q5"],
-			"title": "Mercedes GLC vs. Audi Q5: Zuverlässigkeitsvergleich 2024",
-			"keywords": [
-				"Mercedes GLC vs Audi Q5 Zuverlässigkeit",
-				"SUV Langzeitqualität Vergleich",
-				"Premium SUV Pannenstatistik",
-				"Wartungskosten GLC Q5"
-			],
-			"date": "2024-11-24T13:03:47.770Z"
-		},
-		"ford-escape-vs-chevrolet-equinox-maintenance": {
-			"generated": true,
-			"cars": ["ford escape", "chevrolet equinox"],
-			"title": "Ford Escape vs. Chevrolet Equinox: Wartungskosten im Vergleich",
-			"keywords": [
-				"Ford Escape Wartungskosten",
-				"Chevrolet Equinox Reparaturen",
-				"SUV Zuverlässigkeitsvergleich",
-				"Kompakt-SUV Wartung"
-			],
-			"date": "2024-11-25T09:30:19.924Z"
-		},
-		"kia-sportage-vs-volkswagen-tiguan-longevity": {
-			"generated": true,
-			"cars": ["kia sportage", "volkswagen tiguan"],
-			"title": "Kia Sportage vs. VW Tiguan: Der große Langzeit-Zuverlässigkeitstest",
-			"keywords": [
-				"Kia Sportage Zuverlässigkeit",
-				"VW Tiguan Langzeittest",
-				"SUV Haltbarkeit Vergleich",
-				"Sportage Tiguan Lebensdauer"
-			],
-			"date": "2024-11-26T09:16:57.647Z"
-		},
-		"reliable-compact-suvs-2024": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Die zuverlässigsten Kompakt-SUVs 2024 im Härtetest",
-			"keywords": [
-				"zuverlässige Kompakt-SUVs 2024",
-				"SUV Zuverlässigkeitsvergleich",
-				"beste SUV Qualität",
-				"kompakte SUV Langzeittest"
-			],
-			"date": "2024-11-27T08:27:16.002Z"
-		},
-		"most-durable-crossover-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
-			"title": "Die zuverlässigsten Crossover SUVs im Langzeittest 2024",
-			"keywords": [
-				"zuverlässige Crossover SUV",
-				"langlebige SUV Vergleich",
-				"SUV Haltbarkeit Test",
-				"beste SUV Qualität"
-			],
-			"date": "2024-11-28T08:44:52.017Z"
-		},
-		"bmw-3-series-vs-mercedes-c-class-reliability": {
-			"generated": true,
-			"cars": ["bmw 3 series", "mercedes c class"],
-			"title": "BMW 3er vs. Mercedes C-Klasse: Der große Zuverlässigkeitstest",
-			"keywords": [
-				"BMW 3er vs C-Klasse Zuverlässigkeit",
-				"Mercedes C-Klasse Reparaturen",
-				"BMW 3er Langzeittest",
-				"deutsche Mittelklasse Vergleich"
-			],
-			"date": "2024-11-29T08:38:37.658Z"
-		},
-		"audi-a4-vs-lexus-is-durability": {
-			"generated": true,
-			"cars": ["audi a4", "lexus is"],
-			"title": "Audi A4 vs. Lexus IS: Der ultimative Haltbarkeitsvergleich",
-			"keywords": [
-				"Audi A4 Lexus IS Vergleich",
-				"Zuverlässigkeit Audi vs Lexus",
-				"Langzeithaltbarkeit Luxusautos",
-				"Wartungskosten A4 IS"
-			],
-			"date": "2024-11-30T09:34:27.308Z"
-		},
-		"bmw-vs-audi-reliability-comparison": {
-			"generated": true,
-			"cars": ["bmw 3 series", "audi a4"],
-			"title": "BMW vs. Audi: Der große Zuverlässigkeitsvergleich 2024",
-			"keywords": [
-				"BMW Audi Zuverlässigkeitsvergleich",
-				"deutsche Autos Langzeittest",
-				"BMW 3er vs Audi A4 Haltbarkeit",
-				"Premiumautos Wartungskosten"
-			],
-			"date": "2024-12-01T09:11:25.305Z"
-		},
-		"reliable-pickup-trucks-2024": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Die zuverlässigsten Pickup-Trucks 2024 im Härtetest",
-			"keywords": [
-				"zuverlässige Pickup-Trucks 2024",
-				"beste Pickup-Trucks Deutschland",
-				"Pickup Langzeittest Vergleich",
-				"langlebige Pickup-Modelle"
-			],
-			"date": "2024-12-01T09:25:55.867Z"
-		},
-		"best-truck-for-reliability": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Die zuverlässigsten Pickup-Trucks 2024 im Härtetest",
-			"keywords": [
-				"zuverlässigster Pickup-Truck",
-				"langlebige Trucks Vergleich",
-				"Pickup Wartungskosten Test",
-				"bester Truck Haltbarkeit"
-			],
-			"date": "2024-12-02T08:35:24.692Z"
-		},
-		"affordable-reliable-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Die 4 zuverlässigsten Pickup-Trucks im Langzeittest 2024",
-			"keywords": [
-				"zuverlässige Pickup-Trucks",
-				"günstige Nutzfahrzeuge",
-				"langlebige Trucks Vergleich",
-				"preiswerte Pickup-Modelle"
-			],
-			"date": "2024-12-03T07:45:21.753Z"
-		},
-		"most-durable-pickup-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Die 4 langlebigsten Pickup-Trucks im Härtetest 2024",
-			"keywords": [
-				"langlebige Pickup-Trucks",
-				"zuverlässige Nutzfahrzeuge",
-				"haltbare Pritschenwagen",
-				"robuste Pick-ups"
-			],
-			"date": "2024-12-04T09:45:44.108Z"
-		},
-		"toyota-prius-vs-honda-insight-reliability": {
-			"generated": true,
-			"cars": ["toyota prius", "honda insight"],
-			"title": "Toyota Prius vs. Honda Insight: Der große Zuverlässigkeitstest",
-			"keywords": [
-				"Hybridauto Zuverlässigkeit Vergleich",
-				"Toyota Prius Honda Insight Test",
-				"Hybrid Langzeitqualität",
-				"Prius vs Insight Wartung"
-			],
-			"date": "2024-12-05T09:00:49.870Z"
-		},
-		"honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
-			"generated": true,
-			"cars": ["honda civic", "volkswagen golf", "mazda 3"],
-			"title": "Zuverlässigkeitsvergleich: Civic, Golf & Mazda 3 im Langzeittest",
-			"keywords": [
-				"Kompaktwagenvergleich Zuverlässigkeit",
-				"Honda Civic vs VW Golf Statistik",
-				"Mazda 3 Pannenstatistik",
-				"Zuverlässigkeitsanalyse Kompaktklasse"
-			],
-			"date": "2024-12-06T09:08:05.947Z"
-		},
-		"best-sports-car-for-reliability": {
-			"generated": true,
-			"cars": ["toyota 86", "mazda mx-5 miata", "subaru brz", "nissan 370z"],
-			"title": "Die zuverlässigsten Sportwagen im Vergleich 2024",
-			"keywords": [
-				"zuverlässige Sportwagen",
-				"langlebige Sportautos",
-				"Sportwagen Wartungskosten",
-				"Sportwagen Zuverlässigkeitsvergleich"
-			],
-			"date": "2024-12-07T08:02:20.894Z"
-		},
-		"top-5-reliable-cars-under-$20k": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
-			"title": "Die 5 zuverlässigsten Gebrauchtwagen unter 20.000 Euro im Test",
-			"keywords": [
-				"zuverlässige Gebrauchtwagen unter 20000",
-				"günstige zuverlässige Autos",
-				"langlebige Kompaktwagen",
-				"preiswerte Qualitätsautos"
-			],
-			"date": "2024-12-08T07:51:58.643Z"
-		},
-		"best-used-suvs-for-reliability-under-$30k": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Die 4 zuverlässigsten Gebrauchten SUVs unter 30.000€",
-			"keywords": [
-				"zuverlässige gebrauchte SUVs",
-				"SUV Zuverlässigkeitsvergleich",
-				"beste SUVs unter 30000",
-				"gebrauchte Kompakt-SUVs Langzeittest"
-			],
-			"date": "2024-12-09T14:16:53.957Z"
-		},
-		"which-small-suvs-have-best-reliability-ratings": {
-			"generated": true,
-			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
-			"title": "Die zuverlässigsten Kompakt-SUVs im Langzeittest 2024",
-			"keywords": [
-				"zuverlässigste Kompakt-SUVs",
-				"SUV Zuverlässigkeitsvergleich",
-				"SUV Pannenstatistik",
-				"Kompakt-SUV Qualitätstest"
-			],
-			"date": "2024-12-10T07:55:06.003Z"
-		}
-	},
-	"en": {
-		"japanese-top-selling-compact-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Reliability Showdown: Top Japanese Compact SUVs",
-			"keywords": [
-				"Japanese compact SUVs",
-				"SUV reliability comparison",
-				"top-selling SUVs Japan",
-				"Subaru Forester reliability",
-				"Toyota RAV4 performance"
-			],
-			"date": "2024-11-10T05:40:14.582Z"
-		},
-		"mazda-3-reliability-compared-to-honda-civic": {
-			"generated": true,
-			"cars": ["mazda 3", "honda civic", "toyota corolla", "volkswagen jetta"],
-			"title": "Mazda 3 vs Honda Civic: The Ultimate Reliability Showdown",
-			"keywords": [
-				"mazda 3 vs honda civic reliability",
-				"mazda 3 reliability review",
-				"honda civic vs mazda 3 maintenance",
-				"compact car reliability comparison"
-			],
-			"date": "2024-11-23T07:29:04.058Z"
-		},
-		"mitsubishi-outlander-reliability-comparison": {
-			"generated": true,
-			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
-			"title": "Mitsubishi Outlander Reliability: In-Depth 2023 Comparison",
-			"keywords": [
-				"Mitsubishi Outlander reliability",
-				"car reliability comparison",
-				"Outlander service calls",
-				"SUV reliability analysis"
-			],
-			"date": "2024-11-10T06:01:25.394Z"
-		},
-		"most-and-least-reliable-cars": {
-			"generated": true,
-			"cars": ["toyota camry", "honda accord", "ford fusion", "chevrolet malibu"],
-			"title": "\"Top Reliable Cars: Best & Worst Models Revealed\"",
-			"keywords": [
-				"car reliability comparison",
-				"reliable car models",
-				"least reliable cars",
-				"most reliable cars"
-			],
-			"date": "2024-11-10T06:02:12.621Z"
-		},
-		"mercedes-glc-vs-audi-q5-reliability": {
-			"generated": true,
-			"cars": ["mercedes glc", "audi q5"],
-			"title": "Mercedes GLC vs Audi Q5: Which SUV Is More Reliable in 2024?",
-			"keywords": [
-				"mercedes glc reliability comparison",
-				"audi q5 vs glc reliability",
-				"luxury suv reliability comparison",
-				"german suv maintenance costs"
-			],
-			"date": "2024-11-24T12:57:30.522Z"
-		},
-		"off-road-vehicle-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep wrangler", "toyota 4runner", "ford bronco", "chevrolet colorado zr2"],
-			"title": "Off-Road Vehicle Reliability: Top Picks Compared",
-			"keywords": [
-				"off-road vehicle reliability",
-				"jeep wrangler reliability",
-				"toyota 4runner durability",
-				"ford bronco service calls",
-				"chevrolet colorado zr2 maintenance"
-			],
-			"date": "2024-11-10T06:04:06.920Z"
-		},
-		"pickup-truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Ultimate Pickup Truck Reliability Showdown 2023",
-			"keywords": [
-				"pickup truck reliability",
-				"Ford F-150 reliability",
-				"Chevrolet Silverado reliability",
-				"Ram 1500 reliability",
-				"Toyota Tundra reliability"
-			],
-			"date": "2024-11-10T06:06:28.888Z"
-		},
-		"volkswagen-golf-vs-mazda-3": {
-			"generated": true,
-			"cars": ["volkswagen golf", "mazda 3", "honda civic", "toyota corolla"],
-			"title": "Volkswagen Golf vs Mazda 3: Unveiling True Reliability",
-			"keywords": [
-				"Volkswagen Golf reliability",
-				"Mazda 3 reliability",
-				"Volkswagen vs Mazda",
-				"car service calls",
-				"vehicle longevity comparison"
-			],
-			"date": "2024-11-10T06:06:53.904Z"
-		},
-		"nissan-altima-vs-toyota-camry-reliability": {
-			"generated": true,
-			"cars": ["nissan altima", "toyota camry", "honda accord", "chevrolet malibu"],
-			"title": "Nissan Altima vs Toyota Camry: Reliability Showdown",
-			"keywords": [
-				"Nissan Altima reliability",
-				"Toyota Camry reliability",
-				"Altima vs Camry comparison",
-				"car reliability analysis",
-				"sedan reliability ratings"
-			],
-			"date": "2024-11-10T06:35:58.950Z"
-		},
-		"reliable-family-suvs-compared": {
-			"generated": true,
-			"cars": ["toyota highlander", "honda pilot", "ford explorer", "subaru ascent"],
-			"title": "Top Family SUVs: Reliability Compared & Ranked",
-			"keywords": [
-				"reliable family SUVs",
-				"SUV reliability comparison",
-				"Toyota Highlander reliability",
-				"Honda Pilot vs Ford Explorer",
-				"Subaru Ascent service calls"
-			],
-			"date": "2024-11-10T06:07:54.244Z"
-		},
-		"reliable-minivans-for-families": {
-			"generated": true,
-			"cars": ["honda odyssey", "toyota sienna", "chrysler pacifica", "kia sedona"],
-			"title": "Top 4 Reliable Minivans for Families: A Data-Driven Guide",
-			"keywords": [
-				"reliable family minivans",
-				"minivan reliability comparison",
-				"best minivans for families",
-				"family vehicle reliability",
-				"minivan service calls"
-			],
-			"date": "2024-11-10T06:25:20.103Z"
-		},
-		"suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "SUV Reliability Showdown: Top Models Compared",
-			"keywords": [
-				"SUV reliability comparison",
-				"Toyota RAV4 reliability",
-				"Honda CR-V reliability",
-				"Ford Escape reliability",
-				"Subaru Forester reliability"
-			],
-			"date": "2024-11-11T07:58:14.627Z"
-		},
-		"subaru-forester-vs-toyota-rav4-reliability": {
-			"generated": true,
-			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
-			"title": "Subaru Forester vs Toyota RAV4: Reliability Showdown",
-			"keywords": [
-				"Subaru Forester reliability",
-				"Toyota RAV4 reliability",
-				"Forester vs RAV4 comparison",
-				"SUV reliability analysis",
-				"car service call statistics"
-			],
-			"date": "2024-11-12T08:16:22.260Z"
-		},
-		"toyota-corolla-vs-honda-civic-reliability": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
-			"title": "Toyota Corolla vs Honda Civic: Unveiling Reliability Secrets",
-			"keywords": [
-				"Toyota Corolla reliability",
-				"Honda Civic reliability",
-				"car reliability comparison",
-				"Toyota vs Honda reliability",
-				"compact car reliability"
-			],
-			"date": "2024-11-12T08:19:28.646Z"
-		},
-		"toyota-rav4-vs-honda-cr-v-reliability": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
-			"title": "Toyota RAV4 vs Honda CR-V: Reliability Showdown",
-			"keywords": [
-				"Toyota RAV4 reliability",
-				"Honda CR-V reliability",
-				"RAV4 vs CR-V comparison",
-				"car reliability analysis",
-				"SUV reliability ratings"
-			],
-			"date": "2024-11-13T06:55:37.893Z"
-		},
-		"toyota-tundra-vs-nissan-titan-reliability": {
-			"generated": true,
-			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
-			"title": "Toyota Tundra vs Nissan Titan: Reliability Showdown",
-			"keywords": [
-				"Toyota Tundra reliability",
-				"Nissan Titan reliability",
-				"Tundra vs Titan comparison",
-				"truck reliability analysis",
-				"pickup truck service calls"
-			],
-			"date": "2024-11-14T06:25:49.904Z"
-		},
-		"truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Truck Reliability Showdown: Ford vs. Chevy vs. Ram vs. Toyota",
-			"keywords": [
-				"truck reliability",
-				"pickup truck comparison",
-				"vehicle service calls",
-				"truck maintenance data",
-				"reliable trucks"
-			],
-			"date": "2024-11-15T08:05:29.127Z"
-		},
-		"volkswagen-passat-vs-honda-accord-reliability": {
-			"generated": true,
-			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
-			"title": "Volkswagen Passat vs Honda Accord: Reliability Showdown",
-			"keywords": [
-				"Volkswagen Passat reliability",
-				"Honda Accord reliability",
-				"Passat vs Accord comparison",
-				"car reliability analysis",
-				"vehicle service calls"
-			],
-			"date": "2024-11-16T06:26:36.886Z"
-		},
-		"jeep-vs-ford-suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep grand cherokee", "ford explorer"],
-			"title": "Jeep vs Ford: SUV Reliability Showdown 2023",
-			"keywords": [
-				"Jeep Grand Cherokee reliability",
-				"Ford Explorer reliability",
-				"SUV reliability comparison",
-				"Jeep vs Ford SUVs",
-				"car service call statistics"
-			],
-			"date": "2024-11-16T19:28:19.103Z"
-		},
-		"what-are-the-most-reliable-used-cars-under-$10,000-": {
-			"generated": true,
-			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
-			"title": "Top 3 Reliable Used Cars Under $10K: A Data-Driven Guide",
-			"keywords": [
-				"reliable used cars",
-				"under $10,000",
-				"car reliability comparison",
-				"affordable used cars",
-				"best used cars"
-			],
-			"date": "2024-11-17T08:03:37.380Z"
-		},
-		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
-			"generated": true,
-			"cars": [
-				"toyota prius (hybrid)",
-				"toyota camry (gasoline)",
-				"honda accord (gasoline)",
-				"ford fusion (hybrid)"
-			],
-			"title": "Hybrid vs Gasoline: Which Cars Are More Reliable?",
-			"keywords": [
-				"hybrid car reliability",
-				"gasoline car reliability",
-				"hybrid vs gasoline reliability",
-				"car reliability comparison",
-				"hybrid vehicle performance"
-			],
-			"date": "2024-11-17T08:06:16.229Z"
-		},
-		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
-			"generated": true,
-			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
-			"title": "Honda Accord vs. Toyota Camry: Reliability After 100K Miles",
-			"keywords": [
-				"Honda Accord reliability",
-				"Toyota Camry reliability",
-				"car reliability after 100,000 miles",
-				"Accord vs Camry reliability",
-				"long-term car reliability"
-			],
-			"date": "2024-11-19T07:42:16.796Z"
-		},
-		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Top 4 Cars with Lowest 10-Year Repair Costs",
-			"keywords": [
-				"car repair costs",
-				"long-term reliability",
-				"affordable maintenance",
-				"10-year car costs"
-			],
-			"date": "2024-11-20T07:07:06.238Z"
-		},
-		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
-			"generated": true,
-			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
-			"title": "Hybrid vs Diesel: Unveiling a Decade of Reliability Data",
-			"keywords": [
-				"hybrid reliability statistics",
-				"diesel reliability comparison",
-				"car reliability analysis",
-				"hybrid vs diesel reliability",
-				"automotive reliability trends"
-			],
-			"date": "2024-11-21T06:33:35.366Z"
-		},
-		"top-reliable-cars-for-under-$15,000-in-2024": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Top 4 Reliable Cars Under $15K in 2024: A Must-See Guide",
-			"keywords": [
-				"reliable cars under $15,000",
-				"2024 affordable cars",
-				"budget-friendly reliable cars",
-				"top cars under $15k",
-				"best cheap cars 2024"
-			],
-			"date": "2024-11-22T07:52:02.519Z"
-		},
-		"which-suv-has-the-best-reliability-in-2024-": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Most Reliable SUV of 2024: Honda CR-V Leads the Pack",
-			"keywords": [
-				"most reliable SUV 2024",
-				"SUV reliability comparison",
-				"best SUV reliability ratings",
-				"compact SUV dependability 2024"
-			],
-			"date": "2024-11-23T08:12:39.886Z"
-		},
-		"mazda-cx-5-vs-subaru-forester-durability": {
-			"generated": true,
-			"cars": ["mazda cx-5", "subaru forester"],
-			"title": "Mazda CX-5 vs Subaru Forester: 8-Year Reliability Showdown",
-			"keywords": [
-				"mazda cx-5 reliability",
-				"subaru forester problems",
-				"cx-5 vs forester comparison",
-				"crossover suv durability"
-			],
-			"date": "2024-11-24T07:51:37.683Z"
-		},
-		"ford-escape-vs-chevrolet-equinox-maintenance": {
-			"generated": true,
-			"cars": ["ford escape", "chevrolet equinox"],
-			"title": "Ford Escape vs Chevy Equinox: Real Maintenance Costs Revealed",
-			"keywords": [
-				"ford escape reliability",
-				"chevrolet equinox maintenance costs",
-				"ford vs chevy suv repairs",
-				"compact suv maintenance comparison"
-			],
-			"date": "2024-11-25T09:24:48.167Z"
-		},
-		"kia-sportage-vs-volkswagen-tiguan-longevity": {
-			"generated": true,
-			"cars": ["kia sportage", "volkswagen tiguan"],
-			"title": "Kia Sportage vs VW Tiguan: Which SUV Lasts Longer? [2024 Data]",
-			"keywords": [
-				"kia sportage reliability",
-				"volkswagen tiguan vs sportage",
-				"suv longevity comparison",
-				"compact suv reliability comparison"
-			],
-			"date": "2024-11-26T08:58:12.640Z"
-		},
-		"reliable-compact-suvs-2024": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Most Reliable Compact SUVs 2024: RAV4 vs CR-V vs Escape vs Forester",
-			"keywords": [
-				"most reliable compact SUVs 2024",
-				"best small SUV reliability ratings",
-				"compact SUV comparison 2024",
-				"SUV maintenance costs 2024"
-			],
-			"date": "2024-11-27T08:10:30.715Z"
-		},
-		"most-durable-crossover-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
-			"title": "Most Reliable Crossover SUVs: 8-Year Durability Showdown",
-			"keywords": [
-				"most reliable crossover SUVs",
-				"crossover SUV reliability comparison",
-				"best long-lasting SUVs",
-				"durable compact SUVs"
-			],
-			"date": "2024-11-28T08:40:23.312Z"
-		},
-		"bmw-3-series-vs-mercedes-c-class-reliability": {
-			"generated": true,
-			"cars": ["bmw 3 series", "mercedes c class"],
-			"title": "BMW 3 Series vs Mercedes C-Class: The Ultimate Reliability Battle",
-			"keywords": [
-				"BMW vs Mercedes reliability comparison",
-				"3 Series reliability issues",
-				"C-Class maintenance costs",
-				"German luxury car reliability"
-			],
-			"date": "2024-11-29T08:32:33.700Z"
-		},
-		"audi-a4-vs-lexus-is-durability": {
-			"generated": true,
-			"cars": ["audi a4", "lexus is"],
-			"title": "Audi A4 vs Lexus IS: The Ultimate 8-Year Reliability Showdown",
-			"keywords": [
-				"audi a4 reliability comparison",
-				"lexus is vs audi a4 maintenance",
-				"luxury sedan durability test",
-				"german vs japanese car reliability"
-			],
-			"date": "2024-11-30T09:28:20.474Z"
-		},
-		"bmw-vs-audi-reliability-comparison": {
-			"generated": true,
-			"cars": ["bmw 3 series", "audi a4"],
-			"title": "BMW vs Audi: The Ultimate Reliability Showdown (2024 Data)",
-			"keywords": [
-				"BMW vs Audi reliability",
-				"German car reliability comparison",
-				"BMW 3 Series vs Audi A4 reliability",
-				"luxury car maintenance costs"
-			],
-			"date": "2024-12-01T09:05:18.352Z"
-		},
-		"reliable-pickup-trucks-2024": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Most Reliable Pickup Trucks 2024: Data-Driven Comparison",
-			"keywords": [
-				"most reliable pickup trucks 2024",
-				"best truck reliability ratings",
-				"pickup truck maintenance costs",
-				"truck dependability comparison"
-			],
-			"date": "2024-12-01T09:18:55.261Z"
-		},
-		"best-truck-for-reliability": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Most Reliable Pickup Trucks: Real Data Reveals The Winner",
-			"keywords": [
-				"most reliable pickup trucks",
-				"truck reliability comparison",
-				"best truck reliability ratings",
-				"long-lasting pickup trucks"
-			],
-			"date": "2024-12-02T08:18:26.954Z"
-		},
-		"most-durable-pickup-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Most Reliable Pickup Trucks: 9-Year Durability Showdown",
-			"keywords": [
-				"most reliable pickup trucks",
-				"truck durability comparison",
-				"best long-lasting trucks",
-				"pickup truck reliability ratings"
-			],
-			"date": "2024-12-04T09:40:13.973Z"
-		},
-		"toyota-prius-vs-honda-insight-reliability": {
-			"generated": true,
-			"cars": ["toyota prius", "honda insight"],
-			"title": "Toyota Prius vs Honda Insight: 8-Year Reliability Showdown",
-			"keywords": [
-				"prius vs insight reliability comparison",
-				"hybrid car reliability stats",
-				"toyota prius reliability data",
-				"honda insight service records"
-			],
-			"date": "2024-12-05T08:44:48.111Z"
-		},
-		"honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
-			"generated": true,
-			"cars": ["honda civic", "volkswagen golf", "mazda 3"],
-			"title": "Civic vs Golf vs Mazda3: Ultimate Reliability Showdown (2024)",
-			"keywords": [
-				"compact car reliability comparison",
-				"honda civic reliability stats",
-				"volkswagen golf vs civic vs mazda 3",
-				"car maintenance statistics"
-			],
-			"date": "2024-12-06T09:01:47.171Z"
-		},
-		"best-sports-car-for-reliability": {
-			"generated": true,
-			"cars": ["toyota 86", "mazda mx-5 miata", "subaru brz", "nissan 370z"],
-			"title": "Most Reliable Sports Cars: MX-5 vs 370Z vs Toyota 86 Showdown",
-			"keywords": [
-				"reliable sports cars",
-				"most dependable sports car",
-				"sports car reliability comparison",
-				"best reliable performance cars"
-			],
-			"date": "2024-12-07T07:54:57.636Z"
-		},
-		"top-5-reliable-cars-under-$20k": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
-			"title": "Revealed: Most Reliable Cars Under $20K - 2024 Reliability Guide",
-			"keywords": [
-				"reliable cars under 20000",
-				"best cheap reliable cars",
-				"most reliable used cars",
-				"affordable reliable sedans"
-			],
-			"date": "2024-12-08T07:44:24.635Z"
-		},
-		"best-used-suvs-for-reliability-under-$30k": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Most Reliable Used SUVs Under $30K: 4 Top Picks Ranked",
-			"keywords": [
-				"reliable used SUVs",
-				"best SUVs under 30000",
-				"most reliable crossovers",
-				"affordable reliable SUVs"
-			],
-			"date": "2024-12-09T14:08:53.242Z"
-		},
-		"which-small-suvs-have-best-reliability-ratings": {
-			"generated": true,
-			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
-			"title": "Most Reliable Small SUVs: CR-V vs RAV4 vs Forester vs CX-5",
-			"keywords": [
-				"most reliable small SUV",
-				"compact SUV reliability comparison",
-				"best SUV reliability ratings",
-				"SUV dependability rankings"
-			],
-			"date": "2024-12-10T07:46:20.241Z"
-		},
-		"affordable-reliable-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Most Reliable Pickup Trucks: 4 Top Models Ranked for 2024",
-			"keywords": [
-				"most reliable pickup trucks",
-				"affordable truck maintenance",
-				"best value trucks",
-				"truck reliability comparison"
-			],
-			"date": "2024-12-10T08:17:15.950Z"
-		}
-	},
-	"ru": {
-		"japanese-top-selling-compact-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Японские кроссоверы: сравнение надежности топ-4 моделей",
-			"keywords": [
-				"Japanese compact SUVs",
-				"top-selling SUVs",
-				"car reliability comparison",
-				"Toyota RAV4",
-				"Honda CR-V"
-			],
-			"date": "2024-11-10T05:40:15.667Z"
-		},
-		"mazda-3-reliability-compared-to-honda-civic": {
-			"generated": true,
-			"cars": ["mazda 3", "honda civic", "toyota corolla", "volkswagen jetta"],
-			"title": "Mazda 3 против Honda Civic: Битва надежности 2024",
-			"keywords": [
-				"надежность mazda 3",
-				"сравнение mazda 3 и honda civic",
-				"обслуживание mazda 3 honda civic",
-				"mazda 3 vs honda civic надежность"
-			],
-			"date": "2024-11-23T07:31:01.095Z"
-		},
-		"mitsubishi-outlander-reliability-comparison": {
-			"generated": true,
-			"cars": ["mitsubishi outlander", "toyota rav4", "honda cr-v", "subaru forester"],
-			"title": "Nадежность Mitsubishi Outlander: сравнение и анализ",
-			"keywords": [
-				"Mitsubishi Outlander reliability",
-				"car reliability comparison",
-				"service calls statistics",
-				"vehicle maintenance analysis",
-				"automotive durability"
-			],
-			"date": "2024-11-10T06:01:26.972Z"
-		},
-		"most-and-least-reliable-cars": {
-			"generated": true,
-			"cars": ["toyota camry", "honda accord", "ford fusion", "chevrolet malibu"],
-			"title": "ТОП-4 Самых Надежных и Ненадежных Авто: Полный Анализ",
-			"keywords": [
-				"car reliability comparison",
-				"reliable car models",
-				"least reliable cars",
-				"automotive reliability analysis"
-			],
-			"date": "2024-11-10T06:02:10.732Z"
-		},
-		"mercedes-glc-vs-audi-q5-reliability": {
-			"generated": true,
-			"cars": ["mercedes glc", "audi q5"],
-			"title": "Mercedes GLC или Audi Q5: Чья Надежность Выше в 2024?",
-			"keywords": [
-				"надежность mercedes glc",
-				"сравнение audi q5 и mercedes glc",
-				"обслуживание mercedes glc audi q5",
-				"статистика поломок glc q5"
-			],
-			"date": "2024-11-24T12:59:37.095Z"
-		},
-		"off-road-vehicle-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep wrangler", "toyota 4runner", "ford bronco", "chevrolet colorado zr2"],
-			"title": "Сравнение надёжности внедорожников: что выбрать?",
-			"keywords": [
-				"внедорожник надежность",
-				"сравнение внедорожников",
-				"надежность Jeep Wrangler",
-				"Toyota 4Runner ремонт",
-				"Ford Bronco обслуживание"
-			],
-			"date": "2024-11-10T06:03:54.157Z"
-		},
-		"pickup-truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Сравнение надежности пикапов: лидер ТОП-4 моделей",
-			"keywords": [
-				"пикап надежность",
-				"сравнение пикапов",
-				"Ford F-150 надежность",
-				"Chevrolet Silverado обслуживание",
-				"Toyota Tundra надежность"
-			],
-			"date": "2024-11-10T06:06:27.499Z"
-		},
-		"volkswagen-golf-vs-mazda-3": {
-			"generated": true,
-			"cars": ["volkswagen golf", "mazda 3", "honda civic", "toyota corolla"],
-			"title": "Volkswagen Golf vs Mazda 3: Надежность в Цифрах",
-			"keywords": [
-				"Volkswagen Golf reliability",
-				"Mazda 3 service statistics",
-				"car reliability comparison",
-				"Volkswagen vs Mazda",
-				"compact car reliability"
-			],
-			"date": "2024-11-10T06:06:53.220Z"
-		},
-		"nissan-altima-vs-toyota-camry-reliability": {
-			"generated": true,
-			"cars": ["nissan altima", "toyota camry", "honda accord", "chevrolet malibu"],
-			"title": "Nissan Altima vs Toyota Camry: Сравнение надежности",
-			"keywords": [
-				"Nissan Altima reliability",
-				"Toyota Camry reliability",
-				"Altima vs Camry comparison",
-				"car reliability analysis",
-				"service call statistics"
-			],
-			"date": "2024-11-10T06:35:59.290Z"
-		},
-		"reliable-family-suvs-compared": {
-			"generated": true,
-			"cars": ["toyota highlander", "honda pilot", "ford explorer", "subaru ascent"],
-			"title": "Лучшие семейные внедорожники: Надежность на 2023",
-			"keywords": [
-				"семейные внедорожники надежность",
-				"сравнение внедорожников",
-				"надежные семейные авто",
-				"ТОП семейных внедорожников"
-			],
-			"date": "2024-11-10T06:07:54.875Z"
-		},
-		"reliable-minivans-for-families": {
-			"generated": true,
-			"cars": ["honda odyssey", "toyota sienna", "chrysler pacifica", "kia sedona"],
-			"title": "Надежные минивэны для семей: Сравнение моделей",
-			"keywords": [
-				"надежные минивэны для семей",
-				"надежность минивэнов",
-				"семейные автомобили",
-				"сравнение минивэнов",
-				"обслуживание минивэнов"
-			],
-			"date": "2024-11-10T06:25:22.317Z"
-		},
-		"suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Сравнение надежности SUV: Топ-4 модели 2023 года",
-			"keywords": [
-				"SUV reliability",
-				"Toyota RAV4 reliability",
-				"Honda CR-V reliability",
-				"Ford Escape reliability",
-				"Subaru Forester reliability"
-			],
-			"date": "2024-11-11T07:58:18.644Z"
-		},
-		"subaru-forester-vs-toyota-rav4-reliability": {
-			"generated": true,
-			"cars": ["subaru forester", "toyota rav4", "honda cr-v", "ford escape"],
-			"title": "Сравнение надежности: Subaru Forester vs Toyota RAV4",
-			"keywords": [
-				"Subaru Forester reliability",
-				"Toyota RAV4 reliability",
-				"Forester vs RAV4 comparison",
-				"SUV reliability analysis",
-				"car service statistics"
-			],
-			"date": "2024-11-12T08:16:59.417Z"
-		},
-		"toyota-corolla-vs-honda-civic-reliability": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
-			"title": "Toyota Corolla vs Honda Civic: Надежность в Цифрах",
-			"keywords": [
-				"Toyota Corolla reliability",
-				"Honda Civic reliability",
-				"car reliability comparison",
-				"Toyota vs Honda reliability",
-				"compact car reliability"
-			],
-			"date": "2024-11-12T08:19:25.364Z"
-		},
-		"toyota-rav4-vs-honda-cr-v-reliability": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "chevrolet equinox"],
-			"title": "Toyota RAV4 vs Honda CR-V: Reliability Showdown",
-			"keywords": [
-				"Toyota RAV4 reliability",
-				"Honda CR-V reliability",
-				"RAV4 vs CR-V comparison",
-				"car reliability analysis",
-				"SUV reliability ratings"
-			],
-			"date": "2024-11-13T06:55:33.693Z"
-		},
-		"toyota-tundra-vs-nissan-titan-reliability": {
-			"generated": true,
-			"cars": ["toyota tundra", "nissan titan", "ford f-150", "chevrolet silverado"],
-			"title": "Toyota Tundra vs Nissan Titan: Надежность в Цифрах",
-			"keywords": [
-				"Toyota Tundra reliability",
-				"Nissan Titan reliability",
-				"Tundra vs Titan comparison",
-				"truck reliability analysis",
-				"pickup truck service calls"
-			],
-			"date": "2024-11-14T06:25:48.870Z"
-		},
-		"truck-reliability-comparison": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Сравнение надежности грузовиков: Ford, Chevy, Ram, Toyota",
-			"keywords": [
-				"надежность грузовиков",
-				"сравнение пикапов",
-				"надежность Ford F-150",
-				"надежность Chevrolet Silverado",
-				"надежность Toyota Tundra"
-			],
-			"date": "2024-11-15T08:05:16.631Z"
-		},
-		"volkswagen-passat-vs-honda-accord-reliability": {
-			"generated": true,
-			"cars": ["volkswagen passat", "honda accord", "toyota camry", "nissan altima"],
-			"title": "Volkswagen Passat vs Honda Accord: Надежность в Сравнении",
-			"keywords": [
-				"Volkswagen Passat reliability",
-				"Honda Accord reliability",
-				"car reliability comparison",
-				"Passat vs Accord",
-				"vehicle service calls"
-			],
-			"date": "2024-11-16T06:26:34.943Z"
-		},
-		"jeep-vs-ford-suv-reliability-comparison": {
-			"generated": true,
-			"cars": ["jeep grand cherokee", "ford explorer"],
-			"title": "Сравнение надежности: Jeep Grand Cherokee vs Ford Explorer",
-			"keywords": [
-				"Jeep Grand Cherokee reliability",
-				"Ford Explorer reliability",
-				"SUV reliability comparison",
-				"Jeep vs Ford SUVs",
-				"car service call statistics"
-			],
-			"date": "2024-11-16T19:28:09.694Z"
-		},
-		"what-are-the-most-reliable-used-cars-under-$10,000-": {
-			"generated": true,
-			"cars": ["honda civic", "toyota corolla", "subaru impreza"],
-			"title": "Самые надежные авто до $10,000: сравнение моделей",
-			"keywords": [
-				"надежные подержанные автомобили",
-				"автомобили до 10000 долларов",
-				"надежность автомобилей",
-				"подержанные автомобили",
-				"сравнение автомобилей"
-			],
-			"date": "2024-11-17T08:03:40.558Z"
-		},
-		"are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
-			"generated": true,
-			"cars": [
-				"toyota prius (hybrid)",
-				"toyota camry (gasoline)",
-				"honda accord (gasoline)",
-				"ford fusion (hybrid)"
-			],
-			"title": "Гибриды против бензиновых: надежность автомобилей 2023",
-			"keywords": [
-				"гибридные автомобили надежность",
-				"традиционные бензиновые автомобили",
-				"сравнение надежности автомобилей",
-				"надежность гибридов",
-				"надежность бензиновых автомобилей"
-			],
-			"date": "2024-11-17T08:06:15.922Z"
-		},
-		"which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
-			"generated": true,
-			"cars": ["honda accord", "toyota camry", "nissan altima", "ford fusion"],
-			"title": "Honda Accord vs Toyota Camry: Надежность после 100,000 миль",
-			"keywords": [
-				"Honda Accord reliability",
-				"Toyota Camry reliability",
-				"car reliability comparison",
-				"100000 miles car performance",
-				"long-term car reliability"
-			],
-			"date": "2024-11-19T07:42:14.773Z"
-		},
-		"which-cars-have-the-lowest-repair-costs-over-10-years-": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Самые надежные авто: минимальные затраты на ремонт за 10 лет",
-			"keywords": [
-				"car repair costs",
-				"10-year car reliability",
-				"low maintenance cars",
-				"affordable car repairs",
-				"long-term car costs"
-			],
-			"date": "2024-11-20T07:07:07.263Z"
-		},
-		"hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
-			"generated": true,
-			"cars": ["toyota prius (hybrid)", "toyota camry hybrid (hybrid)"],
-			"title": "Гибриды против дизелей: Надежность за последнее десятилетие",
-			"keywords": [
-				"гибридная надежность",
-				"дизельная надежность",
-				"статистика надежности автомобилей",
-				"сравнение гибридов и дизелей",
-				"надежность автомобилей за десятилетие"
-			],
-			"date": "2024-11-21T06:33:32.962Z"
-		},
-		"top-reliable-cars-for-under-$15,000-in-2024": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "mazda 3"],
-			"title": "Надежные авто до $15,000 в 2024: Топ-выборы",
-			"keywords": [
-				"надежные автомобили до 15000 долларов 2024",
-				"лучшие бюджетные автомобили 2024",
-				"надежность автомобилей 2024",
-				"доступные автомобили 2024"
-			],
-			"date": "2024-11-22T07:51:59.573Z"
-		},
-		"which-suv-has-the-best-reliability-in-2024-": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Самый надежный кроссовер 2024: сравнение ТОП-4 популярных SUV",
-			"keywords": [
-				"надежные внедорожники 2024",
-				"самый надежный кроссовер",
-				"рейтинг надежности SUV",
-				"лучший кроссовер по надежности"
-			],
-			"date": "2024-11-23T08:15:04.261Z"
-		},
-		"mazda-cx-5-vs-subaru-forester-durability": {
-			"generated": true,
-			"cars": ["mazda cx-5", "subaru forester"],
-			"title": "Mazda CX-5 против Subaru Forester: Битва за надежность 2024",
-			"keywords": [
-				"надежность Mazda CX-5",
-				"сравнение Subaru Forester и Mazda CX-5",
-				"долговечность кроссоверов",
-				"обслуживание японских SUV"
-			],
-			"date": "2024-11-24T07:53:45.654Z"
-		},
-		"ford-escape-vs-chevrolet-equinox-maintenance": {
-			"generated": true,
-			"cars": ["ford escape", "chevrolet equinox"],
-			"title": "Ford Escape или Chevrolet Equinox: Битва за Надежность 2024",
-			"keywords": [
-				"сравнение ford escape и chevrolet equinox",
-				"обслуживание ford escape",
-				"надежность chevrolet equinox",
-				"стоимость ремонта кроссоверов ford и chevrolet"
-			],
-			"date": "2024-11-25T09:26:44.253Z"
-		},
-		"kia-sportage-vs-volkswagen-tiguan-longevity": {
-			"generated": true,
-			"cars": ["kia sportage", "volkswagen tiguan"],
-			"title": "Kia Sportage или VW Tiguan: Чей Срок Службы Дольше?",
-			"keywords": [
-				"надежность kia sportage и volkswagen tiguan",
-				"сравнение долговечности киа спортейдж и фольксваген тигуан",
-				"обслуживание kia sportage tiguan",
-				"ресурс двигателя sportage tiguan"
-			],
-			"date": "2024-11-26T09:14:50.706Z"
-		},
-		"reliable-compact-suvs-2024": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
-			"title": "Самые надежные компактные SUV 2024: сравнение ТОП-4 кроссоверов",
-			"keywords": [
-				"надежные компактные кроссоверы 2024",
-				"сравнение кроссоверов по надежности",
-				"лучшие компактные SUV 2024",
-				"рейтинг надежности кроссоверов"
-			],
-			"date": "2024-11-27T08:21:55.796Z"
-		},
-		"most-durable-crossover-suvs": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
-			"title": "Самые надежные кроссоверы: сравнение 4 популярных моделей",
-			"keywords": [
-				"надежные кроссоверы",
-				"сравнение кроссоверов по надежности",
-				"самые долговечные SUV",
-				"лучшие кроссоверы по качеству"
-			],
-			"date": "2024-11-28T08:42:34.863Z"
-		},
-		"bmw-3-series-vs-mercedes-c-class-reliability": {
-			"generated": true,
-			"cars": ["bmw 3 series", "mercedes c class"],
-			"title": "BMW 3 Series vs Mercedes C-Class: Битва надежности 2024",
-			"keywords": [
-				"надежность bmw 3 series и mercedes c class",
-				"сравнение надежности bmw и mercedes",
-				"обслуживание bmw 3 series mercedes c class",
-				"статистика поломок bmw mercedes"
-			],
-			"date": "2024-11-29T08:34:47.780Z"
-		},
-		"audi-a4-vs-lexus-is-durability": {
-			"generated": true,
-			"cars": ["audi a4", "lexus is"],
-			"title": "Audi A4 vs Lexus IS: Битва надежности 2024",
-			"keywords": [
-				"надежность audi a4 и lexus is",
-				"сравнение долговечности audi lexus",
-				"обслуживание audi a4 lexus is",
-				"статистика поломок audi lexus"
-			],
-			"date": "2024-11-30T09:30:37.613Z"
-		},
-		"bmw-vs-audi-reliability-comparison": {
-			"generated": true,
-			"cars": ["bmw 3 series", "audi a4"],
-			"title": "BMW vs Audi: Битва надежности в 2024 году",
-			"keywords": [
-				"надежность BMW против Audi",
-				"сравнение BMW 3 серии и Audi A4",
-				"статистика поломок BMW и Audi",
-				"обслуживание BMW и Audi"
-			],
-			"date": "2024-12-01T09:07:36.720Z"
-		},
-		"reliable-pickup-trucks-2024": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Самые надежные пикапы 2024: ТОП-4 по статистике сервисов",
-			"keywords": [
-				"надежные пикапы 2024",
-				"рейтинг пикапов по надежности",
-				"лучшие пикапы 2024",
-				"сравнение надежности пикапов"
-			],
-			"date": "2024-12-01T09:21:24.693Z"
-		},
-		"best-truck-for-reliability": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Самый надежный пикап 2024: сравнение ТОП-4 моделей",
-			"keywords": [
-				"надежные пикапы",
-				"самый надежный грузовик",
-				"рейтинг надежности пикапов",
-				"лучший пикап по надежности"
-			],
-			"date": "2024-12-02T08:31:00.606Z"
-		},
-		"affordable-reliable-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Топ-4 Надежных Пикапов: Какой Прослужит Дольше?",
-			"keywords": [
-				"надежные пикапы",
-				"недорогие грузовики в обслуживании",
-				"лучшие подержанные пикапы",
-				"сравнение надежности пикапов"
-			],
-			"date": "2024-12-03T07:41:08.190Z"
-		},
-		"most-durable-pickup-trucks": {
-			"generated": true,
-			"cars": ["ford f-150", "chevrolet silverado", "ram 1500", "toyota tundra"],
-			"title": "Самые надежные пикапы 2024: ТОП-4 проверенных временем",
-			"keywords": [
-				"надежные пикапы",
-				"самые долговечные грузовики",
-				"рейтинг пикапов по надежности",
-				"лучшие пикапы по качеству"
-			],
-			"date": "2024-12-04T09:42:15.039Z"
-		},
-		"toyota-prius-vs-honda-insight-reliability": {
-			"generated": true,
-			"cars": ["toyota prius", "honda insight"],
-			"title": "Toyota Prius против Honda Insight: Битва за надежность 2024",
-			"keywords": [
-				"надежность гибридных автомобилей",
-				"сравнение Prius и Insight",
-				"обслуживание Toyota Prius Honda Insight",
-				"гибридные автомобили статистика поломок"
-			],
-			"date": "2024-12-05T08:55:56.173Z"
-		},
-		"honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
-			"generated": true,
-			"cars": ["honda civic", "volkswagen golf", "mazda 3"],
-			"title": "Сравнение надежности: Honda Civic, VW Golf и Mazda 3 в цифрах",
-			"keywords": [
-				"надежность хэтчбеков",
-				"сравнение Honda Civic Volkswagen Golf Mazda 3",
-				"статистика поломок автомобилей",
-				"рейтинг надежности компактных автомобилей"
-			],
-			"date": "2024-12-06T09:03:59.775Z"
-		},
-		"best-sports-car-for-reliability": {
-			"generated": true,
-			"cars": ["toyota 86", "mazda mx-5 miata", "subaru brz", "nissan 370z"],
-			"title": "Самые надежные спорткары 2024: неожиданный победитель",
-			"keywords": [
-				"надежные спортивные автомобили",
-				"самые надежные спорткары",
-				"рейтинг надежности спорткаров",
-				"спортивные авто с минимальными поломками"
-			],
-			"date": "2024-12-07T07:57:22.534Z"
-		},
-		"top-5-reliable-cars-under-$20k": {
-			"generated": true,
-			"cars": ["toyota corolla", "honda civic", "subaru impreza", "hyundai elantra"],
-			"title": "Топ-5 надежных авто до $20 000: рейтинг 2024 года",
-			"keywords": [
-				"надежные автомобили до 20000",
-				"самые надежные бюджетные авто",
-				"рейтинг надежности недорогих машин",
-				"лучшие автомобили эконом класса"
-			],
-			"date": "2024-12-08T07:47:14.648Z"
-		},
-		"best-used-suvs-for-reliability-under-$30k": {
-			"generated": true,
-			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "mazda cx-5"],
-			"title": "Топ-4 надежных б/у кроссоверов до 30 000$ - Полный обзор",
-			"keywords": [
-				"надежные подержанные кроссоверы",
-				"лучшие б/у SUV до 30000$",
-				"самые надежные кроссоверы с пробегом",
-				"рейтинг надежности подержанных SUV"
-			],
-			"date": "2024-12-09T14:11:40.948Z"
-		},
-		"which-small-suvs-have-best-reliability-ratings": {
-			"generated": true,
-			"cars": ["honda cr-v", "toyota rav4", "subaru forester", "mazda cx-5"],
-			"title": "Самые надежные компактные SUV: сравнение 4 популярных моделей",
-			"keywords": [
-				"надежность компактных кроссоверов",
-				"рейтинг надежности SUV",
-				"сравнение надежности кроссоверов",
-				"лучшие кроссоверы по надежности"
-			],
-			"date": "2024-12-10T07:49:00.428Z"
-		}
-	}
+   "es": {
+      "japanese-top-selling-compact-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Fiabilidad de los Mejores SUVs Japoneses Compactos",
+         "keywords": [
+            "compact SUVs Japón",
+            "Toyota RAV4 confiabilidad",
+            "Honda CR-V rendimiento",
+            "Subaru Forester durabilidad",
+            "Mazda CX-5 comparativa"
+         ],
+         "date": "2024-11-10T05:40:15.941Z"
+      },
+      "mazda-3-reliability-compared-to-honda-civic": {
+         "generated": true,
+         "cars": [
+            "mazda 3",
+            "honda civic",
+            "toyota corolla",
+            "volkswagen jetta"
+         ],
+         "title": "Comparativa de fiabilidad: Mazda 3 vs Honda Civic",
+         "keywords": [
+            "mazda 3 reliability",
+            "honda civic durability",
+            "car reliability comparison",
+            "technical performance analysis"
+         ],
+         "date": "2024-11-10T06:00:51.661Z"
+      },
+      "mitsubishi-outlander-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "mitsubishi outlander",
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester"
+         ],
+         "title": "Comparativa de Fiabilidad: Mitsubishi Outlander 2023",
+         "keywords": [
+            "Mitsubishi Outlander fiabilidad",
+            "comparación de fiabilidad de coches",
+            "estadísticas de servicio automotriz",
+            "SUV confiabilidad",
+            "análisis de fiabilidad automotriz"
+         ],
+         "date": "2024-11-10T06:01:24.697Z"
+      },
+      "most-and-least-reliable-cars": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "ford fusion",
+            "chevrolet malibu"
+         ],
+         "title": "Los coches más confiables y menos confiables revelados",
+         "keywords": [
+            "coches más fiables",
+            "coches menos fiables",
+            "comparación de fiabilidad",
+            "estadísticas de servicio automotriz",
+            "análisis de coches fiables"
+         ],
+         "date": "2024-11-10T06:02:14.466Z"
+      },
+      "mercedes-glc-vs-audi-q5-reliability": {
+         "generated": true,
+         "cars": [
+            "mercedes glc",
+            "audi q5"
+         ],
+         "title": "Mercedes GLC vs Audi Q5: ¿Cuál es más Confiable en 2024?",
+         "keywords": [
+            "comparación mercedes glc audi q5",
+            "fiabilidad mercedes glc vs q5",
+            "problemas comunes glc q5",
+            "mantenimiento mercedes glc audi q5"
+         ],
+         "date": "2024-11-24T13:01:37.205Z"
+      },
+      "off-road-vehicle-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep wrangler",
+            "toyota 4runner",
+            "ford bronco",
+            "chevrolet colorado zr2"
+         ],
+         "title": "Comparativa de fiabilidad: 4x4 más seguros 2023",
+         "keywords": [
+            "off-road vehicle reliability",
+            "Jeep Wrangler reliability",
+            "Toyota 4Runner reliability",
+            "Ford Bronco reliability",
+            "Chevrolet Colorado ZR2 durability"
+         ],
+         "date": "2024-11-10T06:04:01.842Z"
+      },
+      "pickup-truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Descubre la Fiabilidad de Camionetas: ¿Cuál es la Mejor?",
+         "keywords": [
+            "pickup truck reliability",
+            "Ford F-150 maintenance",
+            "Chevrolet Silverado issues",
+            "Ram 1500 durability",
+            "Toyota Tundra performance"
+         ],
+         "date": "2024-11-10T06:06:32.191Z"
+      },
+      "volkswagen-golf-vs-mazda-3": {
+         "generated": true,
+         "cars": [
+            "volkswagen golf",
+            "mazda 3",
+            "honda civic",
+            "toyota corolla"
+         ],
+         "title": "Volkswagen Golf vs Mazda 3: ¿Cuál es Más Confiable?",
+         "keywords": [
+            "Volkswagen Golf reliability",
+            "Mazda 3 service calls",
+            "Golf vs Mazda reliability",
+            "car reliability comparison",
+            "compact car maintenance"
+         ],
+         "date": "2024-11-10T06:06:53.551Z"
+      },
+      "nissan-altima-vs-toyota-camry-reliability": {
+         "generated": true,
+         "cars": [
+            "nissan altima",
+            "toyota camry",
+            "honda accord",
+            "chevrolet malibu"
+         ],
+         "title": "Nissan Altima vs Toyota Camry: ¿Cuál es más fiable?",
+         "keywords": [
+            "Nissan Altima reliability",
+            "Toyota Camry reliability",
+            "Altima vs Camry comparison",
+            "car reliability analysis",
+            "sedan service calls"
+         ],
+         "date": "2024-11-10T06:35:59.328Z"
+      },
+      "reliable-family-suvs-compared": {
+         "generated": true,
+         "cars": [
+            "toyota highlander",
+            "honda pilot",
+            "ford explorer",
+            "subaru ascent"
+         ],
+         "title": "Comparativa: SUVs Familiares Más Fiables 2023",
+         "keywords": [
+            "reliable family SUVs",
+            "SUV reliability comparison",
+            "family SUV maintenance",
+            "dependable family vehicles",
+            "SUV service calls"
+         ],
+         "date": "2024-11-10T06:07:56.513Z"
+      },
+      "reliable-minivans-for-families": {
+         "generated": true,
+         "cars": [
+            "honda odyssey",
+            "toyota sienna",
+            "chrysler pacifica",
+            "kia sedona"
+         ],
+         "title": "Minivans Familiares Más Confiables: Comparativa 2023",
+         "keywords": [
+            "minivans familiares confiables",
+            "fiabilidad de minivans",
+            "comparativa minivans",
+            "minivans para familias",
+            "análisis de minivans"
+         ],
+         "date": "2024-11-10T06:25:19.703Z"
+      },
+      "suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Comparativa de Fiabilidad de SUVs: ¿Cuál es el Más Confiable?",
+         "keywords": [
+            "SUV reliability comparison",
+            "Toyota RAV4 reliability",
+            "Honda CR-V reliability",
+            "Ford Escape reliability",
+            "Subaru Forester reliability"
+         ],
+         "date": "2024-11-11T08:08:21.610Z"
+      },
+      "subaru-forester-vs-toyota-rav4-reliability": {
+         "generated": true,
+         "cars": [
+            "subaru forester",
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape"
+         ],
+         "title": "Subaru Forester vs Toyota RAV4: ¿Cuál es más fiable?",
+         "keywords": [
+            "Subaru Forester reliability",
+            "Toyota RAV4 reliability",
+            "Subaru vs Toyota reliability",
+            "SUV reliability comparison",
+            "car service calls analysis"
+         ],
+         "date": "2024-11-12T08:16:25.357Z"
+      },
+      "toyota-corolla-vs-honda-civic-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "nissan sentra",
+            "hyundai elantra"
+         ],
+         "title": "Toyota Corolla vs Honda Civic: ¿Cuál es más fiable?",
+         "keywords": [
+            "Toyota Corolla reliability",
+            "Honda Civic reliability",
+            "car reliability comparison",
+            "Toyota vs Honda reliability",
+            "compact car reliability"
+         ],
+         "date": "2024-11-12T08:19:28.339Z"
+      },
+      "toyota-rav4-vs-honda-cr-v-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Toyota RAV4 vs Honda CR-V: ¿Cuál es más confiable?",
+         "keywords": [
+            "Toyota RAV4 reliability",
+            "Honda CR-V reliability",
+            "RAV4 vs CR-V comparison",
+            "car reliability analysis",
+            "SUV reliability ratings"
+         ],
+         "date": "2024-11-13T06:55:44.106Z"
+      },
+      "toyota-tundra-vs-nissan-titan-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota tundra",
+            "nissan titan",
+            "ford f-150",
+            "chevrolet silverado"
+         ],
+         "title": "Toyota Tundra vs Nissan Titan: ¿Cuál es más fiable?",
+         "keywords": [
+            "Toyota Tundra reliability",
+            "Nissan Titan reliability",
+            "truck reliability comparison",
+            "Tundra vs Titan",
+            "pickup truck service calls"
+         ],
+         "date": "2024-11-14T06:25:50.629Z"
+      },
+      "truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Comparativa de Fiabilidad: Ford F-150 vs. Rivales",
+         "keywords": [
+            "comparación de confiabilidad de camiones",
+            "fiabilidad de camionetas",
+            "análisis de durabilidad de pickups",
+            "estadísticas de servicio de camiones",
+            "evaluación de confiabilidad de vehículos"
+         ],
+         "date": "2024-11-15T08:05:33.559Z"
+      },
+      "volkswagen-passat-vs-honda-accord-reliability": {
+         "generated": true,
+         "cars": [
+            "volkswagen passat",
+            "honda accord",
+            "toyota camry",
+            "nissan altima"
+         ],
+         "title": "Volkswagen Passat vs Honda Accord: ¿Cuál es más fiable?",
+         "keywords": [
+            "Volkswagen Passat reliability",
+            "Honda Accord reliability",
+            "car reliability comparison",
+            "Passat vs Accord",
+            "vehicle service calls"
+         ],
+         "date": "2024-11-16T06:26:34.675Z"
+      },
+      "jeep-vs-ford-suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep grand cherokee",
+            "ford explorer"
+         ],
+         "title": "Jeep vs Ford: ¿Cuál SUV es más confiable?",
+         "keywords": [
+            "Jeep Grand Cherokee reliability",
+            "Ford Explorer reliability",
+            "SUV reliability comparison",
+            "Jeep vs Ford SUVs",
+            "car service call statistics"
+         ],
+         "date": "2024-11-16T19:28:21.893Z"
+      },
+      "what-are-the-most-reliable-used-cars-under-$10,000-": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "toyota corolla",
+            "subaru impreza"
+         ],
+         "title": "Los 3 Autos Usados Más Fiables por Menos de $10,000",
+         "keywords": [
+            "reliable used cars",
+            "under $10,000",
+            "car reliability comparison",
+            "affordable used cars",
+            "best used cars"
+         ],
+         "date": "2024-11-17T08:03:38.723Z"
+      },
+      "are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry (gasoline)",
+            "honda accord (gasoline)",
+            "ford fusion (hybrid)"
+         ],
+         "title": "¿Son los coches híbridos más fiables que los de gasolina?",
+         "keywords": [
+            "reliability of hybrid cars",
+            "hybrid vs gasoline reliability",
+            "car reliability comparison",
+            "hybrid car maintenance",
+            "gasoline car reliability"
+         ],
+         "date": "2024-11-17T08:06:16.728Z"
+      },
+      "which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
+         "generated": true,
+         "cars": [
+            "honda accord",
+            "toyota camry",
+            "nissan altima",
+            "ford fusion"
+         ],
+         "title": "Honda Accord vs. Toyota Camry: ¿Cuál es más fiable tras 100K millas?",
+         "keywords": [
+            "Honda Accord reliability",
+            "Toyota Camry reliability",
+            "car reliability after 100,000 miles",
+            "Accord vs Camry reliability",
+            "long-term car reliability"
+         ],
+         "date": "2024-11-19T07:42:16.270Z"
+      },
+      "which-cars-have-the-lowest-repair-costs-over-10-years-": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Los coches más fiables y económicos en reparaciones",
+         "keywords": [
+            "car repair costs",
+            "long-term car reliability",
+            "affordable car maintenance",
+            "10-year car expenses"
+         ],
+         "date": "2024-11-20T07:07:27.507Z"
+      },
+      "hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry hybrid (hybrid)"
+         ],
+         "title": "Comparativa: Fiabilidad Híbridos vs Diésel Última Década",
+         "keywords": [
+            "reliability statistics",
+            "hybrid vs diesel",
+            "car reliability comparison",
+            "hybrid car performance",
+            "diesel car reliability"
+         ],
+         "date": "2024-11-21T06:33:36.598Z"
+      },
+      "top-reliable-cars-for-under-$15,000-in-2024": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Los 4 coches más fiables por menos de $15,000 en 2024",
+         "keywords": [
+            "coches fiables 2024",
+            "coches económicos",
+            "mejores coches usados",
+            "coches por menos de $15,000",
+            "fiabilidad automotriz"
+         ],
+         "date": "2024-11-22T07:52:08.668Z"
+      },
+      "which-suv-has-the-best-reliability-in-2024-": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "¿Cuál es el SUV más Confiable del 2024? Análisis Definitivo",
+         "keywords": [
+            "SUV más confiable 2024",
+            "comparativa fiabilidad SUVs",
+            "mejor SUV calidad-precio 2024",
+            "SUV con menos averías"
+         ],
+         "date": "2024-11-23T08:17:04.198Z"
+      },
+      "mazda-cx-5-vs-subaru-forester-durability": {
+         "generated": true,
+         "cars": [
+            "mazda cx-5",
+            "subaru forester"
+         ],
+         "title": "Mazda CX-5 vs Subaru Forester: ¿Cuál es más Duradero en 2024?",
+         "keywords": [
+            "comparativa mazda cx-5 subaru forester",
+            "fiabilidad suv compactos",
+            "durabilidad cx5 forester",
+            "mantenimiento mazda vs subaru"
+         ],
+         "date": "2024-11-24T07:56:13.850Z"
+      },
+      "ford-escape-vs-chevrolet-equinox-maintenance": {
+         "generated": true,
+         "cars": [
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Ford Escape vs Chevrolet Equinox: Duelo de Mantenimiento 2024",
+         "keywords": [
+            "mantenimiento ford escape chevrolet equinox",
+            "comparativa suv ford chevrolet",
+            "costos servicio escape equinox",
+            "confiabilidad suv compactas"
+         ],
+         "date": "2024-11-25T09:28:29.515Z"
+      },
+      "kia-sportage-vs-volkswagen-tiguan-longevity": {
+         "generated": true,
+         "cars": [
+            "kia sportage",
+            "volkswagen tiguan"
+         ],
+         "title": "Kia Sportage vs VW Tiguan: ¿Cuál es más Confiable en 2024?",
+         "keywords": [
+            "fiabilidad kia sportage volkswagen tiguan",
+            "comparativa durabilidad suv compactos",
+            "problemas comunes sportage tiguan",
+            "mantenimiento suv kia volkswagen"
+         ],
+         "date": "2024-11-26T09:02:23.570Z"
+      },
+      "reliable-compact-suvs-2024": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Los SUV Compactos Más Fiables 2024: Análisis de Servicio Técnico",
+         "keywords": [
+            "SUVs compactos más confiables 2024",
+            "comparativa SUVs compactos",
+            "mejor SUV compacto fiabilidad",
+            "SUV compacto Toyota vs Honda"
+         ],
+         "date": "2024-11-27T08:25:11.044Z"
+      },
+      "bmw-3-series-vs-mercedes-c-class-reliability": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "mercedes c class"
+         ],
+         "title": "BMW Serie 3 vs Mercedes Clase C: ¿Cuál es más Confiable?",
+         "keywords": [
+            "fiabilidad bmw serie 3 vs mercedes clase c",
+            "comparativa mantenimiento bmw mercedes",
+            "problemas comunes serie 3 clase c",
+            "costos reparación bmw mercedes"
+         ],
+         "date": "2024-11-29T08:36:40.297Z"
+      },
+      "most-durable-crossover-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru outback",
+            "ford escape"
+         ],
+         "title": "Los SUVs Más Fiables: RAV4 vs CR-V vs Outback vs Escape",
+         "keywords": [
+            "SUVs más confiables",
+            "crossover duradero",
+            "comparativa SUVs compactos",
+            "mejor SUV calidad-precio"
+         ],
+         "date": "2024-11-29T08:51:12.515Z"
+      },
+      "audi-a4-vs-lexus-is-durability": {
+         "generated": true,
+         "cars": [
+            "audi a4",
+            "lexus is"
+         ],
+         "title": "Audi A4 vs Lexus IS: ¿Cuál Es Más Confiable en 2024?",
+         "keywords": [
+            "durabilidad audi a4 vs lexus is",
+            "comparativa fiabilidad audi lexus",
+            "mantenimiento audi a4 lexus is",
+            "confiabilidad sedanes lujo"
+         ],
+         "date": "2024-11-30T09:32:39.301Z"
+      },
+      "bmw-vs-audi-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "audi a4"
+         ],
+         "title": "BMW vs Audi: ¿Cuál es Más Confiable? Análisis Real 2024",
+         "keywords": [
+            "comparación fiabilidad BMW Audi",
+            "problemas comunes BMW vs Audi",
+            "mantenimiento BMW Audi",
+            "confiabilidad BMW 3 Series vs Audi A4"
+         ],
+         "date": "2024-12-01T09:09:29.248Z"
+      },
+      "reliable-pickup-trucks-2024": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Las 4 Pickups Más Fiables del 2024: Análisis de Datos Reales",
+         "keywords": [
+            "camionetas más confiables 2024",
+            "pickup trucks fiables",
+            "mejores pickups duraderas",
+            "comparativa pickups confiabilidad"
+         ],
+         "date": "2024-12-01T09:23:33.601Z"
+      },
+      "best-truck-for-reliability": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Las 4 Pickups Más Confiables: Análisis Definitivo 2024",
+         "keywords": [
+            "camionetas más confiables",
+            "mejor pickup fiabilidad",
+            "comparativa pickups durabilidad",
+            "confiabilidad camionetas pickup"
+         ],
+         "date": "2024-12-02T08:33:23.369Z"
+      },
+      "most-durable-pickup-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Las 4 Pickups Más Duraderas: Datos Reales de Confiabilidad",
+         "keywords": [
+            "camionetas más duraderas",
+            "pickup confiables",
+            "mejor pickup calidad-precio",
+            "comparativa pickups durabilidad"
+         ],
+         "date": "2024-12-04T09:44:03.914Z"
+      },
+      "toyota-prius-vs-honda-insight-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota prius",
+            "honda insight"
+         ],
+         "title": "Toyota Prius vs Honda Insight: ¿Cuál es más Confiable en 2024?",
+         "keywords": [
+            "comparación fiabilidad prius insight",
+            "híbridos más confiables",
+            "problemas comunes prius insight",
+            "mantenimiento coches híbridos toyota honda"
+         ],
+         "date": "2024-12-05T08:58:25.647Z"
+      },
+      "honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "volkswagen golf",
+            "mazda 3"
+         ],
+         "title": "Análisis: Civic vs Golf vs Mazda 3 - ¿Cuál es más confiable?",
+         "keywords": [
+            "comparación fiabilidad civic golf mazda3",
+            "estadísticas averías compactos",
+            "análisis confiabilidad hatchbacks",
+            "mantenimiento honda volkswagen mazda"
+         ],
+         "date": "2024-12-06T09:05:58.914Z"
+      },
+      "best-sports-car-for-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota 86",
+            "mazda mx-5 miata",
+            "subaru brz",
+            "nissan 370z"
+         ],
+         "title": "Los 4 Deportivos Más Fiables: Datos Reales que te Sorprenderán",
+         "keywords": [
+            "coches deportivos más fiables",
+            "deportivos confiables comparativa",
+            "mejores deportivos duraderos",
+            "fiabilidad coches deportivos japoneses"
+         ],
+         "date": "2024-12-07T08:00:01.652Z"
+      },
+      "top-5-reliable-cars-under-$20k": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "hyundai elantra"
+         ],
+         "title": "Los 5 Autos Más Confiables Por Menos de $20,000 en 2024",
+         "keywords": [
+            "autos económicos confiables",
+            "carros baratos menos 20000",
+            "mejores coches económicos nuevos",
+            "autos usados fiables"
+         ],
+         "date": "2024-12-08T07:49:48.883Z"
+      },
+      "best-used-suvs-for-reliability-under-$30k": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Los 4 SUVs Más Fiables Por Menos de $30,000: Guía Definitiva 2024",
+         "keywords": [
+            "SUVs usados confiables",
+            "SUVs económicos bajo $30000",
+            "mejores SUVs segunda mano",
+            "SUVs fiables baratos"
+         ],
+         "date": "2024-12-09T14:14:16.318Z"
+      },
+      "which-small-suvs-have-best-reliability-ratings": {
+         "generated": true,
+         "cars": [
+            "honda cr-v",
+            "toyota rav4",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Los SUV Compactos Más Fiables: Comparativa 2024 de Confiabilidad",
+         "keywords": [
+            "SUV más confiable",
+            "comparativa SUV compactos",
+            "mejor SUV calidad precio",
+            "fiabilidad crossover compacto"
+         ],
+         "date": "2024-12-10T07:51:55.843Z"
+      },
+      "affordable-reliable-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Las 4 Camionetas Más Confiables: Guía Definitiva 2024",
+         "keywords": [
+            "camionetas económicas confiables",
+            "mejores pickups baratas",
+            "comparativa pickup fiables",
+            "camionetas duraderas precio accesible"
+         ],
+         "date": "2024-12-10T08:19:44.769Z"
+      },
+      "best-reliable-sedans-under-$25k": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "nissan altima",
+            "hyundai sonata"
+         ],
+         "title": "Los 4 Sedanes Más Confiables Por Menos de $25,000 en 2024",
+         "keywords": [
+            "sedanes económicos confiables",
+            "mejores sedanes baratos 2024",
+            "autos familiares bajo mantenimiento",
+            "sedanes nuevos menos 25000"
+         ],
+         "date": "2024-12-26T08:09:46.115Z"
+      }
+   },
+   "de": {
+      "japanese-top-selling-compact-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Japanische Top-SUVs im Zuverlässigkeitstest 2023",
+         "keywords": [
+            "japanische Kompakt-SUVs",
+            "zuverlässige japanische SUVs",
+            "Toyota RAV4 Zuverlässigkeit",
+            "Honda CR-V Wartung",
+            "Subaru Forester Probleme"
+         ],
+         "date": "2024-11-10T05:40:16.160Z"
+      },
+      "mazda-3-reliability-compared-to-honda-civic": {
+         "generated": true,
+         "cars": [
+            "mazda 3",
+            "honda civic",
+            "toyota corolla",
+            "volkswagen jetta"
+         ],
+         "title": "Mazda 3 vs Honda Civic: Zuverlässigkeit im Vergleich",
+         "keywords": [
+            "Mazda 3 reliability",
+            "Honda Civic comparison",
+            "car reliability analysis",
+            "Mazda vs Honda",
+            "technical reliability review"
+         ],
+         "date": "2024-11-10T06:00:56.730Z"
+      },
+      "mitsubishi-outlander-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "mitsubishi outlander",
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester"
+         ],
+         "title": "Mitsubishi Outlander vs. Rivalen: Zuverlässigkeitsranking",
+         "keywords": [
+            "Mitsubishi Outlander Zuverlässigkeit",
+            "Auto Zuverlässigkeitsvergleich",
+            "Mitsubishi Outlander Wartung",
+            "Fahrzeugzuverlässigkeit Bewertung"
+         ],
+         "date": "2024-11-10T06:01:26.840Z"
+      },
+      "most-and-least-reliable-cars": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "ford fusion",
+            "chevrolet malibu"
+         ],
+         "title": "Die 10 zuverlässigsten Autos im Vergleich 2023",
+         "keywords": [
+            "car reliability comparison",
+            "reliable car models",
+            "least reliable cars",
+            "automotive reliability analysis",
+            "car service statistics"
+         ],
+         "date": "2024-11-10T06:02:07.526Z"
+      },
+      "off-road-vehicle-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep wrangler",
+            "toyota 4runner",
+            "ford bronco",
+            "chevrolet colorado zr2"
+         ],
+         "title": "Geländewagen Zuverlässigkeit: Wrangler vs. 4Runner & Co.",
+         "keywords": [
+            "Offroad-Fahrzeugzuverlässigkeit",
+            "Geländefahrzeug-Servicevergleich",
+            "Zuverlässigkeitsstudie robust Fahrzeuge",
+            "Offroad-Fahrzeugleistung",
+            "Serviceprobleme Offroad-Modelle"
+         ],
+         "date": "2024-11-10T06:04:11.815Z"
+      },
+      "pickup-truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Pick-up-Truck Zuverlässigkeit: Der Ultimative Vergleich",
+         "keywords": [
+            "pickup truck reliability",
+            "truck reliability comparison",
+            "Ford F-150 reliability",
+            "Chevrolet Silverado service",
+            "Toyota Tundra long-term performance"
+         ],
+         "date": "2024-11-10T06:06:32.164Z"
+      },
+      "volkswagen-golf-vs-mazda-3": {
+         "generated": true,
+         "cars": [
+            "volkswagen golf",
+            "mazda 3",
+            "honda civic",
+            "toyota corolla"
+         ],
+         "title": "Volkswagen Golf vs. Mazda 3: Wer ist zuverlässiger?",
+         "keywords": [
+            "Volkswagen Golf Zuverlässigkeit",
+            "Mazda 3 Zuverlässigkeit",
+            "Auto Zuverlässigkeitsvergleich",
+            "Serviceanrufe Autoanalyse",
+            "Golf vs Mazda 3 Test"
+         ],
+         "date": "2024-11-10T06:06:53.205Z"
+      },
+      "nissan-altima-vs-toyota-camry-reliability": {
+         "generated": true,
+         "cars": [
+            "nissan altima",
+            "toyota camry",
+            "honda accord",
+            "chevrolet malibu"
+         ],
+         "title": "Nissan Altima vs Toyota Camry: Zuverlässigkeit im Vergleich",
+         "keywords": [
+            "Nissan Altima reliability",
+            "Toyota Camry reliability",
+            "Altima vs Camry comparison",
+            "car reliability analysis",
+            "service call statistics"
+         ],
+         "date": "2024-11-10T06:35:59.976Z"
+      },
+      "reliable-family-suvs-compared": {
+         "generated": true,
+         "cars": [
+            "toyota highlander",
+            "honda pilot",
+            "ford explorer",
+            "subaru ascent"
+         ],
+         "title": "Vergleich der zuverlässigsten Familien-SUVs 2023",
+         "keywords": [
+            "Family SUV reliability",
+            "Toyota Highlander reliability",
+            "Honda Pilot service calls",
+            "Ford Explorer reviews",
+            "Subaru Ascent issues"
+         ],
+         "date": "2024-11-10T06:08:05.137Z"
+      },
+      "reliable-minivans-for-families": {
+         "generated": true,
+         "cars": [
+            "honda odyssey",
+            "toyota sienna",
+            "chrysler pacifica",
+            "kia sedona"
+         ],
+         "title": "Die zuverlässigsten Familien-Minivans im Vergleich",
+         "keywords": [
+            "zuverlässige Familienvans",
+            "Minivan Zuverlässigkeit",
+            "Familienauto Vergleich",
+            "Minivan Wartung",
+            "Familienfreundliche Fahrzeuge"
+         ],
+         "date": "2024-11-10T06:25:19.290Z"
+      },
+      "suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "SUV-Zuverlässigkeit: Toyota, Honda, Ford & Subaru im Vergleich",
+         "keywords": [
+            "SUV Zuverlässigkeitsvergleich",
+            "Toyota RAV4 Zuverlässigkeit",
+            "Honda CR-V Zuverlässigkeit",
+            "Ford Escape Zuverlässigkeit",
+            "Subaru Forester Zuverlässigkeit"
+         ],
+         "date": "2024-11-11T08:08:20.687Z"
+      },
+      "subaru-forester-vs-toyota-rav4-reliability": {
+         "generated": true,
+         "cars": [
+            "subaru forester",
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape"
+         ],
+         "title": "Subaru Forester vs Toyota RAV4: Zuverlässigkeit im Vergleich",
+         "keywords": [
+            "Subaru Forester reliability",
+            "Toyota RAV4 reliability",
+            "Subaru vs Toyota reliability",
+            "SUV reliability comparison",
+            "car service calls analysis"
+         ],
+         "date": "2024-11-12T08:16:27.069Z"
+      },
+      "toyota-corolla-vs-honda-civic-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "nissan sentra",
+            "hyundai elantra"
+         ],
+         "title": "Toyota Corolla vs Honda Civic: Zuverlässigkeitsvergleich",
+         "keywords": [
+            "Toyota Corolla Zuverlässigkeit",
+            "Honda Civic Zuverlässigkeit",
+            "Auto Zuverlässigkeitsvergleich",
+            "Toyota vs Honda",
+            "Fahrzeugwartungskosten"
+         ],
+         "date": "2024-11-12T08:19:25.945Z"
+      },
+      "toyota-rav4-vs-honda-cr-v-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Toyota RAV4 vs Honda CR-V: Welches Auto ist zuverlässiger?",
+         "keywords": [
+            "Toyota RAV4 Zuverlässigkeit",
+            "Honda CR-V Zuverlässigkeit",
+            "RAV4 vs CR-V Vergleich",
+            "Auto Zuverlässigkeitsanalyse",
+            "Kompakt-SUV Zuverlässigkeit"
+         ],
+         "date": "2024-11-13T06:55:36.651Z"
+      },
+      "toyota-tundra-vs-nissan-titan-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota tundra",
+            "nissan titan",
+            "ford f-150",
+            "chevrolet silverado"
+         ],
+         "title": "Toyota Tundra vs Nissan Titan: Zuverlässigkeit im Vergleich",
+         "keywords": [
+            "Toyota Tundra reliability",
+            "Nissan Titan reliability",
+            "truck reliability comparison",
+            "Tundra vs Titan",
+            "pickup truck service calls"
+         ],
+         "date": "2024-11-14T06:25:53.687Z"
+      },
+      "truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Lkw-Zuverlässigkeit: Ford, Chevy, Ram & Toyota im Vergleich",
+         "keywords": [
+            "Lkw-Zuverlässigkeitsvergleich",
+            "Pickup-Truck-Zuverlässigkeit",
+            "Ford F-150 Zuverlässigkeit",
+            "Chevrolet Silverado Probleme",
+            "Toyota Tundra Wartung"
+         ],
+         "date": "2024-11-15T08:05:25.044Z"
+      },
+      "volkswagen-passat-vs-honda-accord-reliability": {
+         "generated": true,
+         "cars": [
+            "volkswagen passat",
+            "honda accord",
+            "toyota camry",
+            "nissan altima"
+         ],
+         "title": "Volkswagen Passat vs Honda Accord: Zuverlässigkeit im Test",
+         "keywords": [
+            "Volkswagen Passat Zuverlässigkeit",
+            "Honda Accord Zuverlässigkeit",
+            "Auto Zuverlässigkeitsvergleich",
+            "Passat vs Accord",
+            "Fahrzeugwartungskosten"
+         ],
+         "date": "2024-11-16T06:26:35.093Z"
+      },
+      "jeep-vs-ford-suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep grand cherokee",
+            "ford explorer"
+         ],
+         "title": "Jeep vs Ford: Welcher SUV ist zuverlässiger?",
+         "keywords": [
+            "Jeep Grand Cherokee reliability",
+            "Ford Explorer reliability",
+            "SUV reliability comparison",
+            "Jeep vs Ford SUVs",
+            "car service call statistics"
+         ],
+         "date": "2024-11-16T19:28:24.845Z"
+      },
+      "what-are-the-most-reliable-used-cars-under-$10,000-": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "toyota corolla",
+            "subaru impreza"
+         ],
+         "title": "Die zuverlässigsten Gebrauchtwagen unter $10.000",
+         "keywords": [
+            "gebrauchte Autos unter 10000",
+            "zuverlässige Gebrauchtwagen",
+            "Honda Civic Zuverlässigkeit",
+            "Toyota Corolla Zuverlässigkeit",
+            "Subaru Impreza Zuverlässigkeit"
+         ],
+         "date": "2024-11-17T08:03:37.779Z"
+      },
+      "are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry (gasoline)",
+            "honda accord (gasoline)",
+            "ford fusion (hybrid)"
+         ],
+         "title": "Sind Hybridautos zuverlässiger als Benziner? Vergleich 2023",
+         "keywords": [
+            "Hybrid car reliability",
+            "gasoline car reliability",
+            "hybrid vs gasoline reliability",
+            "car service calls",
+            "vehicle reliability comparison"
+         ],
+         "date": "2024-11-17T08:06:16.848Z"
+      },
+      "which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
+         "generated": true,
+         "cars": [
+            "honda accord",
+            "toyota camry",
+            "nissan altima",
+            "ford fusion"
+         ],
+         "title": "Honda Accord vs. Toyota Camry: Zuverlässigkeit ab 100.000 Meilen",
+         "keywords": [
+            "Honda Accord reliability",
+            "Toyota Camry reliability",
+            "car reliability comparison",
+            "100000 miles car performance",
+            "Accord vs Camry reliability"
+         ],
+         "date": "2024-11-19T07:42:21.970Z"
+      },
+      "which-cars-have-the-lowest-repair-costs-over-10-years-": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Die zuverlässigsten Autos: Geringste Reparaturkosten",
+         "keywords": [
+            "car repair costs",
+            "long-term car reliability",
+            "10-year car maintenance",
+            "affordable car repairs",
+            "vehicle service calls"
+         ],
+         "date": "2024-11-20T07:07:30.130Z"
+      },
+      "hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry hybrid (hybrid)"
+         ],
+         "title": "Hybrid vs Diesel: Zuverlässigkeitsvergleich der letzten 10 Jahre",
+         "keywords": [
+            "Hybrid Reliability",
+            "Diesel Reliability",
+            "Car Reliability Statistics",
+            "Hybrid vs Diesel",
+            "Automotive Reliability Analysis"
+         ],
+         "date": "2024-11-21T06:33:36.749Z"
+      },
+      "top-reliable-cars-for-under-$15,000-in-2024": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Die besten zuverlässigen Autos unter $15.000 im Jahr 2024",
+         "keywords": [
+            "günstige zuverlässige Autos 2024",
+            "zuverlässige Gebrauchtwagen unter 15000",
+            "beste Autos unter 15000 2024",
+            "Auto Zuverlässigkeit 2024",
+            "preiswerte zuverlässige Fahrzeuge"
+         ],
+         "date": "2024-11-22T07:52:08.586Z"
+      },
+      "which-suv-has-the-best-reliability-in-2024-": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "SUV-Zuverlässigkeit 2024: CR-V vs. RAV4 vs. Forester im Härtetest",
+         "keywords": [
+            "zuverlässigste SUVs 2024",
+            "SUV Langzeittest Vergleich",
+            "SUV Pannenstatistik 2024",
+            "bester SUV Qualität"
+         ],
+         "date": "2024-11-23T08:19:15.540Z"
+      },
+      "mazda-cx-5-vs-subaru-forester-durability": {
+         "generated": true,
+         "cars": [
+            "mazda cx-5",
+            "subaru forester"
+         ],
+         "title": "Mazda CX-5 vs. Subaru Forester: Der große Langzeit-Härtetest",
+         "keywords": [
+            "Mazda CX-5 Langzeittest",
+            "Subaru Forester Zuverlässigkeit",
+            "CX-5 vs Forester Haltbarkeit",
+            "SUV Dauerhaltbarkeit Vergleich"
+         ],
+         "date": "2024-11-24T07:58:14.987Z"
+      },
+      "mercedes-glc-vs-audi-q5-reliability": {
+         "generated": true,
+         "cars": [
+            "mercedes glc",
+            "audi q5"
+         ],
+         "title": "Mercedes GLC vs. Audi Q5: Zuverlässigkeitsvergleich 2024",
+         "keywords": [
+            "Mercedes GLC vs Audi Q5 Zuverlässigkeit",
+            "SUV Langzeitqualität Vergleich",
+            "Premium SUV Pannenstatistik",
+            "Wartungskosten GLC Q5"
+         ],
+         "date": "2024-11-24T13:03:47.770Z"
+      },
+      "ford-escape-vs-chevrolet-equinox-maintenance": {
+         "generated": true,
+         "cars": [
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Ford Escape vs. Chevrolet Equinox: Wartungskosten im Vergleich",
+         "keywords": [
+            "Ford Escape Wartungskosten",
+            "Chevrolet Equinox Reparaturen",
+            "SUV Zuverlässigkeitsvergleich",
+            "Kompakt-SUV Wartung"
+         ],
+         "date": "2024-11-25T09:30:19.924Z"
+      },
+      "kia-sportage-vs-volkswagen-tiguan-longevity": {
+         "generated": true,
+         "cars": [
+            "kia sportage",
+            "volkswagen tiguan"
+         ],
+         "title": "Kia Sportage vs. VW Tiguan: Der große Langzeit-Zuverlässigkeitstest",
+         "keywords": [
+            "Kia Sportage Zuverlässigkeit",
+            "VW Tiguan Langzeittest",
+            "SUV Haltbarkeit Vergleich",
+            "Sportage Tiguan Lebensdauer"
+         ],
+         "date": "2024-11-26T09:16:57.647Z"
+      },
+      "reliable-compact-suvs-2024": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Die zuverlässigsten Kompakt-SUVs 2024 im Härtetest",
+         "keywords": [
+            "zuverlässige Kompakt-SUVs 2024",
+            "SUV Zuverlässigkeitsvergleich",
+            "beste SUV Qualität",
+            "kompakte SUV Langzeittest"
+         ],
+         "date": "2024-11-27T08:27:16.002Z"
+      },
+      "most-durable-crossover-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "ford escape"
+         ],
+         "title": "Die zuverlässigsten Crossover SUVs im Langzeittest 2024",
+         "keywords": [
+            "zuverlässige Crossover SUV",
+            "langlebige SUV Vergleich",
+            "SUV Haltbarkeit Test",
+            "beste SUV Qualität"
+         ],
+         "date": "2024-11-28T08:44:52.017Z"
+      },
+      "bmw-3-series-vs-mercedes-c-class-reliability": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "mercedes c class"
+         ],
+         "title": "BMW 3er vs. Mercedes C-Klasse: Der große Zuverlässigkeitstest",
+         "keywords": [
+            "BMW 3er vs C-Klasse Zuverlässigkeit",
+            "Mercedes C-Klasse Reparaturen",
+            "BMW 3er Langzeittest",
+            "deutsche Mittelklasse Vergleich"
+         ],
+         "date": "2024-11-29T08:38:37.658Z"
+      },
+      "audi-a4-vs-lexus-is-durability": {
+         "generated": true,
+         "cars": [
+            "audi a4",
+            "lexus is"
+         ],
+         "title": "Audi A4 vs. Lexus IS: Der ultimative Haltbarkeitsvergleich",
+         "keywords": [
+            "Audi A4 Lexus IS Vergleich",
+            "Zuverlässigkeit Audi vs Lexus",
+            "Langzeithaltbarkeit Luxusautos",
+            "Wartungskosten A4 IS"
+         ],
+         "date": "2024-11-30T09:34:27.308Z"
+      },
+      "bmw-vs-audi-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "audi a4"
+         ],
+         "title": "BMW vs. Audi: Der große Zuverlässigkeitsvergleich 2024",
+         "keywords": [
+            "BMW Audi Zuverlässigkeitsvergleich",
+            "deutsche Autos Langzeittest",
+            "BMW 3er vs Audi A4 Haltbarkeit",
+            "Premiumautos Wartungskosten"
+         ],
+         "date": "2024-12-01T09:11:25.305Z"
+      },
+      "reliable-pickup-trucks-2024": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Die zuverlässigsten Pickup-Trucks 2024 im Härtetest",
+         "keywords": [
+            "zuverlässige Pickup-Trucks 2024",
+            "beste Pickup-Trucks Deutschland",
+            "Pickup Langzeittest Vergleich",
+            "langlebige Pickup-Modelle"
+         ],
+         "date": "2024-12-01T09:25:55.867Z"
+      },
+      "best-truck-for-reliability": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Die zuverlässigsten Pickup-Trucks 2024 im Härtetest",
+         "keywords": [
+            "zuverlässigster Pickup-Truck",
+            "langlebige Trucks Vergleich",
+            "Pickup Wartungskosten Test",
+            "bester Truck Haltbarkeit"
+         ],
+         "date": "2024-12-02T08:35:24.692Z"
+      },
+      "affordable-reliable-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Die 4 zuverlässigsten Pickup-Trucks im Langzeittest 2024",
+         "keywords": [
+            "zuverlässige Pickup-Trucks",
+            "günstige Nutzfahrzeuge",
+            "langlebige Trucks Vergleich",
+            "preiswerte Pickup-Modelle"
+         ],
+         "date": "2024-12-03T07:45:21.753Z"
+      },
+      "most-durable-pickup-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Die 4 langlebigsten Pickup-Trucks im Härtetest 2024",
+         "keywords": [
+            "langlebige Pickup-Trucks",
+            "zuverlässige Nutzfahrzeuge",
+            "haltbare Pritschenwagen",
+            "robuste Pick-ups"
+         ],
+         "date": "2024-12-04T09:45:44.108Z"
+      },
+      "toyota-prius-vs-honda-insight-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota prius",
+            "honda insight"
+         ],
+         "title": "Toyota Prius vs. Honda Insight: Der große Zuverlässigkeitstest",
+         "keywords": [
+            "Hybridauto Zuverlässigkeit Vergleich",
+            "Toyota Prius Honda Insight Test",
+            "Hybrid Langzeitqualität",
+            "Prius vs Insight Wartung"
+         ],
+         "date": "2024-12-05T09:00:49.870Z"
+      },
+      "honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "volkswagen golf",
+            "mazda 3"
+         ],
+         "title": "Zuverlässigkeitsvergleich: Civic, Golf & Mazda 3 im Langzeittest",
+         "keywords": [
+            "Kompaktwagenvergleich Zuverlässigkeit",
+            "Honda Civic vs VW Golf Statistik",
+            "Mazda 3 Pannenstatistik",
+            "Zuverlässigkeitsanalyse Kompaktklasse"
+         ],
+         "date": "2024-12-06T09:08:05.947Z"
+      },
+      "best-sports-car-for-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota 86",
+            "mazda mx-5 miata",
+            "subaru brz",
+            "nissan 370z"
+         ],
+         "title": "Die zuverlässigsten Sportwagen im Vergleich 2024",
+         "keywords": [
+            "zuverlässige Sportwagen",
+            "langlebige Sportautos",
+            "Sportwagen Wartungskosten",
+            "Sportwagen Zuverlässigkeitsvergleich"
+         ],
+         "date": "2024-12-07T08:02:20.894Z"
+      },
+      "top-5-reliable-cars-under-$20k": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "hyundai elantra"
+         ],
+         "title": "Die 5 zuverlässigsten Gebrauchtwagen unter 20.000 Euro im Test",
+         "keywords": [
+            "zuverlässige Gebrauchtwagen unter 20000",
+            "günstige zuverlässige Autos",
+            "langlebige Kompaktwagen",
+            "preiswerte Qualitätsautos"
+         ],
+         "date": "2024-12-08T07:51:58.643Z"
+      },
+      "best-used-suvs-for-reliability-under-$30k": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Die 4 zuverlässigsten Gebrauchten SUVs unter 30.000€",
+         "keywords": [
+            "zuverlässige gebrauchte SUVs",
+            "SUV Zuverlässigkeitsvergleich",
+            "beste SUVs unter 30000",
+            "gebrauchte Kompakt-SUVs Langzeittest"
+         ],
+         "date": "2024-12-09T14:16:53.957Z"
+      },
+      "which-small-suvs-have-best-reliability-ratings": {
+         "generated": true,
+         "cars": [
+            "honda cr-v",
+            "toyota rav4",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Die zuverlässigsten Kompakt-SUVs im Langzeittest 2024",
+         "keywords": [
+            "zuverlässigste Kompakt-SUVs",
+            "SUV Zuverlässigkeitsvergleich",
+            "SUV Pannenstatistik",
+            "Kompakt-SUV Qualitätstest"
+         ],
+         "date": "2024-12-10T07:55:06.003Z"
+      },
+      "best-reliable-sedans-under-$25k": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "nissan altima",
+            "hyundai sonata"
+         ],
+         "title": "Die 4 zuverlässigsten Mittelklasse-Limousinen unter 25.000€",
+         "keywords": [
+            "zuverlässige Mittelklassewagen",
+            "günstige Limousinen unter 25000",
+            "beste Familienautos Preis-Leistung",
+            "langlebige Sedan Vergleich"
+         ],
+         "date": "2024-12-26T08:11:43.176Z"
+      }
+   },
+   "en": {
+      "japanese-top-selling-compact-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Reliability Showdown: Top Japanese Compact SUVs",
+         "keywords": [
+            "Japanese compact SUVs",
+            "SUV reliability comparison",
+            "top-selling SUVs Japan",
+            "Subaru Forester reliability",
+            "Toyota RAV4 performance"
+         ],
+         "date": "2024-11-10T05:40:14.582Z"
+      },
+      "mazda-3-reliability-compared-to-honda-civic": {
+         "generated": true,
+         "cars": [
+            "mazda 3",
+            "honda civic",
+            "toyota corolla",
+            "volkswagen jetta"
+         ],
+         "title": "Mazda 3 vs Honda Civic: The Ultimate Reliability Showdown",
+         "keywords": [
+            "mazda 3 vs honda civic reliability",
+            "mazda 3 reliability review",
+            "honda civic vs mazda 3 maintenance",
+            "compact car reliability comparison"
+         ],
+         "date": "2024-11-23T07:29:04.058Z"
+      },
+      "mitsubishi-outlander-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "mitsubishi outlander",
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester"
+         ],
+         "title": "Mitsubishi Outlander Reliability: In-Depth 2023 Comparison",
+         "keywords": [
+            "Mitsubishi Outlander reliability",
+            "car reliability comparison",
+            "Outlander service calls",
+            "SUV reliability analysis"
+         ],
+         "date": "2024-11-10T06:01:25.394Z"
+      },
+      "most-and-least-reliable-cars": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "ford fusion",
+            "chevrolet malibu"
+         ],
+         "title": "\"Top Reliable Cars: Best & Worst Models Revealed\"",
+         "keywords": [
+            "car reliability comparison",
+            "reliable car models",
+            "least reliable cars",
+            "most reliable cars"
+         ],
+         "date": "2024-11-10T06:02:12.621Z"
+      },
+      "mercedes-glc-vs-audi-q5-reliability": {
+         "generated": true,
+         "cars": [
+            "mercedes glc",
+            "audi q5"
+         ],
+         "title": "Mercedes GLC vs Audi Q5: Which SUV Is More Reliable in 2024?",
+         "keywords": [
+            "mercedes glc reliability comparison",
+            "audi q5 vs glc reliability",
+            "luxury suv reliability comparison",
+            "german suv maintenance costs"
+         ],
+         "date": "2024-11-24T12:57:30.522Z"
+      },
+      "off-road-vehicle-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep wrangler",
+            "toyota 4runner",
+            "ford bronco",
+            "chevrolet colorado zr2"
+         ],
+         "title": "Off-Road Vehicle Reliability: Top Picks Compared",
+         "keywords": [
+            "off-road vehicle reliability",
+            "jeep wrangler reliability",
+            "toyota 4runner durability",
+            "ford bronco service calls",
+            "chevrolet colorado zr2 maintenance"
+         ],
+         "date": "2024-11-10T06:04:06.920Z"
+      },
+      "pickup-truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Ultimate Pickup Truck Reliability Showdown 2023",
+         "keywords": [
+            "pickup truck reliability",
+            "Ford F-150 reliability",
+            "Chevrolet Silverado reliability",
+            "Ram 1500 reliability",
+            "Toyota Tundra reliability"
+         ],
+         "date": "2024-11-10T06:06:28.888Z"
+      },
+      "volkswagen-golf-vs-mazda-3": {
+         "generated": true,
+         "cars": [
+            "volkswagen golf",
+            "mazda 3",
+            "honda civic",
+            "toyota corolla"
+         ],
+         "title": "Volkswagen Golf vs Mazda 3: Unveiling True Reliability",
+         "keywords": [
+            "Volkswagen Golf reliability",
+            "Mazda 3 reliability",
+            "Volkswagen vs Mazda",
+            "car service calls",
+            "vehicle longevity comparison"
+         ],
+         "date": "2024-11-10T06:06:53.904Z"
+      },
+      "nissan-altima-vs-toyota-camry-reliability": {
+         "generated": true,
+         "cars": [
+            "nissan altima",
+            "toyota camry",
+            "honda accord",
+            "chevrolet malibu"
+         ],
+         "title": "Nissan Altima vs Toyota Camry: Reliability Showdown",
+         "keywords": [
+            "Nissan Altima reliability",
+            "Toyota Camry reliability",
+            "Altima vs Camry comparison",
+            "car reliability analysis",
+            "sedan reliability ratings"
+         ],
+         "date": "2024-11-10T06:35:58.950Z"
+      },
+      "reliable-family-suvs-compared": {
+         "generated": true,
+         "cars": [
+            "toyota highlander",
+            "honda pilot",
+            "ford explorer",
+            "subaru ascent"
+         ],
+         "title": "Top Family SUVs: Reliability Compared & Ranked",
+         "keywords": [
+            "reliable family SUVs",
+            "SUV reliability comparison",
+            "Toyota Highlander reliability",
+            "Honda Pilot vs Ford Explorer",
+            "Subaru Ascent service calls"
+         ],
+         "date": "2024-11-10T06:07:54.244Z"
+      },
+      "reliable-minivans-for-families": {
+         "generated": true,
+         "cars": [
+            "honda odyssey",
+            "toyota sienna",
+            "chrysler pacifica",
+            "kia sedona"
+         ],
+         "title": "Top 4 Reliable Minivans for Families: A Data-Driven Guide",
+         "keywords": [
+            "reliable family minivans",
+            "minivan reliability comparison",
+            "best minivans for families",
+            "family vehicle reliability",
+            "minivan service calls"
+         ],
+         "date": "2024-11-10T06:25:20.103Z"
+      },
+      "suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "SUV Reliability Showdown: Top Models Compared",
+         "keywords": [
+            "SUV reliability comparison",
+            "Toyota RAV4 reliability",
+            "Honda CR-V reliability",
+            "Ford Escape reliability",
+            "Subaru Forester reliability"
+         ],
+         "date": "2024-11-11T07:58:14.627Z"
+      },
+      "subaru-forester-vs-toyota-rav4-reliability": {
+         "generated": true,
+         "cars": [
+            "subaru forester",
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape"
+         ],
+         "title": "Subaru Forester vs Toyota RAV4: Reliability Showdown",
+         "keywords": [
+            "Subaru Forester reliability",
+            "Toyota RAV4 reliability",
+            "Forester vs RAV4 comparison",
+            "SUV reliability analysis",
+            "car service call statistics"
+         ],
+         "date": "2024-11-12T08:16:22.260Z"
+      },
+      "toyota-corolla-vs-honda-civic-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "nissan sentra",
+            "hyundai elantra"
+         ],
+         "title": "Toyota Corolla vs Honda Civic: Unveiling Reliability Secrets",
+         "keywords": [
+            "Toyota Corolla reliability",
+            "Honda Civic reliability",
+            "car reliability comparison",
+            "Toyota vs Honda reliability",
+            "compact car reliability"
+         ],
+         "date": "2024-11-12T08:19:28.646Z"
+      },
+      "toyota-rav4-vs-honda-cr-v-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Toyota RAV4 vs Honda CR-V: Reliability Showdown",
+         "keywords": [
+            "Toyota RAV4 reliability",
+            "Honda CR-V reliability",
+            "RAV4 vs CR-V comparison",
+            "car reliability analysis",
+            "SUV reliability ratings"
+         ],
+         "date": "2024-11-13T06:55:37.893Z"
+      },
+      "toyota-tundra-vs-nissan-titan-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota tundra",
+            "nissan titan",
+            "ford f-150",
+            "chevrolet silverado"
+         ],
+         "title": "Toyota Tundra vs Nissan Titan: Reliability Showdown",
+         "keywords": [
+            "Toyota Tundra reliability",
+            "Nissan Titan reliability",
+            "Tundra vs Titan comparison",
+            "truck reliability analysis",
+            "pickup truck service calls"
+         ],
+         "date": "2024-11-14T06:25:49.904Z"
+      },
+      "truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Truck Reliability Showdown: Ford vs. Chevy vs. Ram vs. Toyota",
+         "keywords": [
+            "truck reliability",
+            "pickup truck comparison",
+            "vehicle service calls",
+            "truck maintenance data",
+            "reliable trucks"
+         ],
+         "date": "2024-11-15T08:05:29.127Z"
+      },
+      "volkswagen-passat-vs-honda-accord-reliability": {
+         "generated": true,
+         "cars": [
+            "volkswagen passat",
+            "honda accord",
+            "toyota camry",
+            "nissan altima"
+         ],
+         "title": "Volkswagen Passat vs Honda Accord: Reliability Showdown",
+         "keywords": [
+            "Volkswagen Passat reliability",
+            "Honda Accord reliability",
+            "Passat vs Accord comparison",
+            "car reliability analysis",
+            "vehicle service calls"
+         ],
+         "date": "2024-11-16T06:26:36.886Z"
+      },
+      "jeep-vs-ford-suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep grand cherokee",
+            "ford explorer"
+         ],
+         "title": "Jeep vs Ford: SUV Reliability Showdown 2023",
+         "keywords": [
+            "Jeep Grand Cherokee reliability",
+            "Ford Explorer reliability",
+            "SUV reliability comparison",
+            "Jeep vs Ford SUVs",
+            "car service call statistics"
+         ],
+         "date": "2024-11-16T19:28:19.103Z"
+      },
+      "what-are-the-most-reliable-used-cars-under-$10,000-": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "toyota corolla",
+            "subaru impreza"
+         ],
+         "title": "Top 3 Reliable Used Cars Under $10K: A Data-Driven Guide",
+         "keywords": [
+            "reliable used cars",
+            "under $10,000",
+            "car reliability comparison",
+            "affordable used cars",
+            "best used cars"
+         ],
+         "date": "2024-11-17T08:03:37.380Z"
+      },
+      "are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry (gasoline)",
+            "honda accord (gasoline)",
+            "ford fusion (hybrid)"
+         ],
+         "title": "Hybrid vs Gasoline: Which Cars Are More Reliable?",
+         "keywords": [
+            "hybrid car reliability",
+            "gasoline car reliability",
+            "hybrid vs gasoline reliability",
+            "car reliability comparison",
+            "hybrid vehicle performance"
+         ],
+         "date": "2024-11-17T08:06:16.229Z"
+      },
+      "which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
+         "generated": true,
+         "cars": [
+            "honda accord",
+            "toyota camry",
+            "nissan altima",
+            "ford fusion"
+         ],
+         "title": "Honda Accord vs. Toyota Camry: Reliability After 100K Miles",
+         "keywords": [
+            "Honda Accord reliability",
+            "Toyota Camry reliability",
+            "car reliability after 100,000 miles",
+            "Accord vs Camry reliability",
+            "long-term car reliability"
+         ],
+         "date": "2024-11-19T07:42:16.796Z"
+      },
+      "which-cars-have-the-lowest-repair-costs-over-10-years-": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Top 4 Cars with Lowest 10-Year Repair Costs",
+         "keywords": [
+            "car repair costs",
+            "long-term reliability",
+            "affordable maintenance",
+            "10-year car costs"
+         ],
+         "date": "2024-11-20T07:07:06.238Z"
+      },
+      "hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry hybrid (hybrid)"
+         ],
+         "title": "Hybrid vs Diesel: Unveiling a Decade of Reliability Data",
+         "keywords": [
+            "hybrid reliability statistics",
+            "diesel reliability comparison",
+            "car reliability analysis",
+            "hybrid vs diesel reliability",
+            "automotive reliability trends"
+         ],
+         "date": "2024-11-21T06:33:35.366Z"
+      },
+      "top-reliable-cars-for-under-$15,000-in-2024": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Top 4 Reliable Cars Under $15K in 2024: A Must-See Guide",
+         "keywords": [
+            "reliable cars under $15,000",
+            "2024 affordable cars",
+            "budget-friendly reliable cars",
+            "top cars under $15k",
+            "best cheap cars 2024"
+         ],
+         "date": "2024-11-22T07:52:02.519Z"
+      },
+      "which-suv-has-the-best-reliability-in-2024-": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Most Reliable SUV of 2024: Honda CR-V Leads the Pack",
+         "keywords": [
+            "most reliable SUV 2024",
+            "SUV reliability comparison",
+            "best SUV reliability ratings",
+            "compact SUV dependability 2024"
+         ],
+         "date": "2024-11-23T08:12:39.886Z"
+      },
+      "mazda-cx-5-vs-subaru-forester-durability": {
+         "generated": true,
+         "cars": [
+            "mazda cx-5",
+            "subaru forester"
+         ],
+         "title": "Mazda CX-5 vs Subaru Forester: 8-Year Reliability Showdown",
+         "keywords": [
+            "mazda cx-5 reliability",
+            "subaru forester problems",
+            "cx-5 vs forester comparison",
+            "crossover suv durability"
+         ],
+         "date": "2024-11-24T07:51:37.683Z"
+      },
+      "ford-escape-vs-chevrolet-equinox-maintenance": {
+         "generated": true,
+         "cars": [
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Ford Escape vs Chevy Equinox: Real Maintenance Costs Revealed",
+         "keywords": [
+            "ford escape reliability",
+            "chevrolet equinox maintenance costs",
+            "ford vs chevy suv repairs",
+            "compact suv maintenance comparison"
+         ],
+         "date": "2024-11-25T09:24:48.167Z"
+      },
+      "kia-sportage-vs-volkswagen-tiguan-longevity": {
+         "generated": true,
+         "cars": [
+            "kia sportage",
+            "volkswagen tiguan"
+         ],
+         "title": "Kia Sportage vs VW Tiguan: Which SUV Lasts Longer? [2024 Data]",
+         "keywords": [
+            "kia sportage reliability",
+            "volkswagen tiguan vs sportage",
+            "suv longevity comparison",
+            "compact suv reliability comparison"
+         ],
+         "date": "2024-11-26T08:58:12.640Z"
+      },
+      "reliable-compact-suvs-2024": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Most Reliable Compact SUVs 2024: RAV4 vs CR-V vs Escape vs Forester",
+         "keywords": [
+            "most reliable compact SUVs 2024",
+            "best small SUV reliability ratings",
+            "compact SUV comparison 2024",
+            "SUV maintenance costs 2024"
+         ],
+         "date": "2024-11-27T08:10:30.715Z"
+      },
+      "most-durable-crossover-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "ford escape"
+         ],
+         "title": "Most Reliable Crossover SUVs: 8-Year Durability Showdown",
+         "keywords": [
+            "most reliable crossover SUVs",
+            "crossover SUV reliability comparison",
+            "best long-lasting SUVs",
+            "durable compact SUVs"
+         ],
+         "date": "2024-11-28T08:40:23.312Z"
+      },
+      "bmw-3-series-vs-mercedes-c-class-reliability": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "mercedes c class"
+         ],
+         "title": "BMW 3 Series vs Mercedes C-Class: The Ultimate Reliability Battle",
+         "keywords": [
+            "BMW vs Mercedes reliability comparison",
+            "3 Series reliability issues",
+            "C-Class maintenance costs",
+            "German luxury car reliability"
+         ],
+         "date": "2024-11-29T08:32:33.700Z"
+      },
+      "audi-a4-vs-lexus-is-durability": {
+         "generated": true,
+         "cars": [
+            "audi a4",
+            "lexus is"
+         ],
+         "title": "Audi A4 vs Lexus IS: The Ultimate 8-Year Reliability Showdown",
+         "keywords": [
+            "audi a4 reliability comparison",
+            "lexus is vs audi a4 maintenance",
+            "luxury sedan durability test",
+            "german vs japanese car reliability"
+         ],
+         "date": "2024-11-30T09:28:20.474Z"
+      },
+      "bmw-vs-audi-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "audi a4"
+         ],
+         "title": "BMW vs Audi: The Ultimate Reliability Showdown (2024 Data)",
+         "keywords": [
+            "BMW vs Audi reliability",
+            "German car reliability comparison",
+            "BMW 3 Series vs Audi A4 reliability",
+            "luxury car maintenance costs"
+         ],
+         "date": "2024-12-01T09:05:18.352Z"
+      },
+      "reliable-pickup-trucks-2024": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Most Reliable Pickup Trucks 2024: Data-Driven Comparison",
+         "keywords": [
+            "most reliable pickup trucks 2024",
+            "best truck reliability ratings",
+            "pickup truck maintenance costs",
+            "truck dependability comparison"
+         ],
+         "date": "2024-12-01T09:18:55.261Z"
+      },
+      "best-truck-for-reliability": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Most Reliable Pickup Trucks: Real Data Reveals The Winner",
+         "keywords": [
+            "most reliable pickup trucks",
+            "truck reliability comparison",
+            "best truck reliability ratings",
+            "long-lasting pickup trucks"
+         ],
+         "date": "2024-12-02T08:18:26.954Z"
+      },
+      "most-durable-pickup-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Most Reliable Pickup Trucks: 9-Year Durability Showdown",
+         "keywords": [
+            "most reliable pickup trucks",
+            "truck durability comparison",
+            "best long-lasting trucks",
+            "pickup truck reliability ratings"
+         ],
+         "date": "2024-12-04T09:40:13.973Z"
+      },
+      "toyota-prius-vs-honda-insight-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota prius",
+            "honda insight"
+         ],
+         "title": "Toyota Prius vs Honda Insight: 8-Year Reliability Showdown",
+         "keywords": [
+            "prius vs insight reliability comparison",
+            "hybrid car reliability stats",
+            "toyota prius reliability data",
+            "honda insight service records"
+         ],
+         "date": "2024-12-05T08:44:48.111Z"
+      },
+      "honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "volkswagen golf",
+            "mazda 3"
+         ],
+         "title": "Civic vs Golf vs Mazda3: Ultimate Reliability Showdown (2024)",
+         "keywords": [
+            "compact car reliability comparison",
+            "honda civic reliability stats",
+            "volkswagen golf vs civic vs mazda 3",
+            "car maintenance statistics"
+         ],
+         "date": "2024-12-06T09:01:47.171Z"
+      },
+      "best-sports-car-for-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota 86",
+            "mazda mx-5 miata",
+            "subaru brz",
+            "nissan 370z"
+         ],
+         "title": "Most Reliable Sports Cars: MX-5 vs 370Z vs Toyota 86 Showdown",
+         "keywords": [
+            "reliable sports cars",
+            "most dependable sports car",
+            "sports car reliability comparison",
+            "best reliable performance cars"
+         ],
+         "date": "2024-12-07T07:54:57.636Z"
+      },
+      "top-5-reliable-cars-under-$20k": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "hyundai elantra"
+         ],
+         "title": "Revealed: Most Reliable Cars Under $20K - 2024 Reliability Guide",
+         "keywords": [
+            "reliable cars under 20000",
+            "best cheap reliable cars",
+            "most reliable used cars",
+            "affordable reliable sedans"
+         ],
+         "date": "2024-12-08T07:44:24.635Z"
+      },
+      "best-used-suvs-for-reliability-under-$30k": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Most Reliable Used SUVs Under $30K: 4 Top Picks Ranked",
+         "keywords": [
+            "reliable used SUVs",
+            "best SUVs under 30000",
+            "most reliable crossovers",
+            "affordable reliable SUVs"
+         ],
+         "date": "2024-12-09T14:08:53.242Z"
+      },
+      "which-small-suvs-have-best-reliability-ratings": {
+         "generated": true,
+         "cars": [
+            "honda cr-v",
+            "toyota rav4",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Most Reliable Small SUVs: CR-V vs RAV4 vs Forester vs CX-5",
+         "keywords": [
+            "most reliable small SUV",
+            "compact SUV reliability comparison",
+            "best SUV reliability ratings",
+            "SUV dependability rankings"
+         ],
+         "date": "2024-12-10T07:46:20.241Z"
+      },
+      "affordable-reliable-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Most Reliable Pickup Trucks: 4 Top Models Ranked for 2024",
+         "keywords": [
+            "most reliable pickup trucks",
+            "affordable truck maintenance",
+            "best value trucks",
+            "truck reliability comparison"
+         ],
+         "date": "2024-12-10T08:17:15.950Z"
+      },
+      "best-reliable-sedans-under-$25k": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "nissan altima",
+            "hyundai sonata"
+         ],
+         "title": "Most Reliable Sedans Under $25K: 2024 Reliability Showdown",
+         "keywords": [
+            "reliable sedans under 25000",
+            "most reliable affordable sedans",
+            "best value reliable cars",
+            "dependable family sedans"
+         ],
+         "date": "2024-12-26T08:02:05.569Z"
+      }
+   },
+   "ru": {
+      "japanese-top-selling-compact-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Японские кроссоверы: сравнение надежности топ-4 моделей",
+         "keywords": [
+            "Japanese compact SUVs",
+            "top-selling SUVs",
+            "car reliability comparison",
+            "Toyota RAV4",
+            "Honda CR-V"
+         ],
+         "date": "2024-11-10T05:40:15.667Z"
+      },
+      "mazda-3-reliability-compared-to-honda-civic": {
+         "generated": true,
+         "cars": [
+            "mazda 3",
+            "honda civic",
+            "toyota corolla",
+            "volkswagen jetta"
+         ],
+         "title": "Mazda 3 против Honda Civic: Битва надежности 2024",
+         "keywords": [
+            "надежность mazda 3",
+            "сравнение mazda 3 и honda civic",
+            "обслуживание mazda 3 honda civic",
+            "mazda 3 vs honda civic надежность"
+         ],
+         "date": "2024-11-23T07:31:01.095Z"
+      },
+      "mitsubishi-outlander-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "mitsubishi outlander",
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester"
+         ],
+         "title": "Nадежность Mitsubishi Outlander: сравнение и анализ",
+         "keywords": [
+            "Mitsubishi Outlander reliability",
+            "car reliability comparison",
+            "service calls statistics",
+            "vehicle maintenance analysis",
+            "automotive durability"
+         ],
+         "date": "2024-11-10T06:01:26.972Z"
+      },
+      "most-and-least-reliable-cars": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "ford fusion",
+            "chevrolet malibu"
+         ],
+         "title": "ТОП-4 Самых Надежных и Ненадежных Авто: Полный Анализ",
+         "keywords": [
+            "car reliability comparison",
+            "reliable car models",
+            "least reliable cars",
+            "automotive reliability analysis"
+         ],
+         "date": "2024-11-10T06:02:10.732Z"
+      },
+      "mercedes-glc-vs-audi-q5-reliability": {
+         "generated": true,
+         "cars": [
+            "mercedes glc",
+            "audi q5"
+         ],
+         "title": "Mercedes GLC или Audi Q5: Чья Надежность Выше в 2024?",
+         "keywords": [
+            "надежность mercedes glc",
+            "сравнение audi q5 и mercedes glc",
+            "обслуживание mercedes glc audi q5",
+            "статистика поломок glc q5"
+         ],
+         "date": "2024-11-24T12:59:37.095Z"
+      },
+      "off-road-vehicle-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep wrangler",
+            "toyota 4runner",
+            "ford bronco",
+            "chevrolet colorado zr2"
+         ],
+         "title": "Сравнение надёжности внедорожников: что выбрать?",
+         "keywords": [
+            "внедорожник надежность",
+            "сравнение внедорожников",
+            "надежность Jeep Wrangler",
+            "Toyota 4Runner ремонт",
+            "Ford Bronco обслуживание"
+         ],
+         "date": "2024-11-10T06:03:54.157Z"
+      },
+      "pickup-truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Сравнение надежности пикапов: лидер ТОП-4 моделей",
+         "keywords": [
+            "пикап надежность",
+            "сравнение пикапов",
+            "Ford F-150 надежность",
+            "Chevrolet Silverado обслуживание",
+            "Toyota Tundra надежность"
+         ],
+         "date": "2024-11-10T06:06:27.499Z"
+      },
+      "volkswagen-golf-vs-mazda-3": {
+         "generated": true,
+         "cars": [
+            "volkswagen golf",
+            "mazda 3",
+            "honda civic",
+            "toyota corolla"
+         ],
+         "title": "Volkswagen Golf vs Mazda 3: Надежность в Цифрах",
+         "keywords": [
+            "Volkswagen Golf reliability",
+            "Mazda 3 service statistics",
+            "car reliability comparison",
+            "Volkswagen vs Mazda",
+            "compact car reliability"
+         ],
+         "date": "2024-11-10T06:06:53.220Z"
+      },
+      "nissan-altima-vs-toyota-camry-reliability": {
+         "generated": true,
+         "cars": [
+            "nissan altima",
+            "toyota camry",
+            "honda accord",
+            "chevrolet malibu"
+         ],
+         "title": "Nissan Altima vs Toyota Camry: Сравнение надежности",
+         "keywords": [
+            "Nissan Altima reliability",
+            "Toyota Camry reliability",
+            "Altima vs Camry comparison",
+            "car reliability analysis",
+            "service call statistics"
+         ],
+         "date": "2024-11-10T06:35:59.290Z"
+      },
+      "reliable-family-suvs-compared": {
+         "generated": true,
+         "cars": [
+            "toyota highlander",
+            "honda pilot",
+            "ford explorer",
+            "subaru ascent"
+         ],
+         "title": "Лучшие семейные внедорожники: Надежность на 2023",
+         "keywords": [
+            "семейные внедорожники надежность",
+            "сравнение внедорожников",
+            "надежные семейные авто",
+            "ТОП семейных внедорожников"
+         ],
+         "date": "2024-11-10T06:07:54.875Z"
+      },
+      "reliable-minivans-for-families": {
+         "generated": true,
+         "cars": [
+            "honda odyssey",
+            "toyota sienna",
+            "chrysler pacifica",
+            "kia sedona"
+         ],
+         "title": "Надежные минивэны для семей: Сравнение моделей",
+         "keywords": [
+            "надежные минивэны для семей",
+            "надежность минивэнов",
+            "семейные автомобили",
+            "сравнение минивэнов",
+            "обслуживание минивэнов"
+         ],
+         "date": "2024-11-10T06:25:22.317Z"
+      },
+      "suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Сравнение надежности SUV: Топ-4 модели 2023 года",
+         "keywords": [
+            "SUV reliability",
+            "Toyota RAV4 reliability",
+            "Honda CR-V reliability",
+            "Ford Escape reliability",
+            "Subaru Forester reliability"
+         ],
+         "date": "2024-11-11T07:58:18.644Z"
+      },
+      "subaru-forester-vs-toyota-rav4-reliability": {
+         "generated": true,
+         "cars": [
+            "subaru forester",
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape"
+         ],
+         "title": "Сравнение надежности: Subaru Forester vs Toyota RAV4",
+         "keywords": [
+            "Subaru Forester reliability",
+            "Toyota RAV4 reliability",
+            "Forester vs RAV4 comparison",
+            "SUV reliability analysis",
+            "car service statistics"
+         ],
+         "date": "2024-11-12T08:16:59.417Z"
+      },
+      "toyota-corolla-vs-honda-civic-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "nissan sentra",
+            "hyundai elantra"
+         ],
+         "title": "Toyota Corolla vs Honda Civic: Надежность в Цифрах",
+         "keywords": [
+            "Toyota Corolla reliability",
+            "Honda Civic reliability",
+            "car reliability comparison",
+            "Toyota vs Honda reliability",
+            "compact car reliability"
+         ],
+         "date": "2024-11-12T08:19:25.364Z"
+      },
+      "toyota-rav4-vs-honda-cr-v-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Toyota RAV4 vs Honda CR-V: Reliability Showdown",
+         "keywords": [
+            "Toyota RAV4 reliability",
+            "Honda CR-V reliability",
+            "RAV4 vs CR-V comparison",
+            "car reliability analysis",
+            "SUV reliability ratings"
+         ],
+         "date": "2024-11-13T06:55:33.693Z"
+      },
+      "toyota-tundra-vs-nissan-titan-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota tundra",
+            "nissan titan",
+            "ford f-150",
+            "chevrolet silverado"
+         ],
+         "title": "Toyota Tundra vs Nissan Titan: Надежность в Цифрах",
+         "keywords": [
+            "Toyota Tundra reliability",
+            "Nissan Titan reliability",
+            "Tundra vs Titan comparison",
+            "truck reliability analysis",
+            "pickup truck service calls"
+         ],
+         "date": "2024-11-14T06:25:48.870Z"
+      },
+      "truck-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Сравнение надежности грузовиков: Ford, Chevy, Ram, Toyota",
+         "keywords": [
+            "надежность грузовиков",
+            "сравнение пикапов",
+            "надежность Ford F-150",
+            "надежность Chevrolet Silverado",
+            "надежность Toyota Tundra"
+         ],
+         "date": "2024-11-15T08:05:16.631Z"
+      },
+      "volkswagen-passat-vs-honda-accord-reliability": {
+         "generated": true,
+         "cars": [
+            "volkswagen passat",
+            "honda accord",
+            "toyota camry",
+            "nissan altima"
+         ],
+         "title": "Volkswagen Passat vs Honda Accord: Надежность в Сравнении",
+         "keywords": [
+            "Volkswagen Passat reliability",
+            "Honda Accord reliability",
+            "car reliability comparison",
+            "Passat vs Accord",
+            "vehicle service calls"
+         ],
+         "date": "2024-11-16T06:26:34.943Z"
+      },
+      "jeep-vs-ford-suv-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "jeep grand cherokee",
+            "ford explorer"
+         ],
+         "title": "Сравнение надежности: Jeep Grand Cherokee vs Ford Explorer",
+         "keywords": [
+            "Jeep Grand Cherokee reliability",
+            "Ford Explorer reliability",
+            "SUV reliability comparison",
+            "Jeep vs Ford SUVs",
+            "car service call statistics"
+         ],
+         "date": "2024-11-16T19:28:09.694Z"
+      },
+      "what-are-the-most-reliable-used-cars-under-$10,000-": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "toyota corolla",
+            "subaru impreza"
+         ],
+         "title": "Самые надежные авто до $10,000: сравнение моделей",
+         "keywords": [
+            "надежные подержанные автомобили",
+            "автомобили до 10000 долларов",
+            "надежность автомобилей",
+            "подержанные автомобили",
+            "сравнение автомобилей"
+         ],
+         "date": "2024-11-17T08:03:40.558Z"
+      },
+      "are-hybrid-cars-more-reliable-than-traditional-gasoline-cars-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry (gasoline)",
+            "honda accord (gasoline)",
+            "ford fusion (hybrid)"
+         ],
+         "title": "Гибриды против бензиновых: надежность автомобилей 2023",
+         "keywords": [
+            "гибридные автомобили надежность",
+            "традиционные бензиновые автомобили",
+            "сравнение надежности автомобилей",
+            "надежность гибридов",
+            "надежность бензиновых автомобилей"
+         ],
+         "date": "2024-11-17T08:06:15.922Z"
+      },
+      "which-is-more-reliable-honda-accord-or-toyota-camry-after-100,000-miles-": {
+         "generated": true,
+         "cars": [
+            "honda accord",
+            "toyota camry",
+            "nissan altima",
+            "ford fusion"
+         ],
+         "title": "Honda Accord vs Toyota Camry: Надежность после 100,000 миль",
+         "keywords": [
+            "Honda Accord reliability",
+            "Toyota Camry reliability",
+            "car reliability comparison",
+            "100000 miles car performance",
+            "long-term car reliability"
+         ],
+         "date": "2024-11-19T07:42:14.773Z"
+      },
+      "which-cars-have-the-lowest-repair-costs-over-10-years-": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Самые надежные авто: минимальные затраты на ремонт за 10 лет",
+         "keywords": [
+            "car repair costs",
+            "10-year car reliability",
+            "low maintenance cars",
+            "affordable car repairs",
+            "long-term car costs"
+         ],
+         "date": "2024-11-20T07:07:07.263Z"
+      },
+      "hybrid-vs-diesel-reliability-statistics-for-the-last-decade-": {
+         "generated": true,
+         "cars": [
+            "toyota prius (hybrid)",
+            "toyota camry hybrid (hybrid)"
+         ],
+         "title": "Гибриды против дизелей: Надежность за последнее десятилетие",
+         "keywords": [
+            "гибридная надежность",
+            "дизельная надежность",
+            "статистика надежности автомобилей",
+            "сравнение гибридов и дизелей",
+            "надежность автомобилей за десятилетие"
+         ],
+         "date": "2024-11-21T06:33:32.962Z"
+      },
+      "top-reliable-cars-for-under-$15,000-in-2024": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "mazda 3"
+         ],
+         "title": "Надежные авто до $15,000 в 2024: Топ-выборы",
+         "keywords": [
+            "надежные автомобили до 15000 долларов 2024",
+            "лучшие бюджетные автомобили 2024",
+            "надежность автомобилей 2024",
+            "доступные автомобили 2024"
+         ],
+         "date": "2024-11-22T07:51:59.573Z"
+      },
+      "which-suv-has-the-best-reliability-in-2024-": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Самый надежный кроссовер 2024: сравнение ТОП-4 популярных SUV",
+         "keywords": [
+            "надежные внедорожники 2024",
+            "самый надежный кроссовер",
+            "рейтинг надежности SUV",
+            "лучший кроссовер по надежности"
+         ],
+         "date": "2024-11-23T08:15:04.261Z"
+      },
+      "mazda-cx-5-vs-subaru-forester-durability": {
+         "generated": true,
+         "cars": [
+            "mazda cx-5",
+            "subaru forester"
+         ],
+         "title": "Mazda CX-5 против Subaru Forester: Битва за надежность 2024",
+         "keywords": [
+            "надежность Mazda CX-5",
+            "сравнение Subaru Forester и Mazda CX-5",
+            "долговечность кроссоверов",
+            "обслуживание японских SUV"
+         ],
+         "date": "2024-11-24T07:53:45.654Z"
+      },
+      "ford-escape-vs-chevrolet-equinox-maintenance": {
+         "generated": true,
+         "cars": [
+            "ford escape",
+            "chevrolet equinox"
+         ],
+         "title": "Ford Escape или Chevrolet Equinox: Битва за Надежность 2024",
+         "keywords": [
+            "сравнение ford escape и chevrolet equinox",
+            "обслуживание ford escape",
+            "надежность chevrolet equinox",
+            "стоимость ремонта кроссоверов ford и chevrolet"
+         ],
+         "date": "2024-11-25T09:26:44.253Z"
+      },
+      "kia-sportage-vs-volkswagen-tiguan-longevity": {
+         "generated": true,
+         "cars": [
+            "kia sportage",
+            "volkswagen tiguan"
+         ],
+         "title": "Kia Sportage или VW Tiguan: Чей Срок Службы Дольше?",
+         "keywords": [
+            "надежность kia sportage и volkswagen tiguan",
+            "сравнение долговечности киа спортейдж и фольксваген тигуан",
+            "обслуживание kia sportage tiguan",
+            "ресурс двигателя sportage tiguan"
+         ],
+         "date": "2024-11-26T09:14:50.706Z"
+      },
+      "reliable-compact-suvs-2024": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "ford escape",
+            "subaru forester"
+         ],
+         "title": "Самые надежные компактные SUV 2024: сравнение ТОП-4 кроссоверов",
+         "keywords": [
+            "надежные компактные кроссоверы 2024",
+            "сравнение кроссоверов по надежности",
+            "лучшие компактные SUV 2024",
+            "рейтинг надежности кроссоверов"
+         ],
+         "date": "2024-11-27T08:21:55.796Z"
+      },
+      "most-durable-crossover-suvs": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "ford escape"
+         ],
+         "title": "Самые надежные кроссоверы: сравнение 4 популярных моделей",
+         "keywords": [
+            "надежные кроссоверы",
+            "сравнение кроссоверов по надежности",
+            "самые долговечные SUV",
+            "лучшие кроссоверы по качеству"
+         ],
+         "date": "2024-11-28T08:42:34.863Z"
+      },
+      "bmw-3-series-vs-mercedes-c-class-reliability": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "mercedes c class"
+         ],
+         "title": "BMW 3 Series vs Mercedes C-Class: Битва надежности 2024",
+         "keywords": [
+            "надежность bmw 3 series и mercedes c class",
+            "сравнение надежности bmw и mercedes",
+            "обслуживание bmw 3 series mercedes c class",
+            "статистика поломок bmw mercedes"
+         ],
+         "date": "2024-11-29T08:34:47.780Z"
+      },
+      "audi-a4-vs-lexus-is-durability": {
+         "generated": true,
+         "cars": [
+            "audi a4",
+            "lexus is"
+         ],
+         "title": "Audi A4 vs Lexus IS: Битва надежности 2024",
+         "keywords": [
+            "надежность audi a4 и lexus is",
+            "сравнение долговечности audi lexus",
+            "обслуживание audi a4 lexus is",
+            "статистика поломок audi lexus"
+         ],
+         "date": "2024-11-30T09:30:37.613Z"
+      },
+      "bmw-vs-audi-reliability-comparison": {
+         "generated": true,
+         "cars": [
+            "bmw 3 series",
+            "audi a4"
+         ],
+         "title": "BMW vs Audi: Битва надежности в 2024 году",
+         "keywords": [
+            "надежность BMW против Audi",
+            "сравнение BMW 3 серии и Audi A4",
+            "статистика поломок BMW и Audi",
+            "обслуживание BMW и Audi"
+         ],
+         "date": "2024-12-01T09:07:36.720Z"
+      },
+      "reliable-pickup-trucks-2024": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Самые надежные пикапы 2024: ТОП-4 по статистике сервисов",
+         "keywords": [
+            "надежные пикапы 2024",
+            "рейтинг пикапов по надежности",
+            "лучшие пикапы 2024",
+            "сравнение надежности пикапов"
+         ],
+         "date": "2024-12-01T09:21:24.693Z"
+      },
+      "best-truck-for-reliability": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Самый надежный пикап 2024: сравнение ТОП-4 моделей",
+         "keywords": [
+            "надежные пикапы",
+            "самый надежный грузовик",
+            "рейтинг надежности пикапов",
+            "лучший пикап по надежности"
+         ],
+         "date": "2024-12-02T08:31:00.606Z"
+      },
+      "affordable-reliable-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Топ-4 Надежных Пикапов: Какой Прослужит Дольше?",
+         "keywords": [
+            "надежные пикапы",
+            "недорогие грузовики в обслуживании",
+            "лучшие подержанные пикапы",
+            "сравнение надежности пикапов"
+         ],
+         "date": "2024-12-03T07:41:08.190Z"
+      },
+      "most-durable-pickup-trucks": {
+         "generated": true,
+         "cars": [
+            "ford f-150",
+            "chevrolet silverado",
+            "ram 1500",
+            "toyota tundra"
+         ],
+         "title": "Самые надежные пикапы 2024: ТОП-4 проверенных временем",
+         "keywords": [
+            "надежные пикапы",
+            "самые долговечные грузовики",
+            "рейтинг пикапов по надежности",
+            "лучшие пикапы по качеству"
+         ],
+         "date": "2024-12-04T09:42:15.039Z"
+      },
+      "toyota-prius-vs-honda-insight-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota prius",
+            "honda insight"
+         ],
+         "title": "Toyota Prius против Honda Insight: Битва за надежность 2024",
+         "keywords": [
+            "надежность гибридных автомобилей",
+            "сравнение Prius и Insight",
+            "обслуживание Toyota Prius Honda Insight",
+            "гибридные автомобили статистика поломок"
+         ],
+         "date": "2024-12-05T08:55:56.173Z"
+      },
+      "honda-civic-vs-volkswagen-golf-vs-mazda-3-reliability-statistics-analysis": {
+         "generated": true,
+         "cars": [
+            "honda civic",
+            "volkswagen golf",
+            "mazda 3"
+         ],
+         "title": "Сравнение надежности: Honda Civic, VW Golf и Mazda 3 в цифрах",
+         "keywords": [
+            "надежность хэтчбеков",
+            "сравнение Honda Civic Volkswagen Golf Mazda 3",
+            "статистика поломок автомобилей",
+            "рейтинг надежности компактных автомобилей"
+         ],
+         "date": "2024-12-06T09:03:59.775Z"
+      },
+      "best-sports-car-for-reliability": {
+         "generated": true,
+         "cars": [
+            "toyota 86",
+            "mazda mx-5 miata",
+            "subaru brz",
+            "nissan 370z"
+         ],
+         "title": "Самые надежные спорткары 2024: неожиданный победитель",
+         "keywords": [
+            "надежные спортивные автомобили",
+            "самые надежные спорткары",
+            "рейтинг надежности спорткаров",
+            "спортивные авто с минимальными поломками"
+         ],
+         "date": "2024-12-07T07:57:22.534Z"
+      },
+      "top-5-reliable-cars-under-$20k": {
+         "generated": true,
+         "cars": [
+            "toyota corolla",
+            "honda civic",
+            "subaru impreza",
+            "hyundai elantra"
+         ],
+         "title": "Топ-5 надежных авто до $20 000: рейтинг 2024 года",
+         "keywords": [
+            "надежные автомобили до 20000",
+            "самые надежные бюджетные авто",
+            "рейтинг надежности недорогих машин",
+            "лучшие автомобили эконом класса"
+         ],
+         "date": "2024-12-08T07:47:14.648Z"
+      },
+      "best-used-suvs-for-reliability-under-$30k": {
+         "generated": true,
+         "cars": [
+            "toyota rav4",
+            "honda cr-v",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Топ-4 надежных б/у кроссоверов до 30 000$ - Полный обзор",
+         "keywords": [
+            "надежные подержанные кроссоверы",
+            "лучшие б/у SUV до 30000$",
+            "самые надежные кроссоверы с пробегом",
+            "рейтинг надежности подержанных SUV"
+         ],
+         "date": "2024-12-09T14:11:40.948Z"
+      },
+      "which-small-suvs-have-best-reliability-ratings": {
+         "generated": true,
+         "cars": [
+            "honda cr-v",
+            "toyota rav4",
+            "subaru forester",
+            "mazda cx-5"
+         ],
+         "title": "Самые надежные компактные SUV: сравнение 4 популярных моделей",
+         "keywords": [
+            "надежность компактных кроссоверов",
+            "рейтинг надежности SUV",
+            "сравнение надежности кроссоверов",
+            "лучшие кроссоверы по надежности"
+         ],
+         "date": "2024-12-10T07:49:00.428Z"
+      },
+      "best-reliable-sedans-under-$25k": {
+         "generated": true,
+         "cars": [
+            "toyota camry",
+            "honda accord",
+            "nissan altima",
+            "hyundai sonata"
+         ],
+         "title": "Топ-4 надежных седана до 25000$: честное сравнение 2024",
+         "keywords": [
+            "надежные седаны до 25000",
+            "лучшие бюджетные седаны",
+            "сравнение надежности седанов",
+            "самый надежный седан 2024"
+         ],
+         "date": "2024-12-26T08:07:44.050Z"
+      }
+   }
 }

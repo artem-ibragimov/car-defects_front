@@ -1,5 +1,5 @@
 import ytdl from '@distube/ytdl-core';
-import { createWriteStream, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, unlinkSync } from 'fs';
+import { createWriteStream, existsSync, mkdirSync, readdirSync, statSync, unlinkSync } from 'fs';
 import { resolve } from 'path';
 
 const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search`;
@@ -9,7 +9,7 @@ export class Youtube {
 	constructor(
 		private apiKey: string,
 		private car_footage_path: string
-	) { }
+	) {}
 
 	getVideo = (query: string) => {
 		const directory = resolve(this.car_footage_path, query);
@@ -39,7 +39,7 @@ export class Youtube {
 				.catch(() => {
 					const downloadedVideos = readdirSync(directory);
 					if (downloadedVideos.length == 0) {
-						throw new Error('no downloaded videos!');
+						throw new Error(`no downloaded videos for ${directory}`);
 					}
 					const videos = downloadedVideos
 						.filter((name) => !name.includes('.DS_Store'))
@@ -58,7 +58,7 @@ export class Youtube {
 		);
 	};
 
-	private searchVideos(query: string): Promise<{ videoId; title; }[]> {
+	private searchVideos(query: string): Promise<{ videoId; title }[]> {
 		const params = new URLSearchParams({
 			part: 'snippet',
 			q: query,
@@ -95,9 +95,12 @@ export class Youtube {
 
 	private downloadVideo =
 		(directory: string) =>
-			({ videoId, title }: { videoId: string; title: string; }) => {
-				const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-				return ytdl.getInfo(videoUrl).then((videoInfo) => {
+		({ videoId, title }: { videoId: string; title: string }): Promise<string | null> => {
+			const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+			console.log('download', videoUrl);
+			return ytdl
+				.getInfo(videoUrl)
+				.then((videoInfo) => {
 					let format = videoInfo.formats.find(
 						(f) => f.width && f.height && f.width < f.height && f.container === 'mp4'
 					);
@@ -118,6 +121,10 @@ export class Youtube {
 							resolve(null);
 						});
 					});
+				})
+				.then((path) => {
+					console.log('downloaded', path);
+					return path;
 				});
-			};
+		};
 }
