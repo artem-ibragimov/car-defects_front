@@ -516,7 +516,7 @@ ${this.cars}
       </scene_breakdown>
 
       Ensure that the scene breakdown covers the entire duration of the video and alternates between the cars or their charts.
-      Keep in mind that the narrator will be reading the script at 2.6 words per second, so adjust the duration of the scenes accordingly.
+      Keep in mind that the narrator will be reading the script at 2.5 words per second, so adjust the duration of the scenes accordingly.
       Do not include any additional text or descriptions in this section.
       Provide only one video script that best fits the given topic gand uidelines.
       Remember to keep the content engaging and informative while adhering to the time constraints of a YouTube Short video.

@@ -89,9 +89,9 @@ function getDefects(cfg: { isNorm: boolean; byMilage: boolean }, entities: Entit
 	);
 	return Promise.all(fetching).then((defects) => {
 		const cars: CarName[] = defects.map(([carName, _]) => carName);
-		if (defects.length < 2) {
-			throw new Error(cars.join() + ': no data');
-		}
+		// if (defects.length < 2) {
+		// 	throw new Error(cars.join() + ': no data');
+		// }
 		return { defects: Object.fromEntries(defects), cars, dataParams, hash };
 	});
 }
