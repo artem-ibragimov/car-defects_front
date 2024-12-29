@@ -7,9 +7,9 @@ export class Playht {
 	}
 
 	generateVoice(filename: string, text: string) {
-		return PlayHT.stream(text, {
-			// speed: 1.05,
-			speed: 1,
+	return PlayHT.stream(text, {
+			speed: 1.05,
+			// speed: 1,
 			// inputType: 'ssml',
 			voiceEngine: 'PlayDialog',
 			outputFormat: 'mp3',

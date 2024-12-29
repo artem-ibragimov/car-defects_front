@@ -50,9 +50,9 @@ Which small SUVs have best reliability ratings:generated
 Best cars for reliability under $50k:generated
 most durable pickup trucks:generated
 Toyota Corolla vs Honda Civic reliability:generated
-Ford F150 vs Chevy Silverado reliability
-Tesla Model S vs Audi e-Tron reliability
-Subaru Outback vs Toyota RAV4 reliability
+Ford F150 vs Chevy Silverado reliability:generated
+Tesla Model S vs Audi e-Tron reliability:generated
+Subaru Outback vs Toyota RAV4 reliability:generated
 Mercedes E-Class vs BMW 5 Series reliability
 Kia Telluride vs Hyundai Palisade reliability
 Honda Accord vs Toyota Camry reliability
