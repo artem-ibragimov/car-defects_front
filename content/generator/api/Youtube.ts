@@ -6,6 +6,7 @@ const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search`;
 const MAX_RESULTS = 7;
 
 export class Youtube {
+	private prev_queries: Record<string, string[]> = {};
 	constructor(
 		private apiKey: string,
 		private car_footage_path: string
@@ -53,7 +54,18 @@ export class Youtube {
 					if (videos.length === 0) {
 						throw new Error(`not enought videos for ${directory}`);
 					}
-					return videos[Math.floor(Math.random() * videos.length)];
+					if (!this.prev_queries[directory]) {
+						this.prev_queries[directory] = [];
+					}
+					const new_videos = this.prev_queries[directory].length !== 0 ?
+						videos.filter((v) => !this.prev_queries[directory].includes(v)) : videos;
+
+					const random_video = new_videos.length > 0 ?
+						new_videos[Math.floor(Math.random() * new_videos.length)] :
+						videos[Math.floor(Math.random() * videos.length)];
+
+					this.prev_queries[directory].push(random_video);
+					return random_video;
 				})
 		);
 	};

@@ -53,8 +53,7 @@ Toyota Corolla vs Honda Civic reliability:generated
 Ford F150 vs Chevy Silverado reliability:generated
 Tesla Model S vs Audi e-Tron reliability:generated
 Subaru Outback vs Toyota RAV4 reliability:generated
-Mercedes E-Class vs BMW 5 Series reliability
-Kia Telluride vs Hyundai Palisade reliability
+Kia Telluride vs Hyundai Palisade reliability:generated
 Honda Accord vs Toyota Camry reliability
 Lexus RX vs Volvo XC90 reliability
 Jeep Grand Cherokee vs Ford Explorer reliability
