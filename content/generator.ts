@@ -93,17 +93,16 @@ function generateByTopic(topic: string) {
 									.then(info, error),
 
 							!article.isExists &&
-								anthropicAI
-									.generate({
-										system: article.system,
-										contents: article.contents
-									})
-									// chatGpt
-									// 	.generate({
-									// 		locale: article.locale,
-									// 		system: article.system,
-									// 		contents: article.contents
-									// 	})
+								// anthropicAI
+								// 	.generate({
+								// 		system: article.system,
+								// 		contents: article.contents
+								// 	})
+									chatGpt
+										.generate({
+											system: article.system,
+											contents: article.contents
+										})
 									.then(article.save),
 
 							article.needVideo &&
@@ -131,7 +130,7 @@ function generateByTopic(topic: string) {
 											if (video.isScriptExists) {
 												return video.loadScript();
 											}
-											return anthropicAI
+											return chatGpt //anthropicAI
 												.generate({ contents: video.contents })
 												.then(video.save)
 												.then(info);

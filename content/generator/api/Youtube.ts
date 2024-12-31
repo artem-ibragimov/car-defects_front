@@ -10,7 +10,7 @@ export class Youtube {
 	constructor(
 		private apiKey: string,
 		private car_footage_path: string
-	) { }
+	) {}
 
 	getVideo = (query: string) => {
 		const directory = resolve(this.car_footage_path, query);
@@ -57,12 +57,15 @@ export class Youtube {
 					if (!this.prev_queries[directory]) {
 						this.prev_queries[directory] = [];
 					}
-					const new_videos = this.prev_queries[directory].length !== 0 ?
-						videos.filter((v) => !this.prev_queries[directory].includes(v)) : videos;
+					const new_videos =
+						this.prev_queries[directory].length !== 0
+							? videos.filter((v) => !this.prev_queries[directory].includes(v))
+							: videos;
 
-					const random_video = new_videos.length > 0 ?
-						new_videos[Math.floor(Math.random() * new_videos.length)] :
-						videos[Math.floor(Math.random() * videos.length)];
+					const random_video =
+						new_videos.length > 0
+							? new_videos[Math.floor(Math.random() * new_videos.length)]
+							: videos[Math.floor(Math.random() * videos.length)];
 
 					this.prev_queries[directory].push(random_video);
 					return random_video;
@@ -70,8 +73,7 @@ export class Youtube {
 		);
 	};
 
-	private searchVideos(query: string): Promise<{ videoId; title; }[]> {
-		return Promise.reject(new Error('use local videos bitch'));
+	private searchVideos(query: string): Promise<{ videoId; title }[]> {
 		const params = new URLSearchParams({
 			part: 'snippet',
 			q: query,
@@ -108,36 +110,36 @@ export class Youtube {
 
 	private downloadVideo =
 		(directory: string) =>
-			({ videoId, title }: { videoId: string; title: string; }): Promise<string | null> => {
-				const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
-				console.log('download', videoUrl);
-				return ytdl
-					.getInfo(videoUrl)
-					.then((videoInfo) => {
-						let format = videoInfo.formats.find(
-							(f) => f.width && f.height && f.width < f.height && f.container === 'mp4'
-						);
+		({ videoId, title }: { videoId: string; title: string }): Promise<string | null> => {
+			const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+			console.log('download', videoUrl);
+			return ytdl
+				.getInfo(videoUrl)
+				.then((videoInfo) => {
+					let format = videoInfo.formats.find(
+						(f) => f.width && f.height && f.width < f.height && f.container === 'mp4'
+					);
 
-						if (!format) {
-							format = videoInfo.formats.find((f) => f.container === 'mp4');
-						}
+					if (!format) {
+						format = videoInfo.formats.find((f) => f.container === 'mp4');
+					}
 
-						const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);
-						const readable = ytdl(videoUrl, { format });
-						const writable = createWriteStream(outputPath);
+					const outputPath = resolve(directory, `${title.replaceAll('/', '_')}.mp4`);
+					const readable = ytdl(videoUrl, { format });
+					const writable = createWriteStream(outputPath);
 
-						return new Promise<string | null>((resolve) => {
-							readable.pipe(writable);
-							writable.on('finish', () => resolve(outputPath));
-							writable.on('error', (e) => {
-								console.error(e);
-								resolve(null);
-							});
+					return new Promise<string | null>((resolve) => {
+						readable.pipe(writable);
+						writable.on('finish', () => resolve(outputPath));
+						writable.on('error', (e) => {
+							console.error(e);
+							resolve(null);
 						});
-					})
-					.then((path) => {
-						console.log('downloaded', path);
-						return path;
 					});
-			};
+				})
+				.then((path) => {
+					console.log('downloaded', path);
+					return path;
+				});
+		};
 }

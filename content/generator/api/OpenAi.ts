@@ -9,7 +9,7 @@ const root = resolve('content', 'generator', 'ai', 'openai');
 
 export class ChatGPT {
 	private openai: OpenAI;
-	constructor({ apiKey, organization }: { apiKey: string; organization: string }) {
+	constructor({ apiKey, organization }: { apiKey: string; organization: string; }) {
 		this.openai = new OpenAI({
 			apiKey,
 			organization,
@@ -17,11 +17,11 @@ export class ChatGPT {
 		});
 	}
 
-	generate = (params: {
-		system: string;
-		contents: Record<string, string>;
-	}): Promise<Record<string, string>> => {
-		const messages: { name: string; content: string; role: 'user' }[] = Object.entries(
+	generate = <T extends Record<string, string>>(params: {
+		system?: string;
+		contents: T;
+	}): Promise<T> => {
+		const messages: { name: string; content: string; role: 'user'; }[] = Object.entries(
 			params.contents
 		).map(([name, content]) => ({ name, content, role: 'user' }));
 
@@ -31,7 +31,7 @@ export class ChatGPT {
 					model: 'gpt-4o',
 					max_tokens: 8192,
 					temperature: 0.1,
-					messages: [{ role: 'system', content: params.system }, message]
+					messages: params.system ? [{ role: 'system', content: params.system }, message] : [message]
 				})
 				.then((res) => ({
 					[message.name]: res.choices[0].message.content || ''
@@ -39,7 +39,7 @@ export class ChatGPT {
 		);
 
 		return Promise.all(generating).then((results) => {
-			return results.reduce((acc, r) => Object.assign({}, acc, r), {});
+			return results.reduce((acc, r) => Object.assign({}, acc, r), {}) as T;
 		});
 	};
 
