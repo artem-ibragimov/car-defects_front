@@ -98,11 +98,11 @@ function generateByTopic(topic: string) {
 								// 		system: article.system,
 								// 		contents: article.contents
 								// 	})
-									chatGpt
-										.generate({
-											system: article.system,
-											contents: article.contents
-										})
+								chatGpt
+									.generate({
+										system: article.system,
+										contents: article.contents
+									})
 									.then(article.save),
 
 							article.needVideo &&
