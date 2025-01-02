@@ -505,15 +505,16 @@ ${this.cars}
 
       Example:
       <scene_breakdown>
-      2 - <car 1 name>
-      4 - <car 2 name>
-      5 - <car 1 name>
-      1 - <car 2 name>
-      4 - <car 1 name>
-      3 - <car 2 name>
-      8 - chart
-      5 - <car 2 name>
-      </scene_breakdown>
+		3 - honda accord driving footage
+		3 - toyota camry driving footage
+		4 - honda accord interior shots
+		4 - toyota camry interior shots
+		8 - chart
+		4 - honda accord exterior details
+		4 - toyota camry exterior details
+		3 - honda accord driving footage
+		3 - toyota camry driving footage
+		</scene_breakdown>
 
       Ensure that the scene breakdown covers the entire duration of the video and alternates between the cars or their charts.
       Keep in mind that the narrator will be reading the script at 2.5 words per second, so adjust the duration of the scenes accordingly.

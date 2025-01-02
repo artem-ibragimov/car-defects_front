@@ -628,6 +628,19 @@
 				"automotive reliability analysis"
 			],
 			"date": "2025-01-01T06:38:45.984Z"
+		},
+		"jeep-grand-cherokee-vs-ford-explorer-reliability": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep Grand Cherokee vs Ford Explorer: ¿Cuál es más fiable?",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV service calls",
+				"car reliability comparison",
+				"vehicle maintenance statistics"
+			],
+			"date": "2025-01-02T06:55:20.882Z"
 		}
 	},
 	"de": {
@@ -1260,6 +1273,19 @@
 				"Serviceanrufe Statistik"
 			],
 			"date": "2025-01-01T06:38:57.791Z"
+		},
+		"jeep-grand-cherokee-vs-ford-explorer-reliability": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep Grand Cherokee vs Ford Explorer: Zuverlässigkeit im Test",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV service calls",
+				"car reliability comparison",
+				"Jeep vs Ford reliability"
+			],
+			"date": "2025-01-02T06:55:32.430Z"
 		}
 	},
 	"en": {
@@ -1888,6 +1914,19 @@
 				"SUV service calls"
 			],
 			"date": "2025-01-01T06:35:02.057Z"
+		},
+		"jeep-grand-cherokee-vs-ford-explorer-reliability": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep Grand Cherokee vs Ford Explorer: Reliability Showdown",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"SUV service calls",
+				"car reliability comparison",
+				"vehicle maintenance statistics"
+			],
+			"date": "2025-01-02T06:51:36.758Z"
 		}
 	},
 	"ru": {
@@ -2517,6 +2556,19 @@
 				"automotive reliability analysis"
 			],
 			"date": "2025-01-01T06:38:35.077Z"
+		},
+		"jeep-grand-cherokee-vs-ford-explorer-reliability": {
+			"generated": true,
+			"cars": ["jeep grand cherokee", "ford explorer"],
+			"title": "Jeep Grand Cherokee vs Ford Explorer: Надежность в Сравнении",
+			"keywords": [
+				"Jeep Grand Cherokee reliability",
+				"Ford Explorer reliability",
+				"car service call statistics",
+				"SUV reliability comparison",
+				"vehicle reliability analysis"
+			],
+			"date": "2025-01-02T06:55:05.315Z"
 		}
 	}
 }
