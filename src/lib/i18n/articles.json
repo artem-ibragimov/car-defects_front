@@ -641,6 +641,32 @@
 				"vehicle maintenance statistics"
 			],
 			"date": "2025-01-02T06:55:20.882Z"
+		},
+		"toyota-tacoma-vs-chevy-colorado-reliability": {
+			"generated": true,
+			"cars": ["toyota tacoma", "chevy colorado"],
+			"title": "Toyota Tacoma vs Chevy Colorado: ¿Cuál es más fiable?",
+			"keywords": [
+				"Toyota Tacoma reliability",
+				"Chevy Colorado reliability",
+				"Tacoma vs Colorado comparison",
+				"car service call statistics",
+				"pickup truck reliability"
+			],
+			"date": "2025-01-03T06:56:01.643Z"
+		},
+		"toyota-vs-honda-reliability-comparison-2024": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord"],
+			"title": "Toyota vs Honda: ¿Cuál es más fiable en 2024?",
+			"keywords": [
+				"Toyota Camry reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"2024 car reliability",
+				"Toyota vs Honda reliability"
+			],
+			"date": "2025-01-03T07:00:08.853Z"
 		}
 	},
 	"de": {
@@ -1286,6 +1312,32 @@
 				"Jeep vs Ford reliability"
 			],
 			"date": "2025-01-02T06:55:32.430Z"
+		},
+		"toyota-tacoma-vs-chevy-colorado-reliability": {
+			"generated": true,
+			"cars": ["toyota tacoma", "chevy colorado"],
+			"title": "Toyota Tacoma vs Chevy Colorado: Zuverlässigkeit im Vergleich",
+			"keywords": [
+				"Toyota Tacoma Zuverlässigkeit",
+				"Chevy Colorado Zuverlässigkeit",
+				"Toyota vs Chevy Vergleich",
+				"Pickup-Truck Zuverlässigkeit",
+				"Serviceanrufe Statistik"
+			],
+			"date": "2025-01-03T06:56:14.544Z"
+		},
+		"toyota-vs-honda-reliability-comparison-2024": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord"],
+			"title": "Toyota vs Honda: Zuverlässigkeitsvergleich 2024",
+			"keywords": [
+				"Toyota Camry Zuverlässigkeit",
+				"Honda Accord Zuverlässigkeit",
+				"Auto Zuverlässigkeitsvergleich 2024",
+				"Toyota vs Honda",
+				"Fahrzeugzuverlässigkeit 2024"
+			],
+			"date": "2025-01-03T07:00:25.460Z"
 		}
 	},
 	"en": {
@@ -1927,6 +1979,32 @@
 				"vehicle maintenance statistics"
 			],
 			"date": "2025-01-02T06:51:36.758Z"
+		},
+		"toyota-tacoma-vs-chevy-colorado-reliability": {
+			"generated": true,
+			"cars": ["toyota tacoma", "chevy colorado"],
+			"title": "Toyota Tacoma vs Chevy Colorado: Reliability Showdown",
+			"keywords": [
+				"Toyota Tacoma reliability",
+				"Chevy Colorado reliability",
+				"Tacoma vs Colorado comparison",
+				"truck reliability analysis",
+				"service call statistics"
+			],
+			"date": "2025-01-03T06:52:52.714Z"
+		},
+		"toyota-vs-honda-reliability-comparison-2024": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord"],
+			"title": "Toyota vs Honda: 2024 Reliability Showdown",
+			"keywords": [
+				"Toyota Camry reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"2024 car reliability",
+				"Toyota vs Honda reliability"
+			],
+			"date": "2025-01-03T06:57:12.706Z"
 		}
 	},
 	"ru": {
@@ -2569,6 +2647,32 @@
 				"vehicle reliability analysis"
 			],
 			"date": "2025-01-02T06:55:05.315Z"
+		},
+		"toyota-tacoma-vs-chevy-colorado-reliability": {
+			"generated": true,
+			"cars": ["toyota tacoma", "chevy colorado"],
+			"title": "Toyota Tacoma vs Chevy Colorado: Reliability Showdown",
+			"keywords": [
+				"Toyota Tacoma reliability",
+				"Chevy Colorado reliability",
+				"Tacoma vs Colorado comparison",
+				"car reliability analysis",
+				"pickup truck reliability"
+			],
+			"date": "2025-01-03T06:55:48.962Z"
+		},
+		"toyota-vs-honda-reliability-comparison-2024": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord"],
+			"title": "Toyota vs Honda: Надежность 2024 – Кто Лидирует?",
+			"keywords": [
+				"Toyota Camry reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"2024 car reliability",
+				"Toyota vs Honda reliability"
+			],
+			"date": "2025-01-03T06:59:53.681Z"
 		}
 	}
 }

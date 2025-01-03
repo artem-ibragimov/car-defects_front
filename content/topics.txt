@@ -57,8 +57,8 @@ Kia Telluride vs Hyundai Palisade reliability:generated
 Honda Accord vs Toyota Camry reliability:generated
 Lexus RX vs Volvo XC90 reliability:generated
 Jeep Grand Cherokee vs Ford Explorer reliability:generated
-Toyota Tacoma vs Chevy Colorado reliability
-Toyota vs Honda reliability comparison 2024
+Toyota Tacoma vs Chevy Colorado reliability:generated
+Toyota vs Honda reliability comparison 2024:generated
 BMW vs Audi reliability rating
 Ford vs Chevrolet reliability comparison
 Hyundai vs Kia reliability ranking

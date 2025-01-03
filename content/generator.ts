@@ -88,11 +88,11 @@ function generateByTopic(topic: string) {
 						Promise.all([
 							// Promise.all([
 							article.needPoster &&
-								chatGpt
-									.generateImg({ name: article.name, prompt: article.poster })
-									.then(info, error),
-
-							!article.isExists &&
+							chatGpt
+								.generateImg({ name: article.name, prompt: article.poster })
+								.then(info, error),
+							Promise.resolve(
+								!article.isExists &&
 								// anthropicAI
 								// 	.generate({
 								// 		system: article.system,
@@ -104,51 +104,52 @@ function generateByTopic(topic: string) {
 										contents: article.contents
 									})
 									.then(article.save),
-
-							article.needVideo &&
-								(() => {
-									const youtube = new Youtube(
-										process.env.YOUTUBE_API_KEY as string,
-										car_footage_path
-									);
-									const video = new Video(
-										{
-											norm: !!dataParams.norm,
-											title: article.title,
-											keywords: article.keywords,
-											description: article.description,
-											name: article.name,
-											key: article.key,
-											defects,
-											topic
-										},
-										bg_music_folder
-									);
-									return video
-										.store()
-										.then(() => {
-											if (video.isScriptExists) {
-												return video.loadScript();
-											}
-											return chatGpt //anthropicAI
-												.generate({ contents: video.contents })
-												.then(video.save)
-												.then(info);
-										})
-										.then(() => {
-											if (!video.isVoiceExists) {
-												return playht.generateVoice(video.voicePath, video.script).then(info);
-											}
-										})
-										.then(() => {
-											if (video.isVideoExists) {
-												return;
-											}
-											return video
-												.setDuration()
-												.then(() => video.generateVideo(youtube.getVideo, hash));
-										});
-								})()
+							).then(() => {
+								article.needVideo &&
+									(() => {
+										const youtube = new Youtube(
+											process.env.YOUTUBE_API_KEY as string,
+											car_footage_path
+										);
+										const video = new Video(
+											{
+												norm: !!dataParams.norm,
+												title: article.title,
+												keywords: article.keywords,
+												description: article.description,
+												name: article.name,
+												key: article.key,
+												defects,
+												topic
+											},
+											bg_music_folder
+										);
+										return video
+											.store()
+											.then(() => {
+												if (video.isScriptExists) {
+													return video.loadScript();
+												}
+												return chatGpt //anthropicAI
+													.generate({ contents: video.contents })
+													.then(video.save)
+													.then(info);
+											})
+											.then(() => {
+												if (!video.isVoiceExists) {
+													return playht.generateVoice(video.voicePath, video.script).then(info);
+												}
+											})
+											.then(() => {
+												if (video.isVideoExists) {
+													return;
+												}
+												return video
+													.setDuration()
+													.then(() => video.generateVideo(youtube.getVideo, hash));
+											});
+									})();
+							})
 						]) as unknown as Promise<void>
 				);
 			// return Promise.all(articlesGenerating);
