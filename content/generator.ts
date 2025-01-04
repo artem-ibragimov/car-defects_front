@@ -88,22 +88,22 @@ function generateByTopic(topic: string) {
 						Promise.all([
 							// Promise.all([
 							article.needPoster &&
-							chatGpt
-								.generateImg({ name: article.name, prompt: article.poster })
-								.then(info, error),
+								chatGpt
+									.generateImg({ name: article.name, prompt: article.poster })
+									.then(info, error),
 							Promise.resolve(
 								!article.isExists &&
-								// anthropicAI
-								// 	.generate({
-								// 		system: article.system,
-								// 		contents: article.contents
-								// 	})
-								chatGpt
-									.generate({
-										system: article.system,
-										contents: article.contents
-									})
-									.then(article.save),
+									// anthropicAI
+									// 	.generate({
+									// 		system: article.system,
+									// 		contents: article.contents
+									// 	})
+									chatGpt
+										.generate({
+											system: article.system,
+											contents: article.contents
+										})
+										.then(article.save)
 							).then(() => {
 								article.needVideo &&
 									(() => {

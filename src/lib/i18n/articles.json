@@ -667,6 +667,19 @@
 				"Toyota vs Honda reliability"
 			],
 			"date": "2025-01-03T07:00:08.853Z"
+		},
+		"bmw-vs-audi-reliability-rating": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: ¿Cuál es más fiable en 2023?",
+			"keywords": [
+				"BMW 3 Series reliability",
+				"Audi A4 reliability",
+				"car reliability comparison",
+				"BMW vs Audi reliability",
+				"vehicle service calls"
+			],
+			"date": "2025-01-04T09:50:26.215Z"
 		}
 	},
 	"de": {
@@ -1338,6 +1351,19 @@
 				"Fahrzeugzuverlässigkeit 2024"
 			],
 			"date": "2025-01-03T07:00:25.460Z"
+		},
+		"bmw-vs-audi-reliability-rating": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: Welches Modell ist zuverlässiger?",
+			"keywords": [
+				"BMW 3 Series Zuverlässigkeit",
+				"Audi A4 Zuverlässigkeit",
+				"Auto Zuverlässigkeitsvergleich",
+				"BMW vs Audi Wartung",
+				"Fahrzeugservice-Statistik"
+			],
+			"date": "2025-01-04T09:50:39.176Z"
 		}
 	},
 	"en": {
@@ -2005,6 +2031,19 @@
 				"Toyota vs Honda reliability"
 			],
 			"date": "2025-01-03T06:57:12.706Z"
+		},
+		"bmw-vs-audi-reliability-rating": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: Unveiling the Ultimate Reliability Showdown",
+			"keywords": [
+				"BMW reliability",
+				"Audi reliability",
+				"car reliability comparison",
+				"BMW vs Audi",
+				"vehicle service calls"
+			],
+			"date": "2025-01-04T09:49:10.008Z"
 		}
 	},
 	"ru": {
@@ -2673,6 +2712,19 @@
 				"Toyota vs Honda reliability"
 			],
 			"date": "2025-01-03T06:59:53.681Z"
+		},
+		"bmw-vs-audi-reliability-rating": {
+			"generated": true,
+			"cars": ["bmw 3 series", "audi a4"],
+			"title": "BMW vs Audi: Кто Надежнее? Полный Анализ",
+			"keywords": [
+				"BMW reliability",
+				"Audi reliability",
+				"car service calls",
+				"BMW vs Audi",
+				"car reliability comparison"
+			],
+			"date": "2025-01-04T09:49:37.403Z"
 		}
 	}
 }
