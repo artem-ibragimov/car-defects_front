@@ -30,7 +30,7 @@ export class ChatGPT {
 				.create({
 					model: 'gpt-4o',
 					max_tokens: 8192,
-					temperature: 0.1,
+					// temperature: 0.1,
 					messages: params.system
 						? [{ role: 'system', content: params.system }, message]
 						: [message]
