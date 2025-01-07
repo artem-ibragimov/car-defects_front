@@ -63,9 +63,7 @@ BMW vs Audi reliability rating:generated
 Subaru vs Mazda long-term reliability:generated
 Ford vs Chevrolet reliability comparison:generated
 Hyundai vs Kia reliability ranking:generated
-Mercedes vs Lexus reliability review
-Tesla vs Nissan Leaf reliability
-Volvo vs BMW reliability report
+Volvo vs BMW reliability report:generated
 Volkswagen vs Honda reliability comparison
 Jeep vs Ford SUV reliability comparison
 long lasting hybrid vehicles

@@ -719,6 +719,18 @@
 				"vehicle service calls"
 			],
 			"date": "2025-01-06T21:09:38.091Z"
+		},
+		"volvo-vs-bmw-reliability-report": {
+			"generated": true,
+			"cars": ["volvo s60", "bmw 3 series"],
+			"title": "Reporte de Confiabilidad: Volvo S60 vs BMW 3 Series",
+			"keywords": [
+				"Volvo S60 fiabilidad",
+				"BMW 3 Series confiabilidad",
+				"comparación de autos",
+				"reporte de fiabilidad Volvo vs BMW"
+			],
+			"date": "2025-01-07T09:39:21.177Z"
 		}
 	},
 	"de": {
@@ -1442,6 +1454,19 @@
 				"Fahrzeugservice-Statistiken"
 			],
 			"date": "2025-01-06T21:09:57.675Z"
+		},
+		"volvo-vs-bmw-reliability-report": {
+			"generated": true,
+			"cars": ["volvo s60", "bmw 3 series"],
+			"title": "Volvo S60 vs BMW 3er: Wer ist zuverlässiger?",
+			"keywords": [
+				"Volvo S60 Zuverlässigkeit",
+				"BMW 3er Zuverlässigkeit",
+				"Auto Zuverlässigkeitsvergleich",
+				"Volvo vs BMW Zuverlässigkeit",
+				"Serviceanrufdatenanalyse"
+			],
+			"date": "2025-01-07T09:39:36.619Z"
 		}
 	},
 	"en": {
@@ -2161,6 +2186,18 @@
 				"vehicle service calls"
 			],
 			"date": "2025-01-06T21:08:56.900Z"
+		},
+		"volvo-vs-bmw-reliability-report": {
+			"generated": true,
+			"cars": ["volvo s60", "bmw 3 series"],
+			"title": "Volvo vs BMW: The Ultimate Car Reliability Showdown",
+			"keywords": [
+				"Volvo S60 reliability",
+				"BMW 3 Series dependability",
+				"car reliability comparison",
+				"Volvo vs BMW service calls"
+			],
+			"date": "2025-01-07T09:38:30.803Z"
 		}
 	},
 	"ru": {
@@ -2881,6 +2918,19 @@
 				"vehicle service calls"
 			],
 			"date": "2025-01-06T21:09:13.886Z"
+		},
+		"volvo-vs-bmw-reliability-report": {
+			"generated": true,
+			"cars": ["volvo s60", "bmw 3 series"],
+			"title": "Сравнение надежности Volvo и BMW: Кому довериться?",
+			"keywords": [
+				"Volvo S60 reliability",
+				"BMW 3 Series durability",
+				"car service statistics",
+				"automotive reliability comparison",
+				"Volvo vs BMW longevity"
+			],
+			"date": "2025-01-07T09:38:55.954Z"
 		}
 	}
 }

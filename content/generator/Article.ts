@@ -65,7 +65,7 @@ export class Article {
 	}
 
 	get needVideo() {
-		return this.locale === 'en';
+		return false; //this.locale === 'en';
 	}
 
 	get system() {
