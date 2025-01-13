@@ -39,3 +39,4 @@ volvo-vs-bmw-reliability-report
 volkswagen-vs-honda-reliability-comparison
 lexus-rx-vs-volvo-xc90-reliability
 kia-telluride-vs-hyundai-palisade-reliability
+kia-sportage-vs-volkswagen-tiguan-longevity
