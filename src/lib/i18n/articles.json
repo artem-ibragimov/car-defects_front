@@ -744,6 +744,19 @@
 				"Volkswagen vs Honda reliability"
 			],
 			"date": "2025-01-08T08:21:24.874Z"
+		},
+		"reliable-7-seater-cars-comparison": {
+			"generated": true,
+			"cars": ["toyota highlander", "honda pilot", "ford explorer", "chevrolet traverse"],
+			"title": "Comparativa: Los 4 SUV 7 Plazas Más Fiables 2023",
+			"keywords": [
+				"reliability of 7-seater cars",
+				"reliable family SUVs",
+				"Toyota Highlander vs Honda Pilot",
+				"Ford Explorer reliability",
+				"Chevrolet Traverse comparison"
+			],
+			"date": "2025-01-18T07:30:03.453Z"
 		}
 	},
 	"de": {
@@ -1493,6 +1506,19 @@
 				"car reliability comparison"
 			],
 			"date": "2025-01-08T08:21:56.356Z"
+		},
+		"reliable-7-seater-cars-comparison": {
+			"generated": true,
+			"cars": ["toyota highlander", "honda pilot", "ford explorer", "chevrolet traverse"],
+			"title": "Vergleich: Zuverlässigkeit von 7-Sitzer Autos",
+			"keywords": [
+				"zuverlässige 7-Sitzer Autos",
+				"Auto Zuverlässigkeitsvergleich",
+				"7-Sitzer SUV",
+				"Automobil Zuverlässigkeit",
+				"Toyota Highlander Bewertung"
+			],
+			"date": "2025-01-18T07:30:27.109Z"
 		}
 	},
 	"en": {
@@ -2237,6 +2263,19 @@
 				"Volkswagen vs Honda"
 			],
 			"date": "2025-01-08T08:18:39.417Z"
+		},
+		"reliable-7-seater-cars-comparison": {
+			"generated": true,
+			"cars": ["toyota highlander", "honda pilot", "ford explorer", "chevrolet traverse"],
+			"title": "Top Reliable 7-Seater Cars: A Must-Read Comparison",
+			"keywords": [
+				"7-seater car reliability",
+				"Toyota Highlander comparison",
+				"Honda Pilot reliability",
+				"Ford Explorer vs Chevrolet Traverse",
+				"family car service calls"
+			],
+			"date": "2025-01-18T07:29:02.548Z"
 		}
 	},
 	"ru": {
@@ -2983,6 +3022,19 @@
 				"vehicle maintenance statistics"
 			],
 			"date": "2025-01-08T08:20:41.952Z"
+		},
+		"reliable-7-seater-cars-comparison": {
+			"generated": true,
+			"cars": ["toyota highlander", "honda pilot", "ford explorer", "chevrolet traverse"],
+			"title": "Сравнение надежности: лучшие 7-местные автомобили",
+			"keywords": [
+				"7-seater car reliability",
+				"Toyota Highlander reliability",
+				"Honda Pilot durability",
+				"Ford Explorer maintenance",
+				"Chevrolet Traverse service calls"
+			],
+			"date": "2025-01-18T07:29:38.454Z"
 		}
 	}
 }
