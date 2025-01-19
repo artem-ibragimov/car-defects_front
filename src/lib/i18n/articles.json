@@ -757,6 +757,18 @@
 				"Chevrolet Traverse comparison"
 			],
 			"date": "2025-01-18T07:30:03.453Z"
+		},
+		"cheapest-reliable-cars-to-maintain": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Carros Fiables y Económicos: Mantenimiento Barato",
+			"keywords": [
+				"reliable cars maintenance",
+				"cost-effective car ownership",
+				"low maintenance vehicles",
+				"affordable car upkeep"
+			],
+			"date": "2025-01-19T05:46:03.353Z"
 		}
 	},
 	"de": {
@@ -1519,6 +1531,19 @@
 				"Toyota Highlander Bewertung"
 			],
 			"date": "2025-01-18T07:30:27.109Z"
+		},
+		"cheapest-reliable-cars-to-maintain": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Preiswerte Zuverlässige Autos im Wartungstest",
+			"keywords": [
+				"günstige zuverlässige Autos",
+				"kostengünstige Autowartung",
+				"Autoreparatur",
+				"Zuverlässigkeit von Fahrzeugmodellen",
+				"wirtschaftliche Fahrzeugwartung"
+			],
+			"date": "2025-01-19T05:46:14.440Z"
 		}
 	},
 	"en": {
@@ -2276,6 +2301,18 @@
 				"family car service calls"
 			],
 			"date": "2025-01-18T07:29:02.548Z"
+		},
+		"cheapest-reliable-cars-to-maintain": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Top 4 Affordable Reliable Cars: Easy Maintenance Guide",
+			"keywords": [
+				"Cheapest reliable cars",
+				"car maintenance cost",
+				"reliable car models",
+				"affordable car upkeep"
+			],
+			"date": "2025-01-19T05:45:19.314Z"
 		}
 	},
 	"ru": {
@@ -3035,6 +3072,19 @@
 				"Chevrolet Traverse service calls"
 			],
 			"date": "2025-01-18T07:29:38.454Z"
+		},
+		"cheapest-reliable-cars-to-maintain": {
+			"generated": true,
+			"cars": ["toyota corolla", "honda civic", "nissan sentra", "hyundai elantra"],
+			"title": "Самые дешёвые и надёжные автомобили для обслуживания",
+			"keywords": [
+				"cheap reliable cars",
+				"car maintenance cost",
+				"reliable car models",
+				"affordable car reliability",
+				"low-maintenance cars"
+			],
+			"date": "2025-01-19T05:45:49.852Z"
 		}
 	}
 }
