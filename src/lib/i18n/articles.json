@@ -794,6 +794,19 @@
 				"evaluación coches eléctricos"
 			],
 			"date": "2025-01-25T06:47:32.015Z"
+		},
+		"best-gas-vs-hybrid-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota camry (hybrid)"],
+			"title": "Comparativa de Fiabilidad: Gasolina vs Híbridos",
+			"keywords": [
+				"reliability comparison",
+				"hybrid cars",
+				"gas vs hybrid",
+				"car maintenance",
+				"Toyota Camry hybrid"
+			],
+			"date": "2025-01-26T07:43:46.663Z"
 		}
 	},
 	"de": {
@@ -1595,6 +1608,19 @@
 				"Tesla vs Polestar"
 			],
 			"date": "2025-01-25T06:47:49.942Z"
+		},
+		"best-gas-vs-hybrid-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota camry (hybrid)"],
+			"title": "Vergleich: Beste Zuverlässigkeit von Benzin- vs Hybridautos",
+			"keywords": [
+				"Benzin vs Hybrid Zuverlässigkeit",
+				"Auto Zuverlässigkeitsvergleich",
+				"Hybridfahrzeug Zuverlässigkeit",
+				"Toyota Camry Hybrid",
+				"Zuverlässigkeitsanalyse"
+			],
+			"date": "2025-01-26T07:44:00.190Z"
 		}
 	},
 	"en": {
@@ -2390,6 +2416,19 @@
 				"Tesla vs Polestar"
 			],
 			"date": "2025-01-25T06:46:39.600Z"
+		},
+		"best-gas-vs-hybrid-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota camry (hybrid)"],
+			"title": "Hybrid vs Gas: Unveiling the Most Reliable Car Choice",
+			"keywords": [
+				"hybrid car reliability",
+				"gas vs hybrid comparison",
+				"Toyota Camry hybrid reliability",
+				"car service call statistics",
+				"vehicle reliability analysis"
+			],
+			"date": "2025-01-26T07:42:47.011Z"
 		}
 	},
 	"ru": {
@@ -3187,6 +3226,19 @@
 				"service call statistics"
 			],
 			"date": "2025-01-25T06:47:16.480Z"
+		},
+		"best-gas-vs-hybrid-reliability-comparison": {
+			"generated": true,
+			"cars": ["toyota camry (hybrid)"],
+			"title": "Гибриды против бензина: какая машина надежнее?",
+			"keywords": [
+				"гибридный автомобиль надежность",
+				"Toyota Camry гибрид сравнение",
+				"надежность бензиновых и гибридных автомобилей",
+				"сравнение автомобилей по надежности",
+				"статистика вызовов ТО"
+			],
+			"date": "2025-01-26T07:43:31.593Z"
 		}
 	}
 }
