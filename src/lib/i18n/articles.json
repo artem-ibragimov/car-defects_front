@@ -807,6 +807,19 @@
 				"Toyota Camry hybrid"
 			],
 			"date": "2025-01-26T07:43:46.663Z"
+		},
+		"chevy-bolt-ev-vs-nissan-leaf-reliability": {
+			"generated": true,
+			"cars": ["chevy bolt ev", "nissan leaf"],
+			"title": "Comparativa de Fiabilidad: Chevy Bolt EV vs Nissan Leaf",
+			"keywords": [
+				"Chevy Bolt EV reliability",
+				"Nissan Leaf reliability",
+				"electric car maintenance",
+				"EV service calls",
+				"Chevy vs Nissan EV"
+			],
+			"date": "2025-01-27T06:52:12.507Z"
 		}
 	},
 	"de": {
@@ -1621,6 +1634,19 @@
 				"Zuverlässigkeitsanalyse"
 			],
 			"date": "2025-01-26T07:44:00.190Z"
+		},
+		"chevy-bolt-ev-vs-nissan-leaf-reliability": {
+			"generated": true,
+			"cars": ["chevy bolt ev", "nissan leaf"],
+			"title": "Chevy Bolt EV gegen Nissan Leaf: Zuverlässigkeit im Test",
+			"keywords": [
+				"Chevy Bolt EV Zuverlässigkeit",
+				"Nissan Leaf Zuverlässigkeit",
+				"Elektroauto Vergleich",
+				"EV Serviceanforderungen",
+				"Zuverlässige Elektrofahrzeuge"
+			],
+			"date": "2025-01-27T06:52:29.750Z"
 		}
 	},
 	"en": {
@@ -2429,6 +2455,19 @@
 				"vehicle reliability analysis"
 			],
 			"date": "2025-01-26T07:42:47.011Z"
+		},
+		"chevy-bolt-ev-vs-nissan-leaf-reliability": {
+			"generated": true,
+			"cars": ["chevy bolt ev", "nissan leaf"],
+			"title": "Chevy Bolt EV vs Nissan Leaf: Unveiling Reliability Secrets",
+			"keywords": [
+				"Chevy Bolt EV reliability",
+				"Nissan Leaf reliability",
+				"electric vehicle reliability comparison",
+				"EV service calls",
+				"Chevy vs Nissan EV reliability"
+			],
+			"date": "2025-01-27T06:51:08.421Z"
 		}
 	},
 	"ru": {
@@ -3239,6 +3278,19 @@
 				"статистика вызовов ТО"
 			],
 			"date": "2025-01-26T07:43:31.593Z"
+		},
+		"chevy-bolt-ev-vs-nissan-leaf-reliability": {
+			"generated": true,
+			"cars": ["chevy bolt ev", "nissan leaf"],
+			"title": "Чей авто надежнее? Chevy Bolt EV vs Nissan Leaf",
+			"keywords": [
+				"надёжность Chevy Bolt EV",
+				"надёжность Nissan Leaf",
+				"электромобили сравнение",
+				"надежность электромобилей",
+				"сервисный вызов электромобилей"
+			],
+			"date": "2025-01-27T06:52:00.204Z"
 		}
 	}
 }
