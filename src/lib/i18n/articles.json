@@ -820,6 +820,19 @@
 				"Chevy vs Nissan EV"
 			],
 			"date": "2025-01-27T06:52:12.507Z"
+		},
+		"most-reliable-suvs-in-the-usa": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "SUVs más fiables en EE.UU.: Comparativa exhaustiva",
+			"keywords": [
+				"reliable SUVs USA",
+				"SUV reliability comparison",
+				"most dependable SUVs",
+				"SUV service data",
+				"best SUVs reliability"
+			],
+			"date": "2025-01-28T09:33:05.797Z"
 		}
 	},
 	"de": {
@@ -1647,6 +1660,19 @@
 				"Zuverlässige Elektrofahrzeuge"
 			],
 			"date": "2025-01-27T06:52:29.750Z"
+		},
+		"most-reliable-suvs-in-the-usa": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "Die Top 4 der zuverlässigsten SUVs in den USA",
+			"keywords": [
+				"reliable SUVs",
+				"SUV reliability comparison",
+				"Toyota RAV4 vs Honda CR-V",
+				"Subaru Forester vs Ford Escape",
+				"SUV service call data"
+			],
+			"date": "2025-01-28T09:33:44.564Z"
 		}
 	},
 	"en": {
@@ -2468,6 +2494,19 @@
 				"Chevy vs Nissan EV reliability"
 			],
 			"date": "2025-01-27T06:51:08.421Z"
+		},
+		"most-reliable-suvs-in-the-usa": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "Top 4 Most Reliable SUVs in the USA: 2023 Rankings",
+			"keywords": [
+				"Reliable SUVs USA",
+				"SUV reliability statistics",
+				"Toyota RAV4 reliability",
+				"Honda CR-V performance",
+				"SUV service call data"
+			],
+			"date": "2025-01-28T09:32:21.841Z"
 		}
 	},
 	"ru": {
@@ -3291,6 +3330,18 @@
 				"сервисный вызов электромобилей"
 			],
 			"date": "2025-01-27T06:52:00.204Z"
+		},
+		"most-reliable-suvs-in-the-usa": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "subaru forester", "ford escape"],
+			"title": "Самые надёжные кроссоверы в США: Детальный анализ",
+			"keywords": [
+				"SUV reliability USA",
+				"reliable SUVs",
+				"best reliable SUV",
+				"car reliability comparison"
+			],
+			"date": "2025-01-28T09:32:43.874Z"
 		}
 	}
 }
