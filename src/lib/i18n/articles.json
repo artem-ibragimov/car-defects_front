@@ -833,6 +833,19 @@
 				"best SUVs reliability"
 			],
 			"date": "2025-01-28T09:33:05.797Z"
+		},
+		"reliable-cars-for-canadian-winters": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Los 4 Autos Más Fiables para Invierno Canadiense",
+			"keywords": [
+				"coche confiable invierno Canadá",
+				"fiabilidad automóviles",
+				"comparativa coches invierno",
+				"rendimiento invernal coches",
+				"confiabilidad SUV Canadá"
+			],
+			"date": "2025-01-29T07:59:15.750Z"
 		}
 	},
 	"de": {
@@ -1673,6 +1686,19 @@
 				"SUV service call data"
 			],
 			"date": "2025-01-28T09:33:44.564Z"
+		},
+		"reliable-cars-for-canadian-winters": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Winterfeste Autos: Top 4 Zuverlässige SUV für Kanada",
+			"keywords": [
+				"Reliable winter cars",
+				"Canadian car reliability",
+				"winter car performance",
+				"all-weather vehicles",
+				"reliable SUVs Canada"
+			],
+			"date": "2025-01-29T07:59:34.205Z"
 		}
 	},
 	"en": {
@@ -2507,6 +2533,19 @@
 				"SUV service call data"
 			],
 			"date": "2025-01-28T09:32:21.841Z"
+		},
+		"reliable-cars-for-canadian-winters": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Best Reliable Cars for Surviving Canadian Winters",
+			"keywords": [
+				"Canadian winter car reliability",
+				"cold climate vehicle performance",
+				"Toyota RAV4 durability",
+				"Subaru Forester winter performance",
+				"Honda CR-V cold weather reliability."
+			],
+			"date": "2025-01-29T07:57:52.805Z"
 		}
 	},
 	"ru": {
@@ -3342,6 +3381,19 @@
 				"car reliability comparison"
 			],
 			"date": "2025-01-28T09:32:43.874Z"
+		},
+		"reliable-cars-for-canadian-winters": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "ford escape", "subaru forester"],
+			"title": "Надежные авто для зимы в Канаде: Топ-4 модели",
+			"keywords": [
+				"надежные автомобили для зимы",
+				"надежность автомобилей Канада",
+				"Toyota RAV4 надежность",
+				"Honda CR-V надежность",
+				"условия эксплуатации автомобилей зима"
+			],
+			"date": "2025-01-29T07:58:36.713Z"
 		}
 	}
 }
