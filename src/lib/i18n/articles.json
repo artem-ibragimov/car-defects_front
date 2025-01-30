@@ -846,6 +846,19 @@
 				"confiabilidad SUV Canadá"
 			],
 			"date": "2025-01-29T07:59:15.750Z"
+		},
+		"best-suvs-for-reliability-in-asia": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "nissan rogue", "mazda cx-5"],
+			"title": "Los SUV más fiables en Asia: Comparativa 2023",
+			"keywords": [
+				"SUVs confiables Asia",
+				"fiabilidad coches Asia",
+				"mejores SUVs Asia",
+				"comparativa SUVs",
+				"coches duraderos Asia"
+			],
+			"date": "2025-01-30T10:01:42.061Z"
 		}
 	},
 	"de": {
@@ -1699,6 +1712,19 @@
 				"reliable SUVs Canada"
 			],
 			"date": "2025-01-29T07:59:34.205Z"
+		},
+		"best-suvs-for-reliability-in-asia": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "nissan rogue", "mazda cx-5"],
+			"title": "Die zuverlässigsten SUVs in Asien: Top-Wahlvergleich",
+			"keywords": [
+				"SUV Zuverlässigkeit Asien",
+				"beste zuverlässige SUVs",
+				"Asien SUV Vergleich",
+				"Suzuki",
+				"Toyota RAV4"
+			],
+			"date": "2025-01-30T10:02:22.429Z"
 		}
 	},
 	"en": {
@@ -2546,6 +2572,19 @@
 				"Honda CR-V cold weather reliability."
 			],
 			"date": "2025-01-29T07:57:52.805Z"
+		},
+		"best-suvs-for-reliability-in-asia": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "mazda cx-5", "subaru forester"],
+			"title": "Top 4 Reliable SUVs in Asia: Toyota, Honda & More",
+			"keywords": [
+				"SUV reliability Asia",
+				"best reliable SUVs",
+				"Toyota RAV4 reliability",
+				"Honda CR-V durability",
+				"Subaru Forester reliability"
+			],
+			"date": "2025-01-30T09:19:56.469Z"
 		}
 	},
 	"ru": {
@@ -3394,6 +3433,18 @@
 				"условия эксплуатации автомобилей зима"
 			],
 			"date": "2025-01-29T07:58:36.713Z"
+		},
+		"best-suvs-for-reliability-in-asia": {
+			"generated": true,
+			"cars": ["toyota rav4", "honda cr-v", "mazda cx-5", "subaru forester"],
+			"title": "Лучшие SUV по надежности в Азии: Обзор 2023",
+			"keywords": [
+				"лучшие внедорожники Азия надежность",
+				"надежные SUV Азия",
+				"надежность кроссоверов Азия",
+				"сравнение надёжности авто Азия"
+			],
+			"date": "2025-01-30T09:20:41.437Z"
 		}
 	}
 }
