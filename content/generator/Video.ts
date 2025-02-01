@@ -20,6 +20,7 @@ type Config = {
 	keywords: string;
 	description: string;
 	name: string;
+	url: string;
 	key: Key;
 	defects: Record<string, Record<string, string>>;
 	topic: string;

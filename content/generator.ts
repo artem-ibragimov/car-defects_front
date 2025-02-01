@@ -118,6 +118,7 @@ function generateByTopic(topic: string) {
 												keywords: article.keywords,
 												description: article.description,
 												name: article.name,
+												url: `https://car-defects.com/articles/${article.locale}/${article.name}/`,
 												key: article.key,
 												defects,
 												topic
