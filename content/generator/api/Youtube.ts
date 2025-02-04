@@ -19,6 +19,7 @@ export class Youtube {
 		}
 		return (
 			this.searchVideos(query)
+				.then(()=>{throw new Error('use local videos')})
 				// .then(videos => Promise.all(videos.map(this.downloadVideo(directory))))
 				.then((videos) => videos.sort(() => Math.random() - 0.5))
 				.then((videos) => {

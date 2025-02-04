@@ -28,7 +28,7 @@ export class ChatGPT {
 		const generating = messages.map((message) =>
 			this.openai.chat.completions
 				.create({
-					model: 'gpt-4o',
+					model: 'gpt-4o-mini', //o3-mini
 					max_tokens: 8192,
 					// temperature: 0.1,
 					messages: params.system

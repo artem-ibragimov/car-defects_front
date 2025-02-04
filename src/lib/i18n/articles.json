@@ -885,6 +885,32 @@
 				"Hyundai Sonata durability"
 			],
 			"date": "2025-02-01T10:05:10.319Z"
+		},
+		"is-toyota-camry-more-reliable-than-honda-accord-": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord", "nissan altima", "ford fusion"],
+			"title": "¿Toyota Camry o Honda Accord? Comparativa de Fiabilidad 2023",
+			"keywords": [
+				"fiabilidad Toyota Camry",
+				"comparativa Honda Accord",
+				"confiabilidad automotriz",
+				"estadísticas de servicio automotriz",
+				"análisis de durabilidad coches"
+			],
+			"date": "2025-02-03T14:38:10.272Z"
+		},
+		"is-subaru-forester-reliable-compared-to-toyota-rav4-": {
+			"generated": true,
+			"cars": ["toyota rav4", "subaru forester", "honda cr-v", "ford escape"],
+			"title": "Comparativa de Fiabilidad: Subaru Forester vs Toyota RAV4",
+			"keywords": [
+				"Subaru Forester fiabilidad",
+				"Toyota RAV4 comparación",
+				"confiabilidad de vehículos",
+				"estadísticas de servicio automotriz",
+				"rendimiento de coches usados"
+			],
+			"date": "2025-02-04T06:56:06.857Z"
 		}
 	},
 	"de": {
@@ -1777,6 +1803,32 @@
 				"Nissan Altima durability"
 			],
 			"date": "2025-02-01T10:05:35.000Z"
+		},
+		"is-toyota-camry-more-reliable-than-honda-accord-": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord", "nissan altima", "ford fusion"],
+			"title": "Ist der Toyota Camry zuverlässiger als der Honda Accord?",
+			"keywords": [
+				"Toyota Camry Zuverlässigkeit",
+				"Honda Accord Vergleich",
+				"Fahrzeugzuverlässigkeit",
+				"Autoreparaturstatistik",
+				"zuverlässigste Mittelklassewagen"
+			],
+			"date": "2025-02-03T14:38:29.272Z"
+		},
+		"is-subaru-forester-reliable-compared-to-toyota-rav4-": {
+			"generated": true,
+			"cars": ["toyota rav4", "subaru forester", "honda cr-v", "ford escape"],
+			"title": "Subaru Forester vs. Toyota RAV4: Wer ist zuverlässiger?",
+			"keywords": [
+				"Subaru Forester Zuverlässigkeit",
+				"Toyota RAV4 Vergleich",
+				"Auto Zuverlässigkeit",
+				"Subaru Forester Wartungskosten",
+				"Toyota RAV4 Serviceanrufe"
+			],
+			"date": "2025-02-04T06:56:33.859Z"
 		}
 	},
 	"en": {
@@ -2663,6 +2715,32 @@
 				"Hyundai Sonata reliability"
 			],
 			"date": "2025-02-01T10:04:11.871Z"
+		},
+		"is-toyota-camry-more-reliable-than-honda-accord-": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord", "nissan altima", "ford fusion"],
+			"title": "Is Toyota Camry More Reliable than Honda Accord? A Data Comparison",
+			"keywords": [
+				"Toyota Camry reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"Toyota vs Honda reliability",
+				"service call statistics"
+			],
+			"date": "2025-02-03T14:37:33.828Z"
+		},
+		"is-subaru-forester-reliable-compared-to-toyota-rav4-": {
+			"generated": true,
+			"cars": ["toyota rav4", "subaru forester", "honda cr-v", "ford escape"],
+			"title": "Subaru Forester vs. Toyota RAV4: Reliability Showdown",
+			"keywords": [
+				"Subaru Forester reliability",
+				"Toyota RAV4 comparison",
+				"car service statistics",
+				"SUV reliability ratings",
+				"long-term car maintenance"
+			],
+			"date": "2025-02-04T06:55:17.349Z"
 		}
 	},
 	"ru": {
@@ -3549,6 +3627,32 @@
 				"надежность автомобилей"
 			],
 			"date": "2025-02-01T10:04:53.683Z"
+		},
+		"is-toyota-camry-more-reliable-than-honda-accord-": {
+			"generated": true,
+			"cars": ["toyota camry", "honda accord", "nissan altima", "ford fusion"],
+			"title": "Сравнение надежности: Toyota Camry против Honda Accord",
+			"keywords": [
+				"Toyota Camry reliability",
+				"Honda Accord reliability",
+				"car reliability comparison",
+				"Toyota vs Honda reliability",
+				"automotive reliability analysis"
+			],
+			"date": "2025-02-03T14:37:50.601Z"
+		},
+		"is-subaru-forester-reliable-compared-to-toyota-rav4-": {
+			"generated": true,
+			"cars": ["toyota rav4", "subaru forester", "honda cr-v", "ford escape"],
+			"title": "Сравнение надежности: Subaru Forester против Toyota RAV4",
+			"keywords": [
+				"Subaru Forester reliability",
+				"Toyota RAV4 comparison",
+				"car reliability ratings",
+				"Subaru service calls",
+				"Toyota maintenance costs"
+			],
+			"date": "2025-02-04T06:55:41.588Z"
 		}
 	}
 }
